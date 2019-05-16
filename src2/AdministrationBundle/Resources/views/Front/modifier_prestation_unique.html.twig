@@ -1,0 +1,335 @@
+   {% extends '::admin_template.html.twig' %}
+
+{% block title %}Modifier les  prestations uniques :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+
+	<style type="text/css">
+        .form-control{
+          display: inline-block !important;
+          vertical-align: middle !important;
+          width: 60% !important;
+        }
+      </style>
+
+{% endblock %}
+
+
+{% block body %}
+
+	<!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+            <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+
+
+             <a href="{{path('dkk_administration_prestation')}}" class="today pull-right"> <i class="fa fa-share"></i> Quitter </a>
+              <br><br><br>
+
+               <h4 class="small_tittle">Modifier les paramètres des prestations uniques</h4>
+
+              <div class="margin_wrapper">
+
+          <form method="post" action="" id="signupForm">
+          <div class="form-group">
+            <div class="resize2">
+              <div class="">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <span>Titre de prestation</span>
+                  <br><br>
+                  <input type="text" placeholder="Ex: Titre de la prestation" name="titre" class="form-control">
+                  </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <span>Type de prestation</span>
+                  <br><br>
+                  <input type="text" placeholder="Ex: Type de  prestation" name="type" class="form-control">
+                  </div>
+
+              </div>
+
+              <!--  -->
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <br>
+                  <input type="radio" name="choix_cat" class="my_checkbox" id="choix1">
+                  <span> Classes de personne</span>
+                  <br><br>
+                  <div class="choix1" style="display: none !important;">
+
+                    <select name="" class="form-control mon_choix1">
+                      <option value="Adulte"> Adulte </option>
+                      <option value="Enfant"> Enfant </option>
+                      <option value="Homme"> Homme </option>
+                      <option value="Femme"> Femme </option>
+                      <option value="Fille"> Fille </option>
+                      <option value="Garçon"> Garçon </option>
+                    </select>
+                  </div>
+
+
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <br>
+                  <input type="radio" name="choix_cat" class="my_checkbox" id="choix2">
+
+                    <span>Classes d'âge</span>
+                    <br><br>
+                     <div class="choix2" style="display: none !important;">
+
+                     <select name="" class="form-control mon_choix1">
+                      <option value="Nourrisons">Nourrisons</option>
+                      <option value="1-5 ans">1-5 ans</option>
+                      <option value="6-13 ans">6-13 ans</option>
+                      <option value="14-25 ans">14-25 ans</option>
+                      <option value="25-50 ans">25-50 ans</option>
+                      <option value="60-80 ans">60-80 ans</option>
+                      <option value="Plus de 80 ans">Plus de 80 ans</option>
+
+                    </select>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <br>
+                   <span>Photo / Image</span>
+                  <br><br>
+                  <input type="file" name="" class="form-control">
+
+                  </div>
+
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <br>
+                     <span>Prix de la prestation</span>
+                   <br><br>
+                   <input type="text" placeholder="Ex: 1000" name="prix" class="form-control">
+
+
+                </div>
+              </div>
+
+
+             <P style="clear: both !important;"></P>
+
+             <div class="row">
+                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                       <span style=" ">Couleur de la prestation</span>
+                  <br><br>
+                 <select class="form-control" name="couleur">
+                  <option selected disabled>Couleur</option>
+                  <option>verte</option>
+                  <option>Rouge</option>
+                  <option>Jaune</option>
+                  <option>Rose</option>
+                  <option>Maron</option>
+                  <option>Noire</option>
+                  <option>Voillete</option>
+                  <option>Bleu</option>
+                 </select>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                   <span style="">Durée de la prestation</span>
+                <br><br>
+                <select class="form-control" name="duree">
+                  <option selected disabled>La durée</option>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+                        <option>4h 00 min</option>
+
+                    </select>
+                </div>
+
+             </div>
+
+             <!--  -->
+
+            </div>
+            <br><br>
+            <p id="Disponibilite" style="font-weight: !important;"> Paiement / Réglement </p>
+
+
+        <div class="checkbox_form_">
+
+            <div class="resize2">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+                  <input type="checkbox" name="" class="my_checkboxform-control">
+                                      <span> &nbsp; Paiement en caisse</span>
+
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+                  <input type="checkbox" name="" class="my_checkboxform-control">
+                                      <span> &nbsp; Payement en ligne</span>
+
+                </div>
+
+            </div>
+              <br><br>
+            <div class="resize2">
+
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+
+                  <input type="checkbox" name="" class="my_checkboxform-control" id="free">
+                                      <span> &nbsp; Gratuit</sapn>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+
+                  <input type="checkbox" name=""  id="chkPassport" class="my_checkboxform-control"><span> &nbsp; Accompte accepté</span>
+
+                  <div  id="dvPassport" style="display: none">
+                      <span >Taux:</span>
+                        <select class="form-control" style="display:inline-block;vertical-align:middle;width: 20% !important;margin-bottom: 20px !important;margin-top: 15px;">
+                        <option>5 %</option><option>10 %</option><option>15 %</option><option>20 %</option>
+                        <option>25 %</option><option>30 %</option><option>35 %</option><option>40 %</option>
+                        <option>45 %</option><option>50 %</option>
+                       </select>
+                  </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+          <br>
+
+
+
+
+             </div>
+
+                <div class="resize pull-right" >
+
+
+                <button type="submit" class="btn btn-success btn_valid" ><i class="fa fa-floppy-o" aria-hidden="true"></i>
+Enregistrer</button>
+
+
+
+                <button type="reset" class="btn btn-danger btn_valid"><i class="fa fa-times"></i>
+ Annuler</button>
+                                    <br><br>
+
+
+            </div>
+
+            <br><br>
+                      </form>
+
+                    <!-- -->
+
+              </div>
+
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+        $(document).ready(function(){
+             $("#choix1").on('click',function(){
+                                	$(".choix1").show();
+                                	$(".choix2").hide();
+                                });
+                                $("#choix2").on('click',function(){
+                                	$(".choix2").show();
+                                	$(".choix1").hide();
+                                });
+
+            $("#chkPassport").on("click",function(){
+                $("#dvPassport").toggle();
+            });
+
+            // une autre ligne
+            $("#signupForm").validate({
+              rules: {
+
+                titre: {
+                  required: false,
+                  minlength: 2
+                },
+                type: {
+                  required: false,
+                  minlength: 4
+                },
+                prix: {
+                  required: false,
+                  number: true,
+                  minlength: 4
+                },
+                duree: {
+                  required: false
+                }
+              },
+              messages: {
+                titre: {
+                  required: "<span style='color:#dd4f43'>Le titre</span>",
+                  minlength: "<span style='color:#dd4f43'> 2 caractères minimum</span>"
+                },
+                type: {
+                  required: "<span style='color:#dd4f43'>Le type</span>",
+                  minlength: "<span style='color:#dd4f43'>2 caractères minimum</span>"
+                },
+
+                prix: {
+                  required: "<span style='color:#dd4f43'>Le prix</span>",
+                  minlength: "<span style='color:#dd4f43'>4 caractères minimum</span>",
+                  number:"<span style='color:#dd4f43'>Prix invalide</span>"
+                },
+                duree: {
+                  required: "<span style='color:#dd4f43'>La durée</span>",
+                },
+
+
+
+                couleur: "<span style='color:#dd4f43'>La couleur</span>",
+              }
+            });
+        });
+    </script>
+
+
+{% endblock %}

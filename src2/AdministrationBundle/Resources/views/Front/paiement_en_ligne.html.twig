@@ -1,0 +1,285 @@
+ {% extends '::admin_template.html.twig' %}
+
+{% block title %}Paiement en ligne :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+<style type="text/css">
+      th,td{
+        text-align: center !important;
+      }
+      </style>
+{% endblock %}
+
+{% block body %}
+
+
+<!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+             <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+
+
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+
+
+
+              <h4 class="small_tittle up_">Mode de paiement </h4>
+                   <p class="journne_du_" style="text-align:center !important;"> </p>
+
+
+
+            <div class="">
+
+                <section id="unseen">
+                  <div class="cadre_operateur">
+                    <p class="text_paiement">Paiement par monnaie mobile (mobile money)</p>
+                    <form method="post" action="" id="signupForm">
+                      <table style="margin-left:20px !important;margin-right:20px !important;">
+                          <tr>
+                            <th><span class="title_mode">Titre  </span></th>
+                              <td>
+                                <span class="name_operat"><input type="text" name="titre" class="form-control" placeholder="Mobile money" class="form-control"></span>
+
+                              </td>
+                          </tr>
+                          <tr>
+                            <th><span class="title_mode">Nom opérateur  </span></th>
+                              <td>
+                                <span class="name_operat"><input type="text" name="nom" placeholder="Ex: Mtn ou Orange" class="form-control"></span>
+
+                              </td>
+                          </tr>
+
+                          <tr>
+                            <th><span class="title_mode">Description </span> </th>
+                              <td>
+                                <span class="name_operat"><textarea class="form-control" name="comment"></textarea> </span>
+
+                              </td>
+                          </tr>
+                          <tr>
+                            <th></th>
+                              <td style="text-align: left !important">
+                                <span class="name_operat"><input type="checkbox" name="" class=""> Activer</span>
+                              </td>
+                          </tr>
+                          <tr>
+                            <th><span class="title_mode">Identifiant (Numéro téléphone) </span></th>
+                              <td>
+                                <span class="name_operat"><input type="text" name="phone" maxlength="9" placeholder="" class="form-control"></span>
+                                <br>
+
+                              </td>
+                          </tr>
+
+                          <tr>
+                            <th></th>
+                              <td style="padding-left: 20px !important">
+
+                                <button type="submit" class="btn btn-success btn_valid" id="button_send"><i class="fa fa-floppy-o"></i> Enregistre</button>
+                                <button class="btn btn-danger btn_valid"><i class="fa fa-times"></i> Annuler </button>
+                              </td>
+                          </tr>
+
+                      </table>
+                    </form>
+                      <br><br>
+                      <div style="margin-left:10px !important;margin-right:10px !important;">
+                           <table  class="table table-bordered table-striped table-condensed">
+                    <thead>
+                                <tr style="background-color: #26440d !important;color: #fff !important;">
+                                 <th> N°</th>
+                                  <th>Titre</th>
+                                  <th>Nom opérateur</th>
+                                  <th>Identifiant</th>
+                                  <th>Activer</th>
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+
+                                    <td>.......</td>
+                                    <td>.......</td>
+                                    <td>.......</td>
+                                    <td>.......</td>
+                                    <td>.......</td>
+                                    <td>
+                                        <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-pencil-square-o"></i> Modifier</button>
+
+                                        <!-- debut de la fenetre modal -->
+
+                                          <div class="modal fade" id="myModal_rdv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                          <div class="modal-dialog second_modal-dialog" role="document" >
+                                            <div class="modal-content" >
+                                              <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Modifier vos informations  de paiement  Mobile Money</h4>
+                                              </div>
+                                              <div class="modal-body">
+                                                <!-- debut -->
+                                                  <form method="post" action="">
+                                                    <table style="margin-left:20px !important;margin-right:20px !important;">
+                                                        <tr>
+                                                          <th><span class="title_mode">Titre  </span></th>
+                                                            <td>
+                                                              <span class="name_operat"><input type="text" name="titre_modif" class="form-control" placeholder="Mobile money" class="form-control"></span>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <th><span class="title_mode">Nom opérateur  </span></th>
+                                                            <td>
+                                                              <span class="name_operat"><input type="text" name="nom_modif" placeholder="Ex: Mtn ou Orange" class="form-control"></span>
+
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                          <th><span class="title_mode">Description </span> </th>
+                                                            <td>
+                                                              <span class="name_operat"><textarea class="form-control" name="comment_modif"></textarea> </span>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <th></th>
+                                                            <td style="text-align: left !important">
+                                                              <span class="name_operat"><input type="checkbox" name="" class=""> Activer</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <th><span class="title_mode">Identifiant (Numéro téléphone) </span></th>
+                                                            <td>
+                                                              <span class="name_operat"><input type="text" name="phone_modif" maxlength="9" placeholder="" class="form-control"></span>
+                                                              <br>
+
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                          <th></th>
+                                                            <td style="padding-left: 20px !important">
+
+                                                              <button type="submit" class="btn btn-success btn_valid" id="button_send"><i class="fa fa-floppy-o"></i> Enregistre</button>
+                                                              <button class="btn btn-danger btn_valid"><i class="fa fa-times"></i> Annuler </button>
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                    </form>
+
+                                                <br><br>
+
+                                                <!-- fin  -->
+                                              </div>
+                                            </div>
+                                          </div>
+                                          </div>
+
+                                        <!-- fin de la fenetre modal -->
+                                        <a href="" class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vraiment supprimer ?')"><i class="fa fa-window-close" aria-hidden="true"></i> Supprimer</a>
+                                    </td>
+                                </tr>
+                              </tbody>
+               </table>
+
+                      </div>
+
+                  </div>
+
+              </div>
+                    </div>
+                          </div>
+                        </div>
+                <!-- fin de la popup pour la modification des parametres qpécifique -->
+
+
+
+                </section>
+            </div>
+
+
+
+
+            <!-- end col-4 -->
+          </div>
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+      $(document).ready(function() {
+        $("#signupForm").validate({
+          rules: {
+            ressource:"required",
+            titre: {
+              required: true,
+              minlength: 2
+            },
+            nom: {
+              required: true,
+              minlength: 2
+            },
+            comment:{
+              required:false,
+              minlength: 20
+            },
+            phone: {
+           required: true,
+           number: true,
+           minlength: 9,
+            maxlength: 9
+         },
+          },
+          messages: {
+            nom: {
+              required: "<span style='color:#dd4f43'>Nom réquis</span>",
+              minlength: "<span style='color:#dd4f43'> 2 caractères minimum</span>"
+            },
+            phone: {
+           required: "<span style='color:#dd4f43'>Champs réquis",
+           minlength: "<span style='color:#dd4f43'>9 caractères minimum</span>",
+           maxlength: "<span style='color:#dd4f43'>Pas plus de 9 caractères</span>",
+           number:"<span style='color:#dd4f43'>Numéro invalide</span>"
+         },
+            titre: {
+              required: "<span style='color:#dd4f43'>Titre réquis</span>",
+              minlength: "<span style='color:#dd4f43'> 2 caractères minimum</span>"
+            },
+            comment: {
+              required: "<span style='color:#dd4f43'></span>",
+              minlength: "<span style='color:#dd4f43'>20 caractères minimum</span>",
+            },
+            ressource: "<span style='color:#dd4f43'>Ressource</span>",
+          }
+        });
+
+      });
+
+    </script>
+
+{% endblock %}
+

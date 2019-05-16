@@ -1,0 +1,210 @@
+ {% extends '::admin_template.html.twig' %}
+
+{% block title %}Administration - Message envoyer :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+<style>
+  .recut{
+    font-size: 0.7em !important;
+    font-weight: 600;
+    margin-left: 25px !important;
+    margin-top: 20px !important;
+  }
+        </style>
+{% endblock %}
+
+{% block body %}
+
+
+    <!-- debut du contenu -->
+        <section id="main-content">
+      <section class="wrapper">
+        <!-- page start-->
+        <div class="row mt">
+          <div class="col-sm-3">
+            <section class="panel">
+              <div class="panel-body">
+                <a href="{{path('dkk_administration_email_compos')}}" class="btn btn-compose">
+                  <i class="fa fa-pencil"></i>  Envoyer un message
+                  </a>
+                <ul class="nav nav-pills nav-stacked mail-nav">
+                  <li ><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> Boite de reception   <span class="label label-theme pull-right inbox-notification">3</span></a></li>
+                  <li><a href="{{path('dkk_administration_email_send')}}" class="active"> <i class="fa fa-exclamation-circle"></i>Messages envoyés</a></li>
+                  <li><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>Corbeille</a></li>
+                </ul>
+              </div>
+            </section>
+
+          </div>
+          <div class="col-sm-9">
+            <section class="panel">
+              <header class="panel-heading wht-bg">
+                <h4 class="gen-case">
+                    Message envoyer
+                 
+                    <form action="#" class="pull-right mail-src-position">
+                      <div class="input-append">
+                        <input type="text" class="form-control " placeholder="Rechercher">
+                      </div>
+                    </form>
+                  </h4>
+              </header>
+              <div class="panel-body minimal">
+                <div class="mail-option">
+                  <ul class="unstyled inbox-pagination">
+                    <li><span>1-50 à 99</span></li>
+                    <li>
+                      <a class="np-btn" href="#"><i class="fa fa-angle-left  pagination-left"></i></a>
+                    </li>
+                    <li>
+                      <a class="np-btn" href="#"><i class="fa fa-angle-right pagination-right"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="table-inbox-wrap ">
+                  <table class="table table-inbox table-hover">
+                    <tbody>
+
+                      <tr class="unread">
+                        <td class="inbox-small-cells">
+                          <input type="checkbox" class="mail-checkbox">
+                        </td>
+
+                        <td class="view-message dont-show"><a href="{{path('dkk_administration_email_send_view')}}">Paul kingué</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_email_send_view')}}">Mon message envoyé</a></td>
+                        <td class="view-message inbox-small-cells"></td>
+                        <td class="view-message text-right">08h00</td>
+                      </tr>
+                      <tr class="unread">
+                        <td class="inbox-small-cells">
+                          <input type="checkbox" class="mail-checkbox">
+                        </td>
+
+                        <td class="view-message dont-show"><a href="{{path('dkk_administration_email_send_view')}}">Paul kingué</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_email_send_view')}}">Mon message envoyé</a></td>
+                        <td class="view-message inbox-small-cells"></td>
+                        <td class="view-message text-right">10h00</td>
+                      </tr>
+                      <tr class="">
+                        <td class="inbox-small-cells">
+                          <input type="checkbox" class="mail-checkbox">
+                        </td>
+
+                        <td class="view-message dont-show"><a href="{{path('dkk_administration_email_send_view')}}">Akoumba</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_email_send_view')}}">Besoin d'aide </a></td>
+                        <td class="view-message inbox-small-cells"></td>
+                        <td class="view-message text-right">12 mars</td>
+                      </tr>
+                      <tr class="">
+                        <td class="inbox-small-cells">
+                          <input type="checkbox" class="mail-checkbox">
+                        </td>
+
+                        <td class="view-message dont-show"><a href="{{path('dkk_administration_email_send_view')}}">Akoumba</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_email_send_view')}}">Besoin d'aide </a></td>
+                        <td class="view-message inbox-small-cells"></td>
+                        <td class="view-message text-right">12 mars</td>
+                      </tr>
+                      <tr class="">
+                        <td class="inbox-small-cells">
+                          <input type="checkbox" class="mail-checkbox">
+                        </td>
+
+                        <td class="view-message dont-show"><a href="{{path('dkk_administration_email_send_view')}}">Akoumba</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_email_send_view')}}">Besoin d'aide </a></td>
+                        <td class="view-message inbox-small-cells"></td>
+                        <td class="view-message text-right">12 mars</td>
+                      </tr>
+                      <tr class="">
+                        <td class="inbox-small-cells">
+                          <input type="checkbox" class="mail-checkbox">
+                        </td>
+
+                        <td class="view-message dont-show"><a href="{{path('dkk_administration_email_send_view')}}">Akoumba</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_email_send_view')}}">Besoin d'aide </a></td>
+                        <td class="view-message inbox-small-cells"></td>
+                        <td class="view-message text-right">12 mars</td>
+                      </tr>
+                       <tr class="">
+                        <td class="inbox-small-cells">
+                          <input type="checkbox" class="mail-checkbox">
+                        </td>
+
+                        <td class="view-message dont-show"><a href="{{path('dkk_administration_email_send_view')}}">Akoumba</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_email_send_view')}}">Besoin d'aide </a></td>
+                        <td class="view-message inbox-small-cells"></td>
+                        <td class="view-message text-right">12 mars</td>
+                      </tr>
+                       <tr class="">
+                        <td class="inbox-small-cells">
+                          <input type="checkbox" class="mail-checkbox">
+                        </td>
+
+                        <td class="view-message dont-show"><a href="{{path('dkk_administration_email_send_view')}}">Akoumba</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_email_send_view')}}">Besoin d'aide </a></td>
+                        <td class="view-message inbox-small-cells"></td>
+                        <td class="view-message text-right">12 mars</td>
+                      </tr>
+                       <tr class="">
+                        <td class="inbox-small-cells">
+                          <input type="checkbox" class="mail-checkbox">
+                        </td>
+
+                        <td class="view-message dont-show"><a href="{{path('dkk_administration_email_send_view')}}">Akoumba</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_email_send_view')}}">Besoin d'aide </a></td>
+                        <td class="view-message inbox-small-cells"></td>
+                        <td class="view-message text-right">12 mars</td>
+                      </tr>
+                       <tr class="">
+                        <td class="inbox-small-cells">
+                          <input type="checkbox" class="mail-checkbox">
+                        </td>
+
+                        <td class="view-message dont-show"><a href="{{path('dkk_administration_email_send_view')}}">Akoumba</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_email_send_view')}}">Besoin d'aide </a></td>
+                        <td class="view-message inbox-small-cells"></td>
+                        <td class="view-message text-right">12 mars</td>
+                      </tr>
+                      <tr class="">
+                        <td class="inbox-small-cells">
+                          <input type="checkbox" class="mail-checkbox">
+                        </td>
+
+                        <td class="view-message dont-show"><a href="{{path('dkk_administration_email_send_view')}}">Akoumba</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_email_send_view')}}">Besoin d'aide </a></td>
+                        <td class="view-message inbox-small-cells"></td>
+                        <td class="view-message text-right">12 mars</td>
+                      </tr>
+                      <tr class="">
+                        <td class="inbox-small-cells">
+                          <input type="checkbox" class="mail-checkbox">
+                        </td>
+
+                        <td class="view-message dont-show"><a href="{{path('dkk_administration_email_send_view')}}">Akoumba</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_email_send_view')}}">Besoin d'aide </a></td>
+                        <td class="view-message inbox-small-cells"></td>
+                        <td class="view-message text-right">12 mars</td>
+                      </tr>
+                      <tr class="">
+                        <td class="inbox-small-cells">
+                          <input type="checkbox" class="mail-checkbox">
+                        </td>
+
+                        <td class="view-message dont-show"><a href="{{path('dkk_administration_email_send_view')}}">Akoumba</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_email_send_view')}}">Besoin d'aide </a></td>
+                        <td class="view-message inbox-small-cells"></td>
+                        <td class="view-message text-right">12 mars</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+{% endblock %}
+

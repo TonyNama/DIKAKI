@@ -1,0 +1,737 @@
+     {% extends '::admin_template.html.twig' %}
+
+{% block title %}Agenda - Actions :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+
+ <style>
+        .menu1 {  
+          border-bottom:solid 2px #666666 ;  
+          padding-top:12px ; 
+          padding-bottom:7px
+        }  
+
+        .onglet {  
+            border:solid 1px #666666 ; 
+            margin:5px 5px 0px 5px ;  
+            padding:7px 3px 7px 3px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+
+            border-radius:5px 5px 0px 0px !important;
+          }  
+
+          a.onglet {  
+            background-color:#666666 ;  
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+          }  
+
+          .onglet-actif { 
+             border-left:solid 2px #666666 ;  
+             border-right:solid 2px #666666 ;  
+             border-top:solid 2px #666666 ;  
+             border-bottom:none !important;  
+             margin:5px 5px 0px 5px ;  
+             padding:7px 3px 7px 3px ;  
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+             color: #333;
+          }  
+        .sky-form{
+            box-shadow: none !important;
+        }
+
+
+
+    </style>
+
+{% endblock %}
+
+{% block body %}
+
+<section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+            <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <select class="form-control form_width">
+                <option>Dr Ndewa</option>
+                 <option>Dr Fotso</option>
+                 <option>Dr Melingui</option>
+             </select>
+
+            <br>
+
+              <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                <a href="{{path('dkk_administration_agenda')}}" class="onglet-actif"> Agenda(s) </a> <!-- onglet ACTIF -->
+                <a  href="{{path('dkk_administration_agenda_tab_prestataire')}}" class="onglet-actif"> Prestataires  </a> <!-- onglet inactif -->
+                  <a  href="{{path('dkk_administration_agenda_tab_prestation')}}" class="onglet-actif"> Prestations  </a> <!-- onglet inactif -->
+                <a href="{{path('dkk_administration_agenda_tab_tache')}}" class="onglet-actif"> Tâches </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_planning')}}" class="onglet-actif"> Plannings </a> <!-- onglet ACTIF -->
+                  <a href="{{path('dkk_administration_agenda_tab_liste_client')}}" class="onglet-actif"> Liste clients </a> <!-- onglet ACTIF -->
+                   <span class="onglet">   Actions </span> <!-- onglet inactif -->
+              </div>
+
+              <div class="wrapper_aganda_">
+                   <h4 class=" ">Création</h4>
+                  <h3 class="cration_client">Création d'un agenda</h3>
+
+                    <form action="" class="sky-form" method="post" id="signupForm" style="border:none !important;">
+                         <!-- debut -->
+                    <section id="unseen" >
+
+
+
+				<fieldset >
+					<div class="row">
+						<section class="col col-6">
+							<label class="input">
+								<i class="icon-append icon-user"></i>
+								<input type="text" placeholder="Nom de l'agenda" name="firstname">
+							</label>
+						</section>
+						<section class="col col-6">
+							<label class="input">
+								<i class="icon-append icon-home"></i>
+								<input type="text" placeholder="Métier / Activité" name="work">
+							</label>
+						</section>
+					</div>
+
+
+
+
+
+                    <div class="row">
+						<section class="col col-6">
+							<h5 class="ouvrire_sur">Ouvrire sur internet ? </h5>
+						</section>
+						<section class="col col-6">
+							<label class="radio"><input type="radio" name="checkbox-inline" ><i></i>  <span class="me_notifier">Oui, avec le même nom.</span></label>
+                            <label class="radio"><input type="radio" name="checkbox-inline" ><i></i>  <span class="me_notifier">Non, ne pas ouvrir sur internet </span></label>
+                             <label class="radio"><input type="radio" name="checkbox-inline" ><i></i>  <span class="me_notifier">Oui, avec le nom </span></label>
+                            <label class="input" style="display: !important;">
+								<i class="icon-append icon-envelope-alt"></i>
+								<input type="text" placeholder=" ">
+							</label>
+						</section>
+					</div>
+
+                    	<div class="row">
+						<section class="col col-6">
+							<label class="select">
+								<select name="couleur">
+									<option value="0" selected="selected" disabled="disabled"> Choissir une couleur</option>
+									<option value="vert">Vert</option>
+									<option value="rouge">Rouge</option>
+									<option value="jaune">Jaune</option>
+									<option value="bleu">Bleu</option>
+								</select>
+								<i></i>
+							</label>
+						</section>
+						<section class="col col-6">
+
+						</section>
+                            <div class="row"></div>
+                            <br>
+                            <h4 class="cration_client">Horaires d'ouverture / Reception</h4>
+                            <br>
+                            <div class="">
+                                <div class="col-xs-12 col-ms-12 col-md-4 col-lg-4">
+                                    <label class="radio" for="je_precise"><input type="radio" name="checkbox-inline" id="je_precise" ><i></i>  <span class="me_notifier">Je précise les horaires d'ouverture et de fin de journée</span></label>
+
+                                </div>
+                                <div class="col-xs-12 col-ms-12 col-md-4 col-lg-4">
+                                    <label class="radio" for="je_prefere"><input type="radio" name="checkbox-inline" id="je_prefere" checked><i></i>  <span class="me_notifier">Je prefère mettre mais horaires de façon détaillée</span></label>
+
+                                </div>
+                                <div class="col-xs-12 col-ms-12 col-md-4 col-lg-4">
+                                <label class="checkbox" for="indispo"><input type="checkbox" name="checkbox-inline" id="indispo"><i></i>  <span class="me_notifier">J'ai une indisponibilité dans la journée</span></label>
+
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <p style="clear:both !important"></p>
+                                <br>
+                                <div class="entour_indisponibilite" style="display:none  !important;">
+                                        				<span class="de__"> De</span>
+                                        				<select name="" class="select_item">
+                                        					<option>heure</option>
+                                        				</select>
+                                        				<select name="" class="select_item">
+                                        					<option>Minute</option>
+                                        				</select>
+
+                                        				<span class="de__"> à</span>
+                                        				<select name="" class="select_item">
+                                        					<option>heure</option>
+                                        				</select>
+                                        				<select name="" class="select_item">
+                                        					<option>Minute</option>
+                                        				</select>
+
+                                        				<span class="de__"> et de</span>
+                                        				<select name="" class="select_item">
+                                        					<option>heure</option>
+                                        				</select>
+                                        				<select name="" class="select_item">
+                                        					<option>Minute</option>
+                                        				</select>
+
+                                        				<span class="de__"> à</span>
+                                        				<select name="" class="select_item">
+                                        					<option>heure</option>
+                                        				</select>
+                                        				<select name="" class="select_item">
+                                        					<option>Minute</option>
+                                        				</select>
+                                        			</div>
+                            </div>
+                            <br>
+					</div>
+
+
+
+				</fieldset>
+
+                <table class="table table-bordered table-striped table-condensed">
+                    <tr>
+                        <th><input type="checkbox" name=""> <span class="jours_">Lundi </span> </th>
+                        <th style="font-size: 0.9em;">
+                        <span> de</span>
+			            <select name="" class=" select_item2">
+			             <option>heure</option>
+			             </select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+			                                        				<span class="remove_add">
+			                                        					<span class=""> et de</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+			                                        				</span>
+
+                                        					</th>
+                                        				</tr>
+                                        				<tr>
+                                        					<th><input type="checkbox" name=""> <span class="jours_"> Mardi </span></th>
+                                        					<th style="font-size: 0.9em !important;">
+                                        						<span> de</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class="select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class="remove_add">
+			                                        					<span class=""> et de</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+			                                        				</span>
+                                        					</th>
+                                        				</tr>
+
+                                        				<tr>
+                                        					<th><input type="checkbox" name="" class="align_ele"> <span class="jours_"> Mercredi</span> </th>
+                                        					<th style="font-size: 0.9em !important;">
+                                        						<span> de</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+<span class="remove_add">
+			                                        					<span class=""> et de</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+			                                        				</span>
+                                        				</tr>
+
+                                        				<tr>
+                                        					<th><input type="checkbox" name=""> <span class="jours_"> Jeudi</span> </th>
+                                        					<th style="font-size: 0.9em !important;">
+                                        						<span> de</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class="remove_add">
+			                                        					<span class=""> et de</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+			                                        				</span>
+                                        				</tr>
+
+                                        				<tr>
+                                        					<th><input type="checkbox" name="" class="align_ele"> <span class="jours_"> Vendredi</span> </th>
+                                        					<th style="font-size: 0.9em !important;">
+                                        						<span> de</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class="remove_add">
+			                                        					<span class=""> et de</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+			                                        				</span>
+                                        					</th>
+                                        				</tr>
+
+                                        				<tr>
+                                        					<th><input type="checkbox" name=""> <span class="jours_"> Samedi</span> </th>
+                                        					<th style="font-size: 0.9em !important;">
+                                        						<span> de</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+<span class="remove_add">
+			                                        					<span class=""> et de</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+			                                        				</span>
+                                        					</th>
+                                        				</tr>
+
+                                        				<tr>
+                                        					<th><input type="checkbox" name="" class="align_ele"> <span class="jours_"> Dimanche</span> </th>
+                                        					<th style="font-size: 0.9em !important;">
+                                        						<span> de</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+<span class="remove_add">
+			                                        					<span class=""> et de</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+
+			                                        				<span class=""> à</span>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>heure</option>
+			                                        				</select>
+			                                        				<select name="" class=" select_item2">
+			                                        					<option>Minute</option>
+			                                        				</select>
+			                                        				</span>
+                                        					</th>
+                                        				</tr>
+
+
+                </table>
+
+                <div class=" ">
+                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                        <h5 class="times_resolution">Temps de résolution</h5>
+                        <label class="select">
+								<select>
+									<option value="15 min">15 min</option>
+                                    <option value="30 min">30 min</option>
+                                    <option value="45 min">45 min</option>
+                                    <option value="60 min">60 min</option>
+                                    <option value="120 min">120 min</option>
+								</select>
+								<i></i>
+							</label>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+
+                    </div>
+
+                </div>
+                        <p style="clear:both !important"></p>
+                        <br>
+
+                                                        		<div class="">
+                                        			<div class="margin_zero">
+                                        				<div class="col-sm-12 col-xs-12 col-lg-2 col-md-2">
+	                                        				<input type="checkbox" name="" class="toutes_les"> <span class="les_semaines"> Toutes les semaines </span>
+	                                        			</div>
+
+	                                        			<div class="col-sm-12 col-xs-12 col-lg-10 col-md-10">
+                                        				<input type="radio" name="" id="" class="jusqua"> <span class="days_mont_year">Jusqu'au</span>
+                                        				<!-- le jours -->
+						                                    <select class="  select_item3">
+						                                        <option>Jour</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+						                                    </select>
+
+						                                  <!-- fin du jour -->
+
+
+						                                  <!-- le mois -->
+						                                    <select class=" select_item3">
+						                                      <option value="">Mois</option><option value="01">Janvier</option><option value="02">Février</option><option value="03">Mars</option><option value="04">Avril</option><option value="05">Mai</option><option value="06">Juin</option><option value="07">Juillet</option><option value="08">Août</option><option value="09">Septembre</option><option value="10">Octobre</option><option value="11">Novembre</option><option value="12">Décembre</option>
+						                                    </select>
+						                                  <!-- fin du mois-->
+
+						                                  <!-- debut de l'année -->
+						                                  	<select class=" select_item3">
+						                                  		<option value="">Année</option>
+						                                  		<option value="2018">2018</option>
+						                                  		<option value="2019">2019</option>
+						                                  	</select>
+
+						                                  <!-- fin de l'année -->
+                                        			</div>
+
+
+
+                                        			</div>
+
+
+
+              </section>
+
+                <!-- fin -->
+
+                        <br>
+
+                                        		<div class="" >
+                                        			<div class="margin_zero">
+                                                        <div class="col-sm-12 col-xs-12 col-lg-2 col-md-2">
+
+                                        				<input type="checkbox" name="" class="class_in" style=" "> <span class="in_" >Période allant du </span>
+                                                            </div>
+                                                       <div class="col-sm-12 col-xs-12 col-lg-10 col-md-10">
+                                                           <!-- le jours -->
+						                                    <select class=" select_item4">
+						                                        <option>Jour</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+						                                    </select>
+
+						                                  <!-- fin du jour -->
+
+                                                             <!-- le mois -->
+						                                    <select class=" select_item4">
+						                                      <option value="">Mois</option><option value="01">Janvier</option><option value="02">Février</option><option value="03">Mars</option><option value="04">Avril</option><option value="05">Mai</option><option value="06">Juin</option><option value="07">Juillet</option><option value="08">Août</option><option value="09">Septembre</option><option value="10">Octobre</option><option value="11">Novembre</option><option value="12">Décembre</option>
+						                                    </select>
+						                                  <!-- fin du mois-->
+                                                            <!-- debut de l'année -->
+						                                  	<select class=" select_item4">
+						                                  		<option value="">Année</option>
+						                                  		<option value="2018">2018</option>
+						                                  		<option value="2019">2019</option>
+						                                  	</select>
+
+						                                  <!-- fin de l'année -->
+						                                   <span class="in_">Au </span>
+
+						                                  <!-- le jours -->
+						                                    <select class=" select_item4">
+						                                        <option>Jour</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+						                                    </select>
+
+						                                  <!-- fin du jour -->
+
+                                                           <!-- le mois -->
+						                                    <select class="select_item4">
+						                                      <option value="">Mois</option><option value="01">Janvier</option><option value="02">Février</option><option value="03">Mars</option><option value="04">Avril</option><option value="05">Mai</option><option value="06">Juin</option><option value="07">Juillet</option><option value="08">Août</option><option value="09">Septembre</option><option value="10">Octobre</option><option value="11">Novembre</option><option value="12">Décembre</option>
+						                                    </select>
+						                                  <!-- fin du mois-->
+
+						                                  <!-- debut de l'année -->
+						                                  	<select class="select_item4">
+						                                  		<option value="">Année</option>
+						                                  		<option value="2018">2018</option>
+						                                  		<option value="2019">2019</option>
+						                                  	</select>
+
+						                                  <!-- fin de l'année -->
+
+                                                        </div>
+
+                                        			</div>
+
+                                              <br><br>
+
+
+
+                                        		</div>
+
+
+                              <!-- debut du code et du -->
+                              <div class="wrapper_4" style="margin-bottom:10px !important;width:70%;"></div>
+                              <!-- fin du code et du -->
+                               <p style="margin-top: 30px !important"></p>
+                                <div class="pull-right">
+                                        					<button type="submit" class="btn btn-success btn-xs modif_link_btn"> <i class="fa fa-floppy-o"> </i> Créer l'agenda </button>
+
+                                        			<button class="btn btn-warning btn-xs modif_link_btn add_fields_4" id=""><i class="fa fa-plus"></i> Ajouter période </button>
+
+                                        			<a href="" class="btn btn-primary btn-xs modif_link_btn"><i class="fa fa-pencil-square-o"> </i> Modifier</a>
+                                        				</div>
+                                                 <p style="margin-top: 100px !important"></p>
+
+
+                   </form>
+              </div>
+
+
+          </div>
+
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+       
+
+
+{% endblock %}
+
+{% block scripts %}
+
+ <script type="text/javascript">
+            $(document).ready(function(){
+                $("#ajouter").click(function(e){
+                e.preventDefault();
+                $("#btn_add").toggle();
+                });
+
+                $("#je_precise").on("click",function(){
+                    $(".remove_add").hide();
+                });
+
+                 $("#je_prefere").on("click",function(){
+                    $(".remove_add").show();
+                });
+
+                $("#indispo").on("click",function(){
+                    $(".entour_indisponibilite").toggle();
+                });
+
+                // une seconde ligne de code
+
+                $("#signupForm").validate({
+                  rules: {
+                    couleur:"required",
+                    firstname: {
+                      required: true,
+                      minlength: 4
+                    },
+                    work: {
+                      required: true,
+                      minlength:4
+                    },
+
+                 },
+                  messages: {
+                    firstname: {
+                      required: "<span style='color:#dd4f43'>Nom de l'agenda</span>",
+                      minlength: "<span style='color:#dd4f43'> 4 caractères minimum</span>"
+                    },
+                    work: {
+                   required: "<span style='color:#dd4f43'>Le métier</span>",
+                   minlength: "<span style='color:#dd4f43'>2 caractères minimum</span>"
+                 },
+                    couleur: "<span style='color:#dd4f43'>La couleur</span>",
+                  }
+                });
+
+
+                // Ajouter une nouvele Périodicité
+
+                var max_fields = 3; //Maximum allowed input fields
+                var wrapper    = $(".wrapper_4"); //Input fields wrapper
+                var add_button = $(".add_fields_4"); //Add button class or ID
+                var x = 1; //Initial input field is set to 1
+
+            	//When user click on add input button
+            	$(add_button).click(function(e){
+                    e.preventDefault();
+            		//Check maximum allowed input fields
+                    if(x < max_fields){
+                        x++; //input field increment
+            			 //add input field
+                  $(wrapper).append('<div class="wrapper_down_" style=""><div id="btn_add"><div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"><span class="in_">Et du </span></div><div class="col-xs-12 col-sm-12 col-md-10 col-lg-10"><div class="margin_zero"><select class="select_item4"><option>Jour</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05<option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20<option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select class="select_item4"><option>Mois</option><option value="Janvier">Janvier</option><option value="Février">Février</option><option value="Mars">Mars</option><option value="Avril">Avril</option><option value="Mai">Mai</option><option value="Juin">Juin</option><option value="Juillet">Juillet</option><option value="Août">Août</option><option value="Septembre">Septembre</option><option value="Octobre">Octobre</option><option value="Novembre">Novembre</option><option value="Décembre">Décembre</option></select><select class="select_item4"><option>Année</option><option value="2018">2018</option><option value="2019">2019</option></select><span class="in_">Au </span><select class="select_item4"><option>Jour</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select class="select_item4"><option value="">Mois</option><option value="01">Janvier</option><option value="02">Février</option><option value="03">Mars</option><option value="04">Avril</option><option value="05">Mai</option><option value="06">Juin</option><option value="07">Juillet</option><option value="08">Août</option><option value="09">Septembre</option><option value="10">Octobre</option><option value="11">Novembre</option><option value="12">Décembre</option></select><select class=" select_item4"><option value="">Année</option><option value="2018">2018</option><option value="2019">2019</option></select></div></div></div><a href="javascript:void(0);" class="remove_field_4 btn-primary"><i class="fa fa-times"></i></a></div>');
+                    }
+                });
+
+                //when user click on remove button
+                $(wrapper).on("click",".remove_field_4", function(e){
+                    e.preventDefault();
+            		$(this).parent('div').remove(); //remove inout field
+            		x--; //inout field decrement
+                })
+
+
+
+            });
+        </script>
+
+{% endblock %}
+

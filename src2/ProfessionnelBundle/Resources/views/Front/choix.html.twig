@@ -1,0 +1,123 @@
+{% extends 'default.html.twig' %}
+
+{% block title %}{{"Choix du professionnel"|trans}}{% endblock %}
+
+{% block style %}
+  <style>
+        .bootstrap-select > .dropdown-toggle {
+          position: relative;
+          width: 100%;
+          z-index: 1;
+          text-align: right;
+          white-space: nowrap;
+          padding-top: 15px;
+          height: 50px;
+          font-weight: 700;
+          }
+          @media screen and (min-width: 400px) {
+            .my_selector_{
+              margin-bottom: 20px !important;
+              height: 50px !important;
+            }
+            .my_selector_2{
+              margin-top: 10px !important;
+              height: 50px !important;
+              margin-bottom: 5px !important;:
+            }
+          }
+            @media screen and (min-width: 360px) {
+              .my_selector_{
+                margin-bottom: 10px !important;
+                height: 50px !important;
+              }
+              .my_selector_2{
+                margin-top: 10px !important;
+                height: 50px !important;
+                margin-bottom: 5px !important;:
+              }
+
+          }
+
+          @media screen and (min-width: 320px) {
+            .my_selector_{
+              margin-bottom: 10px !important;
+              height: 50px !important;
+            }
+            .my_selector_2{
+              margin-top: 10px !important;
+              height: 50px !important;
+              margin-bottom: 5px !important;:
+            }
+            .search_professionnal2{
+              top:230px !important;
+            }
+
+        }
+        @media screen and (min-width: 1024px) {
+          .my_selector_{
+            margin-bottom: 10px !important;
+            height: 50px !important;
+          }
+          .my_selector_2{
+            margin-top: 0px !important;
+            height: 50px !important;
+            margin-bottom: 5px !important;:
+          }
+          .search_professionnal2{
+            top:230px !important;
+          }
+
+
+      }
+      </style>
+	
+}
+{% endblock %}
+
+{% block body %}
+     <div class='img_form' >
+		<p class="search_professionnal " style="">{{"Prenez rendez-vous en ligne avec les meilleurs professionnels du Cameroun"|trans}}.</p>
+		<p class="search_professionnal2 " >{{"Cherchez et trouvez un rendez-vous"|trans}} </p>
+					<div class="form_wrapper_">
+						<form method="post" action="{{ path('dkk_app_search') }}">
+							<div class="form-group">
+								<div class="col-xs-12 col-sm-4 col-md-5 col-lg-5">
+                  <select id="" class="form-control selectpicker my_selector_" data-hide-disabled="true" data-live-search="true" style="width:100px !important">
+
+                    <option selected disabled> {{"Rechercher un professionnel"|trans}}  </option>
+
+                  <optgroup label="Médécin">
+                    <option>{{'Dentiste'|trans}}</option>
+                    <option>{{'Chirurgien'|trans}}</option>
+                  </optgroup>
+                  <optgroup label="Bien être">
+                    <option>{{'Masseuses'|trans}}</option>
+                    <option>{{'Coiffure'|trans}}</option>
+                  </optgroup>
+                </select>
+                <br>
+								</div>
+								<div class="col-xs-12 col-sm-4 col-md-5 col-lg-5 ">
+                  <select  class="form-control selectpicker my_selector_2" data-hide-disabled="true" data-live-search="true" style="width:100px !important;">
+
+                    <option selected>{{'Dans la ville de'|trans}} </option>
+                    <option>{{'Yaoundé'|trans}}</option>
+                    <option>{{'Douala'|trans}}</option>
+
+
+                </select>
+                <br>
+
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
+								<button type="submit" class="btn btn-social-icon btn-rw btn-success " style="width:100% !important;font-weight:700 !important;font-size:0.9em;height:50px !important;">{{'Recherche'|trans}}</button>
+							</div>
+						</form>
+
+					</div>
+
+
+			</div>
+
+		</div>
+{% endblock %}

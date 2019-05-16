@@ -1,0 +1,342 @@
+    {% extends '::admin_template.html.twig' %}
+
+{% block title %}Agenda - Création d'un nouveau client :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+
+ <style>
+              .menu1 {  
+          border-bottom:solid 2px #666666 ;  
+          padding-top:12px ;  
+          padding-bottom:7px
+        } 
+
+        .onglet {  
+            border:solid 1px #666666 ;  
+            margin:5px 5px 0px 5px ;  
+            padding:7px 3px 7px 3px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+
+            border-radius:5px 5px 0px 0px !important;
+          } 
+
+          a.onglet {  
+            background-color:#666666 ;  
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+          }  
+
+          .onglet-actif {  
+             border-left:solid 2px #666666 ; 
+             border-right:solid 2px #666666 ;  
+             border-top:solid 2px #666666 ;  
+             border-bottom:none !important; 
+             margin:5px 5px 0px 5px ;  
+             padding:7px 3px 7px 3px ;  
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+             color: #333;
+          }  
+        .sky-form{
+            box-shadow: none !important;
+        }
+
+
+
+    </style>
+{% endblock %}
+
+{% block body %}
+
+
+<!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+            <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <select class="form-control form_width">
+                <option>Dr Ndewa</option>
+                 <option>Dr Fotso</option>
+                 <option>Dr Melingui</option>
+             </select>
+
+            <br>
+
+               <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                <a href="{{path('dkk_administration_agenda')}}" class="onglet"> Agenda(s)  </a> <!-- onglet inactif -->
+                <a href="{{path('dkk_administration_agenda_tab_prestataire')}}" class="onglet-actif"> Prestataires </a> <!-- onglet ACTIF -->
+                <a  href="{{path('dkk_administration_agenda_tab_prestation')}}" class="onglet-actif"> Prestations </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_tache')}}" class="onglet-actif"> Tâches </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_planning')}}" class="onglet-actif"> Plannings </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_liste_client')}}" class="onglet-actif"> Liste clients </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_action')}}" class="onglet-actif"> Actions </a> <!-- onglet ACTIF -->
+              </div>
+              <div class="content_menu">
+                 <div class="wrapper_line_one">
+                    <span class="form_search">
+                        <form method="post" action="{{path('dkk_administration_client')}}">
+                            <input type="search" name="" placeholder="Rechercher un client" class="serach_bx" required>
+                            <button type="submit" class="search_btn"><i class="fa fa-search"></i></button>
+                         </form>
+                    </span>
+
+                      <a href="{{path('dkk_administration_agenda_creer_client')}}" class="btn add_agenda">Créer un client</a>
+                     <a href="{{path('dkk_administration_agenda_creer_planning')}}" class="mymodalbox">Planning </a>
+                     <a href="{{path('dkk_administration_agenda_prendre_rdv')}}" class="btn rdv_agenda"> Prendre un RDV</a>
+                     <a href="{{path('dkk_administration_agenda_modifier_rdv')}}" class="btn modifier_agenda">  Modifier le  RDV</a>
+                     <a href="{{path('dkk_administration_agenda_presence')}}" class="btn precence_agenda">  Présence</a>
+                 </div>
+
+              </div>
+
+              <div class="">
+                   <h3 class="cration_client">Création d'un nouveau client</h3>
+                   <div class="margin_wrapper" style="padding-right: 70px;padding-left: 70px !important;">
+                              <form action="" class="sky-form" id="signupForm" method="post">
+
+        <fieldset>
+          <div class="row">
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-user"></i>
+                <input type="text" placeholder="Nom" name="firstname">
+              </label>
+            </section>
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-user"></i>
+                <input type="text" placeholder="Prenom" name="lastname">
+              </label>
+            </section>
+          </div>
+                    <div class="row">
+            <section class="col col-4">
+              <label class="select">
+                <select name="jour">
+                  <option selected disabled> Le jour</option>
+                   <option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+
+                </select>
+                <i></i>
+              </label>
+            </section>
+            <section class="col col-4">
+              <label class="select">
+                <select name="mois">
+                  <option selected disabled>Le mois</option>
+                  <option value="Janvier">Janvier</option>
+                                    <option value="Février">Février</option>
+                                    <option value="Mars">Mars</option>
+                                    <option value="Avril">Avril</option>
+                                    <option value="Mai">Mai</option>
+                                    <option value="Juin">Juin</option>
+                                    <option value="Juillet">Juillet</option>
+                                    <option value="Août">Août</option>
+                                    <option value="Septembre">Septembre</option>
+                                    <option value="Octobre">Octobre</option>
+                                    <option value="Novembre">Novembre</option>
+                                    <option value="Décembre">Décembre</option>
+                </select>
+                <i></i>
+              </label>
+            </section>
+                        <section class="col col-4">
+              <label class="select">
+                <select name="annee">
+                  <option selected disabled>L'année</option>
+                  <option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option>
+
+                </select>
+                <i></i>
+              </label>
+            </section>
+          </div>
+                    <div class="row">
+            <section class="col col-6">
+              <label class="select">
+                <select name="sexe">
+                  <option selected disabled>Sexe</option>
+                  <option value="Masculin">Masculin</option>
+                  <option value="Féminin">Féminin</option>
+                </select>
+                <i></i>
+              </label>
+            </section>
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-phone"></i>
+                <input type="tel" placeholder="Téléphone" name="phone">
+              </label>
+            </section>
+          </div>
+
+
+
+                    <div class="row">
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-envelope-alt"></i>
+                <input type="email" placeholder="E-mail" name="email">
+              </label>
+            </section>
+            <section class="col col-6">
+            <label for="file" class="input input-file">
+              <div class="button"><input type="file" id="file" name="image" onchange="this.parentNode.nextSibling.value = this.value">Ajouter photo</div><input type="text" placeholder="" readonly="readonly">
+            </label>
+          </section>
+          </div>
+
+            <div class="row">
+
+                <section class="col col-6">
+                  <label class="checkbox"><input type="checkbox" name="checkbox-inline" ><i></i>  <span class="me_notifier">Me notifier par e-mail</span></label>
+                </section>
+
+                <section class="col col-6">
+                   <label class="checkbox"><input type="checkbox" name="checkbox-inline" ><i></i>  <span class="me_notifier">Me notifier par sms</span></label>
+                </section>
+
+            </div>
+
+                        <section>
+            <label class="textarea">
+              <i class="icon-append icon-comment"></i>
+              <textarea rows="5" placeholder=" Entrer un signalement" name="comment"></textarea>
+            </label>
+          </section>
+
+        </fieldset>
+
+
+        <footer>
+          <button type="submit" class="button btn-success btn-sm"><i class="fa fa-floppy-o"></i> Valider </button>
+        </footer>
+      </form>
+                   </div>
+              </div>
+
+
+          </div>
+
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+ <script>
+
+    $().ready(function() {
+      $("#signupForm").validate({
+        rules: {
+          jour: "required",
+          mois: "required",
+          annee: "required",
+          sexe: "required",
+          firstname: {
+            required: true,
+            minlength: 2
+          },
+          image: {
+            required: true,
+            extension: "jpg|png|gif|PNG|GIF|JPG|jpeg|JPEG"
+          },
+          comment: {
+            required: true,
+            minlength: 20
+          },
+          lastname: {
+            required: true,
+            minlength: 2
+          },
+          entreprise: {
+            required: true,
+            minlength: 2
+          },
+          phone: {
+            required: true,
+            number: true,
+            minlength: 9
+          },
+
+
+          email: {
+            required: true,
+            email: true
+          }
+
+        },
+        messages: {
+          firstname: {
+            required: "<span style='color:#dd4f43'>Nom réquis</span>",
+            minlength: "<span style='color:#dd4f43'> 2 caractères minimum</span>"
+          },
+          lastname: {
+            required: "<span style='color:#dd4f43'>Prenom réquis</span>",
+            minlength: "<span style='color:#dd4f43'>2 caractères minimum</span>"
+          },
+          image: {
+            required: "<span style='color:#dd4f43'>champ réquis</span>",
+            extension: "<span style='color:#dd4f43'>L'image doit être un jpg, Png ou un gif</span>"
+          },
+          entreprise: {
+            required: "<span style='color:#dd4f43'>champs réquis</span>",
+            minlength: "<span style='color:#dd4f43'>2 caractères minimum</span>"
+          },
+          phone: {
+            required: "<span style='color:#dd4f43'>Champs réquis",
+            minlength: "<span style='color:#dd4f43'>9 caractères minimum</span>",
+            number:"<span style='color:#dd4f43'>Numéro invalide</span>"
+          },
+          comment: {
+            required: "<span style='color:#dd4f43'>Champs réquis</span>",
+            minlength: "<span style='color:#dd4f43'>20 caractères minimum</span>",
+          },
+          email:{
+            required: "<span style='color:#dd4f43'>Champ réquis</span>",
+            email: "<span style='color:#dd4f43'>Email invalide</span>",
+          },
+          jour: "<span style='color:#dd4f43'>Jour</span>",
+          mois: "<span style='color:#dd4f43'>Mois</span>",
+          annee: "<span style='color:#dd4f43'>L'année</span>",
+          sexe: "<span style='color:#dd4f43'>Sexe</span>",
+        }
+      });
+
+
+    });
+</script>
+{% endblock %}
+

@@ -1,0 +1,360 @@
+    {% extends '::admin_template.html.twig' %}
+
+{% block title %}Agenda:: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+<style>
+        #previous{
+            border:1px solid red !important;
+            top: 20px !important;
+        }
+        .menu1 {  
+          border-bottom:solid 2px #666666 ;  
+          padding-top:12px ;  
+          padding-bottom:7px
+        }  
+
+        .onglet { 
+            border:solid 1px #666666 ;  
+            margin:5px 5px 0px 5px ;  
+            padding:7px 3px 7px 3px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+
+            border-radius:5px 5px 0px 0px !important;
+          }  
+          a.onglet {  
+            background-color:#666666 ; 
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+          }  
+
+          .onglet-actif { 
+             border-left:solid 2px #666666 ;  
+             border-right:solid 2px #666666 ;  
+             border-top:solid 2px #666666 ;  
+             border-bottom:none !important;  
+             margin:5px 5px 0px 5px ;  
+             padding:7px 3px 7px 3px ;  
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+             color: #333;
+          }  
+        .sky-form{
+            box-shadow: none !important;
+        }
+
+        a.previous { margin-top: 0px !important; display: none;cursor: pointer;border-radius: 4px !important;
+        }
+        .span {
+          display: none;
+
+        }
+
+		table tr { display: none; }
+
+		table tr:nth-child(-n+8) { display: table-row; }
+
+
+
+		    </style>
+{% endblock %}
+
+{% block body %}
+
+ <!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+            <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <select class="form-control form_width">
+                <option>Dr Ndewa</option>
+                 <option>Dr Fotso</option>
+                 <option>Dr Melingui</option>
+             </select>
+
+            <br>
+
+
+
+              <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                <span class="onglet"> Agenda(s)  </span> <!-- onglet inactif -->
+                <a href="{{path('dkk_administration_agenda_tab_prestataire')}}" class="onglet-actif"> Prestataires </a> <!-- onglet ACTIF -->
+                <a  href="{{path('dkk_administration_agenda_tab_prestation')}}" class="onglet-actif"> Prestations </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_tache')}}" class="onglet-actif"> Tâches </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_planning')}}" class="onglet-actif"> Plannings </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_liste_client')}}" class="onglet-actif"> Liste clients </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_action')}}" class="onglet-actif"> Actions </a> <!-- onglet ACTIF -->
+              </div>
+              <div class="content_menu">
+                 <div class="wrapper_line_one">
+                    <span class="form_search">
+                        <form method="post" action="{{path('dkk_administration_client')}}">
+                            <input type="search" name="" placeholder="Rechercher un client" class="serach_bx" required>
+                            <button type="submit" class="search_btn"><i class="fa fa-search"></i></button>
+                         </form>
+                    </span>
+
+                     <a href="{{path('dkk_administration_agenda_creer_client')}}" class="btn add_agenda">Créer un client</a>
+                     <a href="{{path('dkk_administration_agenda_creer_planning')}}" class="mymodalbox">Planning </a>
+                     <a href="{{path('dkk_administration_agenda_prendre_rdv')}}" class="btn rdv_agenda"> Prendre un RDV</a>
+                     <a href="{{path('dkk_administration_agenda_modifier_rdv')}}" class="btn modifier_agenda">  Modifier le  RDV</a>
+                     <a href="{{path('dkk_administration_agenda_presence')}}" class="btn precence_agenda">  Présence</a>
+                 </div>
+                  <!-- debut de l'affichage du calandrier au click -->
+                  <div class="affichage_calandar">
+
+                  </div>
+                  <!-- debut de l'affichage du calandrier au click -->
+                  <div class="">
+                    <div class="wrapper_line_one">
+                <button class="show_calandar"><i class="fa fa-calendar"></i></button>
+
+                <button class="today"> Ajourd'hui </button>
+                <a class="previous"><span class="previous_bottom">Précédent</span> </a>
+                <span class="week_to"> &nbsp;Semaine du 19 au 27 Décembre 2019 &nbsp;</span>
+               <a class="next"> Suivant </a>
+                <input type="hidden" id="hdnActivePage" value="1" />
+                  <span class="wrapper_week">
+                    <input type="radio" name="chois" id="one_days"> <label for="one_days">1 jour &nbsp;</label>
+                    <input type="radio" name="chois" id="tree_days"> <label for="tree_days">3 jours &nbsp;</label>
+                    <input type="radio" checked name="chois" id="one_week"> <label for="one_week"> Semaine</label>
+                  </span>
+              </div>
+                  </div>
+
+              </div>
+
+              <div class="wrapper_aganda_">
+                    <table class="table table-bordered table-striped">
+    <tr>
+    <td>1</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test1</td>
+  </tr>
+    <tr>
+    <td>2</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test2</td>
+  </tr>
+    <tr>
+    <td>3</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test3</td>
+  </tr>
+    <tr>
+    <td>4</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test4</td>
+  </tr>
+    <tr>
+    <td>5</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test5</td>
+  </tr>
+    <tr>
+    <td>6</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test6</td>
+  </tr>
+    <tr>
+    <td>7</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test7</td>
+  </tr>
+    <tr>
+    <td>8</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test8</td>
+  </tr>
+    <tr>
+    <td>9</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test9</td>
+  </tr>
+    <tr>
+    <td>10</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test10</td>
+  </tr>
+    <tr>
+    <td>11</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test11</td>
+  </tr>
+    <tr>
+    <td>12</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test12</td>
+  </tr>
+    <tr>
+    <td>13</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test13</td>
+  </tr>
+    <tr>
+    <td>14</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test14</td>
+  </tr>
+    <tr>
+    <td>15</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test15</td>
+  </tr>
+    <tr>
+    <td>16</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test16</td>
+  </tr>
+    <tr>
+    <td>17</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test17</td>
+  </tr>
+    <tr>
+    <td>18</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test18</td>
+  </tr>
+    <tr>
+    <td>19</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test19</td>
+  </tr>
+    <tr>
+    <td>20</td>
+    <td>Naam</td>
+    <td>test</td>
+    <td>test20</td>
+  </tr>
+  </table>
+              </div>
+
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </section>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+
+    <script type='text/javascript'>//<![CDATA[
+
+  $(document).ready(function () {
+
+    // affichage du calandrier
+
+    $(".show_calandar").on("click",function(){
+       $(".affichage_calandar").toggle();
+    });
+        // nombre de page 8 par default
+        var pageSize = 8;
+        // initialisation du nombre de page au chargement de la page
+        $("#hdnActivePage").val(1);
+        // calcule du nombre de page
+        var numberOfPages = $('table tr').length / pageSize;
+        numberOfPages = numberOfPages.toFixed();
+        // si on click sur le lien "next"
+        $("a.next").on('click', function () {
+
+            $("table tr:nth-child(-n+" + (($("#hdnActivePage").val() * pageSize) + pageSize) + ")").show();
+            $("table tr:nth-child(-n+" + $("#hdnActivePage").val() * pageSize + ")").hide();
+            var currentPage = Number($("#hdnActivePage").val());
+
+            $("#hdnActivePage").val(Number($("#hdnActivePage").val()) + 1);
+
+            if ($("#hdnActivePage").val() != "1") {
+                $("a.previous").show();
+
+            }
+
+            if ($("#hdnActivePage").val() == numberOfPages) {
+                $("a.next").hide();
+
+            }
+        });
+        // si on click sur le lien "precedent"
+        $("a.previous").on('click', function () {
+            var currentPage = Number($("#hdnActivePage").val());
+            $("#hdnActivePage").val(currentPage - 1);
+
+            $("table tr").hide();
+
+            $("table tr:nth-child(-n+" + ($("#hdnActivePage").val() * pageSize) + ")").show();
+            $("table tr:nth-child(-n+" + (($("#hdnActivePage").val() * pageSize) - pageSize) + ")").hide();
+
+            if ($("#hdnActivePage").val() == "1") {
+                $("a.previous").hide();
+
+            }
+
+            if ($("#hdnActivePage").val() < numberOfPages) {
+                $("a.next").show();
+
+            }
+            if ($("#hdnActivePage").val() == 1) {
+
+            }
+        });
+
+
+    });
+//]]>
+
+</script>
+{% endblock %}
+

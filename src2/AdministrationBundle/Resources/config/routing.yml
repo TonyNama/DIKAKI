@@ -1,0 +1,387 @@
+dkk_administration_homepage:
+    path:    /parametres/{id}
+    defaults:  
+        _controller: DKKAdministrationBundle:Administration:index
+        id:    0
+    requirements:
+        id:    \d
+
+dkk_administration_parametres:
+    path:     /parametres/{id}
+    defaults:
+        _controller: DKKAdministrationBundle:Administration:parametres
+        id:          0
+    requirements:
+        id:    \d
+
+dkk_administration_restrictions:
+    path:     /restrictions/{id}
+    defaults:
+        _controller: DKKAdministrationBundle:Administration:restriction
+        id:          0
+    requirements:
+        id:    \d
+    
+dkk_administration_notification:
+    path:     /notifications
+    defaults: { _controller: DKKAdministrationBundle:Administration:notification }
+        
+#dkk_administration_prestataire:
+   # path:     /prestataire/{id}
+    #defaults:
+       # _controller: DKKAdministrationBundle:Administration:prestataire
+        #id:          0
+    #requirements:
+        #id:    \d
+    
+#dkk_administration_prestation:
+    #path:     /prestation/{id}
+    #defaults:
+        #_controller: DKKAdministrationBundle:Administration:prestation
+        #id:          0
+   # requirements:
+        #id:    \d
+    
+dkk_administration_payement:
+    path:     /payement/{id}
+    defaults: 
+        _controller: DKKAdministrationBundle:Administration:client
+        id:          0
+    requirements:
+        id:    \d
+
+dkk_administration_personnel:
+    path:     /personnel
+    defaults: 
+        _controller: DKKAdministrationBundle:Administration:personnel
+
+dkk_administration_role:
+    path:     /roles/{id}
+    defaults:
+        _controller: DKKAdministrationBundle:Administration:role
+        id:          0
+    requirements:    
+        id:    \d
+    
+dkk_administration_statistique:
+    path:     /statistique
+    defaults: {_controller: DKKAdministrationBundle:Administration:statistique }
+    
+dkk_administration_deconnexion:
+    path:     /deconnexion
+    defaults: { _controller: DKKAdministrationBundle:Administration:deconnexion }
+
+#enregistrement
+dkk_administration_enregistrement_parametres:
+    path:     /parametre/add
+    defaults: { _controller: DKKAdministrationBundle:Enregistrement:addParametresBase }
+    
+dkk_administration_enregistrement_parametres_specifiques:
+    path:    /parametre/spec/add
+    defaults : { _controller: DKKAdministrationBundle:Enregistrement:addParametreSpecifique }
+
+dkk_administration_enregistrement_restriction:
+    path:    /restriction/add
+    defaults: { _controller: DKKAdministrationBundle:Enregistrement:addRestriction }
+    
+dkk_administration_enregistrement_notification_email:
+    path:     /notitfication/enregistrer/email
+    defaults: { _controller: DKKAdministrationBundle:Enregistrement:notificationEmail }
+
+dkk_administration_enregistrement_notifications_sms:
+    path:     /notitfication/enregistrer/sms
+    defaults: { _controller: DKKAdministrationBundle:Enregistrement:notificationSms }
+    
+dkk_administration_enregistrement_prestataire:
+    path:     /prestataire/add
+    defaults: { _controller: DKKAdministrationBundle:Enregistrement:addPrestataire }
+    
+dkk_administration_enregistrement_prestation:
+    path:    /prestation/add
+    defaults: { _controller: DKKAdministrationBundle:Enregistrement:addPrestation }
+   
+dkk_administration_enregistrement_client:
+    path:     /paiement/add
+    defaults: { _controller: DKclientKAdministrationBundle:Enregistrement:addPaiement }
+
+dkk_administration_enregistrement_role:
+    path:     /role/add
+    defaults: { _controller: DKKAdministrationBundle:Enregistrement:addRole }
+    
+#suppression
+dkk_administration_suppression_parametres:
+    path:     /paramatres/delete/{id}
+    defaults: { _controller: DKKAdministrationBundle:Suppression:deleteParametre }
+    
+dkk_administration_suppression_parametres_specfifique:
+    path:     /paramatres/spec/delete/{id}
+    defaults: { _controller: DKKAdministrationBundle:Suppression:deleteParametreSpecifique }
+    
+dkk_administration_suppression_restriction:
+    path:     /restriction/delete/{id}
+    defaults: { _controller: DKKAdministrationBundle:Suppression:deleteRestriction }
+    
+dkk_suppression_notifications:
+    path:     /notifications/supprimer/{id}
+    defaults: { _controller: DKKAdministrationBundle:Suppression:notifications }
+    
+dkk_administration_suppression_prestataire:
+    path:     /prestataire/delete/{id}
+    defaults: { _controller: DKKAdministrationBundle:Suppression:deletePrestataire }
+    
+dkk_administration_suppression_prestation:
+    path:     /prestation/delete/{id}
+    defaults: { _controller: DKKAdministrationBundle:Suppression:deletePrestation }
+    
+dkk_administration_suppression_paiement:
+    path:     /paiement/delete/{id}
+    defaults: { _controller: DKKAdministrationBundle:Suppression:deletePaiement }
+    
+dkk_administration_suppression_role:
+    path:     /role/delete/{id}
+    defaults: { _controller: DKKAdministrationBundle:Suppression:deleteRole }
+
+#modification    
+dkk_administration_modification_parametres:
+    path:     /parametre/update/{id}
+    defaults: { _controller: DKKAdministrationBundle:Modification:updateParametre }
+    
+dkk_administration_modification_restriction:
+    path:     /restriction/update/{id}
+    defaults: { _controller: DKKAdministrationBundle:Modification:updateRestriction }
+    
+dkk_modification_notifications:
+    path:     /notifications/modifier/{id}
+    defaults: { _controller: DKKAdministrationBundle:Modification:notifications }
+    
+dkk_administration_modification_prestataire:
+    path:     /prestataire/update/{id}
+    defaults: { _controller: DKKAdministrationBundle:Modification:updatePrestataire }
+    
+dkk_administration_modification_prestation:
+    path:     /prestation/update/{id}
+    defaults: { _controller: DKKAdministrationBundle:Modification:updatePrestation }
+    
+dkk_administration_modification_paiement:
+    path:     /paiement/update/{id}
+    defaults: { _controller: DKKAdministrationBundle:Modification:updatePaiement }
+
+dkk_administration_modification_role:
+    path:     /role/update/{id}
+    defaults: { _controller: DKKAdministrationBundle:Modification:updateRole }
+    
+#New Front
+dkk_administration_:
+    path:     /
+    defaults: { _controller: DKKAdministrationBundle:Front:updateRole }
+
+
+#mes propre route  
+dkk_administration_index:
+    path:     /index
+    defaults: { _controller: DKKAdministrationBundle:Front:index }
+
+dkk_administration_reception:
+    path:     /reception
+    defaults: { _controller: DKKAdministrationBundle:Front:reception }
+
+dkk_administration_corbeille:
+    path:     /corbeille
+    defaults: { _controller: DKKAdministrationBundle:Front:corbeille }
+
+dkk_administration_email_compos: 
+    path:     /email_compos
+    defaults: { _controller: DKKAdministrationBundle:Front:email_compos } 
+
+dkk_administration_email_send: 
+    path:     /email_send
+    defaults: { _controller: DKKAdministrationBundle:Front:email_send }
+
+dkk_administration_email_send_view:  
+    path:     /email_send_view
+    defaults: { _controller: DKKAdministrationBundle:Front:email_send_view }
+
+dkk_administration_read_email:
+    path:     /read_email
+    defaults: { _controller: DKKAdministrationBundle:Front:read_email }
+
+dkk_administration_calandrier:
+    path:     /calandrier
+    defaults: { _controller: DKKAdministrationBundle:Front:calandrier }
+
+dkk_administration_modifier_heure_rdv:
+    path:     /modifier_heure_rdv
+    defaults: { _controller: DKKAdministrationBundle:Front:modifier_heure_rdv }
+
+dkk_administration_periodicite:
+    path:     /periodicite
+    defaults: { _controller: DKKAdministrationBundle:Front:periodicite }
+
+dkk_administration_autorisation:
+    path:     /autorisation
+    defaults: { _controller: DKKAdministrationBundle:Front:autorisation }
+
+dkk_administration_restriction:
+    path:     /restriction
+    defaults: { _controller: DKKAdministrationBundle:Front:restriction }
+ 
+dkk_administration_modifier_autorisation:
+    path:     /modifier_autorisation
+    defaults: { _controller: DKKAdministrationBundle:Front:modifier_autorisation }
+ 
+dkk_administration_notification_email:
+    path:     /notification_email
+    defaults: { _controller: DKKAdministrationBundle:Front:notification_email }
+
+dkk_administration_notification_sms:
+    path:     /notification_sms
+    defaults: { _controller: DKKAdministrationBundle:Front:notification_sms }
+
+dkk_administration_regarder_notification_email:
+    path:     /regarder_notification_email
+    defaults: { _controller: DKKAdministrationBundle:Front:regarder_notification_email }
+
+dkk_administration_regarder_notification_sms:
+    path:     /regarder_notification_sms
+    defaults: { _controller: DKKAdministrationBundle:Front:regarder_notification_sms }
+
+dkk_administration_prestataire:
+    path:     /prestataire
+    defaults: { _controller: DKKAdministrationBundle:Front:prestataire }
+
+dkk_administration_modification_du_prestataire:
+    path:     /modification_du_prestataire
+    defaults: { _controller: DKKAdministrationBundle:Front:modification_du_prestataire }
+
+
+dkk_administration_ressource:
+    path:     /ressource
+    defaults: { _controller: DKKAdministrationBundle:Front:ressource }
+
+dkk_administration_prestation:
+    path:     /prestation
+    defaults: { _controller: DKKAdministrationBundle:Front:prestation }
+
+dkk_administration_modifier_prestation_unique:
+    path:     /modifier_prestation_unique
+    defaults: { _controller: DKKAdministrationBundle:Front:modifier_prestation_unique }
+
+dkk_administration_prestation_groupe:
+    path:     /prestation_de_groupe
+    defaults: { _controller: DKKAdministrationBundle:Front:prestation_groupe }
+
+dkk_administration_modifier_prestation_groupe:
+    path:     /modifier_prestation_groupe
+    defaults: { _controller: DKKAdministrationBundle:Front:modifier_prestation_groupe }
+
+dkk_administration_service:
+    path:     /service
+    defaults: { _controller: DKKAdministrationBundle:Front:service }
+
+dkk_administration_modifier_prestation_service:
+    path:     /modifier_prestation_service
+    defaults: { _controller: DKKAdministrationBundle:Front:modifier_prestation_service }
+
+dkk_administration_e_service:
+    path:     /e_service
+    defaults: { _controller: DKKAdministrationBundle:Front:e_service }
+
+dkk_administration_acces:
+    path:     /acces
+    defaults: { _controller: DKKAdministrationBundle:Front:acces }
+
+dkk_administration_modifier_acces:
+    path:     /modifier_acces
+    defaults: { _controller: DKKAdministrationBundle:Front:modifier_acces }
+
+dkk_administration_paiement:
+    path:     /paiement
+    defaults: { _controller: DKKAdministrationBundle:Front:paiement }
+
+dkk_administration_client:
+    path:     /client
+    defaults: { _controller: DKKAdministrationBundle:Front:client }
+
+dkk_administration_view_client:
+    path:     /view_client
+    defaults: { _controller: DKKAdministrationBundle:Front:view_client }
+
+dkk_administration_paiement_en_ligne:
+    path:     /paiement_en_ligne
+    defaults: { _controller: DKKAdministrationBundle:Front:paiement_en_ligne }
+
+dkk_administration_paiement_virement:
+    path:     /paiement_virement
+    defaults: { _controller: DKKAdministrationBundle:Front:paiement_virement }
+
+dkk_administration_paiement_cheque:
+    path:     /paiement_cheque
+    defaults: { _controller: DKKAdministrationBundle:Front:paiement_cheque }
+
+dkk_administration_historique:
+    path:     /historique
+    defaults: { _controller: DKKAdministrationBundle:Front:historique }
+
+dkk_administration_diagramme:
+    path:     /diagramme
+    defaults: { _controller: DKKAdministrationBundle:Front:diagramme }
+
+dkk_administration_compte:
+    path:     /compte
+    defaults: { _controller: DKKAdministrationBundle:Front:compte }
+    
+dkk_administration_agenda:
+    path:     /agenda
+    defaults: { _controller: DKKAdministrationBundle:Front:agenda }
+
+dkk_administration_agenda_tab_prestataire:
+    path:     /agenda_tab_prestataire
+    defaults: { _controller: DKKAdministrationBundle:Front:agenda_tab_prestataire }
+
+dkk_administration_agenda_tab_prestation:
+    path:     /agenda_tab_prestation
+    defaults: { _controller: DKKAdministrationBundle:Front:agenda_tab_prestation }
+
+dkk_administration_agenda_tab_tache:
+    path:     /agenda_tab_tache
+    defaults: { _controller: DKKAdministrationBundle:Front:agenda_tab_tache }
+
+dkk_administration_agenda_tab_planning:
+    path:     /agenda_tab_planning
+    defaults: { _controller: DKKAdministrationBundle:Front:agenda_tab_planning }
+
+dkk_administration_agenda_tab_liste_client:
+    path:     /agenda_tab_liste_client
+    defaults: { _controller: DKKAdministrationBundle:Front:agenda_tab_liste_client }
+
+dkk_administration_agenda_tab_action:
+    path:     /agenda_tab_action
+    defaults: { _controller: DKKAdministrationBundle:Front:agenda_tab_action }
+
+dkk_administration_agenda_creer_client:
+    path:     /agenda_creer_client
+    defaults: { _controller: DKKAdministrationBundle:Front:agenda_creer_client }
+
+dkk_administration_agenda_creer_planning:
+    path:     /agenda_creer_planning
+    defaults: { _controller: DKKAdministrationBundle:Front:agenda_creer_planning }
+
+dkk_administration_agenda_prendre_rdv:
+    path:     /agenda_prendre_rdv
+    defaults: { _controller: DKKAdministrationBundle:Front:agenda_prendre_rdv }
+
+
+
+dkk_administration_agenda_modifier_rdv:
+    path:     /agenda_modifier_rdv
+    defaults: { _controller: DKKAdministrationBundle:Front:agenda_modifier_rdv }
+
+dkk_administration_agenda_presence:
+    path:     /agenda_presence
+    defaults: { _controller: DKKAdministrationBundle:Front:agenda_presence }
+
+
+
+
+
+    

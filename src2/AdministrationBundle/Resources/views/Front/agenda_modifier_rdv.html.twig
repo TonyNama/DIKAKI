@@ -1,0 +1,496 @@
+     {% extends '::admin_template.html.twig' %}
+
+{% block title %}Agenda - Modifier le rendez-vous :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+
+<style>
+        .menu1 {  
+          border-bottom:solid 2px #666666 ; 
+          padding-top:12px ;  
+          padding-bottom:7px
+        }  
+
+        .onglet {  
+            border:solid 1px #666666 ;  
+            margin:5px 5px 0px 5px ;  
+            padding:7px 3px 7px 3px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+
+            border-radius:5px 5px 0px 0px !important;
+          }  
+
+          a.onglet {  
+            background-color:#666666 ;  
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+          }  
+
+          .onglet-actif {  
+             border-left:solid 2px #666666 ;  
+             border-right:solid 2px #666666 ;  
+             border-top:solid 2px #666666 ;  
+             border-bottom:none !important;  
+             margin:5px 5px 0px 5px ; 
+             padding:7px 3px 7px 3px ; 
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+             color: #333;
+          }  
+        .sky-form{
+            box-shadow: none !important;
+        }
+           tr > td{
+          font-weight: 700;
+       }
+       td.data_{
+          margin-left: 30px !important;
+       }
+
+
+
+
+    </style>
+{% endblock %}
+
+{%  block body %}
+
+ <!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+            <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <select class="form-control form_width">
+                <option>Dr Ndewa</option>
+                 <option>Dr Fotso</option>
+                 <option>Dr Melingui</option>
+             </select>
+
+            <br>
+
+              <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                <a href="{{path('dkk_administration_agenda')}}" class="onglet"> Agenda(s)  </a> <!-- onglet inactif -->
+                <a href="{{path('dkk_administration_agenda_tab_prestataire')}}" class="onglet-actif"> Prestataires </a> <!-- onglet ACTIF -->
+                <a  href="{{path('dkk_administration_agenda_tab_prestation')}}" class="onglet-actif"> Prestations </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_tache')}}" class="onglet-actif"> Tâches </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_planning')}}" class="onglet-actif"> Plannings </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_liste_client')}}" class="onglet-actif"> Liste clients </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_action')}}" class="onglet-actif"> Actions </a> <!-- onglet ACTIF -->
+              </div>
+              <div class="content_menu">
+                 <div class="wrapper_line_one">
+                    <span class="form_search">
+                        <form method="post"  action="{{path('dkk_administration_client')}}">
+                            <input type="search" name="" placeholder="Rechercher un client" class="serach_bx" required>
+                            <button type="submit" class="search_btn"><i class="fa fa-search"></i></button>
+                         </form>
+                    </span>
+
+                     <a href="{{path('dkk_administration_agenda_creer_client')}}" class="btn add_agenda">Créer un client</a>
+                     <a href="{{path('dkk_administration_agenda_creer_planning')}}" class="mymodalbox">Planning </a>
+                     <a href="{{path('dkk_administration_agenda_prendre_rdv')}}" class="btn rdv_agenda"> Prendre un RDV</a>
+                     <a href="{{path('dkk_administration_agenda_modifier_rdv')}}" class="btn modifier_agenda">  Modifier le  RDV</a>
+                     <a href="{{path('dkk_administration_agenda_presence')}}" class="btn precence_agenda">  Présence</a>
+                 </div>
+
+              </div>
+
+              <div class="">
+                   <h3 class="cration_client">  Modifier le rendez-vous </h3>
+                   <div class="margin_wrapper">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <p class="name_fiche"> Informations personnelles </p>
+                            <hr class="line_users">
+                            <form method="post"  action="{{path('dkk_administration_client')}}">
+                                <div class="search_users">
+                                    <input type="search" name="" class="input_search_user" placeholder="Rechercher" required>
+                                    <button class="btn_search_"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
+                            <p>
+                                <a href="" class="seen_rdv_ btn-success btn btn-sm"><i class="fa fa-eye"></i> Voir mes rendez-vous </a>
+                            </p>
+                            <div class="">
+                                  <table>
+                                    <tr>
+                                        <td>Nom </td>
+                                        <td class="data_"> &nbsp;&nbsp;&nbsp;&nbsp; Atangana</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prenom</td>
+                                        <td class="data"> &nbsp;&nbsp;&nbsp;&nbsp; Pierre Joseph </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Né(e) le </td>
+                                        <td class="data"> &nbsp;&nbsp;&nbsp;&nbsp; 02 Décembre 1970 </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Sexe</td>
+                                        <td class="data"> &nbsp;&nbsp;&nbsp;&nbsp; Masculin </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Téléphone</td>
+                                        <td class="data"> &nbsp;&nbsp;&nbsp;&nbsp; +237 765 568 098 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td class="data"> &nbsp;&nbsp;&nbsp;&nbsp; atanganapierre@gmail.com </td>
+                                    </tr>
+                                </table>
+                                <br>
+                                <div class="">
+                                    <p class="item_information">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                    </p>
+                                </div>
+
+                                 <table>
+                            <tr>
+                                <td>Venu à :</td>
+                                <td> &nbsp;&nbsp;&nbsp;&nbsp; 12h 30 min</td>
+                            </tr>
+                            <tr>
+                                <td>Dernier RDV :</td>
+                                <td> &nbsp;&nbsp;&nbsp;&nbsp; 2 décembre 2018</td>
+                            </tr>
+                            <tr>
+                                <td>Montant :</td>
+                                <td> &nbsp;&nbsp;&nbsp;&nbsp; 10000</td>
+                            </tr>
+                        </table>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <p class="name_fiche"> Rendez-vous </p>
+                            <hr class="line_users">
+
+                            <p>
+                                <a href="" class="seen_rdv_ btn-success btn btn-sm"><i class="fa fa-print"></i> Imprimer le rendez-vous  </a>
+                            </p>
+
+                           <!-- debut de la modification du rdv-->
+                            <div class="wrapper_information">
+                              <span class="item_information">
+
+                                Votre rendez-vous du mardi 15 janvier 2019  à 12h 30 pour consultation générale
+                              </span>
+
+                                 <button type="button" class="btn btn_child btn-primary btn-xs" data-toggle="modal" data-target="#myModal" title="Périodicité hebdomadaire"> <i class="fa fa-pencil-square-o"></i>
+
+                                  </button>
+                                   <a href="" class="btn btn-xs btn-danger class_btn_"><i class="fa fa-times"></i></a>
+
+                                  <!-- debut de la pop-up -->
+                                       <!-- Modal -->
+                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title modification_title" id="myModalLabel" style="color: #fff !important;">Modifier mon rendez-vous du Mardi 15 Janvier 2019 à 11h 00</h5>
+                                          </div>
+                                          <div class="modal-body2 second_modal_body">
+                                              <form method="post" action="">
+
+                                                <div class="form-group">
+
+                                                              <!-- debut du tableau -->
+                                        <!-- debut du nouveau calendrier -->
+                                        <div class="full_calandar">
+
+                                            <div class="calNav">
+                                              <p class="choice_new">Choix nouvelle date & heure</p>
+                              <div class="navButtons">
+
+                                  <button class="prevDays  my_btn_default" alt="Précédents" role="button">
+                                      <span class="fa fa-arrow-left"></span>
+                                      <span class="text">Précédent</span>
+                                  </button>
+                                  <button class="chooseDate my_btn_default" alt="Choisir une date" role="button">
+                                      <i class="fa fa-calendar"></i> <span class="calander_i"></span>
+                                      <span class="text" role="presentation"> A partir du </span>
+                                  </button>
+                                  <button class="nextDays my_btn_default" alt="Suivants">
+                                      <span class="text" role="presentation">Suivant</span>
+                                      <span class="fa fa-arrow-right" role="presentation"></span>
+                                  </button>
+                              </div>
+                              <div id="minicalContainer_modif" style="display: none;">
+                                  <!-- insertion du calandrier ici -->
+                              </div>
+
+
+
+                          </div>
+
+                          <table class="calTable" role="grid">
+            <thead>
+                <tr>
+
+                    <th class="odd">
+                        <span class="week-day">Lundi</span>
+                        <br><span class="date">13 Août 2018</span>
+
+                    </th>
+                    <th class="even">
+                        <span class="week-day">Mardi</span>
+                        <br><span class="date">14 Août 2018</span>
+
+                    </th>
+                    <th class="odd">
+                        <span class="week-day">Mercredi</span>
+                        <br><span class="date">15 Août 2018</span>
+
+                    </th>
+                    <th class="even">
+                        <span class="week-day">Jeudi</span>
+                        <br><span class="date">16 Août 2018</span>
+
+                    </th>
+                    <th class="odd">
+                        <span class="week-day">Vendredi</span>
+                        <br><span class="date">17 Août 2018</span>
+
+                    </th>
+                    <th class="weekend weekend-sat even">
+                        <span class="week-day">Samedi</span>
+                        <br><span class="date">18 Août 2018</span>
+
+                    </th>
+                    <th class="weekend weekend-sun odd">
+                        <span class="week-day">Dimanche</span>
+                        <br><span class="date">19 Août 2018</span>
+
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+
+                    <td class="odd">
+
+                        <span class="hide" id="date_0"> Lundi 13 Août 2018</span>
+                        <a href="" class="tooltips" alt="16h00">16h00
+
+         </a>
+
+                        <span class="hide" id="date_1"> Lundi 13 Août 2018</span>
+                        <a href="" class="tooltips">17h30
+
+         </a>
+
+                    </td>
+
+                    <td class="even">
+                          <span class="hide" id="date_0"> Lundi 13 Août 2018</span>
+                        <a href="" class="tooltips" alt="16h00">16h00
+
+         </a>
+
+                        <span class="hide" id="date_1"> Lundi 13 Août 2018</span>
+                        <a href="" class="tooltips">17h30
+
+         </a>
+                    </td>
+
+                    <td class="odd">
+
+                          <span class="hide" id="date_0"> Lundi 13 Août 2018</span>
+                        <a href="" class="tooltips" alt="16h00">16h00
+
+         </a>
+
+                        <span class="hide" id="date_1"> Lundi 13 Août 2018</span>
+                        <a href="" class="tooltips">17h30
+
+         </a>
+                    </td>
+
+                    <td class="even">
+
+                          <span class="hide" id="date_0"> Lundi 13 Août 2018</span>
+                        <a href="" class="tooltips" alt="16h00">16h00
+
+         </a>
+
+                        <span class="hide" id="date_1"> Lundi 13 Août 2018</span>
+                        <a href="" class="tooltips">17h30
+
+         </a>
+                    </td>
+
+                    <td class="odd">
+
+                        <span class="hide" id="date_2"> Vendredi 17 Août 2018</span>
+                        <a href="" class="tooltips">11h15
+
+         </a>
+
+                    </td>
+
+                    <td class="weekend weekend-sat even">
+
+                        <span class="hide" id="date_3"> Samedi 18 Août 2018</span>
+                        <a href="" class="tooltips">15h30
+
+         </a>
+
+                        <span class="hide" id="date_4"> Samedi 18 Août 2018</span>
+                        <a href="" class="tooltips" role="gridcell">16h00
+
+         </a>
+
+                        <span class="hide" id="date_5"> Samedi 18 Août 2018</span>
+                        <a href="" class="tooltips" alt="16h15" role="gridcell">16h30
+
+         </a>
+
+                        <span class="hide" id="date_6"> Samedi 18 Août 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">17h00
+
+         </a>
+
+         <span class="hide" id="date_6"> Samedi 18 Août 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">17h30
+
+         </a>
+
+          <span class="hide" id="date_6"> Samedi 18 Août 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">18h00
+
+         </a>
+          <span class="hide" id="date_6"> Samedi 18 Août 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">18h30
+
+         </a>
+          <span class="hide" id="date_6"> Samedi 18 Août 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">19h00
+
+         </a>
+          <span class="hide" id="date_6"> Samedi 18 Août 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">19h30
+
+         </a>
+          <span class="hide" id="date_6"> Samedi 18 Août 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">20h00
+
+         </a>
+
+
+
+
+
+
+
+                    </td>
+
+                    <td class="weekend weekend-sun odd">
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+                                        <!-- fin du nouveau calandrier-->
+
+
+
+                                    </div>
+                                  </div>
+                                      <!-- fin du tablea -->
+                                                </div>
+                                              </form>
+
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                    <!-- fin de la pop up pour modifier la périodicité hebdomadaire -->
+                                  <!-- fin de la pop-up -->
+
+
+
+
+                              <!-- debut de la fenetre de modification -->
+
+                              <!-- fin de la fenetre de modification -->
+                          </div>
+
+
+
+
+
+                           <!-- fin de la modification du rdv -->
+                        </div>
+                       <p style="clear: both !important;">
+
+                       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 left_wrapper">
+
+                       </div>
+
+
+                   </div>
+              </div>
+
+
+          </div>
+
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+ <script type="text/javascript">
+
+      $(document).ready(function(){
+        $(".my_btn_default").on("click",function(e){
+          e.preventDefault();
+
+        });
+         $(".chooseDate").on("click",function(){
+
+              $("#minicalContainer_modif").toggle();
+          });
+      });
+    </script>
+{% endblock %}
+

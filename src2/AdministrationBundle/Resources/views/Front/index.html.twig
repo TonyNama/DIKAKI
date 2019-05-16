@@ -1,0 +1,117 @@
+ {% extends '::admin_template.html.twig' %}
+
+{% block title %}Administration :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block body %}
+
+	<!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+          <div class="col-lg-12">
+            <div class="row content-panel">
+              <div class="col-md-4 profile-text mt mb centered">
+                <div class="right-divider hidden-sm hidden-xs">
+                  <h4>192</h4>
+                  <h6>CLIENTS</h6>
+                  <h4>290</h4>
+                  <h6>RENDEZ-VOUS PRIS</h6>
+                  <h4>290</h4>
+                  <h6>RENDEZ-VOUS HONORES</h6>
+
+                </div>
+              </div>
+
+              <div class="col-md-4 profile-text">
+                <h3>Essomba Pierre</h3>
+                <h6>Chirugien dentiste</h6>
+
+                <br>
+                <p></p>
+              </div>
+
+              <div class="col-md-4 centered">
+                <div class="profile-pic">
+                  <p><img src="{{asset('img/photo_medecin.jpg')}}" class="img-circle"></p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+              <form method="post" action="">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="custom-box second-constum">
+                <div class="servicetitle">
+                  <h4>Coordonnées / Adresses </h4>
+                  <hr>
+                </div>
+                <ul class="pricing">
+                  <li>Nouvelle route bastos </li>
+                  <li><b>BP:</b> 5822 Yaoundé </li>
+                  <li><a href="www.cabinetmedicalessomba.cm">www.cabinetmedicalessomba.cm</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="custom-box second-constum">
+                <div class="servicetitle">
+                  <h4>Rdv par internet &nbsp; <input type="checkbox" name=""></h4>
+                  <hr>
+                </div>
+
+                <p class="nos_rdv"> Vos clients peuvent prendre rendez-vous à l'adresse suivante : </p>
+
+                   <span class="span_checbox"><a href="www.dikaki.com/moncabinetmedical">Dikaki.com/moncabinetmedical</a></span><br><br>
+
+                <button type="submit" class="btn btn-md btn-success btn-font"><i class="fa fa-floppy-o"></i> Valider </button>
+              </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="custom-box second-constum">
+                <div class="servicetitle">
+                  <h4>Notifications </h4>
+                  <hr>
+                </div>
+
+                  <span class="span_checbox"><input type="checkbox" name=""> Rappel Sms &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                  <span class="span_checbox"><input type="checkbox" name=""> Rappel E-mail &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                  <span class="span_checbox"><input type="checkbox" name=""> Confirmation E-mail </span>
+                  <span class="span_checbox"><input type="checkbox" name=""> Confirmation Sms&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                  <br>
+                 <button type="submit" class="btn btn-md btn-success btn-font" id="top_btn"><i class="fa fa-floppy-o"></i> Valider </button>
+              </div>
+
+            </div>
+
+          </div>
+              </form>
+
+        </div>
+
+      </section>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </section>
+
+
+{% endblock %}
+

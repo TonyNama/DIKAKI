@@ -1,0 +1,379 @@
+    {% extends '::admin_template.html.twig' %}
+
+{% block title %}Agenda - Tâches :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+
+<style>
+        .menu1 {  
+          border-bottom:solid 2px #666666 ;  
+          padding-top:12px ;  
+          padding-bottom:7px
+        } 
+
+        .onglet {  
+            border:solid 1px #666666 ;  
+            margin:5px 5px 0px 5px ;  
+            padding:7px 3px 7px 3px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+
+            border-radius:5px 5px 0px 0px !important;
+          }  
+
+          a.onglet { 
+            background-color:#666666 ; 
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+          }  
+
+          .onglet-actif {  
+             border-left:solid 2px #666666 ;  
+             border-right:solid 2px #666666 ;  
+             border-top:solid 2px #666666 ;  
+             border-bottom:none !important;  
+             margin:5px 5px 0px 5px ; 
+             padding:7px 3px 7px 3px ;  
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+             color: #333;
+          }  
+        .sky-form{
+            box-shadow: none !important;
+        }
+
+        th{
+          text-align: center !important;
+        }
+
+    </style>
+
+{% endblock %}
+
+{% block body %}
+
+
+ <!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+            <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <select class="form-control form_width">
+                <option>Dr Ndewa</option>
+                 <option>Dr Fotso</option>
+                 <option>Dr Melingui</option>
+             </select>
+
+            <br>
+
+              <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                <a href="{{path('dkk_administration_agenda')}}" class="onglet-actif"> Agenda(s) </a> <!-- onglet ACTIF -->
+                <a  href="{{path('dkk_administration_agenda_tab_prestataire')}}" class="onglet-actif"> Prestataires  </a> <!-- onglet inactif -->
+                  <a  href="{{path('dkk_administration_agenda_tab_prestation')}}" class="onglet-actif"> Prestations  </a> <!-- onglet inactif -->
+                <span class="onglet"> Tâches  </span> <!-- onglet inactif -->
+                <a href="{{path('dkk_administration_agenda_tab_planning')}}" class="onglet-actif"> Plannings </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_liste_client')}}" class="onglet-actif"> Liste clients </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_action')}}" class="onglet-actif"> Actions </a> <!-- onglet ACTIF -->
+              </div>
+
+              <div class="">
+                   <h4 class="cration_client" style="text-align: left !important">Gestion des tâches </h4>
+                   <h3 class="cration_client" style="font-weight: normal;">Presataires / Agenda(s)</h3>
+                   <div class="margin_wrapper">
+                         <!-- debut -->
+                    <section id="unseen">
+                    <form method="post" action="">
+                         <table class="table table-bordered table-striped table-condensed" style="text-align: center;">
+                          <thead>
+                            <tr style="background-color: #26440d !important;font-weight: bold;font-size: 1.2em;color: #fff !important;">
+                              <th>Nom du prestataire</th>
+                              <th>Profession</th>
+                              <th>Couleur</th>
+                              <th>Selection</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Etoga paul</td>
+                              <td> Coiffeure</td>
+                              <td> Jaune</td>
+                              <td  class="alignement"> <input type="checkbox" name=""> </td>
+                            </tr>
+
+                            <tr>
+                              <td>Ngo Mbok</td>
+                              <td> Manicure</td>
+                              <td> Rouge</td>
+                              <td  class="alignement"> <input type="checkbox" name=""> </td>
+                            </tr>
+
+
+
+                          </tbody>
+                        </table>
+                        <!-- button d'arregistrement -->
+                      <div class="pull-right">
+                       <div class="col-xs-12 col-sm-6 col-md-6">
+                             <button type="submit" name="" class="btn btn-success btn-sm"><i class="fa fa-floppy-o"></i> Enregistrer</button>
+                        </form>
+                        </div>
+                      </div>
+                      <div class="pull-right">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                       <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-pencil-square-o"></i> Modifier</button>
+                     </div>
+                       </div>
+
+
+                      <!-- debut de la fenetre modal -->
+
+                        <div class="modal fade" id="myModal_rdv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog second_modal-dialog" role="document" style="width:80% !important;">
+                          <div class="modal-content" >
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel">Modifier Presataires / Agenda(s)</h4>
+                            </div>
+                            <div class="modal-body">
+                              <!-- debut -->
+                                <form method="post" action="">
+                                  <table class="table table-bordered table-striped table-condensed" style="text-align: center;">
+                                   <thead>
+                                     <tr style="background-color: #26440d !important;font-weight: bold;font-size: 1.2em;color: #fff !important;">
+                                       <th>Nom du prestataire</th>
+                                       <th>Profession</th>
+                                       <th>Couleur</th>
+                                       <th>Selection</th>
+                                     </tr>
+                                   </thead>
+                                   <tbody>
+                                     <tr>
+                                       <td>Etoga paul</td>
+                                       <td> Coiffeure</td>
+                                       <td> Jaune</td>
+                                       <td  class="alignement"> <input type="checkbox" name=""> </td>
+                                     </tr>
+
+                                     <tr>
+                                       <td>Ngo Mbok</td>
+                                       <td> Manicure</td>
+                                       <td> Rouge</td>
+                                       <td  class="alignement"> <input type="checkbox" name=""> </td>
+                                     </tr>
+
+                                   </tbody>
+                                 </table>
+                                 <div class="pull-right">
+                                    <button type="submit" name="" class="btn btn-success btn-sm"><i class="fa fa-floppy-o"></i> Enregistrer</button>
+                                 </div>
+                                </form>
+
+                              <br><br>
+
+                              <!-- fin  -->
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+
+                      <!-- fin de la fenetre modal -->
+                        <p style="clear:both !important"></p>
+                        <br>
+                        <h3 class="cration_client" style="font-weight: normal;">Affectation des prestations</h3>
+                      <form method="post" action="">
+                        <table class="table table-bordered table-striped table-condensed" style="text-align: center !important;">
+                                            <tr style="background-color: #26440d !important;font-weight: bold;font-size: 1.2em;color: #fff !important;">
+                                              <th style="background-color: #fff !important;border-top:1px solid #fff !important;border-left:1px solid #fff !important;"> </th>
+                                              <td class="th">EToga</td>
+                                              <td class="th">Ngo Mbog</td>
+                                              <td class="th">Dimodi</td>
+                                              <td class="th">um</td>
+                                            </tr>
+                                            <tr>
+                                              <th class="check_color">Type de prestation(s)</th>
+                                              <td class="check_color"><input type="checkbox" name=""></td>
+                                              <td class="check_color"><input type="checkbox" name=""></td>
+                                              <td class="check_color"><input type="checkbox" name=""></td>
+                                              <td class="check_color"><input type="checkbox" name=""></td>
+                                            </tr>
+                                            <tr>
+                                              <td> Manicure</td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                            <tr>
+                                              <tr>
+                                              <td> Pédicure</td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                            <tr>
+                                              <tr>
+                                              <td> Onglerie</td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                            <tr>
+                                            <tr>
+                                              <td> Massage de dos</td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                            <tr>
+                                            <tr>
+                                              <td> Epilation 1/2 jambe homme</td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                              <td><input type="checkbox" name=""></td>
+                                            <tr>
+                                          </table>
+
+
+
+                        <!-- button d'arregistrement -->
+                      <div class="pull-right">
+                       <div class="col-xs-12 col-sm-6 col-md-6">
+                             <button type="submit" name="" class="btn btn-success btn-sm"><i class="fa fa-floppy-o"></i> Enregistrer</button>
+                        </form>
+                        </div>
+                      </div>
+                      <div class="pull-right">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                       <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal_rdv_2"><i class="fa fa-pencil-square-o"></i> Modifier</button>
+                     </div>
+                       </div>
+
+                       <!-- debut de la fenetre modal -->
+
+                         <div class="modal fade" id="myModal_rdv_2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                         <div class="modal-dialog second_modal-dialog" role="document" style="width:80% !important;">
+                           <div class="modal-content" >
+                             <div class="modal-header">
+                               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                               <h4 class="modal-title" id="myModalLabel">Modifier les affectations des prestations à un prestataire</h4>
+                             </div>
+                             <div class="modal-body">
+                               <!-- debut -->
+                                 <form method="post" action="">
+                                   <table class="table table-bordered table-striped table-condensed" style="text-align: center !important;">
+                                                      <tr style="background-color: #26440d !important;font-weight: bold;font-size: 1.2em;color: #fff !important;">
+                                                        <th style="background-color: #fff !important;border-top:1px solid #fff !important;border-left:1px solid #fff !important;"> </th>
+                                                        <td class="th">EToga</td>
+                                                        <td class="th">Ngo Mbog</td>
+                                                        <td class="th">Dimodi</td>
+                                                        <td class="th">um</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th class="check_color">Type de prestation(s)</th>
+                                                        <td class="check_color"><input type="checkbox" name=""></td>
+                                                        <td class="check_color"><input type="checkbox" name=""></td>
+                                                        <td class="check_color"><input type="checkbox" name=""></td>
+                                                        <td class="check_color"><input type="checkbox" name=""></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td> Manicure</td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                      <tr>
+                                                        <tr>
+                                                        <td> Pédicure</td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                      <tr>
+                                                        <tr>
+                                                        <td> Onglerie</td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                      <tr>
+                                                      <tr>
+                                                        <td> Massage de dos</td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                      <tr>
+                                                      <tr>
+                                                        <td> Epilation 1/2 jambe homme</td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                        <td><input type="checkbox" name=""></td>
+                                                      <tr>
+                                                    </table>
+                                  <div class="pull-right">
+                                     <button type="submit" name="" class="btn btn-success btn-sm"><i class="fa fa-floppy-o"></i> Enregistrer</button>
+                                  </div>
+                                 </form>
+
+                               <br><br>
+
+                               <!-- fin  -->
+                             </div>
+                           </div>
+                         </div>
+                         </div>
+
+                       <!-- fin de la fenetre modal -->
+
+              </section>
+
+                <!-- fin -->
+
+                   </div>
+              </div>
+
+
+          </div>
+
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+
+{% endblock %}
+

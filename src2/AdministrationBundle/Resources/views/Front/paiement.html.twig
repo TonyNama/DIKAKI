@@ -1,0 +1,206 @@
+  {% extends '::admin_template.html.twig' %}
+
+{% block title %} Paiement :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+
+ <style type="text/css">
+          th,td{
+            text-align: center !important;
+          }
+          .menu1 { /* boite qui contient le menu (les onglets) */
+            border-bottom:solid 2px #666666 ; /* crée le trait noir en-dessous des onglets */
+            padding-top:12px ; /* marge intérieure haute */
+            padding-bottom:7px
+          } /* marge intérieure basse */
+
+          .onglet { /* style des onglets inactifs */
+              border:solid 1px #666666 ; /* encadrement */
+              margin:5px 5px 0px 5px ; /* marge extérieure */
+              padding:7px 3px 7px 3px;
+              font-weight: bold;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 1.1em;
+              background: #666666;
+              color: #fff !important;
+
+              border-radius:5px 5px 0px 0px !important;
+            } /* marge intérieure */
+
+            a.onglet { /* style des liens se trouvant dans un onglet inactif */
+              background-color:#666666 ; /* le fond de l'onglet est gris */
+              text-decoration:none;
+              font-weight: bold;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 1.1em;
+              background: #666666;
+              color: #fff !important;
+            } /* les liens ne sont pas soulignés */
+
+            .onglet-actif { /* style de l'onglet de la page active */
+               border-left:solid 2px #666666 ; /* l'encadrement est porté à 2 pixels */
+               border-right:solid 2px #666666 ; /* l'encadrement est porté à 2 pixels */
+               border-top:solid 2px #666666 ; /* l'encadrement est porté à 2 pixels */
+               border-bottom:none !important; /* le trait inférieur est effacé */
+               margin:5px 5px 0px 5px ; /* marges intérieures */
+               padding:7px 3px 7px 3px ; /* marges extérieures */
+               background-color:white;
+               font-weight: bold;
+               font-family: 'Montserrat', sans-serif;
+               font-size: 1.2em;
+               color: #333;
+            }
+        </style>
+{% endblock %}
+
+{% block body %}
+
+
+ <!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+             <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+
+
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+
+
+              <h4 class="small_tittle up_">Accès & paiements </h4>
+              
+                   <p class="journne_du_" style="text-align:center !important;"> </p>
+
+                   <div class="menu1"> <!-- début de la boite contenant les onglets -->
+				   <a href="{{path('dkk_administration_acces')}}" class="onglet-actif"> Accès </a> <!-- onglet ACTIF -->
+				     <span class="onglet">   Paiements</span> <!-- onglet inactif -->
+                     
+                        
+                   </div>
+
+            <div class="margin_wrapper_paiement">
+              <h5 class="small_tittle up_" style="text-align: center;">Options de  paiements </h5>
+                <section id="unseen">
+
+                        <div class=" ">
+                          <form method="" action="">
+			<div class="form-group">
+
+					<div class="paiement_caisse">
+
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<input type="checkbox" value="" class="">  <span class="buy_mode">Paiement en caisse</span>
+					</div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <input type="checkbox" value="" class="">  <span class="buy_mode">Montant total</span>
+          </div>
+          <br><br>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <input type="checkbox" value="" class="">  <span class="buy_mode">Paiement en  ligne</span>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <input type="checkbox" value="" class="">  <span class="buy_mode">Acompte accepté</span>
+          </div>
+           <br><br>
+           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <input type="checkbox" value="" class="">  <span class="buy_mode">Paiement par virement</span>
+          </div>
+           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <input type="checkbox" value="" class="">  <span class="buy_mode">Paiement par chèque</span>
+          </div>
+           <br><br>
+           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <input type="checkbox" value="" class="">  <span class="buy_mode">Paiement par carte</span>
+          </div>
+           <p style="clear: both !important;"></p>
+
+          <div style="margin-top: 10px;padding-left: 15px;padding-right:50px !important;">
+            <br>
+              <button type="submit" class="btn btn-success btn_valid pull-right" style="display:block;margin-top:-20px !important;"><i class="fa fa-floppy-o"></i> Enregistrer</button>
+              <br><br>
+            </div>
+
+
+
+      </div>
+				</div>
+
+
+
+		</form>
+
+     <table class="table table-bordered table-striped table-condensed">
+                    <thead>
+                               <tr style="background-color: #26440d !important;color: #fff !important;">
+                                 <th><span class="th_resize"> En caisse</span></th>
+                                  <th><span class="th_resize">En ligne </span></th>
+                                  <th><span class="th_resize">Montant total</span>  </th>
+                                  <th><span class="th_resize">Acompte</span></th>
+                                   <th><span class="th_resize">Par virement</span></th>
+                                    <th><span class="th_resize">Par chèque</span></th>
+                                     <th><span class="th_resize">Par carte</span></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>.......</td>
+                                    <td>.......</td>
+                                    <td>.......</td>
+                                    <td>.......</td>
+                                    <td>.......</td>
+                                    <td>.......</td>
+                                    <td>.......</td>
+
+                                </tr>
+                              </tbody>
+               </table>
+
+
+
+                        </div>
+                      </div>
+                    </div>
+                          </div>
+                        </div>
+
+
+
+                </section>
+            </div>
+
+
+
+
+            <!-- end col-4 -->
+          </div>
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+
+
+
+{% endblock %}
+

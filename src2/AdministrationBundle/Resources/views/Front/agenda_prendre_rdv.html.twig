@@ -1,0 +1,338 @@
+    {% extends '::admin_template.html.twig' %}
+
+{% block title %}Agenda - prendre un rendez-vous :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+
+<style>
+        .menu1 {  
+          border-bottom:solid 2px #666666 ;  
+          padding-top:12px ; 
+          padding-bottom:7px
+        }  
+
+        .onglet { 
+            border:solid 1px #666666 ; 
+            margin:5px 5px 0px 5px ;  
+            padding:7px 3px 7px 3px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+
+            border-radius:5px 5px 0px 0px !important;
+          } 
+
+          a.onglet { 
+            background-color:#666666 ; 
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+          }  
+
+          .onglet-actif {  
+             border-left:solid 2px #666666 ; 
+             border-right:solid 2px #666666 ;  
+             border-top:solid 2px #666666 ; 
+             border-bottom:none !important; 
+             margin:5px 5px 0px 5px ;  
+             padding:7px 3px 7px 3px ; 
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+             color: #333;
+          }  
+        .sky-form{
+            box-shadow: none !important;
+        }
+       tr > td{
+          font-weight: 700;
+       }
+       td.data_{
+          margin-left: 30px !important;
+       }
+
+
+    </style>
+{% endblock %}
+
+{%  block body %}
+
+ <!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+            <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <select class="form-control form_width">
+                <option>Dr Ndewa</option>
+                 <option>Dr Fotso</option>
+                 <option>Dr Melingui</option>
+             </select>
+
+            <br>
+
+            <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                <a href="{{path('dkk_administration_agenda')}}" class="onglet"> Agenda(s)  </a> <!-- onglet inactif -->
+                <a href="{{path('dkk_administration_agenda_tab_prestataire')}}" class="onglet-actif"> Prestataires </a> <!-- onglet ACTIF -->
+                <a  href="{{path('dkk_administration_agenda_tab_prestation')}}" class="onglet-actif"> Prestations </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_tache')}}" class="onglet-actif"> Tâches </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_planning')}}" class="onglet-actif"> Plannings </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_liste_client')}}" class="onglet-actif"> Liste clients </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_action')}}" class="onglet-actif"> Actions </a> <!-- onglet ACTIF -->
+              </div>
+              <div class="content_menu">
+                 <div class="wrapper_line_one">
+                    <span class="form_search">
+                        <form method="post" action="{{path('dkk_administration_client')}}">
+                            <input type="search" name="" placeholder="Rechercher un client" class="serach_bx">
+                            <button type="submit" class="search_btn"><i class="fa fa-search"></i></button>
+                         </form>
+                    </span>
+
+                     <a href="{{path('dkk_administration_agenda_creer_client')}}" class="btn add_agenda">Créer un client</a>
+                     <a href="{{path('dkk_administration_agenda_creer_planning')}}" class="mymodalbox">Planning </a>
+                     <a href="{{path('dkk_administration_agenda_prendre_rdv')}}" class="btn rdv_agenda"> Prendre un RDV</a>
+                     <a href="{{path('dkk_administration_agenda_modifier_rdv')}}" class="btn modifier_agenda">  Modifier le  RDV</a>
+                     <a href="{{path('dkk_administration_agenda_presence')}}" class="btn precence_agenda">  Présence</a>
+                 </div>
+
+              </div>
+
+              <div class=" ">
+                   <h3 class="cration_client">  Prendre rendez-vous </h3>
+                   <div class="margin_wrapper">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <p class="name_fiche"> Informations personnelles </p>
+                            <hr class="line_users">
+                            <form method="post" action="{{path('dkk_administration_client')}}">
+                                <div class="search_users">
+                                    <input type="search" name="" class="input_search_user" placeholder="Rechercher un client ici" required>
+                                    <button class="btn_search_"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
+                            <p>
+                                <a href="" class="seen_rdv_ btn-success btn btn-sm"><i class="fa fa-eye "></i> Voir ses rendez-vous </a>
+                            </p>
+
+                            <!-- si aucun client / patient  n'est trouver afficher lui le lien pour creer un nouvel client / patient  -->
+
+                              <p class="not_found"> Pas de client / patient trouvé </p>
+                              <p>
+                                <a href="agenda-creer-client.html" class="btn btn-primary"><i class="fa fa-user"></i> Cliquez ici pour créer un client / patient</a>
+                              </p>
+                            <!-- fin de la condition -->
+                            <div class="">
+                                <table>
+                                    <tr>
+                                        <td>Nom </td>
+                                        <td class="data_"> &nbsp;&nbsp;&nbsp;&nbsp; Atangana</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prenom</td>
+                                        <td class="data"> &nbsp;&nbsp;&nbsp;&nbsp; Pierre Joseph </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Né(e) le </td>
+                                        <td class="data"> &nbsp;&nbsp;&nbsp;&nbsp; 02 Décembre 1970 </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Sexe</td>
+                                        <td class="data"> &nbsp;&nbsp;&nbsp;&nbsp; Masculin </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Téléphone</td>
+                                        <td class="data"> &nbsp;&nbsp;&nbsp;&nbsp; +237 765 568 098 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td class="data"> &nbsp;&nbsp;&nbsp;&nbsp; atanganapierre@gmail.com </td>
+                                    </tr>
+                                </table>
+                                <br>
+                                <div class="">
+                                  <p>Remarque</p>
+                                    <p class="item_information" style="font-size: 1em !important;">
+                                        je suis allergique à la péniciline.
+                                    </p>
+                                </div>
+                                <br>
+                                 <table>
+                                    <tr>
+                                        <td>Venu à :</td>
+                                        <td> &nbsp;&nbsp;&nbsp;&nbsp; 12h 30 min</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dernier RDV :</td>
+                                        <td> &nbsp;&nbsp;&nbsp;&nbsp; 2 décembre 2018</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Montant :</td>
+                                        <td> &nbsp;&nbsp;&nbsp;&nbsp; 10000</td>
+                                    </tr>
+                                 </table>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <p class="name_fiche"> Rendez-vous </p>
+                            <hr class="line_users">
+
+                            <p>
+                                <a href="" class="seen_rdv_ btn-success btn btn-sm"><i class="fa fa-print"></i> Imprimer le rendez-vous  </a>
+                            </p>
+                            <form method="post" action="" id="signupForm">
+                              <table style="margin-top: 20px;">
+                                  <tr>
+                                    <th>Prestation</th>
+                                    <td>
+                                        <select class="form-control" name="prestation">
+                                          <option selected disabled>Choix de la prestation </option>
+                                          <option value="">Soins de visages pour homme </option>
+                                          <option value="">Soins de visages pour femme</option>
+                                          <option value="">Massage corporel</option>
+                                        </select>
+                                        <br>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>Prestataire</th>
+                                      <td>
+                                        <select class="form-control" name="prestataire">
+                                          <option value="">Choix du prestataire </option>
+                                          <option value="">Jeanne</option>
+                                          <option value="">Paul</option>
+                                          <option value="">Pierre</option>
+                                        </select>
+                                        <br>
+                                      </td>
+
+                                  </tr>
+                                  <tr>
+                                    <th>Date</th>
+                                    <td>
+                                      <input type="text" id="datepicker" name="date" class="form-control">
+                                      <br>
+                                    </td>
+
+                                  </tr>
+                                   <tr>
+                                    <th>Heure & Minute </th>
+                                    <td>
+
+                                      <div class="col-md-12 col-lg-12">
+                                      <select name="heure" class="form-control">
+                                        <option selected disabled>Heure & Minute</option>
+                                        <option value="06 h">06 heures - 10 Minutes</option>
+                    <option value="07 h">07 heures - 30 Minutes</option>
+                                        <option value="08 h">08 heures - 20 Minutes</option>
+                    <option value="09 h">09 heures - 40 Minutes</option>
+                                        <option value="10 h">10 heures -50 Minutes</option>
+                    <option value="11 h">11 heures </option>
+                                        <option value="12 h">12 heures </option>
+                    <option value="13 h">13 heures </option>
+                                        <option value="14 h">14 heures </option>
+                    <option value="15 h">15 heures </option>
+                                        <option value="16 h">16 heures </option>
+                    <option value="17 h">17 heures </option>
+                                        <option value="18 h">18 heures </option>
+                    <option value="19 h">19 heures </option>
+                                        <option value="20 h">20 heures </option>
+                    <option value="21 h">21 heures </option>
+                                        <option value="22 h">22 heures </option>
+                    <option value="23 h">23 heures </option>
+                                      </select>
+                                    </div>
+                                  
+
+                                    </td>
+
+                                  </tr>
+                                  <tr>
+                                    <th>Laisser un commentaire</th>
+                                    <td>
+                                      <br>
+                                      <textarea class="form-control" name="comment"></textarea>
+                                    <br>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>Rappel SMS</th>
+                                    <td><input type="checkbox" name="" class=""></td>
+                                  </tr>
+                              </table>
+
+                              <div>
+                                  <p class="marquer_comme">Marquer le RDV comme ?</p>
+                                 <label for="venu" class="btn btn-success btn-xs">
+                                      <input type="radio" id="venu" name="select"> Venue
+                                 </label>
+                                 <label for="pas_venu" class="btn btn-danger btn-xs">
+                                      <input type="radio" id="pas_venu" name="select"> Pas venue
+                                 </label>
+                                 <label for="En_attente" class="btn btn-primary btn-xs">
+                                      <input type="radio" id="En_attente" name="select"> En attente
+                                 </label>
+
+                             </div>
+                             <div class="btn_validation_reset pull-right">
+                                    <button type="submit" class="btn btn-success btn-xs"><i class="fa fa-floppy-o"></i> Valider</button>
+                                    <button type="reset" class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Annuler</button>
+                              </div>
+
+
+
+                            </form>
+                        </div>
+
+
+
+
+                   </div>
+              </div>
+
+
+          </div>
+
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+
+    </script>
+{% endblock %}
+

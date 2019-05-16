@@ -1,0 +1,177 @@
+    {% extends '::admin_template.html.twig' %}
+
+{% block title %}Agenda -Prestataire :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+<style>
+        .menu1 {  
+          border-bottom:solid 2px #666666 ;  
+          padding-top:12px ; 
+          padding-bottom:7px
+        } 
+
+        .onglet { 
+            border:solid 1px #666666 ;  
+            margin:5px 5px 0px 5px ;  
+            padding:7px 3px 7px 3px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+
+            border-radius:5px 5px 0px 0px !important;
+          }  
+
+          a.onglet {  
+            background-color:#666666 ;  
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+          }  
+
+          .onglet-actif {  
+             border-left:solid 2px #666666 ; 
+             border-right:solid 2px #666666 ;  
+             border-top:solid 2px #666666 ;  
+             border-bottom:none !important;  
+             margin:5px 5px 0px 5px ;  
+             padding:7px 3px 7px 3px ; 
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+             color: #333;
+          }  
+        .sky-form{
+            box-shadow: none !important;
+        }
+
+        table, th{
+          text-align: center;
+        }
+
+    </style>
+{% endblock %}
+
+{% block body %}
+
+
+ <!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+            <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <select class="form-control form_width">
+                <option>Dr Ndewa</option>
+                 <option>Dr Fotso</option>
+                 <option>Dr Melingui</option>
+             </select>
+
+            <br>
+
+              <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                  <a href="{{path('dkk_administration_agenda')}}" class="onglet-actif"> Agenda(s) </a> <!-- onglet ACTIF -->
+                <span class="onglet"> Prestataires  </span> <!-- onglet inactif -->
+                <a  href="{{path('dkk_administration_agenda_tab_prestation')}}" class="onglet-actif"> Prestations </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_tache')}}" class="onglet-actif"> Tâches </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_planning')}}" class="onglet-actif"> Plannings </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_liste_client')}}" class="onglet-actif"> Liste clients </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_action')}}" class="onglet-actif"> Actions </a> <!-- onglet ACTIF -->
+              </div>
+
+              <div class="wrapper_aganda_">
+                   <h4 class=" ">Prestataire(s) / Ressource(s) </h4>
+                   <h3 class="cration_client">Liste des prestataires</h3>
+                   <div class="">
+                         <!-- debut -->
+                    <section id="unseen">
+                <table class="table table-bordered table-striped table-condensed">
+                  <thead>
+                    <tr style="background-color: #26440d !important;color: #fff !important;">
+                      <th>Nom</th>
+                      <th>Prenom</th>
+                      <th>Profession</th>
+                      <th>Téléphone</th>
+                      <th>Email</th>
+                      <th>Voulez-vous ? </th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Ebolo Ebolo</td>
+                      <td> Guillaume Stephane</td>
+                      <td> Avocat</td>
+                      <td> +237 876 788 534</td>
+                      <td> Ebologuillaule@gmail.com</td>
+
+                      <td>
+
+                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer  ?')" class="btn btn-danger btn-sm btn_btn"><i class="fa fa-trash-o "></i></a>
+                      </td>
+
+                    </tr>
+
+                       <tr>
+                      <td>Kenfack</td>
+                      <td> Jean Pierre</td>
+                      <td> Médecin</td>
+                      <td> +237 324 543 789</td>
+                      <td> Kenfackjeanpierre@gmail.com</td>
+
+                      <td>
+
+                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer  ?')" class="btn btn-danger btn-sm btn_btn"><i class="fa fa-trash-o "></i></a>
+                      </td>
+
+                    </tr>
+
+
+                  </tbody>
+                </table>
+              </section>
+
+                <!-- fin -->
+
+                   </div>
+              </div>
+
+
+          </div>
+
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+
+{% endblock %}
+

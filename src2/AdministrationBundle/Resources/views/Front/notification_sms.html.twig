@@ -1,0 +1,1094 @@
+ {% extends '::admin_template.html.twig' %}
+
+{% block title %} Paramètre des notifications par Sms :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+   <style>
+        .menu1 {
+          border-bottom:solid 2px #666666 ;
+          padding-top:12px ; 
+          padding-bottom:7px
+        } 
+
+        .onglet { 
+            border:solid 1px #666666 ; 
+            margin:5px 5px 0px 5px ; 
+            padding:7px 3px 7px 3px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+
+            border-radius:5px 5px 0px 0px !important;
+          } 
+
+          a.onglet { 
+            background-color:#666666 ; 
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+          } 
+
+          .onglet-actif { 
+             border-left:solid 2px #666666 ; 
+             border-right:solid 2px #666666 ; 
+             border-top:solid 2px #666666 ; 
+             border-bottom:none !important; 
+             margin:5px 5px 0px 5px ; 
+             padding:7px 3px 7px 3px ; 
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+             color: #333;
+          } 
+        .sky-form{
+            box-shadow: none !important;
+        }
+
+        a.previous { margin-top: 20px !important; display: none;cursor: pointer;}
+        .span {
+          display: none;
+          color: Red;
+        }
+
+        table tr { display: none; }
+
+        table tr:nth-child(-n+8) { display: table-row; }
+        .to_up{
+            margin-bottom: 0px;
+            margin-top: -60px !important;
+          }
+
+          th{
+              text-align: center !important;
+            }
+
+        .btn_valid{
+          display: inline-block;
+          width: 100px !important;
+          float: right !important;
+        }
+
+
+    </style>
+{% endblock %}
+
+{% block body %}
+
+ <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+            <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <h4 class="small_tittle to_up">Notifications </h4>
+
+              <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                <a href="{{path('dkk_administration_notification_email')}}" class="onglet-actif"> Notifications Email </a> <!-- onglet ACTIF -->
+                <span class="onglet"> Notifications  </span> <!-- onglet inactif -->
+              </div>
+
+
+
+              <div class="margin_wrapper_notification">
+
+                <div class=" ">
+                     <form method="post" action="">
+                          <!-- debut du code pour le tableau-->
+                            <table class="table table-bordered table-striped table-condensed">
+                              <thead>
+                                <tr style="background-color: #26440d !important;color: #fff !important;">
+                                 <th>Nom de la notification</th>
+                                  <th>Temps avant </th>
+                                  <th>Temps après  </th>
+                                  <th>Action  </th>
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>
+                                      <input type="checkbox" name="" class="my_checkbox valide_rapel_email">
+                                      <span>Sms rappel RDV </span>
+                                    </td>
+                                    <td>
+
+                                      <span>Rappel RDV:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+
+
+                                     <td>
+
+                                      <span>Rappel RDV:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+                                    <td>
+
+                                        <a href="{{path('dkk_administration_regarder_notification_sms')}}" class="btn btn-success btn_valid"><i class="fa fa-eye"></i> Regarder </a>
+                                    </td>
+
+                                </tr>
+                              </tbody>
+                            </table>
+                        <!-- fin du code pour le tableau-->
+                      <div class="rappel_rdv_email" style="display: none;">
+                           <br>
+                            <textarea placeholder="Insérer le message ici" class="form-control" style="width: 70%;margin-top: -20px;margin-bottom: 10px !important;"></textarea>
+                        <p class="pull-left">
+                          <button type="reset" class="btn btn-sm btn-danger btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-window-close" aria-hidden="true"></i>
+ Annuler</button>
+                          <button type="submit" class="btn btn-sm btn-success btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-floppy-o" aria-hidden="true"></i> Valider</button>
+
+                        </p>
+                      </div>
+                        </form>
+                </div>
+
+                <div class="  ">
+                    <form method="post" action="">
+
+                              <!-- debut du code pour le tableau-->
+                            <table class="table table-bordered table-striped table-condensed">
+                              <thead>
+                               <tr style="background-color: #26440d !important;color: #fff !important;">
+                                 <th>Nom de la notification</th>
+                                  <th>Temps après  </th>
+                                  <th>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Action  </th>
+
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>
+                                      <input type="checkbox" name="" class="my_checkbox valid_remerciement_rdv_email">
+                                      <span>Sms de remercièment </span>
+                                    </td>
+
+
+                                     <td>
+
+
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+                        <td> <a href="{{path('dkk_administration_regarder_notification_sms')}}" class="btn btn-success btn_valid"><i class="fa fa-eye"></i> Regarder </a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        <!-- fin du code pour le tableau-->
+                         <div class="remerciement_rdv_email" style="display: none;">
+                          <br>
+                            <textarea placeholder="Insérer le message ici" class="form-control" style="width: 70%;margin-top: -20px;margin-bottom: 10px !important;"></textarea>
+                        <p class="pull-left">
+                          <button type="reset" class="btn btn-sm btn-danger btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-window-close" aria-hidden="true"></i>
+ Annuler</button>
+                          <button type="submit" class="btn btn-sm btn-success btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-floppy-o" aria-hidden="true"></i> Valider</button>
+
+                        </p>
+                      </div>
+                        </form>
+
+                </div>
+
+                <div class=" ">
+
+                    <form method="post" action="">
+                             <!-- debut du code pour le tableau-->
+                            <table class="table table-bordered table-striped table-condensed">
+                              <thead>
+                                <tr style="background-color: #26440d !important;color: #fff !important;">
+                                 <th>Nom de la notification</th>
+                                  <th>Temps avant </th>
+                                  <th>Temps après  </th>
+                                  <th>Action  </th>
+
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>
+                                      <input type="checkbox" name="" class="my_checkbox valid_absence_rdv_email">
+                                      <span>Sms d'absence</span>
+                                    </td>
+                                    <td>
+
+                                      <span>L'alerte:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+
+
+                                     <td>
+
+                                      <span>L'alerte:</span>
+                        <select class="" style="display:inline-block;vertical-align:top;width: 50%">
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+                                    <td> <a href="{{path('dkk_administration_regarder_notification_sms')}}" class="btn btn-success btn_valid"><i class="fa fa-eye"></i> Regarder </a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        <!-- fin du code pour le tableau-->
+
+                        <!-- fin du code pour le tableau-->
+                         <div class="absence_rdv_email" style="display: none;">
+                           <br>
+                            <textarea placeholder="Insérer le message ici" class="form-control" style="width: 70%;margin-top: -20px;margin-bottom: 10px !important;"></textarea>
+                        <p class="pull-left">
+                          <button type="reset" class="btn btn-sm btn-danger btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-window-close" aria-hidden="true"></i>
+ Annuler</button>
+                          <button type="submit" class="btn btn-sm btn-success btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-floppy-o" aria-hidden="true"></i> Valider</button>
+
+                        </p>
+                      </div>
+
+
+            </form>
+                </div>
+
+
+                <div class=" ">
+                    <form method="post" action="">
+                          <!-- debut du code pour le tableau-->
+                            <table  class="table table-bordered table-striped table-condensed">
+                              <thead>
+                              <tr style="background-color: #26440d !important;color: #fff !important;">
+                                 <th>Nom de la notification</th>
+                                  <th>Temps avant </th>
+                                  <th>Temps après  </th>
+                                  <th>Action  </th>
+
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>
+                                      <input type="checkbox" name="" class="my_checkbox valid_campagne_rdv_email">
+                                      <span>Sms de campagne </span>
+                                    </td>
+                                    <td>
+
+                                      <span>Lancement:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+
+
+                                     <td>
+
+                                      <span>Lancement:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+                                    <td> <a href="{{path('dkk_administration_regarder_notification_sms')}}" class="btn btn-success btn_valid"><i class="fa fa-eye"></i> Regarder </a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        <!-- fin du code pour le tableau-->
+
+                        <!-- fin du code pour le tableau-->
+                      <div class="campagne_rdv_email" style="display: none;">
+                           <br>
+                            <textarea placeholder="Insérer le message ici" class="form-control" style="width: 70%;margin-top: -20px;margin-bottom: 10px !important;"></textarea>
+                        <p class="pull-left">
+                          <button type="reset" class="btn btn-sm btn-danger btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-window-close" aria-hidden="true"></i>
+ Annuler</button>
+                          <button type="submit" class="btn btn-sm btn-success btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-floppy-o" aria-hidden="true"></i> Valider</button>
+
+                        </p>
+                      </div>
+                        </form>
+                </div>
+
+                <div class="  ">
+                    <form method="post" action="">
+
+                        <!-- debut du code pour le tableau-->
+                            <table class="table table-bordered table-striped table-condensed">
+                              <thead>
+                                <tr style="background-color: #26440d !important;color: #fff !important;">
+                                 <th>Nom de la notification</th>
+                                  <th>Temps avant </th>
+                                  <th>Temps après  </th>
+                                  <th>Action  </th>
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>
+                                      <input type="checkbox" name="" class="my_checkbox valid_promotion_rdv_email">
+                                      <span>Sms de promotion </span>
+                                    </td>
+                                    <td>
+
+                                      <span>Promotion:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+
+
+                                     <td>
+
+                                      <span>Promotion:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+                                   <td> <a href="{{path('dkk_administration_regarder_notification_sms')}}" class="btn btn-success btn_valid "><i class="fa fa-eye"></i> Regarder </a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        <!-- fin du code pour le tableau-->
+
+                         <!-- fin du code pour le tableau-->
+                      <div class="promotion_rdv_email" style="display: none;">
+                            <br>
+                            <textarea placeholder="Insérer le message ici" class="form-control" style="width: 70%;margin-top: -20px;margin-bottom: 10px !important;"></textarea>
+                        <p class="pull-left">
+                          <button type="reset" class="btn btn-sm btn-danger btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-window-close" aria-hidden="true"></i>
+ Annuler</button>
+                          <button type="submit" class="btn btn-sm btn-success btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-floppy-o" aria-hidden="true"></i> Valider</button>
+
+                        </p>
+                      </div>
+                        </form>
+
+                </div>
+
+
+                <div class=" ">
+                    <form method="post" action="">
+                            <!-- debut du code pour le tableau-->
+                            <table class="table table-bordered table-striped table-condensed">
+                              <thead>
+                                <tr style="background-color: #26440d !important;color: #fff !important;">
+                                 <th>Nom de la notification</th>
+                                  <th>Temps avant </th>
+                                  <th>Temps après  </th>
+                                  <th>Action  </th>
+
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>
+                                      <input type="checkbox" name="" class="my_checkbox valid_souhait_rdv_email">
+                                      <span>Sms de souhait </span>
+                                    </td>
+                                    <td>
+
+                                      <span>Evénement:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+
+
+                                     <td>
+
+                                      <span>Evénement:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+                                    <td> <a href="{{path('dkk_administration_regarder_notification_sms')}}" class="btn btn-success btn_valid"><i class="fa fa-eye"></i> Regarder </a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        <!-- fin du code pour le tableau-->
+
+                        <div class="souhait_rdv_email" style="display: none;">
+                           <br>
+                            <textarea placeholder="Insérer le message ici" class="form-control" style="width: 70%;margin-top: -20px;margin-bottom: 10px !important;"></textarea>
+                        <p class="pull-left">
+                          <button type="reset" class="btn btn-sm btn-danger btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-window-close" aria-hidden="true"></i>
+ Annuler</button>
+                          <button type="submit" class="btn btn-sm btn-success btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-floppy-o" aria-hidden="true"></i> Valider</button>
+
+                        </p>
+                      </div>
+            </form>
+                </div>
+
+                <div class=" ">
+                    <form method="post" action="">
+                            <!-- debut du code pour le tableau-->
+                            <table  class="table table-bordered table-striped table-condensed">
+                              <thead>
+                               <tr style="background-color: #26440d !important;color: #fff !important;">
+                                 <th>Nom de la notification</th>
+                                  <th>Temps avant </th>
+                                  <th>Temps après  </th>
+                                  <th>Action  </th>
+
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>
+                                      <input type="checkbox" name="" class="my_checkbox valid_confirmation_rdv_email">
+                                      <span>Sms de confirmation </span>
+                                    </td>
+                                    <td>
+
+                                      <span>Confirmation:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+
+
+                                     <td>
+
+                                      <span>Confirmation:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+                                   <td> <a href="{{path('dkk_administration_regarder_notification_sms')}}" class="btn btn-success btn_valid"><i class="fa fa-eye"></i> Regarder </a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        <!-- fin du code pour le tableau-->
+                         <div class="confirmation_rdv_email" style="display: none;">
+                           <br>
+                            <textarea placeholder="Insérer le message ici" class="form-control" style="width: 70%;margin-top: -20px;margin-bottom: 10px !important;"></textarea>
+                        <p class="pull-left">
+                          <button type="reset" class="btn btn-sm btn-danger btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-window-close" aria-hidden="true"></i>
+ Annuler</button>
+                          <button type="submit" class="btn btn-sm btn-success btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-floppy-o" aria-hidden="true"></i> Valider</button>
+
+                        </p>
+                      </div>
+
+                        </form>
+                </div>
+
+                <div class=" ">
+
+                    <form method="post" action="">
+                              <!-- debut du code pour le tableau-->
+                            <table class="table table-bordered table-striped table-condensed">
+                              <thead>
+                                <tr style="background-color: #26440d !important;color: #fff !important;">
+                                 <th>Nom de la notification</th>
+                                  <th>Temps avant </th>
+                                  <th>Temps après  </th>
+                                  <th>Action  </th>
+
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>
+                                      <input type="checkbox" name="" class="my_checkbox valid_modification_rdv_email">
+                                      <span>Sms de modification </span>
+                                    </td>
+                                    <td>
+
+                                      <span>Modification:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+
+
+                                     <td>
+
+                                      <span>Modification:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+                                   <td> <a href="{{path('dkk_administration_regarder_notification_sms')}}" class="btn btn-success btn_valid"><i class="fa fa-eye"></i> Regarder </a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        <!-- fin du code pour le tableau-->
+                        <!-- fin du code pour le tableau-->
+                      <div class="modification_rdv_email" style="display: none;">
+                           <br>
+                            <textarea placeholder="Insérer le message ici" class="form-control" style="width: 70%;margin-top: -20px;margin-bottom: 10px !important;"></textarea>
+                        <p class="pull-left">
+                          <button type="reset" class="btn btn-sm btn-danger btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-window-close" aria-hidden="true"></i>
+ Annuler</button>
+                          <button type="submit" class="btn btn-sm btn-success btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-floppy-o" aria-hidden="true"></i> Valider</button>
+
+                        </p>
+                      </div>
+                        </form>
+                </div>
+
+                <div class=" ">
+
+                    <form method="post" action="">
+                              <!-- debut du code pour le tableau-->
+                            <table class="table table-bordered table-striped table-condensed">
+                              <thead>
+                                <tr style="background-color: #26440d !important;color: #fff !important;">
+                                 <th>Nom de la notification</th>
+                                  <th>Temps avant </th>
+                                  <th>Temps après  </th>
+                                  <th>Action  </th>
+
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>
+                                      <input type="checkbox" name="" class="my_checkbox valid_retrait_rdv_email">
+                                      <span>Sms de retrait </span>
+                                    </td>
+                                    <td>
+
+                                      <span>Retrait:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+
+
+                                     <td>
+
+                                      <span>Retrait:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+                                    <td> <a href="{{path('dkk_administration_regarder_notification_sms')}}" class="btn btn-success btn_valid"><i class="fa fa-eye"></i> Regarder </a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        <!-- fin du code pour le tableau-->
+                        <div class="retrait_rdv_email" style="display: none;">
+                           <br>
+                            <textarea placeholder="Insérer le message ici" class="form-control" style="width: 70%;margin-top: -20px;margin-bottom: 10px !important;"></textarea>
+                        <p class="pull-left">
+                          <button type="reset" class="btn btn-sm btn-danger btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-window-close" aria-hidden="true"></i>
+ Annuler</button>
+                          <button type="submit" class="btn btn-sm btn-success btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-floppy-o" aria-hidden="true"></i> Valider</button>
+
+                        </p>
+                      </div>
+
+                        </form>
+                </div>
+
+                <div class=" ">
+
+                    <form method="post" action="">
+                        <!-- debut du code pour le tableau-->
+                            <table class="table table-bordered table-striped table-condensed">
+                              <thead>
+                                <tr style="background-color: #26440d !important;color: #fff !important;">
+                                 <th>Nom de la notification</th>
+                                  <th>Temps après  </th>
+                                  <th>Action  </th>
+
+
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>
+                                      <input type="checkbox" name="" class="my_checkbox valid_honore_rdv_email">
+                                      <span>Sms de RDV non honoré </span>
+                                    </td>
+
+
+                                     <td>
+
+                                      <span>Reprogrammation:</span>
+                        <select>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+
+
+                 </select>
+                                    </td>
+                                     <td> <a href="{{path('dkk_administration_regarder_notification_sms')}}" class="btn btn-success btn_valid"><i class="fa fa-eye"></i> Regarder </a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        <!-- fin du code pour le tableau-->
+
+                        <div class="honore_rdv_email" style="display: none;">
+                           <br>
+                            <textarea placeholder="Insérer le message ici" class="form-control" style="width: 70%;margin-top: -20px;margin-bottom: 10px !important;"></textarea>
+                        <p class="pull-left">
+                          <button type="reset" class="btn btn-sm btn-danger btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-window-close" aria-hidden="true"></i>
+ Annuler</button>
+                          <button type="submit" class="btn btn-sm btn-success btn_valid" style="margin-right: 7px !important;display: inline-block !important"><i class="fa fa-floppy-o" aria-hidden="true"></i> Valider</button>
+
+                        </p>
+                      </div>
+
+
+                        </form>
+                </div>
+                <br><br>
+
+
+
+                <!-- on peut mettre le boutto enregistrer les informations ici -->
+            </div>
+
+              </div>
+
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+ <script type="text/javascript">
+                            $(document).ready(function(){
+                                $('#ajouter').on('click', function(){
+                                    if($(this).is('button'))
+                                    {
+                                        $('.main2').css('display','inline-block');
+                                        $('#ajouter').hide();
+                                        $('#ajouter2').show();
+                                    }
+                                });
+
+                                // valide email rappel
+                                $(".valide_rapel_email").on('click',function(){
+                                  $(".rappel_rdv_email").toggle();
+                                });
+                                // valide email remercieemnt
+                                $(".valid_remerciement_rdv_email").on('click',function(){
+                                  $(".remerciement_rdv_email").toggle();
+                                });
+
+                                 // valide email absence
+
+                                   $(".valid_absence_rdv_email").on('click',function(){
+                                  $(".absence_rdv_email").toggle();
+                                });
+
+                                  // valide email campagne
+
+
+                                   $(".valid_campagne_rdv_email").on('click',function(){
+                                  $(".campagne_rdv_email").toggle();
+                                });
+
+                                   // valide email campagne
+
+
+                                   $(".valid_promotion_rdv_email").on('click',function(){
+                                  $(".promotion_rdv_email").toggle();
+                                });
+
+                                    // valide email campagne
+                                   $(".valid_souhait_rdv_email").on('click',function(){
+                                  $(".souhait_rdv_email").toggle();
+                                });
+                                     // valide email campagne
+                                   $(".valid_confirmation_rdv_email").on('click',function(){
+                                  $(".confirmation_rdv_email").toggle();
+                                });
+
+                                 // valide email campagne
+                                   $(".valid_modification_rdv_email").on('click',function(){
+                                  $(".modification_rdv_email").toggle();
+                                });
+                                   // valide email campagne
+                                   $(".valid_retrait_rdv_email").on('click',function(){
+                                  $(".retrait_rdv_email").toggle();
+                                });
+                                   // valide email campagne
+                                   $(".valid_honore_rdv_email").on('click',function(){
+                                  $(".honore_rdv_email").toggle();
+                                });
+
+                                  // pour les sms
+
+
+                                  // valide email rappel
+                                $(".valid_rapel_sms").on('click',function(){
+                                  $(".rappel_rdv_sms").toggle();
+                                });
+                                // valide sms remercieemnt
+                                $(".valid_remerciement_rdv_sms").on('click',function(){
+                                  $(".remerciement_rdv_sms").toggle();
+                                });
+
+                                 // valide sms absence
+
+                                   $(".valid_absence_rdv_sms").on('click',function(){
+                                  $(".absence_rdv_sms").toggle();
+                                });
+
+                                  // valide sms campagne
+
+
+                                   $(".valid_campagne_rdv_sms").on('click',function(){
+                                  $(".campagne_rdv_sms").toggle();
+                                });
+
+                                   // valide sms campagne
+
+
+                                   $(".valid_promotion_rdv_sms").on('click',function(){
+                                  $(".promotion_rdv_sms").toggle();
+                                });
+
+                                    // valide sms campagne
+                                   $(".valid_souhait_rdv_sms").on('click',function(){
+                                  $(".souhait_rdv_sms").toggle();
+                                });
+                                     // valide sms campagne
+                                   $(".valid_confirmation_rdv_sms").on('click',function(){
+                                  $(".confirmation_rdv_sms").toggle();
+                                });
+
+                                 // valide sms campagne
+                                   $(".valid_modification_rdv_sms").on('click',function(){
+                                  $(".modification_rdv_sms").toggle();
+                                });
+                                   // valide sms campagne
+                                   $(".valid_retrait_rdv_sms").on('click',function(){
+                                  $(".retrait_rdv_sms").toggle();
+                                });
+                                   // valide sms campagne
+                                   $(".valid_honore_rdv_sms").on('click',function(){
+                                  $(".honore_rdv_sms").toggle();
+                                });
+
+
+
+                            });
+                        </script>
+
+{% endblock %}
+

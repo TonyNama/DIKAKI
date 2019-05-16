@@ -1,0 +1,130 @@
+dkk_professionnel_password_oublie:
+    path:    /password/oublie
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:changePassword }
+
+dkk_professionnel_sauvegarde:
+    path:   /sauvegarde
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:sauvegarde }
+    
+dkk_professionnel_connexion:
+    path:     /connexion
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:connexion }
+    
+dkk_professionnel_authentification:
+    path:     /espace
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:authentification }
+    
+dkk_professionnel_inscription:
+    path:     /inscription
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:inscription }
+    
+dkk_professionnel_deconnexion:
+    path:     /deconnexion
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:deconnexion }
+    
+
+    
+dkk_professionnel_trouver:
+    path:     /trouver
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:trouver }
+    
+dkk_professionnel_professionnel:
+    path:     /pro/{id}
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:professionnel }
+ 
+dkk_professionnel_espace:
+    path:    /professionnel/espace
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:espacePro }
+    
+dkk_professionnel_espace_messages:
+    path:    /professionnel/messages
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:messagesPro }
+ 
+dkk_professionnel_espace_agenda:
+    path:    /professionnel/agenda
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:agendaPro }
+    
+dkk_professionnel_espace_clients:
+    path:    /professionnel/clients
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:clientsPro }
+    
+dkk_professionnel_espace_client:
+    path:    /professionnel/client/{id}
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:clientDetailsPro }
+    
+dkk_professionnel_espace_statistiques:
+    path:    /professionnel/statistiques
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:statistiquesPro }
+
+dkk_professionnel_prestataires_load:
+    path:    /professionnel/prestataires/load
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:prestatairesLoad }
+    
+dkk_professionnel_prestations_load:
+    path:    /professionnel/prestations/load
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:prestationsLoad }
+    
+dkk_professionnel_prestatairesAffects_load:
+    path:    /professionnel/prestatairesAffects/load
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:prestAffectsLoad }
+    
+dkk_professionnel_affectations_load:
+    path:    /professionnel/affectations/load
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:affectationsLoad }
+    
+dkk_professionnel_prestatairesPlanning_load:
+    path:    /prestatairesPlanning/load
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:prestPlanningLoad }
+    
+dkk_professionnel_rdvPerso_load:
+    path:    /rdvPerso/load
+    defaults: { _controller: DKKAppBundle:App:rdvPersoLoad }
+    
+dkk_professionnel_enregistrement_client:
+    path:   /enregistrement/client
+    defaults: { _controller: DKKUtilisateurBundle:Utilisateur:enregistrementParPro }
+    
+dkk_professionnel_planningGen_load:
+    path:    /planningGen/load
+    defaults: { _controller: DKKAppBundle:App:planningGenLoad }
+    
+dkk_professionnel_planning_impression:
+    path:    /planning/print
+    defaults: { _controller: DKKAppBundle:App:planningGenPrint }
+
+dkk_professionnel_presence_sauvegarder:
+    path:    /presence/sauvegarder
+    defaults: { _controller: DKKAppBundle:App:presenceSauvegarder }
+    
+dkk_professionnel_presence_quotidien:
+    path:    /presence/quotidien
+    defaults: { _controller: DKKAppBundle:App:presenceQuotidien }
+    
+dkk_professionnel_agenda_prev_next:
+    path:    /agenda/next_prev
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:prev_next }
+    
+dkk_professionnel_agenda_table:
+    path:    /agenda/table
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:tableAgenda }
+    
+dkk_professionnel_save_affectation:
+    path:    /agenda/save/affectation
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:saveAffectation }
+    
+dkk_professionnel_client_auto:
+    path:    /agenda/client/auto
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:clientAutocompletion }
+    
+dkk_professionnel_clients_autocomplete:
+    path:    /agenda/clients/autocomplete
+    defaults: { _controller: DKKProfessionnelBundle:Professionnel:clientsAutocomplete }
+    
+#New Front
+dkk_professionnel_:
+    path:     /
+    defaults: { _controller: DKKProfessionnelBundle:Front:updateRole }
+
+dkk_professionnel_choix:
+    path:     /choix
+    defaults: { _controller:  DKKProfessionnelBundle:Front:choix }

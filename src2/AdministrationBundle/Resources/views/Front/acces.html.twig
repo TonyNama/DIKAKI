@@ -1,0 +1,257 @@
+ {% extends '::admin_template.html.twig' %}
+
+{% block title %} Accès & paiements :: Prise de rendez-vous et dépôt de dossier en ligne :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+
+ <style>
+        .form-control{
+          display: inline-block !important;
+          vertical-align: middle !important;
+          width: 60% !important;
+        }
+        label{
+          font-weight: 600 !important;
+          font-size: 1.1em;
+        }
+
+        .menu1 {  
+          border-bottom:solid 2px #666666 ;  
+          padding-top:12px ;  
+          padding-bottom:7px
+        }  
+
+        .onglet {  
+            border:solid 1px #666666 ; 
+            margin:5px 5px 0px 5px ;  
+            padding:7px 3px 7px 3px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+
+            border-radius:5px 5px 0px 0px !important;
+          }  
+
+          a.onglet {  
+            background-color:#666666 ; 
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+          }  
+
+          .onglet-actif {  
+             border-left:solid 2px #666666 ;  
+             border-right:solid 2px #666666 ;  
+             border-top:solid 2px #666666 ;  
+             border-bottom:none !important;  
+             margin:5px 5px 0px 5px ; 
+             padding:7px 3px 7px 3px ; 
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+             color: #333;
+          }
+
+        th{
+          text-align: center;
+        }
+      </style>
+
+{% endblock %}
+
+{% block body %}
+
+
+<!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+             <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+
+
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+
+
+
+              <h4 class="small_tittle up_">Accès & paiements </h4>
+                   <p class="journne_du_" style="text-align:center !important;"> </p>
+
+                   <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                     <span class="onglet">  Accès </span> <!-- onglet inactif -->
+                     <a href="{{path('dkk_administration_paiement')}}" class="onglet-actif">  Paiements</a> <!-- onglet ACTIF -->
+                   </div>
+
+            <div class="margin_wrapper" style="padding-left: 100px;padding-right: 100px;">
+                <h5 class="small_tittle up_" style="text-align: center;">Accès </h5>
+                <section id="unseen">
+
+                    <form method="post" action="" id="signupForm">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <br><br>
+                <label>Titulaire</label>
+
+                <input type="text" placeholder="Nom du titulaire" name="nom" class="form-control">
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <br><br>
+                   <label>Niveau d'accès </label>
+
+               <select class="form-control" name="niveau">
+                <option selected disabled></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+               </select>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <br><br>
+                 <label>Fonction</label>
+
+                 <select class="form-control" name="fonction">
+                  <option selected disabled> </option>
+                  <option value="Gérant">Gérant</option>
+                  <option value="Secrétaire">Secrétaire</option>
+                  <option value="Intervenant 1">Intervenant 1</option>
+                  <option value="Intervenant 2">Intervenant 2</option>
+                  <option value="Intervenant 3">Intervenant 3</option>
+                 </select>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <br><br>
+                 <label>Mot de passe</label>
+
+                <input type="password" placeholder="Mot de passe" name="password" class="form-control">
+                </div>
+
+            </div>
+
+
+
+
+                </div>
+
+
+              <div class=" resize pull-right" ><br><br>
+
+                <button type="submit" class="btn  btn-success btn_valid"  ><i class="fa fa-floppy-o" aria-hidden="true"></i>
+Enregistrer</button>
+
+
+
+                <button type="reset" class="btn btn-sm btn-danger btn_valid"  ><i class="fa fa-times"></i>
+ Annuler</button>
+              <br><br>
+
+            </div>
+
+        </form>
+
+
+                <!-- debut du tableau -->
+                    <table class="table table-bordered table-striped table-condensed">
+                         <thead>
+                          <tr style="background-color: #26440d !important;color: #fff !important;">
+                          <th>Nom du titulaire</th>
+                          <th>niveau d'accés</th>
+                  <th>Fonction</th>
+                          <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>
+
+                                 <a href="{{path('dkk_administration_modifier_acces')}}" class="btn btn-primary btn_valid"><i class="fa fa-pencil-square-o"></i> Modifier</a>
+                                <a href=" " class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vraiment supprimer ?')"><i class="fa fa-times"></i> Supprimer</a>
+                            </td>
+                          </tr>
+                      </tbody>
+                    </table>
+                </section>
+            </div>
+
+
+
+
+            <!-- end col-4 -->
+          </div>
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+        $(document).ready(function() {
+          $("#signupForm").validate({
+            rules: {
+              niveau: "required",
+              fonction: "required",
+              nom: {
+                required:true,
+                minlength: 2
+              },
+              password: {
+                required:true,
+                minlength: 6
+              }
+            },
+            messages: {
+              nom: {
+                required: "<span style='color:#dd4f43;'>&nbsp;&nbsp;&nbsp; &nbsp; Le nom</span>",
+                minlength: "<span style='color:#dd4f43;'>2 caractères minimum</span>"
+              },
+
+              password: {
+                required: "<span style='color:#dd4f43;'>Mot de passe</span>",
+                minlength: "<span style='color:#dd4f43;'>6 caractères minimum</span>"
+              },
+
+
+              fonction: "<span style='color:#dd4f43;'>La fonction</span>",
+              niveau: "<span style='color:#dd4f43;'>Le niveau</span>"
+            }
+          });
+        });
+
+    </script>
+{% endblock %}
+
+

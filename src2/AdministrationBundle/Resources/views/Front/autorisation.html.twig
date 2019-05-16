@@ -1,0 +1,347 @@
+ {% extends '::admin_template.html.twig' %}
+
+{% block title %}Administration - Autorisation :: Prise de rendez-vous et dépôt de dossier en ligne :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+
+ <style>
+       th{
+          font-size: 0.9em !important;
+          text-align: center !important;
+        }
+        .menu1 {  
+          border-bottom:solid 2px #666666 ;  
+          padding-top:12px ; 
+          padding-bottom:7px
+        }  
+
+        .onglet {  
+            border:solid 1px #666666 ; 
+            margin:5px 5px 0px 5px ; 
+            padding:7px 3px 7px 3px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+
+            border-radius:5px 5px 0px 0px !important;
+          }  
+
+          a.onglet {  
+            background-color:#666666 ;  
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+          }  
+
+          .onglet-actif {  
+             border-left:solid 2px #666666 ; 
+             border-right:solid 2px #666666 ; 
+             border-top:solid 2px #666666 ;  
+             border-bottom:none !important;  
+             margin:5px 5px 0px 5px ;  
+             padding:7px 3px 7px 3px ; 
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+             color: #333;
+          }
+          </style>
+
+{% endblock %}
+
+{% block body %}
+
+
+  <!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+             <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+
+
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+
+
+
+              <h4 class="small_tittle up_">Paramètres spécifique </h4>
+                   <p class="journne_du_" style="text-align:center !important;"> </p>
+
+                   <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                     <span class="onglet">  Autorisation </span> <!-- onglet inactif -->
+                     <a href="{{path('dkk_administration_restriction')}}" class="onglet-actif">  Restriction</a> <!-- onglet ACTIF -->
+                   </div>
+
+            <div class="margin_wrapper">
+
+                <section id="unseen">
+
+                        <form method="post" action="">
+          <div class="form-group">
+            <div class="resize2">
+              <br><br>
+                <h6 class="option_take">Options de prise de rendez-vous </h6>
+                        <br>
+
+                <div class="dimuni">
+                                    <input type="checkbox" name="" id="internet" class="checkbox_"> <label for="internet" class="my_label_for">
+                                         Autoriser les clients de prendre les rendez-vous en ligne.
+                                    </label>
+                                    <br>
+
+                                    <input type="checkbox" name="" id="compte" class="checkbox_"> <label for="compte" class="my_label_for">
+                                         Autoriser la création des comptes par internet.
+                                    </label>
+
+                                    <br>
+
+                                    <input type="checkbox" name="" id="connexion" class="checkbox_"> <label for="connexion" class="my_label_for">
+                                         Connexion obligatoire avant la prise de rendez-vous.
+                                    </label>
+
+                                </div>
+
+                            <br>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <label>Nombre de modifications de RDV</label>
+                <br>
+                <select class=" option_">
+                                    <option>1 fois</option><option>2 fois</option><option>3 fois</option><option>4 fois</option>
+                                    <option>5 fois</option><option>6 fois</option><option>7 fois</option><option>8 fois</option>
+                                    <option>9 fois</option><option>10 fois</option><option>11 fois</option><option>12 fois</option>
+                                    <option>13 fois</option><option>14 fois</option><option>15 fois</option><option>16 fois</option>
+                                    <option>17 fois</option><option>18 fois</option><option>19 fois</option><option>20 fois</option>
+                                </select>
+
+
+                </div>
+
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <br><br>
+                <label>Nombre de RDV par personne</label>
+
+                <select class=" option_">
+                                     <option>1 fois</option><option>2 fois</option><option>3 fois</option><option>4 fois</option>
+                                    <option>5 fois</option><option>6 fois</option><option>7 fois</option><option>8 fois</option>
+                                    <option>9 fois</option><option>10 fois</option><option>11 fois</option><option>12 fois</option>
+                                    <option>13 fois</option><option>14 fois</option><option>15 fois</option><option>16 fois</option>
+                                    <option>17 fois</option><option>18 fois</option><option>19 fois</option><option>20 fois</option>
+                                </select>
+
+                </div>
+
+            </div>
+                        <div class="resize2">
+                            <br><br>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <input type="checkbox" id="chkPassport10" value="" class="" style="">  <span>Accepter les rendez-vous / reservations</span>
+                </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <input type="checkbox" id="chkPassport10" value="" class="">  <span>Refuser les rendez-vous / reservations</span>
+                </div>
+
+            </div>
+
+                             <script type="text/javascript">
+                                function yesnoCheck() {
+                                    if (document.getElementById('yesCheck').checked) {
+                                        document.getElementById('ifYes').style.visibility = 'visible';
+                                    }
+                                    else document.getElementById('ifYes').style.visibility = 'hidden';
+
+                                }
+                                </script>
+                        <div class="resize2">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                       <br><br>
+                            <span > &nbsp;&nbsp;Rendez-vous récurrents </span> &nbsp;&nbsp; <input type="radio"  onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"> &nbsp;&nbsp;Oui &nbsp;&nbsp;<input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"> &nbsp;&nbsp;Non
+
+                            <br><br>
+                            <div id="ifYes" style="visibility:hidden">
+                                       <div class="select_">
+                                           <label>Nombre minimum</label>
+                        <br>
+                        <select class=" ">
+                                             <option>1</option><option>2 </option><option>3 </option><option>4 </option>
+
+                                        </select>
+                                       </div>
+                            <div class="select_">
+                              <label>Nombre maximum</label>
+                <br>
+                <select class=" " style="">
+                                     <option>1</option><option>2 </option><option>3 </option><option>4 </option>
+
+                                </select>
+                            </div>
+
+
+                            </div>
+
+                            </div>
+
+                              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                  <br><br>
+                                  <input type="checkbox" id="chkPassport10" value="" class="" style="display:inline-block !important;vertical-align:middle !important;">  <span style="display:inline-block;vertical-align:middle;font-weight:500 !important;">Permettre l'annulation de RDV</span>
+                                  <br><br>
+                                  <input type="checkbox" id="chkPassport10" value="" class="">  <span>Permettre la suppression de RDV</span>
+                                  <script>
+                                    $(document).ready(function(){
+                                      $("#oui").on('click',function(){
+                                        $(".limitation").show()
+                                      });
+
+                                      $("#non").on('click',function(){
+                                        $(".limitation").hide()
+                                      });
+
+                                    });
+                                  </script>
+                                  <br><br>
+                                     <span> Limitation d'envoi des sms ? </span>  <input type="radio" name="limitation" id="non" checked=""> Non &nbsp;<input type="radio" name="limitation" id="oui"> Oui
+                                    <div class="limitation" style="display: none !important">
+                                       <span style="display:inline-block;vertical-align:middle;font-weight:500 !important;">Nombre de sms max par jour</span>
+                                     <input type="text" name="" maxlength="4" placeholder="EX: 1000 " class="" style="width: 40%;height: 35px;">
+                                    </div>
+
+                              </div>
+
+
+
+                        </div>
+
+                        <div class=" resize2">
+
+                          <div class="pull-left" style="padding-left: 20px !important">
+                              <br>
+                              <p class="restriction">Restriction de notifications</p>
+
+
+                          <input type="checkbox" name="" id="sms"> <label for="sms"> &nbsp;SMS <span class="separation"></span></label>
+                          <input type="checkbox" name="" id="Email"> <label for="Email"> &nbsp;Email</label>
+
+                          </div>
+                          <p style="clear: both !important"></p>
+                          <br><br>
+                          <span class="send__">Envois suspendus de :</span>
+                          <select name="" class="" style="width: 16%;display: inline-block;vertical-align: middle;">
+                            <option value="1 heure">1 Heure</option><option value="2 heures">2 Heures</option>
+                            <option value="3 heures">3 Heures</option><option value="4 heures">4 Heures</option>
+                            <option value="5 heures">5 Heures</option><option value="6 heures">6 Heures</option>
+                            <option value="7 heures">7 Heures</option><option value="8 heures">8 Heures</option>
+                            <option value="9 heures">9 Heures</option><option value="10 heures">10 Heures</option>
+                            <option value="11 heures">11 Heures</option><option value="12 heures">12 Heures</option>
+                            <option value="13 heures">13 Heures</option><option value="14 heures">14 Heures</option>
+                            <option value="15 heures">15 Heures</option><option value="16 heures">16 Heures</option>
+                            <option value="17 heures">17 Heures</option><option value="18 heures">18 Heures</option>
+                            <option value="19 heures">19 Heures</option><option value="20 heures">20 Heures</option>
+                            <option value="21 heures">21 Heures</option><option value="22 heures">22 Heures</option>
+                            <option value="23 heures">23 Heures</option><option value="24 heures">24 Heures</option>
+                          </select>
+                          à
+
+                          <select name="" class="" style="width: 16%;display: inline-block;vertical-align: middle;">
+                            <option value="1 heure">1 Heure</option><option value="2 heures">2 Heures</option>
+                            <option value="3 heures">3 Heures</option><option value="4 heures">4 Heures</option>
+                            <option value="5 heures">5 Heures</option><option value="6 heures">6 Heures</option>
+                            <option value="7 heures">7 Heures</option><option value="8 heures">8 Heures</option>
+                            <option value="9 heures">9 Heures</option><option value="10 heures">10 Heures</option>
+                            <option value="11 heures">11 Heures</option><option value="12 heures">12 Heures</option>
+                            <option value="13 heures">13 Heures</option><option value="14 heures">14 Heures</option>
+                            <option value="15 heures">15 Heures</option><option value="16 heures">16 Heures</option>
+                            <option value="17 heures">17 Heures</option><option value="18 heures">18 Heures</option>
+                            <option value="19 heures">19 Heures</option><option value="20 heures">20 Heures</option>
+                            <option value="21 heures">21 Heures</option><option value="22 heures">22 Heures</option>
+                            <option value="23 heures">23 Heures</option><option value="24 heures">24 Heures</option>
+                          </select>
+
+                          <p style="clear: both !important;"></p>
+                              <button type="submit" class="btn btn-success pull-right btn_valid" style="margin-top: 0px !important;"> <i class="fa fa-floppy-o" aria-hidden="true"></i> Enregister</button>
+                              <br>
+                        </div>
+
+            </div>
+
+
+
+    </form>
+
+                <!-- debut du tableau -->
+                    <table class="table table-bordered table-striped table-condensed">
+                         <thead>
+                          <tr style="background-color: #26440d !important;color: #fff !important;">
+                           <th> Modifications rdv</th>
+                            <th> Rdv par personne</th>
+                            <th> Accepter reservations </th>
+                            <th> Refuser  reservations </th>
+                            <th> rdv récurrents </th>
+                            <th> Annulation  rdv </th>
+                            <th> Suppression rdv</th>
+                            <th> Restriction notifications</th>
+                            <th> Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>
+
+                                 <a href="{{path('dkk_administration_modifier_autorisation')}}" class="btn btn-primary btn_valid"><i class="fa fa-pencil-square-o"></i> Modifier</a>  <p></p>
+                                        <a href=" " class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vraiment supprimer ?')"><i class="fa fa-window-close" aria-hidden="true"></i> Supprimer</a>
+                            </td>
+                          </tr>
+                      </tbody>
+                    </table>
+                </section>
+            </div>
+
+
+
+
+            <!-- end col-4 -->
+          </div>
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+
+
+{% endblock %}
+
+

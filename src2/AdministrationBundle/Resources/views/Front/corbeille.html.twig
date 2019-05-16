@@ -1,0 +1,157 @@
+ {% extends '::admin_template.html.twig' %}
+
+{% block title %}Administration - Corbeille :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+<style>
+        .btn_btn > i{
+            color: #fff !important;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+ <!-- debut du contenu -->
+
+          <section id="main-content">
+      <section class="wrapper">
+        <!-- page start-->
+        <div class="row mt">
+          <div class="col-sm-3">
+           <section class="panel">
+              <div class="panel-body">
+                <a href="{{path('dkk_administration_email_compos')}}" class="btn btn-compose">
+                  <i class="fa fa-pencil"></i>  Envoyer un message
+                  </a>
+                <ul class="nav nav-pills nav-stacked mail-nav">
+                  <li><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> Boute re reception  <span class="label label-theme pull-right inbox-notification">3</span></a></li>
+                  <li><a href="{{path('dkk_administration_email_send')}}"> <i class="fa fa-exclamation-circle"></i>Message envoyés</a></li>
+                  <li class="active"><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>Corbeille</a></li>
+                </ul>
+              </div>
+            </section>
+
+          </div>
+
+          <div class="col-sm-9">
+            <section class="panel">
+              <header class="panel-heading wht-bg">
+                <h4 class="gen-case">
+                  Corbeille
+
+                  </h4>
+              </header>
+              <div class="panel-body ">
+                <div class="mail-header row">
+                  <div class="col-md-8">
+                    <h4 class="pull-left">  </h4>
+                  </div>
+                </div>
+
+                <div class="view-mail">
+
+                 <!-- debut -->
+                    <section id="unseen">
+                <table class="table table-bordered table-striped table-condensed">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Contenu</th>
+                      <th class="numeric">Voulez-vous ? </th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr> 
+                      <td> 19 Février 2019</td>
+                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua...</td>
+                      <td>
+                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                      </td>
+
+                    </tr>
+
+                       <tr>
+                      <td>19 Février 2019</td>
+                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua...</td>
+                      <td>
+                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                      </td>
+
+                    </tr>
+
+                       <tr>
+                      <td>19 Février 2019</td>
+                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua...</td>
+                      <td>
+                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                      </td>
+
+                    </tr>
+                       <tr>
+                      <td>19 Février 2019</td>
+                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua...</td>
+                      <td>
+                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                      </td>
+
+                    </tr>
+                       <tr>
+                      <td> 19 Février 2019</td>
+                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua...</td>
+                      <td>
+                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                      </td>
+
+                    </tr>
+                       <tr>
+                      <td> 19 Février 2019</td>
+                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua...</td>
+                      <td>
+                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                      </td>
+
+                    </tr>
+                       <tr>
+                      <td> 19 Février 2019</td>
+                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua...</td>
+                      <td>
+                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+                </table>
+              </section>
+
+                <!-- fin -->
+                </div>
+
+
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+
+{% endblock %}
+

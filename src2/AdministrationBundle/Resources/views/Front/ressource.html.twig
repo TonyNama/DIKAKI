@@ -1,0 +1,701 @@
+ {% extends '::admin_template.html.twig' %}
+
+{% block title %} Paramètre des ressources :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+   <style>
+        .menu1 { 
+          border-bottom:solid 2px #666666 ;  
+          padding-top:12px ;  
+          padding-bottom:7px
+        }  
+
+        .onglet { 
+            border:solid 1px #666666 ;  
+            margin:5px 5px 0px 5px ; 
+            padding:7px 3px 7px 3px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+
+            border-radius:5px 5px 0px 0px !important;
+          }  
+
+          a.onglet {  
+            background-color:#666666 ;  
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+          }  
+
+          .onglet-actif { 
+             border-left:solid 2px #666666 ;  
+             border-right:solid 2px #666666 ;  
+             border-top:solid 2px #666666 ;  
+             border-bottom:none !important;  
+             margin:5px 5px 0px 5px ;  
+             padding:7px 3px 7px 3px ; 
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+             color: #333;
+          }  
+        .sky-form{
+            box-shadow: none !important;
+        }
+
+        a.previous { margin-top: 20px !important; display: none;cursor: pointer;}
+        .span {
+          display: none;
+          color: Red;
+        }
+
+table tr { display: none; }
+
+table tr:nth-child(-n+8) { display: table-row; }
+.form-control{
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+th,td{
+  text-align: center !important;
+}
+
+    </style>
+{% endblock %}
+
+{% block body %}
+
+
+<!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+            <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <h4 class="small_tittle">Prestataire - ressource</h4>
+
+              <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                <a href="{{path('dkk_administration_prestataire')}}" class="onglet-actif"> Prestataire </a> <!-- onglet ACTIF -->
+                   <span class="onglet"> Ressource  </span> <!-- onglet inactif -->
+              </div>
+
+
+
+              <div class="margin_wrapper">
+
+                  <form method="post" action="" id="signupForm">
+                <div class="row">
+                  <div class="col-sm-12 col-sm-12 col-md-6 col-lg-6">
+                    <span class="my_span_">Nom de la Ressource</span>
+                  <br>
+                  <input placeholder="Ex: Nom de la ressource" name="firstname" class="form-control " style="height: 35px;width: 60% !important;height: 35px !important" type="text">
+                  </div>
+                  <div class="col-sm-12 col-sm-12 col-md-6 col-lg-6">
+                    <span class="my_span_">Type de Ressource</span>
+                  <br>
+                  <select name="ressource" class="form-control" style="height: 35px;width: 60% !important;">
+                    <option selected disabled></option>
+                    <option value=" "> </option>
+                    <option value=" "> </option>
+                  </select>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-12 col-sm-12 col-md-6 col-lg-6"><br>
+                    <span class="my_span_">Description</span>
+                  <br>
+                  <textarea name="coment" style="width: 60% !important;resize: none;" cols="0" class="form-control"></textarea>
+                  </div>
+                  <div class="col-sm-12 col-sm-12 col-md-6 col-lg-6">
+                    <br>
+                    <span class="my_span_">Image / Photo</span>
+                  <br>
+                  <input type="file" name="" class="form-control" style="height: 35px;width: 60% !important;height: 35px !important">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-12 col-sm-12 col-md-12 col-lg-12"><br>
+                    <span class="my_span_">Horaires disponibles</span>
+                  <br><br>
+                  <input name="choix_cat" class="my_checkbox" id="first_only" type="radio" style="margin-top: 3px !important;display: inline-block;" checked="">
+             <span style="margin-left:0% color:black;font-weight:500;">Utiliser les heures d'ouverture de la société.</span>
+             <br>
+              <input name="choix_cat" class="my_checkbox" id="only" type="radio" style="margin-top: 3px !important;display: inline-block;">
+             <span style="margin-left:0% color:black;font-weight:500;">Utiliser un programme spécifique.</span>
+             <br><br>
+             <div class="container_news_date" style="display: none;">
+                                       <!-- debut du tableau -->
+                          <table class="table table-bordered table-striped table-condensed">
+  <thead>
+   <tr style="background-color: #26440d !important;color: #fff !important;">
+     <th>Jours</th>
+      <th>Heure de début </th>
+      <th>Heure de fin </th>
+      <th>Interruption</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+       <td class="the_day"><input type="checkbox" id="" name=""> Lundi</td>
+                                <td>
+                                    <span> Début :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <span> fin :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+
+                                    </select>
+                                </td>
+
+                                 <td>
+                                    <span> debut :</span>
+                                    <select name="" class="select_option form-control">
+                                         <option>Sans interruption</option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+
+                                     <span> fin :</span>
+                                    <select name="" class="select_option form-control">
+                                         <option></option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+                                </td>
+    </tr>
+    <tr>
+       <td class="the_day"><input type="checkbox" id="" name=""> Mardi</td>
+                                <td>
+                                    <span> Début :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <span> fin :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+
+                                    </select>
+                                </td>
+
+                                 <td>
+                                    <span> debut :</span>
+                                    <select name="" class="select_option form-control">
+                                         <option>Sans interruption</option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+
+                                     <span> fin :</span>
+                                    <select name="" class="select_option form-control">
+                                         <option></option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+                                </td>
+    </tr>
+    <tr>
+       <td class="the_day"><input type="checkbox" id="" name=""> Mercredi</td>
+                                <td>
+                                    <span> Début :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <span> fin :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+
+                                    </select>
+                                </td>
+
+                                 <td>
+                                    <span> debut :</span>
+                                    <select name="" class="select_option form-control" form-control>
+                                         <option>Sans interruption</option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+
+                                     <span> fin :</span>
+                                    <select name="" class="select_option form-control">
+                                         <option></option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+                                </td>
+    </tr>
+    <tr>
+       <td class="the_day"><input type="checkbox" id="" name=""> Jeudi</td>
+                                <td>
+                                    <span> Début :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <span> fin :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+
+                                    </select>
+                                </td>
+
+                                 <td>
+                                    <span > debut :</span>
+                                    <select name="" class="select_option form-control">
+                                         <option>Sans interruption</option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+
+                                     <span > fin :</span>
+                                    <select name="" class="select_option form-control">
+                                         <option></option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+                                </td>
+    </tr>
+    <tr>
+       <td class="the_day"><input type="checkbox" id="" name=""> Vendredi</td>
+                                <td>
+                                    <span > Début :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <span > fin :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+
+                                    </select>
+                                </td>
+
+                                 <td>
+                                    <span > debut :</span>
+                                    <select name="" class="select_option form-control">
+                                         <option>Sans interruption</option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+
+                                     <span > fin :</span>
+                                    <select name="" class="select_option form-control">
+                                         <option></option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+                                </td>
+    </tr>
+    <tr>
+       <td class="the_day"><input type="checkbox" id="" name=""> Samedi</td>
+                                <td>
+                                    <span > Début :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <span > fin :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+
+                                    </select>
+                                </td>
+
+                                 <td>
+                                    <span > debut :</span>
+                                    <select name="" class="select_option form-control">
+                                         <option>Sans interruption</option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+
+                                     <span > fin :</span>
+                                    <select name="" class="select_option form-control">
+                                         <option></option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+                                </td>
+    </tr>
+    <tr>
+     <td class="the_day"><input type="checkbox" id="" name=""> Dimanche</td>
+                                <td>
+                                    <span > Début :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <span > fin :</span>
+                                    <select name="" class="select_option form-control">
+                                        <option>6h 00</option><option>6h 30</option><option>7h 00</option><option>7h 00</option>
+                                        <option>7h 30</option><option>8h 00</option><option>8h 30</option><option>9h 00</option>
+                                        <option>9h 30</option><option>10h 00</option><option>10h 30</option><option>11h 00</option>
+                                        <option>11h 30</option><option>12h 00</option><option>12h 30</option><option>13h 00</option>
+                                        <option>13h 30</option><option>14h 00</option><option>14h 30</option><option>15h 00</option>
+                                        <option>15h 30</option><option>16h 00</option><option>16h 30</option><option>17h 00</option>
+                                        <option>18h 00</option><option>18h 30</option><option>19h 00</option><option>19h 30</option>
+                                        <option>20h 00</option><option>20h 30</option><option>21h 00</option><option>21h 30</option>
+                                        <option>22h 00</option><option>22h 30</option><option>23h 00</option><option>23h 30</option>
+                                        <option>00h 00</option><option>00h 30</option><option>01h 00</option><option>01h 30</option>
+                                        <option>02h 00</option><option>02h 30</option><option>03h 00</option><option>03h 30</option>
+                                        <option>04h 00</option><option>04h 30</option><option>05h 00</option><option>05h 30</option>
+
+
+                                    </select>
+                                </td>
+
+                                 <td>
+                                    <span > debut :</span>
+                                    <select name="" class="select_option form-control">
+                                         <option>Sans interruption</option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+
+                                     <span > fin :</span>
+                                    <select name="" class="select_option form-control">
+                                         <option></option><option>12h - 13h</option><option>13h - 14h</option>
+                                        <option>12h - 14h</option>
+                                    </select>
+                                </td>
+
+
+    </tr>
+
+  </tbody>
+</table>
+                       <!-- fin du tableau-->
+
+             </div>
+
+                  </div>
+                  <div class="col-sm-12 col-sm-12 col-md-6 col-lg-6"><br>
+                    <div class="wrapper2" >
+
+                      <label class="my_span_" for="select" id="hide_2"><input type="checkbox" id="select" name="add_items" class=""> Utilisation de cette Ressource</lable>
+                      <p class="show_2" style="display:none !important;">
+                         <input type="text" class="form-control"  placeholder="Nom de la ressource" style="height: 35px;width: 60% !important;">
+
+                        <button  class="btn btn-primary btn_valid add_fields2" style="display:inline-block"><i class="fa fa-plus" aria-hidden="true"></i> Ajouter</button>
+                    </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pull-right" >
+                <br><br>
+                <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-floppy-o" aria-hidden="true"></i>
+Enregistrer</button>
+
+
+
+                <button type="reset" class="btn  btn-danger  btn_valid"><i class="fa fa-times"></i>
+ Annuler</button>
+              <br><br>
+
+            </div>
+
+
+              </form>
+
+                  <table class="table table-bordered table-striped table-condensed">
+              <thead>
+                <tr style="background-color: #26440d !important;color: #fff !important;">
+                  <th>N°</th>
+                  <th>Ville</th>
+                  <th>Quartier</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> 1</td>
+                  <td>Yaoundé</td>
+                  <td>Nlonkak</td>
+                </tr>
+                <tr>
+                  <td> 2</td>
+                  <td>Yaoundé</td>
+                  <td>Byem assi</td>
+                </tr>
+              </tbody>
+            </table>
+
+      </div>
+
+              </div>
+
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+
+<script type="text/javascript">
+              $(document).ready(function(){
+                $("#only").on('click',function(){
+                  $(".container_news_date").show();
+                });
+
+                $("#first_only").on('click',function(){
+                  $(".container_news_date").hide();
+                });
+
+                $("#signupForm").validate({
+                  rules: {
+                    ressource:"required",
+                    firstname: {
+                      required: true,
+                      minlength: 2
+                    },
+                    coment:{
+                      required:true
+                    }
+                  },
+                  messages: {
+                    firstname: {
+                      required: "<span style='color:#dd4f43'>Nom réquis</span>",
+                      minlength: "<span style='color:#dd4f43'> 2 caractères minimum</span>"
+                    },
+                    coment: {
+                      required: "<span style='color:#dd4f43'>Champs réquis</span>",
+                      minlength: "<span style='color:#dd4f43'>20 caractères minimum</span>",
+                    },
+                    ressource: "<span style='color:#dd4f43'>Ressource</span>",
+                  }
+                });
+
+
+                // Ajouter une nouvele Périodicité
+
+                var max_fields = 4;
+                var wrapper    = $(".wrapper2");
+                var add_button = $(".add_fields2");
+                var x = 1;
+
+
+              $(add_button).click(function(e){
+                    e.preventDefault();
+
+                    if(x < max_fields){
+                        x++;
+
+                  $(wrapper).append('<div class="wrapper_down_"> <input type="text" placeholder="Le nom de la ressource" class="form-control" style="height: 35px;width: 60% !important;margin-top:-10px !important;margin-bottom:10px !important;"><a href="javascript:void(0);" class="remove_field2 btn-primary"><i class="fa fa-times"></i></a></div>');
+                    }
+                });
+
+
+                $(wrapper).on("click",".remove_field2", function(e){
+                    e.preventDefault();
+                $(this).parent('div').remove();
+                x--;
+                })
+
+                $("#hide_2").on("click",function(){
+
+                  if($('input[name=add_items]').prop('checked'))
+                  {
+                    $(".show_2").show();
+
+                  }
+                  else {
+                    $(".show_2").hide();
+                    $(".wrapper_down_").hide();
+                  }
+                });
+
+              });
+            </script>
+
+{% endblock %}
+

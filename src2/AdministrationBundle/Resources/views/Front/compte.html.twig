@@ -1,0 +1,545 @@
+ {% extends '::admin_template.html.twig' %}
+
+{% block title %}Mon compte :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+<style>
+
+        th, td{
+          text-align: center !important;
+        }
+
+    </style>
+{% endblock %}
+
+{% block body %}
+
+
+ <!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+            <h2 class="name_structure">Cabinet médical la Grâce</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+
+              <div class="">
+                   <h4 class="small_tittle up_">Mon compte </h4>
+                   <p class="journne_du_" style="text-align:center !important;">Coordonnées</p>
+                   <div class="">
+                         <!-- debut -->
+                    <section id="unseen">
+                        <div class="margin_wrapper">
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                <img src="{{asset('img/photo_medecin.jpg')}}" class="img-responsive img_profile_pro">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                                <p class="down_info"></p>
+                                <p class="nom_professionnel">Essomba Paul</p>
+                                <p class="nom_professionnel">Médécin généraliste</p>
+                                <p class="nom_professionnel">BP:5200 Yaoundé / Cameroun.</p>
+                                <p class="nom_professionnel">Tel: +237 432 543 785.</p>
+                                <p class="nom_professionnel">Email: Essombapaul@gmail.com</p>
+                            </div>
+
+                            <div class="row"></div>
+                            <p class="journne_du_" style="text-align:left !important;">Droits d'accès</p>
+                             <input type="checkbox" id="access"> &nbsp;&nbsp; <label class="access" for="access">Intervenants</label>
+                            <br>
+                            <table class="table table-bordered table-striped table-condensed table_access" style="display:none !important;">
+                                 <thead>
+                 <tr style="background-color: #26440d !important;color: #fff !important;">
+                   <th>Nom</th>
+                    <th>Prénom </th>
+                    <th>fonction </th>
+                       <th>Téléphone</th>
+                       <th>niveau d'accès</th>
+                       <th>Date de création</th>
+                       <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Atangana</td>
+                    <td>Pierre </td>
+                    <td>Journaliste</td>
+                    <td>+237 256 256 265</td>
+                    <td>2</td>
+                    <td>02/03/2017</td>
+                    <td><a href="modifier-acces.html" class="btn btn-primary  btn_valid"><i class="fa fa-pencil-square-o"></i> Modifier</a>  <a href="" class="btn btn-danger  btn_valid" onclick="return confirm('Voulez-vous vraiment Supprimer ?')"><i class="fa fa-times"></i> Supprimer</a></td>
+                  </tr>
+
+                   <tr>
+                    <td>Atangana</td>
+                    <td>Pierre </td>
+                    <td>Journaliste</td>
+                    <td>+237 256 256 265</td>
+                    <td>2</td>
+                    <td>02/03/2017</td>
+                    <td><a href="modifier-acces.html" class="btn btn-primary  btn_valid"><i class="fa fa-pencil-square-o"></i> Modifier</a>  <a href="" class="btn btn-danger  btn_valid" onclick="return confirm('Voulez-vous vraiment Supprimer ?')"><i class="fa fa-times"></i> Supprimer</a></td>
+                  </tr>
+
+                   <tr>
+                    <td>Atangana</td>
+                    <td>Pierre </td>
+                    <td>Journaliste</td>
+                    <td>+237 256 256 265</td>
+                    <td>2</td>
+                    <td>02/03/2017</td>
+                    <td><a href="modifier-acces.html" class="btn btn-primary btn_valid"><i class="fa fa-pencil-square-o"></i> Modifier</a>  <a href="" class="btn btn-danger  btn_valid" onclick="return confirm('Voulez-vous vraiment Supprimer ?')"><i class="fa fa-times"></i> Supprimer</a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+                             <div class="row"></div>
+                            <p class="journne_du_" style="text-align:left !important;">Factures et abonnements</p>
+                            <input type="checkbox" id="factures"> &nbsp;&nbsp;<label for="factures" class="factures">Voir les factures</label>
+                            <br>
+                            <table class="table table-bordered table-striped table-condensed table_factures" style="display:none !important;">
+                                 <tr style="background-color: #26440d !important;color: #fff !important;">
+                                     <th>Reference facture</th>
+                                     <th>Mois</th>
+                                     <th>Numéro</th>
+                                     <th>Date</th>
+                                     <th>Montant</th>
+                                     <th>Echéance</th>
+                                     <th>Situation</th>
+                                     <th>Actions</th>
+                                 </tr>
+                                 <tr>
+                                     <td>......</td>
+                                     <td>Septembre</td>
+                                     <td>4258614</td>
+                                     <td>02.05.2018</td>
+                                     <td>30 000F</td>
+                                     <td>...........</td>
+                                     <td>payé</td>
+                                     <td>
+                                         <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-eye"></i> Details</button>
+
+                                         <!-- debut de la fenetre modal -->
+
+                                           <div class="modal fade" id="myModal_rdv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                           <div class="modal-dialog second_modal-dialog" role="document" >
+                                             <div class="modal-content" >
+                                               <div class="modal-header">
+                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                 <h4 class="modal-title" id="myModalLabel">Voir le détail de la facture </h4>
+                                               </div>
+                                               <div class="modal-body">
+                                                 <!-- debut -->
+
+
+                                                 <br><br>
+                                                 <button class="btn btn-primary  btn_valid"><i class="fa fa-print"></i> Imprimer </button>
+                                                 <!-- fin  -->
+                                               </div>
+                                             </div>
+                                           </div>
+                                           </div>
+
+                                         <!-- fin de la fenetre modal -->
+                                    </td>
+                                </tr>
+
+                                 <tr>
+                                     <td>......</td>
+                                     <td>Septembre</td>
+                                     <td>4258614</td>
+                                     <td>02.05.2018</td>
+                                     <td>30 000F</td>
+                                     <td>...........</td>
+                                     <td>payé</td>
+                                     <td>
+                                         <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv2"><i class="fa fa-eye"></i> Details</button>
+
+                                         <!-- debut de la fenetre modal -->
+
+                                           <div class="modal fade" id="myModal_rdv2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                           <div class="modal-dialog second_modal-dialog" role="document" >
+                                             <div class="modal-content" >
+                                               <div class="modal-header">
+                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                 <h4 class="modal-title" id="myModalLabel">Voir le détail de la facture.</h4>
+                                               </div>
+                                               <div class="modal-body">
+                                                 <!-- debut -->
+
+
+                                                 <br><br>
+                                                 <button class="btn btn-primary  btn_valid"><i class="fa fa-print"></i> Imprimer </button>
+                                                 <!-- fin  -->
+                                               </div>
+                                             </div>
+                                           </div>
+                                           </div>
+
+                                         <!-- fin de la fenetre modal -->
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                             <div class="row"></div>
+                             <input type="checkbox" id="abonnements"> &nbsp;&nbsp;<label for="abonnements" class="abonnements">Voir les  abonnements</label>
+                            <br>
+                            <table class="table table-bordered table-striped table-condensed table_abonnements" style="display:none !important;">
+                               <tr style="background-color: #26440d !important;color: #fff !important;">
+                                        <th>Reference abonnement</th>
+
+                                        <th>Formule</th>
+                                        <th>Durée</th>
+                                        <th>Début ab.</th>
+                                        <th>Fin ab.</th>
+                                        <th>Montant</th>
+                                        <th>Actions</th>
+                                      </tr>
+                                      <tr>
+                                        <td>......</td>
+
+                                        <td>Dikaki Pro 1</td>
+                                        <td>12 Mois</td>
+                                        <td>02.05.2018</td>
+                                        <td>02.05.2019</td>
+                                        <td>50 000F cfa</td>
+                                        <td>
+                                                <button class="btn btn-primary  btn_valid" data-toggle="modal" data-target="#myModal_abonnrment1"><i class="fa fa-eye"></i> Details</button>
+                                                <!-- debut de la fenetre modal -->
+
+                                                  <div class="modal fade" id="myModal_abonnrment1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                  <div class="modal-dialog second_modal-dialog" role="document" >
+                                                    <div class="modal-content" >
+                                                      <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel">Voir le détail de l'abonnement</h4>
+                                                      </div>
+                                                      <div class="modal-body">
+                                                        <!-- debut -->
+
+                                                        <br><br>
+                                                        <button class="btn btn-primary  btn_valid"><i class="fa fa-print"></i> Imprimer </button>
+                                                        <!-- fin  -->
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  </div>
+
+                                                <!-- fin de la fenetre modal -->
+                                                
+                                        </td>
+                                      </tr>
+                            </table>
+
+                             <div class="row"></div>
+                            <input type="checkbox" id="Services"> &nbsp;&nbsp;<label for="Services" class="Services">Services optionnels / ajout d'agenda</label>
+                             <div class="table_Services" style="display:none !important;">
+                                <form method="post" action="">
+                                       <table class="table table-bordered table-striped table-condensed">
+                                      <tr style="background-color: #26440d !important;color: #fff !important;">
+                                        <th>Agendas suplémentaires</th>
+                                        <th>Prix</th>
+                                      </tr>
+                                      <tr>
+                                        <td><input type="radio" name="pack" id="pack200" class="agenda_option"> Acheter 1 agenda professionnel
+                                        </td>
+                                        <td>10000F cfa</td>
+                                      </tr>
+                                      <tr>
+                                        <td><input type="radio" name="pack" id="pack200" class="agenda_option valid_achat_aganda"> Acheter 2 agendas professionnels
+                                        </td>
+                                        <td>20000F cfa</td>
+                                      </tr>
+                                      <tr>
+                                        <td><input type="radio" name="pack" id="pack200" class="agenda_option valid_achat_aganda"> Acheter 3 agendas professionnels
+                                        </td>
+                                        <td>30000F cfa</td>
+                                      </tr>
+                                      <tr>
+                                        <td><input type="radio" name="pack" id="pack200" class="agenda_option valid_achat_aganda"> Acheter 4 agendas professionnels
+                                        </td>
+                                        <td>40000F cfa</td>
+                                      </tr>
+                                      <tr>
+                                        <td><input type="radio" name="pack" id="pack200" class="agenda_option valid_achat_aganda"> Acheter 5 agendas professionnels
+                                        </td>
+                                        <td>50000F cfa</td>
+                                      </tr>
+
+                                    </table>
+
+                                      <button type="submit" class="btn btn-success btn_valid" id="valider_achat"><i class="fa fa-check-square-o"></i> Valider l'achat</button>
+
+                                    </form>
+
+                            </div>
+
+                            <!-- une autre ligne -->
+
+                                <p class="journne_du_" style="text-align:left !important;">SMS </p>
+                                <input type="checkbox" id="Achats"> &nbsp;&nbsp;<label for="Achats" class="Achats">Achat de sms</label>
+                             <div class="table_Achats" style="display:none !important;">
+                                <form method="post" action="">
+
+                                        <div class="col-xs-12 col-ms-12 col-md-6 col-lg-6">
+                                         <table class="table table-bordered table-striped table-condensed">
+                                           <tr style="background-color: #26440d !important;color: #fff !important;">
+                                              <th>Pack sms</th>
+                                              <th>Prix</th>
+                                            </tr>
+                                            <tr>
+                                              <td><input type="radio" name="pack" id="pack200" class="mon_pack_sms"> Pack - 200 Sms</td>
+                                              <td>5000</td>
+                                            </tr>
+                                            <tr>
+                                              <td><input type="radio" name="pack" id="pack300" class="mon_pack_sms"> Pack - 300 Sms </td>
+                                              <td>7000</td>
+                                            </tr>
+                                            <tr>
+                                              <td><input type="radio" name="pack" id="pack500" class="mon_pack_sms"> Pack de 500 Sms  </td>
+                                              <td>10000</td>
+                                            </tr>
+                                         </table>
+                                    </div>
+
+                                       <div class="col-xs-12 col-ms-12 col-md-6 col-lg-6">
+                                        <div class="container_paye" style="display:none !important;">
+                                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="payement_modal">
+                          <img src="{{asset('img/mobile-money.png')}}" class="img-responsive img_buy_operation">
+                          <input type="radio" name="payement" id="momo" class="my_pack_sms">
+
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                           <div class="payement_modal">
+                          <img src="{{asset('img/orange-money-New.png')}}" class="img-responsive img_buy_operation">
+                          <input type="radio" name="payement" id="om" class="my_pack_sms">
+
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                          <div class="payement_modal">
+                          <img src="{{asset('img/EU-Mobile-Logo.png')}}" class="img-responsive img_buy_operation">
+                          <input type="radio" name="payement" id="ue" class="my_pack_sms">
+
+                        </div>
+                      </div>
+                      <div class="row dimuni">
+                        <button class="btn btn-success pull-right class_validation btn_valid"> <i class="fa fa-check"></i> Valider l'achat </button>
+                      </div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </form>
+
+                                 <!-- inserer -->
+
+                                 <div class="">
+                                    <table class="table table-bordered table-striped table-condensed">
+                                       <tr style="background-color: #26440d !important;color: #fff !important;">
+                                          <th>Date</th>
+                                          <th>Professionnel</th>
+                                          <th>Code Produit </th>
+                                          <th>Montant</th>
+                                          <th>Unité</th>
+                                          <th>Reste </th>
+                                        </tr>
+                                        <tr>
+                                          <td>02.5.2018</td>
+                                          <td>M. Bekolo Jean Pierre</td>
+                                          <td>cd452dde5</td>
+                                          <td>10000</td>
+                                          <td>300</td>
+                                          <td>50</td>
+                                        </tr>
+                                        <tr>
+                                          <td>02.5.2018</td>
+                                          <td>M. Bekolo Jean Pierre</td>
+                                          <td>cd452dde5</td>
+                                          <td>10000</td>
+                                          <td>300</td>
+                                          <td>50</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                </div>
+
+
+                         <div class="row"></div>
+                            <p class="journne_du_" style="text-align:left !important;">Résiliation de l'abonnement </p>
+                    <form method="post" action="">
+                        <input type="checkbox" id="resilier"> &nbsp;&nbsp;<label for="resilier" class="resilier">Résilier mon abonnement Dikaki pro</label>
+                           <p style="display: none !important;" id="annulation"><br>
+            <button type="submit" class="btn btn-success  btn_valid" style="text-transform: none;font-size: 1em;font-weight: 400"><i class="fa fa-check-square-o"></i> Résilier mon compte</button>
+          </p>
+
+
+                        </div>
+
+                        <!-- une autre partie -->
+
+                    </form>
+                  </section>
+
+                <!-- fin -->
+
+                   </div>
+              </div>
+
+
+          </div>
+
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+                $(document).ready(function(){
+                    $("#access").on("click",function(){
+                        $(".table_access").toggle();
+                    });
+
+                     $("#factures").on("click",function(){
+                        $(".table_factures").toggle();
+                    });
+
+
+                    $("#abonnements").on("click",function(){
+                        $(".table_abonnements").toggle();
+                    });
+
+                    $("#Services").on("click",function(){
+                        $(".table_Services").toggle();
+                    });
+
+                    $("#Achats").on("click",function(){
+                        $(".table_Achats").toggle();
+                    });
+
+                    $(".mon_pack_sms").on("click",function(){
+                        $(".container_paye").show();
+                    });
+
+
+                    $("#resilier").on("click",function(){
+                        $("#annulation").toggle();
+                    });
+
+                    // nouveau mode de paiement
+
+                    $("#mtn").on('click',function(){
+
+              // pour Mtn
+           if($('input[name=mtn_paiement]').prop('checked'))
+           {
+               $("#by_mtn").show();
+               $("#hide_orange").hide();
+               $("#hide_ue").hide();
+               $("#hide_yup").hide();
+           }
+           else
+           {
+               $("#by_mtn").hide();
+               $("#hide_orange").show();
+               $("#hide_ue").show();
+               $("#hide_yup").show();
+           }
+          });
+
+
+
+           $("#orange").on('click',function(){
+                // pour Orange
+               if($('input[name=orange_paiement]').prop('checked'))
+               {
+                   $("#hide_mtn").hide();
+                   $("#by_orange").show();
+                   $("#hide_ue").hide();
+                   $("#hide_orange").show();
+                   $("#hide_yup").hide();
+               }
+               else
+               {
+                   $("#hide_mtn").show();
+                   $("#by_orange").hide();
+                   $("#hide_ue").show();
+                   $("#hide_yup").show();
+                   $("#hide_orange").show();
+               }
+
+
+          });
+
+
+           $("#ue").on('click',function(){
+           // pour Ue
+               if($('input[name=ue_paiement]').prop('checked'))
+               {
+                   $("#hide_mtn").hide();
+                   $("#hide_orange").hide();
+                   $("#by_ue").show();
+                   $("#hide_ue").show();
+                   $("#hide_yup").hide();
+               }
+               else
+               {
+                   $("#hide_mtn").show();
+                   $("#hide_orange").show();
+                   $("#by_ue").hide();
+                   $("#hide_ue").show();
+                   $("#hide_yup").show();
+               }
+          });
+
+          $("#yup").on('click',function(){
+          // pour yup
+              if($('input[name=yup_paiement]').prop('checked'))
+              {
+                  $("#hide_mtn").hide();
+                  $("#hide_ue").hide();
+                  $("#by_yup").show();
+                  $("#hide_orange").hide();
+                  $("#hide_yup").show();
+              }
+              else
+              {
+                  $("#hide_mtn").show();
+                  $("#hide_orange").show();
+                  $("#hide_ue").show();
+                  $("#hide_yup").show();
+                  $("#by_yup").hide();
+              }
+         });
+                });
+             </script>
+
+{% endblock %}
+
