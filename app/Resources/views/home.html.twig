@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en" xmlns:og="http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <title>Bienvenue chez Dikaki:: Prise de rendez-vous et dépôt de dossier en ligne </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="copyright" content="Dikaki.com Copyright ">
+        <link rel="icon" href="{{asset('img/favicon dikaki.png')}}">
+
+        <!-- debut du partage vers facebook -->
+
+        <meta property="og:url" content=""><!-- url complete de la page-->
+        <meta property="og:title" content=""><!-- le titre complete de la page-->
+        <meta property="og:description" content=""><!-- la description complete de la page-->
+        <meta property="og:image" content="{{asset('img/grande_banniere.png')}}"><!-- image representant la page de la page-->
+
+        <!-- fin du partage vers facebook -->
+
+
+        <!-- debut du partage vers twitter -->
+
+        <meta name="twitter:card" content="website">
+        <meta name="twitter:site" content="@dikaki">
+        <meta name="twitter:creator" content="@dikaki">
+        <meta property="og:url" content=""><!-- url complete de la page-->
+        <meta property="og:title" content=""><!-- le titre complete de la page-->
+        <meta property="og:description" content=""><!-- la description complete de la page-->
+        <meta property="og:image" content="{{asset('img/grande_banniere.png')}}"><!-- image representant la page de la page-->
+
+    {% block style %}{% endblock %}
+    {% stylesheets filter='cssrewrite'
+            'css/vendor/animate.min.css'
+            'css/vendor/bootstrap-social.css'
+            'css/vendor/bootstrap.min.css'
+            'css/vendor/buttons.css'
+            'css/style.css'
+            'css/vendor/slick-carousel_1.8.1_slick.min.css'
+            'css/vendor/testimonial-slider.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
+
+    <!-- fin de la section footer -->
+
+
+
+</head>
+<body>
+     <!-- take rdv avec Dikaki -->
+       <!-- <a href="{{ path('dkk_app_prendre') }}" class="bounce">
+          <i class="fa fa2 fa-envelope"></i>
+        </a>-->
+    <!-- fin take rdv avec Dikaki -->
+
+    <!-- site en version d'evaluation -->
+  <div class="wrapper_version_evaluation" id="wrapper_version_evaluation">
+    <p>
+      <span>Vous êtes sur un nouveau site Dikaki-rdv, site en évaluation pour la prise de rendez-vous et le paiement en ligne.</span>
+      <span>Nous attendons vos observations et suggestions afin de mieux répondre à vos attentes.</span>
+    </p>
+    <a href="" id="link_clise_times"><i class="fa fa-times"></i></a>
+  </div>
+  <!-- fin site eb version d'evaluation -->
+
+    <!-- Begin Header -->
+    <header>
+
+        <!-- Begin Top Bar -->
+        <div class="top-bar top-bar-dark">
+            <div class="container">
+                <div class="row">
+                    <!-- Address and Phone -->
+                    <div class="col-sm-7 hidden-xs">
+                        <span class="ion-android-system-home home-icon"></span>Plateforme de prise de rendez-vous et paiement en ligne en Afrique.
+                    </div>
+                    <!-- Social Buttons -->
+                    <div class="col-sm-5 text-right">
+                        <ul class="topbar-list list-inline">
+                            <li>
+                                <span class="numbre_serdi">
+                                    <span class="ion-ios7-telephone phone-icon"></span>  +237 655 010 808
+                                </span>
+                                <a class="btn btn-social-icon btn-rw btn-primary btn-xs">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a class="btn btn-social-icon btn-rw btn-primary btn-xs">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a class="btn btn-social-icon btn-rw btn-primary btn-xs">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--/row -->
+            </div><!--/container header -->
+        </div><!--/top bar -->
+        <!-- End Top Bar -->
+
+
+
+        <!-- Begin Navigation -->
+        <div class="navbar-wrapper">
+            <div class="navbar navbar-main" id="fixed-navbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 column-header">
+                            <div class="navbar-header">
+                                <!-- Brand -->
+                                <a href="{{ path('dkk_app_homepage') }}" class="navbar-brand">
+                                    <img src="{{asset('img/dikaki droit.png')}}" class="raleway-logo" alt="Dikaki">
+                                </a>
+                                <!-- Mobile Navigation -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div><!-- /navbar header -->
+
+                            <!-- Main Navigation - Explained in Documentation -->
+                            <nav class="navbar-collapse collapse navHeaderCollapse" role="navigation">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="dropdown dropdown-main">
+                                        <a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Solutions<span class="fa fa-angle-down dropdown-arrow"></span></a>
+                                        <ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
+                                            <li><a href="{{ path('dkk_app_rendez_vous') }}">Dikaki Rendez-vous</a></li>
+                                            <li><a href="{{ path('dkk_app_education') }}">Dikaki Secteur éducatif</a></li>
+                                            <li><a href="{{ path('dkk_app_dossier') }}">Dikaki Dépôt de dossier </a></li>
+                                            <li><a href="{{ path('dkk_app_billeterie') }}">Dikaki E-ticket</a></li>
+
+
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown dropdown-main">
+                                        <a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Professionnel<span class="fa fa-angle-down dropdown-arrow"></span></a>
+                                        <ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
+                                            <li><a href="{{ path('dkk_professionnel_inscription') }}">Créer un compte</a></li>
+                                            <li><a href="{{ path('dkk_professionnel_connexion') }}">J'ai un compte</a></li>
+
+
+                                        </ul>
+                                    </li>
+                                    {% if connect == 0 %}
+                                        <li class="dropdown dropdown-main">
+                                            <a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Particulier<span class="fa fa-angle-down dropdown-arrow"></span></a>
+                                            <ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
+                                                <li><a href="{{ path('dkk_utilisateur_inscription') }}">S'inscrire</a></li>
+                                                <li><a href="{{ path('dkk_utilisateur_connexion') }}">Se connecter</a></li>
+                                            </ul>
+                                        </li>
+                                    {% else %}
+                                        <li class="dropdown dropdown-main">
+                                            <a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Mon compte<span class="fa fa-angle-down dropdown-arrow"></span></a>
+                                            <ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
+                                                <li><a href="{{ path('dkk_utilisateur_authentification') }}">Mes rendez-vous</a></li>
+                                                <li><a href="{{ path('dkk_utilisateur_deconnexion') }}">Se déconnecter</a></li>
+                                            </ul>
+                                        </li>  
+                                    {% endif %}
+                                   <li class="dropdown dropdown-main">
+                            <a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Français<span class="fa fa-angle-down dropdown-arrow"></span></a>
+                            <ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
+                                <li><a href="">Anglais</a></li>
+                                <li><a href="">Espagnol</a></li>
+                                <li><a href="">Portugais</a></li>
+
+                            </ul>
+                          </li>
+
+
+                            </nav><!-- /nav -->
+                        </div>
+                    </div>
+                </div><!-- /container header -->
+            </div><!-- /navbar -->
+        </div><!-- /navbar wrapper -->
+        <!-- End Navigation -->
+
+    </header><!-- /header -->
+
+
+    {% block body %}
+
+    {% endblock %}
+
+    <!-- debut de la section footer-->
+    <footer>
+        <div class="container-fluid padding">
+            <div class="bg_footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <h3 class="title_footer">
+                                C'est quoi Dikaki
+                            </h3>
+                            <p class="para_cest_quoi">
+                                Dikaki est une plateforme de prise de rendez-vous, de simplifaction de procédures, de dépots de dossiers et                                                d'inscription par internet.
+                            </p>
+                            <p class="second_para_cest_quoi">
+                                <b>La prise de rendez-vous en ligne répond à un besoin accru de la population en Afrique, pour:</b>
+
+                            </p>
+
+                            <p class="ul_description">
+
+                            <div class="">
+                                <span class="detail_para">
+                                    <i class="fa fa-times"></i> Une consultation médicale chez un médecin.
+                                </span>
+                                <span class="detail_para">
+                                    <i class="fa fa-times"></i> Une inscription à un concours administratif.
+                                </span>
+                                <span class="detail_para">
+                                    <i class="fa fa-times"></i> être reçu par son conseiller à la banque, son assureur et son conseiller de prévoyance sociale.
+                                </span>
+                                <p></p>
+                                <span class="detail_para">
+                                    <i class="fa fa-times"></i> Un dépôt de dossier de Passeport, Carte Nationale d'Identité, demande de Visa.
+
+                                </span>
+                                <p></p>
+                                <span class="detail_para">
+                                    <i class="fa fa-times"></i> Une inscription dans  une Université ou dans une Grande Ecole.
+                                </span>
+                                <p></p>
+                                <span class="detail_para">
+                                    <i class="fa fa-times"></i> Prendre rendez-vous dans son institut de beauté ou  avec son garagiste.
+                                </span>
+                                <p></p>
+                                <span class="detail_para">
+                                    <i class="fa fa-times"></i> DIKAKI vous fait payer vos réservations en ligne. Disponible  &nbsp;&nbsp;24<sup>H</sup>/24 et 7<sup>J</sup>/7 .
+                                </span>
+                                <p></p>
+                            </div>
+                            <a href="" class="read_more">Lire la suite.</a>
+                            </p>
+                            <p>
+                                <a href="{{path('dkk_app_a_qui_s_adresse_dikaki')}}" class="btn_contact green block">A qui s'adresse Dikaki ?</a>
+                            </p>
+
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <h3 class="title_footer">
+                                Contactez-nous
+                            </h3>
+                            <p class="serdi_infio">
+                                SERDI INFORMATIQUE
+                            </p>
+                            <p class="contact_para">
+                                BP:11007, Yaoundé - Cameroun
+                            </p>
+                            <p class="contact_para">
+                                Route aéroport international de Yaoundé
+                                Nsimalen. PK 10 Odza.
+                            </p>
+                            <p class="contact_para">
+                                Horaire d'ouverture: Lun. - Ven.:
+                                9h - 18h.
+                            </p>
+                            <p class="contact_para">
+                                Service clients: +237 655 010 808
+                            </p>
+                            <p class="contact_para">
+                                Support technique: +237 676 862 919
+                            </p>
+                            <p class="contact_para">
+                                Email:  <a href="mailto:contact@dikaki-rdv.com" title="Nous contacter" style="color: #fff !important;font-weight: 700 !important;">contact@dikaki-rdv.com</a>
+                            </p>
+                            <p>
+                                <a href="{{ path('dkk_app_contact') }}" class="btn_contact green block">Contactez-nous</a>
+                            </p>
+
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <h3 class="title_footer">
+                                Assistance rapide
+                            </h3>
+                            <p class="para_assis">
+                                Nos conseillers vous assistent dès les premières heures d'utilisation
+                                en vous expliquant toutes les fonctionnalités de la solution agenda
+                                planning Dikaki et la prise de rendez-vous en ligne. Nos équipes
+                                restent disponibles et réagissent rapidement à votre sollicitation.
+                            </p>
+                            <p class="p_letter">
+                                <label for="letter">Newsletter</label>
+                            </p>
+                            <span class="val_email_"></span>
+                            <input type="text" name="newsletter" id="newsletter" class="letter_form form-control" placeholder="Votre adresse E-mail">
+                            <p><button id="submitEmail" class="send_newsletter green button_send">Envoyer</button></p>
+
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <h3 class="title_footer">
+                                Trouver un rendez-vous
+                            </h3>
+                            <p>
+                                <a href="{{ path('dkk_professionnel_choix') }}" class="event_rdv green">Professionnel</a>
+                            </p>
+                            <h3 class="title_footer">
+                                Trouver un évènement
+                            </h3>
+                            <p>
+                                <a href="{{ path('dkk_app_evenement') }}" class="event_rdv green">Evènement</a>
+                            </p>
+                            <h3 class="title_footer">
+                                Communauté
+                            </h3>
+                            <p>
+                                <a href="{{ path('dkk_app_partenaire') }}" class="btn_contact green block" style="text-align: center;width: 100% !important">Devenir partenaire</a>
+                            </p>
+
+                            <p>
+                                    <a href="{{path('dkk_app_blog')}}" class="btn_contact green block" style="text-align: center;width: 100% !important">Blog et Actualités</a>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="small_footer">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <p class="copy_right">&copy; 2018 Copyright - DIKAKI SERDI Cameroun  </p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <a href="{{ path('dkk_app_cgu') }}" class="cgu">Mentions légales</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- fin de la section footer -->
+    {% javascripts filter='jsqueeze'
+            'js/vendor/jquery.min.js'
+            'js/valider.js'
+            'js/vendor/bootstrap.min.js'
+            'js/slider.js'
+            'js/vendor/slick-carousel_1.8.1_slick.min.js'
+            'js/vendor/testimonial-slider.js'
+            'js/vendor/slideshow.js'
+            'js/form-control.js'
+            'js/lire.js'
+            'js/vendor/jquery.validate.min.js'
+            'js/news.js'  
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    {% block scripts %}
+
+    {% endblock %}
+
+
+</body>
+</html>
