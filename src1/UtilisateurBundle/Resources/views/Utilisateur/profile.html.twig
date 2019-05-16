@@ -1,0 +1,678 @@
+ {% extends 'default.html.twig' %}
+
+{% block title %} {{'Bienvenue Mr'|trans}} Ondoua :: {{"Prise de rendez-vous et dépôt de dossier en ligne"|trans}} {% endblock %}
+
+{% block style %}
+  
+<style>
+        .menu1 { 
+          border-bottom:solid 2px #669d7d ; 
+          padding-top:12px ; 
+          padding-bottom:7px
+        } 
+
+        .onglet { 
+            border:solid 1px #669d7d ; 
+            margin:5px 5px 0px 5px ; 
+            padding:7px 3px 7px 3px;
+            border-radius:5px 5px 0px 0px !important;
+          } 
+
+          a.onglet { 
+            background-color:#E7E4E4 ; 
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #669d7d;
+            color: #fff !important;
+          } 
+
+          .onglet-actif { 
+             border-left:solid 2px #669d7d ; 
+             border-right:solid 2px #669d7d ; 
+             border-top:solid 2px #669d7d ; 
+             border-bottom:none !important; 
+             margin:5px 5px 0px 5px ;
+             padding:7px 3px 7px 3px ; 
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+          } 
+
+          @media (max-width: 602px){
+            a.onglet,.onglet-actif{font-size: 0.9em !important}
+          }
+          th,td{
+            text-align: center !important;
+          }
+
+    </style>
+
+{% endblock %}
+
+   
+{% block body %}
+
+  <!--debut des information pour le profie -->
+    <div class="container emp-profile">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="{{asset('img/photo_medecin.jpg')}}" alt=""/>
+
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="profile-head">
+                                    <h5>
+                                        Ondoua Paul
+                                    </h5>
+                                    <h6>
+                                       Ondoua@gmail.com
+                                    </h6>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{ path('dkk_utilisateur_modifier') }}" class="btn-two green block btn_phone"><i class="fa fa-pencil-square-o"></i> {{'Modifier mon profil'|trans}}</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <p>{{'MES INFORMATIONS'|trans}}</p>
+                            <a href="javascript:void(0);"><i class="fa fa-user"></i> Ondoua Paul</a><br/>
+                            <a href="javascript:void(0);"><i class="fa fa-internet-explorer"></i> Ondoua@gmail.com</a><br/>
+                            <a href="javascript:void(0);"><i class="fa fa-phone"></i> +237 234 543 567</a><br/>
+                            <a href="javascript:void(0);"><i class="fa fa-male fa-fw"></i> {{'Masculin'|trans}}</a><br/>
+                            <a href="modifier.html"><i class="fa fa-cog fa-fw"></i> {{'Modifier mes informations'|trans}}</a><br/>
+                            <a href="{{ path('dkk_utilisateur_deconnexion') }}"><i class="fa fa-sign-out "></i> {{'Me déconnecter'|trans}}</a>
+
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <!-- debut du menu a onglet -->
+                        <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                            <span class="onglet-actif"> &nbsp;{{'Mes rendez-vous'|trans}} &nbsp;</span> <!-- onglet ACTIF -->
+                            <a class="onglet" href="{{ path('dkk_utilisateur_historique') }}"> &nbsp;{{'Historique'|trans}} &nbsp;</a> <!-- onglet inactif -->
+                        </div>
+
+                        <div class="table_wrapper">
+                               <table class="table table-bordered table-striped table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th>{{'Date'|trans}}</th>
+                                      <th>{{'Heure'|trans}}</th>
+                                      <th>{{'Type de rendez-vous'|trans}}</th>
+                                      <th>{{'Action'|trans}}</th>
+                                    </tr>
+
+                                    <tr>
+                                      <td>13/7/2018</td>
+                                      <td>16 h:00</td>
+                                      <td>{{'Pour une consultation dentaire'|trans}}</td>
+                                      <td>
+                                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" title="Périodicité hebdomadaire"> <i class="fa fa-pencil-square-o"></i>
+                                         {{'Modifier'|trans}}
+                                        </button>
+
+                                                            <!-- debut de la pop up pour modifier la périodicité hebdomadaire -->
+
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title modification_title" id="myModalLabel">{{'Modifier mon rendez-vous du Mardi 15 Janvier 2019 à 11h 00'|trans}}</h5>
+                                          </div>
+                                          <div class="modal-body2 second_modal_body">
+                                              <form method="post" action="">
+
+                                                <div class="form-group">
+
+                                                              <!-- debut du tableau -->
+                                        <!-- debut du nouveau calendrier -->
+                                        <div class="full_calandar">
+
+                                            <div class="calNav">
+                                              <p class="choice_new">{{'Choix nouvelle date & heure'|trans}}</p>
+                              <div class="navButtons">
+
+                                  <button class="prevDays  my_btn_default" alt="Précédents" role="button">
+                                      <span class="fa fa-arrow-left"></span>
+                                      <span class="text">{{'Préc'|trans}}</span>
+                                  </button>
+                                  <button class="chooseDate my_btn_default" alt="Choisir une date" role="button">
+                                      <i class="fa fa-calendar"></i> <span class="calander_i"></span>
+                                      <span class="text" role="presentation"> {{'A partir du'|trans}} </span>
+                                  </button>
+                                  <button class="nextDays my_btn_default" alt="Suivants">
+                                      <span class="text" role="presentation">{{'Suiv'|trans}}</span>
+                                      <span class="fa fa-arrow-right" role="presentation"></span>
+                                  </button>
+                              </div>
+                              <div id="minicalContainer_modif" style="display: none;">
+                                  <!-- insertion du calandrier ici -->
+                              </div>
+
+
+
+                          </div>
+
+                          <table class="calTable" role="grid">
+            <thead>
+                <tr>
+
+                    <th class="odd">
+                        <span class="week-day">{{'Lundi'|trans}}</span>
+                        <br><span class="date">13 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                    <th class="even">
+                        <span class="week-day">{{'Mardi'|trans}}</span>
+                        <br><span class="date">14 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                    <th class="odd">
+                        <span class="week-day">{{'Mercredi'|trans}}</span>
+                        <br><span class="date">15 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                    <th class="even">
+                        <span class="week-day">{{'Jeudi'|trans}}</span>
+                        <br><span class="date">16 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                    <th class="odd">
+                        <span class="week-day">{{'Vendredi'|trans}}</span>
+                        <br><span class="date">17 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                    <th class="weekend weekend-sat even">
+                        <span class="week-day">{{'Samedi'|trans}}</span>
+                        <br><span class="date">18 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                    <th class="weekend weekend-sun odd">
+                        <span class="week-day">{{'Dimanche'|trans}}</span>
+                        <br><span class="date">19 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+
+                    <td class="odd">
+
+                        <span class="hide" id="date_0"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h00">16h00
+
+         </a>
+
+                        <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips">17h30
+
+         </a>
+
+                    </td>
+
+                    <td class="even">
+                          <span class="hide" id="date_0"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h00">16h00
+
+         </a>
+
+                        <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips">17h30
+
+         </a>
+                    </td>
+
+                    <td class="odd">
+
+                          <span class="hide" id="date_0"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h00">16h00
+
+         </a>
+
+                        <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips">17h30
+
+         </a>
+                    </td>
+
+                    <td class="even">
+
+                          <span class="hide" id="date_0"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h00">16h00
+
+         </a>
+
+                        <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 Août 2018</span>
+                        <a href="" class="tooltips">17h30
+
+         </a>
+                    </td>
+
+                    <td class="odd">
+
+                        <span class="hide" id="date_2"> {{'Vendredi'|trans}} 17 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips">11h15
+
+         </a>
+
+                    </td>
+
+                    <td class="weekend weekend-sat even">
+
+                        <span class="hide" id="date_3"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips">15h30
+
+         </a>
+
+                        <span class="hide" id="date_4"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" role="gridcell">16h00
+
+         </a>
+
+                        <span class="hide" id="date_5"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h15" role="gridcell">16h30
+
+         </a>
+
+                        <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">17h00
+
+         </a>
+
+         <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">17h30
+
+         </a>
+
+          <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">18h00
+
+         </a>
+          <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">18h30
+
+         </a>
+          <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">19h00
+
+         </a>
+          <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">19h30
+
+         </a>
+          <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">20h00
+
+         </a>
+
+
+
+
+
+
+
+                    </td>
+
+                    <td class="weekend weekend-sun odd">
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+                                        <!-- fin du nouveau calandrier-->
+
+
+
+                                    </div>
+                                  </div>
+                                      <!-- fin du tablea -->
+                                                </div>
+                                              </form>
+
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                    <!-- fin de la pop up pour modifier la périodicité hebdomadaire -->
+
+                <a href="" class="btn btn-danger btn-xs"  onclick="return confirm('Voulez-vous vraiment annuler votre rendez-vous')" title="Annuler le rendez-vous."><i class="fa fa-trash"></i> {{'Annuler'|trans}}</a>
+                                      </td>
+                                    </tr>
+
+
+                                    <!-- debut d'une seconde ligne -->
+
+                                                    <tr>
+                                      <td>18/7/2018</td>
+                                      <td>08 h:30</td>
+                                      <td>{{'Pour un massage des pieds'|trans}}</td>
+                                      <td>
+                                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal2" title="Périodicité hebdomadaire"> <i class="fa fa-pencil-square-o"></i>
+                                         {{'Modifier'|trans}}
+                                        </button>
+
+                                                            <!-- debut de la pop up pour modifier la périodicité hebdomadaire -->
+
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title modification_title" id="myModalLabel">{{"Modifier mon rendez-vous du Vendredi 18 Janvier 2019 à 08h 30"|trans}}</h5>
+                                          </div>
+                                          <div class="modal-body2 second_modal_body">
+                                              <form method="post" action="">
+
+                                                <div class="form-group">
+
+                                                              <!-- debut du tableau -->
+                                        <!-- debut du nouveau calendrier -->
+                                        <div class="full_calandar">
+
+                                            <div class="calNav">
+                                              <p class="choice_new">{{'Choix nouvelle date & heure'|trans}}</p>
+                              <div class="navButtons">
+
+                                  <button class="prevDays  my_btn_default" alt="Précédents" role="button">
+                                      <span class="fa fa-arrow-left"></span>
+                                      <span class="text">{{'Préc'|trans}}</span>
+                                  </button>
+                                  <button class="chooseDate my_btn_default" alt="Choisir une date" role="button">
+                                      <i class="fa fa-calendar"></i> <span class="calander_i"></span>
+                                      <span class="text" role="presentation"> {{'A partir du'|trans}} </span>
+                                  </button>
+                                  <button class="nextDays my_btn_default" alt="Suivants">
+                                      <span class="text" role="presentation">{{'Suiv'|trans}}</span>
+                                      <span class="fa fa-arrow-right" role="presentation"></span>
+                                  </button>
+                              </div>
+                              <div id="minicalContainer_modif" style="display: none;">
+                                  <!-- insertion du calandrier ici -->
+                              </div>
+
+
+
+                          </div>
+
+                          <table class="calTable" role="grid">
+            <thead>
+                <tr>
+
+                    <th class="odd">
+                        <span class="week-day">{{'Lundi'|trans}}</span>
+                        <br><span class="date">13 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                    <th class="even">
+                        <span class="week-day">{{'Mardi'|trans}}</span>
+                        <br><span class="date">14 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                    <th class="odd">
+                        <span class="week-day">{{'Mercredi'|trans}}</span>
+                        <br><span class="date">15 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                    <th class="even">
+                        <span class="week-day">{{'Jeudi'|trans}}</span>
+                        <br><span class="date">16 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                    <th class="odd">
+                        <span class="week-day">{{'Vendredi'|trans}}</span>
+                        <br><span class="date">17 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                    <th class="weekend weekend-sat even">
+                        <span class="week-day">{{'Samedi'|trans}}</span>
+                        <br><span class="date">18 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                    <th class="weekend weekend-sun odd">
+                        <span class="week-day">{{'Dimanche'|trans}}</span>
+                        <br><span class="date">19 {{'Août'|trans}} 2018</span>
+
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+
+                    <td class="odd">
+
+                        <span class="hide" id="date_0"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h00">16h00
+
+         </a>
+
+                        <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips">17h30
+
+         </a>
+
+                    </td>
+
+                    <td class="even">
+                          <span class="hide" id="date_0"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h00">16h00
+
+         </a>
+
+                        <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips">17h30
+
+         </a>
+                    </td>
+
+                    <td class="odd">
+
+                          <span class="hide" id="date_0"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h00">16h00
+
+         </a>
+
+                        <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips">17h30
+
+         </a>
+                    </td>
+
+                    <td class="even">
+
+                          <span class="hide" id="date_0"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h00">16h00
+
+         </a>
+
+                        <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips">17h30
+
+         </a>
+                    </td>
+
+                    <td class="odd">
+
+                        <span class="hide" id="date_2"> {{'Vendredi'|trans}} 17 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips">11h15
+
+         </a>
+
+                    </td>
+
+                    <td class="weekend weekend-sat even">
+
+                        <span class="hide" id="date_3"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips">15h30
+
+         </a>
+
+                        <span class="hide" id="date_4"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" role="gridcell">16h00
+
+         </a>
+
+                        <span class="hide" id="date_5"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h15" role="gridcell">16h30
+
+         </a>
+
+                        <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">17h00
+
+         </a>
+
+         <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">17h30
+
+         </a>
+
+          <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">18h00
+
+         </a>
+          <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">18h30
+
+         </a>
+          <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">19h00
+
+         </a>
+          <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">19h30
+
+         </a>
+          <span class="hide" id="date_6"> {{'Samedi'|trans}} 18 {{'Août'|trans}} 2018</span>
+                        <a href="" class="tooltips" alt="16h30" role="gridcell">20h00
+
+         </a>
+
+
+
+
+
+
+
+                    </td>
+
+                    <td class="weekend weekend-sun odd">
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+                                        <!-- fin du nouveau calandrier-->
+
+
+
+                                    </div>
+                                  </div>
+                                      <!-- fin du tablea -->
+                                                </div>
+                                              </form>
+
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                    <!-- fin de la pop up pour modifier la périodicité hebdomadaire -->
+
+                <a href="" class="btn btn-danger btn-xs"  onclick="return confirm('Voulez-vous vraiment annuler votre rendez-vous')" title="Annuler le rendez-vous."><i class="fa fa-trash"></i> {{'Annuler'|trans}}</a>
+                                      </td>
+                                    </tr>
+                                    <!-- fin de cette decone ligne -->
+
+                                  </thead>
+                               </table>
+
+                               <p>
+         <button class="btn btn-success btn-sm" title="Prendre un nouveau rendez-vous" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-plus"></i> {{'Nouveau RDV'|trans}}</button>
+    </p>
+
+    <!-- debut de la fenetre modal -->
+
+      <div class="modal fade" id="myModal_rdv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog second_modal-dialog" role="document" >
+        <div class="modal-content" >
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">{{'Prendre un nouveau rendez-vous'|trans}}</h4>
+          </div>
+          <div class="modal-body">
+            <!-- debut -->
+
+              <form method="post" action="../search.html">
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                  <select class="form-control" data-hide-disabled="true" data-live-search="true" style="width:100% !important">
+
+                    <option selected disabled> {{'Professionel'|trans}} </option>
+
+                  <optgroup label="Médécin">
+                    <option>{{'Dentiste'|trans}}</option>
+                    <option>{{'Chirurgien'|trans}}</option>
+                  </optgroup>
+                  <optgroup label="Bien être">
+                    <option>{{'Masseuses'|trans}}</option>
+                    <option>{{'Coiffure'|trans}}</option>
+                  </optgroup>
+                </select>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                  <select  class="form-control" data-hide-disabled="true" data-live-search="true" style="width:100% !important">
+
+                    <option selected isabled > {{'Ville'|trans}} </option>
+                    <option>{{'Yaoundé'|trans}}</option>
+                    <option>{{'Douala'|trans}}</option>
+
+                </select>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                  <button type="submit" class="btn btn-social-icon btn-rw btn-success " style="width:100% !important;font-weight:700 !important;font-size:0.8em;"><i class="fa fa-search"></i></button>
+                </div>
+
+            </form>
+            <br><br>
+
+            <!-- fin  -->
+          </div>
+        </div>
+      </div>
+      </div>
+
+    <!-- fin de la fenetre modal -->
+                        </div>
+
+                        <!-- fin du menu a onglet -->
+                    </div>
+                </div>
+
+        </div>
+    <!-- fin des infromations pour le profile -->
+    <!-- fin du container pour les services -->
+
+{% endblock %}

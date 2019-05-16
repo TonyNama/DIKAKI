@@ -1,0 +1,153 @@
+{% extends '::client.html.twig' %} 
+
+{% block title %}Clinique du docteur Ebogo paiement du rendez-vous  :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block body %}
+<!-- debut du code -->
+<div class="container" id="container_2">
+        <div class="margin_center">
+            <div>
+                <div class="donw_title"></div>
+                <div class="css-ezupjj">
+                    <div class="css-ej55tb">
+                        <h1 class="h2_titre2"><span>Clinique du Docteur Ebogo </span><span></span></h1>
+                        <h2 class="h3_location3"><i class="fa fa-map-marker" aria-hidden="true"></i> Yaoundé Essos</h2>
+                    </div>
+                    <hr class="hr_reservation">
+                </div>
+
+                <div>
+                    <div class="css-i6wjbx">
+                        <div>
+                            <div class="p_down"></div>
+                            <div class="div_prestation">1. Prestation sélectionnée</div>
+                            <div class="wrapper">
+                                <div class="css-1tt30tv ">
+                                <div class="down_wrapper">
+                                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                        <div class="consultation_texte pull-left">Consultation pour des soins dentaires &nbsp;&nbsp; 30min &nbsp;&nbsp; 10.000 Fcfa</div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                         <div class="prestation_back pull-right">
+                                              <a href="medecin.html#ancre" class="go_back2"><i class="fa fa-times"></i></a>
+                                         </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            </div>
+
+                             <div class="p_down"></div>
+
+                            <div class="div_prestation">2. Date et heure sélectionnées</div>
+
+                            <div class="wrapper">
+                                <div class="css-1tt30tv ">
+                                <div class="down_wrapper">
+                                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                        <div class="consultation_texte pull-left">Samedi 5 Janvier 2019 à 10h 30</div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                         <div class="prestation_back pull-right">
+                                              <a href="{{ path('dkk_app_reservation') }}#retake" class="go_back2"><i class="fa fa-pencil"></i></a>
+                                         </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            </div>
+                             <div class="p_down"></div>
+                             <div class="div_prestation">3. Identification</div>
+                             <div class="wrapper">
+                                 <div class="wrapper_color_identification">
+                                    <div class="">
+                                        <div class="margin_infor_person" style="margin-top:0px;width:100% !important;">
+                                           <span class="identification_first_name" style="margin-left:15px;">Mr Ebolo Ebolo Guillaume stéphane </span>
+
+                                        </div>
+
+
+                                 <!-- seconde table -->
+
+                                     </div>
+                                 </div>
+                             </div>
+
+                            <div class="p_down"></div>
+                             <div class="div_prestation">4. Paiement</div>
+                             <div class="wrapper">
+
+                                 <div class="wrapper_color_paiement" >
+                                    <div class="">
+                                      <div class="margin_infor_person" style="width:100% !important;">
+                                        <span class="identification_first_name" style="text-align:center;display:block;">Choix de l'opérateur </span>
+                                          <div class="p_down"></div>
+                                          <form method="post" action="{{ path('dkk_app_validation')}}">
+                                              <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                                   <div class="cc-selector-2" id="hide_mtn">
+                                                        <input  id="mtn" type="checkbox" name="mtn_paiement" value="Mtn Mobile Money" />
+                                                  <label class="drinkcard-cc mtn" for="mtn"></label>
+                                                  </div>
+
+                                                  <button type="submit" class="paiement_btn" id="by_mtn" style="display:none !important;"><i class="fa fa-money"></i> &nbsp;&nbsp;Payer </button>
+                                              </div>
+                                              <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                                   <div class="cc-selector-2" id="hide_orange">
+                                                        <input id="orange" type="checkbox" name="orange_paiement" value="Orange Mobile Money" />
+                                                  <label class="drinkcard-cc orange"for="orange"></label>
+                                                    </div>
+
+                                                  <button type="submit" class="paiement_btn" id="by_orange" style="display:none !important;"><i class="fa fa-money"></i> &nbsp;&nbsp;Payer </button>
+                                              </div>
+                                              <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                                   <div class="cc-selector-2" id="hide_ue">
+                                                        <input id="ue" type="checkbox" name="ue_paiement" value="Eu Mobile Money" />
+                                                  <label class="drinkcard-cc ue" for="ue"></label>
+                                                    </div>
+
+                                                  <button type="submit" class="paiement_btn" id="by_ue" style="display:none !important;"><i class="fa fa-money"></i> &nbsp;&nbsp;Payer</button>
+                                              </div>
+                                              <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                                   <div class="cc-selector-2" id="hide_yup">
+                                                        <input id="yup" type="checkbox" name="yup_paiement" value="Yup Mobile Money" />
+                                                  <label class="drinkcard-cc yup" for="yup"></label>
+                                                    </div>
+
+                                                  <button type="submit" class="paiement_btn" id="by_yup" style="display:none !important;"><i class="fa fa-money"></i> &nbsp;&nbsp;Payer</button>
+                                              </div>
+                                          </form>
+                                      </div>
+                                   <div id="paiement"></div>
+
+                                 <!-- seconde table -->
+
+                                     </div>
+                                 </div>
+                             </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin du code -->
+
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+{% endblock %}

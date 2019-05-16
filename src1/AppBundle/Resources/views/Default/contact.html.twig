@@ -1,0 +1,193 @@
+{% extends 'default.html.twig' %}
+
+{% block title %} {{"nous contacter"|trans }} :: {{"Prise de rendez-vous et dépôt de dossier en ligne"|trans }} {% endblock %}
+
+{% block style %}
+     <style>
+    .sky-form{
+      box-shadow: none !important;
+    }
+    body{
+      background: url("{{asset('img/b5.jpg')}}") no-repeat center center;
+      background-size: cover !important;
+      background-attachment: fixed !important;
+    }
+      #nous_contacter{
+        margin-top:25px !important;
+        margin-bottom: 25px !important;
+        z-index:999 !important;
+        color:#fff;
+        text-align:center !important;
+        font-weight: 600 !important;
+        font-size: 2em !important;
+      }
+    </style>
+{% endblock %}
+
+   
+{% block body %}
+   
+ <div class="">
+
+            <div class="container">
+              <p id="nous_contacter">{{ "Nous contacter"|trans }} </p>
+                 <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+
+                <div class="form-wrapper">
+                <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+
+                  <div class="panel panel-skin" style=" !important;">
+                    <div class="panel-body">
+                     <p class="equipe_">{{ "Notre équipe vous conseille..."|trans }}</p>
+
+                    <p class="techn">{{ "Nos techniciens et commerciaux sont à votre disposition pour vous écouter, vous servir et prendre un engagement pour la mise en place de votre solution."|trans }}</p>
+
+                    <div class="wrapper_mapp">
+
+                         <p class="serdi_website"><i class="fa fa-home" aria-hidden="true"></i>
+ {{ "Serdi Cameroun"|trans }}</p>
+                        <p class="pk">{{ "Pk 10, route Aéroport International de Yaoundé Nsimalen."|trans }}</p>
+                    <p class="bp_"><i class="fa fa-envelope-square" aria-hidden="true"></i>
+ {{ "BP: 11007 Yaoundé"|trans }}</p>
+                    <p class="tel"><i class="fa fa-phone-square" aria-hidden="true"></i>
+{{ "Tél: +237 243 001 661"|trans }}</p>
+                    <p class="mail_to"><i class="fa fa-share" aria-hidden="true"></i>
+</i>
+{{ "Mail:"|trans }} <a href="mailto:info@sedri-cm.com" title="Nous contacter par email">info@serdi-cm.com</a></p>
+                    <p class="site_web"><i class="fa fa-google" aria-hidden="true"></i>
+</i>
+{{ "Site:"|trans }} <a href="https://www.serdi-cm.com" target="_blank">www.serdi-cm.com</a></p>
+                    </div>
+                        <hr class="second_ligne">
+                        <p class="texte__">{{ "Avec Dikaki tout devient simple et facile..."|trans }}</p>
+                        <p class="texte__2">{{ "prenez votre rendez-vous en 3 clics !!!"|trans }}</p>
+                        <p style="margin-top: 25px !important"></p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+                 </div>
+                 <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+
+                  <div class="form-wrapper" style="padding: 15px;">
+                           <div class="sky-form" id="signupForm" style="border:none !important;">
+         <p class="equipe_2">{{ "Remplissez le formulaire."|trans }}</p>
+          <br>
+          <div class="row">
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-user"></i>
+                <input type="text" placeholder="Votre nom" name="nom" id="nom">
+
+              </label>
+            </section>
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-user"></i>
+                <input type="text" placeholder="Votre prenom" name="prenom" id="prenom">
+              </label>
+
+            </section>
+          </div>
+                    <div class="row">
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-phone"></i>
+                <input type="text" placeholder="Téléphone portable" name="tel" maxlength="9" id="tel">
+              </label>
+
+            </section>
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-envelope-alt"></i>
+                <input type="email" placeholder=" E-mail" name="email" id="email">
+
+              </label>
+            </section>
+          </div>
+
+          <section>
+              <label class="select">
+                <select name="secteur" id="secteur">
+                  <option value=""> {{ "Secteur d'activité"|trans }}</option>
+                  <option value="Santé">{{ "Santé"|trans }}</option>
+                  <option value="Bien être et beauté">{{ "Bien être et beauté"|trans }}</option>
+                  <option value="Restauration">{{ "Restauration"|trans }}</option>
+                  <option value="Avocat-Notaire">{{ "Avocat-Notaire"|trans }}</option>
+                  <option value="Expert-Immobilier">{{ "Expert-Immobilier"|trans }}</option>
+                  <option value="Institutions publiques">{{ "Institutions publiques"|trans }}</option>
+                  <option value="collectivités territoriales décentralisées">{{ "collectivités territoriales décentralisées"|trans }}</option>
+                  <option value="Automobile">{{ "Automobile"|trans }}</option>
+                  <option value="Evénementiel">{{ "Evénementiel"|trans }}</option>
+                  <option value="Administration">{{ "Administration"|trans }}</option>
+                  <option value="profession libérale">{{ "profession libérale"|trans }}</option>
+                  <option value="Banque">{{ "Banque"|trans }}</option>
+                  <option value="Assurances">{{ "Assurances"|trans }}</option>
+                  <option value="Sécurité sociale">{{ "Sécurité sociale"|trans }}</option>
+                  <option value="Education">{{ "Education"|trans }}</option>
+                  <option value="Universités et grandes écoles">{{ "Universités et grandes écoles"|trans }}</option>
+                  <option value="Transport">{{ "Transport"|trans }}</option>
+                  <option value="Representation Diplomatique">{{ "Représentation Diplomatique"|trans }}</option>
+                  <option value="Organisme International">{{ "Organisme International"|trans }}</option>
+                  <option value="Consulat">{{ "Consulat"|trans }}</option>
+                  <option value="Sport et Loisirs">{{ "Sports et Loisirs"|trans }}</option>
+                  <option value="Art et culture">{{ "Art et culture"|trans }}</option>
+                </select>
+                <i></i>
+              </label>
+            </section>
+            <span class="val_select"></span>
+
+           <section>
+            <label class="textarea">
+              <i class="icon-append icon-comment"></i>
+              <textarea rows="3" placeholder=" Entrer vortre message ici" name="message" id="message"></textarea>
+            </label>
+            <span class="val_commentaire"></span>
+          </section>
+
+        <footer>
+          <button id="cont_submit" class="btn-two green small pull-right btn-xs"><i class="fa fa-paper-plane"></i> {{ "Envoyer"|trans }}</button>
+        </footer>
+                  </div>
+
+                  </div>
+
+                 </div>
+            </div>
+        </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        var nom, prenom, tel, email, secteur, message;
+        $(document).ready(function () {
+            $("#cont_submit").on('click', function () {
+                nom = $('#nom').val();
+                prenom = $('#prenom').val();
+                tel = $('#tel').val();
+                email = $('#email').val();
+                secteur = $('#secteur').val();
+                message = $('#message').val();
+                $('#nom').val("");
+                $('#prenom').val("");
+                $('#tel').val("");
+                $('#email').val("");
+                $('#message').val("");
+                $.ajax({
+                    url: "{{ path('dkk_app_contacter') }}",
+                    type:"POST",
+                    data:{nom:nom, prenom:prenom, tel:tel, email:email, secteur:secteur, message:message},
+                    success: function(msg){
+                        alert(msg);
+                    },
+                    error: function(xhr){
+                        alert("erreur ajax" + xhr);
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

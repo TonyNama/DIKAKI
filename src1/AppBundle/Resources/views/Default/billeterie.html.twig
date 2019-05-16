@@ -1,0 +1,265 @@
+{% extends '::Solution.html.twig' %}
+
+{% block title %} {{ "Billetterie"|trans }} :: Dikaki{% endblock %}
+
+{% block body %}
+  <!-- debut du slideshow -->
+                    <section id="slider" class="">
+                        <ul class="slider-wrapper">
+                        <li class="current-slide">
+                            <img src="{{ asset('img/banner20.jpg')}}" title="" alt="">
+
+                            <div class="caption">
+                                <h2 class="slider-title animated bounceInRight" style="animation-delay: 1s">
+                                   {{ "La solution de réservation et de billetterie en ligne pour les organisateurs d'évènements et les opérateurs de transports."|trans }} </h2>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="{{ asset('img/b3.jpg')}}" title="" alt="">
+
+                            <div class="caption">
+                                <h2 class="slider-title slideInDown" style="animation-delay: 2s">{{ "Notre annuaire est à portée de main pour votre recherche."|trans }}</h2>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="{{ asset('img/b5.jpg')}}" title="" alt="">
+
+                            <div class="caption">
+                                <h2 class="slider-title animated zoomIn" style="animation-delay: 2s">{{ "Recevez vos paiements en ligne,  en toute sécurité."|trans }}</h2>
+
+                                <h2 class="slider-title animated zoomIn" style="animation-delay: 2s">{{ "\"C'est la solution\"."|trans }}</h2>
+
+
+
+                            </div>
+                        </li>
+                        </ul>
+                        <!-- Sombras -->
+                        <div class="slider-shadow"></div>
+
+                        <!-- Controles de Navegacion -->
+
+                    </section>
+                <!-- fin du slideshow -->
+            <div class="container-fluid slogna_header">
+                <div class="container">
+                    <div class="row">
+                        <p>
+                           {{ "La solution de réservation et billetterie en ligne E-Ticket est dédiée aux organisateurs d'évènements - sports et loisirs, art et culture et aux professionnels de transports par autocars et trains."|trans }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid parralax_effect">
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="wrapper_rdv">
+                                <p>{{ "Billetterie."|trans }}</p>
+                                <img src="{{ asset('img/t10.png')}}" class="img-responsive img_banner_rdv">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="margin_wrapper_solu_sec">
+                                <p>
+                                  {{ "Découvrez la réservation et billetterie E-Ticket pour la gestion de vos évènements sportifs, culturels et pour vos tickets de transport terrestre et ferroviaire."|trans }}
+                                   {{ "Tout est payé en ligne !!! C'est simple et rapide."|trans }}
+                                </p>
+
+                                <div class="ask">
+                                    <a href="{{path('dkk_app_demonstration')}}" class="btn-two green block" >{{ "Demander une démo."|trans }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+            <div class="container-fluid wrapper_description">
+                <div class="container">
+                    <div class="row">
+                        <p class="avantage_fonctionnalite">
+                           {{ "Avantages et Fonctionnalités."|trans }}
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100% !important; overflow: hidden; border-radius: 1px;">
+                    <img src="{{ asset('img/2.png')}}" alt="Man with backpack"
+                        class="d-block w-full">
+
+                      <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                          Dikaki
+                        </p>
+
+                        <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                        {{ "Prise de commande et achat en ligne 24h/24 et 7j/7."|trans }}
+                        </h1>
+
+                        <p class="mb-1">
+                         {{ "L'usager peut réserver, acheter ou passer sa commande en ligne à tout moment même en déhors des heures d'ouverture et même les week-ends. C'est le moyen le plus simple d'augmenter la satisfaction de vos clients."|trans }}
+                        </p>
+
+                      </div>
+
+                  <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                  </a>
+                </div>
+
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+
+
+                        <h1 class="dikaki_prise">
+                            {{ "Billetterie en ligne."|trans }}
+                        </h1>
+
+
+
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+
+                                <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="{{ asset('img/1.png')}}" alt="Man with backpack"
+                            class="d-block w-full">
+
+                          <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                              Dikaki
+                            </p>
+
+                            <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                {{ "Agenda d'activité, fiche de participation."|trans }}
+                            </h1>
+
+                            <p class="mb-1">
+                               {{ "Votre agenda est spécialisé à votre métier, un listing pour toutes les inscriptions et rendez-vous, la possibilité de marquage de présent et non présent,l'impression des billets sécurisés avec code barre."|trans }}
+                            </p>
+
+                          </div>
+
+                      <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                      </a>
+                    </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- seconde ligne des fonctionnalité-->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                              <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="{{ asset('img/b.png')}}" alt="Man with backpack"
+                            class="d-block w-full">
+
+                          <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                              Dikaki
+                            </p>
+
+                            <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                {{ "Paiement en ligne."|trans }}
+                            </h1>
+
+                            <p class="mb-1">
+                               {{ "Acceptez les paiements en ligne pour les commandes, achats ou réservations de billets sur la plateforme Dikaki, ce qui sécurise et facilite vos encaissements. Prenez un acompte ou la totalité du montant à la prise de commande."|trans }}
+                            </p>
+
+                          </div>
+
+                      <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                      </a>
+                    </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                              <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="{{ asset('img/e.png')}}" alt="Man with backpack"
+                            class="d-block w-full">
+
+                          <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                              Dikaki
+                            </p>
+
+                            <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                               {{ "Confirmation et rappel informatif par Mail ou SMS."|trans }}
+                            </h1>
+
+                            <p class="mb-1">
+                               {{ "Améliorez la relation clients en envoyant de façon automatique la confirmation de leur commande, le rappel des évènements par mail et sms; créez un lien régulier avec vos clients et renforcez leur satisfaction."|trans }}
+                            </p>
+
+                          </div>
+
+                      <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                      </a>
+                    </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                              <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="{{ asset('img/w.png')}}" alt="Man with backpack"
+                            class="d-block w-full">
+
+                          <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                              Dikaki
+                            </p>
+
+                            <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                               {{ "Réservation de groupe."|trans }}
+                            </h1>
+
+                            <p class="mb-1">
+                                {{ "Gerez les places disponibles, la capacité d'accueil ainsi que les listes des participants pour: (Evénements de masses, du petit seminaire à la grande conférence, assemblée générale, manifestation sportive)."|trans }}
+                            </p>
+
+                          </div>
+
+                      <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                      </a>
+                    </div>
+                        </div>
+
+                    </div>
+
+                    <div class="demander_une_demo_wrapper" style="width:265px !important;">
+                        <a href="{{path('dkk_app_power')}}" class="btn-two green block" style="width:100% !important;text-align:center">{{ "La puissance de Dikaki"|trans }}</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="wrapper_service_client">
+                <div class="container">
+                    <div class="row">
+                        <div class="blocquotte">
+
+<blockquote>
+    <p class="text-center" style="text-align: center !important;">{{ "N'attendez pas demain, commencez aujourd'hui, prenez une longueur d'avance avec Dikaki."|trans }}</p>
+</blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+               
+{% endblock %}
+
+

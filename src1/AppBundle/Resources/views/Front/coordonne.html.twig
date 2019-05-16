@@ -1,0 +1,232 @@
+{% extends '::client.html.twig' %}
+
+{% block title %}{{'Clinique du docteur Ebogo reservation'|trans}} :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+
+{% block body %}
+<!-- debut du code -->
+
+    <div class="container" id="container_2">
+        <div class="margin_center">
+            <div>
+                <div class="donw_title"></div>
+                <div class="css-ezupjj">
+                    <div class="css-ej55tb">
+                        <h1 class="h2_titre2"><span>{{'Clinique du Docteur'|trans}} Ebogo </span><span></span></h1>
+                        <h2 class="h3_location3"><i class="fa fa-map-marker" aria-hidden="true"></i> Yaoundé Essos</h2>
+                    </div>
+                    <hr class="hr_reservation">
+                </div>
+
+                <div>
+                    <div class="css-i6wjbx">
+                        <div>
+                            <div class="p_down"></div>
+                            <div class="div_prestation">1. {{'Prestation sélectionnée'|trans}}</div>
+                            <div class="wrapper">
+                                <div class="css-1tt30tv ">
+                                <div class="down_wrapper">
+                                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                        <div class="consultation_texte pull-left">{{'Consultation pour des soins dentaires'|trans}} &nbsp;&nbsp; 30min &nbsp;&nbsp; 10.000 Fcfa</div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                         <div class="prestation_back pull-right">
+                                              <a href="{{ path('dkk_app_choix')}}#ancre" class="go_back2"><i class="fa fa-times"></i></a>
+                                         </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            </div>
+
+                             <div class="p_down"></div>
+
+                            <div class="div_prestation">2. {{'Date et heure sélectionnées'|trans}}</div>
+
+                            <div class="wrapper">
+                                <div class="css-1tt30tv ">
+                                <div class="down_wrapper">
+                                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                        <div class="consultation_texte pull-left">{{'Samedi 5 Janvier 2019 à 10h 30'|trans}}</div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                         <div class="prestation_back pull-right">
+                                              <a href="{{ path('dkk_app_reservation') }}#retake" class="go_back2"><i class="fa fa-pencil"></i></a>
+                                         </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            </div>
+                             <div class="p_down"></div>
+
+
+                             <div class="div_prestation">3. {{'Identification'|trans}}</div>
+                            <div class="wrapper_identification">
+                                <div class="wrapper_nouveau">
+                                        <p class="nouveau_sur">{{'Nouveau sur Dikaki'|trans}} ?  &nbsp;&nbsp; <a class="boutton_login" data-toggle="modal" data-target="#myModal">{{'Inscrits-toi ici'|trans}}</a></p>
+                                    <!-- debut de la fenetre modal ou pop-up -->
+                                    <!-- Modal -->
+                                    <div id="myModal" class="modal fade" role="dialog">
+                                      <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">{{'Insérer votre adresse email'|trans}}</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            <form method="post" action="{{ path('dkk_utilisateur_inscription') }}">
+                                                <input type="email" name="email" placeholder="Entrer votre adresse Email" class="form-control form_control_email">
+                                                <p>
+                                                    <button type="submit" class="create_acount"><i class="fa fa-pencil"></i> &nbsp;&nbsp;{{'Créer mon compte'|trans}} </button>
+                                                </p>
+                                            </form>
+
+
+
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" style="color:#fff !important;" class="btn create_acount" data-dismiss="modal"><i class="fa fa-times"></i> &nbsp;&nbsp;{{'Fermer'|trans}}</button>
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                    <!-- fin de la fenetre modal ou pop-up -->
+                                </div>
+                                 <div id="identification"></div>
+                                <div class="wrapper_deja">
+                                    <p class="deja_acount">{{'Déjà un compte'|trans}} ?</p>
+                                    <div class="wrapper_center_connect">
+                                        <form method="post" action="{{ path('dkk_app_confirmation') }}#confirmation">
+                                       <input type="email" name="email" placeholder="Votre Email" class="form-control controle_data">
+                                        <input type="password" name="passe" placeholder="Votre mot de passe" class="form-control controle_data">
+                                        <span class="span_stay">
+                                            <input type="checkbox" name="reste" class="stay_btn" id="stay">
+                                            <label for="stay">{{'Je reste connecté'|trans}}</label>
+                                        </span>
+                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                            <button type="submit" name="" class="create_acount"><i class="fa fa-check"></i> &nbsp;&nbsp; {{'Connexion'|trans}}</button>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                        <a href="" class="forget_passe"> {{'Mot de passe oublié'|trans}}.</a>
+                                        </div>
+
+                                    </form>
+                                    </div>
+                                </div>
+
+                                <p style="margin-top:10px !important"></p>
+                                <div class="wrapper_nouveau">
+                                        <p class="nouveau_sur">{{'Sans compte sur Dikaki'|trans}} ?  &nbsp;&nbsp; <a class="boutton_login" data-toggle="modal" data-target="#myModal2">{{'Continue-ici'|trans}}</a></p>
+                                    <!-- debut de la fenetre modal ou pop-up -->
+                                    <!-- Modal -->
+                                    <div id="myModal2" class="modal fade" role="dialog">
+                                      <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">{{"Veuillez remplir ce formulaire (Champs obligatoires)"|trans}}.</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            <form method="post" action="{{ path('dkk_app_confirmation') }}#confirmation">
+                                              <input type="text" name=" " placeholder="Nom" class="form-control form_control_email2">
+                                              <input type="texte" name=" " placeholder="Prenom" class="form-control form_control_email2">
+                                              <p class="date_naissance">{{'Date de naissance'|trans}}</p>
+                                              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                                 <select class="form-control not_count">
+                                                    <option selected disabled>{{'Jour'|trans}}</option>
+                                                    <option value="01">01</option><option value="02">02</option>
+                                                    <option value="03">03</option><option value="04">04</option>
+                                                    <option value="05">05</option><option value="06">06</option>
+                                                    <option value="07">07</option><option value="08">08</option>
+                                                    <option value="09">09</option><option value="10">10</option>
+                                                    <option value="11">11</option><option value="12">12</option>
+                                                    <option value="13">13</option><option value="14">14</option>
+                                                    <option value="15">15</option><option value="16">16</option>
+                                                    <option value="17">17</option><option value="18">18</option>
+                                                    <option value="19">19</option><option value="20">20</option>
+                                                    <option value="21">21</option><option value="22">22</option>
+                                                    <option value="23">23</option><option value="24">24</option>
+                                                    <option value="25">25</option><option value="26">26</option>
+                                                    <option value="27">27</option><option value="28">28</option>
+                                                    <option value="29">29</option><option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                  </select>
+                                              </div>
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                            <select class="form-control not_count">
+                                              <option selected disabled>{{'Mois'|trans}}</option>
+                                              <option value="Janvier">{{'Janvier'|trans}}</option><option value="Février">{{'Février'|trans}}</option><option value="Mars">{{'Mars'|trans}}</option><option value="Avril">{{'Avril'|trans}}</option><option value="Mai">{{'Mai'|trans}}</option><option value="Juin">{{'Juin'|trans}}</option>
+                                              <option value="Juillet">{{'Juillet'|trans}}</option><option value="Août">{{'Août'|trans}}</option>
+                                              <option value="Septembre">{{'Septembre'|trans}}</option><option value="Octobre">{{'Octobre'|trans}}</option><option value="Novembre">{{'Novembre'|trans}}</option><option value="Décembre">{{'Décembre'|trans}}</option>
+                                            </select>
+                                        </div>
+                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                              <select class="form-control not_count" name="annee">
+                                                    <option selected disabled>{{'Année'|trans}}</option>
+                                                    <option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option>
+
+                                                  </select>
+                                            </div>
+
+                                           
+                                             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                              <select class="form-control not_count" name="annee">
+                                                    <option selected disabled>Sexe</option>
+                                                    <option value="Masculin">Masculin</option>
+                                                    <option value="Féminin">Féminin</option>
+
+                                                  </select>
+                                            </div>
+                                             <p style="clear: both;margin-bottom: 10px !important;"></p>
+
+                                                <input type="email" name="email" placeholder="Email" class="form-control form_control_email2">
+                                                <input type="email" name="email" placeholder="Téléphone" class="form-control form_control_email2">
+                                                <p>
+                                                    <button type="submit" class="create_acount"><i class="fa fa-pencil"></i> &nbsp;&nbsp;{{'Continuer'|trans}} </button>
+                                                </p>
+                                            </form>
+
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" style="color:#fff !important;" class="btn create_acount" data-dismiss="modal"><i class="fa fa-times"></i> &nbsp;&nbsp;{{'Fermer'|trans}}</button>
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                    <!-- fin de la fenetre modal ou pop-up -->
+                                </div>
+                            </div>
+
+                            <!--<button class="css-ust07w add_fields">Ajouter une prestation à la suite</button>-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin du code -->
+
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+
+    <!-- debut du footer -->
+    <br>
+    <br>
+
+{% endblock %}

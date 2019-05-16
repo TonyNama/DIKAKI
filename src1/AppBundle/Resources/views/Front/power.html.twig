@@ -1,0 +1,550 @@
+{% extends '::last.html.twig' %}
+
+{% block title %}{{'La puissance de'|trans}} Dikaki :: Dikaki{% endblock %}
+
+{% block body %}
+
+    <br><br><br>
+    <h2 class="h1_title_description" id="h1_title_description"> {{'Principales fonctionnalités'|trans}}</h2>
+    <h3 class="h3_dikaki" id="h3_dikaki">Dikaki</h3>
+
+    <div class="wrapper_ligne4">
+
+        <div class="container">
+            <div id="container_gestion_planning">
+                <p> {{"Gestion de planning, paiement en ligne, réservation et prise de rendez-vous en ligne, marketing, relation client, multi-langue etc..."|trans}}</p>
+            </div>
+
+            <div class="avec_dikaki_box">
+                <p class="avec_dikaki">
+                    {{"Avec Dikaki gérez efficacement votre activité et multipliez vos rendez-vous ou réservations"|trans}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="faq_container">
+                <div class="row">
+                    <ul class="faq2">
+                        <div class="row">
+                            <li class="q2"><img src="https://i.imgur.com/dRKbHww.png" alt=""/> {{"Agenda / Planning"|trans}}
+                            </li>
+                            <li class="a2">
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">1</div>
+                                        <p class="items_infos_">{{'Disponibilités en temps réel'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Définissez vos disponibilités par jour ou par heure. Elles sont mises à jour automatiquement à chaque réservation et vous pouvez rapidement, et à tout moment, les mettre à jour manuellement. Lors de la réservation, la disponibilité est systématiquement vérifiée."|trans}}
+
+                                        </p>
+                                    </div>
+                                </div> 
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">2</div>
+                                        <p class="items_infos_">{{'Usage flexible'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+
+                                            {{"Vous estimez que votre activité est trop spécifique pour définir une disponibilité en temps réel ? Dikaki vous laisse la possibilité de confirmer manuellement en un clic chaque demande de réservation. De même vous pouvez facilement fermer à la réservation une plage horaire, des jours ou sessions entiers, en cas de fermeture ou si vous affichez complet."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos slam_down_div">
+                                        <div class="items_infos_number_2">3</div>
+                                        <p class="items_infos_">{{'Compte multi-utilisateurs'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+
+                                            {{"Vous travaillez en équipe et cherchez un moyen de gérer les disponibilités de vos collaborateurs. Dikaki vous permet de lister vos collaborateurs et d’associer chacun d’eux à différentes prestations. Chaque collaborateur peut ainsi consulter son planning ainsi que les réservations dont il a la charge. Les disponibilités de chaque collaborateur sont mises à jour en temps réel. Différents niveaux d’accès sont disponibles."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <!--<div class="wrapper_items_infos slam_down_div">
+                                        <div class="items_infos_number_2">4</div>
+                                        <p class="items_infos_"></p>
+                                            <p class="items_infos_paragraphe">
+                                           
+    
+                                            </p>
+                                        </div>-->
+                                </div>  
+                            </li>
+
+                        </div>
+                        <!-- seconde lignr -->
+                        <p class="down_faq"></p>
+
+                        <div class="row">
+                            <li class="q2"><img src="https://i.imgur.com/dRKbHww.png" alt=""/>{{'Prestations'|trans}}
+                            </li>
+                            <li class="a2">
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">1</div>
+                                        <p class="items_infos_">{{'Adaptabilité'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                           {{"Quelles que soient votre activité et les prestations (services) que vous proposez, Dikaki s’adapte. Les options de paramétrage sont multiples et conviennent à de nombreux cas. Si vous avez des questions particulières à ce sujet, n’hésitez pas à nous contacter, nous pourrons voir tout cela ensemble !"|trans}}
+                                        </p>
+                                    </div>
+                                </div> 
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">2</div>
+                                        <p class="items_infos_">{{'Affichage des prestations'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Dikaki intègre un système de gestion de contenu avancé qui vous permet de décrire, de façon détaillée, chaque prestation que vous proposez (vous pouvez créer autant de prestations que nécessaire). Ainsi vous pouvez ajouter des descriptions, photos et tout autre élément indispensable à la bonne compréhension de vos prestations (conditions de réservation et d’annulation, services inclus et non inclus etc.)."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos slam_down_div">
+                                        <div class="items_infos_number_2">3</div>
+                                        <p class="items_infos_">{{'Multilingue'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Vous adresser à vos potentiels clients dans leur langue est un atout, c’est pourquoi Dikaki vous permet d’interpréter vos textes dans plusieurs langues."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos slam_down_div">
+                                        <p class="items_infos_">{{'Tarifs des prestations'|trans}} </p>
+                                        <div class="items_infos_number_2">4</div>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Tarif unique, prix enfant, prix de groupe… Dikaki s’adapte à toutes les situations et vous permet de paramétrer vos tarifs en fonction de vos besoins et de votre activité."|trans}}
+                                        </p>
+                                    </div>
+                                </div>  
+                            </li>
+
+                        </div>
+
+
+                        <!-- fin -->
+                        <!-- seconde lignr -->
+                        <p class="down_faq"></p>
+
+                        <div class="row">
+                            <li class="q2"><img src="https://i.imgur.com/dRKbHww.png" alt=""/>{{'Réservations'|trans}}
+                            </li>
+                            <li class="a2">
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">1</div>
+                                        <p class="items_infos_">{{'Réservations en ligne 24h/24 & 7j/7'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Vos clients ont la possibilité de réserver en ligne à toute heure du jour ou de la nuit. C’est pratique pour eux, et ça l’est aussi pour vous !"|trans}}
+                                        </p>
+                                    </div>
+                                </div> 
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">2</div>
+                                        <p class="items_infos_">{{'Association des réservations'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                           {{"Réservations par téléphone, sur place, en ligne… D’où qu’elles viennent, centralisez-les toutes sur un seul et même support ! De cette façon, vous et vos clients avez une vue claire des disponibilités."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos slam_down_div">
+                                        <div class="items_infos_number_2">3</div>
+                                        <p class="items_infos_">{{'Réservation rapide'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Puisqu’avec Dikaki vos disponibilités sont mises à jour en temps réel et consultables en ligne, vos clients potentiels peuvent réserver instantanément, à toute heure du jour où de la nuit, sans que vous n’ayez à intervenir ! La validation se fait automatiquement. - Non obligatoire, vous pouvez conserver la validation manuelle si nécessaire."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos slam_down_div">
+                                        <div class="items_infos_number_2">4</div>
+                                        <p class="items_infos_">{{'Annulation facile'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Vous êtes contraint d’annuler une prestation ? Informez en vos clients en un clic. Ils vous ont déjà payé ? Remboursez les tout aussi facilement. C’est votre client qui doit annuler ? Permettez-lui de le faire simplement avec lien d’annulation. En fonction des règles que vous aurez définies, votre client sera automatiquement remboursé ou non."|trans}}
+                                        </p>
+                                    </div>
+                                </div>  
+                            </li>
+
+                        </div>
+
+
+                        <!-- fin -->
+                        <!-- seconde lignr -->
+                        <p class="down_faq"></p>
+
+                        <div class="row">
+                            <li class="q2"><img src="https://i.imgur.com/dRKbHww.png" alt=""/>{{'Gestion des encaissements'|trans}}
+                            </li>
+                            <li class="a2">
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">1</div>
+                                        <p class="items_infos_">{{'Paiements sécurisés'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Offrez un cadre de confiance à vos clients avec une solution de paiement reconnue : Mobile money, carte bancaire .Notre moteur de réservation et notre système de paiements via nos partenaires sont entièrement sécurisés. Nous utilisons des technologies robustes et maintenons nos systèmes constamment à jour."|trans}}
+                                        </p>
+                                    </div>
+                                </div> 
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">2</div>
+                                        <p class="items_infos_">{{'Paiement en ligne'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                           {{"Si vous le souhaitez, vous pouvez associer à Dikaki un système de paiement. Ainsi, vos clients peuvent payer en ligne, tout ou partie de leur réservation (acomptes possibles). Et cela marche même pour les réservations prises par téléphone ou sur place grâce à l’envoi d’un lien de paiement par e-mail ou SMS. Notez que les frais de transaction sont propres à chaque solution de paiement (Mobile money, carte bancaire etc..) et ne sont pas couverts par l’abonnement Dikaki."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                            </li>
+
+                        </div>
+
+
+                        <!-- fin -->
+                        <!-- seconde lignr -->
+                        <p class="down_faq"></p>
+
+                        <div class="row">
+                            <li class="q2"><img src="https://i.imgur.com/dRKbHww.png" alt=""/> {{'Marketing'|trans}}
+                            </li>
+                            <li class="a2">
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">1</div>
+                                        <p class="items_infos_">{{"Envoyez des campagnes SMS et/ou e-mail"|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Vous souhaitez envoyer des infos, remises, bons plans… à vos clients et contacts par e-mail ou SMS ? C’est possible ! Dikaki vous permet d’envoyer des e-mails et SMS à caractère informatif ou marketing. Créer votre message, indiquez à qui il doit être envoyé, programmez votre envoi pour qu’il parte au bon moment."|trans}}
+                                        </p>
+                                    </div>
+                                </div> 
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">2</div>
+                                        <p class="items_infos_">{{'Programmez des promos'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Vous faites régulièrement des soldes ou proposez à vos clients fidèles des remises en guise de remerciement ? Avec Dikaki vous avez la possibilité de créer des périodes de remises qui sont automatiquement pris en compte au moment de la réservation. Le prix à payer est instantanément ajusté !"|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos slam_down_div">
+                                        <div class="items_infos_number_2">3</div>
+                                        <p class="items_infos_">{{"Apporteurs d'affaires"|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Suivez facilement les réservations en provenance de tiers ! Si vous avez des partenaires ou affiliés qui vous apportent régulièrement de nouveaux clients, vous pourrez assurer facilement le suivi des réservations en provenance de ces personnes et pourrez ainsi savoir, les commissions/rétributions qui doivent être versées"|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+
+                            </li>
+
+                        </div>
+
+
+                        <!-- fin -->
+                        <!-- seconde lignr -->
+                        <p class="down_faq"></p>
+
+                        <div class="row">
+                            <li class="q2"><img src="https://i.imgur.com/dRKbHww.png" alt=""/> {{'Relation client'|trans}}
+                            </li>
+                            <li class="a2">
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">1</div>
+                                        <p class="items_infos_">{{'Envoyez des rappels de réservation'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Vos clients ont tendance à être tête en l’air ? Dikaki peut leur envoyer un rappel quelques heures ou jours avant, par SMS et/ou e-mail. Très efficace, les rappels par SMS permettent de diminuer le nombre de rendez-vous non honorés."|trans}}
+                                        </p>
+                                    </div>
+                                </div> 
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">2</div>
+                                        <p class="items_infos_">{{'Personnalisez les e-mails envoyés'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                           {{"Vous avez des informations spécifiques à faire passer à vos clients lors du processus de réservation ? Vous souhaitez pouvoir personnaliser le texte des e-mails automatiques envoyé par Dikaki ? C’est possible ! Vous pouvez alors paramétrer des e-mails qui correspondent au « ton » propre à votre entreprise et/ou qui mettent en avant des détails importants."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos slam_down_div">
+                                        <div class="items_infos_number_2">3</div>
+                                        <p class="items_infos_">{{'Choisissez qui peut réserver en ligne'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Si vous avez une clientèle fidèle/régulière, que vous n’êtes pas en mesure d’accepter de nouveaux clients ou que vos services ne sont  accessibles qu’à des membres/adhérents, vous pouvez le préciser. Dans ce cas, seuls les clients \“autorisés\” pourront réserver en ligne."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos slam_down_div">
+                                        <div class="items_infos_number_2">4</div>
+                                        <p class="items_infos_">{{"L'autonomie de vos clients"|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                           {{"L’un des aspects sous-estimés de l’essor de la réservation en ligne est le sentiment d’autonomie et de contrôle qu’elle procure aux clients dans leur processus de réservation. Les clients veulent être libres de prendre leurs propres décisions, sans forcément devoir compter sur l’intervention d’un tiers, vous, en l’occurrence."|trans}}
+                                            <span style="display: block"></span>
+                                            {{"L’avantage pour vous, c’est qu’un client autonome est un client qui vous fait gagner du temps."|trans}}
+                                        </p>
+                                    </div>
+                                </div>  
+                            </li>
+
+                        </div>
+
+
+                        <!-- fin -->
+                        <!-- seconde lignr -->
+                        <p class="down_faq"></p>
+
+                        <div class="row">
+                            <li class="q2"><img src="https://i.imgur.com/dRKbHww.png" alt=""/> {{'Gestion des tâches et des ressources.'|trans}}
+                            </li>
+                            <li class="a2">
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">1</div>
+                                        <p class="items_infos_">Dikaki {{"vous permet de réduire le travail administratif au quotidien en vous permettant d’automatiser de nombreuses tâches"|trans}} : </p>
+                                        <p class="items_infos_paragraphe">
+                                            <span class="block_span_div">
+                                               {{"E-mail de confirmation de réservation automatique"|trans}}.
+                                            </span>
+                                            <span class="block_span_div">
+                                               {{"Rappel automatique par SMS et/ou e-mail 24h avant le début de la prestation possible."|trans}}
+                                            </span>
+                                            <span class="block_span_div">
+                                               {{'Génération de convocation'|trans}}
+                                            </span>
+                                            <span class="block_span_div">
+                                                {{"Sauvegarde d’e-mails"|trans}} 
+                                            </span>
+
+                                        </p>
+                                    </div>
+                                </div> 
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">2</div>
+                                        <p class="items_infos_">{{"A la suite de la réservation en ligne, un certain nombre de tâches s’effectuent automatiquement, tout au long des différentes étapes du parcours client"|trans}} :  </p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"envoi d’une confirmation, d’un rappel par texto ou encore d’un questionnaire de satisfaction à la suite de la prestation. De même, il est plus facile pour vous de maintenir à jour votre fichier clients grâce à la réservation en ligne. En effet, celui-ci s’alimente « tout seul », au gré des rendez-vous."|trans}}
+
+                                        </p>
+                                    </div>
+                                </div> 
+                                <!-- -->
+                            </li>
+                        </div>
+                        <!-- fin -->
+                        <!-- seconde lignr -->
+                        <p class="down_faq"></p>
+
+                        <div class="row">
+                            <li class="q2"><img src="https://i.imgur.com/dRKbHww.png" alt=""/> {{'Sécurité et facilité.'|trans}}
+                            </li>
+                            <li class="a2">
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">1</div>
+                                        <p class="items_infos_">{{'Sans compétences technique'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                           {{"Utiliser Dikaki ne requiert aucune compétence technique. Pour les activités que vous souhaitez proposer sur votre site, nous nous occupons de vous accompagner là où vous désirez. C’est tout ce dont vous aurez besoin pour vous mettre à la réservation en ligne."|trans}}
+                                        </p>
+                                    </div>
+                                </div> 
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">2</div>
+                                        <p class="items_infos_">{{'Prise en main rapide'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"L’interface Dikaki est intuitive et accessible à tous. Nous vous apportons des outils simples qui répondent à vos besoins. Vous êtes guidés à chaque étape afin de renseigner au mieux les informations nécessaires."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos slam_down_div">
+                                        <div class="items_infos_number_2">3</div>
+                                        <p class="items_infos_">{{'Support'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Notre équipe support vous assiste par mail ou téléphone si vous avez les questions sur l’utilisation du logiciel."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos slam_down_div">
+                                        <div class="items_infos_number_2">4</div>
+                                        <p class="items_infos_">{{'Sécurité des données'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Nos serveurs sont sécurisés et vos données régulièrement sauvegardées. Vous êtes le seul à pouvoir accéder à vos données et vous êtes sûr de ne jamais les perdre."|trans}}
+                                        </p>
+                                    </div>
+                                </div>  
+                            </li>
+
+                        </div>
+                        <!-- fin -->
+                        <!-- seconde lignr -->
+                        <p class="down_faq"></p>
+
+                        <div class="row">
+                            <li class="q2"><img src="https://i.imgur.com/dRKbHww.png" alt=""/> {{'Statistiques'|trans}}
+                            </li>
+                            <li class="a2">
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">1</div>
+                                        <p class="items_infos_">{{'Gérez votre fichier clients'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            Dikaki {{"vous permet de gérer votre fichier clients. Vous pouvez le maintenir à jour (modification d’informations, ajout de nouveaux clients). Ainsi, il est très facile de l’utiliser dans le cadre de vos actions commerciales ou marketing."|trans}}
+                                        </p>
+                                    </div>
+                                </div> 
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">2</div>
+                                        <p class="items_infos_">{{"Consultez l'historique des réservations"|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                           {{"Pour chacun de vos clients, vous pouvez accéder à un historique des réservations. Cela vous permet d’assurer un suivi et de décider des actions marketing et commerciales."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos slam_down_div">
+                                        <div class="items_infos_number_2">3</div>
+                                        <p class="items_infos_">{{'Analysez votre activité'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                           {{"Rien de mieux que les chiffres pour mieux connaître votre business et les habitudes de vos clients ! Accéder à des statistiques sur vos réservations et ventes. Retrouvez des informations telles que le volume de réservations, le taux d’annulation ou encore le chiffre d’affaires réalisé."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- -->
+                            </li>
+                        </div>
+                        <!-- fin -->
+                        <!-- seconde lignr -->
+                        <p class="down_faq"></p>
+
+                        <div class="row">
+                            <li class="q2"><img src="https://i.imgur.com/dRKbHww.png" alt=""/>{{'Usage mobile'|trans}}
+                            </li>
+                            <li class="a2">
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">1</div>
+                                        <p class="items_infos_">{{'Moteur responsive'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Le moteur de réservations (avec paiement ou non) est compatible avec tous les navigateurs, Smartphones et tablettes. La navigation est simple et pratique. Donnez le meilleur à vos clients avec un rendu professionnel qui sera gage de confiance et de sérieux."|trans}}
+                                        </p>
+                                    </div>
+                                </div> 
+                                <!-- -->
+                                <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
+                                    <div class="wrapper_items_infos">
+                                        <div class="items_infos_number">2</div>
+                                        <p class="items_infos_">{{'Tableau de bord responsive'|trans}}</p>
+                                        <p class="items_infos_paragraphe">
+                                            {{"Votre application est disponible partout et à tout moment. Profitez de l’ensemble des fonctionnalités de notre plate-forme que ce soit au bureau derrière votre ordinateur ou en ville avec votre smartphone ou votre tablette."|trans}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <!-- fin -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper_ligne5">
+        <div class="container">
+            <h2 class="h2_title_description">{{'Gerez votre réservation en ligne en 3 étapes'|trans}}.</h2>
+            <h3 class="h3_permettez" style="color:#fff">
+               {{'Permettez a vos clients de réserver par Internet facilement et à tout moment'|trans}}.
+            </h3>
+        </div>
+        <div class="container">
+            <div class="item_top">
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="drop-shadow drop-shadow1 curved h2">
+                        <p class="number_runded"><span>1</span></p>
+                        <p>{{'Créez votre compte gratuitement sur Dikaki'|trans}} </p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="drop-shadow curved h2">
+                        <p class="number_runded"><span>2</span></p>
+                        <p>{{"Enregistrez vos services, vos disponibilités et vos tarifs"|trans}}. </p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="drop-shadow curved h2">
+                        <p class="number_runded"><span>3</span></p>
+                        <p>{{"Nous réalisons pour vous votre page professionnelle et  éffectuons pour vous le paramétrage sur mesure de votre activité"|trans}}.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <p style="clear: both !important;"></p>
+        <div class="container">
+            <h2 class="h1_title_description_folow">{{'Avançons ensemble vers votre projet de digitalisation'|trans}}. </h2>
+        </div>
+
+        <div class="container">
+            <div class="remonter"></div>
+            <a href="{{path('dkk_professionnel_inscription')}}" class="my_accoummt green">{{'Je crée mon compte'|trans}}</a>
+        </div>
+
+    </div>
+
+
+
+    <br><br><br><br>
+
+
+
+
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#test237").on('click', function () {
+                alert("Email enregistré Nama");
+            });
+        });
+    </script>
+{% endblock%}
+
+
+

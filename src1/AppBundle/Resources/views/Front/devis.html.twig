@@ -1,0 +1,133 @@
+ {% extends 'connect.html.twig' %}
+
+{% block title %}{{'Demander une devis en ligne'|trans}} :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+
+{% block style %}
+ <style>
+      .sky-form{
+        box-shadow: none !important;
+        border: 1px solid #fff !important;
+      }
+
+        body{
+      background: url('{{asset("img/banner2.png")}}') no-repeat center center;
+      background-size: cover !important;
+      background-attachment: fixed !important;
+    }
+    </style>
+
+    {% endblock %}
+
+{% block body %}   
+
+        <div class="container-fluid">
+            <div class="container">
+                 <div id="wrapper">
+
+                       <div class="wrapper_prise_">
+                        <div class="">
+                            <p class="demander_demo">{{'Demander un dévis'|trans}}}}</p>
+                           <div class="row" style="background:#ffff !important;">
+                            <!-- debut -->
+                               <form action="" class="sky-form" id="signupForm" method="post">
+
+        <fieldset >
+          <div class="row">
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-user"></i>
+                <input type="text" placeholder="Nom" name="firstname">
+              </label>
+
+            </section>
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-user"></i>
+                <input type="text" placeholder="Prenom" name="lastname">
+              </label>
+
+            </section>
+          </div>
+                    <div class="row">
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-phone"></i>
+                <input type="text" placeholder="Téléphone portable" name="phone" maxlength="9">
+              </label>
+
+            </section>
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-envelope-alt"></i>
+                <input type="email" placeholder=" E-mail" name="email">
+              </label>
+
+            </section>
+          </div>
+
+          <div class="row">
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-home"></i>
+                <input type="text" placeholder="Entreprise" name="entreprise">
+              </label>
+
+            </section>
+            <section class="col col-6">
+              <label class="select">
+                <select name="secteur">
+                  <option value=""> {{"Secteur d'activité"|trans}}</option>
+                  <option value="Santé">{{'Santé'|trans}}</option>
+                  <option value="Bien être et beauté">{{'Bien être et beauté'|trans}}</option>
+                  <option value="Restauration">{{'Restauration'|trans}}</option>
+                  <option value="Avocat-Notaire">{{'Avocat-Notaire'|trans}}</option>
+                  <option value="Expert-Immobilier">{{'Expert-Immobilier'|trans}}</option>
+                  <option value="Institutions publiques">{{'Institutions publiques'|trans}}</option>
+                  <option value="collectivités territoriales décentralisées">{{'collectivités territoriales décentralisées'|trans}}</option>
+                  <option value="Automobile">{{'Automobile'|trans}}</option>
+                  <option value="Evénementiel">{{'Evénementiel'|trans}}</option>
+                  <option value="Administration">{{'Administration'|trans}}</option>
+                  <option value="profession libérale">{{'Profession libérale'|trans}}</option>
+                  <option value="Banque">{{'Banque'|trans}}</option>
+                  <option value="Assurances">{{'Assurances'|trans}}</option>
+                  <option value="Sécurité sociale">{{'Sécurité sociale'|trans}}</option>
+                  <option value="Education">{{'Education'|trans}}</option>
+                  <option value="Universités et grandes écoles">{{'Universités et grandes écoles'|trans}}</option>
+                  <option value="Transport">{{'Transport'|trans}}</option>
+                  <option value="Sport et Loisirs">{{'Sport et Loisirs'|trans}}</option>
+                  <option value="Art et culture">{{'Art et culture'|trans}}</option>
+                  <option value="Representation Diplomatique">{{'Representation Diplomatique'|trans}}</option>
+                  <option value="Organisme International">{{'Organisme International'|trans}}</option>
+                  <option value="Consulat">{{'Consulat'|trans}}</option>
+                </select>
+                <i></i>
+              </label>
+
+            </section>
+
+          </div>
+          <section>
+            <label class="textarea">
+              <i class="icon-append icon-comment"></i>
+              <textarea rows="5" placeholder="Enoncer votre besoin." name="comment"></textarea>
+            </label>
+
+          </section>
+        </fieldset>
+
+
+        <footer>
+          <button type="submit" id="button_send" class="btn-two green small small_btn pull-right"><i class="fa fa-paper-plane"></i> {{'Demander'|trans}}</button>
+        </footer>
+      </form>
+                            <!-- fin -->
+                           </div>
+                      </div>
+            </div>
+
+
+
+    </div>
+  </div>
+</div>
+{% endblock %}

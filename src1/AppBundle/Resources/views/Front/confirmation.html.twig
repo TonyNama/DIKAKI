@@ -1,0 +1,175 @@
+{% extends '::client.html.twig' %}
+
+{% block title %}{{'Clinique du docteur Ebogo confirmation du rendez-vous'|trans}}  :: {'Prise de rendez-vous et dépôt de dossier en ligne'|trans} {% endblock %}
+
+{% block body %}
+<!-- debut du code -->
+    <div class="container" id="container_2">
+        <div class="margin_center">
+            <div>
+                <div class="donw_title"></div>
+                <div class="css-ezupjj">
+                    <div class="css-ej55tb">
+                        <h1 class="h2_titre2"><span>{{'Clinique du Docteur'|trans}} Ebogo </span><span></span></h1>
+                        <h2 class="h3_location3"><i class="fa fa-map-marker" aria-hidden="true"></i> Yaoundé Essos</h2>
+                    </div>
+                    <hr class="hr_reservation">
+                </div>
+
+                <div>
+                    <div class="css-i6wjbx">
+                        <div>
+                            <div class="p_down"></div>
+                            <div class="div_prestation">1. {{'Prestation sélectionnée'|trans}}</div>
+                            <div class="wrapper">
+                                <div class="css-1tt30tv ">
+                                <div class="down_wrapper">
+                                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                        <div class="consultation_texte pull-left">{{'Consultation pour des soins dentaires'|trans}} &nbsp;&nbsp; 30min &nbsp;&nbsp; 10.000 Fcfa</div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                         <div class="prestation_back pull-right">
+                                              <a href="{{ path('dkk_app_reservation') }}#ancre" class="go_back2"><i class="fa fa-times"></i></a>
+                                         </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            </div>
+
+                             <div class="p_down"></div>
+
+                            <div class="div_prestation">2. {{'Date et heure sélectionnées'|trans}}</div>
+
+                            <div class="wrapper">
+                                <div class="css-1tt30tv ">
+                                <div class="down_wrapper">
+                                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                        <div class="consultation_texte pull-left">{{'Samedi 5 Janvier 2019 à 10h 30'|trans}}</div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                         <div class="prestation_back pull-right">
+                                              <a href="{{ path('dkk_app_reservation') }}#retake" class="go_back2"><i class="fa fa-pencil"></i></a>
+                                         </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            </div>
+                             <div class="p_down"></div>
+                               <div id="confirmation"></div>
+                             <div class="div_prestation">3. {{'Identification'|trans}}</div>
+                             <div class="wrapper">
+                                 <div class="wrapper_color_identification">
+                                    <div class="">
+                                        <div class="margin_infor_person">
+                                            <table>
+                                            <tr>
+                                                <th><span class="identification_first_name">{{'Nom'|trans}}: </span></th>
+                                                 <td><span class="identification_lastt_name">Ebolo Ebolo </span></td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="identification_first_name">{{'Prénom'|trans}}: </span></th>
+                                                 <td><span class="identification_lastt_name">Guillaume stéphane </span></td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="identification_first_name">{{"Né(e) le"|trans}}: </span></th>
+                                                 <td><span class="identification_lastt_name">20 {{'janvier'|trans}} 1982 </span></td>
+                                            </tr>
+                                            <tr>
+                                                 <th><span class="identification_first_name">{{'Téléphone'|trans}}: </span></th>
+                                                 <td><span class="identification_lastt_name">+237 6543 987 453 </span></td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="identification_first_name">{{'Email'|trans}}: </span></th>
+                                                 <td><span class="identification_lastt_name">Ebologuillaume@gmail.com </span></td>
+                                            </tr>
+                                            <tr>
+                                                <th></th>
+                                         </table>
+
+
+                                                    <form method="post" action="{{ path('dkk_app_paiement') }}#paiement">
+                                                        <br>
+                                                         <span class="identification_lastt_name"><input type="radio" name="take" id="me" class="me"> {{'Je prends rendez-vous pour moi même'|trans}}. </span>
+                                                        <span class="identification_lastt_name"><input type="radio" name="take" id="other"> {{'Je prends rendez-vous pour une autre personne'|trans}}. </span>
+
+                                                         <div class="affiche_btn" id="affiche_btn" style="display:none !important;">
+                                                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                                <a href="{{ path('dkk_app_choix')}}#ancre" style="color:#fff !important;" class="annulation_my_rdv"><i class="fa fa-times"></i> &nbsp;&nbsp; {{'Annuler le rdv'|trans}} </a>
+                                                             </div>
+                                                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                                <button type="submit" class="create_acount"><i class="fa fa-fa fa-check"></i> &nbsp;&nbsp; {{'Confirmer le rdv'|trans}} </button>
+                                                             </div>
+
+
+                                                         </div>
+                                                    </form>
+
+
+
+
+
+
+                                        </div>
+
+                                        <div class="margin_other_personn" style="display:none !important;">
+                                            <form method="post" action="{{ path('dkk_app_paiement') }}#paiement">
+                                                <input type="text" name="nom" id="nom" class="form-control form_paimement" placeholder="Nom">
+                                                 <input type="text" name="prenom" id="prenom" class="form-control form_paimement" placeholder="Prenom">
+                                                 <input type="text" name="age" id="sexe" class="form-control form_paimement" placeholder="Age">
+                                                 <select name="" class="form-control form_paimement">
+                                                     <option>Sexe</option>
+                                                     <option value="Masculin">{{'Masculin'|trans}}</option>
+                                                     <option value="Féminin">{{'Féminin'|trans}}</option>
+                                                </select>
+                                                <div class="affiche_btn2" style="margin-bottom:50px !important;">
+                                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                        <a href="{{ path('dkk_app_choix')}}#ancre" style="color:#fff !important;" class="annulation_my_rdv"><i class="fa fa-times"></i> &nbsp;&nbsp; {{'Annuler le rdv'|trans}} </a>
+                                                    </div>
+                                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                         <button type="submit" class="create_acount" name="submit"><i class="fa fa-fa fa-check"></i> &nbsp;&nbsp; {{'Confirmer le rdv'|trans}} </button>
+                                                    </div>
+                                                    </div>
+                                            </form>
+                                        </div>
+                                 <!-- seconde table -->
+
+                                     </div>
+                                 </div>
+                             </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin du code -->
+
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+
+  <!-- fin du footer -->
+    <script>
+        $(document).ready(function(){
+           
+        });
+    </script>
+
+    <!-- debut du footer -->
+    <br>
+    <br>
+
+{% endblock %}

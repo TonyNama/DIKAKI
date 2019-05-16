@@ -1,0 +1,163 @@
+{% extends 'default.html.twig' %}
+
+{% block title %} {{ "Chercher et trouvez un événement"|trans}} :: {{ "Prise de rendez-vous et dépôt de dossier en ligne"|trans}} {% endblock %}
+
+{% block script %}
+    
+{% endblock %}
+
+   
+{% block body %}
+   
+		<!-- debut du coprs de la page -->
+        <div class="wrapper_event">
+          <div class="wrapper_event2">
+              <p class="text-event">{{ "Trouvez un événement"|trans}} </p>
+
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <!-- debut -->
+                  <button type="button" class="sport_ green_" data-toggle="modal" data-target="#myModal" title="">
+                   <span class="typist3">{{ "Sports / football, natation, Boxe..."|trans}}</span>
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content modal_content_height">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h5 class="modal-title modal_title_second " id="myModalLabel">{{ "Sports / football, natation, Boxe..."|trans}}</h5>
+                        </div>
+                        <div class="modal-body2">
+                            <form autocomplete="off" action="evenement/sport.html">
+                              <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                  <select name="" class="form-control control_form_">
+                                      <option >{{ "Ville"|trans}}</option>
+                                      <option value="Yaoundé">{{ "Yaoundé"|trans}}</option>
+                                      <option value="Douala">Douala</option>
+                                      <option value="Maroua">Maroua</option>
+                                  </select>
+                              </div>
+                              <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                <select name="" class="form-control control_form_">
+                                      <option >{{ "Sport"|trans}}</option>
+                                      <option value="foot-ball">Football</option>
+                                      <option value="Basket-Ball">Basketball</option>
+                                      <option value="natation">{{ "Natation"|trans}}</option>
+                                      <option value="Boxe">{{ "Boxe"|trans}}</option>
+                                      <option value="Autres">{{ "Autres"|trans}}</option>
+                                  </select>
+                              </div>
+                              <div class="col-xs-12 col-sm-12 col-md-5 col-lg-2">
+                                <button type="submit" class="btn btn-xs btn-success button_search"><i class="fa fa-search fa-2x"></i></button>
+                              </div>
+                            </form>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                <!-- fin -->
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <!-- debut -->
+                  <button type="button" class="sport_" data-toggle="modal" data-target="#myModal1" title="">
+                   <span class="typist2 ">{{ "Voyages par trains, Voyages par Autocars."|trans}}</span>
+                  </button>
+                  <!-- Modal -->
+                    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content modal_content_height">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h5 class="modal-title modal_title_second" id="myModalLabel">{{ "Voyages / trains, Bus ..."|trans}}</h5>
+                          </div>
+                          <div class="modal-body2">
+                              <form autocomplete="off" action="evenement/voyage.html">
+                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                    <select name="" class="form-control control_form_">
+                                        <option >{{ "Ville"|trans}}</option>
+                                        <option value="Yaoundé">{{ "Yaoundé"|trans}}</option>
+                                        <option value="Douala">Douala</option>
+                                        <option value="Maroua">Maroua</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                  <select name="" class="form-control control_form_">
+                                        <option >{{ "Transport"|trans}}</option>
+                                        <option value="trains">{{ "Trains"|trans}}</option>
+                                        <option value="Bus">{{ "Bus"|trans}}</option>
+                                        <option value="Autres">{{ "Autres"|trans}}</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-2">
+                                  <button type="submit" class="btn btn-xs btn-success button_search"><i class="fa fa-search fa-2x"></i></button>
+                                </div>
+                              </form>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                <!-- fin -->
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <!-- debut -->
+                     <button type="button" class="sport_" data-toggle="modal" data-target="#myModal3" title="Formation, séminaire, conférence...">
+                     <span class="typist">{{ "Formation, Séminaire, Conférence, Exposition..."|trans}} </span>
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content modal_content_height">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h5 class="modal-title modal_title_second" id="myModalLabel">{{ "Formation, Séminaire, Conférence, Exposition..."|trans}} </h5>
+                          </div>
+                          <div class="modal-body2">
+                              <form autocomplete="off" action="evenement/formation.html">
+                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                    <select name="" class="form-control control_form_">
+                                        <option >{{ "Ville"|trans}}</option>
+                                        <option value="Yaoundé">{{ "Yaoundé"|trans}}</option>
+                                        <option value="Douala">Douala</option>
+                                        <option value="Maroua">Maroua</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                  <select name="" class="form-control control_form_">
+                                        <option >{{ "Evénement"|trans}}</option>
+                                        <option value="Formation">{{ "Formations"|trans}}</option>
+                                        <option value="séminaire">{{ "Séminaires"|trans}}</option>
+                                        <option value="conférence">{{ "Conférences"|trans}}</option>
+                                        <option value="Exposition">{{ "Expositions"|trans}}</option>
+                                        <option value="Autres">{{ "Autres"|trans}}</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-2">
+                                  <button type="submit" class="btn btn-xs btn-success button_search"><i class="fa fa-search fa-2x"></i></button>
+                                </div>
+                              </form>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                <!-- fin -->
+              </div>
+              <!-- debut de la premiere pop-uo -->
+
+
+          <div>
+        <div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- fin du corps de la page -->
+{% endblock %}

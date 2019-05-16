@@ -1,0 +1,517 @@
+{% extends '::home.html.twig' %}
+
+{% block title %}{{'Bienvenue chez'|trans}} Dikaki:: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+
+{% block body %}
+    <!-- End Header -->
+
+    <!-- debut du slider -->
+    <div class="slider_wrapper">
+        <div class="my_section_slider">
+            <div id="slideShowImages" style="width:100% !important;">
+                <img src="{{ asset('img/banner1.png ')}}" class="slider_img" />
+                <img src="{{ asset('img/b4.jpg ')}}" class="slider_img" />
+                <img src="{{ asset('img/banner6.png ')}}" class="slider_img" />
+                <img src="{{ asset('img/banner8.png ')}}" class="slider_img" />
+                <img src="{{ asset('img/banner4.png ')}}" class="slider_img" />
+                <img src="{{ asset('img/banner2.png ')}}" class="slider_img" />
+                <img src="{{ asset('img/oui.png ')}}" class="slider_img" />
+            </div>
+        </div>
+        <div class="wrapper_solution">
+            <h4 class="my_class_4 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
+                {{ 'Solution de gestion de planning, de prise de rendez-vous en  ligne et dépôt de dossier.'|trans}}
+            </h4>
+            <h6 class="my_class_6 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
+               Dikaki {{ "est une plateforme de services, d'information et de communication."|trans}} 
+            </h6>
+        </div>
+    </div>
+    <!-- fin du slider -->
+
+    <!-- debut de la section objectif -->
+    <div class="container">
+        <div class="wrapper_objectif">
+            <p class="p_objectif">
+                {{ "L'objectif de Dikaki c'est de vous accompagner jour après jour quel que soit votre secteur d'activité"|trans}}.
+            </p>
+            <p class="p_second">
+                {{ 'Avec ses quatre Segments.'|trans}}
+            </p>
+        </div>
+    </div>
+    <!-- fin de la section objectif -->
+    <div class="container">
+        <!-- début des quatres solution-->
+        <div class="">
+            <div class="quatre_solution">
+                <div class="col-xs-12 col-sm-6 col-lg-3 col-md-3">
+                    <div class="zoomarticle" title="Dikaki rendez-vous">
+                        <div class="article_big_img">
+                            <img src="{{ asset('img/prise de rendez-vous.png')}}" />
+                            <a href="{{ path('dkk_app_rendez_vous') }}" class="btn-gradient green block">{{ 'Prise de rendez-vous'|trans}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-lg-3 col-md-3">
+                    <div class="zoomarticle" title="Dikaki secteur éducatif">
+                        <div class="article_big_img">
+                            <img src="{{ asset('img/education.png')}}" />
+                            <a href="{{ path('dkk_app_education') }}" class="btn-gradient green block">{{ 'Education'|trans}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-lg-3 col-md-3">
+                    <div class="zoomarticle" title="Dikaki dépôt de dossier">
+                        <div class="article_big_img">
+                            <img src="{{ asset('img/depots de dossiers.png')}}" />
+                            <a href="{{ path('dkk_app_dossier') }}" class="btn-gradient green block">{{ 'Dépôt de dossier'|trans}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-lg-3 col-md-3">
+                    <div class="zoomarticle" title="Dikaki billeterie">
+                        <div class="article_big_img">
+                            <img src="{{ asset('img/billeterie1.png')}}" />
+                            <a href="{{ path('dkk_app_billeterie') }}" class="btn-gradient green block">{{ 'Billetterie'|trans}}</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="wrapper_objectif">
+                    <p class="realiation">{{ "Ce que Dikaki réalise pour vous"|trans}}</p>
+                    <p class="voic">{{ "Voici comment ça marche."|trans}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- fin des quatres solution -->
+    </div>
+
+    <div class="wrapper_ligne">
+
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 div_left2">
+                        <div class="wrapper_voici">
+                            <img src="{{ asset('img/prendre rdv 24h.png')}}" class="img-responsive img_voici">
+                            <p class="les_client b">
+                               {{ "Les clients prennent rendez-vous en ligne 24h/24, 7j/7."|trans}}
+                            </p>
+                            <p class="detail_client">
+                                {{ "Vous rendez disponibles vos services sur internet."|trans}}
+                                {{ "Vous êtes accessible à tout moment et en tous lieux."|trans}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 div_right2">
+                        <div class="wrapper_voici">
+                            <img src="{{ asset('img/agenda_remplit_automatiquement.png')}}" class="img-responsive img_voici">
+                            <p class="les_client b">
+                               {{ "L'agenda et le planning sont automatiquement remplis."|trans}}
+                            </p>
+                            <p class="detail_client">
+                                {% trans %} Vos collaborateurs et vous même avez la possibilité de
+                                consulter votre planning à partir de votre ordinateur
+                                ou votre téléphone portable. {% endtrans %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 div_left2">
+                        <div class="wrapper_voici">
+                            <img src="{{ asset('img/online payement1.png')}}" class="img-responsive img_voici">
+                            <p class="les_client">
+                               {{ "Le paiement peut se faire en ligne."|trans}}
+                            </p>
+                            <p class="detail_client">
+                                {% trans %} Vous pouvez activer le paiement en ligne lors
+                                d'une prise de rendez-vous ou d'une commande
+                                vous pouvez demander un acompte ou le montant
+                                total.{% endtrans %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 div_right2">
+                        <div class="wrapper_voici">
+                            <img src="{{ asset('img/sms de confirmation.png')}}" class="img-responsive img_voici">
+                            <p class="les_client">
+                               {{ "Les clients reçoivent la confirmation et rappel de RDV par mail et SMS."|trans}}
+                            </p>
+                            <p class="detail_client">
+                                {% trans %} Les confirmations et les rappels des rendez-vous se
+                                font automatiquement par E-mail et SMS. {% endtrans %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <p class="stage">{{ "Les étapes de prise de rendez-vous."|trans}}</p>
+        </div>
+
+    </div>
+
+    <!-- rien -->
+
+    <div class="container">
+        <div class="row">
+            <p class="ce_que_realise">
+               {{ "Ce que Dikaki peut faire pour vous"|trans}}
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                    <img src="{{ asset('img/a.png')}}" alt="" class="d-block w-full">
+
+                    <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                            Dikaki
+                        </p>
+
+                        <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                           {{ "Prise de rendez-vous en ligne"|trans}}
+                        </h1>
+
+                        <p class="mb-1">
+                           {% trans %} C'est donner la possiblité à vos clients/patients de faire leurs réservations
+                            en ligne sans se déplacer 24h/24 et 7j/7 {% endtrans %} 
+                        </p>
+
+                    </div>
+
+                    <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                    </a>
+                </div>
+
+
+
+            </div>
+            <!-- une seconde ligne -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                    <img src="{{ asset('img/4.png')}}" alt=""
+                         class="d-block w-full">
+
+                    <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                            Dikaki
+                        </p>
+
+                        <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                           {{ "Organisation de votre planning et agenda"|trans}}
+                        </h1>
+
+                        <p class="mb-1">
+                           {% trans %} Définissez les horaires de votre disponibilité, la nature
+                            de vos rendez-vous et prestations. Votre agenda se met
+                            automatiquement à jour dès qu'une réservation est faite. {% endtrans %}
+                        </p>
+
+                    </div>
+
+                    <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                    </a>
+                </div>
+
+
+
+            </div>
+
+            <!-- une autre -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                    <img src="{{ asset('img/1.png')}}" alt="Man with backpack"
+                         class="d-block w-full">
+
+                    <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                            Dikaki
+                        </p>
+
+                        <h1 class=" h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                           {{ "Facilite la communication"|trans}}
+                        </h1>
+
+                        <p class="mb-1">
+                            {% trans %}Envoi automatique du mail de confirmation d'une réservation ou d'un
+                            rendez-vous et le rappel par SMS ou par mail. {% endtrans %}
+                        </p>
+
+                    </div>
+
+                    <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                    </a>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <!-- debut de la deuxiemee ligne -->
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                    <img src="{{ asset('img/2.png')}}" alt="Man with backpack"
+                         class="d-block w-full">
+
+                    <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                            Dikaki
+                        </p>
+
+                        <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                           {{ "Paiement en ligne"|trans}}
+                        </h1>
+
+                        <p class="mb-1">
+                           {{ "Le paiement en ligne peut être effectué au moment de la prise de rendez-vous ou de la commande. Vous pouvez accepter un                                acompte ou le montant total."|trans}}
+                        </p>
+
+                    </div>
+
+                    <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                    </a>
+                </div>
+
+
+
+            </div>
+            <!-- une seconde ligne -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                    <img src="{{ asset('img/b.png')}}"
+                         class="d-block w-full">
+
+                    <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                            Dikaki
+                        </p>
+
+                        <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                           {{ "Gain de nouveaux clients"|trans}}
+                        </h1>
+
+                        <p class="mb-1">
+                           {{ "Grâce à la prise de rendez-vous en ligne, vous augmentez la satisfaction et le nombre de vos clients / patients; vous êtes accesssible 24h/24, 7j/7 et visible sur internet."|trans}}
+                        </p>
+
+                    </div>
+
+                    <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                    </a>
+                </div>
+
+
+
+            </div>
+
+            <!-- une autre -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                    <img src="{{ asset('img/v.png')}}" alt="Man with backpack"
+                         class="d-block w-full">
+
+                    <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                            Dikaki
+                        </p>
+
+                        <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                           {{ "Sécurisation des données personnelles"|trans}}
+                        </h1>
+
+                        <p class="mb-1">
+                           {{ "Les données personnelles visent à permettre la mise en oeuvre des services proposés; les mesures de sureté destinées à                                 protéger  leur confidentialité sont une priorité acquise."|trans}}
+                        </p>
+
+                    </div>
+
+                    <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                    </a>
+                </div>
+
+
+
+            </div>
+        </div>
+        <!-- fin de la deuxieme ligne-->
+
+        <div class="row">
+
+            <!-- debut de la troisieme ligne -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                    <img src="{{ asset('img/h.png')}}"  class="d-block w-full">
+
+                    <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                            Dikaki
+                        </p>
+
+                        <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                           {{ "Personnalisation des formulaires"|trans}}
+                        </h1>
+
+                        <p class="mb-1">
+                           {{ "La prise de rendez-vous peut se faire dans un formulaire personnalisé selon vos besoins; demandez d'inserer un commentaire ou                          télécharger les documents nécessaires." |trans}}
+                        </p>
+
+                    </div>
+
+                    <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                    </a>
+                </div>
+
+
+
+            </div>
+
+            <!-- une autre -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                    <img src="{{ asset('img/g.png')}}" alt="" class="d-block w-full">
+
+                    <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                            Dikaki
+                        </p>
+
+                        <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                           {{ "Eviter les engorgements et les bousculades"|trans}}
+                        </h1>
+
+                        <p class="mb-1">
+                           {{ "Gérez la fluidité dans les sites d'enrôlements, les centres de dépôt de dossier les salles d'attente. Vous faites accroître la                         productivité de vos équipes."|trans}}
+                        </p>
+
+                    </div>
+
+                    <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                    </a>
+                </div>
+
+
+
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                    <img src="{{ asset('img/c.png')}}" alt="Man with backpack"
+                         class="d-block w-full">
+
+                    <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                            Dikaki
+                        </p>
+
+                        <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                           {{ "L'augmentation du chiffre d'affaires"|trans}}
+                        </h1>
+
+                        <p class="mb-1">
+                           {{ "La simplification de la gestion de votre planning et prise de rendez-vous en ligne assure la croissance de votre                                        entreprise. Elle établit une relation de confiance entre vous et le client."|trans}}
+                        </p>
+
+                    </div>
+
+                    <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                    </a>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- fin de la troisieme ligne -->
+    <div class="container">
+        <div class="">
+            <div class="wrapper_btn">
+                <a href="{{path('dkk_app_power')}}" id="texte" class="btn-two green block">{{ "La puissance de Dikaki"|trans}}</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- debut de la section disponible sur tous les appareil-->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                    <img src="{{ asset('img/Desktop.jpg')}}" class="img-responsive img_device">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                    <p class="adapte_para">
+                       {% trans %} Dikaki s'adapte à vos besoins quelle que soit la taille de votre
+                        activité, utile aujourd'hui pour les administrations, les services
+                        publics et les collectivités locales. {% endtrans %}
+                    </p>
+                    <p class="sloguan">
+                       {{ "Dikaki, c'est simple et rapide."|trans}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin de la section disponible sur tous les appareil -->
+
+    <!-- debut de la section des statistique -->
+    <div class="">
+        <div class="wrapper_device">
+            <div class="container">
+                <div class="row wow fadeInDown" data-wow-delay="0.1s">
+                    <div class="wrapper_part">
+                        <p class="slogan_footer">
+                           {{ "Rejoignez nous maintenant !!!"|trans}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- fin de la section des statistique -->
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        var address;
+        $(document).ready(function () {
+            $("#submitEmail").on('click', function () {
+                address = $('#newsletter').val();
+                $('#newsletter').val("");
+                $.ajax({
+                    url: "{{ path('dkk_app_newsletter') }}",
+                    type:"POST",
+                    data:{email:address},
+                    success: function(msg){
+                        alert(msg);
+                    },
+                    error: function(xhr){
+                        alert("erreur ajax" + xhr);
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

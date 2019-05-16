@@ -1,0 +1,98 @@
+       {% extends '::client.html.twig' %}
+
+{% block title %}{{'Clinique du docteur Ebogo validation du rendez-vous'|trans}}  :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+
+{% block body %}
+<!-- debut du code -->
+<div class="container" id="container_2">
+        <div class="margin_center">
+            <div>
+                <div class="donw_title"></div>
+                <div class="css-ezupjj">
+                    <div class="css-ej55tb">
+                        <h1 class="h2_titre2"><span>{{'Clinique du'|trans}} Docteur Ebogo </span><span></span></h1>
+                        <h2 class="h3_location3"><i class="fa fa-map-marker" aria-hidden="true"></i> Yaoundé Essos</h2>
+                    </div>
+                    <hr class="hr_reservation">
+                </div>
+
+                <div>
+                    <div class="css-i6wjbx">
+                        <div>
+                            <div class="p_down"></div>
+                            <div class="div_prestation">5. {{'Validation'|trans}} </div>
+                            <div class="wrapper">
+                                <div class="wrapper_color_identification validation_rdv">
+                                <div class="down_wrapper">
+                                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                        <p class="your_rdv_">{{'Votre rendez-vous'|trans}} </p>
+                                       <ul class="link_recap">
+                                            <li>{{'Lundi 17 Novembre 2019 à 11h 30'|trans}}.</li>
+                                            <li>{{'Consultation pour des soins dentaires'|trans}}. </li>
+                                           <li>{{'Avec'|trans}} Jeanne.</li>
+                                           <li>Ebolo Ebolo Guillaume.</li>
+                                           <li>10.000 Fcfa.</li>
+                                       </ul>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+
+                                         <button class="btn_send_message" id="shom_textarea"><i class="fa fa-envelope"></i></button>
+
+                                        <a href="{{ path('dkk_app_reservation') }}#retake" class="btn_send_message2"><i class="fa fa-pencil pencil_i"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                                <form method="post" action="{{ path('dkk_app_voir') }}">
+                                    <div class="message_send pull-right" style="display:none !important;">
+                                    <textarea class="form-control textearea_send" placeholder="Ecrire un message"></textarea>
+                                    </div>
+                                    <div class="wrapper_last_btn pull-right">
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                            <a href="{{ path('dkk_app_choix')}}#ancre" style="color:#fff !important;" class="annulation_my_rdv"><i class="fa fa-times"></i> &nbsp;&nbsp; {{'Annuler le rdv'|trans}} </a>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                            <button type="submit" class="create_acount"><i class="fa fa-fa fa-check"></i> &nbsp;&nbsp; {{'Valider le rdv'|trans}} </button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+
+
+                           <div class="p_down"></div>
+                            <p style="clear:both !important;"></p>
+                        <div class="paragraphe_information">
+                            <p>
+                                {{"Vous avez la possibilité de modifier deux fois votre rendez-vous. Un sms de rappel vous seras envoyer quelques heures avant le début de votre rendez-vous."|trans}}
+                            </p>
+                            <p>{{"Dr Mengue jeanne dentiste sera absente du 15 Aout au 15 septemmbre 2019. Elle sera remplacée par le Dr Ongla."|trans}}</p>
+                        </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin du code -->
+
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+<script>
+        $(document).ready(function(){
+          
+
+        });
+    </script>
+{% endblock %}

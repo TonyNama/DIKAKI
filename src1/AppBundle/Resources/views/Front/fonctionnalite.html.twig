@@ -1,0 +1,737 @@
+{% extends '::feature.html.twig' %}
+        {% block style %}
+			<style>
+            /* the slides */
+             .slick-prev {
+                    color: black !important;
+                    background: red;
+                    position: relative;
+                    display:block;
+                    margin-top: 1000px;
+                }
+                ul {
+                  list-style: none;
+                }
+
+                li {
+                  list-style: none;
+                }
+            .my-2{
+                height: 160px !important;
+                padding-top: 10px !important;
+                margin-top: 55px !important;
+            }
+        </style>
+		{% endblock %}
+        
+		{% block body %}
+ 
+        
+
+    		<header>
+
+				<!-- Begin Top Bar -->
+				<div class="top-bar top-bar-dark">
+					<div class="container">
+						<div class="row">
+							<!-- Address and Phone -->
+							<div class="col-sm-7 hidden-xs">
+								<span class="ion-android-system-home home-icon"></span>{{'Plateforme de prise de rendez-vous et paiement en ligne en Afrique'|trans}}.
+							</div>
+							<!-- Social Buttons -->
+							<div class="col-sm-5 text-right">
+				                <ul class="topbar-list list-inline">
+					                <li>
+                                         <span class="numbre_serdi">
+                                           <span class="ion-ios7-telephone phone-icon"></span>  +237 655 010 808
+                                        </span>
+							            <a class="btn btn-social-icon btn-rw btn-primary btn-xs">
+											<i class="fa fa-twitter"></i>
+										</a>
+										<a class="btn btn-social-icon btn-rw btn-primary btn-xs">
+											<i class="fa fa-instagram"></i>
+										</a>
+										<a class="btn btn-social-icon btn-rw btn-primary btn-xs">
+											<i class="fa fa-facebook"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div><!--/row -->
+					</div><!--/container header -->
+				</div><!--/top bar -->
+				<!-- End Top Bar -->
+
+
+
+		     	<!-- Begin Navigation -->
+		     	<div class="navbar-wrapper">
+					<div class="navbar navbar-main" id="fixed-navbar">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-12 column-header">
+									<div class="navbar-header">
+										<!-- Brand -->
+										<a href="{{ path('dkk_app_homepage') }}" class="navbar-brand">
+                                            <img src="{{asset('img/dikaki droit.png')}}" class="raleway-logo" alt="Dikaki">
+										</a>
+										<!-- Mobile Navigation -->
+										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+								            <span class="sr-only">Toggle navigation</span>
+								            <span class="icon-bar"></span>
+								            <span class="icon-bar"></span>
+								            <span class="icon-bar"></span>
+										</button>
+									</div><!-- /navbar header -->
+
+									<!-- Main Navigation - Explained in Documentation -->
+									<nav class="navbar-collapse collapse navHeaderCollapse" role="navigation">
+										<ul class="nav navbar-nav navbar-right">
+											<li class="dropdown dropdown-main">
+									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Solutions'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
+									          		<li><a href="{{ path('dkk_app_rendez_vous') }}">{{'Dikaki Rendez-vous'|trans}}</a></li>
+                                                    <li><a href="{{ path('dkk_app_education') }}">{{'Dikaki Secteur éducatif'|trans}}</a></li>
+									          		<li><a href="{{ path('dkk_app_dossier') }}">{{'Dikaki Dépôt de dossier'|trans}}</a></li>
+									          		<li><a href="{{ path('dkk_app_billeterie') }}">{{'Dikaki E-ticket'|trans}}</a></li>
+
+
+									        	</ul>
+									        </li>
+
+							<li class="dropdown dropdown-main">
+									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Professionnel'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
+									          		<li><a href="{{ path('dkk_professionnel_inscription') }}">{{'Créer un compte'|trans}}</a></li>
+									          		<li><a href="{{ path('dkk_professionnel_connexion') }}">{{"J'ai un compte"|trans}}</a></li>
+
+
+									        	</ul>
+									        </li>
+										<li class="dropdown dropdown-main">
+									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Particulier'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
+									          		<li><a href="{{ path('dkk_utilisateur_inscription') }}">{{"S'inscrire"|trans}}</a></li>
+									          		<li><a href="{{ path('dkk_utilisateur_connexion') }}">{{'Se connecter'|trans}}</a></li>
+
+
+									        	</ul>
+									        </li>
+										<li class="dropdown dropdown-main">
+									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Mon compte'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
+									          		<li><a href="{{path('dkk_utilisateur_profile')}}">{{'Mes rendez-vous'|trans}}</a></li>
+									          		<li><a href="">{{'Se déconnecter'|trans}}</a></li>
+
+
+									        	</ul>
+									        </li>
+											<li class="dropdown dropdown-main">
+                            <a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Français'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
+                            <ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
+                                <li><a href="">{{'Anglais'|trans}}</a></li>
+                                <li><a href="">{{'Espagnol'|trans}}</a></li>
+                                <li><a href="">{{'Portugais'|trans}}</a></li>
+
+                            </ul>
+                          </li>
+
+
+									</nav><!-- /nav -->
+								</div>
+							</div>
+						</div><!-- /container header -->
+					</div><!-- /navbar -->
+				</div><!-- /navbar wrapper -->
+				<!-- End Navigation -->
+
+			</header><!-- /header -->
+			<!-- End Header -->
+            <div class="container-fluid">
+                <div class="container">
+                     <div class="row">
+                        <p class="voici_">{{'Voici comment ça fonctionne'|trans}}.</p>
+                        <p class="your_teams">
+                           {{"Notre équipe commerciale se déplace sur votre lieu d'activité pour vous présenter la solution Dikaki , \n répondre à vos questions et noter vos suggestions"|trans}}.
+                        </p>
+                        <p class="begin_funct">{{'Fonctions de mise en marche au départ'|trans}}.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid paralax_fonctionalite">
+                <div class="container">
+                    <div class="row">
+                        <!-- debut du timeline pour les fonctionnalité -->
+                          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div id="wrapper_func" class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100% !important; overflow: hidden; border-radius: 1px;">
+
+
+                      <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                          Dikaki
+                        </p>
+
+                        <h1 class="text_smalls ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                            {{'Inscrivez-vous gratuitement'|trans}}.
+                        </h1>
+
+
+
+                      </div>
+                </div>
+
+                        </div>
+
+                             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div id="wrapper_func" class="wrapper_func my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100% !important; overflow: hidden; border-radius: 1px;">
+
+
+                      <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                          Dikaki
+                        </p>
+
+                        <h1 class="text_smalls ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                           {{'Enregistrez vos services'|trans}}.
+                        </h1>
+
+
+
+                      </div>
+                </div>
+
+                        </div>
+
+                             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div id="wrapper_func" class="wrapper_func my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100% !important; overflow: hidden; border-radius: 1px;">
+
+
+                      <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                          Dikaki
+                        </p>
+
+                        <h1 class="text_smalls ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                           {{'Définissez le gestionnaire de votre agenda'|trans}}.
+                        </h1>
+
+
+
+                      </div>
+                </div>
+
+                        </div>
+
+
+                             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div id="wrapper_func" class="wrapper_func my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100% !important; overflow: hidden; border-radius: 1px;">
+
+                      <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text_smalls text-muted lts-2px">
+                          Dikaki
+                        </p>
+
+                        <h1 class="text_smalls ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                            {{'Activez la prise de rendez-vous en ligne'|trans}}.
+                        </h1>
+
+
+
+                      </div>
+                </div>
+
+                        </div>
+                        <!-- fin du timeline pour les fonctionnalité -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="slider">
+                    <div class="row">
+                        <p class="principal_">{{'Fonctionnalités principales & Services additionnels'|trans}}.</p>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+
+                        <!-- debut du code pour les service -->
+                            <section class="center slider">
+                            <div class="my_margin">
+                              <img src="{{ asset('img/if_Calendar_728916.png')}}" class="imgs">
+                                <span class="small_serv">{{'Fonctionnalités principales'|trans}}</span>
+                                <p class="p_fonct">{{'Prise de rendez-vous en ligne 24/24 et 7j/7'|trans}}</p>                              </div>
+
+                                <div class="my_margin">
+                              <img src="{{asset('img/if_calendar_283044.png')}}" class="imgs">
+                                <span class="small_serv">{{'Fonctionnalités principales'|trans}}</span>
+                                    <p class="p_fonct">{{'Agenda professionnel et gestion des horaires'|trans}}</p>
+                            </div>
+                            <div class="my_margin">
+                              <img src="{{asset('img/iconfinder_TechnicalSupportRepresentative_Female_Light_80905.png')}}" class="imgs">
+                                <span class="small_serv">{{'Fonctionnalités principales'|trans}}</span>
+                                <p class="p_fonct">{{'Gestion des prestations et prestataires'|trans}}</p>
+                            </div>
+                            <div class="my_margin">
+                              <img src="{{asset('img/if_5303_-_Gmail_1313515.png')}}" class="imgs">
+                                <span class="small_serv">{{'Fonctionnalités principales'|trans}}</span>
+                                <p class="p_fonct">{{'Confirmation et rappel de rendez-vous par email et sms'|trans}}</p>
+                            </div>
+                            <div class="my_margin">
+                              <img src="{{asset('img/iconfinder_browser_1055104.png')}}" class="imgs">
+                                <span class="small_serv">{{'Fonctionnalités principales'|trans}}</span>
+                                <p class="p_fonct">{{'Page web personnalisée'|trans}}</p>
+                            </div>
+                            <div class="my_margin">
+                              <img src="{{asset('img/iconfinder_08_Web_Development_1688871 (1).png')}}" class="imgs">
+                                <span class="small_serv">{{'Fonctionnalités principales'|trans}}</span>
+                                <p class="p_fonct">{{'Assistance au paramétrage / Formation'|trans}}</p>
+                            </div>
+                            <div class="my_margin">
+                              <img src="{{asset('img/iconfinder_15_3319629.png')}}" class="imgs">
+                                <span class="small_serv">{{'Fonctionnalités principales'|trans}}</span>
+                                <p class="p_fonct">{{'Paiement en ligne'|trans}}</p>
+                            </div>
+                            <div class="my_margin">
+                              <img src="{{asset('img/iconfinder_Cake_206472.png')}}" class="imgs">
+                                <span class="small_serv">{{'Fonctionnalités principales'|trans}}</span>
+                                <p class="p_fonct">{{'Statistiques détaillées des rendez-vous'|trans}}</p>
+                            </div>
+                            <div class="my_margin">
+                              <img src="{{asset('img/iconfinder_woman-headset-bg_3430591.png')}}" class="imgs">
+                                <span class="small_serv">{{'Fonctionnalités principales'|trans}}</span>
+                                <p class="p_fonct">{{'Suivi de présence au rendez-vous'|trans}}</p>
+                            </div>
+                           <div class="my_margin">
+                               <img src="{{asset('img/iconfinder_facebook-group_3007561.png')}}" class="imgs">
+                                <span class="small_serv">{{'Fonctionnalités principales'|trans}}</span>
+                               <p class="p_fonct">{{'Rendez-vous de groupe'|trans}}</p>
+                            </div>
+                            <div class="my_margin">
+                               <img src="{{asset('img/iconfinder_calendar-clock_299096.png')}}" class="imgs">
+                                <span class="small_serv">{{'Fonctionnalités principales'|trans}}</span>
+                               <p class="p_fonct">{{'Modification et annulation des rendez-vous'|trans}}</p>
+                            </div>
+
+                            <!-- service additionnels-->
+
+                             <div class="my_margin">
+                               <img src="{{asset('img/iconfinder_Calendar_Icon_FlatGreen_306921.png')}}" class="imgs">
+                                <span class="small_serv">{{'Services additionnels'|trans}}</span>
+                               <p class="p_fonct">{{'Agenda supplémentaire'|trans}}</p>
+                            </div>
+
+                             <div class="my_margin">
+                               <img src="{{asset('img/iconfinder_Artboard_1_1790664.png')}}" class="imgs">
+                                <span class="small_serv">{{'Services additionnels'|trans}}</span>
+                               <p class="p_fonct">{{'Personnalisation des formulaires'|trans}}</p>
+                            </div>
+
+                             <div class="my_margin">
+                               <img src="{{asset('img/iconfinder_Artboard_1_1790665.png')}}" class="imgs">
+                                <span class="small_serv">{{'Services additionnels'|trans}}</span>
+                               <p class="p_fonct">{{"Gestion des files d'attentes"|trans}}</p>
+                            </div>
+
+                                 <div class="my_margin">
+                               <img src="{{asset('img/iconfinder_woman-headset-bg_3430591.png')}}" class="imgs">
+                                <span class="small_serv">{{'Services additionnels'|trans}}</span>
+                               <p class="p_fonct">{{'Reprogrammation automatique des rendez-vous manqués'|trans}}</p>
+                            </div>
+                      </section>
+                        <!-- fin du code pour les services -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contianer-fluid">
+                <div class="container">
+                    <div class="row">
+                       <div class="wrapper_paiement">
+                            <h2>{{'Comment vous allez payer'|trans}}.</h2>
+                            <h3>{{'Des services aux prix compétitifs et adaptables suivant vos besoins'|trans}}.</h3>
+                            <h3>{{'Une tarification juste pour des fonctionnalités puissantes et performantes'|trans}}.</h3>
+                            <h4>{{'Deux formules sont disponibles pour notre plateforme après études, sur devis'|trans}}.</h4>
+                            <h4>{{"Notre forfait inclut toutes les fonctionnalités principales. Seuls les services supplémentaires sont facturés"|trans}}.</h4>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="wrapper_contract">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <!-- debut du code -->
+                                    <section>
+                                      <div class='pricing pricing-palden'>
+                                        <div class='pricing-item'>
+                                          <div class='pricing-deco'>
+                                            <svg class='pricing-deco-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                                              <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729&#x000A; c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
+                                              <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729&#x000A;  c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
+                                              <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716&#x000A;  H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
+                                              <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428&#x000A; c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
+                                            </svg>
+                                            <div class='pricing-price'>{{'Dikaki pro-solutions'|trans}}</div>
+
+                                          </div>
+                                          <ul class='pricing-feature-list'>
+                                            <li class='pricing-feature'>{{'Un contrat de forfait mensuel avec ou sans engagement de durée'|trans}}.</li>
+                                            <li class='pricing-feature'>{{"Un service à inscription et à utilisation gratuites"|trans}}.</li>
+                                          </ul>
+                                        </div>
+
+                                      </div>
+                                    </section>
+                                <!-- fin du code -->
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <!-- debut du code -->
+                                    <section>
+                                      <div class='pricing pricing-palden'>
+                                        <div class='pricing-item'>
+                                          <div class='pricing-deco'>
+                                            <svg class='pricing-deco-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                                              <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729&#x000A; c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
+                                              <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729&#x000A;  c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
+                                              <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716&#x000A;  H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
+                                              <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428&#x000A; c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
+                                            </svg>
+                                            <div class='pricing-price'>{{'Dikaki pro-services'|trans}}</div>
+
+                                          </div>
+                                          <ul class='pricing-feature-list'>
+                                            <li class='pricing-feature'>{{'Un contrat de service soumis à une commission à chaque opération ou transaction'|trans}}.</li>
+                                            <li class='pricing-feature'>{{'Un service payant'|trans}}.</li>
+                                          </ul>
+                                        </div>
+
+                                      </div>
+                                    </section>
+                                <!-- fin du code -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="wrapper_paiement">
+                            <h2 class="pour_les_grand">{{'Pour les grands comptes'|trans}}</h2>
+                            <p class="p_description">
+                               {% trans %} Administrations, établissements publics et privés, collectivités territoriales, grandes entreprises
+
+    Notre équipe technique se charge de vos développements personnalisés et un accompagement sur mesure afin de vous aider à intégrer nos <b>API</b> (solutions) dans vos applications externes pour automatiser votre gestion de rendez-vous. {% endtrans %}
+                            </p>
+                        <p class="seconde_p_">{{"\" Dikaki, une plateforme simple, accessible et efficace.\""|trans}}</p>
+                            <div class="damander_devid">
+                                <a href="{{path('dkk_app_devis')}}" class="event_rdv green ">{{'Demander un devis'|trans}}</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <p class="principal_ principal_2">{{'Les réponses à vos questions'|trans}}</p>
+                    </div>
+                    <div class="row">
+                        <ul class="faq">
+                           <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <li class="q"><img src="https://i.imgur.com/dRKbHww.png" alt=""/> {{"Comment dois-je faire pour m'abonner à Dikaki"|trans}} ?</li>
+    <li class="a">{{"Parmi les formules d'abonnements proposées choisissez celui qui vous convient le mieux, vous êtes libre de résilier votre abonnement à tout moment"|trans}}. </li>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <li class="q"><img src="https://i.imgur.com/dRKbHww.png" alt=""/> {{"Puis-je utiliser Dikaki pour mes paiements en ligne"|trans}} ?</li>
+    <li class="a">{{"Oui. Si vous le souhaitez avec le module de paiement en ligne vos clients peuvent régler tout ou partie du montant de la prestation ou du service"|trans}}. </li>
+                            </div>
+                           </div>
+
+                           <!-- seconde lignr -->
+                           <p class="down_faq"></p>
+                           <div class="row">
+                               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                               <li class="q"><img src="https://i.imgur.com/dRKbHww.png" alt=""/> {{"Est-il possible de tester gratuitement Dikaki"|trans}} ?</li>
+   <li class="a">
+     {{"Oui! Evidemment, vous avez une possibilité de tester la solution Dikaki gratuitement. Ceci pendant 60 jours sans engagement de votre part"|trans}}.
+   </li>
+                           </div>
+
+                           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                               <li class="q"><img src="https://i.imgur.com/dRKbHww.png" alt=""/>{{"Proposez-vous une formation à l'utilisation de Dikaki"|trans}} ?</li>
+   <li class="a">
+        {{"Oui! Bien-sûr, une formation initiale à l'utilisation de Dikaki est prévue pour chaque abonné"|trans}}.
+     </li>
+                           </div>
+                           </div>
+
+                           <!-- fin -->
+
+
+                            <!-- seconde lignr -->
+                            <p class="down_faq"></p>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <li class="q"><img src="https://i.imgur.com/dRKbHww.png" alt=""/>{{'Pourquoi utiliser Dikaki'|trans}} ?</li>
+    <li class="a">
+     {{"Votre métier exige la prise de rendez-vous, Dikaki remplit automatiquement votre agenda, permet le paiement de la prestation ou du service en ligne, ce qui augmente votre temps de travail. Vous transformez la prise de rendez-vous en un besoin"|trans}}.
+    </li>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <li class="q"><img src="https://i.imgur.com/dRKbHww.png" alt=""/> {{'Puis-je utiliser Dikaki sans paiement en ligne'|trans}} ?</li>
+    <li class="a">{{'Evidemment. Le paiement en ligne est une option, un service supplémentaire'|trans}}.</li>
+                            </div>
+                            </div>
+
+                            <!-- fin -->
+
+                             <!-- seconde lignr -->
+                            <p class="down_faq"></p>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <li class="q"><img src="https://i.imgur.com/dRKbHww.png" alt=""/>{{'Comment fonctionne ce service'|trans}}?</li>
+    <li class="a">{{"Si vous êtes inscrits chez Dikaki, nous créons votre agenda professionnel et  votre page d'acceuil internet. Vos patients ou clients créent leurs comptes Dikaki et accèdent via votre page internet à des créneaux de consultation ou prestation disponibles"|trans}}.</li>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <li class="q"><img src="https://i.imgur.com/dRKbHww.png" alt=""/> {{'Que peut faire Dikaki pour moi'|trans}}?</li>
+    <li class="a">
+      {{"Nous sommes un service qui vous aide à atteindre vos objectifs: augmenter votre volume d'activité et accélérer votre développement, être plus visible et mieux communiquer, accroître la productivité de vos équipes, booster votre rentabilité et réduire vos coûts"|trans}}.
+    </li>
+                            </div>
+                            </div>
+
+
+
+                            <!-- fin -->
+
+                              <!-- seconde lignr -->
+                            <p class="down_faq"></p>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <li class="q"><img src="https://i.imgur.com/dRKbHww.png" alt=""/>{{"Les clients vont-ils prendre ou annuler leurs RDV à leur gré"|trans}} ? </li>
+    <li class="a">{{"Non, au contraire Dikaki vous donne plusieurs sécurités. D'une part, le patient ou le client voit son identité vérifiée lors de son inscription, reçoit un SMS de confirmation avant la consultation ou la prestation, et d'autre part vous pouvez suivre ses absences et lui bloquer l'accès à la prise de rendez-vous si besoin"|trans}}.</li>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <li class="q"><img src="https://i.imgur.com/dRKbHww.png" alt=""/>{{'Avantages de Dikaki pour mon activité'|trans}}?</li>
+    <li class="a">
+      Dikaki {{"vous donnes la possibilité d'organiser à votre guise, votre temps de travail pour mieux accueillir vos patients / clients par son service de prise de rendez-vous et paiement en ligne, de sécuriser les informations mises à votre disposition"|trans}}.
+    </li>
+                            </div>
+                            </div>
+
+
+
+                            <!-- fin -->
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+                <p class="most_down"></p>
+                 <script>
+                    $(document).ready(function(){
+                   
+
+                   });
+
+                </script>
+
+             <!-- debut de la section footer-->
+<footer>
+            <div class="container-fluid padding">
+               <div class="bg_footer">
+                     <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <h3 class="title_footer">
+                                   {{'Solutions'|trans}}
+                                </h3>
+
+
+                                <ul class="ul_description">
+                                  <li class="detail_para">
+                                       <a href="{{ path('dkk_app_rendez_vous') }}" class="">{{'DIKAKI Prise de rendez-vous'|trans}}</a>
+                                    </li>
+                                    <li class="detail_para">
+                                       <a href="{{ path('dkk_app_education') }}" class="">{{'DIKAKI Secteur éducatif'|trans}}</a>
+                                    </li>
+                                    <li class="detail_para">
+                                      <a href="{{ path('dkk_app_dossier') }}" class="">{{'DIKAKI Dépôt de dossier'|trans}}</a>
+                                    </li>
+
+                                        <li class="detail_para">
+                                          <a href="{{ path('dkk_app_billeterie') }}" class="">{{'DIKAKI E-Ticket'|trans}}</a>
+                                        </li>
+                                         <li class="detail_para">
+                                          <a href="{{ path('dkk_app_fonctionnalite') }}" class="">{{'Comment ça marche'|trans}} ? </a>
+
+                                        </li>
+                                </ul>
+                                 <p class="p_letter">
+                                    <label for="letter">{{'Newsletter'|trans}}</label>
+                                </p>
+                                <form method="post" action="" id="register_form" autocomplete="off">
+                                    <span class="val_email_"></span>
+                                    <input type="text" name="newsletter" id="letter" class="letter_form form-control" placeholder="Votre adresse E-mail">
+                                    <p><button type="submit"  class="send_newsletter green button_send">{{'Envoyer'|trans}}</button></p>
+                                </form>
+
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <h3 class="title_footer">
+                                    {{'Contactez-nous'|trans}}
+                                </h3>
+                                <p class="serdi_infio">
+                                    {{'SERDI INFORMATIQUE'|trans}}
+                                </p>
+                                <p class="contact_para">
+                                   {{" BP:11007, Yaoundé - Cameroun"|trans}}
+                                </p>
+                                <p class="contact_para">
+                                    {% trans %} Route aéroport international de Yaoundé
+                                    Nsimalen. PK 10 Odza. {% endtrans %}
+                                </p>
+                                <p class="contact_para">
+                                    {{"Ouverture: Lun. - Ven."|trans}}
+                                    9h - 18h.
+                                </p>
+                                <p class="contact_para">
+                                  
+                                    {{'Service clients'|trans}}: +237 655 010 808
+                                </p>
+                                <p class="contact_para">
+                                    {{'Support technique'|trans}}: +237 676 862 919
+                                </p>
+                               <p class="contact_para">
+                                    {{'Email'|trans}}: <a href="mailto:contact@dikaki-rdv.com" title="Nous contacter" style="color: #fff !important;font-weight: 700 !important;"> contact@dikaki-rdv.com</a>
+                                </p>
+
+
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <h3 class="title_footer">
+                                    {{'Assistance rapide'|trans}}
+                                </h3>
+                                <p class="para_assis">
+                                    {% trans %} Nos conseillers vous assistent dès les premières heures d'utilisation
+                                    en vous expliquant toutes les fonctionnalités de la solution agenda
+                                    planning Dikaki et la prise de rendez-vous en ligne. Nos équipes
+                                    restent disponibles et réagissent rapidement à votre sollicitation. {% endtrans %}
+                                </p>
+                                 <p>
+                                    <a href="{{ path('dkk_app_contact') }}" class="btn_contact green block">{{'Contactez-nous'|trans}}</a>
+                                </p>
+
+
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <h3 class="title_footer">
+                                    {{'Trouver un rendez-vous'|trans}}
+                                </h3>
+                                <p>
+                                    <a href="{{ path('dkk_professionnel_choix') }}" class="event_rdv green">{{'Professionnel'|trans}}</a>
+                                </p>
+                                <h3 class="title_footer">
+                                   {{' Trouver un évènement'|trans}}
+                                </h3>
+                                <p>
+                                    <a href="{{ path('dkk_app_evenement') }}" class="event_rdv green">{{'Evènement'|trans}}</a>
+                                </p>
+                                <h3 class="title_footer">
+                                    {{'Communauté'|trans}}
+                                </h3>
+                                <p>
+                                    <a href="{{ path('dkk_app_partenaire') }}" class="btn_contact green block" style="text-align: center;width: 100% !important">{{'Devenir partenaire'|trans}}</a>
+                                </p>
+
+                                <p>
+                                    <a href="{{path('dkk_app_blog')}}" class="btn_contact green block" style="text-align: center;width: 100% !important">{{'Blog et Actualités'|trans}}</a>
+                                </p>
+                                
+                            </div>
+                         </div>
+                    </div>
+               </div>
+                <div class="container-fluid" style="background:#fff !important;">
+                    <div class="row">
+                        <div class="small_footer">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <p class="copy_right">&copy; 2018 Copyright - DIKAKI SERDI {{'Cameroun'|trans}}  </p>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <a href="{{ path('dkk_app_cgu') }}" class="cgu">{{'Mentions légales'|trans}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    {% endblock %} 
+                
+                
+                
+        {% block scripts %}
+		 <script>
+       $(document).ready(function(){
+           $(".center").slick({
+                dots: false,
+                infinite: true,
+                centerMode: true,
+                slidesToShow: 4,
+                slidesToScroll: 3,
+                centerPadding:'0px',
+                swipeToSlide:true,
+                speed: 400,
+                autoplay: true,
+                arrows: false,
+                responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 3,
+                infinite: true,
+                //dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+              });
+
+              // second code
+
+
+       });
+    </script>
+        {% endblock %}

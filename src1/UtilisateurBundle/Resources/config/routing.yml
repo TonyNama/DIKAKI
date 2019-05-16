@@ -1,0 +1,56 @@
+dkk_utilisateur_password_oublie:
+    path:    /password/oublie
+    defaults: { _controller: DKKUtilisateurBundle:Utilisateur:changePassword }
+    
+dkk_utilisateur_inscription:
+    path:     /inscription
+    defaults: { _controller: DKKUtilisateurBundle:Utilisateur:inscription }
+    
+dkk_utilisateur_inscription2:
+    path:     /inscription2
+    defaults: { _controller: DKKUtilisateurBundle:Utilisateur:inscription2 }
+    
+dkk_utilisateur_connexion:
+    path:     /connexion/{id}
+    defaults: { _controller: DKKUtilisateurBundle:Utilisateur:connexion, id : 0 }
+    requirements:
+        id: \d*
+
+dkk_utilisateur_deconnexion:
+    path:     /deconnexion
+    defaults: { _controller: DKKUtilisateurBundle:Utilisateur:deconnexion }
+
+dkk_utilisateur_sauvegarde:
+    path:   /sauvegarde
+    defaults: { _controller: DKKUtilisateurBundle:Utilisateur:sauvegarde }
+    
+dkk_utilisateur_espace:
+    path:    /espace
+    defaults: { _controller: DKKUtilisateurBundle:Utilisateur:espace }
+    
+dkk_utilisateur_authentification:
+    path:     /profile
+    defaults: { _controller: DKKUtilisateurBundle:Utilisateur:authentification }
+    
+dkk_utilisateur_authentification2:
+    path:     /procAuthOk
+    defaults: { _controller: DKKUtilisateurBundle:Utilisateur:authentification2 }  
+
+#New Front
+dkk_utilisateur_:
+    path:     /
+    defaults: { _controller: DKKUtilisateurBundle:Front:authentification2 }
+
+dkk_utilisateur_modifier:
+    path:    /modifier
+    defaults: { _controller: DKKUtilisateurBundle:Front:modifier }
+    
+dkk_utilisateur_historique:
+    path:    /historique
+    defaults: { _controller: DKKUtilisateurBundle:Front:historique }
+
+dkk_utilisateur_profile:
+    path:    /profile
+    defaults: { _controller: DKKUtilisateurBundle:Front:profile }
+    
+

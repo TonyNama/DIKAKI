@@ -1,0 +1,152 @@
+ {% extends 'connect.html.twig' %}
+
+{% block title %}{{'Demander une demonstration'|trans}} :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+
+{% block style %}
+  <style>
+        .sky-form{
+            box-shadow: none !important;
+            border:1px solid #fff !important;
+        }
+             #wrapper > button{
+          display: block;
+          margin-left: 170px !important;
+        }
+
+            body{
+      background: url('{{asset("img/t8.png")}}') no-repeat center center;
+      background-size: cover !important;
+      background-attachment: fixed !important;
+    }
+    </style>
+
+
+{% endblock %}
+
+{% block body %}
+        <div class="container-fluid">
+          <div class="down_containt"></div>
+            <div class="container">
+                 <div id="wrapper">
+
+                       <div class="wrapper_prise_">
+                        <div class="">
+                          <p class="demander_demo wow fadeInDown" data-wow-delay="0.1s">{{'Veuillez entrer vos coordonnées pour une version de démonstration'|trans}}</p>
+
+                        <p class="demander_demo2">{{'Développez votre activité avec la solution Dikaki.'|trans}}</p>
+
+                        <div class="row">
+                            <p class="with_par" >{{'Vous cherchez à booster votre activité ?'|trans}}</p>
+                            <p class="with_par">{{'Notre équipe commerciale et technique est à votre disposition du lundi au vendredi de 9h à 18h.'|trans}}</p>
+                            <p class="with_par center_">{{'Par mail'|trans}}: <b><a href="mailto:contact@dikaki-rdv.com" class="form_contact" title="Nous contacter par mail." style="color:#000;">Contact@dikaki-rdv.com</a></b></p>
+
+                        </div>
+                           <div class="row">
+                            <!-- debut -->
+    <form action="" class="sky-form" method="post" id="signupForm">
+
+        <fieldset>
+          <div class="row">
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-user"></i>
+                <input type="text" placeholder="Nom" name="firstname">
+              </label>
+
+            </section>
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-user"></i>
+                <input type="text" placeholder="Prenom" name="lastname">
+              </label>
+
+            </section>
+          </div>
+                    <div class="row">
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-phone"></i>
+                <input type="text" placeholder="Téléphone portable" name="phone" maxlength="9">
+              </label>
+
+            </section>
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-envelope-alt"></i>
+                <input type="email" placeholder=" E-mail" name="email">
+              </label>
+
+            </section>
+          </div>
+
+          <div class="row">
+            <section class="col col-6">
+              <label class="input">
+                <i class="icon-append icon-home"></i>
+                <input type="text" placeholder="Entreprise" name="entreprise">
+              </label>
+
+            </section>
+            <section class="col col-6">
+              <label class="select">
+                <select name="secteur">
+                  <option value=""> {{"Secteur d'activité"|trans}}</option>
+                  <option value="Santé">{{'Santé'|trans}}</option>
+                  <option value="Bien être et beauté">{{'Bien être et beauté'|trans}}</option>
+                  <option value="Restauration">{{'Restauration'|trans}}</option>
+                  <option value="Avocat-Notaire">{{'Avocat-Notaire'|trans}}</option>
+                  <option value="Expert-Immobilier">{{'Expert-Immobilier'|trans}}</option>
+                  <option value="Institutions publiques">{{'Institutions publiques'|trans}}</option>
+                  <option value="collectivités territoriales décentralisées">{{'collectivités territoriales décentralisées'|trans}}</option>
+                  <option value="Automobile">{{'Automobile'|trans}}</option>
+                  <option value="Evénementiel">{{'Evénementiel'|trans}}</option>
+                  <option value="Administration">{{'Administration'|trans}}</option>
+                  <option value="profession libérale">{{'profession libérale'|trans}}</option>
+                  <option value="Banque">{{'Banque'|trans}}</option>
+                  <option value="Assurances">{{'Assurances'|trans}}</option>
+                  <option value="Sécurité sociale">{{'Sécurité sociale'|trans}}</option>
+                  <option value="Education">{{'Education'|trans}}</option>
+                  <option value="Universités et grandes écoles">{{'Universités et grandes écoles'|trans}}</option>
+                  <option value="Transport">{{'Transport'|trans}}</option>
+                  <option value="Representation Diplomatique">{{'Representation Diplomatique'|trans}}</option>
+                  <option value="Organisme International">{{'Organisme International'|trans}}</option>
+                  <option value="Consulat">{{'Consulat'|trans}}</option>
+                  <option value="Sport et Loisirs">{{'Sport et Loisirs'|trans}}</option>
+                  <option value="Art et culture">{{'Art et culture'|trans}}</option>
+                </select>
+                <i></i>
+              </label>
+
+
+              </div>
+            </section>
+          </div>
+
+          <button type="submit" id="button_send" class="btn-two green small small_btn" style="display:inline-block;margin-left:20px !important;"><i class="fa fa-paper-plane"></i> {{'Envoyer'|trans}}</button>
+
+
+
+         
+        </fieldset>
+
+
+
+
+
+                </form>   
+   <a href="{{ path('dkk_app_homepage') }}" class="btn-two green small small_btn pull-left"><i class="fa fa-times"></i>{{' Retour'|trans}}</a>
+        </div>
+                      </div>
+            </div>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block scripts %}
+   
+   
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends '::connect.html.twig' %}
+
+{% block title %} {{'Connexion Particulier'|trans}}::{{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}}{% endblock %}
+
+{% block style %}
+
+    <style>
+        body{
+      background: url('{{asset("img/banner3.png")}}') no-repeat center center;
+      background-size: cover !important;
+      background-attachment: fixed !important;
+    }
+      </style>
+
+{% endblock %} 
+
+{% block body %}
+  
+ <div class="body ">
+          <div class="container_center2">
+            <span class="proffess">{{'Déjà inscrit'|trans}}.</span>
+            <span class="proffess">{{'identifiez-vous pour acceder à votre espace'|trans}}.  </span>
+            <br>
+          </div>
+          <form method="post" action="{{ path('dkk_utilisateur_authentification') }}" id="signupForm" class="sky-form" autocomplete="off">
+            <header style="text-align: center;">{{'Connexion-Particulier'|trans}}</header>
+
+      <fieldset>
+        <section>
+          <div class="row">
+            <label class="label col col-4">{{'Email'|trans}}</label>
+            <div class="col col-8">
+              <label class="input">
+                <i class="icon-append icon-user"></i>
+                <input type="email" name="email" >
+              </label>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="row">
+            <label class="label col col-4">{{'Mot de passe'|trans}}</label>
+            <div class="col col-8">
+              <label class="input">
+                <i class="icon-append icon-lock"></i>
+                <input type="password" name="password">
+              </label>
+              <div class="note"><a href="#">{{'Mot de passe  oublier'|trans}}?</a></div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+         <div class="row">
+           <div class="col col-4"></div>
+           <div class="col col-8">
+             <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>{{'Se souvenir de moi'|trans}}</label>
+           </div>
+         </div>
+         <button type="submit" id="button_send" class="btn-two green small small_btn pull-right"><i class="fa fa-sign-in"></i> {{'Connectez-vous'|trans}}</button>
+           </form>
+
+               <a href="{{ path('dkk_app_homepage') }}" style="color:#fff !important" class="btn-two green small small_btn pull-left"><i class="fa fa-times"></i> {{'Retour'|trans}}</a>
+               <a href="{{ path('dkk_utilisateur_inscription') }}" class="btn-two green small small_btn align_content_btn" style="color: #fff !important;"><i class="fa fa-pencil-square-o"></i> {{"S'inscrire"|trans}}</a>
+                <br>
+                  {% if erreur == 1 %}
+                    <br>
+                    <div class="row">
+                      <p style="color: red; text-align: center;">{{'Email ou mot de passe incorrect'|trans}}</p>
+                    </div>
+                 {% endif %}
+
+           </section>
+
+
+
+
+		</div>
+    <div style="margin-top: 140px !important;"></div>
+{% endblock %}
+

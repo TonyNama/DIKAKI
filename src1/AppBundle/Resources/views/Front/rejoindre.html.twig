@@ -1,0 +1,83 @@
+  {% extends '::last.html.twig' %}
+
+{% block title %}{{'Nous rejoindre'|trans}} :: Dikaki{% endblock %}
+
+{% block style %}
+
+<style type="text/css">
+  .about_content{
+  margin:20px auto !important;
+  width:80% !important;
+  padding:10px;
+}
+</style>
+
+{% endblock %}
+
+{% block body %}
+<nav id="nav">
+        <ul class="text-center !important">
+          <li class="menu-html"><a href="{{path('dkk_app_blog')}}">{{'Blog'|trans}}</a></li>
+          <li class="menu-html"><a href="{{path('dkk_app_apropos')}}">{{'A propos'|trans}} </a></li>
+          <li class="menu-html"><a href="{{path('dkk_app_nouvelles')}}">{{'Nouvelles '|trans}} </a></li>
+          <li class="menu-html"><a href="{{path('dkk_app_aide')}}">{{'Aide en ligne'|trans}}</a></li>
+          <li class="menu-html end_menu"><a href="{{path('dkk_app_rejoindre')}}">{{'Nous rejoindre'|trans}}</a></li>
+        </ul>
+      </nav>
+            
+        <div class="container-fluid" style="padding: 0px !important;">
+          <div class="wrapper_ligne9">
+              <h1 class="text-center about_down">{{'Nous rejoindre'|trans}}</h1>
+          </div>
+       </div>
+
+       <div class="container">
+          <div class="about_content">
+              <h2 class="your_mission"> </h2>
+              <p>
+                
+
+              </p>
+
+              <h2 class="your_mission"> </h2>
+              <p>
+                
+              </p>
+
+              <h4>  </h4>
+              <p>
+                
+
+              </p>
+
+              <h4> </h4>
+              <p>
+                 
+
+              </p>
+
+               <div class="wrapper_biggin">
+                <p class="txt_commencez"> << {{"Prise de rendez-vous & Agenda en ligne"|trans}}  >> </p>
+                <span class="detail_text_commencez">{{"Avec Dikaki, donnez dès aujourd'hui la possibilité à vos patients / clients de prendre rendez-vous ou de faire une réservation et payer leurs consultations / prestations directement en ligne."|trans}}</span>
+                <p style="clear: both !important"></p>
+                    <div class="col-xs-12 col-ms-6 col-md-6">
+                      <a href="{{ path('dkk_professionnel_inscription') }}" class="btn_contact green block small_p" style="text-align: center;width: 100% !important">{{"Je crée mon compte professionnel"|trans}}</a>
+                    </div>
+                    <div class="col-xs-12 col-ms-6 col-md-6">
+                        <a href="{{ path('dkk_app_prendre') }}" class="btn_contact green block small_p" style="text-align: center;width: 100% !important">{{"Je prends RDV avec un conseiller Dikaki"|trans}}</a>
+                    </div>
+                    <p style="clear: both;"></p>
+                     <br>
+                    <p class="call_line call_boutton_down">{{"Appelez au"|trans}} +237 655 010 808</p>
+                    <p class="infos_supple">{{'Du lundi au Vendredi de 09'|trans}}<sup>H</sup> {{"à 18"|trans}}<sup>H</sup></p>
+                </div>
+              
+          </div>
+       </div>
+ 
+{% endblock %}
+
+{% block scripts %}
+ 
+{% endblock%}
+

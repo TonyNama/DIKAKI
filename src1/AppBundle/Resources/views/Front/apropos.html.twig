@@ -1,0 +1,97 @@
+   {% extends '::last.html.twig' %}
+
+{% block title %}{{"A propos de"|trans}} Dikaki :: Dikaki{% endblock %}
+
+{% block style %}
+
+<style type="text/css">
+	.about_content{
+	margin:20px auto !important;
+	width:80% !important;
+	padding:10px;
+}
+</style>
+
+{% endblock %}
+
+{% block body %}
+
+<nav id="nav">
+        <ul class="text-center !important">
+          <li class="menu-html"><a href="{{path('dkk_app_blog')}}">{{"Blog"|trans}}</a></li>
+          <li class="menu-html"><a href="{{path('dkk_app_apropos')}}">{{'A propos'|trans}} </a></li>
+          <li class="menu-html"><a href="{{path('dkk_app_nouvelles')}}">{{'Nouvelles'|trans}}  </a></li>
+          <li class="menu-html"><a href="{{path('dkk_app_aide')}}">{{'Aide en ligne'|trans}}</a></li>
+          <li class="menu-html end_menu"><a href="{{path('dkk_app_rejoindre')}}">{{'Nous rejoindre'|trans}}</a></li>
+        </ul>
+      </nav>
+      
+ <div class="container-fluid" style="padding: 0px !important;">
+          <div class="wrapper_ligne6">
+              <h1 class="text-center about_down">{{'A propos'|trans}} </h1>
+          </div>
+       </div>
+
+       <div class="container">
+          <div class="about_content">
+              <h2 class="your_mission">Mission</h2>
+              <p>
+                {{"Notre mission pour 2019 est de vous accompagner jour après jour dans votre projet de digitalisation de votre entreprise, automatiser et simplifier votre planification et votre prise de rendez-vous en ligne avec la plateforme DIKAKI."|trans}}
+                {{"Nous croyons que le changement n’arrivera que par vous."|trans}}
+
+              </p>
+
+              <h2 class="your_mission">{{"A propos de Dikaki"|trans}}</h2>
+              <p>
+                Dikaki {{"est un outil innovant pour l’Afrique, une plateforme de prise de rendez-vous et paiement en ligne qui va changer la façon de vous organiser. L’idée , vous permettre de prendre rapidement rendez-vous chez  l’un de votre professionnel de Santé , dans un service public( rdv passeports,visas,cni,cnps et bien d’autres …) ,avec votre conseillé de banque, votre conseillé juridique(avocat, notaire), votre expert,  pour votre inscription à un concours ou examens, dans votre salon de coiffure,  avec votre garagiste,  et payer votre service ou prestation, cela  en quelques clics 24h/24 et 7j/7 !."|trans}}
+              </p>
+
+              <h4>{{"Il n’existe pas de service plus simple"|trans}} </h4>
+              <p>
+                {% trans %} Une fois votre rendez-vous choisi, vous recevez un sms et un e-mail de confirmation et de rappel dans lequel se trouvent la date et l’heure prévues.
+                Vous avez la possibilité de modifier et 
+                d’annuler votre rendez-vous de la même manière. {% endtrans %}
+
+              </p>
+
+              <h4>{{'Quoi de plus facile.'|trans}}</h4>
+              <p>
+               {% trans %} Vous avez la possibilité de payer votre prestation en ligne.
+Consultez les disponibilités des professionnels en temps réel et prenez rendez-vous en ligne immédiatement. {% endtrans %}
+
+              </p>
+
+              <h3 class="your_mission">{{'Notre base'|trans}}</h3>
+              <p class="text-center">
+                {{"Notre base c’est le Cameroun, venez nous retrouver et restez tranquille, on s’occupe de tout."|trans}}
+              </p>
+              <p class="dooded_class"></p>
+
+               <div class="wrapper_biggin">
+                    <p class="txt_commencez"> <<{{" Prise de rendez-vous & Agenda en ligne"|trans}}   >> </p>
+                    <span class="detail_text_commencez">{{"Avec Dikaki, donnez dès aujourd'hui la possibilité à vos patients / clients de prendre rendez-vous ou de faire une réservation et payer leurs consultations / prestations directement en ligne."|trans}}</span>
+                    <p style="clear: both !important"></p>
+                    <div class="col-xs-12 col-ms-6 col-md-6">
+                        <a href="{{ path('dkk_professionnel_inscription') }}" class="btn_contact green block small_p" style="text-align: center;width: 100% !important">{{"Je crée mon compte professionnel"|trans}}</a>
+                    </div>
+                    <div class="col-xs-12 col-ms-6 col-md-6">
+                        <a href="{{ path('dkk_app_prendre') }}" class="btn_contact green block small_p" style="text-align: center;width: 100% !important">{{"Je prends RDV avec un conseiller Dikaki"|trans}}</a>
+                    </div>
+                    <p style="clear: both;"></p>
+                     <br>
+                    <p class="call_line call_boutton_down">{{'Appelez au'|trans}} +237 655 010 808</p>
+                    <p class="infos_supple">{{'Du lundi au Vendredi de 09'|trans}}<sup>H</sup> {{'à 18'|trans}}<sup>H</sup></p>
+                </div>
+
+          </div>
+       </div>
+
+
+            
+               
+{% endblock %}
+
+{% block scripts %}
+ 
+{% endblock%}
+

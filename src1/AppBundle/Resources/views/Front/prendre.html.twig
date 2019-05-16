@@ -1,0 +1,346 @@
+{% extends '::connect.html.twig' %}
+
+{% block title %}{{'Prendre un rendez-vous avec un conseiller Dikaki'|trans}} :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}}{% endblock %}
+
+{% block style %}
+    
+<style>
+     .menu1 { 
+          border-bottom:solid 2px #669d7d ;
+          padding-top:12px ; 
+          padding-bottom:7px
+        } 
+
+        .onglet { 
+            border:solid 1px #669d7d ; 
+            margin:5px 5px 0px 5px ; 
+            padding:7px 3px 7px 3px;
+            border-radius:5px 5px 0px 0px !important;
+          } 
+
+          a.onglet { 
+            background-color:#E7E4E4 ;
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #669d7d;
+            color: #fff !important;
+          } 
+
+          .onglet-actif { 
+             border-left:solid 2px #669d7d ; 
+             border-right:solid 2px #669d7d ; 
+             border-top:solid 2px #669d7d ; 
+             border-bottom:none !important; 
+             margin:5px 5px 0px 5px ; 
+             padding:7px 3px 7px 3px ; 
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+          } 
+            #wrapper > button{
+          display: block;
+          margin-left: 170px !important;
+        }
+        @media only screen and (max-width: 1024px) {
+          .wrapper_prise_{
+            height: 900px !important;
+            margin-bottom: 170px !important;
+          }
+        }
+
+        body{
+          background: url('{{asset("img/t1.png")}}') no-repeat center center;
+          background-size: cover !important;
+          background-attachment: fixed !important;
+        }
+
+</style>
+
+    
+{% endblock %}
+
+
+{% block body %}
+  <script>
+
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+<div class="tab_down"></div>
+        <div class="container-fluid">
+            <div class="container">
+            <div id="wrapper">
+
+   <div class="wrapper_prise_">
+
+     <!--<button onclick="goBack()" class="btn-two green small small_btn"><i class="fa fa-times"></i> Retour</button>-->
+
+    <div class="">
+      <p class="prendre_un_rdv"> {{'Prendre Rendez-vous avec un conseiller Dikaki'|trans}}</p>
+
+      <div class="menu1"> <!-- début de la boite contenant les onglets -->
+        <span class="onglet-actif"> {{'Prendre RDV'|trans}}</span> <!-- onglet ACTIF -->
+        <a class="onglet" href="{{ path('dkk_app_tab_coordonnee') }}">{{'Coordonnées'|trans}}</a> <!-- onglet inactif -->
+      </div>
+      <script type="text/javascript">
+                     $(document).ready(function(){
+                         
+                    });
+
+
+
+                </script>
+                <form method="post">
+
+                   <p class="text_take_rdv">{{'Prenez un Rendez-vous'|trans}}  </p>
+
+                      <div class="margin_row">
+
+                        <div class="">
+                          <span class="for__">pour:</span>
+                            <select id="select_rdv_" class=" form-control" style="margin-top: 17px;margin-left: 15px;">
+                              <option value="Présentation de la plateforme Dikaki - 30 min">{{"Présentation de la plateforme Dikaki - 30 min"|trans}}</option>
+                              <option value="Toutes les informations sur Dikaki - 20 min">{{"Toutes les informations sur Dikaki - 20 min"|trans}}</option>
+                              <option value="Une formation sur Dikaki - 45 min">{["Une formation sur Dikaki - 45 min"|trans]}</option>
+                              <option value="Une étude sur le partanariat">{{"Une étude sur le partanariat - 45 min"|trans}}</option>
+                              <option value="Etude de projet pour intégration de solution Dikaki - 60 min">{{"Projet pour intégration de solution Dikaki - 60 min"|trans}}</option>
+                            </select>
+                        </div>
+
+
+                  </div>
+
+
+
+
+            <div class="resize_wrapper">
+
+
+            <div class="">
+                  <button class="add_btn_ div_btn" id="effect"><i class="fa fa-plus"></i> &nbsp;{{'Ajouter une prestation'|trans}}</button>
+            </div>
+
+            <div class="" id="selected" style="display:none  !important;">
+                  <div class="">
+
+                  </div>
+                  <div class="select_other">
+                    <br>
+
+
+                    <div class="second_ajout">
+                       <table>
+                      <tr>
+                        <th><span class="et_position" >Et: &nbsp; </span></th>
+                        <th>
+                           <select class="form-control ajout_select" name="">
+                          <option>{{'Choisir une autre prestation'|trans}}</option>
+                          <option value="Présentation de la plateforme Dikaki - 30 min">{{'Présentation de la plateforme Dikaki - 30 min'|trans}}</option>
+                          <option value="Toutes les informations sur Dikaki - 20 min">{{"Toutes les informations sur Dikaki - 20 min"|trans}}</option>
+                          <option value="Une formation sur Dikaki - 45 min">{{"Une formation sur Dikaki - 45 min"|trans}}</option>
+                          <option value="Une étude sur le partanariat">{{"Une étude sur le partanariat - 45 min"|trans}}</option>
+                          <option value="Etude de projet pour intégration de solution Dikaki - 60 min">{{"Projet pour intégration de solution Dikaki - 60 min"|trans}}</option>
+                        </select>
+                        </th>
+                        <th>
+                          <button class="supp_btn delate btn btn-sm" id="supprimer" style=""><i class="fa fa-times"></i></button>
+                        </th>
+                      </tr>
+                    </table>
+
+
+                    </div>
+
+                  </div>
+
+
+            </div>
+          </div>
+      </form>
+
+      <div class=" " id="calandrier" style="display: !important;margin-top: 0px !important">
+
+
+
+                      <!-- debut du nouveau calendrier -->
+                      <div class="full_calandar">
+
+                          <div class="calNav">
+                            <p style="margin-top: -11px !important"></p>
+                            <p class="choix_date_heure">{{"Choisissez une date et une heure qui vous conviennent."|trans}}</p>
+                              <br>
+            <div class="navButtons">
+
+                <button class="prevDays  " alt="Précédents" role="button">
+                    <span class="fa fa-arrow-left"></span>
+                    <span class="text">{{'Préc'|trans}}</span>
+                </button>
+                <button class="chooseDate " alt="Choisir une date" role="button">
+                    <i class="fa fa-calendar"></i> <span class="calander_i"></span>
+                    <span class="text" role="presentation"> {{'A partir du'|trans}} </span>
+                </button>
+                <button class="nextDays " alt="Suivants">
+                    <span class="text" role="presentation">{{'Suiv'|trans}}</span>
+                    <span class="fa fa-arrow-right" role="presentation"></span>
+                </button>
+            </div>
+            <div id="minicalContainer" style="display:none ;">
+                <!-- insertion du calandrier ici -->
+            </div>
+
+
+
+        </div>
+        <div class="wrapper_rdv_table">
+          <table class="calTable" role="grid" >
+              <thead>
+                  <tr>
+
+                      <th class="odd">
+                          <span class="week-day">{{'Lundi'|trans}}</span>
+                          <br><span class="date">13 {{'Août'|trans}} 2018</span>
+
+                      </th>
+                      <th class="even">
+                          <span class="week-day">{{'Mardi'|trans}}</span>
+                          <br><span class="date">14 {{'Août'|trans}} 2018</span>
+
+                      </th>
+                      <th class="odd">
+                          <span class="week-day">{{'Mercredi'|trans}}</span>
+                          <br><span class="date">15 {{'Août'|trans}} 2018</span>
+
+                      </th>
+                      <th class="even">
+                          <span class="week-day">{{'Jeudi'|trans}}</span>
+                          <br><span class="date">16 {{'Août'|trans}} 2018</span>
+
+                      </th>
+                      <th class="odd">
+                          <span class="week-day">{{'Vendredi'|trans}}</span>
+                          <br><span class="date">17 {{'Août'|trans}} 2018</span>
+
+                      </th>
+
+
+                  </tr>
+              </thead>
+
+              <tbody>
+                  <tr>
+
+                      <td class="odd">
+
+                          <span class="hide" id="date_0"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips" alt="16h00" style="color: black !important;">16h00
+
+           </a>
+
+                          <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips" style="color: black !important;">17h30
+
+           </a>
+           <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips" style="color: black !important;">18h30
+
+           </a>
+           <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips" style="color: black !important;">20h00
+
+           </a>
+
+                      </td>
+
+                      <td class="even">
+                            <span class="hide" id="date_0"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips" alt="16h00"  style="color: black !important;">16h00
+
+           </a>
+
+                          <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="t{{ path('dkk_app_tab_coordonnee') }}" class="tooltips"  style="color: black !important;">17h30
+                               <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips"  style="color: black !important;">18h00
+
+           </a>
+              <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips"  style="color: black !important;">19h30</a>
+                          <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips"  style="color: black !important;">20h30</a>
+                      </td>
+
+
+                      <td class="odd">
+
+                            <span class="hide" id="date_0"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips" alt="16h00"  style="color: black !important;">16h00
+
+           </a>
+
+                          <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips"  style="color: black !important;">17h30
+
+           </a>
+                      </td>
+
+                      <td class="even">
+
+                            <span class="hide" id="date_0"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips" alt="16h00"  style="color: black !important;">16h00
+
+           </a>
+
+                          <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips"  style="color: black !important;">17h30
+
+           </a>
+                      </td>
+
+                      <td class="odd">
+
+                          <span class="hide" id="date_2"> {{'Vendredi'|trans}} 17 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips"  style="color: black !important;">11h15
+
+           </a>
+           <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips"  style="color: black !important;">12h00</a>
+                          <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips"  style="color: black !important;">14h30</a>
+                          <span class="hide" id="date_1"> {{'Lundi'|trans}} 13 {{'Août'|trans}} 2018</span>
+                          <a href="{{ path('dkk_app_tab_coordonnee') }}" class="tooltips"  style="color: black !important;">17h00</a>
+
+                      </td>
+
+
+                      </td>
+
+
+
+                  </tr>
+
+              </tbody>
+          </table>
+        </div>
+
+                      <!-- fin du nouveau calandrier-->
+
+
+
+                  </div>
+                </div>
+
+    </div>
+  </div>
+            </div>
+
+
+
+		</div>
+
+</div>
+{% endblock %}

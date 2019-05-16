@@ -1,0 +1,275 @@
+{% extends '::Solution.html.twig' %}
+
+{% block title %}Dikaki - {{ "Depôt de dossier"|trans }} {% endblock %}
+
+{% block body %}
+<!-- debut du slideshow -->
+                    <section id="slider" class="">
+                        <ul class="slider-wrapper">
+                        <li class="current-slide">
+                            <img src="{{asset('img/banner8.png')}}" title="" alt="">
+
+                            <div class="caption">
+                                <h2 class="slider-title animated bounceInRight" style="animation-delay: 1s">
+                                   {{ "La solution de gestion de depôt de dossier, de prise de rendez-vous en ligne pour les administrations, les services publics, les mairies, les services de sécurité sociale, les banques, les assurances."|trans }} </h2>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="{{asset('img/depot de dossiers grand.png')}}" title="" alt="">
+
+                            <div class="caption">
+                                <h2 class="slider-title slideInDown" style="animation-delay: 2s">{{ "Dès lors que tout est payé en ligne, le dépôt de dossier devient facile et rapide."|trans }}</h2>
+
+                                <h2 class="slider-title animated zoomIn" style="animation-delay: 2s">{{ "\"C'est simple\"."|trans }}</h2>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="{{asset('img/banniere11.jpg')}}" title="" alt="">
+
+                            <div class="caption">
+                                <h2 class="slider-title animated zoomIn" style="animation-delay: 1s">{{ "La solution c'est la digitalisation de votre gestion de prise de rendez-vous."|trans }}</h2>
+
+                                <h2 class="slider-title animated zoomIn" style="animation-delay: 2s">{{ "\"Essayez Dikaki\"."|trans }}</h2>
+
+                            </div>
+                        </li>
+                        </ul>
+                        <!-- Sombras -->
+                        <div class="slider-shadow"></div>
+
+                        <!-- Controles de Navegacion -->
+
+                    </section>
+                <!-- fin du slideshow -->
+            <div class="container-fluid slogna_header">
+                <div class="container">
+                    <div class="row">
+                        <p>
+                            {% trans %}Le système de prise de rendez-vous en ligne pour dépôt de dossier <b>Dikaki</b> vous offre toutes les fonctionnalités dont vous avez besoin dans vos services
+                            pour l'organisation, la gestion des concours administratifs, dossiers de passeports - carte nationale d'identité - visa, dossier de sécurité sociale et bien d'autres. {% endtrans %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid parralax_effect">
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="wrapper_rdv">
+
+                                <p>{{ "Dépôt de dossier."|trans }}</p>
+                                <img src="{{asset('img/t9.png')}}" class="img-responsive img_banner_rdv">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="margin_wrapper_solu_sec">
+                                <p>
+                                    
+                                    {% trans %} La prise de rendez-vous avec Dikaki, c'est un fonctionnement simple et rapide. Découvrez la prise de rendez-vous avec paiement en ligne pour la gestion de vos dépôts de dossiers. C'est la  facilitation et la simplification des procédures {% endtrans %}
+                                
+                                </p>
+
+
+                                <div class="ask">
+                                    <a href="{{path('dkk_app_demonstration')}}" class="btn-two green block">{{ "Demander une démo."|trans }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+            <div class="container-fluid wrapper_description">
+                <div class="container">
+                    <div class="row">
+                        <p class="avantage_fonctionnalite">
+                           {{ "Avantages et Fonctionnalités."|trans }}
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100% !important; overflow: hidden; border-radius: 1px;">
+                    <img src="{{asset('img/w.png')}}" alt="Man with backpack"
+                        class="d-block w-full">
+
+                      <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                          Dikaki
+                        </p>
+
+                        <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                        {{ "Prise de rendez-vous et réservation en ligne."|trans }}
+                        </h1>
+
+                        <p class="mb-1">
+                          
+                          {% trans %} La prise de rendez-vous par internet est le nouvel enjeu pour l'administration, et pour toutes les autres professions en Afrique. Dikaki vous permet de faire prendre vos rendez-vous en ligne en personnalisant vos formulaires. {% endtrans %}
+                        
+                        </p>
+
+                      </div>
+
+                  <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                  </a>
+                </div>
+
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+
+
+                        <h1 class="dikaki_prise">
+                            {{ "Dépôt de dossier en ligne."|trans }}
+                        </h1>
+
+
+
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+
+                                <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="{{asset('img/g.png')}}" alt="Man with backpack"
+                            class="d-block w-full">
+
+                          <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                              Dikaki
+                            </p>
+
+                            <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                            {{ "Agenda et Planning type des inscriptions et listes."|trans }}
+                            </h1>
+
+                            <p class="mb-1">
+                            
+                            {{ "Faites consulter vos créneaux horaires disponibles et faites prendre vos rendez-vous. La réservation est inscrite automatiquement sur votre agenda et sur votre listing. L'usager imprime sa demande de service ou sa convocation de rendez-vous de dépôt de dossier."|trans }}
+                            
+                            </p>
+
+                          </div>
+
+                      <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                      </a>
+                    </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- seconde ligne des fonctionnalité-->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                              <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="{{asset('img/e.png')}}" alt="Man with backpack"
+                            class="d-block w-full">
+
+                          <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                              Dikaki
+                            </p>
+
+                            <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                {{ "Paiement en ligne."|trans }}
+                            </h1>
+
+                            <p class="mb-1">
+                             
+                                {{ "Vous pouvez accepter les paiements en ligne pour les frais de dossier, les réservations et les autres frais en utilisant la plateforme Dikaki, cette solution permet la sécurisation et le suivi de vos encaissements. Vous pouvez produire vos justificatifs de paiement."|trans }}
+                            
+                            </p>
+
+                          </div>
+
+                      <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                      </a>
+                    </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                              <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="{{asset('img/o.png')}}" alt="Man with backpack"
+                            class="d-block w-full">
+
+                          <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                              Dikaki
+                            </p>
+
+                            <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                 {{ "Rendez-vous de groupe."|trans }}
+                            </h1>
+
+                            <p class="mb-1">
+                           
+                                {{ "Gérez les places disponibles, la capacité d'accueil et les listes des participants pour: (Rendez-vous de famille, collectif, association)."|trans }}
+                            
+                            </p>
+
+                          </div>
+
+                      <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                      </a>
+                    </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                              <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="{{asset('img/u.png')}}" alt="Man with backpack"
+                            class="d-block w-full">
+
+                          <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                              Dikaki
+                            </p>
+
+                            <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                {{ "Confirmation et rappel du RDV par Mail et SMS."|trans }}
+                            </h1>
+
+                            <p class="mb-1">
+                                
+                               {{ "Evitez les oublis un mail de rappel est envoyé à une heure et date que vous aurez prédéfinies avant le rendez-vous. Dans le mail de confirmation, annoncer les informations à la préparation du rendez-vous (documents et pièces nécessaires)."|trans }}
+                            
+                            </p>
+
+                          </div>
+
+                      <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                      </a>
+                    </div>
+                        </div>
+
+                    </div>
+
+                   <div class="demander_une_demo_wrapper" style="width:265px !important;">
+                        <a href="{{path('dkk_app_power')}}" class="btn-two green block" style="width:100% !important;text-align:center">{{ "La puissance de Dikaki"|trans }}</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="wrapper_service_client">
+                <div class="container">
+                    <div class="row">
+                        <div class="blocquotte">
+
+<blockquote>
+    <p>{{ "Ce dont vous avez envie, Dikaki le fait pour vous."|trans }}</p>
+</blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}

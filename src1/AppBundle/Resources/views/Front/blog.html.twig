@@ -1,0 +1,121 @@
+  {% extends '::last.html.twig' %}
+
+{% block title %}Blog :: Dikaki{% endblock %}
+
+{% block style %}
+
+<style type="text/css">
+  
+  .change_{
+  margin-top:-25px !important;
+  text-align:center;
+  margin-bottom:60px;
+}
+.ttext_take{
+  font-weight:500 !important;
+  font-size:1.3em;
+}
+</style>
+
+{% endblock %}
+
+
+{% block body %}
+
+     <nav id="nav">
+        <ul class="text-center !important">
+          <li class="menu-html"><a href="{{path('dkk_app_blog')}}">{{"Blog"|trans}}</a></li>
+          <li class="menu-html"><a href="{{path('dkk_app_apropos')}}">{{'A propos'|trans}} </a></li>
+          <li class="menu-html"><a href="{{path('dkk_app_nouvelles')}}">{{'Nouvelles'|trans}}  </a></li>
+          <li class="menu-html"><a href="{{path('dkk_app_aide')}}">{{'Aide en ligne'|trans}}</a></li>
+          <li class="menu-html end_menu"><a href="{{path('dkk_app_rejoindre')}}">{{'Nous rejoindre'|trans}}</a></li>
+        </ul>
+      </nav>
+        
+    	       <div class="container-fluid">
+          <div class="container">
+            <h1 class="title_blog">{{"Blog"|trans}}</h1>
+            <h2 class="text-center change_">{{"Changez votre façon d'agir! Votre réuissite dépend de vous."|trans}}</h2>
+
+            
+              <div class="row">
+                  <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail thumbnail_wrapper">
+                      <a href="{{path('dkk_app_apropos')}}">
+                        <img src="{{asset('img/t1.png')}}" alt="Apropos" class="img-responsive img_about">
+                      </a>
+                      <div class="caption">
+                        <h3 class="wrapper_about"><a href="{{path('dkk_app_apropos')}}">{{'A propos'|trans}}</a></h3>
+                       
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail thumbnail_wrapper">
+                      <a href="{{path('dkk_app_nouvelles')}}">
+                        <img src="{{asset('img/t12.png')}}" alt="Nouvelles" class="img-responsive img_about">
+                      </a>
+                      <div class="caption">
+                        <h3 class="wrapper_about"><a href="{{path('dkk_app_nouvelles')}}">{{'Nouvelles de Dikaki'|trans}}</a></h3>
+                       
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail thumbnail_wrapper">
+                      <a href="{{path('dkk_app_aide')}}">
+                        <img src="{{asset('img/t13.png')}}" alt="Aide en ligne" class="img-responsive img_about">
+                      </a>
+                      <div class="caption">
+                        <h3 class="wrapper_about"><a href="{{path('dkk_app_aide')}}">{{'Aide en ligne'|trans}}</a></h3>
+                       
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail thumbnail_wrapper">
+                      <a href="{{path('dkk_app_rejoindre')}}">
+                        <img src="{{asset('img/4.png')}}" alt="Nous rejoindre" class="img-responsive img_about">
+                      </a>
+                      <div class="caption">
+                        <h3 class="wrapper_about"><a href="{{path('dkk_app_rejoindre')}}">{{'Nous rejoindre'|trans}}</a></h3>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+
+          </div>
+       </div>
+       <p style="clear: both !important"></p>
+      <p style="margin-top:-55px !important"></p>
+      
+       <div class="wrapper_service_client">
+                <div class="container">
+                    <div class="row">
+                        <div class="blocquotte">
+
+<center>
+  <blockquote>
+    <p>{{"Démarquez-vous! Soyez Dikaki."|trans}}</p>
+</blockquote>
+</center>
+<h3 class="text-center ">{{"\" Peu de choses peuvent donner vie à vos envies \""|trans}}</h3>
+<h4 class="text-center"><b>{{"La prise de rendez-vous et le paiement en ligne."|trans}}</b></h4>
+<h5 class="text-center ttext_take">{{"Donnez vie à vos Envies."|trans}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+               
+{% endblock %}
+
+{% block scripts %}
+ 
+{% endblock%}
+

@@ -1,0 +1,265 @@
+{% extends '::Solution.html.twig' %}
+
+{% block title %} {{"Secteur éducatif"|trans}} :: Dikaki {% endblock %}
+
+{% block body %}
+
+  <!-- debut du slideshow -->
+               <section id="slider" class="">
+		<ul class="slider-wrapper">
+		<li class="current-slide">
+			<img src="{{ asset('img/banner6.png')}}" title="" alt="">
+
+
+
+      <div class="caption">
+				<h2 class="slider-title animated bounceInRight" style="animation-delay: 1s">{{"Dikaki système d'inscription, pré-inscription et la gestion de planning en ligne. Ses fonctionnalitées permettent de gérer et de planifier l'inscription en toute simplicité et en toute sécurité."|trans}}</h2>
+			</div>
+		</li>
+
+		<li>
+			<img src="{{ asset('img/banner5.png')}}" title="" alt="">
+
+			<div class="caption">
+				<h2 class="slider-title animated slideInDown" style="animation-delay: 2s">{{"Le paiement en ligne sécurise vos frais d'inscriptions et de réservations."|trans}}</h2>
+
+			</div>
+		</li>
+
+		<li>
+			<img src="{{ asset('img/banner7.png')}}" title="" alt="">
+
+			<div class="caption">
+				<h2 class="slider-title animated zoomIn" style="animation-delay: 1s">{{"Faites vos réservations en ligne en quelques clics."|trans}} </h2>
+
+                <h2 class="slider-title animated bounceInLeft" style="animation-delay: 2s">{{"\"L'inscription devient facile\"."|trans}} </h2>
+
+			</div>
+		</li>
+		</ul>
+		<!-- Sombras -->
+		<div class="slider-shadow"></div>
+
+		<!-- Controles de Navegacion -->
+
+	</section>
+                <!-- fin du slideshow -->
+            <div class="container-fluid slogna_header">
+                <div class="container">
+                    <div class="row">
+                        <p>
+                            {{"Le système de réservation  pour inscription de Dikaki donne la possibilité aux étudiants et autres de prendre rendez-vous en ligne 24h/24, 7j/7. Les rendez-vous sont confirmés automatiquement après validation. Prendre rendez-vous pour s'inscrire devient une évidence pour les universitaires, étudiants des grandes écoles et autres institutions."|trans}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid parralax_effect">
+
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="margin_wrapper_solu_sec">
+                                <p>
+                                    {{"Les inscriptions dans les universités, grandes écoles et autres secteurs éducatifs deviennent faciles avec la solution de prise de rendez-vous et paiement en ligne Dikaki."|trans}}
+                                </p>
+                                <div class="ask" style="width:100% !important;">
+                                    <a href="{{path('dkk_app_demonstration')}}" class="btn-two green block">{{"Demander une démo."|trans}}</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="wrapper_rdv">
+                                <p>{{"Secteur éducatif."|trans}}</p>
+                                <img src="{{ asset('img/t5.png')}}" class="img-responsive img_banner_rdv">
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+            <div class="container-fluid wrapper_description">
+                <div class="container">
+                    <div class="row">
+                        <p class="avantage_fonctionnalite">
+                            {{"Avantages et Fonctionnalités."|trans}}
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100% !important; overflow: hidden; border-radius: 1px;">
+                    <img src="{{ asset('img/b.png')}}" alt=""
+                        class="d-block w-full">
+
+                      <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                          Dikaki
+                        </p>
+
+                        <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                          {{"Prise de rendez-vous en ligne 24h/24 et 7j/7."|trans}}
+                        </h1>
+
+                        <p class="mb-1">
+                             {{"La prise de rendez-vous en ligne facilite l'inscription et la pré-inscription des étudiants dans les universités et autres institutions le système leur établit une fiche de circulation sur le lieu de leur enrôlement."|trans}}
+                        </p>
+
+                      </div>
+
+                  <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                  </a>
+                </div>
+
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+
+
+                        <h1 class="dikaki_prise">
+                             {{"Inscription en ligne."|trans}}
+                        </h1>
+
+
+
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+
+                                <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="{{ asset('img/h.png')}}" alt=""
+                            class="d-block w-full">
+
+                          <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                              Dikaki
+                            </p>
+
+                            <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                {{"Agenda / liste d'inscription et planning en ligne."|trans}}
+                            </h1>
+
+                            <p class="mb-1">
+                                {{"Les inscriptions sont planifiées selon les disponibilités, les horaires et la capacité de reception que vous aurez définis à l'avance dans votre agenda. Vous pouvez prévoir une liste d'attente."|trans}}
+                            </p>
+
+                          </div>
+
+                      <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                      </a>
+                    </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- seconde ligne des fonctionnalité-->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                              <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="{{ asset('img/r.png')}}" alt=""
+                            class="d-block w-full">
+
+                          <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                              Dikaki
+                            </p>
+
+                            <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                {{"Paiement en ligne."|trans}}
+                            </h1>
+
+                            <p class="mb-1">
+                               {{"Gagnez du temps, facilitez les procédures d'inscription en proposant un service simple et sécurisé de paiement en ligne avec nos partenaires. L'accueil devient rapide et facile."|trans}}
+                            </p>
+
+                          </div>
+
+                      <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                      </a>
+                    </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                              <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="{{ asset('img/1.png')}}" alt="" class="d-block w-full">
+
+                        <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                              Dikaki
+                            </p>
+
+                            <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                {{"Confirmation inscription par Mail et SMS."|trans}}
+                            </h1>
+
+                            <p class="mb-1">
+                                {{"Dès la validation après paiement de leurs frais d'inscriptions, les étudiants reçoivent un mail de confirmation et un SMS. Ils reçoivent en même temps un justificatif de paiement."|trans}}
+                            </p>
+
+                          </div>
+
+                        <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                        </a>
+                    </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                              <div class="height_plus my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="{{ asset('img/p.png')}}" alt=""
+                            class="d-block w-full">
+
+                          <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                              Dikaki
+                            </p>
+
+                            <h1 class="h1 ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                {{"Modification et annulation"|trans}}
+                            </h1>
+
+                            <p class="mb-1">
+                                {% trans %} Annuler ou modifier un rendez-vous en ligne suite à un
+                                empêchement est aussi simple même en dehors
+                                des horaires d'ouverture sans se déplacer. Ce qui permet une ouverture de place pour la liste d'attente. {% endtrans %}
+                            </p>
+
+                          </div>
+
+                      <a href="javascript:void(0);" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+
+                      </a>
+                    </div>
+                        </div>
+
+                    </div>
+
+                    <div class="demander_une_demo_wrapper" style="width:265px !important;">
+                        <a href="{{path('dkk_app_power')}}" class="btn-two green block" style="width:100% !important;text-align:center">{{"La puissance de Dikaki"|trans}}</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="wrapper_service_client">
+                <div class="container">
+                    <div class="row">
+                        <div class="blocquotte">
+
+<blockquote>
+    <p>{{"Avec Dikaki l'ordre s'oblige, c'est la fin des retards."|trans}}</p>
+</blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+{% endblock %}
+
+

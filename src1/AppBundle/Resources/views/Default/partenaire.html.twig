@@ -1,0 +1,158 @@
+{% extends 'default.html.twig' %}
+
+{% block title %} {{ "Devenir partenaire"|trans}} Dikaki :: {{ "Prise de rendez-vous et dépôt de dossier en ligne"|trans}} {% endblock %}
+
+{% block style %}
+ <style>
+      .sky-form{
+        box-shadow: none !important;
+      }
+      .up_wrapper_item{
+      	margin-top: -80px !important;
+      }
+      </style>
+{% endblock %}
+
+   
+{% block body %}
+   
+<div class="wrapper_part_paralax">
+          <h2 class="text_partenaire">{{ "Vous souhaitez devenir partenaire ?"|trans}}</h2>
+      </div>
+        <div class="container-fluid">
+          <p class="develop_act"> {{ "Développez votre activité avec la solution Dikaki."|trans}} </p>
+            <div class="container">
+                 <div id="wrapper">
+                 		<div class="up_wrapper_item"></div>
+                       <div class="wrapper_prise_">
+                        <div class="">
+                          <p class="demander_demo">{{ "Devenez partenaire de Dikaki en faisant partager ses services dans votre ville, dans votre pays."|trans}}</p>
+
+                        <p class="demander_demo2">{{ "Gagnez de l'argent en conseillant la solution"|trans}} Dikaki.</p>
+
+                        <div class="row">
+                            <p class="with_par" >{{ "Vous cherchez à booster votre activité ?"|trans}}</p>
+                            <p class="with_par">{{ "Notre équipe commerciale et technique est à votre disposition du lundi au vendredi de 9h à 18h."|trans}}</p>
+                            <p class="with_par center_">{{ "Par mail"|trans}}: <b><a href="mailto:contact@dikaki-rdv.com" class="form_contact" title="Nous contacter par mail.">Contact@dikaki-rdv.com</a></b></p>
+
+                        </div>
+                           <div class="row">
+                            <!-- debut -->
+                                <div class="sky-form" id="signupForm">
+				<fieldset>
+					<div class="row">
+						<section class="col col-6">
+							<label class="input">
+								<i class="icon-append icon-user"></i>
+								<input type="text" placeholder="Nom" name="firstname" id="nom">
+							</label>
+
+						</section>
+						<section class="col col-6">
+							<label class="input">
+								<i class="icon-append icon-user"></i>
+								<input type="text" placeholder="Prenom" name="lastname" id="prenom">
+							</label>
+
+						</section>
+					</div>
+                    <div class="row">
+						<section class="col col-6">
+							<label class="input">
+								<i class="icon-append icon-phone"></i>
+								<input type="text" placeholder="Téléphone portable" name="phone" maxlength="9" id="tel">
+							</label>
+
+						</section>
+						<section class="col col-6">
+							<label class="input">
+								<i class="icon-append icon-envelope-alt"></i>
+								<input type="email" placeholder=" Email" name="email" id="email">
+							</label>
+
+						</section>
+					</div>
+
+					<div class="row">
+            <section class="col col-6">
+							<label class="select">
+								<select name="activiter" id="secteur">
+									<option value="">{{ "Votre activité"|trans}}</option>
+                                    <option value="Start-up">{{ "Start-up"|trans}}</option>
+                                    <option value="Commercial">{{ "Commercial"|trans}}</option>
+                                    <option value="Etudiant">{{ "Etudiant"|trans}}</option>
+                                    <option value="Agence de communication">{{ "Agence de communication"|trans}}</option>
+                                    <option value="Agence de marketing">{{ "Agence de marketing"|trans}}</option>
+                                    <option value="Agence événementielle">{{ "Agence événementielle"|trans}}</option>
+                                    <option value="Association">{{ "Association"|trans}}</option>
+                                    <option value="Autres">{{ "Autres"|trans}}</option>
+								</select>
+								<i></i>
+
+							</label>
+						</section>
+						<section class="col col-6">
+							<label class="select">
+								<select name="objet" id="objet">
+									<option value=""> {{ "Objet de votre demande"|trans}}</option>
+                                    <option value="Devenir revendeur">{{ "Devenir revendeur"|trans}}</option>
+                                    <option value="Devenir representant">{{ "Devenir representant"|trans}}</option>
+                                    <option value="Apporteur d'affaires">{{ "Apporteur d'affaires"|trans}}</option>
+                                    <option value="Autres">{{ "Autres"|trans}}</option>
+								</select>
+								<i></i>
+							</label>
+              <span class="val_objet"></span>
+						</section>
+					</div>
+				</fieldset>
+
+
+				<footer>
+                                        <button id="part_submit" class="btn-two green small pull-right btn-xs"><i class="fa fa-paper-plane"></i> {{ "Envoyer"|trans}}</button>
+				</footer>
+                                </div>
+                            <!-- fin -->
+                           </div>
+                      </div>
+            </div>
+
+
+
+		</div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        var nom, prenom, tel, email, secteur, objet;
+        $(document).ready(function () {
+            $("#part_submit").on('click', function () {
+                nom = $('#nom').val();
+                prenom = $('#prenom').val();
+                tel = $('#tel').val();
+                email = $('#email').val();
+                secteur = $('#secteur').val();
+                objet = $('#objet').val();
+                $('#nom').val("");
+                $('#prenom').val("");
+                $('#tel').val("");
+                $('#email').val("");
+                $('#objet').val("");
+                $.ajax({
+                    url: "{{ path('dkk_app_partenaires') }}",
+                    type:"POST",
+                    data:{nom:nom, prenom:prenom, tel:tel, email:email, secteur:secteur, objet:objet},
+                    success: function(msg){
+                        alert(msg);
+                    },
+                    error: function(xhr){
+                        alert("erreur ajax" + xhr);
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}
