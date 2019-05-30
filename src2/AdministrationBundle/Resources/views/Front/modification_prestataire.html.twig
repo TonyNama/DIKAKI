@@ -1,6 +1,6 @@
    {% extends '::admin_template.html.twig' %}
 
-{% block title %}Modification des paramètre du prestataire  :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+{% block title %}Modification des paramètre du prestataire  : Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
 
 {% block style %}
 
@@ -40,7 +40,7 @@
               <div class="margin_wrapper">
 
                     <!-- debut -->
-	    				 <form method="post" action="" id="signupForm">
+	    				<form method="post" action="" id="signupForm">
 
 
           <div >
@@ -70,7 +70,7 @@
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <span>E-mail</span>
                 <br>
-                <input type="text" placeholder="E-mail" name="email" class="form-control margin50">
+                <input type="password" placeholder="E-mail" name="email" class="form-control margin50">
                 </div>
 
             </div>
@@ -79,7 +79,7 @@
 
             <div class=" resize2">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                 <span>Profession </span>
+                 <span>Profession / Métier </span>
              <br>
              <input type="text" name="profession" placeholder="Ex: Médecin, Plombier" class="form-control margin50">
 
@@ -89,19 +89,35 @@
               <br>
 
              <select class="form-control margin50 " name="couleur">
-              <option>verte</option>
-              <option>Rouge</option>
-              <option>Jaune</option>
-              <option>Rose</option>
-              <option>Maron</option>
-              <option>Noire</option>
-              <option>Voillete</option>
-              <option>Bleu</option>
+              <option selected disabled>Choisir la couleur</option>
+              <option value="">verte</option>
+              <option value="">Rouge</option>
+              <option value="">Jaune</option>
+              <option value="">Rose</option>
+              <option value="">Maron</option>
+              <option value="">Noire</option>
+              <option value="">Voillete</option>
+              <option value="">Bleu</option>
              </select>
              </div>
 
             </div>
             <br>
+            
+            <div class=" resize2">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                 <span>Photo </span>
+                 <input type="file" name="photo" class="form-control margin50">
+              </div>
+              <div class=" resize2">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                
+              </div>
+            </div>
+            </div>
+            <div class="row">
+            
+            </div>
             <div class="">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                   <div class="avec_compte">
@@ -133,15 +149,29 @@
 
                       </div>
                       <br><br><br>
-                          <h2 class="Disponibilite">Horaires disponibles</h2>
-                       <!-- debut du tableau -->
-                          <table  class="table table-bordered table-striped table-condensed">
+            
+            <!-- ------>
+            
+                        <!-- bleach -->
+                <div class="row">
+                  <div class="col-sm-12 col-sm-12 col-md-12 col-lg-12"><br>
+                    <span class="my_span_">Horaires disponibles</span>
+                  <br><br>
+                  <input name="choix_cat" class="my_checkbox" id="first_only" type="radio" style="margin-top: 3px !important;display: inline-block;" checked="">
+             <label for="first_only" style="margin-left:0% color:black;font-weight:700;">Utiliser les heures d'ouverture de la société.</label>
+             <br>
+              <input name="choix_cat" class="my_checkbox" id="only" type="radio" style="margin-top: 3px !important;display: inline-block;">
+             <label for="only" style="margin-left:0% color:black;font-weight:700;">Disponible aux dates et heures suivantes.</label>
+             <br><br>
+             <div class="container_news_date" style="display: none;">
+                                       <!-- debut du tableau -->
+                          <table class="table table-bordered table-striped table-condensed">
   <thead>
-    <tr>
+   <tr style="background-color: #26440d !important;color: #fff !important;">
      <th>Jours</th>
       <th>Heure de début </th>
       <th>Heure de fin </th>
-      <th>Heure creuse</th>
+      <th>Interruption</th>
     </tr>
   </thead>
   <tbody>
@@ -298,7 +328,7 @@
 
                                  <td>
                                     <span> debut :</span>
-                                    <select name="" class="select_option form-control">
+                                    <select name="" class="select_option form-control" form-control>
                                          <option>Sans interruption</option><option>12h - 13h</option><option>13h - 14h</option>
                                         <option>12h - 14h</option>
                                     </select>
@@ -536,14 +566,136 @@
   </tbody>
 </table>
                        <!-- fin du tableau-->
+             
+             <div class="wrapper2" >
+
+                     <input type="checkbox" id="select" name="add_items" class=""> <label class="my_span_" for="select" id="hide_2"><b>Selon le calendrier suivant:</b></label>
+                   
+                         
+              <div id="all_week_div" style="display:none !important;">
+                                              <div class="margin_zero">
+                                                <div class="col-sm-12 col-xs-12 col-lg-3 col-md-3" style="margin-top:11.5px !important;">
+                                                  <input type="checkbox" name="" class="toutes_les"> <span class="les_semaines"> Toutes les semaines </span>
+                                                </div>
+
+                                                <div class="col-sm-12 col-xs-12 col-lg-9 col-md-9" style="margin-left:0px !important;">
+                                                <input type="radio" name="" id="" class="jusqua"> <span class="days_mont_year">A partir du:</span>
+                                                <!-- le jours -->
+                              
+                                              
+                              
+                              <input type="text" id="datepicker" name="date" class="" style="margin-top:15px !important">
+                              
+                                <span class="days_mont_year">Jusqu'au:</span>
+                                              
+                                                <input type="text" id="datepicker2" name="date" class="" style="margin-top:15px !important">
+                                             
+                                              </div>
+
+
+
+                                              </div>
+                          
+                          <br>
+                          
+                          <div class="" >
+                            <p style="clear: both !important;"></p>
+                            <br>
+                                              <div class="">
+
+                                                        <div class="col-sm-12 col-xs-12 col-lg-2 col-md-2" style="">
+
+
+                                                <input type="checkbox" name="" id="periode_allant" class="class_in" style=" "> <label for="periode_allant" class="in_3" style="display: inline-block;vertical-align: top;">Période du </label>
+                                                            </div>
+                                                       <div class="col-sm-12 col-xs-12 col-lg-10 col-md-10">
+                                                           <!-- le jours -->
+                                                <select class="select_item4">
+                                                    <option>Jour</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+                                                </select>
+
+                                              <!-- fin du jour -->
+
+                                                             <!-- le mois -->
+                                                <select class=" select_item4">
+                                                  <option value="">Mois</option><option value="01">Janvier</option><option value="02">Février</option><option value="03">Mars</option><option value="04">Avril</option><option value="05">Mai</option><option value="06">Juin</option><option value="07">Juillet</option><option value="08">Août</option><option value="09">Septembre</option><option value="10">Octobre</option><option value="11">Novembre</option><option value="12">Décembre</option>
+                                                </select>
+                                              <!-- fin du mois-->
+                                                            <!-- debut de l'année -->
+                                                <select class=" select_item4">
+                                                  <option value="">Année</option>
+                                                  <option value="2018">2018</option>
+                                                  <option value="2019">2019</option>
+                                                </select>
+
+                                              <!-- fin de l'année -->
+                                               <span class="in_">Au </span>
+
+                                              <!-- le jours -->
+                                                <select class=" select_item4">
+                                                    <option>Jour</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+                                                </select>
+
+                                              <!-- fin du jour -->
+
+                                                           <!-- le mois -->
+                                                <select class="select_item4">
+                                                  <option value="">Mois</option><option value="01">Janvier</option><option value="02">Février</option><option value="03">Mars</option><option value="04">Avril</option><option value="05">Mai</option><option value="06">Juin</option><option value="07">Juillet</option><option value="08">Août</option><option value="09">Septembre</option><option value="10">Octobre</option><option value="11">Novembre</option><option value="12">Décembre</option>
+                                                </select>
+                                              <!-- fin du mois-->
+
+                                              <!-- debut de l'année -->
+                                                <select class="select_item4">
+                                                  <option value="">Année</option>
+                                                  <option value="2018">2018</option>
+                                                  <option value="2019">2019</option>
+                                                </select>
+
+                                              <!-- fin de l'année -->
+                                              
+
+                                                        </div>
+
+                                                        <p style="clear: both !important;"></p>
+                                              <button class="btn btn-warning btn-xs  add_fields_4" id=""><i class="fa fa-plus"></i> Ajouter période </button>
+                                              </div>
+
+                                              <br>
+
+
+
+                                            </div>
+
+
+                              <!-- debut du code et du -->
+                              <div class="wrapper_4" style="margin-bottom:10px !important;width:80%;"></div>
+                              <!-- fin du code et du -->
+                          
+
+                                              <br><br>
+
+
+
+                                            </div>
+                        
+                   
+                    </div>
+          
+
+             </div>
+
+                  </div>
+                  
+                </div>
+                       <!-- fin du tableau-->
 
                     </div>
 
 
         <div>
 
-                <div class="pull-right">
-
+                <div class="pull-right" >
+                  <br><br>
 
 
 
@@ -552,14 +704,14 @@ Enregistrer</button>
 
 
 
+                <button type="reset" class="btn  btn-danger btn_valid"><i class="fa fa-times"></i>
+ Annuler</button>
 
-
-
+            
             </div>
 
 
               </form>
-
                     <!-- -->
                     <br><br>
 
@@ -585,42 +737,46 @@ Enregistrer</button>
 {% block scripts %}
 
  <script type="text/javascript">
-	    				$(document).ready(function(){
-	    					$("#only").on('click',function(){
-	    						$(".container_news_date").show();
-	    					});
+             $(document).ready(function(){
+            $(".datepicker"+"affiche").datepicker();
+                $("#only").on('click',function(){
+                  $(".container_news_date").show();
+                });
 
-	    					$("#first_only").on('click',function(){
-	    						$(".container_news_date").hide();
-	    					});
+                $("#first_only").on('click',function(){
+                  $(".container_news_date").hide();
+                });
+                            
+                       
 
                 // une autre ligne
                 $("#signupForm").validate({
                   rules: {
+                    couleur: "required",
                     firstname: {
-                      required: false,
+                      required: true,
                       minlength: 2
                     },
-                    couleur:{
-                      required:false
-                    },
                     profession: {
-                      required: false,
+                      required: true,
                       minlength: 4
                     },
                     lastname: {
-                      required: false,
+                      required: true,
                       minlength: 2
                     },
                     phone: {
-                      required: false,
+                      required: true,
                       number: true,
                       minlength: 9
                     },
+
+
                     email: {
-                      required: false,
+                      required: true,
                       email: true
                     }
+
                   },
                   messages: {
                     firstname: {
@@ -633,26 +789,80 @@ Enregistrer</button>
                     },
 
                     phone: {
-                      required: "<span style='color:#dd4f43'>Champs réquis</span>",
+                      required: "<span style='color:#dd4f43'>Champs réquis",
                       minlength: "<span style='color:#dd4f43'>9 caractères minimum</span>",
                       number:"<span style='color:#dd4f43'>Numéro invalide</span>"
                     },
 
                     profession: {
                       required: "<span style='color:#dd4f43'>Champs réquis</span>",
-                      minlength: "<span style='color:#dd4f43'>5 caractères minimum</span>"
+                      minlength: "<span style='color:#dd4f43'>5 caractères minimum</span>",
                     },
                     email:{
                       required: "<span style='color:#dd4f43'>Champ réquis</span>",
-                      email: "<span style='color:#dd4f43'>Email invalide</span>"
+                      email: "<span style='color:#dd4f43'>Email invalide</span>",
                     },
-                    couleur: "<span style='color:#dd4f43'>La couleur</span>"
+                    couleur: "<span style='color:#dd4f43'>La couleur</span>",
                   }
                 });
+        
+        
+                $('#hide_2').on('click',function(){
+                  $("#all_week_div").toggle();
+                });
+                // Ajouter une nouvele Périodicité
+
+                var max_fields = 4; 
+                var wrapper    = $(".wrapper_4"); 
+                var add_button = $(".add_fields_4"); 
+                var x = 1;
+            
+              $(add_button).click(function(e){
+                    e.preventDefault();
+              
+                    if(x < max_fields){
+                        x++; 
+                  
+                  $(wrapper).append('<div class="wrapper_down_" style=""><div id="btn_add"><div class="col-xs-12 col-sm-12 col-md-1 col-lg-1"><span class="in_2">Et du </span></div><div class="col-xs-12 col-sm-12 col-md-11 col-lg-11"><div class="margin_zero"><select class="select_item4"><option value="">Jour</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05<option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20<option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select class="select_item4"><option>Mois</option><option value="Janvier">Janvier</option><option value="Février">Février</option><option value="Mars">Mars</option><option value="Avril">Avril</option><option value="Mai">Mai</option><option value="Juin">Juin</option><option value="Juillet">Juillet</option><option value="Août">Août</option><option value="Septembre">Septembre</option><option value="Octobre">Octobre</option><option value="Novembre">Novembre</option><option value="Décembre">Décembre</option></select><select class="select_item4"><option>Année</option><option value="2018">2018</option><option value="2019">2019</option></select><span class="in_">Au </span><select class="select_item4"><option>Jour</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select class="select_item4"><option value="">Mois</option><option value="01">Janvier</option><option value="02">Février</option><option value="03">Mars</option><option value="04">Avril</option><option value="05">Mai</option><option value="06">Juin</option><option value="07">Juillet</option><option value="08">Août</option><option value="09">Septembre</option><option value="10">Octobre</option><option value="11">Novembre</option><option value="12">Décembre</option></select><select class=" select_item4"><option value="">Année</option><option value="2018">2018</option><option value="2019">2019</option></select></div></div></div><a href="javascript:void(0);" class="remove_field_5 btn-primary"><i class="fa fa-times"></i></a></div>');
+                    }
+                });
+
+              
+                $(wrapper).on("click",".remove_field_5", function(e){
+                    e.preventDefault();
+                $(this).parent('div').remove(); 
+                x--; 
+                })
 
 
-	    				});
-	    			</script>
+               /* $("#hide_2").on("click",function(){
+
+                  if($('input[name=add_items]').prop('checked'))
+                  {
+                    $(".show_2").show();
+
+                  }
+                  else {
+                    $(".show_2").hide();
+                    $(".wrapper_down_").hide();
+                  }
+                });*/
+        
+                            
+                   //datepicker
+                            
+                        $("#datepicker3").datepicker();
+                        $("#datepicker4").datepicker();
+                        $(".datepicker6").datepicker();
+                        $("#datepicker").datepicker();
+                        $("#datepicker5").datepicker();
+                        $("#datepicker7").datepicker();    
+                        $("#datepicker2").datepicker();
+          
+
+              });
+            </script>
+
 
 
 {% endblock%}

@@ -1,0 +1,185 @@
+    {% extends '::admin_template.html.twig' %}
+
+{% block title %} fiche d'encaissement  : Dikaki prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+
+{% block style %}
+
+<style>
+  th,td{
+    text-align: center !important;
+  }
+  .sky-form{
+    box-shadow: none !important;
+  }
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+  }
+
+  tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+  }
+  tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+  }
+  caption {
+    padding: 10px;
+  }
+
+
+
+    </style>
+{% endblock %}
+
+{%  block body %}
+
+ <!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <h2 class="name_structure">Cabinet médical la Grâce</h2>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <h2 class="name_structure">Fiche d'encaissement</h2>
+            </div>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <select class="form-control form_width">
+                <option>Dr Ndewa</option>
+                 <option>Dr Fotso</option>
+                 <option>Dr Melingui</option>
+             </select>
+
+           <br>
+    
+              <a href="{{path('dkk_administration_agenda')}}" class="re_back_"><i class="fa fa-share"></i> Revenir à l'agenda</a>
+              <p style="clear:both !important"></p>
+
+           
+              <div class="content_menu">
+                 <div class="wrapper_line_one">
+                   <span class="form_search">
+                        <form method="post" action="{{path('dkk_administration_client')}}">
+                            <input type="search" name="" placeholder="Recherche client" class="serach_bx" required>
+                            <button type="submit" class="search_btn"><i class="fa fa-search"></i></button>
+                         </form>
+                    </span>
+
+                    <a href="{{path('dkk_administration_agenda_creer_client')}}" class="btn add_agenda">Nouveau client</a>
+                     <a href="{{path('dkk_administration_agenda_creer_planning')}}" class="mymodalbox">Planning </a>
+                     <a href="{{path('dkk_administration_agenda_prendre_rdv')}}" class="btn rdv_agenda"> Prendre  RDV</a>
+                     <a href="{{path('dkk_administration_agenda_modifier_rdv')}}" class="btn modifier_agenda">  Modifier   RDV</a>
+                     <a href="{{path('dkk_administration_agenda_presence')}}" class="btn precence_agenda">  Présence</a>
+                     <a href="{{path('dkk_administration_agenda_encaissement')}}" class="btn encaissement">  Encaissement</a>
+                 </div>
+
+              </div>
+
+              <div class="">
+                   <h3 class="cration_client">Feuille d'encaissement</h3>
+                   <div class="" style="padding-right: 70px;padding-left: 70px !important;">
+                    <br><br>
+                    <div class="pull-left">
+                        <span class="journne_du_">Journée du 15 décembre 2018</span>
+                        <select name="" class="form-control" style="display: inline-block;vertical-align: middle !important;width: 150px !important;margin-left: 20px;">
+                            <option value="">Aujourd'hui</option>
+                            <option value="">Par date</option>
+                        </select>
+                    </div>
+                    <div class="pull-right">
+                       <a href="" class="btn btn-success btn-sm"><i class="fa fa-print"></i> Imprimer </a>
+                    </div>
+    <br><br><br>
+
+
+                    <table class="table table-bordered table-striped table-condensed"> 
+                    
+                     <thead> 
+                      <tr style="background-color: #26440d !important;color: #fff !important;">
+                      <th>N°</th>
+                      <th>Date</th>
+                      <th>Nom & Prénom</th>
+                      <th>Prestation </th>
+                      <th>Montant </th>
+                      <th>Acompte</th>
+                      <th>Reste  à payer </th>
+                     </tr> 
+                     </thead> 
+                     <tfoot> 
+                     <tr> 
+                     <td colspan="4" style="background-color: #26440d !important;color: #fff !important;">Total</td> 
+                     <td style="background-color: #26440d !important;color: #fff !important;">118</td> 
+                     <td style="background-color: #26440d !important;color: #fff !important;">118</td> 
+                     <td style="background-color: #26440d !important;color: #fff !important;">118</td> 
+                     </tr> 
+                     </tfoot> 
+                      <tbody>
+                    <tr>
+                      <td> 1 </td>
+                      <td>01/09/10</td>
+                      <td> Ebolo Guy Sthephane</td>
+                      <td> Consultation générale</td>
+                      <td> 7000</td>
+                      <td> 15000</td>
+                      <td> 8000</td>
+                    </tr>
+                     <tr>
+                      <td> 1 </td>
+                      <td>01/09/10</td>
+                      <td> Ebolo Guy Sthephane</td>
+                      <td> Consultation générale</td>
+                      <td> 7000</td>
+                      <td> 15000</td>
+                      <td> 8000</td>
+                    </tr>
+                       <tr>
+                      <td> 1 </td>
+                      <td>01/09/10</td>
+                      <td> Ebolo Guy Sthephane</td>
+                      <td> Consultation générale</td>
+                      <td> 7000</td>
+                      <td> 15000</td>
+                      <td> 8000</td>
+                    </tr>
+                    
+                  </tbody>
+     </table> 
+
+
+               
+        
+                   </div>
+              </div>
+
+
+          </div>
+
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+

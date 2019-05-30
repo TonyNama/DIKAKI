@@ -1,6 +1,6 @@
-Hello: __Hello
-cancel: __cancel
-validate: __validate
+Hello: Olá
+cancel: cancela
+validate: Validar
 'Bienvenue chez': 'Bem-vindo ao'
 'Prise de rendez-vous et dépôt de dossier en ligne': 'Reservas de consulta online e submissão de ficheiros'
 'Solution de gestion de planning, de prise de rendez-vous en  ligne et dépôt de dossier.': 'Solução para gerenciamento de planejamento, agendamento de compromissos on-line e envio de arquivos.'
@@ -74,7 +74,7 @@ Envoyer: Enviar
 'Dès lors que tout est payé en ligne, le dépôt de dossier devient facile et rapide. C''est simple.': 'Assim que tudo é pago on-line, o arquivamento de arquivos se torna fácil e rápido. É simples.'
 'La solution c''est la digitalisation de votre gestion de prise de rendez-vous.': 'A solução é a digitalização da sua gestão de agendamento de compromissos.'
 '"Essayez Dikaki".': '"Tenta Dikaki".'
-"Le système de prise de rendez-vous en ligne pour dépôt de dossier <b>Dikaki</b> vous offre toutes les fonctionnalités dont vous avez besoin dans vos services\n                            pour l'organisation, la gestion des concours administratifs, dossiers de passeports - carte nationale d'identité - visa, dossier de sécurité sociale et bien d'autres.": "O sistema de agendamento de agendamento de agendamento on-line para apresentação de arquivo <b>Dikaki</b> oferece-lhe todas as características que você precisa em seus serviços para a organização, a gestão de concursos administrativos, arquivos de passaporte - carteira de identidade nacional - visto, arquivo de segurança social e muitos outros."
+"Le système de prise de rendez-vous en ligne pour dépôt de dossier <b>Dikaki</b> vous offre toutes les fonctionnalités dont vous avez besoin dans vos services\n                            pour l'organisation, la gestion des concours administratifs, dossiers de passeports - carte nationale d'identité - visa, dossier de sécurité sociale et bien d'autres.": 'O sistema de agendamento de agendamento de agendamento on-line para apresentação de arquivo <b>Dikaki</b> oferece-lhe todas as características que você precisa em seus serviços para a organização, a gestão de concursos administrativos, arquivos de passaporte - carteira de identidade nacional - visto, arquivo de segurança social e muitos outros.'
 'Dépôt de dossier.': 'Apresentação de um ficheiro.'
 'La prise de rendez-vous avec Dikaki, c''est un fonctionnement simple et rapide. Découvrez la prise de rendez-vous avec paiement en ligne pour la gestion de vos dépôts de dossiers. C''est la  facilitation et la simplification des procédures': 'Marcando uma consulta com a Dikaki, é uma operação simples e rápida. Descubra a reserva de consulta com pagamento online para a gestão das suas submissões de ficheiros. É a facilitação e simplificação de procedimentos'
 'Prise de rendez-vous et réservation en ligne.': 'Marcação de consulta e reserva online.'
@@ -172,7 +172,7 @@ Start-up: Arranque
 Commercial: Comercial
 Etudiant: Estudante
 'Agence de communication': 'Agência de comunicação'
-'Agence de marketing': 'Agência de marketing'
+'Agence de marketing': 'Agência de comercialização'
 'Agence événementielle': 'Agência de eventos'
 Association: Associação
 'Objet de votre demande': 'Assunto do seu pedido'
@@ -204,7 +204,7 @@ Association: Associação
 'Recevez vos paiements en ligne,  en toute sécurité.': 'Receba os seus pagamentos online, de forma segura.'
 '"C''est la solution".': '"Esta é a solução".'
 'La puissance de Dikaki': 'O poder de Dikaki'
-'Depôt de dossier': 'Submeter um ficheiro' 
+'Depôt de dossier': 'Submeter um ficheiro'
 'Dès lors que tout est payé en ligne, le dépôt de dossier devient facile et rapide.': 'Assim que tudo é pago online, o arquivamento torna-se fácil e rápido.'
 '"C''est simple".': '"É simples".'
 'La prise de rendez-vous en ligne facilite l''inscription et la pré-inscription des étudiants dans les universités et autres institutions le système leur établit une fiche de circulation sur le lieu de leur enrôlement.': 'A marcação de consulta online facilita a inscrição e pré-inscrição de estudantes em universidades e outras instituições, o sistema estabelece uma folha de circulação para eles no local da sua inscrição.'
@@ -226,22 +226,22 @@ Nouvelles: Novidades
 'Je crée mon compte professionnel': 'Eu crio minha conta profissional'
 'Je prends RDV avec un conseiller Dikaki': 'Vou marcar uma consulta com um conselheiro da Dikaki'
 'Appelez au': 'Ligue para o'
-'Du lundi au Vendredi de 09 <sup>H</sup> à 18<sup>H</sup>': 'De segunda a sexta-feira das 09:00 às 18:00'
 'A propos de': 'Sobre a'
 'Notre mission pour 2019 est de vous accompagner jour après jour dans votre projet de digitalisation de votre entreprise, automatiser et simplifier votre planification et votre prise de rendez-vous en ligne avec la plateforme DIKAKI.': 'Nossa missão para 2019 é apoiá-lo dia após dia em seu projeto de digitalização de sua empresa, automatizar e simplificar seu planejamento e agendamento de compromissos on-line com a plataforma DIKAKI.'
 'Nous croyons que le changement n’arrivera que par vous.': 'Acreditamos que a mudança só virá através de você.'
 'A propos de Dikaki': 'Sobre a Dikaki'
 'est un outil innovant pour l’Afrique, une plateforme de prise de rendez-vous et paiement en ligne qui va changer la façon de vous organiser. L’idée , vous permettre de prendre rapidement rendez-vous chez  l’un de votre professionnel de Santé , dans un service public( rdv passeports,visas,cni,cnps et bien d’autres …) ,avec votre conseillé de banque, votre conseillé juridique(avocat, notaire), votre expert,  pour votre inscription à un concours ou examens, dans votre salon de coiffure,  avec votre garagiste,  et payer votre service ou prestation, cela  en quelques clics 24h/24 et 7j/7 !.': 'is an innovative tool for Africa, an online appointment and payment platform that will change the way you organize. The idea, to allow you to quickly make an appointment with one of your health professional, in a public service (passports, visas, cni, cnps and many others...) ,with your bank advisor, your legal advisor (lawyer, notary), your expert, for your registration to a competition or exams, in your hair salon, with your mechanic, and pay for your service or service, all in a few clicks 24h/24 and 7j/7 é uma ferramenta inovadora para a África, uma plataforma online de agendamento e pagamento que vai mudar a forma como você se organiza. A idéia, para permitir que você faça rapidamente uma consulta com um de seus profissionais de saúde, em um serviço público (passaportes, vistos, cni, cnps e muitos outros...), com seu conselheiro bancário, seu consultor jurídico (advogado, notário), seu especialista, para sua inscrição em uma competição ou exame, em seu salão de cabeleireiro, com seu mecânico, e pagar seu serviço ou serviço, isto em poucos cliques 24/24 e 7/7 !.'
 'Il n’existe pas de service plus simple': 'Não existe um serviço mais simples'
-"Une fois votre rendez-vous choisi, vous recevez un sms et un e-mail de confirmation et de rappel dans lequel se trouvent la date et l’heure prévues.\n                Vous avez la possibilité de modifier et \n                d’annuler votre rendez-vous de la même manière.": "Uma vez escolhido o seu compromisso, você receberá um SMS e um e-mail de confirmação e lembrete com a data e hora agendadas. Você pode alterar e cancelar o seu compromisso da mesma forma."
+"Une fois votre rendez-vous choisi, vous recevez un sms et un e-mail de confirmation et de rappel dans lequel se trouvent la date et l’heure prévues.\n                Vous avez la possibilité de modifier et \n                d’annuler votre rendez-vous de la même manière.": 'Uma vez escolhido o seu compromisso, você receberá um SMS e um e-mail de confirmação e lembrete com a data e hora agendadas. Você pode alterar e cancelar o seu compromisso da mesma forma.'
 'Quoi de plus facile.': 'O que poderia ser mais fácil.'
-"Vous avez la possibilité de payer votre prestation en ligne.\nConsultez les disponibilités des professionnels en temps réel et prenez rendez-vous en ligne immédiatement.": "Você tem a possibilidade de pagar pelo seu serviço online. Verifique a disponibilidade de profissionais em tempo real e marque uma consulta online imediatamente."
+"Vous avez la possibilité de payer votre prestation en ligne.\nConsultez les disponibilités des professionnels en temps réel et prenez rendez-vous en ligne immédiatement.": 'Você tem a possibilidade de pagar pelo seu serviço online. Verifique a disponibilidade de profissionais em tempo real e marque uma consulta online imediatamente.'
 'Notre base': 'Nossa base'
 'Notre base c’est le Cameroun, venez nous retrouver et restez tranquille, on s’occupe de tout.': 'Nossa base é Camarões, venha conhecer-nos e ficar calmo, nós cuidamos de tudo.'
 'Du lundi au Vendredi de 09': 'De segunda a sexta-feira das 09'
 'à 18': 'às 18'
 'A qui est destiné Dikaki': 'Para quem é Dikaki'
-'<span>a</span> qui est destiné Dikaki ?': 'para quem é Dikaki ?'
+a: para
+'qui est destiné Dikaki ?': 'quem é Dikaki ?'
 'Le système de prise de rendez-vous et réservation en ligne': 'O sistema de marcação e reserva online'
 'est spécifiquement conçu pour les prestataires de services': 'é projetado especificamente para prestadores de serviços'
 'Qu''il s''agisse:': 'Quer seja uma questão de:'
@@ -283,7 +283,7 @@ propriétaire: Proprietário
 'situé à Odza Yaoundé': 'localizado em Odza Yaoundé'
 'Route Aéroport International  de Yaoundé Nsimalen': 'Rota Aéroport International de Yaoundé Nsimalen'
 'Boîte Postale': 'Caixa Postal'
-Téléphone: Número de telefone
+Téléphone: 'Número de telefone'
 'Immatriculée au RCCM sous le N°': 'Registado na RCCM sob o número'
 'SARL  au capital de': 'SARL com um capital de'
 'Numéro Contribuable': 'Número de Contribuinte'
@@ -294,9 +294,9 @@ Téléphone: Número de telefone
 'Direction de Publication.': 'Direção de Publicação.'
 'Sarl, Gérant.': 'Sarl, Gerente.'
 Tel: Tel
-Email: O email
+Email: 'O email'
 'Responsable de Projet.': 'Gerente de Projetos.'
-E-mail: O email
+E-mail: 'O email'
 'Hébergeur des  services.': 'Anfitrião de serviço.'
 'Demander une demonstration': 'Solicite uma demonstração'
 'Veuillez entrer vos coordonnées pour une version de démonstration': 'Por favor introduza a sua informação de contacto para uma versão de demonstração'
@@ -320,10 +320,10 @@ Particulier: Particular
 'Se déconnecter': 'Desconectar do site'
 Français: francês
 Anglais: inglês
-Espagnol: língua espanhola
+Espagnol: 'língua espanhola'
 Portugais: Português
 'Voici comment ça fonctionne': 'Eis como funciona'
-"Notre équipe commerciale se déplace sur votre lieu d'activité pour vous présenter la solution Dikaki , \n répondre à vos questions et noter vos suggestions": "A nossa equipa de vendas irá visitar o seu local de negócio para lhe apresentar a solução Dikaki, responder às suas questões e anotar as suas sugestões"
+"Notre équipe commerciale se déplace sur votre lieu d'activité pour vous présenter la solution Dikaki , \n répondre à vos questions et noter vos suggestions": 'A nossa equipa de vendas irá visitar o seu local de negócio para lhe apresentar a solução Dikaki, responder às suas questões e anotar as suas sugestões'
 'Fonctions de mise en marche au départ': 'Funções de arranque no início'
 'Inscrivez-vous gratuitement': 'Registe-se gratuitamente'
 'Enregistrez vos services': 'Registe os seus serviços'
@@ -357,16 +357,16 @@ Portugais: Português
 'Un contrat de service soumis à une commission à chaque opération ou transaction': 'Um contrato de serviços sujeito a comissão por cada operação ou transacção'
 'Un service payant': 'Um serviço pago'
 'Pour les grands comptes': 'Para contas-chave'
-"Administrations, établissements publics et privés, collectivités territoriales, grandes entreprises\n\n    Notre équipe technique se charge de vos développements personnalisés et un accompagement sur mesure afin de vous aider à intégrer nos <b>API</b> (solutions) dans vos applications externes pour automatiser votre gestion de rendez-vous.": "Administrações, instituições públicas e privadas, autoridades locais, grandes empresas, etc. Nossa equipe técnica cuida de seus desenvolvimentos personalizados e suporte personalizado para ajudá-lo a integrar nossos <b>API</b> (soluções) em suas aplicações externas para automatizar seu gerenciamento de compromissos."
+"Administrations, établissements publics et privés, collectivités territoriales, grandes entreprises\n\n    Notre équipe technique se charge de vos développements personnalisés et un accompagement sur mesure afin de vous aider à intégrer nos <b>API</b> (solutions) dans vos applications externes pour automatiser votre gestion de rendez-vous.": 'Administrações, instituições públicas e privadas, autoridades locais, grandes empresas, etc. Nossa equipe técnica cuida de seus desenvolvimentos personalizados e suporte personalizado para ajudá-lo a integrar nossos <b>API</b> (soluções) em suas aplicações externas para automatizar seu gerenciamento de compromissos.'
 '" Dikaki, une plateforme simple, accessible et efficace."': '" Dikaki, uma plataforma simples, acessível e eficiente."'
 'Demander un devis': 'Solicite uma cotação'
 'Les réponses à vos questions': 'As respostas às suas perguntas'
-'Comment dois-je faire pour m''abonner à Dikaki': 'Como faço para me inscrever na Dikaki?'
+'Comment dois-je faire pour m''abonner à Dikaki': 'Como faço para me inscrever na Dikaki'
 'Parmi les formules d''abonnements proposées choisissez celui qui vous convient le mieux, vous êtes libre de résilier votre abonnement à tout moment': 'Dentre as opções de assinatura oferecidas, escolha a que mais lhe convier, você pode cancelar sua assinatura a qualquer momento.'
-'Puis-je utiliser Dikaki pour mes paiements en ligne': 'Posso usar Dikaki para meus pagamentos online?'
+'Puis-je utiliser Dikaki pour mes paiements en ligne': 'Posso usar Dikaki para meus pagamentos online'
 'Oui. Si vous le souhaitez avec le module de paiement en ligne vos clients peuvent régler tout ou partie du montant de la prestation ou du service': 'Sim, se desejar com o módulo de pagamento online os seus clientes podem pagar a totalidade ou parte do valor do serviço ou serviço.'
-'Est-il possible de tester gratuitement Dikaki': '__Est-il possible de tester gratuitement Dikaki'
-'Oui! Evidemment, vous avez une possibilité de tester la solution Dikaki gratuitement. Ceci pendant 60 jours sans engagement de votre part': '__Oui! Evidemment, vous avez une possibilité de tester la solution Dikaki gratuitement. Ceci pendant 60 jours sans engagement de votre part'
+'Est-il possible de tester gratuitement Dikaki': 'É possível testar a Dikaki gratuitamente'
+'Oui! Evidemment, vous avez une possibilité de tester la solution Dikaki gratuitement. Ceci pendant 60 jours sans engagement de votre part': 'Sim, claro, você tem a oportunidade de testar a solução Dikaki gratuitamente. Isto durante 60 dias sem qualquer compromisso da sua parte'
 'Proposez-vous une formation à l''utilisation de Dikaki': 'Você oferece treinamento no uso de Dikaki'
 'Oui! Bien-sûr, une formation initiale à l''utilisation de Dikaki est prévue pour chaque abonné': 'Sim, é claro, o treinamento inicial no uso da Dikaki é planejado para cada assinante.'
 'Pourquoi utiliser Dikaki': 'Porquê usar Dikaki'
@@ -386,16 +386,16 @@ Portugais: Português
 'DIKAKI Dépôt de dossier': 'DIKAKI Apresentação do processo'
 'DIKAKI E-Ticket': 'Bilhete eletrônico DIKAKI'
 'Comment ça marche': 'Como é que funciona'
-Newsletter: Boletim Informativo
-Contactez-nous: Contacte-nos para mais informações
+Newsletter: 'Boletim Informativo'
+Contactez-nous: 'Contacte-nos para mais informações'
 'SERDI INFORMATIQUE': 'SERDI INFORMÁTICA'
-'BP:11007, Yaoundé - Cameroun': 'BP:11007, Yaoundé - Camarões'
-"Route aéroport international de Yaoundé\n                                    Nsimalen. PK 10 Odza.": "Yaounde International Airport Road Nsimalen. PK 10 Odza."
+'BP:11007, Yaoundé - Cameroun': 'Caixa Postal:11007, Yaoundé - Camarões'
+"Route aéroport international de Yaoundé\n                                    Nsimalen. PK 10 Odza.": 'Rota Aéroport International de Yaoundé Nsimalen. PK 10 Odza.'
 'Ouverture: Lun. - Ven.': 'Abertura: Mon. - Ven.'
 'Service clients': 'Atendimento ao cliente'
 'Support technique': 'Suporte técnico'
 'Assistance rapide': 'Assistência rápida'
-"Nos conseillers vous assistent dès les premières heures d'utilisation\n                                    en vous expliquant toutes les fonctionnalités de la solution agenda\n                                    planning Dikaki et la prise de rendez-vous en ligne. Nos équipes\n                                    restent disponibles et réagissent rapidement à votre sollicitation.": "Os nossos consultores irão ajudá-lo desde as primeiras horas de utilização, explicando todas as funcionalidades da solução de agenda da Dikaki e marcando encontros online. As nossas equipas permanecem disponíveis e reagem rapidamente ao seu pedido."
+"Nos conseillers vous assistent dès les premières heures d'utilisation\n                                    en vous expliquant toutes les fonctionnalités de la solution agenda\n                                    planning Dikaki et la prise de rendez-vous en ligne. Nos équipes\n                                    restent disponibles et réagissent rapidement à votre sollicitation.": 'Os nossos consultores irão ajudá-lo desde as primeiras horas de utilização, explicando todas as funcionalidades da solução de agenda da Dikaki e marcando encontros online. As nossas equipas permanecem disponíveis e reagem rapidamente ao seu pedido.'
 'Trouver un rendez-vous': 'Encontre um compromisso'
 'Trouver un évènement': 'Encontre um evento'
 Evènement: Evento
@@ -406,7 +406,6 @@ Cameroun: Camarões
 'Nouvelles de': 'Notícias de'
 'Pour qui est destiné': 'Para quem se destina'
 'qui est destiné': 'que se destina'
-'est spécifiquement conçu pour les prestataires de services': 'é projetado especificamente para prestadores de serviços'
 'Qu''il s''agisse': 'Quer seja uma questão de'
 'De la santé': 'Sobre a saúde'
 'Aux médécins et autres professionnels de santé': 'Aos médicos e outros profissionais de saúde'
@@ -427,7 +426,7 @@ Cameroun: Camarões
 'Acceptez  les réservations / rendez-vous même en déhors des horaires d''ouverture': 'Aceitar reservas / compromissos mesmo fora do horário de funcionamento'
 'La puissance de': 'O poder da'
 'Principales fonctionnalités': 'Principais funcionalidades'
-'Gestion de planning, paiement en ligne, réservation et prise de rendez-vous en ligne, marketing, relation client, multi-langue etc...': 'Gestão de planeamento, pagamento online, reserva e marcação de consultas online, marketing, relações com clientes, multilinguismo, etc...'
+'Gestion de planning, paiement en ligne, réservation et prise de rendez-vous en ligne, marketing, relation client, multi-langue etc...': 'Gestão de planeamento, pagamento online, reserva e marcação de consultas online, comercialização, relações com clientes, multilinguismo, etc...'
 'Avec Dikaki gérez efficacement votre activité et multipliez vos rendez-vous ou réservations': 'Com a Dikaki, pode gerir eficazmente o seu negócio e multiplicar os seus compromissos ou reservas'
 'Agenda / Planning': 'Agenda / Planejamento'
 'Disponibilités en temps réel': 'Disponibilidade em tempo real'
@@ -436,7 +435,7 @@ Cameroun: Camarões
 'Vous estimez que votre activité est trop spécifique pour définir une disponibilité en temps réel ? Dikaki vous laisse la possibilité de confirmer manuellement en un clic chaque demande de réservation. De même vous pouvez facilement fermer à la réservation une plage horaire, des jours ou sessions entiers, en cas de fermeture ou si vous affichez complet.': 'Você acha que sua atividade é muito específica para definir a disponibilidade em tempo real? Dikaki permite que você confirme manualmente cada pedido de reserva com um clique. Da mesma forma, você pode facilmente fechar um horário, dias inteiros ou sessões ao reservar, ao fechar ou se você estiver totalmente reservado..'
 'Compte multi-utilisateurs': 'Conta multiusuário'
 'Vous travaillez en équipe et cherchez un moyen de gérer les disponibilités de vos collaborateurs. Dikaki vous permet de lister vos collaborateurs et d’associer chacun d’eux à différentes prestations. Chaque collaborateur peut ainsi consulter son planning ainsi que les réservations dont il a la charge. Les disponibilités de chaque collaborateur sont mises à jour en temps réel. Différents niveaux d’accès sont disponibles.': 'Você trabalha em equipe e está procurando uma maneira de gerenciar a disponibilidade de seus funcionários. A Dikaki permite-lhe listar os seus empregados e associar cada um deles a diferentes serviços. Cada empregado pode, portanto, consultar sua programação e as reservas pelas quais é responsável. A disponibilidade de cada funcionário é atualizada em tempo real. Diferentes níveis de acesso estão disponíveis.'
-Prestations: Serviços prestados
+Prestations: 'Serviços prestados'
 Adaptabilité: Adaptabilidade
 'Quelles que soient votre activité et les prestations (services) que vous proposez, Dikaki s’adapte. Les options de paramétrage sont multiples et conviennent à de nombreux cas. Si vous avez des questions particulières à ce sujet, n’hésitez pas à nous contacter, nous pourrons voir tout cela ensemble !': 'Qualquer que seja a sua actividade e os serviços (serviços) que oferece, a Dikaki adapta-se. As opções de configuração são múltiplas e adequadas para muitos casos. Se tiver alguma questão específica sobre este assunto, não hesite em contactar-nos, podemos ver tudo isto em conjunto. !'
 'Affichage des prestations': 'Exibição de serviços'
@@ -457,23 +456,23 @@ Réservations: Reservas
 'Gestion des encaissements': 'Administração de recibos'
 'Paiements sécurisés': 'Pagamentos seguros'
 'Offrez un cadre de confiance à vos clients avec une solution de paiement reconnue : Mobile money, carte bancaire .Notre moteur de réservation et notre système de paiements via nos partenaires sont entièrement sécurisés. Nous utilisons des technologies robustes et maintenons nos systèmes constamment à jour.': 'Ofereça uma estrutura de confiança aos seus clientes com uma solução de pagamento reconhecida: dinheiro móvel, cartão de crédito, etc. O nosso motor de reserva e o nosso sistema de pagamento através dos nossos parceiros são completamente seguros. Utilizamos tecnologias robustas e mantemos nossos sistemas constantemente atualizados.'
-'Si vous le souhaitez, vous pouvez associer à Dikaki un système de paiement. Ainsi, vos clients peuvent payer en ligne, tout ou partie de leur réservation (acomptes possibles). Et cela marche même pour les réservations prises par téléphone ou sur place grâce à l’envoi d’un lien de paiement par e-mail ou SMS. Notez que les frais de transaction sont propres à chaque solution de paiement (Mobile money, carte bancaire etc..) et ne sont pas couverts par l’abonnement Dikaki.': '__Si vous le souhaitez, vous pouvez associer à Dikaki un système de paiement. Ainsi, vos clients peuvent payer en ligne, tout ou partie de leur réservation (acomptes possibles). Et cela marche même pour les réservations prises par téléphone ou sur place grâce à l’envoi d’un lien de paiement par e-mail ou SMS. Notez que les frais de transaction sont propres à chaque solution de paiement (Mobile money, carte bancaire etc..) et ne sont pas couverts par l’abonnement Dikaki.'
-Marketing: Marketing
+'Si vous le souhaitez, vous pouvez associer à Dikaki un système de paiement. Ainsi, vos clients peuvent payer en ligne, tout ou partie de leur réservation (acomptes possibles). Et cela marche même pour les réservations prises par téléphone ou sur place grâce à l’envoi d’un lien de paiement par e-mail ou SMS. Notez que les frais de transaction sont propres à chaque solution de paiement (Mobile money, carte bancaire etc..) et ne sont pas couverts par l’abonnement Dikaki.': 'Se desejar, pode associar um sistema de pagamento à Dikaki. Assim, os seus clientes podem pagar online, a totalidade ou parte da sua reserva (possíveis depósitos). E até mesmo funciona para reservas feitas por telefone ou no local, enviando um link de pagamento por e-mail ou SMS. Por favor, note que as taxas de transação são específicas para cada solução de pagamento (dinheiro móvel, cartão de crédito, etc.) e não são cobertas pela assinatura da Dikaki.'
+Marketing: Comercialização
 'Envoyez des campagnes SMS et/ou e-mail': 'Envio de campanhas por SMS e/ou e-mail'
-'Vous souhaitez envoyer des infos, remises, bons plans… à vos clients et contacts par e-mail ou SMS ? C’est possible ! Dikaki vous permet d’envoyer des e-mails et SMS à caractère informatif ou marketing. Créer votre message, indiquez à qui il doit être envoyé, programmez votre envoi pour qu’il parte au bon moment.': 'Deseja enviar informações, descontos, boas dicas... aos seus clientes e contatos por e-mail ou SMS? É possível! É possível! É possível! A Dikaki permite que você envie e-mails e SMS para fins informativos ou de marketing. Criar a mensagem, especificar para quem ela deve ser enviada, programar o envio para sair no momento certo.'
-'Programmez des promos': '__Programmez des promos'
+'Vous souhaitez envoyer des infos, remises, bons plans… à vos clients et contacts par e-mail ou SMS ? C’est possible ! Dikaki vous permet d’envoyer des e-mails et SMS à caractère informatif ou marketing. Créer votre message, indiquez à qui il doit être envoyé, programmez votre envoi pour qu’il parte au bon moment.': 'Deseja enviar informações, descontos, boas dicas... aos seus clientes e contatos por e-mail ou SMS? É possível! A Dikaki permite que você envie e-mails e SMS para fins informativos ou de comercialização. Criar a mensagem, especificar para quem ela deve ser enviada, programar o envio para sair no momento certo.'
+'Programmez des promos': 'Promoções do programa'
 'Vous faites régulièrement des soldes ou proposez à vos clients fidèles des remises en guise de remerciement ? Avec Dikaki vous avez la possibilité de créer des périodes de remises qui sont automatiquement pris en compte au moment de la réservation. Le prix à payer est instantanément ajusté !': 'Tem regularmente uma venda ou oferece descontos aos seus clientes fiéis como forma de lhe agradecer? Com Dikaki você tem a possibilidade de criar períodos de desconto que são automaticamente considerados no momento da reserva. O preço a ser pago é ajustado instantaneamente !'
 'Apporteurs d''affaires': 'Contribuintes do negócio'
 'Suivez facilement les réservations en provenance de tiers ! Si vous avez des partenaires ou affiliés qui vous apportent régulièrement de nouveaux clients, vous pourrez assurer facilement le suivi des réservations en provenance de ces personnes et pourrez ainsi savoir, les commissions/rétributions qui doivent être versées': 'Acompanhe facilmente as reservas de terceiros! Se você tem parceiros ou afiliados que regularmente lhe trazem novos clientes, você será capaz de rastrear facilmente as reservas dessas pessoas e, assim, conhecer as comissões/remunerações que precisam ser pagas.'
 'Envoyez des rappels de réservation': 'Enviar lembretes de reserva'
 'Vos clients ont tendance à être tête en l’air ? Dikaki peut leur envoyer un rappel quelques heures ou jours avant, par SMS et/ou e-mail. Très efficace, les rappels par SMS permettent de diminuer le nombre de rendez-vous non honorés.': 'Os seus clientes tendem a estar de braços cruzados? A Dikaki pode enviar-lhes um lembrete algumas horas ou dias antes, por SMS e/ou e-mail. Muito eficiente, os lembretes SMS reduzem o número de compromissos não honrados.'
 'Personnalisez les e-mails envoyés': 'Personalizar os e-mails enviados'
-'Vous avez des informations spécifiques à faire passer à vos clients lors du processus de réservation ? Vous souhaitez pouvoir personnaliser le texte des e-mails automatiques envoyé par Dikaki ? C’est possible ! Vous pouvez alors paramétrer des e-mails qui correspondent au « ton » propre à votre entreprise et/ou qui mettent en avant des détails importants.': 'Vous avez des informations spécifiques à faire passer à vos clients lors du processus de réservation ? Vous souhaitez pouvoir personnaliser le texte des e-mails automatiques envoyé par Dikaki ? C’est possible ! Vous pouvez alors paramétrer des e-mails qui correspondent au « ton » propre à votre entreprise et/ou qui mettent en avant des détails importants.'
+'Vous avez des informations spécifiques à faire passer à vos clients lors du processus de réservation ? Vous souhaitez pouvoir personnaliser le texte des e-mails automatiques envoyé par Dikaki ? C’est possible ! Vous pouvez alors paramétrer des e-mails qui correspondent au « ton » propre à votre entreprise et/ou qui mettent en avant des détails importants.': 'Você tem informações específicas para passar aos seus clientes durante o processo de reserva? Você quer ser capaz de personalizar o texto dos e-mails automáticos enviados pela Dikaki? É possível! Você pode então configurar e-mails que correspondam ao "tom" de sua empresa e/ou destacar detalhes importantes.'
 'Choisissez qui peut réserver en ligne': 'Escolha quem pode reservar online'
 'Si vous avez une clientèle fidèle/régulière, que vous n’êtes pas en mesure d’accepter de nouveaux clients ou que vos services ne sont  accessibles qu’à des membres/adhérents, vous pouvez le préciser. Dans ce cas, seuls les clients “autorisés” pourront réserver en ligne.': 'Se você tem uma base de clientes leais/regulares, não pode aceitar novos clientes ou seus serviços estão disponíveis apenas para membros/membros, você pode especificar isso. Neste caso, apenas os clientes "autorizados" poderão fazer reservas online.'
 'L''autonomie de vos clients': 'A autonomia dos seus clientes'
 'L’un des aspects sous-estimés de l’essor de la réservation en ligne est le sentiment d’autonomie et de contrôle qu’elle procure aux clients dans leur processus de réservation. Les clients veulent être libres de prendre leurs propres décisions, sans forcément devoir compter sur l’intervention d’un tiers, vous, en l’occurrence.': 'Um dos aspectos subestimados do crescimento da reserva online é o sentido de autonomia e controlo que dá aos clientes no seu processo de reserva. Os clientes querem ser livres para tomar suas próprias decisões, sem necessariamente ter que contar com a intervenção de um terceiro, você, neste caso.'
-'L’avantage pour vous, c’est qu’un client autonome est un client qui vous fait gagner du temps.': '__L’avantage pour vous, c’est qu’un client autonome est un client qui vous fait gagner du temps.'
+'L’avantage pour vous, c’est qu’un client autonome est un client qui vous fait gagner du temps.': 'A vantagem para o usuário é que um mandante independente é um mandante que economiza tempo.'
 'Gestion des tâches et des ressources.': 'Gestão de tarefas e recursos.'
 'vous permet de réduire le travail administratif au quotidien en vous permettant d’automatiser de nombreuses tâches': 'permite reduzir o trabalho administrativo diário, permitindo-lhe automatizar muitas tarefas'
 'E-mail de confirmation de réservation automatique': 'E-mail de confirmação automática de reserva'
@@ -491,18 +490,18 @@ Support: Suporte
 'Notre équipe support vous assiste par mail ou téléphone si vous avez les questions sur l’utilisation du logiciel.': 'Nossa equipe de suporte irá ajudá-lo por e-mail ou telefone se você tiver alguma dúvida sobre o uso do software.'
 'Sécurité des données': 'Segurança de Dados'
 'Nos serveurs sont sécurisés et vos données régulièrement sauvegardées. Vous êtes le seul à pouvoir accéder à vos données et vous êtes sûr de ne jamais les perdre.': 'Os nossos servidores são seguros e os seus dados são armazenados regularmente. Você é o único que pode aceder aos seus dados e tem a certeza de que nunca os perderá..'
-Statistiques: Estatísticas e estatísticas
+Statistiques: 'Estatísticas e estatísticas'
 'Gérez votre fichier clients': 'Gerencie seu arquivo de cliente'
-'vous permet de gérer votre fichier clients. Vous pouvez le maintenir à jour (modification d’informations, ajout de nouveaux clients). Ainsi, il est très facile de l’utiliser dans le cadre de vos actions commerciales ou marketing.': 'permite que você gerencie seu arquivo de cliente. Você pode mantê-lo atualizado (modificar informações, adicionar novos clientes). Assim, é muito fácil usá-lo em suas ações comerciais ou de marketing.'
+'vous permet de gérer votre fichier clients. Vous pouvez le maintenir à jour (modification d’informations, ajout de nouveaux clients). Ainsi, il est très facile de l’utiliser dans le cadre de vos actions commerciales ou marketing.': 'permite que você gerencie seu arquivo de cliente. Você pode mantê-lo atualizado (modificar informações, adicionar novos clientes). Assim, é muito fácil usá-lo em suas ações comerciais ou de comercialização.'
 'Consultez l''historique des réservations': 'Consulte o histórico de reservas'
-'Pour chacun de vos clients, vous pouvez accéder à un historique des réservations. Cela vous permet d’assurer un suivi et de décider des actions marketing et commerciales.': 'Para cada um dos clientes, é possível acessar um histórico de reservas. Isso permite monitorar e decidir sobre ações de marketing e vendas.'
+'Pour chacun de vos clients, vous pouvez accéder à un historique des réservations. Cela vous permet d’assurer un suivi et de décider des actions marketing et commerciales.': 'Para cada um dos clientes, é possível acessar um histórico de reservas. Isso permite monitorar e decidir sobre ações de comercialização e vendas.'
 'Analysez votre activité': 'Analise sua atividade'
 'Rien de mieux que les chiffres pour mieux connaître votre business et les habitudes de vos clients ! Accéder à des statistiques sur vos réservations et ventes. Retrouvez des informations telles que le volume de réservations, le taux d’annulation ou encore le chiffre d’affaires réalisé.': 'Não há nada melhor do que números para entender melhor o seu negócio e os hábitos dos seus clientes! Acesse estatísticas sobre suas reservas e vendas. Encontrar informações como o volume de reservas, a taxa de anulação ou o volume de negócios realizado.'
 'Usage mobile': 'Uso móvel'
 'Moteur responsive': 'Moteur responsive'
 'Le moteur de réservations (avec paiement ou non) est compatible avec tous les navigateurs, Smartphones et tablettes. La navigation est simple et pratique. Donnez le meilleur à vos clients avec un rendu professionnel qui sera gage de confiance et de sérieux.': 'O motor de reservas (com ou sem pagamento) é compatível com todos os browsers, smartphones e tablets. A navegação é simples e conveniente. Dê o melhor de si aos seus clientes com um visual profissional que garanta confiança e seriedade..'
 'Tableau de bord responsive': 'Painel de controle responsivo'
-'Votre application est disponible partout et à tout moment. Profitez de l’ensemble des fonctionnalités de notre plate-forme que ce soit au bureau derrière votre ordinateur ou en ville avec votre smartphone ou votre tablette.': '__Votre application est disponible partout et à tout moment. Profitez de l’ensemble des fonctionnalités de notre plate-forme que ce soit au bureau derrière votre ordinateur ou en ville avec votre smartphone ou votre tablette.'
+'Votre application est disponible partout et à tout moment. Profitez de l’ensemble des fonctionnalités de notre plate-forme que ce soit au bureau derrière votre ordinateur ou en ville avec votre smartphone ou votre tablette.': 'Sua aplicação está disponível em qualquer lugar e a qualquer hora. Desfrute de todas as funcionalidades da nossa plataforma no escritório atrás do seu computador ou na cidade com o seu smartphone ou tablet.'
 'Gerez votre réservation en ligne en 3 étapes': 'Gerencie sua reserva online em 3 passos'
 'Permettez a vos clients de réserver par Internet facilement et à tout moment': 'Permita que os seus clientes façam reservas online facilmente e a qualquer momento'
 'Créez votre compte gratuitement sur Dikaki': 'Crie a sua conta gratuita na Dikaki'
@@ -513,7 +512,7 @@ Statistiques: Estatísticas e estatísticas
 'Prendre un rendez-vous avec un conseiller Dikaki': 'Marque uma consulta com um conselheiro Dikaki'
 'Prendre Rendez-vous avec un conseiller Dikaki': 'Marque uma consulta com um conselheiro Dikaki'
 'Prendre RDV': 'Marque uma consulta'
-Coordonnées: Informações de contato
+Coordonnées: 'Informações de contato'
 'Prenez un Rendez-vous': 'Marque uma consulta'
 'Présentation de la plateforme Dikaki - 30 min': 'Apresentação da plataforma Dikaki - 30 min'
 'Toutes les informations sur Dikaki - 20 min': 'Todas as informações sobre Dikaki - 20 min'
@@ -526,149 +525,165 @@ Coordonnées: Informações de contato
 Préc: Preciso
 'A partir du': 'A partir do'
 Suiv: Acompanhamento
-'Demander une devis en ligne': '__Demander une devis en ligne'
-'Demander un dévis': '__Demander un dévis'
-'Profession libérale': '__Profession libérale'
-Demander: __Demander
+'Demander une devis en ligne': 'Solicite uma cotação online'
+'Demander un dévis': 'Solicitar uma cotação'
+'Profession libérale': 'Profissão liberal'
+Demander: 'O que é isto'
 'Clinique du docteur Ebogo confirmation du rendez-vous': 'Confirmação da consulta clínica do Dr. Ebogo'
 'Clinique du Docteur': 'Clínica do Dr.'
 'Prestation sélectionnée': 'Serviço selecionado'
-'Consultation pour des soins dentaires': '__Consultation pour des soins dentaires'
-'Date et heure sélectionnées': '__Date et heure sélectionnées'
-'Samedi 5 Janvier 2019 à 10h 30': '__Samedi 5 Janvier 2019 à 10h 30'
-Identification: __Identification
-Nom: __Nom
-Prénom: __Prénom
-'Né(e) le': '__Né(e) le'
-janvier: __janvier
-'Je prends rendez-vous pour moi même': '__Je prends rendez-vous pour moi même'
-'Je prends rendez-vous pour une autre personne': '__Je prends rendez-vous pour une autre personne'
-'Annuler le rdv': '__Annuler le rdv'
-'Confirmer le rdv': '__Confirmer le rdv'
-Masculin: __Masculin
-Féminin: __Féminin
-'Clinique du docteur Ebogo reservation': '__Clinique du docteur Ebogo reservation'
-'Nouveau sur Dikaki': '__Nouveau sur Dikaki'
-'Inscrits-toi ici': '__Inscrits-toi ici'
-'Insérer votre adresse email': '__Insérer votre adresse email'
-'Créer mon compte': '__Créer mon compte'
-Fermer: __Fermer
-'Déjà un compte': '__Déjà un compte'
-'Je reste connecté': '__Je reste connecté'
-Connexion: __Connexion
-'Mot de passe oublié': '__Mot de passe oublié'
-'Sans compte sur Dikaki': '__Sans compte sur Dikaki'
-Continue-ici: __Continue-ici
-'Veuillez remplir ce formulaire (Champs obligatoires)': '__Veuillez remplir ce formulaire (Champs obligatoires)'
-'Date de naissance': '__Date de naissance'
-Jour: __Jour
-Mois: __Mois
-Janvier: __Janvier
-Février: __Février
-Mars: __Mars
-Avril: __Avril
-Mai: __Mai
-Juin: __Juin
-Juillet: __Juillet
-Août: __Août
-Septembre: __Septembre
-Octobre: __Octobre
-Novembre: __Novembre
-Décembre: __Décembre
-Année: __Année
-Continuer: __Continuer
-'Historique de mes rendez-vous': '__Historique de mes rendez-vous'
-'Modifier mon profil': '__Modifier mon profil'
-'MES INFORMATIONS': '__MES INFORMATIONS'
-'Modifier mes informations': '__Modifier mes informations'
-'Me déconnecter': '__Me déconnecter'
-Historique: __Historique
-Date: __Date
-Heure: __Heure
-'Nature du rendez-vous': '__Nature du rendez-vous'
-'Moi même pour une consultation dentaire : Clinique dentaire Jean Paul - 20 min': '__Moi même pour une consultation dentaire : Clinique dentaire Jean Paul - 20 min'
-'Pour Mme Nvogo; Soin de visage : Beauty success - 60 min': '__Pour Mme Nvogo; Soin de visage : Beauty success - 60 min'
-'Moi même pour massage corporel : Beauty success - 120 min': '__Moi même pour massage corporel : Beauty success - 120 min'
-'Pour Mr Nkoumba; Consultation générale : Cabinet médical du centre - 20 min': '__Pour Mr Nkoumba; Consultation générale : Cabinet médical du centre - 20 min'
-'Le jour': '__Le jour'
-'Le mois': '__Le mois'
-'L''année': '__L''année'
-Modifier: __Modifier
-Lundi: __Lundi
-Mardi: __Mardi
-Mercredi: __Mercredi
-Jeudi: __Jeudi
-Vendredi: __Vendredi
-'Sans préférence': '__Sans préférence'
-'Prestation à ajouter': '__Prestation à ajouter'
-Consultation: __Consultation
-'Soins dentaires adultes': '__Soins dentaires adultes'
-'Soins dentaires enfants': '__Soins dentaires enfants'
-Orthodontie: __Orthodontie
-'à déterm': '__à déterm'
-Prothèses: __Prothèses
-Implants: __Implants
-'Blanchiment des dents': '__Blanchiment des dents'
-'Soins sous sédation consciente': '__Soins sous sédation consciente'
-'Ajouter une prestation à la suite': '__Ajouter une prestation à la suite'
-'Choix de la date': '__Choix de la date'
-heure: __heure
-'Choisir une date': '__Choisir une date'
-Samedi: __Samedi
-Dimanche: __Dimanche
-'Prendre le rdv': '__Prendre le rdv'
-'Rechercher un professionel': '__Rechercher un professionel'
-Dentiste: __Dentiste
-Chirurgien: __Chirurgien
-Masseuses: __Masseuses
-Coiffure: __Coiffure
-'Dans la ville de': '__Dans la ville de'
-Douala: __Douala
-Recherche: __Recherche
-'Résultat de la recherche': '__Résultat de la recherche'
-Dr: __Dr
-'Horaires d''ouverture:': '__Horaires d''ouverture:'
-'De lundi à vendredi: 8h 00 à 16h 00': '__De lundi à vendredi: 8h 00 à 16h 00'
-'et Samedi: 9h 00 à 13h 00': '__et Samedi: 9h 00 à 13h 00'
-'Prendre rendez-vous': '__Prendre rendez-vous'
-Esthéticienne: __Esthéticienne
-'Institut de beauté Beauty center': '__Institut de beauté Beauty center'
-'Horaires d''ouverture': '__Horaires d''ouverture'
-'De Mardi à Dimanche: 10h 00 à 22h 00': '__De Mardi à Dimanche: 10h 00 à 22h 00'
-'fermer le Lundi': '__fermer le Lundi'
-Me: __Me
-Avocat: __Avocat
-'Cabinet d''avocat Eloung': '__Cabinet d''avocat Eloung'
-'Horaires de reception': '__Horaires de reception'
-'De lundi à vendredi: 9h 00 à 19h 00': '__De lundi à vendredi: 9h 00 à 19h 00'
-'Groupe médical Mfandena': '__Groupe médical Mfandena'
-'Centre de soins médicaux': '__Centre de soins médicaux'
-'De lundi au Vendredi': '__De lundi au Vendredi'
-'et Samedi': '__et Samedi'
-'Services d''urgences 7j/7 et 24h/24': '__Services d''urgences 7j/7 et 24h/24'
-'Entrer vos coordonnées': '__Entrer vos coordonnées'
-'Votre Rendez-vous à confirmer': '__Votre Rendez-vous à confirmer'
-'Présentation de la plateforme Dikaki - 30 min Vendredi 12 Octobre 2018 à 14H 00': '__Présentation de la plateforme Dikaki - 30 min Vendredi 12 Octobre 2018 à 14H 00'
-'Modifier l''horaire': '__Modifier l''horaire'
-'Veuillez completer le formulaire': '__Veuillez completer le formulaire'
-'Annuler RDV': '__Annuler RDV'
-'Confirmer RDV': '__Confirmer RDV'
-'Clinique du docteur Ebogo validation du rendez-vous': '__Clinique du docteur Ebogo validation du rendez-vous'
-'Clinique du': '__Clinique du'
-Validation: __Validation
-'Votre rendez-vous': '__Votre rendez-vous'
-'Lundi 17 Novembre 2019 à 11h 30': '__Lundi 17 Novembre 2019 à 11h 30'
-Avec: __Avec
-'Valider le rdv': '__Valider le rdv'
-'Vous avez la possibilité de modifier deux fois votre rendez-vous. Un sms de rappel vous seras envoyer quelques heures avant le début de votre rendez-vous.': '__Vous avez la possibilité de modifier deux fois votre rendez-vous. Un sms de rappel vous seras envoyer quelques heures avant le début de votre rendez-vous.'
-'Dr Mengue jeanne dentiste sera absente du 15 Aout au 15 septemmbre 2019. Elle sera remplacée par le Dr Ongla.': '__Dr Mengue jeanne dentiste sera absente du 15 Aout au 15 septemmbre 2019. Elle sera remplacée par le Dr Ongla.'
-'Clinique du docteur Ebogo voir mon rendez-vous': '__Clinique du docteur Ebogo voir mon rendez-vous'
-'Mon rendez-vous': '__Mon rendez-vous'
-Mr: __Mr
-'Vous avez déposé votre rendez-vous le 1 Août 2019 à 12h 40': '__Vous avez déposé votre rendez-vous le 1 Août 2019 à 12h 40'
-'Le 10 Novembre 2019 à 10h 30': '__Le 10 Novembre 2019 à 10h 30'
-'A la clinique Du Docteur': '__A la clinique Du Docteur'
-'Vous devez-vous présenter a l''accueil 30 minutes avant le début de votre rendez-vous pour les formalitées administratives': '__Vous devez-vous présenter a l''accueil 30 minutes avant le début de votre rendez-vous pour les formalitées administratives'
-Imprimer: __Imprimer
-'Prendre un nouveau RDV': '__Prendre un nouveau RDV'
-Quitter: __Quitter
+'Consultation pour des soins dentaires': 'Consulta para atendimento odontológico'
+'Date et heure sélectionnées': 'Data e hora selecionadas'
+'Samedi 5 Janvier 2019 à 10h 30': 'Sábado, 5 de janeiro de 2019 às 10:30 am'
+Identification: Identificação
+Nom: Nome
+Prénom: 'Primeiro nome'
+'Né(e) le': 'Nascido em'
+janvier: Janeiro
+'Je prends rendez-vous pour moi même': 'Faço uma marcação para mim mesmo.'
+'Je prends rendez-vous pour une autre personne': 'Faço uma marcação para outra pessoa'
+'Annuler le rdv': 'Cancelar a nomeação'
+'Confirmer le rdv': 'Confirmar nomeação'
+Masculin: Masculino
+Féminin: Feminino
+'Clinique du docteur Ebogo reservation': 'Clínica do Dr. Ebogo reserva'
+'Nouveau sur Dikaki': 'Novidades em Dikaki'
+'Inscrits-toi ici': 'Cadastre-se aqui'
+'Insérer votre adresse email': 'Insira o seu endereço de e-mail'
+'Créer mon compte': 'Criar minha conta'
+Fermer: Fechar
+'Déjà un compte': 'Já tem uma conta'
+'Je reste connecté': 'Eu fico conectado'
+Connexion: Login
+'Mot de passe oublié': 'Esqueceu a senha'
+'Sans compte sur Dikaki': 'Sem contar com a Dikaki'
+Continue-ici: 'Continuar aqui'
+'Veuillez remplir ce formulaire (Champs obligatoires)': 'Por favor preencha este formulário (campos obrigatórios)'
+'Date de naissance': 'Data de nascimento'
+Jour: Dia
+Mois: Mês
+Janvier: Janeiro
+Février: Fevereiro
+Mars: Março
+Avril: Abril
+Mai: Maio
+Juin: Junho
+Juillet: Julho
+Août: Agosto
+Septembre: Setembro
+Octobre: Outubro
+Novembre: Novembro
+Décembre: Dezembro
+Année: Ano
+Continuer: Continuar
+'Historique de mes rendez-vous': 'História dos meus compromissos'
+'Modifier mon profil': 'Modificar o meu perfil'
+'MES INFORMATIONS': 'MINHA INFORMAÇÃO'
+'Modifier mes informations': 'Alterar minhas informações'
+'Me déconnecter': Desligue-me
+Historique: História
+Date: Data
+Heure: Tempo
+'Nature du rendez-vous': 'Natureza da nomeação'
+'Moi même pour une consultation dentaire : Clinique dentaire Jean Paul - 20 min': 'Eu mesmo para uma consulta de dentista: Clínica Dentária Jean Paul - 20 min'
+'Pour Mme Nvogo; Soin de visage : Beauty success - 60 min': 'Para a Sra. Nvogo; Cuidados faciais : Beauty success - 60 min'
+'Moi même pour massage corporel : Beauty success - 120 min': 'Eu mesmo para massagem corporal : Beauty success - 120 min'
+'Pour Mr Nkoumba; Consultation générale : Cabinet médical du centre - 20 min': 'Para o Sr. Nkoumba; Consulta geral: Prática médica do centro - 20 min'
+'Le jour': 'O dia'
+'Le mois': 'O mês'
+'L''année': 'O ano'
+Modifier: Alterar
+Lundi: Segunda-feira
+Mardi: Terça-feira
+Mercredi: Quarta-feira
+Jeudi: Quinta-feira
+Vendredi: Sexta-feira
+'Sans préférence': 'Sem preferência'
+'Prestation à ajouter': 'Serviço a ser adicionado'
+Consultation: Consulta
+'Soins dentaires adultes': 'Cuidados dentários para adultos'
+'Soins dentaires enfants': 'Cuidados dentários para crianças'
+Orthodontie: Ortodontia
+'à déterm': 'a ser determinado'
+Prothèses: Próteses
+Implants: Implantes
+'Blanchiment des dents': 'Branqueamento dos dentes'
+'Soins sous sédation consciente': 'Cuidados sob sedação consciente'
+'Ajouter une prestation à la suite': 'Adicionar um serviço mais tarde'
+'Choix de la date': 'Escolha da data'
+heure: Hora
+'Choisir une date': 'Selecione uma data'
+Samedi: Sábado
+Dimanche: Domingo
+'Prendre le rdv': 'Marque a consulta'
+'Rechercher un professionel': 'Procure um profissional'
+Dentiste: Dentista
+Chirurgien: Cirurgias
+Masseuses: Massauses
+Coiffure: Cabeleireiro
+'Dans la ville de': 'Na cidade de'
+Douala: Douala
+Recherche: investigação
+'Résultat de la recherche': 'Resultado da pesquisa'
+Dr: Doutor
+'Horaires d''ouverture:': 'Horas de abertura:'
+'De lundi à vendredi: 8h 00 à 16h 00': 'De segunda a sexta-feira: 8h às 16h'
+'et Samedi: 9h 00 à 13h 00': 'e Sábado: 9h às 13h'
+'Prendre rendez-vous': 'Marcar uma consulta'
+Esthéticienne: Esteticista
+'Institut de beauté Beauty center': 'Instituto de Beleza Beauty center'
+'Horaires d''ouverture': 'Horas de abertura'
+'De Mardi à Dimanche: 10h 00 à 22h 00': 'De terça a Domingo: 10h às 22h'
+'fermer le Lundi': 'Fechar na Segunda-feira'
+Me: Mestre
+Avocat: Advogado
+'Cabinet d''avocat Eloung': 'Eloung Escritório de Advocacia'
+'Horaires de reception': 'Tempos de recepção'
+'De lundi à vendredi: 9h 00 à 19h 00': 'De Segunda a Sexta-feira: 9h às 19h'
+'Groupe médical Mfandena': 'Grupo Médico Mfandena'
+'Centre de soins médicaux': 'Centro de assistência médica'
+'De lundi au Vendredi': 'De Segunda a Sexta-feira'
+'et Samedi': 'e Sábado'
+'Services d''urgences 7j/7 et 24h/24': 'Serviços de emergência 7 dias por semana, 24 horas por dia'
+'Entrer vos coordonnées': 'Digite seus dados'
+'Votre Rendez-vous à confirmer': 'A sua nomeação será confirmada'
+'Présentation de la plateforme Dikaki - 30 min Vendredi 12 Octobre 2018 à 14H 00': 'Apresentação da plataforma Dikaki - 30 min Sexta-feira, 12 de Outubro de 2018 às 14:00 pm'
+'Modifier l''horaire': 'Alterar a programação'
+'Veuillez completer le formulaire': 'Por favor, preencha o formulário'
+'Annuler RDV': 'Cancelar nomeação'
+'Confirmer RDV': 'Confirmar nomeação'
+'Clinique du docteur Ebogo validation du rendez-vous': 'Validação da consulta clínica do Dr. Ebogo'
+'Clinique du': 'Clínica da'
+Validation: Validação
+'Votre rendez-vous': 'A sua nomeação'
+'Lundi 17 Novembre 2019 à 11h 30': 'Segunda-feira, 17 de novembro de 2019 às 11:30 am'
+Avec: Com
+'Valider le rdv': 'Validar a nomeação'
+'Vous avez la possibilité de modifier deux fois votre rendez-vous. Un sms de rappel vous seras envoyer quelques heures avant le début de votre rendez-vous.': 'Você tem a possibilidade de modificar sua consulta duas vezes. Uma mensagem de texto de lembrete será enviada para você algumas horas antes do início do seu compromisso.'
+'Dr Mengue jeanne dentiste sera absente du 15 Aout au 15 septemmbre 2019. Elle sera remplacée par le Dr Ongla.': 'Dr. Mengue Jeanne o dentista estará ausente de 15 de agosto a 15 de setembro de 2019. Ela será substituída pelo Dr. Ongla.'
+'Clinique du docteur Ebogo voir mon rendez-vous': 'A clínica do Dr. Ebogo para ver a minha consulta'
+'Mon rendez-vous': 'A minha nomeação'
+Mr: Sr
+'Vous avez déposé votre rendez-vous le 1 Août 2019 à 12h 40': 'Deixaste a tua consulta no dia 1 de Agosto de 2019 às 12:40'
+'Le 10 Novembre 2019 à 10h 30': '10 de novembro de 2019 às 10:30 am'
+'A la clinique Du Docteur': 'Na Clínica Médica'
+'Vous devez-vous présenter a l''accueil 30 minutes avant le début de votre rendez-vous pour les formalitées administratives': 'Você deve apresentar-se na recepção 30 minutos antes do início do seu compromisso para as formalidades administrativas'
+Imprimer: Impressão
+'Prendre un nouveau RDV': 'Marcar uma nova consulta'
+Quitter: Sair
+Mission: Missão
+'Votre nom': 'O seu nome'
+'Votre prenom': 'O seu primeiro nome'
+'Téléphone portable': 'Telefone Portátil'
+'Entrer vortre message ici': 'Digite sua mensagem aqui'
+'Choisir une autre prestation': 'Escolha outro serviço'
+Entreprise: Empresa
+Prenom: Primeiro nome
+'Enoncer votre besoin': 'Declare a sua necessidade'
+pour: para
+Et: E
+'Laisser un message': 'Deixe uma mensagem'
+'Entrer votre adresse Email': 'Digite seu endereço de Email'
+'Votre Email': 'Seu E-mail'
+'Votre mot de passe': 'Sua senha'
+Sexe: Género

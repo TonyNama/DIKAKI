@@ -1,6 +1,6 @@
 {% extends '::connect.html.twig' %}
 
-{% block title %}{{'Prendre un rendez-vous avec un conseiller Dikaki'|trans}} :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}}{% endblock %}
+{% block title %}{{'Prendre un rendez-vous avec un conseiller Dikaki'|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}}{% endblock %}
 
 {% block style %}
     
@@ -102,11 +102,11 @@
                       <div class="margin_row">
 
                         <div class="">
-                          <span class="for__">pour:</span>
+                          <span class="for__">{{'pour'|trans}}:</span>
                             <select id="select_rdv_" class=" form-control" style="margin-top: 17px;margin-left: 15px;">
                               <option value="Présentation de la plateforme Dikaki - 30 min">{{"Présentation de la plateforme Dikaki - 30 min"|trans}}</option>
                               <option value="Toutes les informations sur Dikaki - 20 min">{{"Toutes les informations sur Dikaki - 20 min"|trans}}</option>
-                              <option value="Une formation sur Dikaki - 45 min">{["Une formation sur Dikaki - 45 min"|trans]}</option>
+                              <option value="Une formation sur Dikaki - 45 min">{{"Une formation sur Dikaki - 45 min"|trans}}</option>
                               <option value="Une étude sur le partanariat">{{"Une étude sur le partanariat - 45 min"|trans}}</option>
                               <option value="Etude de projet pour intégration de solution Dikaki - 60 min">{{"Projet pour intégration de solution Dikaki - 60 min"|trans}}</option>
                             </select>
@@ -136,7 +136,7 @@
                     <div class="second_ajout">
                        <table>
                       <tr>
-                        <th><span class="et_position" >Et: &nbsp; </span></th>
+                        <th><span class="et_position" >{{'Et'|trans}}: &nbsp; </span></th>
                         <th>
                            <select class="form-control ajout_select" name="">
                           <option>{{'Choisir une autre prestation'|trans}}</option>

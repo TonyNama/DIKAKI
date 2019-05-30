@@ -1,76 +1,22 @@
   {% extends '::admin_template.html.twig' %}
 
-{% block title %}Paramètre des prestations de groupe  :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+{% block title %}Prestations de groupe  : Dikaki prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
 
 {% block style %}
 
-	<style>
-        .menu1 {  
-          border-bottom:solid 2px #666666 ;  
-          padding-top:12px ; 
-          padding-bottom:7px
-        }  
-
-        .onglet {  
-            border:solid 1px #666666 ;  
-            margin:5px 5px 0px 5px ; 
-            padding:7px 3px 7px 3px;
-            font-weight: bold;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.1em;
-            background: #666666;
-            color: #fff !important;
-
-            border-radius:5px 5px 0px 0px !important;
-          }  
-
-          a.onglet { 
-            background-color:#666666 ;  
-            text-decoration:none;
-            font-weight: bold;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.1em;
-            background: #666666;
-            color: #fff !important;
-          }  
-
-          .onglet-actif {  
-             border-left:solid 2px #666666 ;  
-             border-right:solid 2px #666666 ;  
-             border-top:solid 2px #666666 ; 
-             border-bottom:none !important;  
-             margin:5px 5px 0px 5px ;  
-             padding:7px 3px 7px 3px ;  
-             background-color:white;
-             font-weight: bold;
-             font-family: 'Montserrat', sans-serif;
-             font-size: 1.2em;
-             color: #333;
-          }  
-        .sky-form{
-            box-shadow: none !important;
-        }
-
-        a.previous { margin-top: 20px !important; display: none;cursor: pointer;}
-        .span {
-          display: none;
-          color: Red;
-        }
-
-		table tr { display: none; }
-
-		table tr:nth-child(-n+8) { display: table-row; }
-
-		  .form-control{
-		      display: inline-block !important;
-		      vertical-align: middle !important;
-		      width: 60% !important;
-		    }
-
-		    th{
-		      text-align: center;
-		    }
-		    </style>
+<style>
+  .sky-form{
+    box-shadow: none !important;
+  }
+  .form-control{
+      display: inline-block !important;
+      vertical-align: middle !important;
+      width: 60% !important;
+    }
+    th{
+      text-align: center;
+    }
+</style>
 
 {% endblock %}
 
@@ -78,11 +24,17 @@
 {% block body %}
 
 <!-- debut du contenu -->
-    <section id="main-content">
+        <section id="main-content">
       <section class="wrapper site-min-height">
         <div class="row mt">
 
-            <h2 class="name_structure">Cabinet médical la Grâce</h2>
+           <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">Cabinet médical la Grâce</h2>
+      </div>
+      
+      <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">Prestations associées</h2>
+      </div>
           <!-- /col-lg-12 -->
           <div class="col-lg-12 mt">
             <div class="row content-panel">
@@ -90,260 +42,248 @@
         <section class="wrapper site-min-height">
         <div class="row">
           <div class="col-lg-12">
-               <h4 class="small_tittle">Prestations</h4>
+               <h4 class="small_tittle">Créer une prestation associée</h4>
 
-              <div class="menu1"> <!-- début de la boite contenant les onglets -->
-                  <a href="{{path('dkk_administration_prestation')}}" class="onglet-actif"> Prestation </a> <!-- onglet ACTIF -->
-                <span class="onglet"> Prestations groupées  </span> <!-- onglet inactif -->
-                <a href="{{path('dkk_administration_service')}}" class="onglet-actif"> Services </a> <!-- onglet ACTIF -->
-                <a href="{{path('dkk_administration_e_service')}}" class="onglet-actif"> E-Service</a> <!-- onglet ACTIF -->
-              </div>
+             
 
 
 
               <div class="margin_wrapper">
 
                   <form method="post" action="" id="signupForm">
-					<div class="form-group">
-						<div class="resize2">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<span>Type de la prestation</span>
-								<br><br>
-                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                    <input type="text" placeholder="Ex: Type de la prestation" name="type" class="form-control" style="width: 85% !important">
-                                    <!--<span class="plus_"><i class="fa fa-plus"></i></span>-->
-                                </div>
+          <div class="form-group">
+            <div class="resize2">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                
+                <div class="col-xs-12 col-ms-6 col-md-6 col-lg-6">
+                  <span>Nom de la prestation</span>
+                  <br><br>
+                  <input type="text" class="form-control"  placeholder="Nom de la prestation " style="height: 35px;width: 280px !important;">
+                </div> 
 
-                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                    <input type="text" placeholder="Ex: Type / Nature" name="nature" class="form-control" style="width: 85% !important">
-                                    <!--<span class="plus_"><i class="fa fa-plus"></i></span>-->
-                                </div>
+                <div class="col-xs-12 col-ms-6 col-md-6 col-lg-6">
+                  <span>Type de la prestation</span>
+                  <br><br>
+                  <div class="wrapper2" style="width: 100% !important;">
+                  
+               
+                  <div class="col-xs-12 col-ms-5 col-md-8 col-lg-8">
+                    <input type="text" class="form-control"  placeholder="Type la prestation " style="height: 35px;width: 260px !important;">
+                  </div>
+                  <div class="col-xs-12 col-ms-2 col-md-4 col-lg-4">
+                     &nbsp;
+                    <button  class="btn btn-primary btn_valid add_fields2" style=""><i class="fa fa-plus" aria-hidden="true"></i> Ajouter</button>
+                  </div>
 
-                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                    <input type="text" placeholder="Ex: Type / Nature" name="nature2" class="form-control" style="width: 85% !important">
-                                </div>
-						    </div>
+                      
+                    <br>
+                    </div>
+                </div>    
+                <p style="clear: both !important;"></p>
+                                
+                </div>
 
 
                             </div>
+                        
+                            <div class="">
+                                 <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                     <p style="margin-top!10px !important"></p>
+                                <input type="checkbox" id="ajout_desscription"> <label for="ajout_desscription"> <span style="font-weight:bold">Ajouter une description</span></label>
+                            <div class="" style="display:none" id="show_description">
+                                <span>Description des  prestations associées</span>
+                                <br>
+                                <textarea name="" class="form-control" style="resize:none;height:105px"></textarea>
+                            </div>
+                            </div>
+                            
+                            <p style="clear:both !important"></p>
+                            </div>
 
-                            <br>
+                          
                             <div class="resize2">
 
-															<!--  -->
-							<div class="row">
-								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-								  <br>
-								  <input type="radio" name="choix_cat" class="my_checkbox" id="choix3">
-									<span> Classes de personne</span>
-									<br><br>
-									<div class="choix3" style="display: none !important;">
+                              <!--  -->
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <br>
+                  <input type="radio" name="choix_cat" class="my_checkbox" id="choix3">
+                  <span> Classes de personne</span>
+                  <br><br>
+                  <div class="choix3" style="display: none !important;">
 
-										<select name="" class="form-control mon_choix1">
-											<option value="Adulte"> Adulte </option>
-											<option value="Enfant"> Enfant </option>
-											<option value="Homme"> Homme </option>
-											<option value="Femme"> Femme </option>
-											<option value="Fille"> Fille </option>
-											<option value="Garçon"> Garçon </option>
-										</select>
-									</div>
-
-
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-									<br>
-									<input type="radio" name="choix_cat" class="my_checkboxform-control" id="choix4">
-
-									 	<span>Classes d'âge</span>
-									 	<br><br>
-									 	 <div class="choix4" style="display: none !important;">
-
-										 <select name="" class="form-control mon_choix1">
-											<option value="Nourrisons">Nourrisons</option>
-											<option value="1-5 ans">1-5 ans</option>
-											<option value="6-13 ans">6-13 ans</option>
-											<option value="14-25 ans">14-25 ans</option>
-											<option value="25-50 ans">25-50 ans</option>
-											<option value="60-80 ans">60-80 ans</option>
-											<option value="Plus de 80 ans">Plus de 80 ans</option>
-
-										</select>
-									 	</div>
-
-								</div>
-							</div>
-
-							<div class="">
-								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-									<br>
-									 <span>Photo / Image</span>
-									<br><br>
-									<input type="file" name="" class=" form-control">
-
-						   		</div>
-
-							    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-							    	<br>
-							    	 <span>Prix de la prestation</span>
-									 <br><br>
-									 <input type="text" placeholder="Ex: 1000" name="prix" class="form-control">
+                    <select name="" class="form-control mon_choix1">
+                      <option value="Adulte"> Adulte </option>
+                      <option value="Enfant"> Enfant </option>
+                      <option value="Homme"> Homme </option>
+                      <option value="Femme"> Femme </option>
+                      <option value="Fille"> Fille </option>
+                      <option value="Garçon"> Garçon </option>
+                    </select>
+                  </div>
 
 
-							 	</div>
-							</div>
+                </div>
 
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <br>
+                  <input type="radio" name="choix_cat" class="my_checkboxform-control" id="choix4">
 
-						 <P style="clear: both !important;"></P>
+                    <span>Classes d'âge</span>
+                    <br><br>
+                     <div class="choix4" style="display: none !important;">
 
-						 <div class="row">
-						 		 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-								    	 <span>Couleur de la prestation</span>
-									<br><br>
-								 <select class=" form-control" name="couleur">
+                     <select name="" class="form-control mon_choix1">
+                      <option value="Nourrisons">Nourrisons</option>
+                      <option value="1-5 ans">1-5 ans</option>
+                      <option value="6-13 ans">6-13 ans</option>
+                      <option value="14-25 ans">14-25 ans</option>
+                      <option value="25-50 ans">25-50 ans</option>
+                      <option value="60-80 ans">60-80 ans</option>
+                      <option value="Plus de 80 ans">Plus de 80 ans</option>
+
+                    </select>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <br>
+                   <span>Photo / Image</span>
+                  <br><br>
+                  <input type="file" name="" class=" form-control">
+
+                  </div>
+
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <br>
+                     <span>Prix de la prestation</span>
+                   <br><br>
+                   <input type="text" placeholder="Ex: 1000" name="prix" class="form-control">
+
+                                     <span>TTC</span>
+                </div>
+              </div>
+ 
+
+             <P style="clear: both !important;"></P>
+
+             <div class="row">
+                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                       <span>Couleur de la prestation</span>
+                  <br><br>
+                 <select class=" form-control" name="couleur">
                   <option selected disabled>Couleur</option>
-									<option>verte</option>
-									<option>Rouge</option>
-									<option>Jaune</option>
-									<option>Rose</option>
-									<option>Maron</option>
-									<option>Noire</option>
-									<option>Voillete</option>
-									<option>Bleu</option>
-								 </select>
-						    </div>
-						    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <option>verte</option>
+                  <option>Rouge</option>
+                  <option>Jaune</option>
+                  <option>Rose</option>
+                  <option>Maron</option>
+                  <option>Noire</option>
+                  <option>Voillete</option>
+                  <option>Bleu</option>
+                 </select>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
-						    	 <span>Durée de la prestation</span>
-								<br><br>
-								<select class=" form-control" name="duree">
+                   <span>Durée de la prestation</span>
+                <br><br>
+                <select class=" form-control" name="duree">
                       <option selected disabled>La durée</option>
-											<option>10 min</option><option>15 min</option><option>20 min</option>
-											<option>25 min</option><option>30 min</option><option>35 min</option>
-											<option>40 min</option><option>45 min</option><option>50 min</option>
-											<option>55 min</option><option>60 min</option><option>1h 10 min</option>
-											<option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
-											<option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
-											<option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
-											<option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
-											<option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
-											<option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
-											<option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
-										    <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
-											<option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
-											<option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
-											<option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
-										    <option>4h 00 min</option>
+                      <option>10 min</option><option>15 min</option><option>20 min</option>
+                      <option>25 min</option><option>30 min</option><option>35 min</option>
+                      <option>40 min</option><option>45 min</option><option>50 min</option>
+                      <option>55 min</option><option>60 min</option><option>1h 10 min</option>
+                      <option>1h 15 min</option><option>1h 20 min</option><option>1h 25 min</option>
+                      <option>1h 30 min</option><option>1h 35 min</option><option>1h 40 min</option>
+                      <option>1h 45 min</option><option>1h 50 min</option><option>1h 55 min</option>
+                      <option>2h 00 min</option><option>2h 5 min</option><option>2h 10 min</option>
+                      <option>2h 15 min</option><option>2h 20 min</option><option>2h 25 min</option>
+                      <option>2h 30 min</option><option>2h 35 min</option><option>2h 40 min</option>
+                      <option>2h 45 min</option><option>2h 50 min</option><option>2h 55 min</option>
+                        <option>3h 00 min</option><option>3h 5 min</option><option>3h 10 min</option>
+                      <option>3h 15 min</option><option>3h 20 min</option><option>3h 25 min</option>
+                      <option>3h 30 min</option><option>3h 35 min</option><option>3h 40 min</option>
+                      <option>3h 45 min</option><option>3h 50 min</option><option>3h 55 min</option>
+                        <option>4h 00 min</option>
 
-										</select>
-						    </div>
+                    </select>
+                </div>
 
-						 </div>
+             </div>
 
-						 <!--  -->
+             <!--  -->
 
-							</div>
-							<br><br>
+              </div>
+              <br><br>
 
-						<p id="type_buy"> Paiement / Réglement </p>
+            <p id="type_buy"> Paiement / Réglement </p>
 
 
-				<div class="checkbox_form_">
+        <div class="checkbox_form_">
 
-						<div class="resize2">
-								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
-									<input type="checkbox" name="" class="my_checkbox ">
-                                    	<span> &nbsp; Paiement en caisse</span>
+            <div class="resize2">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+                  <input type="checkbox" name="" class="my_checkbox ">
+                                      <span> &nbsp; Paiement en caisse</span>
 
-								</div>
+                </div>
 
-								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
-									<input type="checkbox" name="" class="my_checkbox ">
-                                    	<span> &nbsp; Paiement en ligne</span>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+                  <input type="checkbox" name="" class="my_checkbox ">
+                                      <span> &nbsp; Paiement en ligne</span>
 
-								</div>
+                </div>
 
-						</div>
+            </div>
 
-						<div class="resize2">
+            <div class="resize2">
                             <br>
-							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
 
-									<input type="checkbox" name="" class="my_checkbox " id="free">
-                                    	<span> &nbsp; Gratuit</sapn>
-								</div>
+                  <input type="checkbox" name="" class="my_checkbox " id="free">
+                                      <span> &nbsp; Gratuit</sapn>
+                </div>
 
-								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
-									<input type="checkbox" name=""  id="chkPassport" class="my_checkbox "><span> &nbsp; Acompte </span>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+                  <input type="checkbox" name=""  id="chkPassport" class="my_checkbox "><span> &nbsp; Acompte </span>
 
-									<div  id="dvPassport" style="display: none">
-											<span>Taux:</span>
+                  <div  id="dvPassport" style="display: none">
+                      <span>Taux:</span>
                         <select class="form-control" style="width: 20% !important">
-												<option>5 %</option><option>10 %</option><option>15 %</option><option>20 %</option>
-												<option>25 %</option><option>30 %</option><option>35 %</option><option>40 %</option>
-												<option>45 %</option><option>50 %</option>
-											 </select>
-									</div>
+                        <option>5 %</option><option>10 %</option><option>15 %</option><option>20 %</option>
+                        <option>25 %</option><option>30 %</option><option>35 %</option><option>40 %</option>
+                        <option>45 %</option><option>50 %</option>
+                       </select>
+                  </div>
 
-								</div>
-						</div>
-
-
-				</div>
-
-					<br>
+                </div>
+            </div>
 
 
+        </div>
+
+          <br>
 
 
-						 </div>
 
 
-								<div class="resize pull-right" >
-								<button type="submit" class="btn btn-success btn_valid"><i class="fa fa-floppy-o"></i> Enregistrer</button>
+             </div>
 
-								<button type="reset" class="btn btn-danger btn_valid"><i class="fa fa-window-close"></i> Annuler</button>
+
+                <div class="resize pull-right" >
+                <button type="submit" class="btn btn-success btn_valid"><i class="fa fa-floppy-o"></i> Enregistrer</button>
+
+                <button type="reset" class="btn btn-danger btn_valid"><i class="fa fa-window-close"></i> Annuler</button>
                                     <br><br>
 
-						</div>
+            </div>
               </form>
 
 
-             <!-- debut du code pour le tableau-->
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr style="background-color: #26440d !important;color: #fff !important;">
-                   <th>Nature</th>
-                    <th>image </th>
-                    <th>montant</th>
-                     <th>durée</th>
-                      <th>couleur</th>
-                       <th>A la caise</th>
-                       <th>En ligne</th>
-                       <th>Acompte </th>
-                       <th>%</th>
-                       <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>.......</td>
-                    <td>.......</td>
-                    <td>.......</td>
-                    <td>.......</td>
-                    <td>.......</td>
-                    <td>.......</td>
-                    <td>.......</td>
-                    <td>.......</td>
-                    <td>50%</td>
-                    <td><a href="{{path('dkk_administration_modifier_prestation_groupe')}}" class="btn btn-primary btn_valid"><i class="fa fa-floppy-o"></i> Modifier</a>  <a href="sup-prestation-groupe.html" class="btn btn-danger btn_valid"><i class="fa fa-times"></i> Supprimer</a></td>
-                  </tr>
-
-                </tbody>
-              </table>
-            <!-- fin du code pour le tableau-->
-						</div>
+            </div>
 
 
 
@@ -367,24 +307,56 @@
       <!-- /wrapper -->
     </section>
 
-
 {% endblock %}
 
 {% block scripts %}
  <script>
         $(document).ready(function(){
-             $("#choix3").on('click',function(){
-                                	$(".choix3").show();
-                                	$(".choix4").hide();
-                                });
-                                $("#choix4").on('click',function(){
-                                	$(".choix4").show();
-                                	$(".choix3").hide();
-                                });
+            $("#choix3").on('click',function(){
+              $(".choix3").show();
+              $(".choix4").hide();
+            });
+            $("#choix4").on('click',function(){
+              $(".choix4").show();
+              $(".choix3").hide();
+            });
 
             $("#chkPassport").on("click",function(){
                 $("#dvPassport").toggle();
             });
+            
+            // ajouter uen description
+            
+            $('#ajout_desscription').on('click',function(){
+                $('#show_description').toggle();
+            });
+
+            // Ajouter une nouvele Périodicité
+
+                var max_fields = 3;
+                var wrapper    = $(".wrapper2");
+                var add_button = $(".add_fields2");
+                var x = 1;
+
+
+              $(add_button).click(function(e){
+                    e.preventDefault();
+
+                    if(x < max_fields){
+                        x++;
+
+                  $(wrapper).append('<div class="wrapper_down_"><div class="col-xs-12 col-ms-5 col-md-8 col-lg-8"><input type="text" class="form-control"   placeholder="Type la prestation " style="height: 35px;width: 260px !important;margin-top:10px;"></div><a href="javascript:void(0);"style="display:inline-block;vertical-align:top;margin-top:17px !important;margin-left:25px;" class="remove_field2 btn-primary"><i class="fa fa-times"></i></a></div>');
+                    }
+                });
+
+
+                $(wrapper).on("click",".remove_field2", function(e){
+                    e.preventDefault();
+                $(this).parent('div').remove();
+                x--;
+                })
+
+            
 
             // une autre ligne
             $("#signupForm").validate({

@@ -1,6 +1,6 @@
  {% extends '::connect.html.twig' %}
 
-{% block title %}{{'Entrer vos coordonnées'|trans}} :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+{% block title %}{{'Entrer vos coordonnées'|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
     
@@ -104,14 +104,14 @@
 						<section class="col col-6">
 							<label class="input">
 								<i class="icon-append icon-user"></i>
-								<input type="text" placeholder="Nom" name="firstname">
+								<input type="text" placeholder="{{'Nom'|trans}}" name="firstname">
 							</label>
 
 						</section>
 						<section class="col col-6">
 							<label class="input">
 								<i class="icon-append icon-user" ></i>
-								<input type="text" placeholder="Prenom" name="lastname">
+								<input type="text" placeholder="{{'Prénom'|trans}}" name="lastname">
 							</label>
 						</section>
 					</div>
@@ -119,14 +119,14 @@
 						<section class="col col-6">
 							<label class="input">
 								<i class="icon-append icon-phone"></i>
-								<input type="text" placeholder="Téléphone portable" name="phone">
+								<input type="text" placeholder="{{'Téléphone portable'|trans}}" name="phone">
 							</label>
 
 						</section>
 						<section class="col col-6">
 							<label class="input">
 								<i class="icon-append icon-envelope-alt"></i>
-								<input type="email" placeholder=" E-mail" name="email">
+								<input type="email" placeholder=" {{'E-mail'|trans}}" name="email">
 							</label>
 
 						</section>
@@ -136,7 +136,7 @@
 						<section class="col col-6">
 							<label class="input">
 								<i class="icon-append icon-home"></i>
-								<input type="text" placeholder="Entreprise" name="entreprise">
+								<input type="text" placeholder="{{'Entreprise'|trans}}" name="entreprise">
 							</label>
 
 						</section>
@@ -187,7 +187,7 @@
 						<label class="textarea">
 							<i class="icon-append icon-comment"></i>
 
-							<textarea rows="5" placeholder="Laisser un message" name="comment"></textarea>
+							<textarea rows="5" placeholder="{{'Laisser un message'|trans}}" name="comment"></textarea>
 						</label>
 
 					</section>

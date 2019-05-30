@@ -21,6 +21,19 @@
                 padding-top: 10px !important;
                 margin-top: 55px !important;
             }
+           a:visited{
+             color:none !important;
+            }
+
+            .navbar.navbar-main .navbar-nav .open .dropdown-menu>li>a,.navbar .navbar-nav .open .dropdown-menu {
+                color:#8F8F8F !important;
+                outline:none;
+                z-index:5;
+            }
+            .navbar.navbar-main .navbar-nav .open .dropdown-menu>li:hover > a {
+                background-color:transparent;
+                color:#24440d !important;
+            }
         </style>
 		{% endblock %}
         
@@ -88,7 +101,7 @@
 									<nav class="navbar-collapse collapse navHeaderCollapse" role="navigation">
 										<ul class="nav navbar-nav navbar-right">
 											<li class="dropdown dropdown-main">
-									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Solutions'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<a href="" style="color: #fff !important;" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Solutions'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
 									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
 									          		<li><a href="{{ path('dkk_app_rendez_vous') }}">{{'Dikaki Rendez-vous'|trans}}</a></li>
                                                     <li><a href="{{ path('dkk_app_education') }}">{{'Dikaki Secteur éducatif'|trans}}</a></li>
@@ -100,7 +113,7 @@
 									        </li>
 
 							<li class="dropdown dropdown-main">
-									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Professionnel'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<a href="" style="color: #fff !important;" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Professionnel'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
 									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
 									          		<li><a href="{{ path('dkk_professionnel_inscription') }}">{{'Créer un compte'|trans}}</a></li>
 									          		<li><a href="{{ path('dkk_professionnel_connexion') }}">{{"J'ai un compte"|trans}}</a></li>
@@ -109,7 +122,7 @@
 									        	</ul>
 									        </li>
 										<li class="dropdown dropdown-main">
-									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Particulier'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<a href="" style="color: #fff !important;" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Particulier'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
 									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
 									          		<li><a href="{{ path('dkk_utilisateur_inscription') }}">{{"S'inscrire"|trans}}</a></li>
 									          		<li><a href="{{ path('dkk_utilisateur_connexion') }}">{{'Se connecter'|trans}}</a></li>
@@ -118,7 +131,7 @@
 									        	</ul>
 									        </li>
 										<li class="dropdown dropdown-main">
-									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Mon compte'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<a href="" style="color: #fff !important;" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Mon compte'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
 									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
 									          		<li><a href="{{path('dkk_utilisateur_profile')}}">{{'Mes rendez-vous'|trans}}</a></li>
 									          		<li><a href="">{{'Se déconnecter'|trans}}</a></li>
@@ -127,7 +140,7 @@
 									        	</ul>
 									        </li>
 											<li class="dropdown dropdown-main">
-                            <a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Français'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
+                            <a href="" style="color: #fff !important;" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Français'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
                             <ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
                                 <li><a href="">{{'Anglais'|trans}}</a></li>
                                 <li><a href="">{{'Espagnol'|trans}}</a></li>

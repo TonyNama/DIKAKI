@@ -1,6 +1,6 @@
 {% extends '::client.html.twig' %}
 
-{% block title %}{{'Clinique du docteur Ebogo reservation'|trans}} :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+{% block title %}{{'Clinique du docteur Ebogo reservation'|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block body %}
 <!-- debut du code -->
@@ -83,7 +83,7 @@
                                           </div>
                                           <div class="modal-body">
                                             <form method="post" action="{{ path('dkk_utilisateur_inscription') }}">
-                                                <input type="email" name="email" placeholder="Entrer votre adresse Email" class="form-control form_control_email">
+                                                <input type="email" name="email" placeholder="{{'Entrer votre adresse Email'|trans}}" class="form-control form_control_email">
                                                 <p>
                                                     <button type="submit" class="create_acount"><i class="fa fa-pencil"></i> &nbsp;&nbsp;{{'Créer mon compte'|trans}} </button>
                                                 </p>
@@ -106,8 +106,8 @@
                                     <p class="deja_acount">{{'Déjà un compte'|trans}} ?</p>
                                     <div class="wrapper_center_connect">
                                         <form method="post" action="{{ path('dkk_app_confirmation') }}#confirmation">
-                                       <input type="email" name="email" placeholder="Votre Email" class="form-control controle_data">
-                                        <input type="password" name="passe" placeholder="Votre mot de passe" class="form-control controle_data">
+                                       <input type="email" name="email" placeholder="{{'Votre Email'|trans}}" class="form-control controle_data">
+                                        <input type="password" name="passe" placeholder="{{'Votre mot de passe'|trans}}" class="form-control controle_data">
                                         <span class="span_stay">
                                             <input type="checkbox" name="reste" class="stay_btn" id="stay">
                                             <label for="stay">{{'Je reste connecté'|trans}}</label>
@@ -139,8 +139,8 @@
                                           </div>
                                           <div class="modal-body">
                                             <form method="post" action="{{ path('dkk_app_confirmation') }}#confirmation">
-                                              <input type="text" name=" " placeholder="Nom" class="form-control form_control_email2">
-                                              <input type="texte" name=" " placeholder="Prenom" class="form-control form_control_email2">
+                                              <input type="text" name=" " placeholder="{{'Nom'|trans}}" class="form-control form_control_email2">
+                                              <input type="texte" name=" " placeholder="{{'Prénom'|trans}}" class="form-control form_control_email2">
                                               <p class="date_naissance">{{'Date de naissance'|trans}}</p>
                                               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                                  <select class="form-control not_count">
@@ -182,16 +182,16 @@
                                            
                                              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                               <select class="form-control not_count" name="annee">
-                                                    <option selected disabled>Sexe</option>
-                                                    <option value="Masculin">Masculin</option>
-                                                    <option value="Féminin">Féminin</option>
+                                                    <option selected disabled>{{'Sexe'|trans}}</option>
+                                                    <option value="Masculin">{{'Masculin'|trans}}</option>
+                                                    <option value="Féminin">{{'Féminin'|trans}}</option>
 
                                                   </select>
                                             </div>
                                              <p style="clear: both;margin-bottom: 10px !important;"></p>
 
-                                                <input type="email" name="email" placeholder="Email" class="form-control form_control_email2">
-                                                <input type="email" name="email" placeholder="Téléphone" class="form-control form_control_email2">
+                                                <input type="email" name="email" placeholder="{{'Email'|trans}}" class="form-control form_control_email2">
+                                                <input type="email" name="email" placeholder="{{'Téléphone'|trans}}" class="form-control form_control_email2">
                                                 <p>
                                                     <button type="submit" class="create_acount"><i class="fa fa-pencil"></i> &nbsp;&nbsp;{{'Continuer'|trans}} </button>
                                                 </p>

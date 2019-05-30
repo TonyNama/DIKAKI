@@ -29,7 +29,23 @@
               <meta property="og:image" content=""><!-- image representant la page de la page-->
 
 
-	  {% block style %}{% endblock %}
+	  {% block style %}
+    <style type="text/css">
+        a:visited{
+         color:#8F8F8F !important;
+        }
+
+        .navbar.navbar-main .navbar-nav .open .dropdown-menu>li>a,.navbar .navbar-nav .open .dropdown-menu {
+            color:#8F8F8F !important;
+            outline:none;
+            z-index:5;
+        }
+        .navbar.navbar-main .navbar-nav .open .dropdown-menu>li:hover > a {
+            background-color:transparent;
+            color:#24440d !important;
+        }
+    </style>
+    {% endblock %}
 	  {% stylesheets filter='cssrewrite'
             'css/vendor/animate.min.css'
             'css/vendor/bootstrap-social.css'
@@ -56,8 +72,8 @@
     <!-- site en version d'evaluation -->
   <div class="wrapper_version_evaluation" id="wrapper_version_evaluation">
     <p>
-      <span>Vous êtes sur un nouveau site Dikaki-rdv, site  en évaluation pour la prise de rendez-vous et le paiement en ligne.</span>
-      <span>Nous attendons vos observations et suggestions afin de mieux répondre à vos attentes.</span>
+      <span>{{"Vous êtes sur un nouveau site Dikaki-rdv, site  en évaluation pour la prise de rendez-vous et le paiement en ligne"|trans}}.</span>
+      <span>{{"Nous attendons vos observations et suggestions afin de mieux répondre à vos attentes"|trans}}.</span>
     </p>
     <a href="" id="link_clise_times"><i class="fa fa-times"></i></a>
   </div>
@@ -73,7 +89,7 @@
 						<div class="row">
 							<!-- Address and Phone -->
 							<div class="col-sm-7 hidden-xs">
-								<span class="ion-android-system-home home-icon"></span>Plateforme de prise de rendez-vous et paiement en ligne en Afrique.
+								<span class="ion-android-system-home home-icon"></span>{{'Plateforme de prise de rendez-vous et paiement en ligne en Afrique'|trans}}.
 							</div>
 							<!-- Social Buttons -->
 							<div class="col-sm-5 text-right">
@@ -125,50 +141,50 @@
 									<nav class="navbar-collapse collapse navHeaderCollapse" role="navigation">
 										<ul class="nav navbar-nav navbar-right">
 											<li class="dropdown dropdown-main">
-									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Solutions<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Solutions'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
 									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
-									          		<li><a href="{{ path('dkk_app_rendez_vous') }}">Dikaki Rendez-vous</a></li>
-                                                    <li><a href="{{ path('dkk_app_education') }}">Dikaki Secteur éducatif</a></li>
-									          		<li><a href="{{ path('dkk_app_dossier') }}">Dikaki Dépôt de dossier </a></li>
-									          		<li><a href="{{ path('dkk_app_billeterie') }}">Dikaki E-ticket</a></li>
+									          		<li><a href="{{ path('dkk_app_rendez_vous') }}">{{'Dikaki Rendez-vous'|trans}}</a></li>
+                                                    <li><a href="{{ path('dkk_app_education') }}">{{'Dikaki Secteur éducatif'|trans}}</a></li>
+									          		<li><a href="{{ path('dkk_app_dossier') }}">{{'Dikaki Dépôt de dossier'|trans}} </a></li>
+									          		<li><a href="{{ path('dkk_app_billeterie') }}">{{'Dikaki E-ticket'|trans}}</a></li>
 
 
 									        	</ul>
 									        </li>
 
 							<li class="dropdown dropdown-main">
-									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Professionnel<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Professionnel'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
 									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
-									          		<li><a href="{{ path('dkk_professionnel_inscription') }}">Créer un compte</a></li>
-									          		<li><a href="{{ path('dkk_professionnel_connexion') }}">J'ai un compte</a></li>
+									          		<li><a href="{{ path('dkk_professionnel_inscription') }}">{{'Créer un compte'|trans}}</a></li>
+									          		<li><a href="{{ path('dkk_professionnel_connexion') }}">{{"J'ai un compte"|trans}}</a></li>
 
 
 									        	</ul>
 									        </li>
 										<li class="dropdown dropdown-main">
-									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Particulier<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Particulier'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
 									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
-									          		<li><a href="{{ path('dkk_utilisateur_inscription') }}">S'inscrire</a></li>
-									          		<li><a href="{{ path('dkk_utilisateur_connexion') }}">Se connecter</a></li>
+									          		<li><a href="{{ path('dkk_utilisateur_inscription') }}">{{"S'inscrire"|trans}}</a></li>
+									          		<li><a href="{{ path('dkk_utilisateur_connexion') }}">{{'Se connecter'|trans}}</a></li>
 
 
 									        	</ul>
 									        </li>
 										<li class="dropdown dropdown-main">
-									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Mon compte<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Mon compte'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
 									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
-									          		<li><a href="{{ path('dkk_utilisateur_authentification') }}">Mes rendez-vous</a></li>
-                                <li><a href="{{ path('dkk_utilisateur_deconnexion') }}">Se déconnecter</a></li>
+									          		<li><a href="{{ path('dkk_utilisateur_authentification') }}">{{'Mes rendez-vous'|trans}}</a></li>
+                                <li><a href="{{ path('dkk_utilisateur_deconnexion') }}">{{'Se déconnecter'|trans}}</a></li>
 
 
 									        	</ul>
 									        </li>
 											<li class="dropdown dropdown-main">
-									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Français<span class="fa fa-angle-down dropdown-arrow"></span></a>
+									        	<a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Français'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
 									        	<ul class="dropdown-menu dropdown-subhover dropdown-animation animated fadeIn">
-									          		<li><a href="">Anglais</a></li>
-									          		<li><a href="">Espagnol</a></li>
-                                <li><a href="">Portugais</a></li>
+									          		<li><a href="">{{'Anglais'|trans}}</a></li>
+									          		<li><a href="">{{'Espagnol'|trans}}</a></li>
+                                <li><a href="">{{'Portugais'|trans}}</a></li>
 
 									        	</ul>
 									        </li>
@@ -193,7 +209,7 @@
                   <div class="container">
                     <div class="row">
                       <div class="col-sm-12">
-                        <h2 class="pt-2 text-center font-weight-bold">Service client</h2>
+                        <h2 class="pt-2 text-center font-weight-bold">{{'Service client'|trans}}</h2>
 
                         <div class="carousel-controls testimonial-carousel-controls">
                           <div class="control d-flex align-items-center justify-content-center prev mt-3"><i class="fa fa-chevron-left"></i></div>
@@ -206,13 +222,13 @@
                               <div class="testimonial w-100 px-3 text-center d-flex flex-direction-column justify-content-center flex-wrap align-items-center">
                                 <div class="message text-center blockquote w-100">
                                     <span class="par_tele">
-                                        Un seul numéro de téléphone:
+										{{'Un seul numéro de téléphone'|trans}}:
                                     </span>
                                     <span class="link_service">
                                     <a href="javascript:void(0);" class="btn-two green block">+237 655 010 808</a>
                                     </span>
                                     <span class="small_description">
-                                        Nos conseillers sont à votre écoute du Lundi au Vendredi 9h à 18h.
+                                        {{"Nos conseillers sont à votre écoute du Lundi au Vendredi 9h à 18h"|trans}}.
                                     </span>
                                 </div>
 
@@ -224,13 +240,13 @@
                               <div class="testimonial w-100 px-3 text-center d-flex flex-direction-column justify-content-center flex-wrap align-items-center">
                                 <div class="message text-center blockquote w-100">
                                     <span class="par_tele">
-                                        Une seule  adresse:
+										{{'Une seule  adresse'|trans}}:
                                     </span>
                                     <span class="link_service">
                                     <a href="mailto:contact@dikaki-rdv.com" class="btn-two green block" title="Nous contacter">contact@dikaki-rdv.com</a>
                                     </span>
                                     <span class="small_description">
-                                        Nos bureaux sont ouvert : Du lundi au vendredi de 9h à 18h
+										{{'Nos bureaux sont ouverts : Du lundi au vendredi de 9h à 18h'|trans}}
                                     </span>
                                 </div>
 
@@ -242,13 +258,13 @@
                               <div class="testimonial w-100 px-3 text-center d-flex flex-direction-column justify-content-center flex-wrap align-items-center">
                                 <div class="message text-center blockquote w-100">
                                     <span class="par_tele">
-                                        Prendre rendez-vous avec un conseiller Dikaki
+                                        {{'Prendre rendez-vous avec un conseiller Dikaki'|trans}}
                                     </span>
                                     <span class="link_service">
-                                    <a href="{{ path('dkk_app_prendre') }}" class="btn-two green block">Prenez rendez-vous</a>
+                                    <a href="{{ path('dkk_app_prendre') }}" class="btn-two green block">{{'Prenez rendez-vous'|trans}}</a>
                                     </span>
                                     <span class="small_description">
-                                       Un service et support technique de qualité toujours à vos côtés disponibles: 24h/24 et 7j/7
+                                       {{"Un service et support technique de qualité toujours à vos côtés disponibles: 24h/24 et 7j/7"|trans}}
                                     </span>
                                 </div>
 
@@ -274,107 +290,107 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                                 <h3 class="title_footer">
-                                   Solutions
+                                   {{'Solutions'|trans}}
                                 </h3>
 
 
                                 <ul class="ul_description">
                                   <li class="detail_para">
-                                       <a href="{{ path('dkk_app_rendez_vous') }}" class="">DIKAKI Prise de rendez-vous</a>
+                                       <a href="{{ path('dkk_app_rendez_vous') }}" class="">{{'DIKAKI Prise de rendez-vous'|trans}}</a>
                                     </li>
                                     <li class="detail_para">
-                                       <a href="{{ path('dkk_app_education') }}" class="">DIKAKI Secteur éducatif</a>
+                                       <a href="{{ path('dkk_app_education') }}" class="">{{'DIKAKI Secteur éducatif'|trans}}</a>
                                     </li>
                                     <li class="detail_para">
-                                      <a href="{{ path('dkk_app_dossier') }}" class="">DIKAKI Dépôt de dossier</a>
+                                      <a href="{{ path('dkk_app_dossier') }}" class="">{{'DIKAKI Dépôt de dossier'|trans}}</a>
                                     </li>
 
                                         <li class="detail_para">
-                                          <a href="{{ path('dkk_app_billeterie') }}" class="">DIKAKI E-Ticket</a>
+                                          <a href="{{ path('dkk_app_billeterie') }}" class="">{{'DIKAKI E-Ticket'|trans}}</a>
                                         </li>
                                          <li class="detail_para">
-                                          <a href="{{ path('dkk_app_fonctionnalite') }}" class="">Comment ça marche ? </a>
+                                          <a href="{{ path('dkk_app_fonctionnalite') }}" class="">{{'Comment ça marche'|trans}} ? </a>
 
                                         </li>
                                 </ul>
                                  <p class="p_letter">
-                                    <label for="letter">Newsletter</label>
+                                    <label for="letter">{{'Newsletter'|trans}}</label>
                                 </p>
                                 <form method="post" action="" id="register_form" autocomplete="off">
                                     <span class="val_email_"></span>
-                                    <input type="text" name="newsletter" id="letter" class="letter_form form-control" placeholder="Votre adresse E-mail">
-                                    <p><button type="submit"  class="send_newsletter green button_send">Envoyer</button></p>
+                                    <input type="text" name="newsletter" id="letter" class="letter_form form-control" placeholder="{{'Votre adresse E-mail'|trans}}">
+                                    <p><button type="submit"  class="send_newsletter green button_send">{{'Envoyer'|trans}}</button></p>
                                 </form>
 
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                                 <h3 class="title_footer">
-                                    Contactez-nous
+                                    {{'Contactez-nous'|trans}}
                                 </h3>
                                 <p class="serdi_infio">
-                                    SERDI INFORMATIQUE
+                                    {{'SERDI INFORMATIQUE'|trans}}
                                 </p>
                                 <p class="contact_para">
-                                    BP:11007, Yaoundé - Cameroun
+                                    {{'BP:11007, Yaoundé - Cameroun'|trans}}
                                 </p>
                                 <p class="contact_para">
-                                    Route aéroport international de Yaoundé
-                                    Nsimalen. PK 10 Odza.
+                                    {% trans %}Route aéroport international de Yaoundé
+                                    Nsimalen. PK 10 Odza.{% endtrans %}
                                 </p>
                                 <p class="contact_para">
-                                    Ouverture: Lun. - Ven.:
-                                    9h - 18h.
+                                    {{'Ouverture: Lun. - Ven.'|trans}}:
+                                    {{'9h - 18h'|trans}}.
                                 </p>
                                 <p class="contact_para">
-                                    Service clients: +237 655 010 808
+                                    {{'Service clients'|trans}}: +237 655 010 808
                                 </p>
                                 <p class="contact_para">
-                                    Support technique: +237 676 862 919
+                                    {{'Support technique'|trans}}: +237 676 862 919
                                 </p>
                                 <p class="contact_para">
-                                    Email: <a href="mailto:contact@dikaki-rdv.com" title="Nous contacter" style="color: #fff !important;font-weight: 700 !important;"> contact@dikaki-rdv.com</a>
+                                    {{'Email'|trans}}: <a href="mailto:contact@dikaki-rdv.com" title="Nous contacter" style="color: #fff !important;font-weight: 700 !important;"> contact@dikaki-rdv.com</a>
                                 </p>
 
 
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                                 <h3 class="title_footer">
-                                    Assistance rapide
+                                    {{'Assistance rapide'|trans}}
                                 </h3>
                                 <p class="para_assis">
-                                    Nos conseillers vous assistent dès les premières heures d'utilisation
+                                    {% trans %}Nos conseillers vous assistent dès les premières heures d'utilisation
                                     en vous expliquant toutes les fonctionnalités de la solution agenda
                                     planning Dikaki et la prise de rendez-vous en ligne. Nos équipes
-                                    restent disponibles et réagissent rapidement à votre sollicitation.
+                                    restent disponibles et réagissent rapidement à votre sollicitation.{% endtrans %}
                                 </p>
                                  <p>
-                                    <a href="{{ path('dkk_app_contact') }}" class="btn_contact green block">Contactez-nous</a>
+                                    <a href="{{ path('dkk_app_contact') }}" class="btn_contact green block">{{'Contactez-nous'|trans}}</a>
                                 </p>
 
 
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                                 <h3 class="title_footer">
-                                    Trouver un rendez-vous
+                                    {{'Trouver un rendez-vous'|trans}}
                                 </h3>
                                 <p>
-                                    <a href="{{ path('dkk_professionnel_choix') }}" class="event_rdv green">Professionnel</a>
+                                    <a href="{{ path('dkk_professionnel_choix') }}" class="event_rdv green">{{'Professionnel'|trans}}</a>
                                 </p>
                                 <h3 class="title_footer">
-                                    Trouver un évènement
+									{{'Trouver un évènement'|trans}}
                                 </h3>
                                 <p>
-                                    <a href="{{ path('dkk_app_evenement') }}" class="event_rdv green">Evènement</a>
+                                    <a href="{{ path('dkk_app_evenement') }}" class="event_rdv green">{{'Evènement'|trans}}</a>
                                 </p>
                                 <h3 class="title_footer">
-                                    Communauté
+                                    {{'Communauté'|trans}}
                                 </h3>
                                 <p>
-                                    <a href="{{ path('dkk_app_partenaire') }}" class="btn_contact green block" style="text-align: center;width: 100% !important">Devenir partenaire</a>
+                                    <a href="{{ path('dkk_app_partenaire') }}" class="btn_contact green block" style="text-align: center;width: 100% !important">{{'Devenir partenaire'|trans}}</a>
                                 </p>
 
                                 <p>
-                                    <a href="{{path('dkk_app_blog')}}" class="btn_contact green block" style="text-align: center;width: 100% !important">Blog et Actualités</a>
+                                    <a href="{{path('dkk_app_blog')}}" class="btn_contact green block" style="text-align: center;width: 100% !important">{{'Blog et Actualités'|trans}}</a>
                                 </p>
                                 
                             </div>
@@ -382,17 +398,18 @@
                     </div>
                </div>
                 <div class="container">
-                    <div class="row">
-                        <div class="small_footer">
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                <p class="copy_right">&copy; 2018 Copyright - DIKAKI SERDI Cameroun  </p>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                <a href="{{ path('dkk_app_cgu') }}" class="cgu">Mentions légales</a>
-                            </div>
+                <div class="row">
+                    <div class="small_footer">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <p class="copy_right pull-left">&copy; 2018 Copyright - DIKAKI SERDI {{'Cameroun'|trans}}  </p>
                         </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <a href="{{ path('dkk_app_cgu') }}" style="color: #22242a !important;" class="cgu pull-right">{{'Mentions légales'|trans}}</a>
+                        </div>
+                        <p style="clear: both !important"></p>
                     </div>
                 </div>
+            </div>
             </div>
         </footer>
     <!-- fin de la section footer -->

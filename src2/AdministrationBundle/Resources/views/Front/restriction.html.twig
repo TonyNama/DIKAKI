@@ -1,11 +1,17 @@
  {% extends '::admin_template.html.twig' %}
 
-{% block title %}Administration - Autorisation :: Prise de rendez-vous et dépôt de dossier en ligne :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+<<<<<<< .mine
+{% block title %}{{'Restrictions'|trans}} ::Dikaki {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+||||||| .r725
+{% block title %}Restrictions ::Dikaki prise de rendez-vous et dépôt de dossier en ligne :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+=======
+{% block title %}Restrictions : Dikaki prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+>>>>>>> .r728
 
 {% block style %}
 
     <style>
-        th{
+         th{
           font-size: 0.9em !important;
           text-align: center !important;
         }
@@ -38,12 +44,12 @@
             color: #fff !important;
           }  
 
-          .onglet-actif { 
-             border-left:solid 2px #666666 ; 
-             border-right:solid 2px #666666 ;  
+          .onglet-actif {  
+             border-left:solid 2px #666666 ;  
+             border-right:solid 2px #666666 ; 
              border-top:solid 2px #666666 ;  
              border-bottom:none !important;  
-             margin:5px 5px 0px 5px ; 
+             margin:5px 5px 0px 5px ;  
              padding:7px 3px 7px 3px ;  
              background-color:white;
              font-weight: bold;
@@ -62,7 +68,13 @@
     <section id="main-content">
       <section class="wrapper site-min-height">
         <div class="row mt">
-             <h2 class="name_structure">Cabinet médical la Grâce</h2>
+            <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+      </div>
+      
+      <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">{{'Paramètres spécifiques'|trans}}</h2>
+      </div>
           <!-- /col-lg-12 -->
           <div class="col-lg-12 mt">
 
@@ -75,13 +87,17 @@
 
 
 
-              <h4 class="small_tittle up_">Paramètres spécifiques </h4>
+              <h4 class="small_tittle up_">{{'Restrictions'|trans}} </h4>
                    <p class="journne_du_" style="text-align:center !important;"> </p>
 
                    <div class="menu1"> <!-- début de la boite contenant les onglets -->
-                    <a href="{{path('dkk_administration_autorisation')}}" class="onglet-actif">  Autorisations</a> <!-- onglet ACTIF -->
-                     <span class="onglet">  Restrictions </span> <!-- onglet inactif -->
+                    <a href="{{path('dkk_administration_autorisation')}}" class="onglet-actif">  {{'Autorisations'|trans}}</a> <!-- onglet ACTIF -->
+                     <span class="onglet">  {{'Restrictions'|trans}} </span> <!-- onglet inactif -->
+                    <a href="{{path('dkk_administration_paiement')}}" class="onglet-actif">  {{'Paiements'|trans}}</a> <!-- onglet ACTIF -->
                    </div>
+
+
+                  
 
             <div class="margin_wrapper">
 
@@ -91,7 +107,7 @@
           <div class="form-group">
             <div class="resize2">
               <br><br>
-                <h6 class="option_take">Options des restrictions </h6>
+                <h6 class="option_take">{{'Options des restrictions'|trans}} </h6>
                         <br><br>
 
                         <div class="">
@@ -99,7 +115,7 @@
                                 <div class="form-group">
                                     <div class="wrapper_suppl">
                                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                            <span class="advance_reserv">Temps avant la prestation </span>
+                                            <span class="advance_reserv">{{'Temps avant la prestation'|trans}} </span>
                                             <br>
                                             <select name="" class="separate">
                                                 <option>10 min</option><option>15 min</option><option>10 min</option>
@@ -108,55 +124,59 @@
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
-                                             <span class="advance_reserv">RDV groupe  </span><br>
+                                             <span class="advance_reserv">{{'RDV groupe'|trans}}  </span><br>
                                             <select name="" class="separate">
-                                                <option>2</option><option>3</option><option>4</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
                                             </select>
 
                                         </div>
 
                                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                           <br>
-                                            <span class="advance_reserv">Heure limite d'annalation de rdv </span><br>
+                                            <span class="advance_reserv">{{"Heure limite d'annulation de rdv"|trans}} </span><br>
                                             <select name="" class="separate ">
-                                                <option>1 heure</option><option>2 heures</option><option>3 heures</option>
+                                                <option>1 {{'heure'|trans}}</option><option>2 {{'heures'|trans}}</option><option>3 {{'heures'|trans}}</option>
                                             </select>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                           <br>
-                                            <span class="advance_reserv">Heure limite de suppression de RDV </span><br>
+                                            <span class="advance_reserv">{{'Heure limite de suppression de RDV'|trans}} </span><br>
                                             <select name="" class=" separate">
-                                                <option>1 heure</option><option>2 heures</option><option>3 heures</option>
+                                                <option>1 {{'heure'|trans}}</option><option>2 {{'heures'|trans}}</option><option>3 {{'heures'|trans}}</option>
                                             </select>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                           <br>
-                                            <span class="advance_reserv">Heure limite modification de rdv </span><br>
+                                            <span class="advance_reserv">{{'Heure limite modification de rdv'|trans}} </span><br>
                                             <select name="" class=" separate">
-                                                <option>1 heure</option><option>2 heures</option><option>3 heures</option>
+                                                <option>1 {{'heure'|trans}}</option><option>2 {{'heures'|trans}}</option><option>3 {{'heures'|trans}}</option>
                                             </select>
                                         </div>
 
                                         <br><br>
                                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 separate">
                                           <br>
-                                            <input type="checkbox" class="check_button"> <span class="list1">Liste d'attente</span>
+                                            <input type="checkbox" class="check_button"> <span class="list1">{{"Liste d'attente"|trans}}</span>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 separate">
                                           <br>
-                                            <input type="checkbox" class="check_button"> <span class="list1">Blacklist</span>
+                                            <input type="checkbox" class="check_button"> <span class="list1">{{'Blacklist'|trans}}</span>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 separate">
                                           <br>
-                                            <input type="checkbox" class="check_button"> <span class="list1">Compte obligatoire</span>
+                                            <input type="checkbox" class="check_button"> <span class="list1">{{'Compte obligatoire'|trans}}</span>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 separate">
                                           <br>
-                                            <input type="checkbox" class="check_button" > <span class="list1">Historique</span>
+                                            <input type="checkbox" class="check_button" > <span class="list1">{{'Historique'|trans}}</span>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 separate">
                                           <br>
-                                            <input type="checkbox" class="check_button"> <span class="list1">Personne à charge</span>
+                                            <input type="checkbox" class="check_button"> <span class="list1">{{'Personne à charge'|trans}}</span>
                                         </div>
 
                                         <!-- debut des boutons de soumission -->
@@ -164,10 +184,10 @@
                                                 <br>
                                                <div class="">
 
-                                                      <button type="submit" name="" class="btn btn-success btn_valid"><i class="fa fa-floppy-o" aria-hidden="true"></i>  Enregistrer </button>
+                                                      <button type="submit" name="" class="btn btn-success btn_valid"><i class="fa fa-floppy-o" aria-hidden="true"></i>  {{'Enregistrer'|trans}} </button>
                                         <button type="button" class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal4" title="Modifier les paramètres spécifiques"><i class="fa fa-pencil-square-o"></i> Modifier </button>
 
-                                                <button type="submit" name="" class="btn btn-danger btn_valid"> <i class="fa fa-window-close" aria-hidden="true"> </i>  Sortir </button>
+                                                <button type="submit" name="" class="btn btn-danger btn_valid"> <i class="fa fa-window-close" aria-hidden="true"> </i>  {{'Sortir'|trans}} </button>
                                                </div>
                                         <!-- fin des boutons de soumission -->
                                     </div>
@@ -182,64 +202,64 @@
                                 <div class="modal-content">
                                   <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h5 class="modal-title" id="myModalLabel">Modifier les paramètres spécifiques </h5>
+                                    <h5 class="modal-title" id="myModalLabel">{{'Modifier les paramètres spécifiques'|trans}} </h5>
                                   </div>
                                   <div class="modal-body2 second_modal_body">
                                       <form method="post" action="">
                                                             <div class="form-group">
                                 <div class="wrapper_suppl">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                        <span>Temps avant la prestation </span><br>
+                                        <span>{{'Temps avant la prestation'|trans}} </span><br>
                                         <select name="" class="separate">
                                             <option>10 min</option><option>15 min</option><option>10 min</option>
                                         </select>
 
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                         <span>RDV groupe  </span><br>
+                                         <span>{{'RDV groupe'|trans}}  </span><br>
                                         <select name="" class="separate">
                                             <option>2</option><option>3</option><option>4</option>
                                         </select>
 
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                        <span>Heure limite d'annulation de rdv </span><br>
+                                        <span>{{"Heure limite d'annulation de rdv"|trans}} </span><br>
                                         <select name="" class="separate ">
-                                            <option>1 heure</option><option>2 heures</option><option>3 heures</option>
+                                            <option>1 {{'heure'|trans}}</option><option>2 {{'heures'|trans}}</option><option>3 {{'heures'|trans}}</option>
                                         </select>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                        <span>Heure limite de suppression de RDV </span><br>
+                                        <span>{{'Heure limite de suppression de RDV'|trans}} </span><br>
                                         <select name="" class=" separate">
-                                            <option>1 heure</option><option>2 heures</option><option>3 heures</option>
+                                            <option>1 {{'heure'|trans}}</option><option>2 {{'heures'|trans}}</option><option>3 {{'heures'|trans}}</option>
                                         </select>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <span>Heure limite modification de rdv </span><br>
+                                        <span>{{'Heure limite modification de rdv'|trans}} </span><br>
                                         <select name="" class=" separate">
-                                            <option>1 heure</option><option>2 heures</option><option>3 heures</option>
+                                            <option>1 {{'heure'|trans}}</option><option>2 {{'heures'|trans}}</option><option>3 {{'heures'|trans}}</option>
                                         </select>
                                     </div>
 
                                     <br><br>
                                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 separate">
-                                        <input type="checkbox" class="check_button"> <span class="list1">Liste d'attente</span>
+                                        <input type="checkbox" class="check_button"> <span class="list1">{{"Liste d'attente"|trans}}</span>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 separate">
-                                        <input type="checkbox" class="check_button"> <span class="list1">Blacklist</span>
+                                        <input type="checkbox" class="check_button"> <span class="list1">{{'Blacklist'|trans}}</span>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 separate">
-                                        <input type="checkbox" class="check_button"> <span class="list1">Compte obligatoire</span>
+                                        <input type="checkbox" class="check_button"> <span class="list1">{{'Compte obligatoire'|trans}}</span>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 separate">
-                                        <input type="checkbox" class="check_button" > <span class="list1">Historique</span>
+                                        <input type="checkbox" class="check_button" > <span class="list1">{{'Historique'|trans}}</span>
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 separate">
-                                        <input type="checkbox" class="check_button"> <span class="list1">Personne à charge</span>
+                                        <input type="checkbox" class="check_button"> <span class="list1">{{'Personne à charge'|trans}}</span>
                                     </div>
 
                                         <div class="">
-                                          <button type="submit" name="" class="btn btn-success btn_valid"><i class="fa fa-floppy-o" aria-hidden="true"></i>  Enregistrer </button>
+                                          <button type="submit" name="" class="btn btn-success btn_valid"><i class="fa fa-floppy-o" aria-hidden="true"></i>  {{'Enregistrer'|trans}} </button>
                                         </div>
                                       </form>
 
@@ -270,16 +290,60 @@
                     <table class="table table-bordered table-striped table-condensed">
                          <thead>
                           <tr style="background-color: #26440d !important;color: #fff !important;">
-                           <th> Tps av. Presta.</th>
-                            <th> Rdv groupe</th>
-                            <th> H. Limite annu. RDV </th>
-                            <th> H. Limite supp. RDV </th>
-                            <th> H. Limite modif. RDV </th>
-                            <th> Liste attente. </th>
-                            <th> Blacklist</th>
-                            <th> Cpte Oblig.</th>
-                            <th> Histo.</th>
-                            <th> Prs à chges</th>
+                           <th> {{'Tps av. Presta.'|trans}}</th>
+                            <th> {{'Rdv groupe'|trans}}</th>
+                            <th> {{'H. Limite annu. RDV'|trans}} </th>
+                            <th> {{'H. Limite supp. RDV'|trans}} </th>
+                            <th> {{'H. Limite modif. RDV'|trans}} </th>
+                            <th> {{'Liste attente'|trans}}. </th>
+                            <th> {{'Blacklist'|trans}}</th>
+                            <th> {{'Cpte Oblig.'|trans}}</th>
+                            <th> {{'Histo.'|trans}}</th>
+                            <th> {{'Prs à chges'|trans}}</th>
+
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                          </tr>
+                      </tbody>
+                    </table>
+                </section>
+            </div>
+
+
+
+
+
+            </div>
+
+
+
+    </form>
+
+                <!-- debut du tableau -->
+                    <table class="table table-bordered table-striped table-condensed">
+                         <thead>
+                          <tr style="background-color: #26440d !important;color: #fff !important;">
+                           <th> {{'Tps av. Presta.'|trans}}</th>
+                            <th> {{'Rdv groupe'|trans}}</th>
+                            <th> {{'H. Limite annu. RDV'|trans}} </th>
+                            <th> {{'H. Limite supp. RDV'|trans}} </th>
+                            <th> {{'H. Limite modif. RDV'|trans}} </th>
+                            <th> {{'Liste attente'|trans}}. </th>
+                            <th> {{'Blacklist'|trans}}</th>
+                            <th> {{'Cpte Oblig.'|trans}}</th>
+                            <th> {{'Histo.'|trans}}</th>
+                            <th> {{'Prs à chges'|trans}}</th>
 
                         </thead>
                         <tbody>

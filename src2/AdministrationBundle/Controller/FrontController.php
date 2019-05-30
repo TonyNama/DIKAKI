@@ -1,6 +1,6 @@
 <?php
 
-namespace DKK\AdministrationBundle\Controller;
+namespace DKK\AdministrationBundle\Controller; 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,7 +35,7 @@ class FrontController extends Controller {
 	}
 
 
-	public function email_composAction(){ 
+	public function email_composeAction(){ 
 		return $this->render('DKKAdministrationBundle:Front:email_compose.html.twig');
 	}
  
@@ -66,11 +66,20 @@ class FrontController extends Controller {
 	public function restrictionAction(){ 
 		return $this->render('DKKAdministrationBundle:Front:restriction.html.twig');
 	}
-	public function notification_emailAction(){ 
-		return $this->render('DKKAdministrationBundle:Front:notification_email.html.twig');
+	public function notification_clientAction(){ 
+		return $this->render('DKKAdministrationBundle:Front:notification_client.html.twig');
 	}
-	public function notification_smsAction(){ 
-		return $this->render('DKKAdministrationBundle:Front:notification_sms.html.twig');
+
+	public function create_clientAction(){ 
+		return $this->render('DKKAdministrationBundle:Front:create_client.html.twig');
+	}
+
+	public function liste_clientAction(){ 
+		return $this->render('DKKAdministrationBundle:Front:liste_client.html.twig');
+	}
+
+	public function notification_interneAction(){ 
+		return $this->render('DKKAdministrationBundle:Front:notification_interne.html.twig');
 	} 
 	public function regarder_notification_emailAction(){ 
 		return $this->render('DKKAdministrationBundle:Front:regarder_notification_email.html.twig');
@@ -173,20 +182,31 @@ class FrontController extends Controller {
 		return $this->render('DKKAdministrationBundle:Front:agenda_tab_prestation.html.twig');
 	} 
 	
-	public function agenda_tab_tacheAction(){ 
-		return $this->render('DKKAdministrationBundle:Front:agenda_tab_tache.html.twig');
+	public function tacheAction(){ 
+		return $this->render('DKKAdministrationBundle:Front:tache.html.twig');
 	}
 
-	public function agenda_tab_planningAction(){ 
-		return $this->render('DKKAdministrationBundle:Front:agenda_tab_planning.html.twig');
+	public function planningAction(){ 
+		return $this->render('DKKAdministrationBundle:Front:planning.html.twig');
 	}
 
 	public function agenda_tab_liste_clientAction(){ 
 		return $this->render('DKKAdministrationBundle:Front:agenda_tab_liste_client.html.twig');
 	}
 
-	public function agenda_tab_actionAction(){ 
-		return $this->render('DKKAdministrationBundle:Front:agenda_tab_action.html.twig');
+	public function create_agendaAction(){ 
+		return $this->render('DKKAdministrationBundle:Front:create_agenda.html.twig');
+	}
+	public function liste_agendaAction(){ 
+		return $this->render('DKKAdministrationBundle:Front:liste_agenda.html.twig');
+	}
+
+	public function liste_prestationAction(){ 
+		return $this->render('DKKAdministrationBundle:Front:liste_prestation.html.twig');
+	}
+
+	public function liste_prestataireAction(){ 
+		return $this->render('DKKAdministrationBundle:Front:liste_prestataire.html.twig');
 	}
 
 	public function agenda_creer_clientAction(){ 
@@ -204,9 +224,13 @@ class FrontController extends Controller {
 	public function agenda_modifier_rdvAction(){ 
 		return $this->render('DKKAdministrationBundle:Front:agenda_modifier_rdv.html.twig');
 	}
-
+ 
 	public function agenda_presenceAction(){ 
 		return $this->render('DKKAdministrationBundle:Front:agenda_presence.html.twig');
+	}
+
+	public function agenda_encaissementAction(){ 
+		return $this->render('DKKAdministrationBundle:Front:agenda_encaissement.html.twig');
 	}
 	
 

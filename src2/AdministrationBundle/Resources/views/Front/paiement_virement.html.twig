@@ -1,6 +1,12 @@
  {% extends '::admin_template.html.twig' %}
 
+<<<<<<< .mine
+{% block title %}Paiement en ligne : Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+||||||| .r697
 {% block title %}Paiement en ligne :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+=======
+{% block title %}{{'Paiement en ligne'|trans}} :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+>>>>>>> .r727
 
 {% block style %}
 <style type="text/css">
@@ -16,7 +22,7 @@
     <section id="main-content">
       <section class="wrapper site-min-height">
         <div class="row mt">
-             <h2 class="name_structure">Cabinet médical la Grâce</h2>
+             <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
           <!-- /col-lg-12 -->
           <div class="col-lg-12 mt">
 
@@ -29,7 +35,7 @@
 
 
 
-              <h4 class="small_tittle up_">Mode de paiement </h4>
+              <h4 class="small_tittle up_">{{'Mode de paiement'|trans}} </h4>
                    <p class="journne_du_" style="text-align:center !important;"> </p>
 
 
@@ -38,54 +44,58 @@
 
                 <section id="unseen">
                   <div class="cadre_operateur">
-                    <p class="text_paiement">Paiement par virement</p>
+                    <p class="text_paiement">{{'Paiement par virement'|trans}}</p>
                     <form method="post" action="" id="signupForm">
                      <table style="margin-left:20px !important;margin-right:20px !important;">
                           <tr>
-                            <th><span class="title_mode">Titre  </span></th>
+                            <th><span class="title_mode">{{'Titre'|trans}}  </span></th>
                               <td>
-                                <span class="name_operat"><input type="text" name="titre" placeholder="Virement bancaire" class="form-control"></span>
+                                <span class="name_operat"><input type="text" name="titre" placeholder="{{'Virement bancaire|trans'}}" class="form-control"></span>
 
                               </td>
                           </tr>
 
 
                           <tr>
-                            <th><span class="title_mode">Description </span> </th>
+                            <th><span class="title_mode">{{'Usage'|trans}} </span> </th>
                               <td>
-                                <span class="name_operat"><textarea name="comment" placeholder="Description" class="form-control"></textarea> </span>
+                                <select name="" class="usage_">
+                                    <option value="">{{'Pour  encaissements'|trans}}</option>  
+                                    <option value="">{{'Pour  rembourssements'|trans}}</option>  
+                                </select>
+
                               </td>
                           </tr>
 
                            <tr>
                             <th></th>
                               <td style="text-align: left !important;">
-                                <span class="name_operat"><input type="checkbox" name="" class=""> Activer</span>
+                                <span class="name_operat"><input type="checkbox" name="" class=""> {{'Activer'|trans}}</span>
                               </td>
                           </tr>
                           <tr>
-                            <th><span class="title_mode">Titulaire du compte à crediter </span></th>
+                            <th><span class="title_mode">{{'Titulaire du compte à crediter'|trans}} </span></th>
                               <td>
                                 <span class="name_operat"><input type="text" name="titulaire" placeholder=" " class="form-control"></span>
                               </td>
                           </tr>
 
                           <tr>
-                            <th><span class="title_mode">N° de compte (format RIB) </span></th>
+                            <th><span class="title_mode">{{'N° de compte (format RIB)'|trans}} </span></th>
                               <td>
                                 <span class="name_operat"><input type="text" name="compte" placeholder=" " class="form-control"></span>
                               </td>
                           </tr>
 
                           <tr>
-                            <th><span class="title_mode">N° de compte (format IBAN / BIC) </span></th>
+                            <th><span class="title_mode">{{'N° de compte (format IBAN / BIC)'|trans}} </span></th>
                               <td>
                                 <span class="name_operat"><input type="text" name="compte_iban" placeholder=" " class="form-control"></span>
                               </td>
                           </tr>
 
                           <tr>
-                            <th><span class="title_mode">Indication sur le libellé </span></th>
+                            <th><span class="title_mode">{{'Indication sur le libellé'|trans}} </span></th>
                               <td>
                                 <span class="name_operat"><input type="text" name="libelle" placeholder=" " class="form-control"></span>
                               </td>
@@ -98,8 +108,8 @@
                             <th></th>
                               <td style="padding-left: 20px;">
                                 <br>
-                                <button type="submit" class="btn btn-success btn_valid" id="button_send"><i class="fa fa-floppy-o"></i> Enregistre</button>
-                                <button class="btn btn-danger btn_valid"><i class="fa fa-times"></i> Annuler </button>
+                                <button type="submit" class="btn btn-success btn_valid" id="button_send"><i class="fa fa-floppy-o"></i> {{'Enregistrer'|trans}}</button>
+                                <button class="btn btn-danger btn_valid"><i class="fa fa-times"></i> {{'Annuler'|trans}} </button>
                               </td>
                           </tr>
 
@@ -112,12 +122,12 @@
                     <thead>
                                <tr style="background-color: #26440d !important;color: #fff !important;">
 
-                                  <th>Titre</th>
-                                  <th>N° RIB</th>
-                                  <th>N° IBAN/ BIC</th>
-                                  <th>Intitulé</th>
-                                  <th>Activer</th>
-                                  <th>Action</th>
+                                  <th>{{'Titre'|trans}}</th>
+                                  <th>{{'N° RIB'|trans}}</th>
+                                  <th>{{'N° IBAN/ BIC'|trans}}</th>
+                                  <th>{{'Intitulé'|trans}}</th>
+                                  <th>{{'Activer'|trans}}</th>
+                                  <th>{{'Identifiant'|trans}}</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -129,7 +139,7 @@
                                     <td>.......</td>
                                     <td>.......</td>
                                     <td>
-                                      <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-pencil-square-o"></i> Modifier</button>
+                                      <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</button>
 
                                       <!-- debut de la fenetre modal -->
 
@@ -138,14 +148,14 @@
                                           <div class="modal-content" >
                                             <div class="modal-header">
                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                              <h4 class="modal-title" id="myModalLabel">Modifier vos informations  de paiement  par virement</h4>
+                                              <h4 class="modal-title" id="myModalLabel">{{'Modifier vos informations  de paiement  par virement'|trans}}</h4>
                                             </div>
                                             <div class="modal-body">
                                               <!-- debut -->
                                                 <form method="post" action="">
                                                   <table style="margin-left:20px !important;margin-right:20px !important;">
                                                        <tr>
-                                                         <th><span class="title_mode">Titre  </span></th>
+                                                         <th><span class="title_mode">{{'Titre'|trans}}  </span></th>
                                                            <td>
                                                              <span class="name_operat"><input type="text" name="titre_modif" placeholder="Virement bancaire" class="form-control"></span>
 
@@ -153,42 +163,46 @@
                                                        </tr>
 
 
-                                                       <tr>
-                                                         <th><span class="title_mode">Description </span> </th>
-                                                           <td>
-                                                             <span class="name_operat"><textarea name="comment_modif" placeholder="Description" class="form-control"></textarea> </span>
-                                                           </td>
-                                                       </tr>
+                                                      <tr>
+                                                        <th><span class="title_mode">{{'Usage'|trans}} </span> </th>
+                                                          <td>
+                                                            <select name="" class="usage_">
+                                                                <option value="">{{'Pour  encaissements'|trans}}</option>  
+                                                                <option value="">{{'Pour  rembourssements'|trans}}</option>  
+                                                            </select>
+
+                                                          </td>
+                                                      </tr>
 
                                                         <tr>
                                                          <th></th>
                                                            <td style="text-align: left !important;">
-                                                             <span class="name_operat"><input type="checkbox" name="" class=""> Activer</span>
+                                                             <span class="name_operat"><input type="checkbox" name="" class=""> {{'Activer'|trans}}</span>
                                                            </td>
                                                        </tr>
                                                        <tr>
-                                                         <th><span class="title_mode">Titulaire du compte à crediter </span></th>
+                                                         <th><span class="title_mode">{{'Titulaire du compte à créditer'|trans}} </span></th>
                                                            <td>
                                                              <span class="name_operat"><input type="text" name="titulaire_modif" placeholder=" " class="form-control"></span>
                                                            </td>
                                                        </tr>
 
                                                        <tr>
-                                                         <th><span class="title_mode">N° de compte (format RIB) </span></th>
+                                                         <th><span class="title_mode">{{'N° de compte (format RIB)'|trans}} </span></th>
                                                            <td>
                                                              <span class="name_operat"><input type="text" name="compte_modif" placeholder=" " class="form-control"></span>
                                                            </td>
                                                        </tr>
 
                                                        <tr>
-                                                         <th><span class="title_mode">N° de compte (format IBAN / BIC) </span></th>
+                                                         <th><span class="title_mode">{{'N° de compte (format IBAN / BIC)'|trans}} </span></th>
                                                            <td>
                                                              <span class="name_operat"><input type="text" name="compte_iban_modif" placeholder=" " class="form-control"></span>
                                                            </td>
                                                        </tr>
 
                                                        <tr>
-                                                         <th><span class="title_mode">Indication sur le libellé </span></th>
+                                                         <th><span class="title_mode">{{'Indication sur le libellé'|trans}} </span></th>
                                                            <td>
                                                              <span class="name_operat"><input type="text" name="libelle_modif" placeholder=" " class="form-control"></span>
                                                            </td>
@@ -201,8 +215,8 @@
                                                          <th></th>
                                                            <td style="padding-left: 20px;">
                                                              <br>
-                                                             <button type="submit" class="btn btn-success btn_valid" id="button_send"><i class="fa fa-floppy-o"></i> Enregistre</button>
-                                                             <button class="btn btn-danger btn_valid"><i class="fa fa-times"></i> Annuler </button>
+                                                             <button type="submit" class="btn btn-success btn_valid" id="button_send"><i class="fa fa-floppy-o"></i> {{'Enregistrer'|trans}}</button>
+                                                             <button class="btn btn-danger btn_valid"><i class="fa fa-times"></i> {{'Annuler'|trans}} </button>
                                                            </td>
                                                        </tr>
 
@@ -295,30 +309,30 @@
           },
           messages: {
             titulaire: {
-              required: "<span style='color:#dd4f43'>Titulaire du compte</span>",
-              minlength: "<span style='color:#dd4f43'> 2 caractères minimum</span>"
+              required: "<span style='color:#dd4f43'>{{'Titulaire du compte'|trans}}</span>",
+              minlength: "<span style='color:#dd4f43'> 2 {{'caractères minimum'|trans}}</span>"
             },
             compte: {
-           required: "<span style='color:#dd4f43'>Champs réquis</span>",
-           minlength: "<span style='color:#dd4f43'>2 caractères minimum</span>"
+           required: "<span style='color:#dd4f43'>{{'Champs réquis'|trans}}</span>",
+           minlength: "<span style='color:#dd4f43'>2 {{'caractères minimum'|trans}}</span>"
          },
          compte_iban: {
-            required: "<span style='color:#dd4f43'>Champs réquis</span>",
-            minlength: "<span style='color:#dd4f43'>2 caractères minimum</span>"
+            required: "<span style='color:#dd4f43'>{{'Champs réquis'|trans}}</span>",
+            minlength: "<span style='color:#dd4f43'>2 {{'caractères minimum'|trans}}</span>"
           },
           libelle: {
-             required: "<span style='color:#dd4f43'>Champs réquis</span>",
-             minlength: "<span style='color:#dd4f43'>2 caractères minimum</span>"
+             required: "<span style='color:#dd4f43'>{{'Champs réquis'|trans}}</span>",
+             minlength: "<span style='color:#dd4f43'>2 {{'caractères minimum'|trans}}</span>"
            },
             titre: {
-              required: "<span style='color:#dd4f43'>Titre réquis</span>",
-              minlength: "<span style='color:#dd4f43'> 2 caractères minimum</span>"
+              required: "<span style='color:#dd4f43'>{{'Titre réquis'|trans}}</span>",
+              minlength: "<span style='color:#dd4f43'> 2 {{'caractères minimum'|trans}}</span>"
             },
             comment: {
               required: "<span style='color:#dd4f43'></span>",
-              minlength: "<span style='color:#dd4f43'>20 caractères minimum</span>",
+              minlength: "<span style='color:#dd4f43'>20 {{'caractères minimum'|trans}}</span>",
             },
-            ressource: "<span style='color:#dd4f43'>Ressource</span>",
+            ressource: "<span style='color:#dd4f43'>{{'Ressource'|trans}}</span>",
           }
         });
 

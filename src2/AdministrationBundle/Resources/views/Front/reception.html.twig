@@ -1,6 +1,6 @@
  {% extends '::admin_template.html.twig' %}
 
-{% block title %}Administration - Boite de reception :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+{% block title %}{{'Boite de réception'|trans}} : Dikaki {{'prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
 <style>
@@ -23,13 +23,13 @@
           <div class="col-sm-3">
             <section class="panel">
               <div class="panel-body">
-                <a href="{{path('dkk_administration_email_compos')}}" class="btn btn-compose">
-                  <i class="fa fa-pencil"></i>  Envoyer un message
+                <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-compose">
+                  <i class="fa fa-pencil"></i>  {{'Envoyer un message'|trans}}
                   </a>
                 <ul class="nav nav-pills nav-stacked mail-nav">
-                  <li class="active"><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> Boite de reception   <span class="label label-theme pull-right inbox-notification">3</span></a></li>
-                  <li><a href="{{path('dkk_administration_email_send')}}"> <i class="fa fa-exclamation-circle"></i>Messages envoyés</a></li>
-                  <li><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>Corbeille</a></li>
+                  <li class="active"><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> {{'Boite de réception'|trans}}   <span class="label label-theme pull-right inbox-notification">3</span></a></li>
+                  <li><a href="{{path('dkk_administration_email_send')}}"> <i class="fa fa-exclamation-circle"></i>{{'Messages envoyés'|trans}}</a></li>
+                  <li><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>{{'Corbeille'|trans}}</a></li>
                 </ul>
               </div>
             </section>
@@ -39,11 +39,11 @@
             <section class="panel">
               <header class="panel-heading wht-bg">
                 <h4 class="gen-case">
-                    Boite de reception
-                    <span class="recut">Message(s) réçu(s) 3.</span>
+                    {{'Boite de réception'|trans}}
+                    <span class="recut">{{"Message(s) réçu(s)"|trans}} 3.</span>
                     <form action="#" class="pull-right mail-src-position">
                       <div class="input-append">
-                        <input type="text" class="form-control " placeholder="Rechercher">
+                        <input type="text" class="form-control " placeholder="{{'Rechercher'|trans}}">
                       </div>
                     </form>
                   </h4>
@@ -70,7 +70,7 @@
                         </td>
 
                         <td class="view-message dont-show"><a href="{{path('dkk_administration_read_email')}}">Paul kingué</a></td>
-                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">Mon message envoyé</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">{{'Mon message envoyé'|trans}}</a></td>
                         <td class="view-message inbox-small-cells"></td>
                         <td class="view-message text-right">08h00</td>
                       </tr>
@@ -80,7 +80,7 @@
                         </td>
 
                         <td class="view-message dont-show"><a href="{{path('dkk_administration_read_email')}}">Paul kingué</a></td>
-                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">Mon message envoyé</a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">{{'Mon message envoyé'|trans}}</a></td>
                         <td class="view-message inbox-small-cells"></td>
                         <td class="view-message text-right">10h00</td>
                       </tr>
@@ -90,9 +90,9 @@
                         </td>
 
                         <td class="view-message dont-show"><a href="{{path('dkk_administration_read_email')}}">Akoumba</a></td>
-                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">Besoin d'aide </a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">{{"Besoin d'aide"|trans}} </a></td>
                         <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">12 mars</td>
+                        <td class="view-message text-right">12 {{'mars'|trans}}</td>
                       </tr>
                       <tr class="">
                         <td class="inbox-small-cells">
@@ -100,9 +100,9 @@
                         </td>
 
                         <td class="view-message dont-show"><a href="{{path('dkk_administration_read_email')}}">Akoumba</a></td>
-                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">Besoin d'aide </a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">{{"Besoin d'aide"|trans}} </a></td>
                         <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">12 mars</td>
+                        <td class="view-message text-right">12 {{'mars'|trans}}</td>
                       </tr>
                       <tr class="">
                         <td class="inbox-small-cells">
@@ -110,9 +110,9 @@
                         </td>
 
                         <td class="view-message dont-show"><a href="{{path('dkk_administration_read_email')}}">Akoumba</a></td>
-                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">Besoin d'aide </a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">{{"Besoin d'aide"|trans}} </a></td>
                         <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">12 mars</td>
+                        <td class="view-message text-right">12 {{'mars'|trans}}</td>
                       </tr>
                       <tr class="">
                         <td class="inbox-small-cells">
@@ -120,9 +120,9 @@
                         </td>
 
                         <td class="view-message dont-show"><a href="{{path('dkk_administration_read_email')}}">Akoumba</a></td>
-                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">Besoin d'aide </a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">{{"Besoin d'aide"|trans}} </a></td>
                         <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">12 mars</td>
+                        <td class="view-message text-right">12 {{'mars'|trans}}</td>
                       </tr>
                        <tr class="">
                         <td class="inbox-small-cells">
@@ -130,9 +130,9 @@
                         </td>
 
                         <td class="view-message dont-show"><a href="{{path('dkk_administration_read_email')}}">Akoumba</a></td>
-                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">Besoin d'aide </a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">{{"Besoin d'aide"|trans}} </a></td>
                         <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">12 mars</td>
+                        <td class="view-message text-right">12 {{'mars'|trans}}</td>
                       </tr>
                        <tr class="">
                         <td class="inbox-small-cells">
@@ -140,9 +140,9 @@
                         </td>
 
                         <td class="view-message dont-show"><a href="{{path('dkk_administration_read_email')}}">Akoumba</a></td>
-                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">Besoin d'aide </a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">{{"Besoin d'aide"|trans}} </a></td>
                         <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">12 mars</td>
+                        <td class="view-message text-right">12 {{'mars'|trans}}</td>
                       </tr>
                        <tr class="">
                         <td class="inbox-small-cells">
@@ -150,9 +150,9 @@
                         </td>
 
                         <td class="view-message dont-show"><a href="{{path('dkk_administration_read_email')}}">Akoumba</a></td>
-                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">Besoin d'aide </a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">{{"Besoin d'aide"|trans}} </a></td>
                         <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">12 mars</td>
+                        <td class="view-message text-right">12 {{'mars'|trans}}</td>
                       </tr>
                        <tr class="">
                         <td class="inbox-small-cells">
@@ -160,9 +160,9 @@
                         </td>
 
                         <td class="view-message dont-show"><a href="{{path('dkk_administration_read_email')}}">Akoumba</a></td>
-                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">Besoin d'aide </a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">{{"Besoin d'aide"|trans}} </a></td>
                         <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">12 mars</td>
+                        <td class="view-message text-right">12 {{'mars'|trans}}</td>
                       </tr>
                       <tr class="">
                         <td class="inbox-small-cells">
@@ -170,9 +170,9 @@
                         </td>
 
                         <td class="view-message dont-show"><a href="{{path('dkk_administration_read_email')}}">Akoumba</a></td>
-                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">Besoin d'aide </a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">{{"Besoin d'aide"|trans}} </a></td>
                         <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">12 mars</td>
+                        <td class="view-message text-right">12 {{'mars'|trans}}</td>
                       </tr>
                       <tr class="">
                         <td class="inbox-small-cells">
@@ -180,9 +180,9 @@
                         </td>
 
                         <td class="view-message dont-show"><a href="{{path('dkk_administration_read_email')}}">Akoumba</a></td>
-                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">Besoin d'aide </a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">{{"Besoin d'aide"|trans}} </a></td>
                         <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">12 mars</td>
+                        <td class="view-message text-right">12 {{'mars'|trans}}</td>
                       </tr>
                       <tr class="">
                         <td class="inbox-small-cells">
@@ -190,9 +190,9 @@
                         </td>
 
                         <td class="view-message dont-show"><a href="{{path('dkk_administration_read_email')}}">Akoumba</a></td>
-                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">Besoin d'aide </a></td>
+                        <td class="view-message"><a href="{{path('dkk_administration_read_email')}}">{{"Besoin d'aide"|trans}} </a></td>
                         <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">12 mars</td>
+                        <td class="view-message text-right">12 {{'mars'|trans}}</td>
                       </tr>
                     </tbody>
                   </table>

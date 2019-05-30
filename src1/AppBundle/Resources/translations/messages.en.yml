@@ -1,6 +1,6 @@
-Hello: __Hello
-cancel: __cancel
-validate: __validate
+Hello: Hello
+cancel: cancel
+validate: validate
 'Bienvenue chez': 'welcome to'
 'Prise de rendez-vous et dépôt de dossier en ligne': 'Online appointment booking and file filing'
 'Solution de gestion de planning, de prise de rendez-vous en  ligne et dépôt de dossier.': 'Planning management solution, book an appointment online and submit a file.'
@@ -225,7 +225,6 @@ Nouvelles: News
 'Avec Dikaki, donnez dès aujourd''hui la possibilité à vos patients / clients de prendre rendez-vous ou de faire une réservation et payer leurs consultations / prestations directement en ligne.': 'With Dikaki, give your patients/customers the opportunity to book an appointment or make a reservation and pay for their consultations / services directly online.'
 'Je crée mon compte professionnel': 'I create my professional account'
 'Je prends RDV avec un conseiller Dikaki': 'I''m taking an appointment with a Dikaki advisor'
-'Du lundi au Vendredi de 09 <sup>H</sup> à 18<sup>H</sup>': 'Monday to Friday from 09H to 18H'
 'A propos de': About
 'Notre mission pour 2019 est de vous accompagner jour après jour dans votre projet de digitalisation de votre entreprise, automatiser et simplifier votre planification et votre prise de rendez-vous en ligne avec la plateforme DIKAKI.': 'Our mission for 2019 is to support you day after day in your project to digitize your company, automate and simplify your planning and appointment scheduling online with the DIKAKI platform.'
 'Nous croyons que le changement n’arrivera que par vous.': 'We believe that change will only come through you.'
@@ -238,7 +237,8 @@ Nouvelles: News
 'Notre base': 'Our base'
 'Notre base c’est le Cameroun, venez nous retrouver et restez tranquille, on s’occupe de tout.': 'Our base is Cameroon, come and meet us and stay calm, we take care of everything.'
 'A qui est destiné Dikaki': 'Who is Dikaki for'
-'<span>a</span> qui est destiné Dikaki ?': 'who is Dikaki for ?'
+a: who
+'qui est destiné Dikaki ?': 'is Dikaki for ?'
 'Le système de prise de rendez-vous et réservation en ligne': 'The online appointment and booking system'
 'est spécifiquement conçu pour les prestataires de services': 'is specifically designed for service providers'
 'Qu''il s''agisse:': 'Whether it is a question of:'
@@ -309,7 +309,7 @@ Solutions: Solutions
 Professionnel: Professional
 'Créer un compte': 'Create an account'
 'J''ai un compte': 'I have an account'
-Particulier: Private individual
+Particulier: 'Private individual'
 'S''inscrire': 'Sign up'
 'Se connecter': Login
 'Mon compte': 'My account'
@@ -386,7 +386,7 @@ Portugais: Portuguese
 Newsletter: Newsletter
 Contactez-nous: 'Contact us'
 'SERDI INFORMATIQUE': 'SERDI COMPUTER SCIENCE'
-'BP:11007, Yaoundé - Cameroun': 'BP:11007, Yaounde - Cameroon'
+'BP:11007, Yaoundé - Cameroun': 'P.O. Box :11007, Yaounde - Cameroon'
 "Route aéroport international de Yaoundé\n                                    Nsimalen. PK 10 Odza.": 'Yaounde International Airport Road Nsimalen. PK 10 Odza.'
 'Ouverture: Lun. - Ven.': 'Opening: Mon. - Fri.'
 'Service clients': 'Customer service'
@@ -575,7 +575,7 @@ Demander: 'Ask for'
 'MES INFORMATIONS': 'MY INFORMATION'
 'Modifier mes informations': 'Modify my information'
 'Me déconnecter': 'Disconnect me'
-Historique: background
+Historique: History
 Date: Date
 Heure: Time
 'Nature du rendez-vous': 'Nature of the appointment'
@@ -673,3 +673,18 @@ Mr: Mr.
 Imprimer: Print
 'Prendre un nouveau RDV': 'Take a new appointment'
 Quitter: Exit
+Mission: Mission
+'Votre nom': 'Your name'
+'Votre prenom': 'Your first name'
+'Téléphone portable': 'Portable phone'
+'Entrer vortre message ici': 'Enter your message here'
+Entreprise: Company
+Prenom: First name
+'Enoncer votre besoin': 'State your need'
+pour: for
+'Laisser un message': 'Leave a message'
+Et: And
+'Entrer votre adresse Email': 'Enter your email address'
+'Votre Email': 'Your Email'
+'Votre mot de passe': 'Your password'
+Sexe: Gender

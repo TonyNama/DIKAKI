@@ -1,33 +1,34 @@
 {% extends '::home.html.twig' %}
 
-{% block title %}{{'Bienvenue chez'|trans}} Dikaki:: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+{% block title %}{{'Bienvenue chez'|trans}} Dikaki : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block body %}
     <!-- End Header -->
 
-    <!-- debut du slider -->
-    <div class="slider_wrapper">
-        <div class="my_section_slider">
-            <div id="slideShowImages" style="width:100% !important;">
-                <img src="{{ asset('img/banner1.png ')}}" class="slider_img" />
-                <img src="{{ asset('img/b4.jpg ')}}" class="slider_img" />
-                <img src="{{ asset('img/banner6.png ')}}" class="slider_img" />
-                <img src="{{ asset('img/banner8.png ')}}" class="slider_img" />
-                <img src="{{ asset('img/banner4.png ')}}" class="slider_img" />
-                <img src="{{ asset('img/banner2.png ')}}" class="slider_img" />
-                <img src="{{ asset('img/oui.png ')}}" class="slider_img" />
-            </div>
+    <div class="">
+             <div class="my_section_slider">
+                <div id="slideShowImages" style="width:100% !important;">
+                    <img src="{{ asset('img/banner1.jpg ')}}" class="slider_img" />
+                    <img src="{{ asset('img/b4.jpg ')}}" class="slider_img" />
+                    <img src="{{ asset('img/banner6.jpg ')}}" class="slider_img" />
+                    <img src="{{ asset('img/banner8.jpg ')}}" class="slider_img" />
+                    <img src="{{ asset('img/banner4.jpg ')}}" class="slider_img" />
+                    <img src="{{ asset('img/banner2.jpg ')}}" class="slider_img" />
+                    <img src="{{ asset('img/oui.jpg ')}}" class="slider_img" />
+                </div>
+                  </div>
+             <div class="wrapper_solution">
+                <h4 class="my_class_4">
+                    {{ 'Solution de gestion de planning, de prise de rendez-vous en  ligne et dépôt de dossier.'|trans}}
+                 </h4>
+                 <br>
+                 <h6 class="my_class_6">
+                        Dikaki {{ "est une plateforme de services, d'information et de communication."|trans}} 
+                </h6>
+             </div>
         </div>
-        <div class="wrapper_solution">
-            <h4 class="my_class_4 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-                {{ 'Solution de gestion de planning, de prise de rendez-vous en  ligne et dépôt de dossier.'|trans}}
-            </h4>
-            <h6 class="my_class_6 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-               Dikaki {{ "est une plateforme de services, d'information et de communication."|trans}} 
-            </h6>
-        </div>
-    </div>
-    <!-- fin du slider -->
+        <!-- fin du slider -->
+        <p class="remonte_tous"></p>
 
     <!-- debut de la section objectif -->
     <div class="container">

@@ -1,6 +1,6 @@
   {% extends '::admin_template.html.twig' %}
 
-{% block title %}Besoin de votre aide -Administration :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+{% block title %}Besoin de votre aide -Administration : Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
 
 {% block body %}
 <!-- debut du contenu --> 
@@ -12,7 +12,7 @@
           <div class="col-sm-3">
            <section class="panel">
               <div class="panel-body">
-                <a href="{{path('dkk_administration_email_compos')}}" class="btn btn-compose">
+                <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-compose">
                   <i class="fa fa-pencil"></i>  Envoyer un message
                   </a>
                 <ul class="nav nav-pills nav-stacked mail-nav">
@@ -39,7 +39,7 @@
                   </div>
                   <div class="col-md-4">
                     <div class="compose-btn pull-right">
-                      <a href="{{path('dkk_administration_email_compos')}}" class="btn btn-sm btn-theme"><i class="fa fa-reply"></i> Répondre</a>
+                      <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-sm btn-theme"><i class="fa fa-reply"></i> Répondre</a>
                       <button class="btn  btn-sm tooltips" data-original-title="Print" type="button" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-print"></i> </button>
                       <button class="btn btn-sm tooltips" data-original-title="Trash" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-trash-o"></i></button>
                     </div>
@@ -80,7 +80,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
 
                 <div class="compose-btn pull-left">
-                  <a href="{{path('dkk_administration_email_compos')}}" class="btn btn-sm btn-theme"><i class="fa fa-reply"></i> Répondre</a>
+                  <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-sm btn-theme"><i class="fa fa-reply"></i> Répondre</a>
                   <button class="btn  btn-sm tooltips" data-original-title="Print" type="button" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-print"></i> </button>
                   <button class="btn btn-sm tooltips" data-original-title="Trash" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-trash-o"></i></button>
                 </div>

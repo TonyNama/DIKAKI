@@ -1,0 +1,446 @@
+ {% extends '::admin_template.html.twig' %}
+
+<<<<<<< .mine
+{% block title %} Paramètre des notifications par Sms : Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+||||||| .r697
+{% block title %} Paramètre des notifications par Sms :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+=======
+{% block title %} {{'Paramètre des notifications par Sms'|trans}} :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+>>>>>>> .r727
+
+{% block style %}
+   <style>
+      
+        th{
+          text-align: center !important;
+        }
+        
+    .btn_valid{
+      display: inline-block;
+      width: 100px !important;
+      float: right !important;
+    }                    
+    .ck-editor__editable{
+      min-height:150px !important;
+    }
+
+
+    </style>
+{% endblock %}
+
+{% block body %}
+
+<section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+            <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+      </div>
+      
+      <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">{{'Confirmations et rappels clients'|trans}}</h2>
+      </div>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <h4 class="small_tittle to_up">{{'Confirmations et rappels clients'|trans}}</h4>
+
+              <br>
+
+
+              <div class="margin_wrapper_notification">
+                  <h4 class="small_tittle to_up">{{'Message de confirmation par E-mail'|trans}}</h4>
+                  <p class="notification_sms_email_">{{'Confirmation par courrier électronique'|trans}}</p>
+                   <div class="wrapper_notification_sms_email_">
+                       <form method="post" action="">
+                        <input type="checkbox" id="confirmation"><label for="confirmation"><span class="span_confirmation"> {{'Envoyer un E-mail automatiquement au client à chaque validation de reservation'|trans}} </span></label>
+                           <p id="p_confirmation" style="margin-top:15px;margin-left:22px;display:none">
+                                <select name="" id="select_confirmation" class="select_right">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                </select>
+                               
+                               <select name="" id="select_confirmation">
+                                    <option value="minutes">{{'Minutes'|trans}}</option>
+                                    <option value="heures">{{'Heures'|trans}}</option>
+                                    <option value="jours">{{'Jours'|trans}}</option>
+                               </select>
+                           </p>
+                           <p class="after_confirmation">
+                            {{'Après la confirmation de la reservation'|trans}} 
+                           </p>
+                           <p class="after_confirmation">
+                               <span>{{'Message de confirmation'|trans}}</span>
+                               <p></p>
+                               <label for="titre_message" class="label_title"><span>{{'Titre du message'|trans}} </span></label>
+                          
+                                <input type="text" name="" id="titre_message">
+                            <br><br>
+                               <span>{{'Court texte inclus dans le message de confirmation'|trans}}</span>
+                           <br>
+                                <textarea name="content" class="editor"></textarea>
+                           <br>
+                           <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> {{'Valider'|trans}}</button>
+                           </form>
+                           <br>
+                           </p>
+                       
+                         
+                               
+                        
+                           
+                       
+                   </div>
+              
+             <p style="clear:both !important;margin-top:100px !important"></p>
+               <h4 class="small_tittle to_up">{{'Message de confirmation par SMS'|trans}}</h4>
+                  <p class="notification_sms_email_">{{'Confirmation par SMS'|trans}}</p>
+                   <div class="wrapper_notification_sms_email_">
+                       <form method="post" action="">
+                        <input type="checkbox" id="confirmation_sms"><label for="confirmation_sms"><span class="span_confirmation"> {{'Envoyer un SMS instantané au client à chaque validation de reservation'|trans}}  </span></label>
+            
+                           <br><br>
+                           <h6 style="font-weight:700 !important;">{{'SMS/Court'|trans}}</h6>
+                                <textarea name="content" class="editor2"></textarea>
+                           <br>
+                           <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> {{'Valider'|trans}}</button>
+                           </form>
+                           <br>
+                           </p>
+                       
+                         
+                               
+                        
+                           
+                       
+                   </div>
+            
+            <!-- -->
+            
+            <p style="clear:both !important;margin-top:100px !important"></p>
+               <h4 class="small_tittle to_up">{{'Message de remerciement par E-mail'|trans}}</h4>
+                  <p class="notification_sms_email_">{{'E-mail de remerciement'|trans}}</p>
+                   <div class="wrapper_notification_sms_email_">
+                       <form method="post" action="">
+                       <span class="email_remerciement">{{'E-mail de remerciement'|trans}}: </span>
+                           <select name="" class="remerciement_select">
+                               <option value=""></option>
+                               <option value=""></option>
+                               <option value=""></option>
+                           </select>
+                           <br>
+                           <p class="p_hours"><span>{{'Heure'|trans}}: </span>{{"Définir l'heure après laquelle l'E-mail sera envoyer aprè la visite"|trans}}</p>
+                           <p>
+                             <select name="" id="select_confirmation" class="select_right">
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                </select>
+                               
+                               <select name="" id="select_confirmation">
+                                    <option value="minutes">{{'Minutes'|trans}}</option>
+                                    <option value="heures">{{'Heures'|trans}}</option>
+                                    <option value="jours">{{'Jours'|trans}}</option>
+                               </select>
+                               <span class="envoyer_email_thank"><b> {{'Après le rendez-vous'|trans}}</b></span>
+                           </p>
+                           <p>
+                            
+                           </p>
+                           <p>
+                            <input type="radio" id="ne_pas" name="select_name"><label for="ne_pas"><span class="envoyer_email_thank"> {{"Ne pas envoyer l'E-mail de remerciement"|trans}}</span></label>
+                           </p>
+                            <p>
+                            <input type="radio" id="envoyer_email_remer" name="select_name"><label for="envoyer_email_remer"><span class="envoyer_email_thank"> {{'Envoyer un E-mail de remerciement seulement après la'|trans}} 1<sup>{{'ere'|trans}}</sup> {{'visite'|trans}}</span></label>
+                            </p>
+                           <p>
+                            <input type="radio" id="envoyer_apres" name="select_name"><label for="envoyer_apres"><span class="envoyer_email_thank"> {{'Envoyer un E-mail de remerciement après chaque visite'|trans}} </span></label>
+                           </p>
+                           
+                           <br>
+                               <textarea name="content" class="editor3"></textarea>
+                           <br>
+                           <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> {{'Valider'|trans}}</button>
+                           </form>
+                           <br>
+                           </p>
+                       
+                         
+                               
+                        
+                           
+                       
+                   </div>
+            
+            <!-- -->
+            
+            <h1 class="rappels">{{'Rappels'|trans}}</h1>
+            <p style="clear:both !important;margin-top:50px !important"></p>
+               <h4 class="small_tittle to_up">{{'Message de rappel par E-mail'|trans}}</h4>
+                  <p class="notification_sms_email_">{{'Rappel par E-mail'|trans}}</p>
+                   <div class="wrapper_notification_sms_email_">
+                       <form method="post" action="">
+                       <span class="email_remerciement"><i class="fa fa-times"></i> {{'Rappel par courrier électronique'|trans}} </span><br><br>
+                           <span class="email_remerciement"> {{'Envoyer un rappel par courriel E-mail au client'|trans}}  </span>
+                           <br>
+                           <p>
+                             <select name="" id="select_confirmation" class="select_right">
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                </select>
+                               
+                               <select name="" id="select_confirmation">
+                                    <option value="minutes">{{'Heures'|trans}}</option>
+                                    <option value="heures">{{'Jours'|trans}}</option>
+                                    <option value="jours">{{'Semaines'|trans}}</option>
+                               </select>
+                           </p>
+                           <p>
+                           
+                           <span class="envoyer_email_thank">{{"Avant l'heure du rendez-vous"|trans}}. </span>
+                           </p>
+                           
+                          
+                           <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> {{'Valider'|trans}}</button>
+                           </form>
+                           <br>
+                           </p>
+                       
+                         
+                   </div>
+            
+            
+                 <p style="clear:both !important;margin-top:100px !important"></p>
+               <h4 class="small_tittle to_up">{{'Message de rappel par SMS'|trans}}</h4>
+                  <p class="notification_sms_email_">{{'Rappel par SMS'|trans}}</p>
+                   <div class="wrapper_notification_sms_email_">
+                       <form method="post" action="">
+                       <span class="email_remerciement"><i class="fa fa-times"></i> {{'Rappel par SMS'|trans}} </span><br><br>
+                           <span class="email_remerciement"> {{'Envoyer un rappel par SMS au client'|trans}}  </span>
+                           <br>
+                           <p>
+                             <select name="" id="select_confirmation" class="select_right">
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                </select>
+                               
+                               <select name="" id="select_confirmation">
+                                    <option value="minutes">{{'Minutes'|trans}}</option>
+                                    <option value="heures">{{'Heures'|trans}}</option>
+                                    <option value="jours">{{'Jours'|trans}}</option>
+                               </select>
+                           </p>
+                           <p>
+                           
+                           <span class="envoyer_email_thank">{{"Avant l'heure du rendez-vous"|trans}}. </span>
+                           </p>
+                           
+                          
+                           <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> {{'Valider'|trans}}</button>
+                           </form>
+                           <br>
+                           </p>
+                       
+                         
+                   </div>
+            
+                </div>
+              
+              
+              
+              
+            
+            <!-- --->
+            
+            
+
+              </div>
+
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+    <script>
+            ClassicEditor
+                .create( document.querySelector('.editor'),{
+                        language: 'fr'
+                })
+                .then( editor => {
+                console.log( editor );
+                 })
+                .catch( error =>{
+                    console.error(error);
+                } );
+            
+        </script>
+    
+    <script>
+            ClassicEditor
+                .create( document.querySelector('.editor2'),{
+                        language: 'fr'
+                })
+                .then( editor => {
+                console.log( editor );
+                 })
+                .catch( error =>{
+                    console.error(error);
+                } );
+            
+        </script>
+        <script>
+            ClassicEditor
+                .create( document.querySelector('.editor3'),{
+                        language: 'fr'
+                })
+                .then( editor => {
+                console.log( editor );
+                 })
+                .catch( error =>{
+                    console.error(error);
+                } );
+            
+        </script>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+  
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('#ajouter').on('click', function(){
+        if($(this).is('button'))
+        {
+           $('.main2').css('display','inline-block');
+           $('#ajouter').hide();
+           $('#ajouter2').show();
+        }
+      });
+
+      $('#confirmation').on('click',function(){
+          $('#p_confirmation').toggle();
+      });
+      // valide email rappel
+      $(".valide_rapel_email").on('click',function(){
+        $(".rappel_rdv_email").toggle();
+      });
+      // valide email remercieemnt
+      $(".valid_remerciement_rdv_email").on('click',function(){
+        $(".remerciement_rdv_email").toggle();
+      });
+
+                                 
+
+
+
+  });                       
+</script>
+
+{% endblock %}
+

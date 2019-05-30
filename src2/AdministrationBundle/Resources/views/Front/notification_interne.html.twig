@@ -1,0 +1,239 @@
+  {% extends '::admin_template.html.twig' %}
+
+<<<<<<< .mine
+{% block title %}Notification interne : Dikaki prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+||||||| .r697
+{% block title %}Notification interne :: Dikaki prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+=======
+{% block title %}{{'Notification interne'|trans}} :: Dikaki {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+>>>>>>> .r727
+
+{% block style %}
+ <style>
+      th{
+      text-align: center !important;
+    }
+
+.btn_valid{
+  display: inline-block;
+  width: 100px !important;
+  float: right !important;
+}
+    </style>
+ 
+
+{% endblock %}
+
+{% block body %}
+
+<section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+          <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+      </div>
+      
+      <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">{{'Notifications internes'|trans}}</h2>
+      </div>
+            
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             
+
+            
+
+
+
+              <div class="margin_wrapper_notification">
+                  <h4 class="small_tittle to_up">{{'Notifications par E-mail'|trans}}</h4>
+                  
+                 
+                    <p class="notification_sms_email_">{{'Notification par courrier électronique'|trans}}</p>
+                     <div class="wrapper_notification_sms_email_">
+                       <form method="post">  
+                        <p class="send_confir"><i class="fa fa-times fa-1x"></i> &nbsp;&nbsp; {{"Recevez un E-mail lorsqu'un client ou un autre utlisateur effectue, modifie, ou annule une reservation"|trans}}.</p>
+                     <input type="checkbox" id="activer"> &nbsp; <label for="activer"><span id="activer">{{'Activer'|trans}}</span></label>
+                    
+                        
+                         <span id="active_Email" style="display:none !important">
+                            <span class="notification_span">{{'Votre adresse électronique'|trans}}</span> <input type="email" name="" > 
+                        
+                         </span>
+                         <br>
+                         <br>
+                     
+                     <input type="radio" id="nofitication_choix_1" name="notifier"> <label for="nofitication_choix_1"><span id="activer"> {{'Me notifier en cas de reservation'|trans}}</span></label>
+                     <p></p>
+                     <input type="radio" id="nofitication_choix_2" name="notifier"> <label for="nofitication_choix_2"><span id="activer"> {{"Me notifier si la réservation conserne l'une des prestations suivantes"|trans}} </span></label>
+                     
+                     <br>
+                     <div id="wrapper_content_email" style="display:none !important">
+                         <p class="listes_des_prestations">{{'Liste des prestations'|trans}}</p>
+                     
+                     <div class="wrapper_list_prestation">
+                     
+                            <p>
+                                <input type="checkbox" id="choix_1"> <label for="choix_1"><span class="form_list_items">{{'Soins de visage'|trans}}</span></label>
+                            </p>
+                         <p>
+                            <input type="checkbox" id="choix_2"> <label for="choix_2"><span class="form_list_items">{{'Consulation dentaire'|trans}}</span></label>
+                        </p>
+                            
+                         <p>
+                            <input type="checkbox" id="choix_3"> <label for="choix_3"><span class="form_list_items">{{'Consultation nourisson'|trans}}</span></label>
+                            </p>
+                        <p>
+                            <input type="checkbox" id="choix_4"> <label for="choix_4"><span class="form_list_items">{{'Nouveau patient'|trans}}</span></label>
+                        </p> 
+                           
+                       
+                         <br><br>
+                     </div>
+                     </div>
+                     <br>
+                      <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> {{'Valider'|trans}}</button>
+                      </form>
+                     <br>
+                    </div>
+                  
+                  
+                  
+                <!-- Notification par Sms  -->
+                  <br><br><br>
+                  <h4 class="small_tittle to_up">{{'Notifications par sms'|trans}}</h4>
+                  
+                   
+                    <p class="notification_sms_email_">{{'Notification par SMS'|trans}}</p>
+                     <div class="wrapper_notification_sms_email_">
+                      <form method="post">
+                     <input type="checkbox" id="activer2"> &nbsp; <label for="activer2"><span id="activer2">{{'Activer'|trans}}</span></label>
+                     <div>
+                        
+                            <p id="active_SMS" style="display:none !important">
+                                <span class="notification_span">{{'Numéro de téléphone portable'|trans}} </span>
+                            <select name="">
+                              <option>+237</option>
+                                <option></option>
+                            </select>
+                             <span class="notification_span"> {{'Numéro'|trans}} </span> 
+                            <input type="text" name="">
+                            </p>
+                            
+                            <p class="les_delais">{{'Delais'|trans}}</p>
+                            <p class="le_choix_p">
+                                {{'Choix du delais de reception du SMS'|trans}}. <br>{{'Si la reservation est effectuée peu de temps en avance'|trans}}.
+                            </p>
+                           
+                                <span class="quand_">{{'Quand envoyer'|trans}}</span> 
+                                <select name="">
+                                    <option name="">{{'Si la période de reservation commence dans 45 min'|trans}} </option>
+                                    <option name="">{{'Si la période de reservation commence dans 1 heure'|trans}} </option>
+                                </select>
+                                 <p></p>
+                                <input type="radio" id="nofitication_choix_sms_1" name="notifier"> <label for="nofitication_choix_sms_1"><span id="activer"> {{'Me notifier en cas de reservation'|trans}}</span></label>
+                     <p></p>
+                     <input type="radio" id="nofitication_choix_sms_2" name="notifier"> <label for="nofitication_choix_sms_2"><span id="activer">{{" Me notifier si la réservation conserne l'une des prestations suivantes"|trans}} </span></label>
+                     
+                     <br>
+                     <div id="wrapper_content_SMS" style="display:none">
+                         <p class="listes_des_prestations">{{'Liste des prestations'|trans}}</p>
+                     
+                     <div class="wrapper_list_prestation">
+                      
+                            <p>
+                                <input type="checkbox" id="choix1"> <label for="choix1"><span class="form_list_items">{{'Soins de visage'|trans}}</span></label>
+                            </p>
+                         <p>
+                            <input type="checkbox" id="choix2"> <label for="choix2"><span class="form_list_items">{{'Consulation dentaire'|trans}}</span></label>
+                        </p>
+                            
+                         <p>
+                            <input type="checkbox" id="choix3"> <label for="choix3"><span class="form_list_items">{{'Consultation nourisson'|trans}}</span></label>
+                            </p>
+                        <p>
+                            <input type="checkbox" id="choix4"> <label for="choix4"><span class="form_list_items">{{'Nouveau patient'|trans}}</span></label>
+                        </p> 
+                            
+                       
+                         <br><br>
+                     </div>
+                    </div>
+                           
+                          <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> {{'Valider'|trans}}</button>  
+                        </form>
+                     </div>
+                     
+                     <br>
+                     
+                     
+                     
+                     <br>
+                     
+                     
+                 </div>
+                  
+            </div>
+
+              </div>
+
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+   
+{% endblock %}
+
+{% block scripts %}
+ 
+ <script>
+        $(document).ready(function(){
+            $('#activer').on('click',function(){
+                $('#active_Email').toggle()
+            });
+            
+             $('#activer2').on('click',function(){
+                $('#active_SMS').toggle()
+            });
+            
+            //email
+            
+                  $('#nofitication_choix_2').on('click',function(){
+                    $('#wrapper_content_email').show();
+                });
+
+                $('#nofitication_choix_1').on('click',function(){
+                    $('#wrapper_content_email').hide();
+                });
+            
+            //sms
+            
+            $('#nofitication_choix_sms_2').on('click',function(){
+                $('#wrapper_content_SMS').show();
+            });
+            
+            $('#nofitication_choix_sms_1').on('click',function(){
+                $('#wrapper_content_SMS').hide();
+            });
+            
+        });         
+    </script>
+{% endblock %}
+
+

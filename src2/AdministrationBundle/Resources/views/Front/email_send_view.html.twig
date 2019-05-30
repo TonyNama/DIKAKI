@@ -1,6 +1,6 @@
    {% extends '::admin_template.html.twig' %}
 
-{% block title %} Besoin de votre aide - Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+{% block title %} {{'Besoin de votre aide'|trans}} - {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block body %}
 <!-- debut du contenu --> 
@@ -12,13 +12,13 @@
           <div class="col-sm-3">
            <section class="panel">
               <div class="panel-body">
-                <a href="{{path('dkk_administration_email_compos')}}" class="btn btn-compose">
-                  <i class="fa fa-pencil"></i>  Envoyer un message
+                <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-compose">
+                  <i class="fa fa-pencil"></i>  {{'Envoyer un message'|trans}}
                   </a>
                 <ul class="nav nav-pills nav-stacked mail-nav">
-                  <li ><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> Boite de reception  <span class="label label-theme pull-right inbox-notification">3</span></a></li>
-                  <li class="active"><a href="{{path('dkk_administration_email_send')}}"> <i class="fa fa-exclamation-circle"></i>Messages envoyés</a></li>
-                  <li><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>Corbeille</a></li>
+                  <li ><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> {{'Boite de réception'|trans}}  <span class="label label-theme pull-right inbox-notification">3</span></a></li>
+                  <li class="active"><a href="{{path('dkk_administration_email_send')}}"> <i class="fa fa-exclamation-circle"></i>{{'Messages envoyés'|trans}}</a></li>
+                  <li><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>{{'Corbeille'|trans}}</a></li>
                 </ul>
               </div>
             </section>
@@ -28,7 +28,7 @@
             <section class="panel">
               <header class="panel-heading wht-bg">
                 <h4 class="gen-case">
-                   Lire le message
+                   {{'Lire le message'|trans}}
 
                   </h4>
               </header>

@@ -1,6 +1,6 @@
  {% extends '::admin_template.html.twig' %}
 
-{% block title %}Administration - Corbeille :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+{% block title %}{{'Administration'|trans}} - {{'Corbeille'|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
 <style>
@@ -21,13 +21,13 @@
           <div class="col-sm-3">
            <section class="panel">
               <div class="panel-body">
-                <a href="{{path('dkk_administration_email_compos')}}" class="btn btn-compose">
-                  <i class="fa fa-pencil"></i>  Envoyer un message
+                <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-compose">
+                  <i class="fa fa-pencil"></i>  {{'Envoyer un message'|trans}}
                   </a>
                 <ul class="nav nav-pills nav-stacked mail-nav">
-                  <li><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> Boute re reception  <span class="label label-theme pull-right inbox-notification">3</span></a></li>
-                  <li><a href="{{path('dkk_administration_email_send')}}"> <i class="fa fa-exclamation-circle"></i>Message envoyés</a></li>
-                  <li class="active"><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>Corbeille</a></li>
+                  <li><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> {{'Boite de réception'|trans}}  <span class="label label-theme pull-right inbox-notification">3</span></a></li>
+                  <li><a href="{{path('dkk_administration_email_send')}}"> <i class="fa fa-exclamation-circle"></i>{{'Messages envoyés'|trans}}</a></li>
+                  <li class="active"><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>{{'Corbeille'|trans}}</a></li>
                 </ul>
               </div>
             </section>
@@ -38,7 +38,7 @@
             <section class="panel">
               <header class="panel-heading wht-bg">
                 <h4 class="gen-case">
-                  Corbeille
+                  {{'Corbeille'|trans}}
 
                   </h4>
               </header>
@@ -56,15 +56,15 @@
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                     <tr>
-                      <th>Date</th>
-                      <th>Contenu</th>
-                      <th class="numeric">Voulez-vous ? </th>
+                      <th>{{'Date'|trans}}</th>
+                      <th>{{'Contenu'|trans}}</th>
+                      <th class="numeric">{{'Voulez-vous'|trans}} ? </th>
 
                     </tr>
                   </thead>
                   <tbody>
                     <tr> 
-                      <td> 19 Février 2019</td>
+                      <td> 19 {{'Février'|trans}} 2019</td>
                       <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
                       <td>
@@ -75,7 +75,7 @@ tempor incididunt ut labore et dolore magna aliqua...</td>
                     </tr>
 
                        <tr>
-                      <td>19 Février 2019</td>
+                      <td>19 {{'Février'|trans}} 2019</td>
                       <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
                       <td>
@@ -86,7 +86,7 @@ tempor incididunt ut labore et dolore magna aliqua...</td>
                     </tr>
 
                        <tr>
-                      <td>19 Février 2019</td>
+                      <td>19 {{'Février'|trans}} 2019</td>
                       <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
                       <td>
@@ -96,7 +96,7 @@ tempor incididunt ut labore et dolore magna aliqua...</td>
 
                     </tr>
                        <tr>
-                      <td>19 Février 2019</td>
+                      <td>19 {{'Février'|trans}} 2019</td>
                       <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
                       <td>
@@ -106,7 +106,7 @@ tempor incididunt ut labore et dolore magna aliqua...</td>
 
                     </tr>
                        <tr>
-                      <td> 19 Février 2019</td>
+                      <td> 19 {{'Février'|trans}} 2019</td>
                       <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
                       <td>
@@ -116,7 +116,7 @@ tempor incididunt ut labore et dolore magna aliqua...</td>
 
                     </tr>
                        <tr>
-                      <td> 19 Février 2019</td>
+                      <td> 19 {{'Février'|trans}} 2019</td>
                       <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
                       <td>
@@ -126,7 +126,7 @@ tempor incididunt ut labore et dolore magna aliqua...</td>
 
                     </tr>
                        <tr>
-                      <td> 19 Février 2019</td>
+                      <td> 19 {{'Février'|trans}} 2019</td>
                       <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
                       <td>

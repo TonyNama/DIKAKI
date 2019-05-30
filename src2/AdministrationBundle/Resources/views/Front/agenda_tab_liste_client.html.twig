@@ -1,6 +1,6 @@
     {% extends '::admin_template.html.twig' %}
 
-{% block title %}Agenda - Liste des clients :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+{% block title %}{{'Agenda'|trans}} - {{'Liste des clients'|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
 
@@ -67,7 +67,7 @@
       <section class="wrapper site-min-height">
         <div class="row mt">
 
-            <h2 class="name_structure">Cabinet médical la Grâce</h2>
+            <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
           <!-- /col-lg-12 -->
           <div class="col-lg-12 mt">
             <div class="row content-panel">
@@ -84,17 +84,17 @@
             <br>
 
               <div class="menu1"> <!-- début de la boite contenant les onglets -->
-                <a href="{{path('dkk_administration_agenda')}}" class="onglet-actif"> Agenda(s) </a> <!-- onglet ACTIF -->
-                <a  href="{{path('dkk_administration_agenda_tab_prestataire')}}" class="onglet-actif"> Prestataires  </a> <!-- onglet inactif -->
-                  <a  href="{{path('dkk_administration_agenda_tab_prestation')}}" class="onglet-actif"> Prestations  </a> <!-- onglet inactif -->
-                <a href="{{path('dkk_administration_agenda_tab_tache')}}" class="onglet-actif"> Tâches </a> <!-- onglet ACTIF -->
-                <a href="{{path('dkk_administration_agenda_tab_planning')}}" class="onglet-actif"> Plannings </a> <!-- onglet ACTIF -->
-                   <span class="onglet"> Liste clients  </span> <!-- onglet inactif -->
-                <a href="{{path('dkk_administration_agenda_tab_action')}}" class="onglet-actif"> Actions </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda')}}" class="onglet-actif"> {{'Agenda(s)'|trans}} </a> <!-- onglet ACTIF -->
+                <a  href="{{path('dkk_administration_agenda_tab_prestataire')}}" class="onglet-actif"> {{'Prestataires'|trans}}  </a> <!-- onglet inactif -->
+                  <a  href="{{path('dkk_administration_agenda_tab_prestation')}}" class="onglet-actif"> {{'Prestations'|trans}}  </a> <!-- onglet inactif -->
+                <a href="{{path('dkk_administration_agenda_tab_tache')}}" class="onglet-actif"> {{'Tâches'|trans}} </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_agenda_tab_planning')}}" class="onglet-actif"> {{'Plannings'|trans}} </a> <!-- onglet ACTIF -->
+                   <span class="onglet"> {{'Liste clients'|trans}}  </span> <!-- onglet inactif -->
+                <a href="{{path('dkk_administration_agenda_tab_action')}}" class="onglet-actif"> {{'Actions'|trans}} </a> <!-- onglet ACTIF -->
               </div>
 
               <div class="wrapper_aganda_">
-                   <h4 class=" ">Liste des clients</h4>
+                   <h4 class=" ">{{'Liste des clients'|trans}}</h4>
                    <div class="">
                          <!-- debut -->
                     <section id="unseen">
@@ -102,13 +102,13 @@
                           <thead>
                             <tr style="background-color: #26440d !important;color: #fff !important;">
                               <th>N°</th>
-                              <th>Nom</th>
-                              <th>Prenom</th>
-                              <th>Age</th>
-                              <th>Sexe</th>
-                              <th>Téléphone</th>
-                              <th>Email</th>
-                              <th>Observation</th>
+                              <th>{{'Nom'|trans}}</th>
+                              <th>{{'Prénom'|trans}}</th>
+                              <th>{{'Age'|trans}}</th>
+                              <th>{{'Sexe'|trans}}</th>
+                              <th>{{'Téléphone'|trans}}</th>
+                              <th>{{'Email'|trans}}</th>
+                              <th>{{'Observation'|trans}}</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -116,22 +116,22 @@
                               <td>1</td>
                               <td>Ebolo Ebolo</td>
                               <td>Guillaume stephane</td>
-                              <td>45 ans</td>
-                              <td>Masculin </td>
+                              <td>{{'45 ans'|trans}}</td>
+                              <td>{{'Masculin'|trans}} </td>
                               <td>+237 987 563 213</td>
                               <td>Ebologuillaume@gmail.com</td>
-                              <td>Rien à signaler pour le moment.</td>
+                              <td>{{'Rien à signaler pour le moment'|trans}}.</td>
                             </tr>
 
                             <tr>
                               <td>2</td>
                               <td>Ebolo Ebolo</td>
                               <td>Guillaume stephane</td>
-                              <td>45 ans</td>
-                              <td>Masculin </td>
+                              <td>{{'45 ans'|trans}}</td>
+                              <td>{{'Masculin'|trans}} </td>
                               <td>+237 987 563 213</td>
                               <td>Ebologuillaume@gmail.com</td>
-                              <td>Rien à signaler pour le moment.</td>
+                              <td>{{'Rien à signaler pour le moment'|trans}}.</td>
                             </tr>
 
 
@@ -142,7 +142,7 @@
                         </table>
 
 
-                        <a href="" class="btn btn-success btn-sm"><i class="fa fa-print"></i> Imprimer</a>
+                        <a href="" class="btn btn-success btn-sm"><i class="fa fa-print"></i> {{'Imprimer'|trans}}</a>
 
               </section>
 

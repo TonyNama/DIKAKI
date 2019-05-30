@@ -1,0 +1,312 @@
+     {% extends '::admin_template.html.twig' %}
+
+{% block title %}Liste des prestataires et ressource : Dikaki prise de rendez-vous et dépôt de dossier en ligne  {% endblock %}
+
+{% block style %}
+
+<style>
+    th,td{
+      text-align:center !important;
+    }
+    </style>
+
+{% endblock %}
+
+{% block body %}
+
+<section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+      <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">Cabinet médical la Grâce</h2>
+      </div>
+      
+      <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">Prestataire</h2>
+      </div>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+            
+
+
+
+              <div class="margin_wrapper">
+                    <!-- debut  de la liste des prestataires -->
+          <p style="margin-top:100px !important;"></p>
+           <h5 class="small_tittle" style="text-align:center;">liste des prestataires</h5>
+                    <!-- -->
+                    <table class="table table-bordered table-striped table-condensed">
+                              <thead>
+                                <tr style="background-color: #26440d !important;color: #fff !important;">
+                                <th  style="text-align: center !important;">Nom</th>
+                                 <th  style="text-align: center !important;">Prenom</th>
+                                  <th  style="text-align: center !important;">Téléphone</th>
+                                   <th  style="text-align: center !important;">E-mail</th>
+                                  <th  style="text-align: center !important;">Disponibilité </th>
+                                     <th  style="text-align: center !important;">Profession</th>
+                                     <th  style="text-align: center !important;">couleur</th>
+                                      <th  style="text-align: center !important;">Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>Toto</td>
+                                    <td>Tata</td>
+                                    <td>6259814</td>
+                                    <td>gmail@gmail.com</td>
+                                    <td>
+
+                                       <button type="button" class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal" title="">
+                                      <i class="fa fa-eye"></i> Voir
+                                    </button>
+
+                                      <!-- debut de la fenetre modal -->
+                                        <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h5 class="modal-title" id="myModalLabel">Feuille de disponibilitée</h5>
+                          </div>
+                          <div class="modal-body2 body_moal_prestation">
+
+
+                           <p class="identification">Identification</p>
+                           <div id="modal_table">
+                                <table  class="table table-bordered table-striped table-condensed my_table_modal">
+                                              <thead >
+                                                <tr >
+                                                <th>Nom : </th>
+                                                 <td>Toto</td>
+                                                </tr>
+                                                <tr>
+                                                  <th>Prénom : </th>
+                                                  <td>Toto</td>
+                                                </tr>
+
+                                                <tr>
+                                                  <th>Profession : </th>
+                                                  <td>Médecin </td>
+                                                </tr>
+
+                                                <tr>
+                                                  <th>Téléphone : </th>
+                                                  <td>+237 656 656 6569 623</td>
+                                                </tr>
+
+                                                <tr>
+                                                  <th>E-mail : </th>
+                                                  <td>gamil@gmail.com</td>
+                                                </tr>
+                                              </thead>
+
+                                        </table>
+                           </div>
+
+
+                                        <hr class="ligne_">
+                                      <script type="text/javascript">
+                            $(function () {
+                              $("#chkPassport").click(function () {
+                                if ($(this).is(":checked")) {
+                                  $(".dvPassport").show();
+                                } else {
+                                  $(".dvPassport").hide();
+                                }
+                              });
+                              });
+                          </script>
+
+                                        <p class="identification"> Disponibilité / temps de travail </p>
+
+                                            <div id="modal_table2">
+                                              <table  class="table table-bordered table-striped table-condensed">
+                                                <thead>
+                                                  <tr style="background-color: #26440d !important;color: #fff !important;">
+                                                  <th>Jour</th>
+                                                   <th>Heure de travail</th>
+                                                    <th>Heure creuse</th>
+                                                     <th class="dvPassport" style="display: none">Action</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td><input type="checkbox" name="" id="chkPassport"> Lundi</td>
+                                                      <td>De 9 h à 18h</td>
+                                                      <td>12h à 14h</td>
+                                                      <td style="display: none !important;" class="dvPassport"> <a href="{{path('dkk_administration_modification_du_prestataire')}}" class="btn btn-primary btn_valid"><i class="fa fa-pencil-square-o"></i> Modifier</a>  <a href="supprimer-prestataire.html" class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vriment supprimer ?')"> <i class="fa fa-times"></i> Supprimer</a></td>
+
+                                                  </tr>
+                                              </tbody>
+                                          </table>
+
+                                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                                      <!-- fin de la fenetre modal -->
+                                    </td>
+                                    <td>.......</td>
+                                    <td>.......</td>
+                                    <td><a href="{{path('dkk_administration_modification_du_prestataire')}}" class="btn btn-primary btn_valid"><i class="fa fa-pencil-square-o"></i> Modifier</a>  <a href="supprimer-prestataire.html" class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vriment supprimer ?')"><i class="fa fa-times"></i> Supprimer</a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+              
+              <!-- fin de la liste des prestataires -->
+              
+               <!-- debut  de la liste des ressources -->
+          <p style="margin-top:100px !important;"></p>
+           <h5 class="small_tittle" style="text-align:center;">liste des ressources</h5>
+           
+           <!-- fin de la liste des ressources -->
+           <table class="table table-bordered table-striped table-condensed">
+              <thead>
+                <tr style="background-color: #26440d !important;color: #fff !important;">
+                  <th>N°</th>
+                  <th>Ville</th>
+                  <th>Quartier</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> 1</td>
+                  <td>Yaoundé</td>
+                  <td>Nlonkak</td>
+                </tr>
+                <tr>
+                  <td> 2</td>
+                  <td>Yaoundé</td>
+                  <td>Byem assi</td>
+                </tr>
+              </tbody>
+            </table>
+          
+              </div>
+
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+       
+
+
+{% endblock %}
+
+{% block scripts %}
+
+<script type="text/javascript">
+     
+              $(document).ready(function(){
+            $(".datepicker"+"affiche").datepicker();
+                $("#only").on('click',function(){
+                  $(".container_news_date").show();
+                });
+
+                $("#first_only").on('click',function(){
+                  $(".container_news_date").hide();
+                });
+
+                // une autre ligne
+                $("#signupForm").validate({
+                  rules: {
+                    couleur: "required",
+                    firstname: {
+                      required: true,
+                      minlength: 2
+                    },
+                    profession: {
+                      required: true,
+                      minlength: 4
+                    },
+                    lastname: {
+                      required: true,
+                      minlength: 2
+                    },
+                    phone: {
+                      required: true,
+                      number: true,
+                      minlength: 9
+                    },
+
+
+                    email: {
+                      required: true,
+                      email: true
+                    }
+
+                  },
+                  messages: {
+                    firstname: {
+                      required: "<span style='color:#dd4f43'>Nom réquis</span>",
+                      minlength: "<span style='color:#dd4f43'> 2 caractères minimum</span>"
+                    },
+                    lastname: {
+                      required: "<span style='color:#dd4f43'>Prenom réquis</span>",
+                      minlength: "<span style='color:#dd4f43'>2 caractères minimum</span>"
+                    },
+
+                    phone: {
+                      required: "<span style='color:#dd4f43'>Champs réquis",
+                      minlength: "<span style='color:#dd4f43'>9 caractères minimum</span>",
+                      number:"<span style='color:#dd4f43'>Numéro invalide</span>"
+                    },
+
+                    profession: {
+                      required: "<span style='color:#dd4f43'>Champs réquis</span>",
+                      minlength: "<span style='color:#dd4f43'>5 caractères minimum</span>",
+                    },
+                    email:{
+                      required: "<span style='color:#dd4f43'>Champ réquis</span>",
+                      email: "<span style='color:#dd4f43'>Email invalide</span>",
+                    },
+                    couleur: "<span style='color:#dd4f43'>La couleur</span>",
+                  }
+                });
+        
+        
+        $('#hide_2').on('click',function(){
+          $("#all_week_div").toggle();
+        });
+       
+
+                $("#hide_2").on("click",function(){
+
+                  if($('input[name=add_items]').prop('checked'))
+                  {
+                    $(".show_2").show();
+
+                  }
+                  else {
+                    $(".show_2").hide();
+                    $(".wrapper_down_").hide();
+                  }
+                });
+        
+
+              });
+            </script>
+
+
+{% endblock %}
+

@@ -1,6 +1,6 @@
   {% extends '::admin_template.html.twig' %}
 
-{% block title %} Modifier les paramètres des prestations de services :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+{% block title %} Modifier les paramètres des prestations de services : Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
 
 {% block style %}
 
@@ -380,13 +380,14 @@
        </div>
 
        <p style="clear: both !important;"></p>
-       <br>
        <div class="pull-right resize" style="padding-right: 70px">
 
              <button type="submit" class="btn  btn-success btn_valid"><i class="fa fa-floppy-o" aria-hidden="true"></i>
 Enregistrer</button>
 
+      <button type="reset" class="btn btn-danger btn_valid " ><i class="fa fa-times"></i> Annuler</button>
 
+       
 
             </div>
        </form>
@@ -458,11 +459,11 @@ Enregistrer</button>
                   rules: {
                     couleur: "required",
                     reference: {
-                      required:false,
+                      required:true,
                       minlength: 4
                     },
                     nom: {
-                      required:false,
+                      required:true,
                       minlength: 4
                     },
                     type: {
@@ -475,17 +476,17 @@ Enregistrer</button>
                       maxlength:150
                     },
                     description_service: {
-                      required:false,
+                      required:true,
                       minlength:20,
                       maxlength:150
                     },
                     prix: {
-                      required: false,
+                      required: true,
                       number: true,
                       minlength: 4
                     },
                     duree: {
-                      required: false
+                      required: true
                     }
                   },
                   messages: {

@@ -189,9 +189,9 @@ dkk_administration_corbeille:
     path:     /corbeille
     defaults: { _controller: DKKAdministrationBundle:Front:corbeille }
 
-dkk_administration_email_compos: 
+dkk_administration_email_compose: 
     path:     /email_compos
-    defaults: { _controller: DKKAdministrationBundle:Front:email_compos } 
+    defaults: { _controller: DKKAdministrationBundle:Front:email_compose } 
 
 dkk_administration_email_send: 
     path:     /email_send
@@ -229,13 +229,13 @@ dkk_administration_modifier_autorisation:
     path:     /modifier_autorisation
     defaults: { _controller: DKKAdministrationBundle:Front:modifier_autorisation }
  
-dkk_administration_notification_email:
-    path:     /notification_email
-    defaults: { _controller: DKKAdministrationBundle:Front:notification_email }
+dkk_administration_notification_interne:
+    path:     /notification_interne
+    defaults: { _controller: DKKAdministrationBundle:Front:notification_interne }
 
-dkk_administration_notification_sms:
-    path:     /notification_sms
-    defaults: { _controller: DKKAdministrationBundle:Front:notification_sms }
+dkk_administration_notification_client:
+    path:     /notification_client
+    defaults: { _controller: DKKAdministrationBundle:Front:notification_client }
 
 dkk_administration_regarder_notification_email:
     path:     /regarder_notification_email
@@ -258,6 +258,10 @@ dkk_administration_ressource:
     path:     /ressource
     defaults: { _controller: DKKAdministrationBundle:Front:ressource }
 
+dkk_administration_liste_prestataire:
+    path:     /liste_prestataire
+    defaults: { _controller: DKKAdministrationBundle:Front:liste_prestataire }
+
 dkk_administration_prestation:
     path:     /prestation
     defaults: { _controller: DKKAdministrationBundle:Front:prestation }
@@ -267,7 +271,7 @@ dkk_administration_modifier_prestation_unique:
     defaults: { _controller: DKKAdministrationBundle:Front:modifier_prestation_unique }
 
 dkk_administration_prestation_groupe:
-    path:     /prestation_de_groupe
+    path:     /prestation_groupe
     defaults: { _controller: DKKAdministrationBundle:Front:prestation_groupe }
 
 dkk_administration_modifier_prestation_groupe:
@@ -281,6 +285,10 @@ dkk_administration_service:
 dkk_administration_modifier_prestation_service:
     path:     /modifier_prestation_service
     defaults: { _controller: DKKAdministrationBundle:Front:modifier_prestation_service }
+
+dkk_administration_liste_prestation:
+    path:     /liste_prestation
+    defaults: { _controller: DKKAdministrationBundle:Front:liste_prestation }
 
 dkk_administration_e_service:
     path:     /e_service
@@ -301,6 +309,16 @@ dkk_administration_paiement:
 dkk_administration_client:
     path:     /client
     defaults: { _controller: DKKAdministrationBundle:Front:client }
+
+dkk_administration_liste_client:
+    path:     /liste_client
+    defaults: { _controller: DKKAdministrationBundle:Front:liste_client }
+
+
+dkk_administration_create_client:
+    path:     /create_client
+    defaults: { _controller: DKKAdministrationBundle:Front:create_client }
+
 
 dkk_administration_view_client:
     path:     /view_client
@@ -342,21 +360,25 @@ dkk_administration_agenda_tab_prestation:
     path:     /agenda_tab_prestation
     defaults: { _controller: DKKAdministrationBundle:Front:agenda_tab_prestation }
 
-dkk_administration_agenda_tab_tache:
-    path:     /agenda_tab_tache
-    defaults: { _controller: DKKAdministrationBundle:Front:agenda_tab_tache }
+dkk_administration_tache:
+    path:     /tache
+    defaults: { _controller: DKKAdministrationBundle:Front:tache }
 
-dkk_administration_agenda_tab_planning:
-    path:     /agenda_tab_planning
-    defaults: { _controller: DKKAdministrationBundle:Front:agenda_tab_planning }
+dkk_administration_planning:
+    path:     /planning
+    defaults: { _controller: DKKAdministrationBundle:Front:planning }
 
 dkk_administration_agenda_tab_liste_client:
     path:     /agenda_tab_liste_client
     defaults: { _controller: DKKAdministrationBundle:Front:agenda_tab_liste_client }
 
-dkk_administration_agenda_tab_action:
-    path:     /agenda_tab_action
-    defaults: { _controller: DKKAdministrationBundle:Front:agenda_tab_action }
+dkk_administration_create_agenda:
+    path:     /create_agenda
+    defaults: { _controller: DKKAdministrationBundle:Front:create_agenda }
+
+dkk_administration_liste_agenda:
+    path:     /liste_agenda
+    defaults: { _controller: DKKAdministrationBundle:Front:liste_agenda }
 
 dkk_administration_agenda_creer_client:
     path:     /agenda_creer_client
@@ -379,6 +401,10 @@ dkk_administration_agenda_modifier_rdv:
 dkk_administration_agenda_presence:
     path:     /agenda_presence
     defaults: { _controller: DKKAdministrationBundle:Front:agenda_presence }
+
+dkk_administration_agenda_encaissement:
+    path:     /agenda_encaissement
+    defaults: { _controller: DKKAdministrationBundle:Front:agenda_encaissement }
 
 
 

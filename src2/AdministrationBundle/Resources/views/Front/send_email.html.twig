@@ -1,6 +1,6 @@
  {% extends '::admin_template.html.twig' %}
 
-{% block title %}Administration - Envoyer un message :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+{% block title %}{{'Administration'|trans}} - {{'Envoyer un message'|trans}} :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
  
@@ -22,12 +22,12 @@
             <section class="panel">
               <div class="panel-body">
                 <a href="{{path('dkk_administration_email_compos')}}" class="btn btn-compose">
-                  <i class="fa fa-pencil"></i>  Envoyer un message
+                  <i class="fa fa-pencil"></i>  {{'Envoyer un message'|trans}}
                   </a>
                 <ul class="nav nav-pills nav-stacked mail-nav">
-                  <li class="active"><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> Boite de reception  <span class="label label-theme pull-right inbox-notification">3</span></a></li>
-                  <li><a href="{{path('dkk_administration_email_send')}}"> <i class="fa fa-exclamation-circle"></i>Messages envoyés</a></li>
-                  <li><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>Corbeille</a></li>
+                  <li class="active"><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> {{'Boite de réception'|trans}}  <span class="label label-theme pull-right inbox-notification">3</span></a></li>
+                  <li><a href="{{path('dkk_administration_email_send')}}"> <i class="fa fa-exclamation-circle"></i>{{'Messages envoyés'|trans}}</a></li>
+                  <li><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>{{'Corbeille'|trans}}</a></li>
                 </ul>
               </div>
             </section>
@@ -37,10 +37,10 @@
             <section class="panel">
               <header class="panel-heading wht-bg">
                 <h4 class="gen-case" style="display:inline-block;vertical-align:top !important">
-                    Envoyer un message à Serdi cameroun
+                    {{'Envoyer un message à Serdi cameroun'|trans}}
 
                   </h4>
-                    <button  style="display:inline-block;vertical-align:middle !important;margin-top:6px !important;" onclick="goBack()" class="btn btn-theme btn-sm pull-right"><i class="fa fa-times"></i> Annuler </button>
+                    <button  style="display:inline-block;vertical-align:middle !important;margin-top:6px !important;" onclick="goBack()" class="btn btn-theme btn-sm pull-right"><i class="fa fa-times"></i> {{'Annuler'|trans}} </button>
               </header>
               <div class="panel-body">
                 <div class="compose-btn pull-right">
@@ -50,7 +50,7 @@
                   <form role="form-horizontal" method="post">
 
                     <div class="form-group">
-                      <label for="subject" class="">Sujet:</label>
+                      <label for="subject" class="">{{'Sujet'|trans}}:</label>
                       <input type="text" tabindex="1" id="subject" class="form-control">
                     </div>
                     <div class="compose-editor">
@@ -58,7 +58,7 @@
                       <input type="file" class="default">
                     </div>
                     <div class="compose-btn">
-                      <button class="btn btn-theme btn-sm"><i class="fa fa-check"></i> Envoyer</button>
+                      <button class="btn btn-theme btn-sm"><i class="fa fa-check"></i> {{'Envoyer'|trans}}</button>
 
 
                     </div>

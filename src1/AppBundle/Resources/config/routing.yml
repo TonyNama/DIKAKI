@@ -210,4 +210,12 @@ dkk_app_rejoindre:
     path:    /rejoindre
     defaults: { _controller: DKKAppBundle:Front:rejoindre } 
 
+dkk_app_demander_demo:
+    path:    /demander_demo
+    defaults: { _controller: DKKAppBundle:Front:demander_demo } 
+
+dkk_app_demander_devis:
+    path:    /demander_devis
+    defaults: { _controller: DKKAppBundle:Front:demander_devis } 
+
 

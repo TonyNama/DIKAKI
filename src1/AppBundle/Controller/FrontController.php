@@ -104,4 +104,12 @@ class FrontController extends Controller {
     public function cguAction() {
         return $this->render('DKKAppBundle:Front:cgu.html.twig');
     }
+
+    public function demander_devisAction() {
+        return $this->render('DKKAppBundle:Front:demander_devis.html.twig');
+    }
+
+    public function demander_demoAction() {
+        return $this->render('DKKAppBundle:Front:demander_demo.html.twig');
+    }
 }
