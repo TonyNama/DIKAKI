@@ -1,6 +1,6 @@
-/***************************************
-    Fichier source css du site Dikaki...
-***************************************/
+/************************************************
+    Fichier source css du site Dikaki-rdv.com
+***********************************************/
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
 /*@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i');*/
@@ -11,6 +11,8 @@
     text-decoration: none !important;
     outline: 0 !important;
 }
+
+
 html , body{
     font-family: 'Montserrat', sans-serif;
     padding: 0px;
@@ -587,7 +589,7 @@ html , body{
   margin: 5px auto !important;
   margin-bottom: 5px !important;
   height: 72px !important;
-  
+
 }
 .navbar-brand:hover {
     opacity:0.7;
@@ -725,7 +727,7 @@ html , body{
     color: #fff;
     font-size: 1.6em;
     font-family: 'Montserrat',sans-serif;
-    
+
 }
 .resize-text{
     width: 90% !important;
@@ -1321,7 +1323,7 @@ img.img_voici{
   font-size: 2.3em !important;
   margin-top: 60px !important;
   color: #fff !important;
-  
+
 }
 .img_total{
     float: left;
@@ -1478,7 +1480,7 @@ img.img_voici{
     }
 
  }
- 
+
 
 
 
@@ -3015,21 +3017,31 @@ blockquote p {
 }
 .wrapper_line_one{
     position: relative;
-    width: 100%;
     overflow-x: auto !important;
-    height: 40px;
+    height: 47px;
     display: block;
     margin: 5px auto !important;
     width: 98% !important;
-   
+
 }
+
+.wrapper_line_one2{
+    position: relative;
+    overflow-x: auto !important;
+    height: 57px;
+    display: block;
+    margin: 5px auto !important;
+    width: 98% !important;
+
+}
+
 .form_search{
     position: absolute;
     border: 1px solid #fff;
     background: #fff;
     border-radius: 3px;
     height: 100%;
-    width: 200px !important;
+    width: 300px !important;
 }
 .serach_bx{
     border: none;
@@ -3040,13 +3052,13 @@ blockquote p {
     font-family: 'Montserrat', sans-serif;
     padding-left: 10px;
     padding-top: 10px;
-    width: 160px;
+    width: 250px;
 
 }
 .search_btn{
     border: none;
     background: transparent;
-    
+
 }
 .search_btn > i{
     font-size: 1.3em;
@@ -3192,14 +3204,14 @@ blockquote p {
     height: 100%;
     text-decoration: none;
     color: #fff !important;
-    padding: 10px 20px; /* 10px 30px */
+    padding: 10px 17px; /* 10px 30px */
     border: 1px solid rgba(0,0,0,0.21);
     border-bottom: 4px solid rgba(0,0,0,0.21);
     border-radius: 4px;
     text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 1.1em !important;
+    font-size: 1em !important;
     background: #333;
     -moz-transition: all 0.3 ease-in-out;
     -webkit-transition: all 0.3 ease-in-out;
@@ -3216,14 +3228,14 @@ blockquote p {
     height: 100%;
     text-decoration: none;
     color: #fff !important;
-    padding: 10px 20px; /* 10px 30px */
+    padding: 10px 17px; /* 10px 30px */
     border: 1px solid rgba(0,0,0,0.21);
     border-bottom: 4px solid rgba(0,0,0,0.21);
     border-radius: 4px;
     text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 1.1em !important;
+    font-size: 1em !important;
     background: #333;
     -moz-transition: all 0.3 ease-in-out;
     -webkit-transition: all 0.3 ease-in-out;
@@ -3235,27 +3247,25 @@ a.previous{
     display: inline-block;
     vertical-align: top;
     margin-left: 10px;
-    height: 100%;
     text-decoration: none;
     color: #fff !important;
-    padding: 18px 20px; /* 10px 30px */
+    padding: 13px 17px; /* 10px 30px */
     border: 1px solid rgba(0,0,0,0.21);
     border-bottom: 4px solid rgba(0,0,0,0.21);
     border-radius: 4px !important;
     text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 1.1em !important;
+    font-size: 1em !important;
     background: #333;
     -moz-transition: all 0.3 ease-in-out;
     -webkit-transition: all 0.3 ease-in-out;
     -o-transition: all 0.3 ease-in-out;
     transition: all 0.3 ease-in-out;
     cursor: pointer !important;
-
 }
 .previous_bottom{
-    margin-top: 11px;
+    padding-top: -11px;
     display: inline-block;
 }
 .affichage_calandar{
@@ -3729,7 +3739,7 @@ a.previous{
 }
 .cadre_operateur{
     margin: 20px auto !important;
-    width: 60% !important;
+    width: 65% !important;
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -3918,7 +3928,7 @@ a.previous{
 }
 .paiement_caisse{
     margin: 50px auto !important;
-    width: 60% !important;
+    width: 70% !important;
     padding-top: 20px;
     padding-left: 25px;
     padding-right: 25px !important;
@@ -3938,7 +3948,7 @@ a.previous{
     margin-top:-3px;
     width:200px;
     font-family: 'Montserrat', sans-serif !important;
-    
+
 }
 .check_color{
     text-align: center !important;
@@ -5561,13 +5571,7 @@ a.previous{
     margin-top: 5px;
     text-decoration: underline !important;
 }
-.letter_form{
-    height: 40px;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 0.9em;
-}
+
 .contact_para{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -5660,7 +5664,7 @@ a.previous{
   .navbar-brand{
     width: 150px !important;
   }
-  
+
 
 
 }
@@ -6093,7 +6097,9 @@ a.previous{
     width: 100% !important;
     display: block;
   }
-
+ .in_2{
+    width: 50px;
+ }
   .week-day{
     font-weight: 600 !important;
   }
@@ -6328,7 +6334,7 @@ a.previous{
     }
   }
 
-  
+
   @media only screen and (max-width: 825px){
     .raleway-logo{
         margin-left: -105px !important;
@@ -6543,7 +6549,7 @@ img.img_voici3{
     text-align: center !important;
     font-weight: 400;
     font-size: 1.3em;
-    margin-bottom: 50px !important; 
+    margin-bottom: 50px !important;
 }
 .p_dispose2{
     text-align: center;
@@ -6597,7 +6603,7 @@ img.img_voici3{
     margin:60px auto !important;
     width:70% !important;
     padding-left: 10px;
-    padding-right: 10px; 
+    padding-right: 10px;
 }
 
 .faq2 li {
@@ -6962,13 +6968,13 @@ img.img_voici3{
 }
 .img_medecin_down{
     margin-top: 50px !important
-} 
+}
 
 .wrapper_mention{
   background:#7dbc97;
   width:100% !important;
   padding:40px 50px !important;
-  
+
 }
 .h1_mention{
   text-align: center !important;
@@ -7137,7 +7143,7 @@ img.img_voici3{
 #nav {
     width:100%;
     background-color:#2d2d2d;
-    
+
 }
 #nav ul{
     margin: 0px;
@@ -7148,7 +7154,7 @@ img.img_voici3{
 #nav li{
     list-style-type:none;
     display:inline-block;
-    
+
 }
 #nav a{
     display:inline-block !important;
@@ -7188,7 +7194,7 @@ img.img_voici3{
     vertical-align:top;
     text-align:center !important;
     margin-left:100px;
-    
+
 }
 .wrapper_version_evaluation a{
     display:inline-block;
@@ -7233,7 +7239,7 @@ img.img_voici3{
 .btn_demande_devis{
     display:inline-block;
     font-weight: 700;
-    margin-left: 10px !important;
+    margin-right: 10px !important;
     margin-bottom: 20px;
 }
  @media only screen and (max-width: 410px) {
@@ -7377,7 +7383,7 @@ img.img_voici3{
     .title_blog{
         margin-top: -20px !important;
     }
-    
+
     .caption{
         display: inline-block !important;
         text-align: center;
@@ -7386,7 +7392,7 @@ img.img_voici3{
     .wrapper_about{
         text-align: center !important;
     }
-    
+
     .about_content{
         margin:20px auto !important;
         width:95% !important;
@@ -7401,15 +7407,15 @@ img.img_voici3{
       font-weight: 400 !important;
       font-size: 0.8em !important;
     }
-    
+
     #nav {
         display:none !important;
     }
-    
+
     .wrapper_version_evaluation{
         display:none !important;
     }
-    
+
     .h1_title_description{
     font-size: 1em !important;
     font-weight: 500 !important;
@@ -7507,19 +7513,19 @@ img.img_voici3{
     .title_blog{
         margin-top: -20px !important;
     }
-    
+
     .caption{
         display: inline-block !important;
         text-align: center;
         font-size: 1.2em !important;
     }
 
-    
+
 
     .wrapper_about{
         text-align: center !important;
     }
-    
+
     .about_content{
         margin:20px auto !important;
         width:95% !important;
@@ -7536,12 +7542,12 @@ img.img_voici3{
       font-weight: 400 !important;
       font-size: 0.8em !important;
     }
-    
+
     .wrapper_version_evaluation{
         display:none !important;
     }
-    
-    
+
+
     #nav {
         display:none !important;
     }
@@ -7639,13 +7645,13 @@ img.img_voici3{
     .title_blog{
         margin-top: -20px !important;
     }
-    
+
     .caption{
         display: inline-block !important;
         text-align: center;
         font-size: 1.2em !important;
     }
-    
+
     .about_content{
         margin:20px auto !important;
         width:95% !important;
@@ -7658,12 +7664,12 @@ img.img_voici3{
         width: 97% !important;
     }
     .raleway-logo{
-        margin-left: 30px !important; 
+        margin-left: 30px !important;
     }
     #nav {
         display:none !important;
     }
-    
+
     .dikaki_prise{
         display: none !important;
     }
@@ -7683,19 +7689,19 @@ img.img_voici3{
     .title_blog{
         margin-top: -20px !important;
     }
-    
+
     .caption{
         display: inline-block !important;
         text-align: center;
         font-size: 1.2em !important;
     }
-    
+
     .about_content{
         margin:20px auto !important;
         width:95% !important;
         padding:5px;
     }
-    
+
     .wrapper_version_evaluation{
         display:none !important;
     }
@@ -7889,8 +7895,8 @@ img.img_voici3{
 
 /***************************
 
- """"""" Code pour la gestion 
-         interne de Dikai 
+ """"""" Code pour la gestion
+         interne de Dikai
 
  $$$$$$$$$$$$$$$$$$$$$$$$$$ */
 
@@ -8173,7 +8179,7 @@ img.img_voici3{
   padding-left: 27px;
   margin-bottom: 20px;
 }
-.user-data h2{ 
+.user-data h2{
   margin-bottom: 0px;
   margin-top: 35px;
   font-size: 20px;
@@ -8186,14 +8192,14 @@ img.img_voici3{
   color: #404040;
 }
 
-.msg-btn{ 
+.msg-btn{
   background: #fff;
   padding: 5px 11px;
   color: black;
   text-decoration: none;
   font-size: 13px;
 }
-.msg-btn i{ 
+.msg-btn i{
   padding: 0;
   color: black;
   margin-right: 7px;
@@ -8250,7 +8256,7 @@ ul.tabs li.current{
 .skill-box ul li strong{
   font-size: 12px;
 }
-.skill-box ul{ 
+.skill-box ul{
   margin: 0;
   padding: 0;
   list-style: none;
@@ -8331,7 +8337,7 @@ ul.tabs li.current{
   height: 210px;
   float: left;
   padding-left: 0px;
-  padding-right: 0px; 
+  padding-right: 0px;
 }
 .portfolio-box{
   border: 1px solid #ededed;
@@ -8364,7 +8370,7 @@ ul.tabs li.current{
   height: 210px;
   float: left;
   padding-right: 0;
-  padding-left: 0;     
+  padding-left: 0;
 }
 .Edu-box-main h2{
   margin: 0;
@@ -8439,25 +8445,25 @@ ul.tabs li.current{
   font-size: 20px;
 }
 .footer-box .fa-facebook{
-  color: #365597;  
+  color: #365597;
 }
 .footer-box .fa-twitter{
-  color: #01B0F4;  
+  color: #01B0F4;
 }
 .footer-box .fa-linkedin{
-  color: #0F80BB;  
+  color: #0F80BB;
 }
 .footer-box .fa-google{
-  color: #D53B1F;  
+  color: #D53B1F;
 }
 .footer-box .fa-instagram{
-  color: #CF3594;  
+  color: #CF3594;
 }
 #Basic-detail{
   height: 210px;
   float: left;
   padding-left: 0px;
-  padding-right: 0px; 
+  padding-right: 0px;
 }
 
 @media (min-width: 320px) and (max-width: 640px){
@@ -8564,7 +8570,7 @@ ul.tabs li.current{
 .title_institute{
     font-size: 1.2em;
     font-weight: 600;
-} 
+}
 .type_partenariat{
     font-size: 1.1em;
     margin-left: 13px;
@@ -8652,4 +8658,56 @@ ul.tabs li.current{
     position: relative;
     top: 2px;
     left: 10px;
+}
+.newsletter_wrapper{
+    background-color: #fff;
+    width: 100% !important;
+}
+.letter_form{
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.9em;
+    display: inline-block;
+    vertical-align: top;
+    width: 80% !important;
+    border: none;
+}
+.letter_form:focus{
+    border: none !important;
+
+}
+.send_newsletter_infos{
+    background: transparent !important;
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+    width: 18% !important;
+}
+.send_newsletter_infos > i{
+    color: #333 !important;
+    font-size: 1.4em;
+    margin-top: 10px;
+}
+.footer_items_{
+    color: #fff;
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline !important;
+    list-style-type: square !important;
+}
+.footer_items_:hover{
+    color: #fff !important;
+}
+.img_pied_responive{
+    display: block;
+    width: 60px !important;
+    margin-top: 9px;
+    margin-bottom: 7px;
+    float: right !important;
+    margin-right: 50px;
+    clear: both;
+}
+.img_pied_responive > img{
+    border-radius: 5px;
 }

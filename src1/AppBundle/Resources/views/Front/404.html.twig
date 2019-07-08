@@ -1,91 +1,91 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">  <style type="text/css">
-        /* Chargement de la police */
-        @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+   <meta charset="utf-8">  <style type="text/css">
+       /* Chargement de la police */
+       @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
 
-        @font-face {
-            font-family: 'Yanone Kaffeesatz';
-            font-style:   normal;
-            font-weight:  200;
-        }
+       @font-face {
+           font-family: 'Yanone Kaffeesatz';
+           font-style:   normal;
+           font-weight:  200;
+       }
 
-        html{
-            margin:0;
-            padding:0;
-            background: url('{{asset("img/background_404.jpg")}}') no-repeat center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            font-family: 'Yanone Kaffeesatz';
-            color:#ffffff;
-        }
+       html{
+           margin:0;
+           padding:0;
+           background: url('{{asset("img/background_404.jpg")}}') no-repeat center fixed;
+           -webkit-background-size: cover;
+           -moz-background-size: cover;
+           -o-background-size: cover;
+           background-size: cover;
+           font-family: 'Yanone Kaffeesatz';
+           color:#ffffff;
+       }
 
-        .page_404{
-            margin: auto;
-            text-align: center;
-            position: relative;
-            top: -150px;
-        }
+       .page_404{
+           margin: auto;
+           text-align: center;
+           position: relative;
+           top: -150px;
+       }
 
-        .side_404{
-            display: inline-block;
-        }
+       .side_404{
+           display: inline-block;
+       }
 
-        h1{
-            font-size: 370px;
-            display: inline-block;
-            font-weight: 900;
-            margin: 130px 20px 0 0;
-        }
+       h1{
+           font-size: 370px;
+           display: inline-block;
+           font-weight: 900;
+           margin: 130px 20px 0 0;
+       }
 
-        span{
-            display: block;
-        }
+       span{
+           display: block;
+       }
 
-        .rien_a_voir {
-            font-size: 72px;
-        }
+       .rien_a_voir {
+           font-size: 72px;
+       }
 
-        .retour_accueil {
-            font-size: 47px;
-        }
+       .retour_accueil {
+           font-size: 47px;
+       }
 
-        .par_la a, .par_la a:visited {
-            color: #ffffff;
-            font-size: 95px;
-            font-weight: 900;
-            border: 0;
-        }
+       .par_la a, .par_la a:visited {
+           color: #ffffff;
+           font-size: 95px;
+           font-weight: 900;
+           border: 0;
+       }
 
-        .recherche a, .recherche a:visited {
-            color: #ffffff;
-            font-weight: 900;
-            border: 0;
-            font-size: 30px;
-        }
+       .recherche a, .recherche a:visited {
+           color: #ffffff;
+           font-weight: 900;
+           border: 0;
+           font-size: 30px;
+       }
 
-        .par_la a:hover, .recherche a:hover {
-            color: #24440d;
-        }
-
-
+       .par_la a:hover, .recherche a:hover {
+           color: #24440d;
+       }
 
 
-    </style>
-    <title>Dikaki - 404</title>
+
+
+   </style>
+   <title>Dikaki - 404</title>
 </head>
 <body>
 <div class="page_404">
-    <h1>{{'OUPS'|trans}}</h1>
-    <div class="side_404">
-        <span class="rien_a_voir">{{"Y A RIEN À VOIR ICI !"|trans}}</span>
-        <span class="retour_accueil">{{"POUR RETOURNER À L' ACCUEIL"|trans}}</span>
-        <span class="par_la"><a href="{{ path('dkk_app_homepage') }}">{{"C'EST PAR LÀ !"|trans}}</a></span>
-        <span class="recherche"><a href="{{ path('dkk_professionnel_choix') }}">{{"Sinon tu peux faire une recherche"|trans}}</a></span>
-    </div>
+   <h1>{{'OUPS'|trans}}</h1>
+   <div class="side_404">
+       <span class="rien_a_voir">{{"Y A RIEN À VOIR ICI !"|trans}}</span>
+       <span class="retour_accueil">{{"POUR RETOURNER À L' ACCUEIL"|trans}}</span>
+       <span class="par_la"><a href="{{ path('dkk_app_homepage') }}">{{"C'EST PAR LÀ !"|trans}}</a></span>
+       <span class="recherche"><a href="{{ path('dkk_professionnel_choix') }}">{{"Sinon tu peux faire une recherche"|trans}}</a></span>
+   </div>
 </div>
 
 </body>

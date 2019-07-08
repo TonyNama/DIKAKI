@@ -1,137 +1,137 @@
-    <!doctype html>
+<!doctype html>
 <html xmlns:og="http://ogp.me/ns#">
-    <head>
-      <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <meta name="copyright" content="Dikaki.com">
-      <meta name="language" content="fr">
-      <link rel="icon" href="{{asset('img/favicon dikaki.png')}}">
-      <title>{% block title %}{% endblock %}</title>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="copyright" content="Dikaki.com">
+  <meta name="language" content="fr">
+  <link rel="icon" href="{{asset('img/favicon dikaki.png')}}">
+  <title>{% block title %}{% endblock %}</title>
 
 
-              <meta property="og:url" content=""><!-- url complete de la page-->
-              <meta property="og:title" content=""><!-- le titre complete de la page-->
-              <meta property="og:description" content=""><!-- la description complete de la page-->
-              <meta property="og:image" content="{{asset('img/grande_banniere.png')}}"><!-- image representant la page de la page-->
+          <meta property="og:url" content=""><!-- url complete de la page-->
+          <meta property="og:title" content=""><!-- le titre complete de la page-->
+          <meta property="og:description" content=""><!-- la description complete de la page-->
+          <meta property="og:image" content="{{asset('img/grande_banniere.png')}}"><!-- image representant la page de la page-->
 
-            <!-- fin du partage vers facebook -->
+        <!-- fin du partage vers facebook -->
 
 
-            <!-- debut du partage vers twitter -->
+        <!-- debut du partage vers twitter -->
 
-              <meta name="twitter:card" content="website">
-              <meta name="twitter:site" content="@dikaki">
-              <meta name="twitter:creator" content="@dikaki">
-              <meta property="og:url" content=""><!-- url complete de la page-->
-              <meta property="og:title" content=""><!-- le titre complete de la page-->
-              <meta property="og:description" content=""><!-- la description complete de la page-->
-              <meta property="og:image" content="{{asset('img/grande_banniere.png')}}"><!-- image representant la page de la page-->
-              
-	  
-	  {% stylesheets filter='cssrewrite'
-            'css/vendor/animate.min.css'
-            'css/vendor/bootstrap-social.css'
-            'css/vendor/bootstrap.min.css'
-            'css/vendor/buttons.css'
-            'css/vendor/sky-forms.css'
-            'css/style.css'
-            'css/vendor/jquery-ui.min.css'
-            'css/vendor/bootstrap-select.css'
-        %}
-            <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
-            <!-- debut du partage vers facebook -->
-            
-        {% endstylesheets %}
-        
-        {% block style %}
-        
-        {% endblock %}
-        
-        <!-- fin de la section footer -->
-	
-        
-        
-    </head>
-    <body>
-    	<header>
+          <meta name="twitter:card" content="website">
+          <meta name="twitter:site" content="@dikaki">
+          <meta name="twitter:creator" content="@dikaki">
+          <meta property="og:url" content=""><!-- url complete de la page-->
+          <meta property="og:title" content=""><!-- le titre complete de la page-->
+          <meta property="og:description" content=""><!-- la description complete de la page-->
+          <meta property="og:image" content="{{asset('img/grande_banniere.png')}}"><!-- image representant la page de la page-->
 
-            <div class="css-w3kkus">
-                <div class="css-1hht6wb">
-                    <div class="css-pdic9b">
-                        <a href="{{ path('dkk_app_homepage') }}"><img alt="" title="" src="{{asset('img/favicon dikaki.png')}}" itemProp="logo" class="css-2khh9b" style='height:35px !important;width:35px !important;'/></a>
 
-                    </div>
-              
+{% stylesheets filter='cssrewrite'
+        'css/vendor/animate.min.css'
+        'css/vendor/bootstrap-social.css'
+        'css/vendor/bootstrap.min.css'
+        'css/vendor/buttons.css'
+        'css/vendor/sky-forms.css'
+        'css/style.css'
+        'css/vendor/jquery-ui.min.css'
+        'css/vendor/bootstrap-select.css'
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+        <!-- debut du partage vers facebook -->
+
+    {% endstylesheets %}
+
+    {% block style %}
+
+    {% endblock %}
+
+    <!-- fin de la section footer -->
+
+
+
+</head>
+<body>
+  <header>
+
+        <div class="css-w3kkus">
+            <div class="css-1hht6wb">
+                <div class="css-pdic9b">
+                    <a href="{{ path('dkk_app_homepage') }}"><img alt="" title="" src="{{asset('img/favicon dikaki.png')}}" itemProp="logo" class="css-2khh9b" style='height:35px !important;width:35px !important;'/></a>
+
                 </div>
-            </div>
-			</header><!-- /header -->
-			<!-- End Header -->
-        
-        {% block body %}
-        
 
-        {% endblock %}
-  
-           <!-- debut du footer -->
-        <br><br>
-
-        <div class="css-1x66d2h">
-            <div class="css-qc8a4i">
-                <nav class="css-3shme5">
-                    <span>
-                    <a  href="{{ path('dkk_app_homepage') }}"><span>Accueil</span></a>
-                    </span>
-                    <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" style="vertical-align:middle;color:rgb(45, 46, 47);padding:0 .75em">
-                        <g>
-                            <path d="m26.4 20q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4-0.4-1v-20q0-0.6 0.4-1t1-0.4 1 0.4l10 10q0.5 0.4 0.5 1z"></path>
-                        </g>
-                    </svg>
-                    <span>
-                    <a href="{{ path('dkk_app_homepage') }}"><span>Service de prise de rendez-vous par internet et gestion de dépôt de dossier proposé par <b>DIKAKI</b></span></a>
-                    </span>
-                    <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" style="vertical-align:middle;color:rgb(45, 46, 47);padding:0 .75em">
-                        <g>
-                            <path d="m26.4 20q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4-0.4-1v-20q0-0.6 0.4-1t1-0.4 1 0.4l10 10q0.5 0.4 0.5 1z"></path>
-                        </g>
-                    </svg>
-                    <span>
-                    <a  href="javascript:void(0)"><span>© copyright Serdi Cameroun 2003- 2018</span></a>
-                    </span>
-                    <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" style="vertical-align:middle;color:rgb(45, 46, 47);padding:0 .75em">
-                        <g>
-                            <path d="m26.4 20q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4-0.4-1v-20q0-0.6 0.4-1t1-0.4 1 0.4l10 10q0.5 0.4 0.5 1z"></path>
-                        </g>
-                    </svg>
-
-                </nav>
             </div>
         </div>
-        <!-- fin du footer -->     
+  </header><!-- /header -->
+  <!-- End Header -->
 
-        
-        {% javascripts filter='jsqueeze'
-            'js/vendor/jquery.min.js'
-            'js/valider.js'
-            'js/vendor/bootstrap.min.js'
-            'js/slider.js'
-            'js/vendor/slick-carousel_1.8.1_slick.min.js'
-            'js/vendor/testimonial-slider.js'
-            'js/app.js'
-            'js/vendor/jquery-ui.min.js'
-            'js/vendor/jquery.validate.min.js'
-            'js/vendor/bootstrap-select.js'
-            'js/form-control.js'
-            'js/vendor/prendre.js'
-        %}
-            <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
-        
-        {% block scripts %}
-            <script>
+    {% block body %}
 
-   
-    </script>
-        {% endblock %}
- </body>  
+
+    {% endblock %}
+
+       <!-- debut du footer -->
+    <br><br>
+
+    <div class="css-1x66d2h">
+        <div class="css-qc8a4i">
+            <nav class="css-3shme5">
+                <span>
+                <a  href="{{ path('dkk_app_homepage') }}"><span>{{'Accueil'|trans}}</span></a>
+                </span>
+                <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" style="vertical-align:middle;color:rgb(45, 46, 47);padding:0 .75em">
+                    <g>
+                        <path d="m26.4 20q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4-0.4-1v-20q0-0.6 0.4-1t1-0.4 1 0.4l10 10q0.5 0.4 0.5 1z"></path>
+                    </g>
+                </svg>
+                <span>
+                <a href="{{ path('dkk_app_homepage') }}"><span>{{"Service de prise de rendez-vous par internet et gestion de dépôt de dossier proposé par"|trans}} <b>DIKAKI</b></span></a>
+                </span>
+                <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" style="vertical-align:middle;color:rgb(45, 46, 47);padding:0 .75em">
+                    <g>
+                        <path d="m26.4 20q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4-0.4-1v-20q0-0.6 0.4-1t1-0.4 1 0.4l10 10q0.5 0.4 0.5 1z"></path>
+                    </g>
+                </svg>
+                <span>
+                <a  href="javascript:void(0)"><span>© copyright Serdi {{'Cameroun'|trans}} 2003- 2018</span></a>
+                </span>
+                <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em" viewBox="0 0 40 40" style="vertical-align:middle;color:rgb(45, 46, 47);padding:0 .75em">
+                    <g>
+                        <path d="m26.4 20q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4-0.4-1v-20q0-0.6 0.4-1t1-0.4 1 0.4l10 10q0.5 0.4 0.5 1z"></path>
+                    </g>
+                </svg>
+
+            </nav>
+        </div>
+    </div>
+    <!-- fin du footer -->
+
+
+    {% javascripts filter='jsqueeze'
+        'js/vendor/jquery.min.js'
+        'js/valider.js'
+        'js/vendor/bootstrap.min.js'
+        'js/slider.js'
+        'js/vendor/slick-carousel_1.8.1_slick.min.js'
+        'js/vendor/testimonial-slider.js'
+        'js/app.js'
+        'js/vendor/jquery-ui.min.js'
+        'js/vendor/jquery.validate.min.js'
+        'js/vendor/bootstrap-select.js'
+        'js/form-control.js'
+        'js/vendor/prendre.js'
+    %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    {% block scripts %}
+        <script>
+
+
+</script>
+    {% endblock %}
+</body>
 
 </html>

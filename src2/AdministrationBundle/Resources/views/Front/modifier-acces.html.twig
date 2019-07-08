@@ -1,145 +1,145 @@
-    {% extends '::admin_template.html.twig' %}
+{% extends '::admin_template.html.twig' %}
 
-{% block title %} Modifier les droits d'accés : Prise de rendez-vous et dépôt de dossier en ligne  {% endblock %}
+{% block title %} {{"Modifier les droits d'accés"|trans}} - {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}}  {% endblock %}
 
 {% block style %}
 
- 
+
 <style>
-        .form-control{
-          display: inline-block !important;
-          vertical-align: middle !important;
-          width: 60% !important;
-        }
-        label{
-          font-weight: 600 !important;
-          font-size: 1.1em;
-        }
-      </style>
+    .form-control{
+      display: inline-block !important;
+      vertical-align: middle !important;
+      width: 60% !important;
+    }
+    label{
+      font-weight: 600 !important;
+      font-size: 1.1em;
+    }
+  </style>
 
 {% endblock %}
 
 {% block body %}
 
 <!-- debut du contenu -->
-    <section id="main-content">
-      <section class="wrapper site-min-height">
-        <div class="row mt">
-             <h2 class="name_structure">Cabinet médical la Grâce</h2>
-          <!-- /col-lg-12 -->
-          <div class="col-lg-12 mt">
+<section id="main-content">
+  <section class="wrapper site-min-height">
+    <div class="row mt">
+         <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+      <!-- /col-lg-12 -->
+      <div class="col-lg-12 mt">
 
 
-            <div class="row content-panel">
-             <!-- debut -->
-        <section class="wrapper site-min-height">
+        <div class="row content-panel">
+         <!-- debut -->
+    <section class="wrapper site-min-height">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <a href="{{path('dkk_administration_acces')}}" class="today pull-right"> <i class="fa fa-share"></i> {{'Quitter'|trans}} </a>
+
+          <h4 class="small_tittle up_">{{"Modifier les droits d'accès"|trans}} </h4>
+               <p class="journne_du_" style="text-align:center !important;"> </p>
+
+      <br><br>
+
+        <div class="margin_wrapper" style="padding-left: 100px;padding-right: 100px;">
+
+            <section id="unseen">
+
+                <form method="post" action="" id="signupForm">
+      <div class="form-group">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <br><br>
+            <label>{{'Titulaire'|trans}}</label>
 
-            <a href="{{path('dkk_administration_acces')}}" class="today pull-right"> <i class="fa fa-share"></i> Quitter </a>
+            <input type="text" placeholder="{{'Nom du titulaire'|trans}}" name="nom" class="form-control">
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <br><br>
+               <label>{{"Niveau d'accès"|trans}} </label>
 
-              <h4 class="small_tittle up_">Modifier les droits d'accès </h4>
-                   <p class="journne_du_" style="text-align:center !important;"> </p>
+           <select class="form-control" name="niveau">
+            <option selected disabled></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+           </select>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <br><br>
+             <label>{{'Fonction'|trans}}</label>
+
+             <select class="form-control" name="fonction">
+              <option selected disabled> </option>
+              <option value="Gérant">{{'Gérant'|trans}}</option>
+              <option value="Secrétaire">{{'Secrétaire'|trans}}</option>
+              <option value="Intervenant 1">{{'Intervenant'|trans}} 1</option>
+              <option value="Intervenant 2">{{'Intervenant'|trans}} 2</option>
+              <option value="Intervenant 3">{{'Intervenant'|trans}} 3</option>
+             </select>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <br><br>
+             <label>{{'Mot de passe'|trans}}</label>
+
+            <input type="password" placeholder="{{'Mot de passe'|trans}}" name="password" class="form-control">
+            </div>
+
+        </div>
+
+
+
+
+            </div>
+
+
+          <div class=" resize pull-right" ><br><br>
+
+            <button type="submit" class="btn  btn-success btn_valid"  ><i class="fa fa-floppy-o" aria-hidden="true"></i>
+{{'Enregistrer'|trans}}</button>
+
+
+
 
           <br><br>
 
-            <div class="margin_wrapper" style="padding-left: 100px;padding-right: 100px;">
-
-                <section id="unseen">
-
-                    <form method="post" action="" id="signupForm">
-					<div class="form-group">
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <br><br>
-								<label>Titulaire</label>
-
-								<input type="text" placeholder="Nom du titulaire" name="nom" class="form-control">
-						  </div>
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <br><br>
-  								 <label>Niveau d'accès </label>
-
-  						 <select class="form-control" name="niveau">
-                <option selected disabled></option>
-  							<option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-  							<option>5</option>
-  						 </select>
-  						</div>
-
-            </div>
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <br><br>
-                 <label>Fonction</label>
-
-                 <select class="form-control" name="fonction">
-                  <option selected disabled> </option>
-                  <option value="Gérant">Gérant</option>
-                  <option value="Secrétaire">Secrétaire</option>
-                  <option value="Intervenant 1">Intervenant 1</option>
-                  <option value="Intervenant 2">Intervenant 2</option>
-                  <option value="Intervenant 3">Intervenant 3</option>
-                 </select>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                  <br><br>
-								 <label>Mot de passe</label>
-
-								<input type="password" placeholder="Mot de passe" name="password" class="form-control">
-								</div>
-
-            </div>
-
-
-
-
-								</div>
-
-
-							<div class=" resize pull-right" ><br><br>
-
-								<button type="submit" class="btn  btn-success btn_valid"  ><i class="fa fa-floppy-o" aria-hidden="true"></i>
-Enregistrer</button>
-
-
-
-
-						  <br><br>
-
-						</div>
-
-				</form>
-
-
-                <!-- debut du tableau -->
-
-                </section>
-            </div>
-
-
-
-
-            <!-- end col-4 -->
-          </div>
-          <!--  /col-lg-12 -->
         </div>
-        <!--  /row -->
-      </section>
-             <!-- fin -->
 
-            </div>
+    </form>
 
-          </div>
-          <!-- /row -->
+
+            <!-- debut du tableau -->
+
+            </section>
         </div>
-        <!-- /container -->
-      </section>
-      <!-- /wrapper -->
-    </section>
+
+
+
+
+        <!-- end col-4 -->
+      </div>
+      <!--  /col-lg-12 -->
+    </div>
+    <!--  /row -->
+  </section>
+         <!-- fin -->
+
+        </div>
+
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </section>
+  <!-- /wrapper -->
+</section>
 
 
 
@@ -148,46 +148,44 @@ Enregistrer</button>
 
 {% block scripts %}
 
- <script>
-        $(document).ready(function() {
-          $("#signupForm").validate({
-            rules: {
+<script>
+    $(document).ready(function() {
+      $("#signupForm").validate({
+        rules: {
 
-              nom: {
-                required:false,
-                minlength: 2
-              },
-              password: {
-                required:false,
-                minlength: 6
-              },
-              niveau:{
-                required:false
-              },
-              fonction:{
-                required:false
-              },
-            },
-            messages: {
-              nom: {
-                required: "<span style='color:#dd4f43;'>&nbsp;&nbsp;&nbsp; &nbsp; Le nom</span>",
-                minlength: "<span style='color:#dd4f43;'>2 caractères minimum</span>"
-              },
+          nom: {
+            required:false,
+            minlength: 2
+          },
+          password: {
+            required:false,
+            minlength: 6
+          },
+          niveau:{
+            required:false
+          },
+          fonction:{
+            required:false
+          },
+        },
+        messages: {
+          nom: {
+            required: "<span style='color:#dd4f43;'>&nbsp;&nbsp;&nbsp; &nbsp; {{'Le nom'|trans}}</span>",
+            minlength: "<span style='color:#dd4f43;'>2 {{'caractères minimum'|trans}}</span>"
+          },
 
-              password: {
-                required: "<span style='color:#dd4f43;'>Mot de passe</span>",
-                minlength: "<span style='color:#dd4f43;'>6 caractères minimum</span>"
-              },
+          password: {
+            required: "<span style='color:#dd4f43;'>{{'Mot de passe'|trans}}</span>",
+            minlength: "<span style='color:#dd4f43;'>6 {{'caractères minimum'|trans}}</span>"
+          },
 
 
-              fonction: "<span style='color:#dd4f43;'>La fonction</span>",
-              niveau: "<span style='color:#dd4f43;'>Le niveau</span>"
-            }
-          });
-        });
+          fonction: "<span style='color:#dd4f43;'>{{'La fonction'|trans}}</span>",
+          niveau: "<span style='color:#dd4f43;'>{{'Le niveau'|trans}}</span>"
+        }
+      });
+    });
 
-    </script>
+</script>
 
 {% endblock %}
-
-

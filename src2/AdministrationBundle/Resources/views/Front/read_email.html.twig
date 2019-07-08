@@ -1,100 +1,99 @@
-  {% extends '::admin_template.html.twig' %}
+{% extends '::admin_template.html.twig' %}
 
-{% block title %}Besoin de votre aide -Administration : Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+{% block title %}{{'Besoin de votre aide'|trans}} -{{'Administration'|trans}} - {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block body %}
-<!-- debut du contenu --> 
+<!-- debut du contenu -->
 
-          <section id="main-content">
-      <section class="wrapper">
-        <!-- page start--> 
-        <div class="row mt">
-          <div class="col-sm-3">
-           <section class="panel">
-              <div class="panel-body">
-                <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-compose">
-                  <i class="fa fa-pencil"></i>  Envoyer un message
-                  </a>
-                <ul class="nav nav-pills nav-stacked mail-nav">
-                  <li class="active"><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> Boite de reception  <span class="label label-theme pull-right inbox-notification">3</span></a></li>
-                  <li><a href="{{path('dkk_administration_email_send')}}"> <i class="fa fa-exclamation-circle"></i>Messages envoyés</a></li>
-                  <li><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>Corbeille</a></li>
-                </ul>
+        <section id="main-content">
+    <section class="wrapper">
+      <!-- page start-->
+      <div class="row mt">
+        <div class="col-sm-3">
+         <section class="panel">
+            <div class="panel-body">
+              <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-compose">
+                <i class="fa fa-pencil"></i>  {{'Envoyer un message'|trans}}
+                </a>
+              <ul class="nav nav-pills nav-stacked mail-nav">
+                <li class="active"><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> {{'Boite de réception'|trans}}  <span class="label label-theme pull-right inbox-notification">3</span></a></li>
+                <li><a href="{{path('dkk_administration_email_send')}}"> <i class="fa fa-exclamation-circle"></i>{{'Messages envoyés'|trans}}</a></li>
+                <li><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>{{'Corbeille'|trans}}</a></li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+        <div class="col-sm-9">
+          <section class="panel">
+            <header class="panel-heading wht-bg">
+              <h4 class="gen-case">
+                 {{'Lire le message'|trans}}
+
+                </h4>
+            </header>
+            <div class="panel-body ">
+              <div class="mail-header row">
+                <div class="col-md-8">
+                  <h4 class="pull-left">  </h4>
+                </div>
+                <div class="col-md-4">
+                  <div class="compose-btn pull-right">
+                    <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-sm btn-theme"><i class="fa fa-reply"></i> {{'Répondre'|trans}}</a>
+                    <button class="btn  btn-sm tooltips" data-original-title="Print" type="button" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-print"></i> </button>
+                    <button class="btn btn-sm tooltips" data-original-title="Trash" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-trash-o"></i></button>
+                  </div>
+                </div>
               </div>
-            </section>
-
-          </div>
-          <div class="col-sm-9">
-            <section class="panel">
-              <header class="panel-heading wht-bg">
-                <h4 class="gen-case">
-                   Lire le message
-
-                  </h4>
-              </header>
-              <div class="panel-body ">
-                <div class="mail-header row">
+              <div class="mail-sender">
+                <div class="row">
                   <div class="col-md-8">
-                    <h4 class="pull-left">  </h4>
+                    <img src="{{ asset('img/photo_medecin.jpg')}}" alt="">
+                    <strong>Paul kingué</strong>
+                    <span>[paulkingue@gmail.com]</span>
+
                   </div>
                   <div class="col-md-4">
-                    <div class="compose-btn pull-right">
-                      <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-sm btn-theme"><i class="fa fa-reply"></i> Répondre</a>
-                      <button class="btn  btn-sm tooltips" data-original-title="Print" type="button" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-print"></i> </button>
-                      <button class="btn btn-sm tooltips" data-original-title="Trash" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-trash-o"></i></button>
-                    </div>
+                    <p class="date">02 Feb 2019 10:15PM </p>
                   </div>
-                </div>
-                <div class="mail-sender">
-                  <div class="row">
-                    <div class="col-md-8">
-                      <img src="{{ asset('img/photo_medecin.jpg')}}" alt="">
-                      <strong>Paul kingué</strong>
-                      <span>[paulkingue@gmail.com]</span>
-
-                    </div>
-                    <div class="col-md-4">
-                      <p class="date">02 Feb 2019 10:15PM </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="view-mail">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-
-                     <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-
-                </div>
-
-                <div class="compose-btn pull-left">
-                  <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-sm btn-theme"><i class="fa fa-reply"></i> Répondre</a>
-                  <button class="btn  btn-sm tooltips" data-original-title="Print" type="button" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-print"></i> </button>
-                  <button class="btn btn-sm tooltips" data-original-title="Trash" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-trash-o"></i></button>
                 </div>
               </div>
-            </section>
-          </div>
+              <div class="view-mail">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+                   <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+              </div>
+
+              <div class="compose-btn pull-left">
+                <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-sm btn-theme"><i class="fa fa-reply"></i> {{'Répondre'|trans}}</a>
+                <button class="btn  btn-sm tooltips" data-original-title="Print" type="button" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-print"></i> </button>
+                <button class="btn btn-sm tooltips" data-original-title="Trash" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-trash-o"></i></button>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
-      <!-- /wrapper -->
+      </div>
     </section>
+    <!-- /wrapper -->
+  </section>
 
-    <!--footer-->
+  <!--footer-->
 
-    <!-- debut du contenu -->
+  <!-- debut du contenu -->
 
 {% endblock %}
-

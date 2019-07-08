@@ -1,4 +1,4 @@
- {% extends '::client.html.twig' %}
+{% extends '::client.html.twig' %}
 
 {% block title %}Prendre le rdv {% endblock %}
 
@@ -7,391 +7,391 @@
 
 <!-- debut -->
 
-                  <div class="container" id="container_2">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                            <h2 class="h2_titre">Groupe médical Mfandena</h2>
-                            <p class="reserver_on">Prendre  rendez-vous  en ligne</p>
-                            <h2 class="h3_location"><i class="fa fa-map-marker" aria-hidden="true"></i> Yaoundé Mfandena</h2>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <div class="css-1ktutmq"><a href="#ancre" class="css-1er3gl1 a" style="color:#fff !important;">Prendre RDV</a></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- debut cadre pour le slider -->
-                        <div class="container_slider_">
-                          <div class="banner" data-height="400" data-width="100%" data-slide-speed="900" data-autoslide="5000">
-                            <img src="{{asset('img/cabinet1.jpg')}}" class="slider">
-                            <img src="{{asset('img/cabinet2.jpg')}}" class="slider">
-                            <img src="{{asset('img/cabinet3.jpg')}}" class="slider">
+                 <div class="container" id="container_2">
+           <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                   <div class="row">
+                       <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                           <h2 class="h2_titre" style="text-align: left !important;">Groupe médical Mfandena</h2>
+                           <p class="reserver_on">Prendre  rendez-vous  en ligne</p>
+                           <h2 class="h3_location" style="text-align: left !important;"><i class="fa fa-map-marker" aria-hidden="true"></i> Yaoundé Mfandena</h2>
+                       </div>
+                       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                           <div class="css-1ktutmq"><a href="#ancre" class="css-1er3gl1 a" style="color:#fff !important;">Prendre RDV</a></div>
+                       </div>
+                   </div>
+                   <div class="row">
+                       <!-- debut cadre pour le slider -->
+                       <div class="container_slider_">
+                         <div class="banner" data-height="400" data-width="100%" data-slide-speed="900" data-autoslide="5000">
+                           <img src="{{asset('img/cabinet1.jpg')}}" class="slider">
+                           <img src="{{asset('img/cabinet2.jpg')}}" class="slider">
+                           <img src="{{asset('img/cabinet3.jpg')}}" class="slider">
 
-                            <div class="previous2" data-previous-cursor="{{asset('img/left.png')}}"></div>
-                            <div class="next2" data-next-cursor="{{asset('img/right.png')}}"></div>
+                           <div class="previous2" data-previous-cursor="{{asset('img/left.png')}}"></div>
+                           <div class="next2" data-next-cursor="{{asset('img/right.png')}}"></div>
 
-                          <div class="links">
-                              <a href="1"></a>
-                              <a href="2"></a>
-                              <a href="3"></a>
-                          </div>
-                        </div>
-                        </div>
+                         <div class="links">
+                             <a href="1"></a>
+                             <a href="2"></a>
+                             <a href="3"></a>
+                         </div>
+                       </div>
+                       </div>
 
-                        <!-- fin du cadre pour le slider -->
-                    </div>
-                    <a id="ancre"></a>
-                    <div class="row">
-                        <div class="css-11ndk8i"><div><span>Prendre</span><span> rendez-vous </span><span>en ligne</span></div><small>Paiement en ligne - Paiement sur place - Confirmation immédiate</small></div>
-                    </div>
-
-                   
-                         <div class="">
-                        <span class="css-ej55tb">1. Choix de la prestation</span>
+                       <!-- fin du cadre pour le slider -->
+                   </div>
+                   <a id="ancre"></a>
+                   <div class="row">
+                       <div class="css-11ndk8i"><div><span>Prendre</span><span> rendez-vous </span><span>en ligne</span></div><small>Paiement en ligne - Paiement sur place - Confirmation immédiate</small></div>
+                   </div>
 
 
-                    </div>
+                        <div class="">
+                       <span class="css-ej55tb">1. Choix de la prestation</span>
 
-                    <div class="">
-                        <p class="nos_prestation">Soins Esthetiques</p>
 
-                        <div class="wrapper_prestation">
+                   </div>
+
+                   <div class="">
+                       <p class="nos_prestation">Soins Esthetiques</p>
+
+                       <div class="wrapper_prestation">
+                           <!-- -->
+                           <div class="css-1numslp">
+                               <div>
+                                   <span class="css-hl6pew">
+                                       <span class="css-km7bau">Soins de visage pour Femme  </span>
+                                       <span class="css-j0shu8">
+                                           <span> 30min</span>
+                                           <span>
+                                               <span class="css-czvdcv">10.000 Fcfa <br></span>
+                                           </span>
+                                       </span>
+                                       <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
+                                   </span>
+                               </div>
+                           </div>
+                           <!-- -->
+                           <!-- -->
+                           <div class="css-1numslp">
+                               <div>
+                                   <span class="css-hl6pew">
+                                       <span class="css-km7bau">Soins de visage pour Homme  </span>
+                                       <span class="css-j0shu8">
+                                           <span> 45min</span>
+                                           <span>
+                                               <span class="css-czvdcv">15.000 Fcfa <br></span>
+                                           </span>
+                                       </span>
+                                       <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
+                                   </span>
+                               </div>
+                           </div>
+                           <!-- -->
+                           <!-- -->
+                           <div class="css-1numslp">
+                               <div>
+                                   <span class="css-hl6pew">
+                                       <span class="css-km7bau">Soins de visage pour  enfant  </span>
+                                       <span class="css-j0shu8">
+                                           <span> 45min</span>
+                                           <span>
+                                               <span class="css-czvdcv">10.000 Fcfa <br></span>
+                                           </span>
+                                       </span>
+                                       <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
+                                   </span>
+                               </div>
+                           </div>
+                           <!-- -->
+                           <!-- -->
+
+
+
+
+                       </div>
+                   </div>
+
+
+                   <!-- debut de la ligne -->
+                   <div class=" ">
+                     <p class="nos_prestation">Massages</p>
+                       <div class="wrapper_prestation">
+                           <!-- -->
+                           <div class="css-1numslp zone_consultation">
+                               <div>
+                                   <span class="css-hl6pew">
+                                       <span class="css-km7bau">Massage du dos  </span>
+                                       <span class="css-j0shu8">
+                                           <span> 30min</span>
+                                           <span>
+                                               <span class="css-czvdcv">10.000 Fcfa <br></span>
+                                           </span>
+                                       </span>
+                                       <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
+                                   </span>
+                               </div>
+                           </div>
+                           <!-- -->
+                           <!-- -->
+                           <div class="css-1numslp">
+                               <div>
+                                   <span class="css-hl6pew">
+                                       <span class="css-km7bau">Massage des pieds  </span>
+                                       <span class="css-j0shu8">
+                                           <span> 45min</span>
+                                           <span>
+                                               <span class="css-czvdcv">15.000 Fcfa <br></span>
+                                           </span>
+                                       </span>
+                                       <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
+                                   </span>
+                               </div>
+                           </div>
+                           <!-- -->
                             <!-- -->
-                            <div class="css-1numslp">
-                                <div>
-                                    <span class="css-hl6pew">
-                                        <span class="css-km7bau">Soins de visage pour Femme  </span>
-                                        <span class="css-j0shu8">
-                                            <span> 30min</span>
-                                            <span>
-                                                <span class="css-czvdcv">10.000 Fcfa <br></span>
-                                            </span>
-                                        </span>
-                                        <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
-                                    </span>
-                                </div>
-                            </div>
+                           <div class="css-1numslp">
+                               <div>
+                                   <span class="css-hl6pew">
+                                       <span class="css-km7bau">Massage des mains  </span>
+                                       <span class="css-j0shu8">
+                                           <span> 45min</span>
+                                           <span>
+                                               <span class="css-czvdcv">15.000 Fcfa <br></span>
+                                           </span>
+                                       </span>
+                                       <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
+                                   </span>
+                               </div>
+                           </div>
+                           <!-- -->
+
+
+
+                       </div>
+                   </div>
+
+                   <!-- fin de la ligne -->
+
+                   <!-- debut de la ligne -->
+                   <div class=" ">
+                     <p class="nos_prestation">Coiffure</p>
+                       <div class="wrapper_prestation">
+                           <!-- -->
+                           <div class="css-1numslp zone_consultation">
+                               <div>
+                                   <span class="css-hl6pew">
+                                       <span class="css-km7bau">Pose de greffe</span>
+                                       <span class="css-j0shu8">
+                                           <span> 30min</span>
+                                           <span>
+                                               <span class="css-czvdcv">10.000 Fcfa <br></span>
+                                           </span>
+                                       </span>
+                                       <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
+                                   </span>
+                               </div>
+                           </div>
+                           <!-- -->
+                           <!-- -->
+                           <div class="css-1numslp">
+                               <div>
+                                   <span class="css-hl6pew">
+                                       <span class="css-km7bau">Rasta</span>
+                                       <span class="css-j0shu8">
+                                           <span> 90min</span>
+                                           <span>
+                                               <span class="css-czvdcv">15.000 Fcfa <br></span>
+                                           </span>
+                                       </span>
+                                       <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
+                                   </span>
+                               </div>
+                           </div>
+                           <!-- -->
                             <!-- -->
+                           <div class="css-1numslp">
+                               <div>
+                                   <span class="css-hl6pew">
+                                       <span class="css-km7bau">Chignion</span>
+                                       <span class="css-j0shu8">
+                                           <span> 45min</span>
+                                           <span>
+                                               <span class="css-czvdcv">15.000 Fcfa <br></span>
+                                           </span>
+                                       </span>
+                                       <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
+                                   </span>
+                               </div>
+                           </div>
+                           <!-- -->
+
+
+
+                       </div>
+                   </div>
+
+                   <!-- fin de la ligne -->
+
+
+                   <!-- debut de la ligne -->
+                   <div class=" ">
+                     <p class="nos_prestation">Soins corporels </p>
+                       <div class="wrapper_prestation">
+
+                           <!-- -->
+                           <div class="css-1numslp">
+                               <div>
+                                   <span class="css-hl6pew">
+                                       <span class="css-km7bau">Sauna</span>
+                                       <span class="css-j0shu8">
+                                           <span> 90min</span>
+                                           <span>
+                                               <span class="css-czvdcv">15.000 Fcfa <br></span>
+                                           </span>
+                                       </span>
+                                       <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
+                                   </span>
+                               </div>
+                           </div>
+                           <!-- -->
                             <!-- -->
-                            <div class="css-1numslp">
-                                <div>
-                                    <span class="css-hl6pew">
-                                        <span class="css-km7bau">Soins de visage pour Homme  </span>
-                                        <span class="css-j0shu8">
-                                            <span> 45min</span>
-                                            <span>
-                                                <span class="css-czvdcv">15.000 Fcfa <br></span>
-                                            </span>
-                                        </span>
-                                        <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- -->
-                            <!-- -->
-                            <div class="css-1numslp">
-                                <div>
-                                    <span class="css-hl6pew">
-                                        <span class="css-km7bau">Soins de visage pour  enfant  </span>
-                                        <span class="css-j0shu8">
-                                            <span> 45min</span>
-                                            <span>
-                                                <span class="css-czvdcv">10.000 Fcfa <br></span>
-                                            </span>
-                                        </span>
-                                        <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- -->
-                            <!-- -->
+                           <div class="css-1numslp">
+                               <div>
+                                   <span class="css-hl6pew">
+                                       <span class="css-km7bau">Hammam</span>
+                                       <span class="css-j0shu8">
+                                           <span> 120min</span>
+                                           <span>
+                                               <span class="css-czvdcv">15.000 Fcfa <br></span>
+                                           </span>
+                                       </span>
+                                       <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
+                                   </span>
+                               </div>
+                           </div>
+                           <!-- -->
+
+
+
+                       </div>
+                   </div>
+
+                   <!-- fin de la ligne -->
+
+                   <!-- debut de la ligne -->
+
+                   <div class=" ">
+                     <p class="nos_prestation">Service à domicile</p>
+                       <div class="wrapper_prestation">
+                           <!-- -->
+                           <div class="css-1numslp zone_consultation">
+                               <div>
+                                   <span class="css-hl6pew">
+                                       <span class="css-km7bau">Prestation à determiner</span>
+                                       <!--<span class="css-j0shu8">
+                                           <span> 120min</span>
+                                           <span>
+                                               <span class="css-czvdcv">10.000 Fcfa <br></span>
+                                           </span>
+                                       </span>-->
+                                       <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
+                                   </span>
+                               </div>
+                           </div>
+                           <!-- -->
+                       </div>
+                   </div>
+
+                   <!-- fin de la ligne -->
 
 
 
 
-                        </div>
-                    </div>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                   <div class="row">
+                       <div class="margin_top_">
+
+                   <div class="dl-search-result-presentation">
+                       <div class="dl-search-result-title-container">
+                           <div class="dl-search-result-avatar">
+                               <a class="js-search-result-path" href="{{ path('dkk_app_choix')}}"><img alt="" src="{{ asset('img/cabinet-medical')}}.jpg" /></a>
+                           </div>
+                           <div class="dl-search-result-title">
+                               <h3><a class="dl-search-result-name" href="{{ path('dkk_app_choix')}}"><div>Groupe médical Mfandena</div></a></h3>
+                               <div class="dl-search-result-subtitle"> </div>
+                           </div>
+                       </div>
+                       <div class="dl-search-result-content">
+                           <div class="dl-text dl-text-body">
+                               <div>Groupe médical Mfandena
+                               <br/> Yaoundé Mfandena</div>
+                           </div>
+
+                       </div>
 
 
-                    <!-- debut de la ligne -->
-                    <div class=" ">
-                      <p class="nos_prestation">Massages</p>
-                        <div class="wrapper_prestation">
-                            <!-- -->
-                            <div class="css-1numslp zone_consultation">
-                                <div>
-                                    <span class="css-hl6pew">
-                                        <span class="css-km7bau">Massage du dos  </span>
-                                        <span class="css-j0shu8">
-                                            <span> 30min</span>
-                                            <span>
-                                                <span class="css-czvdcv">10.000 Fcfa <br></span>
-                                            </span>
-                                        </span>
-                                        <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- -->
-                            <!-- -->
-                            <div class="css-1numslp">
-                                <div>
-                                    <span class="css-hl6pew">
-                                        <span class="css-km7bau">Massage des pieds  </span>
-                                        <span class="css-j0shu8">
-                                            <span> 45min</span>
-                                            <span>
-                                                <span class="css-czvdcv">15.000 Fcfa <br></span>
-                                            </span>
-                                        </span>
-                                        <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- -->
-                             <!-- -->
-                            <div class="css-1numslp">
-                                <div>
-                                    <span class="css-hl6pew">
-                                        <span class="css-km7bau">Massage des mains  </span>
-                                        <span class="css-j0shu8">
-                                            <span> 45min</span>
-                                            <span>
-                                                <span class="css-czvdcv">15.000 Fcfa <br></span>
-                                            </span>
-                                        </span>
-                                        <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- -->
-
-
-
-                        </div>
-                    </div>
-
-                    <!-- fin de la ligne -->
-
-                    <!-- debut de la ligne -->
-                    <div class=" ">
-                      <p class="nos_prestation">Coiffure</p>
-                        <div class="wrapper_prestation">
-                            <!-- -->
-                            <div class="css-1numslp zone_consultation">
-                                <div>
-                                    <span class="css-hl6pew">
-                                        <span class="css-km7bau">Pose de greffe</span>
-                                        <span class="css-j0shu8">
-                                            <span> 30min</span>
-                                            <span>
-                                                <span class="css-czvdcv">10.000 Fcfa <br></span>
-                                            </span>
-                                        </span>
-                                        <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- -->
-                            <!-- -->
-                            <div class="css-1numslp">
-                                <div>
-                                    <span class="css-hl6pew">
-                                        <span class="css-km7bau">Rasta</span>
-                                        <span class="css-j0shu8">
-                                            <span> 90min</span>
-                                            <span>
-                                                <span class="css-czvdcv">15.000 Fcfa <br></span>
-                                            </span>
-                                        </span>
-                                        <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- -->
-                             <!-- -->
-                            <div class="css-1numslp">
-                                <div>
-                                    <span class="css-hl6pew">
-                                        <span class="css-km7bau">Chignion</span>
-                                        <span class="css-j0shu8">
-                                            <span> 45min</span>
-                                            <span>
-                                                <span class="css-czvdcv">15.000 Fcfa <br></span>
-                                            </span>
-                                        </span>
-                                        <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- -->
-
-
-
-                        </div>
-                    </div>
-
-                    <!-- fin de la ligne -->
-
-
-                    <!-- debut de la ligne -->
-                    <div class=" ">
-                      <p class="nos_prestation">Soins corporels </p>
-                        <div class="wrapper_prestation">
-
-                            <!-- -->
-                            <div class="css-1numslp">
-                                <div>
-                                    <span class="css-hl6pew">
-                                        <span class="css-km7bau">Sauna</span>
-                                        <span class="css-j0shu8">
-                                            <span> 90min</span>
-                                            <span>
-                                                <span class="css-czvdcv">15.000 Fcfa <br></span>
-                                            </span>
-                                        </span>
-                                        <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- -->
-                             <!-- -->
-                            <div class="css-1numslp">
-                                <div>
-                                    <span class="css-hl6pew">
-                                        <span class="css-km7bau">Hammam</span>
-                                        <span class="css-j0shu8">
-                                            <span> 120min</span>
-                                            <span>
-                                                <span class="css-czvdcv">15.000 Fcfa <br></span>
-                                            </span>
-                                        </span>
-                                        <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- -->
-
-
-
-                        </div>
-                    </div>
-
-                    <!-- fin de la ligne -->
-
-                    <!-- debut de la ligne -->
-
-                    <div class=" ">
-                      <p class="nos_prestation">Service à domicile</p>
-                        <div class="wrapper_prestation">
-                            <!-- -->
-                            <div class="css-1numslp zone_consultation">
-                                <div>
-                                    <span class="css-hl6pew">
-                                        <span class="css-km7bau">Prestation à determiner</span>
-                                        <!--<span class="css-j0shu8">
-                                            <span> 120min</span>
-                                            <span>
-                                                <span class="css-czvdcv">10.000 Fcfa <br></span>
-                                            </span>
-                                        </span>-->
-                                        <a href="{{ path('dkk_app_reservation') }}" class="css-pq12he">Prendre RDV</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- -->
-                        </div>
-                    </div>
-
-                    <!-- fin de la ligne -->
-
-
-
-
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class="row">
-                        <div class="margin_top_">
-
-                    <div class="dl-search-result-presentation">
-                        <div class="dl-search-result-title-container">
-                            <div class="dl-search-result-avatar">
-                                <a class="js-search-result-path" href="{{ path('dkk_app_choix')}}"><img alt="" src="{{ asset('img/cabinet-medical')}}.jpg" /></a>
-                            </div>
-                            <div class="dl-search-result-title">
-                                <h3><a class="dl-search-result-name" href="{{ path('dkk_app_choix')}}"><div>Groupe médical Mfandena</div></a></h3>
-                                <div class="dl-search-result-subtitle"> </div>
-                            </div>
-                        </div>
-                        <div class="dl-search-result-content">
-                            <div class="dl-text dl-text-body">
-                                <div>Groupe médical Mfandena
-                                <br/> Yaoundé Mfandena</div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
+                   </div>
 
 
 
 
 
-                        </div>
-                    </div>
+                       </div>
+                   </div>
 
-                    <!-- localisation et adresse -->
-                                <div class="row">
-                                    <br>
-                                     <div class="css-18cbj1w"> &nbsp;&nbsp;&nbsp;Localisation et adresse</div>
-                                 <span class="css-span18"><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;&nbsp;Mfandena rue 1165 En face du stade Omnisport</span>
-                                 <span class="css-span18"><i class="fa  fa-envelope" aria-hidden="true"></i> BP: 3640 Yaoundé-Cameroun</span>
-                                 <span class="css-span18"><i class="fa  fa-phone" aria-hidden="true"></i> +237 546 987 786 /  +237 987 523 987</span>
-                                 <span class="css-span18"><i class="fa fa-envelope" aria-hidden="true"></i> Email: medicalmfandena@gmail.com</span>
-                            <span class="css-span18"><a href=""><i class="fa fa-facebook" aria-hidden="true"></i> &nbsp;&nbsp;Groupe médical Mfandena.</a> </span>
-                                </div>
+                   <!-- localisation et adresse -->
+                               <div class="row">
+                                   <br>
+                                    <div class="css-18cbj1w"> &nbsp;&nbsp;&nbsp;Localisation et adresse</div>
+                                <span class="css-span18"><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;&nbsp;Mfandena rue 1165 En face du stade Omnisport</span>
+                                <span class="css-span18"><i class="fa  fa-envelope" aria-hidden="true"></i> BP: 3640 Yaoundé-Cameroun</span>
+                                <span class="css-span18"><i class="fa  fa-phone" aria-hidden="true"></i> +237 546 987 786 /  +237 987 523 987</span>
+                                <span class="css-span18"><i class="fa fa-envelope" aria-hidden="true"></i> Email: medicalmfandena@gmail.com</span>
+                           <span class="css-span18"><a href=""><i class="fa fa-facebook" aria-hidden="true"></i> &nbsp;&nbsp;Groupe médical Mfandena.</a> </span>
+                               </div>
 
-                    <!-- horaire d'ouverture -->
-                    <div itemprop="openingHours" class="css-o9gtb0">
-                        <div class="css-18cbj1w">Horaires d'ouverture</div>
-                        <ul class="css-jajfs2">
-                            <li class="css-nil">
-                                <div>Lundi</div>
-                                <div class="css-r494z3">07:00-19:00</div>
-                            </li>
-                            <li class="css-nil">
-                                <div>Mardi</div>
-                                <div class="css-nil">07:00-19:00</div>
-                            </li>
-                            <li class="css-nil">
-                                <div>Mercredi</div>
-                                <div class="css-nil">07:00-19:00</div>
-                            </li>
-                            <li class="css-nil">
-                                <div>Jeudi</div>
-                                <div class="css-nil">07:00-19:00</div>
-                            </li>
-                            <li class="css-l6c9n4">
-                                <div>Vendredi</div>
-                                <div class="css-nil">07:00-19:00</div>
-                            </li>
-                            <li class="css-nil">
-                                <div>Samedi</div>
-                                <div class="css-nil">08:30-14:00</div>
-                            </li>
-                            <li class="css-nil">
-                            <div>Dimanche</div>
-                                <div class="css-r494z3">Fermé</div>
-                            </li>
-                        </ul>
-                    </div>
+                   <!-- horaire d'ouverture -->
+                   <div itemprop="openingHours" class="css-o9gtb0">
+                       <div class="css-18cbj1w">Horaires d'ouverture</div>
+                       <ul class="css-jajfs2">
+                           <li class="css-nil">
+                               <div>Lundi</div>
+                               <div class="css-r494z3">07:00-19:00</div>
+                           </li>
+                           <li class="css-nil">
+                               <div>Mardi</div>
+                               <div class="css-nil">07:00-19:00</div>
+                           </li>
+                           <li class="css-nil">
+                               <div>Mercredi</div>
+                               <div class="css-nil">07:00-19:00</div>
+                           </li>
+                           <li class="css-nil">
+                               <div>Jeudi</div>
+                               <div class="css-nil">07:00-19:00</div>
+                           </li>
+                           <li class="css-l6c9n4">
+                               <div>Vendredi</div>
+                               <div class="css-nil">07:00-19:00</div>
+                           </li>
+                           <li class="css-nil">
+                               <div>Samedi</div>
+                               <div class="css-nil">08:30-14:00</div>
+                           </li>
+                           <li class="css-nil">
+                           <div>Dimanche</div>
+                               <div class="css-r494z3">Fermé</div>
+                           </li>
+                       </ul>
+                   </div>
 
 
-                </div>
-		    </div>
-        </div>
+               </div>
+       </div>
+       </div>
 <!-- fin -->
 
 

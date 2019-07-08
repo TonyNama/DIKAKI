@@ -1,216 +1,216 @@
- {% extends '::client.html.twig' %}
+{% extends '::client.html.twig' %}
 
 {% block title %}{{'Prendre le rdv'|trans}} {% endblock %}
 
 {% block body %}
 
 
-      <p style="clear:both !important"></p>
-     <div class='container'>
+     <p style="clear:both !important"></p>
+    <div class='container'>
 
 
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-          <div class="news_search" style="margin-top:30px !important;">
-            <form method="post" action="{{ path('dkk_app_search') }}">
-              <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-                <select id="" class="form-control selectpicker my_selector_" data-hide-disabled="true" data-live-search="true" style="width:100px !important">
+     <div class="row">
+       <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+         <div class="news_search" style="margin-top:30px !important;">
+           <form method="post" action="{{ path('dkk_app_search') }}">
+             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+               <select id="" class="form-control selectpicker my_selector_" data-hide-disabled="true" data-live-search="true" style="width:100px !important">
 
-                  <option selected disabled> {{'Rechercher un professionel'|trans}} </option>
+                 <option selected disabled> {{'Rechercher un professionel'|trans}} </option>
 
-                <optgroup label="Médécin">
-                  <option>{{'Dentiste'|trans}}</option>
-                  <option>{{'Chirurgien'|trans}}</option>
-                </optgroup>
-                <optgroup label="Bien être">
-                  <option>{{'Masseuses'|trans}}</option>
-                  <option>{{'Coiffure'|trans}}</option>
-                </optgroup>
-              </select>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-                <select  class="form-control selectpicker" data-hide-disabled="true" data-live-search="true" style="width:100px !important">
+               <optgroup label="Médécin">
+                 <option>{{'Dentiste'|trans}}</option>
+                 <option>{{'Chirurgien'|trans}}</option>
+               </optgroup>
+               <optgroup label="Bien être">
+                 <option>{{'Masseuses'|trans}}</option>
+                 <option>{{'Coiffure'|trans}}</option>
+               </optgroup>
+             </select>
+             </div>
+             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+               <select  class="form-control selectpicker" data-hide-disabled="true" data-live-search="true" style="width:100px !important">
 
-                  <option selected isabled> {{'Dans la ville de'|trans}}  </option>
-                  <option>{{'Yaoundé'|trans}}</option>
-                  <option>{{'Douala'|trans}}</option>
+                 <option selected isabled> {{'Dans la ville de'|trans}}  </option>
+                 <option>{{'Yaoundé'|trans}}</option>
+                 <option>{{'Douala'|trans}}</option>
 
-              </select>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                <button type="submit" class="btn btn-social-icon btn-rw btn-success " style="width:100% !important;font-weight:700 !important;font-size:0.9em;">{{'Recherche'|trans}}</button>
-              </div>
+             </select>
+             </div>
+             <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+               <button type="submit" class="btn btn-social-icon btn-rw btn-success " style="width:100% !important;font-weight:700 !important;font-size:0.9em;">{{'Recherche'|trans}}</button>
+             </div>
 
-          </form>
-          <br><br>
-          </div>
-          <h1 class="h1">{{'Résultat de la recherche'|trans}}: 04</h1>
-            <!-- debut -->
-             <div class="">
-                 <div class="dl-search-result">
-                    <div class="dl-search-result-presentation">
-                        <div class="dl-search-result-title-container">
-                            <div class="dl-search-result-avatar">
-                                <a class="js-search-result-path" href="{{ path('dkk_app_choix')}}"><img alt="" src="{{asset('img/dentaire.svg')}}" /></a>
-                            </div>
-                            <div class="dl-search-result-title">
-                                <h3><a class="dl-search-result-name" href="{{ path('dkk_app_choix')}}"><div>{{'Dr'|trans}} Céline Ebogo</div></a></h3>
-                                <div class="dl-search-result-subtitle">{{'Dentiste'|trans}}</div>
-                            </div>
-                        </div>
-                        <div class="dl-search-result-content">
-                            <div class="dl-text dl-text-body">
-                                <div>{{'Clinique du Docteur'|trans}} Ebogo
-                                <br/> Yaoundé Essos</div>
-                            </div>
+         </form>
+         <br><br>
+         </div>
+         <h1 class="h1">{{'Résultat de la recherche'|trans}}: 04</h1>
+           <!-- debut -->
+            <div class="">
+                <div class="dl-search-result">
+                   <div class="dl-search-result-presentation">
+                       <div class="dl-search-result-title-container">
+                           <div class="dl-search-result-avatar">
+                               <a class="js-search-result-path" href="{{ path('dkk_app_choix')}}"><img alt="" src="{{asset('img/dentaire.svg')}}" /></a>
+                           </div>
+                           <div class="dl-search-result-title">
+                               <h3><a class="dl-search-result-name" href="{{ path('dkk_app_choix')}}"><div>{{'Dr'|trans}} Céline Ebogo</div></a></h3>
+                               <div class="dl-search-result-subtitle">{{'Dentiste'|trans}}</div>
+                           </div>
+                       </div>
+                       <div class="dl-search-result-content">
+                           <div class="dl-text dl-text-body">
+                               <div>{{'Clinique du Docteur'|trans}} Ebogo
+                               <br/> Yaoundé Essos</div>
+                           </div>
 
-                        </div>
-                         <div class="dl-open-">
-                        <P>{{"Horaires d'ouverture:"|trans}} </P>
-                        <span>
-                            {{'De lundi à vendredi: 8h 00 à 16h 00'|trans}}<br>
-                            {{'et Samedi: 9h 00 à 13h 00'|trans}}.
-                        </span>
-                        </div>
-                        <div class="dl-display-flex dl-justify-center dl-margin-y"><a class="dl-button-info" href="{{ path('dkk_app_choix')}}"><span class="dl-button-label"  style="color:#fff !important;">{{'Prendre rendez-vous'|trans}}</span></a></div>
-                    </div>
-                    <div class="dl-search-result-calendar">
-                        <div class="js-dl-search-results-calendar">
-                            <!-- ici on vas générer l'emplacement via la carte mais par defaut on insere juste une image -->
-                            <img src="{{asset('img/map.png')}}" class="img-responsive map_img">
-                        </div>
-                    </div>
-                </div>
-              </div>
-             <!-- fin -->
-
-             <!-- debut -->
-             <div class="">
-                 <div class="dl-search-result">
-                    <div class="dl-search-result-presentation">
-                        <div class="dl-search-result-title-container">
-                            <div class="dl-search-result-avatar">
-                                <a class="js-search-result-path" href="{{ path('dkk_app_choix')}}"><img alt="" src="{{asset('img/beauty.png')}}" /></a>
-                            </div>
-                            <div class="dl-search-result-title">
-                                <h3><a class="dl-search-result-name" href=" "><div>Solange Evouna</div></a></h3>
-                                <div class="dl-search-result-subtitle">{{'Esthéticienne'|trans}}</div>
-                            </div>
-                        </div>
-                        <div class="dl-search-result-content">
-                            <div class="dl-text dl-text-body">
-                                <div>{{'Institut de beauté Beauty center'|trans}}
-                                <br/> Yaoundé Bastos</div>
-                            </div>
-
-                        </div>
+                       </div>
                         <div class="dl-open-">
-                        <P>{{"Horaires d'ouverture"|trans}}: </P>
-                        <span>
-                            {{'De Mardi à Dimanche: 10h 00 à 22h 00'|trans}}<br>
-                            {{'fermer le Lundi'|trans}}.
+                       <P>{{"Horaires d'ouverture:"|trans}} </P>
+                       <span>
+                           {{'De lundi à vendredi: 8h 00 à 16h 00'|trans}}<br>
+                           {{'et Samedi: 9h 00 à 13h 00'|trans}}.
+                       </span>
+                       </div>
+                       <div class="dl-display-flex dl-justify-center dl-margin-y"><a class="dl-button-info" href="{{ path('dkk_app_choix')}}"><span class="dl-button-label"  style="color:#fff !important;">{{'Prendre rendez-vous'|trans}}</span></a></div>
+                   </div>
+                   <div class="dl-search-result-calendar">
+                       <div class="js-dl-search-results-calendar">
+                           <!-- ici on vas générer l'emplacement via la carte mais par defaut on insere juste une image -->
+                           <img src="{{asset('img/map.png')}}" class="img-responsive map_img">
+                       </div>
+                   </div>
+               </div>
+             </div>
+            <!-- fin -->
 
-                        </span>
-                        </div>
-                        <div class="dl-display-flex dl-justify-center dl-margin-y"><a class="dl-button-info" href="{{ path('dkk_app_choix')}}"><span class="dl-button-label"  style="color:#fff !important;">{{'Prendre rendez-vous'|trans}}</span></a></div>
-                    </div>
-                    <div class="dl-search-result-calendar">
-                        <div class="js-dl-search-results-calendar">
-                            <!-- ici on vas générer l'emplacement via la carte mais par defaut on insere juste une image -->
-                            <img src="{{asset('img/map.png')}}" class="img-responsive map_img">
-                        </div>
-                    </div>
-                </div>
-              </div>
-             <!-- fin -->
+            <!-- debut -->
+            <div class="">
+                <div class="dl-search-result">
+                   <div class="dl-search-result-presentation">
+                       <div class="dl-search-result-title-container">
+                           <div class="dl-search-result-avatar">
+                               <a class="js-search-result-path" href="{{ path('dkk_app_choix')}}"><img alt="" src="{{asset('img/beauty.png')}}" /></a>
+                           </div>
+                           <div class="dl-search-result-title">
+                               <h3><a class="dl-search-result-name" href=" "><div>Solange Evouna</div></a></h3>
+                               <div class="dl-search-result-subtitle">{{'Esthéticienne'|trans}}</div>
+                           </div>
+                       </div>
+                       <div class="dl-search-result-content">
+                           <div class="dl-text dl-text-body">
+                               <div>{{'Institut de beauté Beauty center'|trans}}
+                               <br/> Yaoundé Bastos</div>
+                           </div>
 
-                     <!-- debut -->
-             <div class="">
-                 <div class="dl-search-result">
-                    <div class="dl-search-result-presentation">
-                        <div class="dl-search-result-title-container">
-                            <div class="dl-search-result-avatar">
-                                <a class="js-search-result-path" href="{{ path('dkk_app_choix')}}"><img alt="" src="{{asset('img/avocat.jpg')}}" /></a>
-                            </div>
-                            <div class="dl-search-result-title">
-                                <h3><a class="dl-search-result-name" href="{{ path('dkk_app_choix')}}"><div>{{'Me'|trans}} Eloung Joseph</div></a></h3>
-                                <div class="dl-search-result-subtitle">{{'Avocat'|trans}}</div>
-                            </div>
-                        </div>
-                        <div class="dl-search-result-content">
-                            <div class="dl-text dl-text-body">
-                                <div>{{"Cabinet d'avocat Eloung"|trans}}
-                                <br/> Yaoundé Essos</div>
-                            </div>
+                       </div>
+                       <div class="dl-open-">
+                       <P>{{"Horaires d'ouverture"|trans}}: </P>
+                       <span>
+                           {{'De Mardi à Dimanche: 10h 00 à 22h 00'|trans}}<br>
+                           {{'fermer le Lundi'|trans}}.
 
-                        </div>
-                         <div class="dl-open-">
-                        <P>{{"Horaires de reception"|trans}}: </P>
-                        <span>
-                            {{'De lundi à vendredi: 9h 00 à 19h 00'|trans}}
-                        </span>
-                        </div>
-                        <div class="dl-display-flex dl-justify-center dl-margin-y"><a class="dl-button-info" href="{{ path('dkk_app_choix')}}"><span class="dl-button-label" style="color:#fff !important;">{{'Prendre rendez-vous'|trans}}</span></a></div>
-                    </div>
-                    <div class="dl-search-result-calendar">
-                        <div class="js-dl-search-results-calendar">
-                            <!-- ici on vas générer l'emplacement via la carte mais par defaut on insere juste une image -->
-                            <img src="{{asset('img/map.png')}}" class="img-responsive map_img">
-                        </div>
-                    </div>
-                </div>
-              </div>
-             <!-- fin -->
+                       </span>
+                       </div>
+                       <div class="dl-display-flex dl-justify-center dl-margin-y"><a class="dl-button-info" href="{{ path('dkk_app_choix')}}"><span class="dl-button-label"  style="color:#fff !important;">{{'Prendre rendez-vous'|trans}}</span></a></div>
+                   </div>
+                   <div class="dl-search-result-calendar">
+                       <div class="js-dl-search-results-calendar">
+                           <!-- ici on vas générer l'emplacement via la carte mais par defaut on insere juste une image -->
+                           <img src="{{asset('img/map.png')}}" class="img-responsive map_img">
+                       </div>
+                   </div>
+               </div>
+             </div>
+            <!-- fin -->
 
-             <!-- debut -->
-     <div class="">
-         <div class="dl-search-result">
-            <div class="dl-search-result-presentation">
-                <div class="dl-search-result-title-container">
-                    <div class="dl-search-result-avatar">
-                        <a class="js-search-result-path" href="{{ path('dkk_app_choix')}}"><img alt="" src="{{asset('img/cabinet-medical.jpg')}}" /></a>
-                    </div>
-                    <div class="dl-search-result-title">
-                        <h3><a class="dl-search-result-name" href="{{ path('dkk_app_choix')}}"><div>{{'Groupe médical Mfandena'|trans}}</div></a></h3>
-                        <div class="dl-search-result-subtitle">{{'Centre de soins médicaux'|trans}}</div>
-                    </div>
-                </div>
-                <div class="dl-search-result-content">
-                    <div class="dl-text dl-text-body">
-                        <div>{{'Groupe médical Mfandena'|trans}}
-                        <br/> Yaoundé Mfandena</div>
-                    </div>
+                    <!-- debut -->
+            <div class="">
+                <div class="dl-search-result">
+                   <div class="dl-search-result-presentation">
+                       <div class="dl-search-result-title-container">
+                           <div class="dl-search-result-avatar">
+                               <a class="js-search-result-path" href="{{ path('dkk_app_choix')}}"><img alt="" src="{{asset('img/avocat.jpg')}}" /></a>
+                           </div>
+                           <div class="dl-search-result-title">
+                               <h3><a class="dl-search-result-name" href="{{ path('dkk_app_choix')}}"><div>{{'Me'|trans}} Eloung Joseph</div></a></h3>
+                               <div class="dl-search-result-subtitle">{{'Avocat'|trans}}</div>
+                           </div>
+                       </div>
+                       <div class="dl-search-result-content">
+                           <div class="dl-text dl-text-body">
+                               <div>{{"Cabinet d'avocat Eloung"|trans}}
+                               <br/> Yaoundé Essos</div>
+                           </div>
 
-                </div>
-                 <div class="dl-open-">
-                <P>{{'Horaires de reception'|trans}}: </P>
-                <span>
-                    {{'De lundi au Vendredi'|trans}}: 07h 00 - 19h 00
-                    {{'et Samedi'|trans}}: 08h 00 - 14h 00
-                </span>
-                <span style="display:block">
-                  {{"Services d'urgences 7j/7 et 24h/24"|trans}}
-                </span>
-                </div>
-                <div class="dl-display-flex dl-justify-center dl-margin-y"><a class="dl-button-info" href="{{ path('dkk_app_choix')}}"><span class="dl-button-label" style="color:#fff !important;">{{'Prendre rendez-vous'|trans}}</span></a></div>
-            </div>
-            <div class="dl-search-result-calendar">
-                <div class="js-dl-search-results-calendar">
-                    <!-- ici on vas générer l'emplacement via la carte mais par defaut on insere juste une image -->
-                    <img src="{{asset('img/map.png')}}" class="img-responsive map_img">
-                </div>
-            </div>
+                       </div>
+                        <div class="dl-open-">
+                       <P>{{"Horaires de reception"|trans}}: </P>
+                       <span>
+                           {{'De lundi à vendredi: 9h 00 à 19h 00'|trans}}
+                       </span>
+                       </div>
+                       <div class="dl-display-flex dl-justify-center dl-margin-y"><a class="dl-button-info" href="{{ path('dkk_app_choix')}}"><span class="dl-button-label" style="color:#fff !important;">{{'Prendre rendez-vous'|trans}}</span></a></div>
+                   </div>
+                   <div class="dl-search-result-calendar">
+                       <div class="js-dl-search-results-calendar">
+                           <!-- ici on vas générer l'emplacement via la carte mais par defaut on insere juste une image -->
+                           <img src="{{asset('img/map.png')}}" class="img-responsive map_img">
+                       </div>
+                   </div>
+               </div>
+             </div>
+            <!-- fin -->
+
+            <!-- debut -->
+    <div class="">
+        <div class="dl-search-result">
+           <div class="dl-search-result-presentation">
+               <div class="dl-search-result-title-container">
+                   <div class="dl-search-result-avatar">
+                       <a class="js-search-result-path" href="{{ path('dkk_app_choix')}}"><img alt="" src="{{asset('img/cabinet-medical.jpg')}}" /></a>
+                   </div>
+                   <div class="dl-search-result-title">
+                       <h3><a class="dl-search-result-name" href="{{ path('dkk_app_choix')}}"><div>{{'Groupe médical Mfandena'|trans}}</div></a></h3>
+                       <div class="dl-search-result-subtitle">{{'Centre de soins médicaux'|trans}}</div>
+                   </div>
+               </div>
+               <div class="dl-search-result-content">
+                   <div class="dl-text dl-text-body">
+                       <div>{{'Groupe médical Mfandena'|trans}}
+                       <br/> Yaoundé Mfandena</div>
+                   </div>
+
+               </div>
+                <div class="dl-open-">
+               <P>{{'Horaires de reception'|trans}}: </P>
+               <span>
+                   {{'De lundi au Vendredi'|trans}}: 07h 00 - 19h 00
+                   {{'et Samedi'|trans}}: 08h 00 - 14h 00
+               </span>
+               <span style="display:block">
+                 {{"Services d'urgences 7j/7 et 24h/24"|trans}}
+               </span>
+               </div>
+               <div class="dl-display-flex dl-justify-center dl-margin-y"><a class="dl-button-info" href="{{ path('dkk_app_choix')}}"><span class="dl-button-label" style="color:#fff !important;">{{'Prendre rendez-vous'|trans}}</span></a></div>
+           </div>
+           <div class="dl-search-result-calendar">
+               <div class="js-dl-search-results-calendar">
+                   <!-- ici on vas générer l'emplacement via la carte mais par defaut on insere juste une image -->
+                   <img src="{{asset('img/map.png')}}" class="img-responsive map_img">
+               </div>
+           </div>
+       </div>
+     </div>
+    <!-- fin -->
+
+
         </div>
-      </div>
-     <!-- fin -->
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 
+        </div>
+     </div>
 
-         </div>
-         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-
-         </div>
-      </div>
-
-    </div>
+   </div>
 
 {% endblock %}

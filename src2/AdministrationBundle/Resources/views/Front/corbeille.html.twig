@@ -1,157 +1,156 @@
- {% extends '::admin_template.html.twig' %}
+{% extends '::admin_template.html.twig' %}
 
-{% block title %}{{'Administration'|trans}} - {{'Corbeille'|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+{% block title %}{{'Administration'|trans}} - {{'Corbeille'|trans}} - {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
 <style>
-        .btn_btn > i{
-            color: #fff !important;
-        }
-    </style>
+       .btn_btn > i{
+           color: #fff !important;
+       }
+   </style>
 {% endblock %}
 
 {% block body %}
 
- <!-- debut du contenu -->
+<!-- debut du contenu -->
 
-          <section id="main-content">
-      <section class="wrapper">
-        <!-- page start-->
-        <div class="row mt">
-          <div class="col-sm-3">
+         <section id="main-content">
+     <section class="wrapper">
+       <!-- page start-->
+       <div class="row mt">
+         <div class="col-sm-3">
+          <section class="panel">
+             <div class="panel-body">
+               <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-compose">
+                 <i class="fa fa-pencil"></i>  {{'Envoyer un message'|trans}}
+                 </a>
+               <ul class="nav nav-pills nav-stacked mail-nav">
+                 <li><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> {{'Boite de réception'|trans}}  <span class="label label-theme pull-right inbox-notification">3</span></a></li>
+                 <li><a href="{{path('dkk_administration_email_send')}}"> <i class="fa fa-exclamation-circle"></i>{{'Messages envoyés'|trans}}</a></li>
+                 <li class="active"><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>{{'Corbeille'|trans}}</a></li>
+               </ul>
+             </div>
+           </section>
+
+         </div>
+
+         <div class="col-sm-9">
            <section class="panel">
-              <div class="panel-body">
-                <a href="{{path('dkk_administration_email_compose')}}" class="btn btn-compose">
-                  <i class="fa fa-pencil"></i>  {{'Envoyer un message'|trans}}
-                  </a>
-                <ul class="nav nav-pills nav-stacked mail-nav">
-                  <li><a href="{{path('dkk_administration_reception')}}"> <i class="fa fa-inbox"></i> {{'Boite de réception'|trans}}  <span class="label label-theme pull-right inbox-notification">3</span></a></li>
-                  <li><a href="{{path('dkk_administration_email_send')}}"> <i class="fa fa-exclamation-circle"></i>{{'Messages envoyés'|trans}}</a></li>
-                  <li class="active"><a href="{{path('dkk_administration_corbeille')}}"> <i class="fa fa-trash-o"></i>{{'Corbeille'|trans}}</a></li>
-                </ul>
-              </div>
-            </section>
+             <header class="panel-heading wht-bg">
+               <h4 class="gen-case">
+                 {{'Corbeille'|trans}}
 
-          </div>
+                 </h4>
+             </header>
+             <div class="panel-body ">
+               <div class="mail-header row">
+                 <div class="col-md-8">
+                   <h4 class="pull-left">  </h4>
+                 </div>
+               </div>
 
-          <div class="col-sm-9">
-            <section class="panel">
-              <header class="panel-heading wht-bg">
-                <h4 class="gen-case">
-                  {{'Corbeille'|trans}}
+               <div class="view-mail">
 
-                  </h4>
-              </header>
-              <div class="panel-body ">
-                <div class="mail-header row">
-                  <div class="col-md-8">
-                    <h4 class="pull-left">  </h4>
-                  </div>
-                </div>
+                <!-- debut -->
+                   <section id="unseen">
+               <table class="table table-bordered table-striped table-condensed">
+                 <thead>
+                   <tr>
+                     <th>{{'Date'|trans}}</th>
+                     <th>{{'Contenu'|trans}}</th>
+                     <th class="numeric">{{'Voulez-vous'|trans}} ? </th>
 
-                <div class="view-mail">
-
-                 <!-- debut -->
-                    <section id="unseen">
-                <table class="table table-bordered table-striped table-condensed">
-                  <thead>
-                    <tr>
-                      <th>{{'Date'|trans}}</th>
-                      <th>{{'Contenu'|trans}}</th>
-                      <th class="numeric">{{'Voulez-vous'|trans}} ? </th>
-
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr> 
-                      <td> 19 {{'Février'|trans}} 2019</td>
-                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td> 19 {{'Février'|trans}} 2019</td>
+                     <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
-                      <td>
-                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
-                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
-                      </td>
+                     <td>
+                       <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                     <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                     </td>
 
-                    </tr>
+                   </tr>
 
-                       <tr>
-                      <td>19 {{'Février'|trans}} 2019</td>
-                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      <tr>
+                     <td>19 {{'Février'|trans}} 2019</td>
+                     <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
-                      <td>
-                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
-                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
-                      </td>
+                     <td>
+                       <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                     <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                     </td>
 
-                    </tr>
+                   </tr>
 
-                       <tr>
-                      <td>19 {{'Février'|trans}} 2019</td>
-                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      <tr>
+                     <td>19 {{'Février'|trans}} 2019</td>
+                     <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
-                      <td>
-                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
-                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
-                      </td>
+                     <td>
+                       <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                     <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                     </td>
 
-                    </tr>
-                       <tr>
-                      <td>19 {{'Février'|trans}} 2019</td>
-                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   </tr>
+                      <tr>
+                     <td>19 {{'Février'|trans}} 2019</td>
+                     <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
-                      <td>
-                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
-                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
-                      </td>
+                     <td>
+                       <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                     <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                     </td>
 
-                    </tr>
-                       <tr>
-                      <td> 19 {{'Février'|trans}} 2019</td>
-                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   </tr>
+                      <tr>
+                     <td> 19 {{'Février'|trans}} 2019</td>
+                     <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
-                      <td>
-                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
-                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
-                      </td>
+                     <td>
+                       <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                     <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                     </td>
 
-                    </tr>
-                       <tr>
-                      <td> 19 {{'Février'|trans}} 2019</td>
-                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   </tr>
+                      <tr>
+                     <td> 19 {{'Février'|trans}} 2019</td>
+                     <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
-                      <td>
-                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
-                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
-                      </td>
+                     <td>
+                       <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                     <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                     </td>
 
-                    </tr>
-                       <tr>
-                      <td> 19 {{'Février'|trans}} 2019</td>
-                      <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                   </tr>
+                      <tr>
+                     <td> 19 {{'Février'|trans}} 2019</td>
+                     <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua...</td>
-                      <td>
-                        <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
-                      <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
-                      </td>
+                     <td>
+                       <a href="" class="btn btn-success btn-xs btn_btn" onclick="confirm('Voulez-vous restorer  ce message ?')"><i class="fa fa-check"></i></a>
+                     <a href="" onclick="confirm('Voulez-vous définitivement supprimer ce message ?')" class="btn btn-danger btn-xs btn_btn"><i class="fa fa-trash-o "></i></a>
+                     </td>
 
-                    </tr>
+                   </tr>
 
-                  </tbody>
-                </table>
-              </section>
+                 </tbody>
+               </table>
+             </section>
 
-                <!-- fin -->
-                </div>
+               <!-- fin -->
+               </div>
 
 
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
-      <!-- /wrapper -->
-    </section>
+             </div>
+           </section>
+         </div>
+       </div>
+     </section>
+     <!-- /wrapper -->
+   </section>
 
 
 {% endblock %}
-

@@ -1,29 +1,29 @@
- {% extends '::admin_template.html.twig' %}
+{% extends '::admin_template.html.twig' %}
 
-{% block title %} {{"Création d'un collaborateur"|trans}} :: Dikaki {{'prise de rendez-vous et dépôt de dossier en ligne'|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+{% block title %} {{"Création d'un collaborateur"|trans}} - Dikaki {{'prise de rendez-vous et dépôt de dossier en ligne'|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
 
- <style>
-       .form-control{
-          display: inline-block !important;
-          vertical-align: middle !important;
-          width: 60% !important;
-        }
-        label{
-          font-weight: 600 !important;
-          font-size: 1.1em;
-        }
+<style>
+      .form-control{
+         display: inline-block !important;
+         vertical-align: middle !important;
+         width: 60% !important;
+       }
+       label{
+         font-weight: 600 !important;
+         font-size: 1.1em;
+       }
 
-        
 
-        th{
-          text-align: center;
-        }
-          .sky-form{
-            box-shadow: none !important;   
-          }
-      </style>
+
+       th{
+         text-align: center;
+       }
+         .sky-form{
+           box-shadow: none !important;
+         }
+     </style>
 
 {% endblock %}
 
@@ -31,234 +31,234 @@
 
 
 <!-- debut du contenu -->
-    <section id="main-content">
-      <section class="wrapper site-min-height">
-        <div class="row mt">
-              <div class="col-xs-12 col-ms-6 col-md-6">
-        <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
-      </div>
-      
-      <div class="col-xs-12 col-ms-6 col-md-6">
-        <h2 class="name_structure">{{"Gestion des droits d'accès"|trans}}</h2>
-      </div>
-          <!-- /col-lg-12 -->
-          <div class="col-lg-12 mt">
+   <section id="main-content">
+     <section class="wrapper site-min-height">
+       <div class="row mt">
+             <div class="col-xs-12 col-ms-6 col-md-6">
+       <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+     </div>
+
+     <div class="col-xs-12 col-ms-6 col-md-6">
+       <h2 class="name_structure">{{"Gestion des droits d'accès"|trans}}</h2>
+     </div>
+         <!-- /col-lg-12 -->
+         <div class="col-lg-12 mt">
 
 
-            <div class="row content-panel">
-             <!-- debut -->
-        <section class="wrapper site-min-height">
-        <div class="row">
-          <div class="col-lg-12">
+           <div class="row content-panel">
+            <!-- debut -->
+       <section class="wrapper site-min-height">
+       <div class="row">
+         <div class="col-lg-12">
 
 
 
-              <h4 class="small_tittle up_">{{"Création d'un collaborateur"|trans}} </h4>
-                  
+             <h4 class="small_tittle up_">{{"Création d'un collaborateur"|trans}} </h4>
 
-                <div class="wrapper_autorisation_access">
-                    <form action="" class="sky-form" id="signupForm" method="post" style="border:none !important;">
 
-        <fieldset>
-          <div class="row">
-            <section class="col col-6">
-              <label class="input">
-                <i class="icon-append icon-user"></i>
-                <input type="text" placeholder="{{'Nom'|trans}}" name="firstname">
-              </label>
-            </section>
-            <section class="col col-6">
-              <label class="input">
-                <i class="icon-append icon-user"></i>
-                <input type="text" placeholder="{{'Prenom'|trans}}" name="lastname">
-              </label>
-            </section>
+               <div class="wrapper_autorisation_access">
+                   <form action="" class="sky-form" id="signupForm" method="post" style="border:none !important;">
+
+       <fieldset>
+         <div class="row">
+           <section class="col col-6">
+             <label class="input">
+               <i class="icon-append icon-user"></i>
+               <input type="text" placeholder="{{'Nom'|trans}}" name="firstname">
+             </label>
+           </section>
+           <section class="col col-6">
+             <label class="input">
+               <i class="icon-append icon-user"></i>
+               <input type="text" placeholder="{{'Prenom'|trans}}" name="lastname">
+             </label>
+           </section>
+         </div>
+
+                   <div class="row">
+           <section class="col col-6">
+             <label class="input">
+               <i class="icon-append icon-phone"></i>
+               <input type="tel" placeholder="{{'Téléphone'|trans}}" name="phone">
+             </label>
+           </section>
+           <section class="col col-6">
+             <label class="input">
+               <i class="icon-append icon-phone"></i>
+               <input type="tel" placeholder="{{'E-mail'|trans}}" name="email">
+             </label>
+           </section>
+         </div>
+
+
+                     <div class="row">
+           <section class="col col-6">
+             <label class="select">
+               <select name="sexe">
+                 <option selected disabled>{{'Sexe'|trans}}</option>
+                 <option value="Masculin">{{'Masculin'|trans}}</option>
+                 <option value="Féminin">{{'Féminin'|trans}}</option>
+               </select>
+               <i></i>
+             </label>
+           </section>
+           <section class="col col-6">
+             <label class="input">
+               <i class="icon-append icon-envelope-alt"></i>
+               <input type="text" placeholder="{{'Profession'|trans}}" name="profession">
+             </label>
+           </section>
           </div>
-                    
-                    <div class="row">
-            <section class="col col-6">
-              <label class="input">
-                <i class="icon-append icon-phone"></i>
-                <input type="tel" placeholder="{{'Téléphone'|trans}}" name="phone">
-              </label>
-            </section>
-            <section class="col col-6">
-              <label class="input">
-                <i class="icon-append icon-phone"></i>
-                <input type="tel" placeholder="{{'E-mail'|trans}}" name="email">
-              </label>
-            </section>
-          </div>
-                    
-                    
-                      <div class="row">
-            <section class="col col-6">
-              <label class="select">
-                <select name="sexe">
-                  <option selected disabled>{{'Sexe'|trans}}</option>
-                  <option value="Masculin">{{'Masculin'|trans}}</option>
-                  <option value="Féminin">{{'Féminin'|trans}}</option>
-                </select>
-                <i></i>
-              </label>
-            </section>
-            <section class="col col-6">
-              <label class="input">
-                <i class="icon-append icon-envelope-alt"></i>
-                <input type="text" placeholder="{{'Profession'|trans}}" name="profession">
-              </label>
-            </section>
+
+                   <div class="row">
+           <section class="col col-6">
+             <label class="input">
+               <i class="icon-append icon-lock"></i>
+               <input type="password" placeholder="{{'Mot de passe'|trans}}" name="">
+             </label>
+           </section>
+           <section class="col col-6">
+             <label class="input">
+               <i class="icon-append icon-lock"></i>
+               <input type="password" placeholder="{{'Répeter le mot de passe'|trans}}" name="">
+             </label>
+           </section>
+         </div>
+
+
+
+
+                   <div class="row">
+
+           <section class="col col-6">
+                       <label for="file" class="input input-file">
+                         <div class="button"><input type="file" id="file" name="image" onchange="this.parentNode.nextSibling.value = this.value">{{'Ajouter photo'|trans}}</div><input type="text" placeholder="" readonly="readonly">
+                       </label>
+                     </section>
+         </div>
+
+
+       </fieldset>
+
+
+       <footer>
+         <button type="submit" class="btn btn-success btn-md btn_validate_access"><i class="fa fa-floppy-o"></i> {{'Valider'|trans}} </button>
+       </footer>
+     </form>
            </div>
-                    
-                    <div class="row">
-            <section class="col col-6">
-              <label class="input">
-                <i class="icon-append icon-lock"></i>
-                <input type="password" placeholder="{{'Mot de passe'|trans}}" name="">
-              </label>
-            </section>
-            <section class="col col-6">
-              <label class="input">
-                <i class="icon-append icon-lock"></i>
-                <input type="password" placeholder="{{'Répeter le mot de passe'|trans}}" name="">
-              </label>
-            </section>
-          </div>
-                    
-                    
-                    
-                    
-                    <div class="row">
-            
-            <section class="col col-6">
-                        <label for="file" class="input input-file">
-                          <div class="button"><input type="file" id="file" name="image" onchange="this.parentNode.nextSibling.value = this.value">{{'Ajouter photo'|trans}}</div><input type="text" placeholder="" readonly="readonly">
-                        </label>
-                      </section>
-          </div>
+
+             <p style="clear:both !important;margin-top:100px !important;"></p>
 
 
-        </fieldset>
+              <h4 class="small_tittle up_">{{'Liste des collaborateurs'|trans}} </h4>
+              <span class="p_collaborateur" style="">{{"Liste des collaborateurs et attribution des droits d'accès"|trans}}</span>
+             <div class="data_result_access">
+                    <br><br><br>
+                       <table class="table table-bordered table-striped table-condensed">
+                   <thead>
+                               <tr style="background-color: #26440d !important;color: #fff !important;">
+                                <th> N°</th>
+                                 <th>{{'Nom'|trans}} & {{'Prénom'|trans}}</th>
+                                 <th>{{'Occupation'|trans}}</th>
+                                 <th>{{'Téléphone'|trans}}</th>
+                                 <th>{{"Droits d'accès"|trans}}</th>
+                               </tr>
+                             </thead>
+                             <tbody>
+                               <tr>
 
+                                   <td>.......</td>
+                                   <td>.......</td>
+                                   <td>.......</td>
+                                   <td>.......</td>
+                                   <td class="text-center">
+                                     <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-pencil-square-o"></i> {{'Attribuer'|trans}} </button>
 
-        <footer>
-          <button type="submit" class="btn btn-success btn-md btn_validate_access"><i class="fa fa-floppy-o"></i> {{'Valider'|trans}} </button>
-        </footer>
-      </form>
-            </div>
-              
-              <p style="clear:both !important;margin-top:100px !important;"></p>
-              
-              
-               <h4 class="small_tittle up_">{{'Liste des collaborateurs'|trans}} </h4>
-               <span class="p_collaborateur" style="">{{"Liste des collaborateurs et attribution des droits d'accès"|trans}}</span>
-              <div class="data_result_access">
-                     <br><br><br>
-                        <table class="table table-bordered table-striped table-condensed">
-                    <thead>
-                                <tr style="background-color: #26440d !important;color: #fff !important;">
-                                 <th> N°</th>
-                                  <th>{{'Nom'|trans}} & {{'Prénom'|trans}}</th>
-                                  <th>{{'Occupation'|trans}}</th>
-                                  <th>{{'Téléphone'|trans}}</th>
-                                  <th>{{"Droits d'accès"|trans}}</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
+                                     <!-- debut de la fenetre modal -->
 
-                                    <td>.......</td>
-                                    <td>.......</td>
-                                    <td>.......</td>
-                                    <td>.......</td>
-                                    <td class="text-center">
-                                      <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-pencil-square-o"></i> {{'Attribuer'|trans}} </button>
+                                       <div class="modal fade" id="myModal_rdv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                       <div class="modal-dialog second_modal-dialog2" role="document" >
+                                         <div class="modal-content" >
+                                           <div class="modal-header">
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                             <h4 class="modal-title" id="myModalLabel">{{"Affectation des droits d'accès"|trans}}</h4>
+                                           </div>
+                                           <div class="modal-body">
+                                             <!-- debut -->
+                                               <form method="post" action="">
+                                                 <table class="table table-bordered table-striped table-condensed">
+                                                   <thead>
+                                                       <tr style="background-color: #26440d !important;color: #fff !important;">
 
-                                      <!-- debut de la fenetre modal -->
-
-                                        <div class="modal fade" id="myModal_rdv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                        <div class="modal-dialog second_modal-dialog2" role="document" >
-                                          <div class="modal-content" >
-                                            <div class="modal-header">
-                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                              <h4 class="modal-title" id="myModalLabel">{{"Affectation des droits d'accès"|trans}}</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                              <!-- debut -->
-                                                <form method="post" action="">
-                                                  <table class="table table-bordered table-striped table-condensed">
-                                                    <thead>
-                                                        <tr style="background-color: #26440d !important;color: #fff !important;">
-                                            
-                                                          <th>{{'Nom du collaborateur'|trans}}</th>
-                                                          <th>{{'Occupation'|trans}}</th>
-                                                          <th>{{'Selectionné'|trans}}</th>
-                                                        </tr>
-                                                    </thead>
-                                                      <tbody>
-
-                                                          <tr>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td>
-                                                              <select name="" class="form-control" style="width:100% !important;">
-                                                                <option value="1">{{"Niveau"|trans}} 1</option>
-                                                                <option value="2">{{"Niveau"|trans}} 2</option>
-                                                                <option value="3">{{"Niveau"|trans}} 3</option>
-                                                                <option value="4">{{"Niveau"|trans}} 4</option>
-                                                              </select>
-                                                            </td>
-                                                          </tr>
-                                                       </tbody>
-                                                    
-                                                    
-
-                                                       <tr>
-                                                         <th></th>
-                                                           <td style="padding-left: 20px;">
-                                                             <br>
-                                                             <button type="submit" class="btn btn-success btn_valid" id="button_send"><i class="fa fa-floppy-o"></i> {{'Enregistrer'|trans}}</button>
-                                                             <button class="btn btn-danger btn_valid"><i class="fa fa-times"></i> {{'Annuler'|trans}} </button>
-                                                           </td>
+                                                         <th>{{'Nom du collaborateur'|trans}}</th>
+                                                         <th>{{'Occupation'|trans}}</th>
+                                                         <th>{{'Selectionné'|trans}}</th>
                                                        </tr>
+                                                   </thead>
+                                                     <tbody>
 
-                                                   </table>
-                                                  </form>
+                                                         <tr>
+                                                           <td></td>
+                                                           <td></td>
+                                                           <td>
+                                                             <select name="" class="form-control" style="width:100% !important;">
+                                                               <option value="1">{{"Niveau"|trans}} 1</option>
+                                                               <option value="2">{{"Niveau"|trans}} 2</option>
+                                                               <option value="3">{{"Niveau"|trans}} 3</option>
+                                                               <option value="4">{{"Niveau"|trans}} 4</option>
+                                                             </select>
+                                                           </td>
+                                                         </tr>
+                                                      </tbody>
 
-                                              <br><br>
 
-                                              <!-- fin  -->
-                                            </div>
-                                          </div>
-                                        </div>
-                                        </div>
 
-                                      <!-- fin de la fenetre modal -->
-                                        <a href="" class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vraiment supprimer ?')"><i class="fa fa-window-close" aria-hidden="true"></i> {{'Supprimer'|trans}}</a>
-                                    </td>
-                                </tr>
-                              </tbody>
-               </table>
-                  
-              </div>
+                                                      <tr>
+                                                        <th></th>
+                                                          <td style="padding-left: 20px;">
+                                                            <br>
+                                                            <button type="submit" class="btn btn-success btn_valid" id="button_send"><i class="fa fa-floppy-o"></i> {{'Enregistrer'|trans}}</button>
+                                                            <button class="btn btn-danger btn_valid"><i class="fa fa-times"></i> {{'Annuler'|trans}} </button>
+                                                          </td>
+                                                      </tr>
 
-           
-          </div>
-          <!--  /col-lg-12 -->
-        </div>
-        <!--  /row -->
-      </section>
-             <!-- fin -->
+                                                  </table>
+                                                 </form>
 
-            </div>
+                                             <br><br>
 
-          </div>
-          <!-- /row -->
-        </div>
-        <!-- /container -->
-      </section>
-      <!-- /wrapper -->
-    </section>
+                                             <!-- fin  -->
+                                           </div>
+                                         </div>
+                                       </div>
+                                       </div>
+
+                                     <!-- fin de la fenetre modal -->
+                                       <a href="" class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vraiment supprimer ?')"><i class="fa fa-window-close" aria-hidden="true"></i> {{'Supprimer'|trans}}</a>
+                                   </td>
+                               </tr>
+                             </tbody>
+              </table>
+
+             </div>
+
+
+         </div>
+         <!--  /col-lg-12 -->
+       </div>
+       <!--  /row -->
+     </section>
+            <!-- fin -->
+
+           </div>
+
+         </div>
+         <!-- /row -->
+       </div>
+       <!-- /container -->
+     </section>
+     <!-- /wrapper -->
+   </section>
 
 
 {% endblock %}
@@ -266,39 +266,37 @@
 {% block scripts %}
 
 <script>
-        $(document).ready(function() {
-          $("#signupForm").validate({
-            rules: {
-              niveau: "required",
-              fonction: "required",
-              nom: {
-                required:true,
-                minlength: 2
-              },
-              password: {
-                required:true,
-                minlength: 6
-              }
-            },
-            messages: {
-              nom: {
-                required: "<span style='color:#dd4f43;'>&nbsp;&nbsp;&nbsp; &nbsp; {{'Le nom'|trans}}</span>",
-                minlength: "<span style='color:#dd4f43;'>2 {{'caractères minimum'|trans}}</span>"
-              },
+       $(document).ready(function() {
+         $("#signupForm").validate({
+           rules: {
+             niveau: "required",
+             fonction: "required",
+             nom: {
+               required:true,
+               minlength: 2
+             },
+             password: {
+               required:true,
+               minlength: 6
+             }
+           },
+           messages: {
+             nom: {
+               required: "<span style='color:#dd4f43;'>&nbsp;&nbsp;&nbsp; &nbsp; {{'Le nom'|trans}}</span>",
+               minlength: "<span style='color:#dd4f43;'>2 {{'caractères minimum'|trans}}</span>"
+             },
 
-              password: {
-                required: "<span style='color:#dd4f43;'>{{'Mot de passe'|trans}}</span>",
-                minlength: "<span style='color:#dd4f43;'>6 {{'caractères minimum'|trans}}</span>"
-              },
+             password: {
+               required: "<span style='color:#dd4f43;'>{{'Mot de passe'|trans}}</span>",
+               minlength: "<span style='color:#dd4f43;'>6 {{'caractères minimum'|trans}}</span>"
+             },
 
 
-              fonction: "<span style='color:#dd4f43;'>{{'La fonction'|trans}}</span>",
-              niveau: "<span style='color:#dd4f43;'>{{'Le niveau'|trans}}</span>"
-            }
-          });
-        });
+             fonction: "<span style='color:#dd4f43;'>{{'La fonction'|trans}}</span>",
+             niveau: "<span style='color:#dd4f43;'>{{'Le niveau'|trans}}</span>"
+           }
+         });
+       });
 
-    </script>
+   </script>
 {% endblock %}
-
-

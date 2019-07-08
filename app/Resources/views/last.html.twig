@@ -2,9 +2,9 @@
 <html xmlns:og="http://ogp.me/ns#">
     <head>
         <meta charset="utf-8">
-        
+
         <title>{% block title %}{% endblock %} </title>
-        
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="copyright" content="Dikaki.com Copyright ">
         <meta name="language" content="fr">
@@ -25,32 +25,31 @@
         <meta name="twitter:site" content="@dikaki">
         <meta name="twitter:creator" content="@dikaki">
 
-        {% block style %}
-    <style type="text/css">
-        a:visited{
-         color:#8F8F8F !important;
-        }
+        {% block style %} {% endblock %}
 
-        .navbar.navbar-main .navbar-nav .open .dropdown-menu>li>a,.navbar .navbar-nav .open .dropdown-menu {
-            color:#8F8F8F !important;
-            outline:none;
-            z-index:5;
-        }
-        .navbar.navbar-main .navbar-nav .open .dropdown-menu>li:hover > a {
-            background-color:transparent;
-            color:#24440d !important;
-        }
-    </style>
-    {% endblock %}
-        
         {% stylesheets filter='cssrewrite'
-                    'css/vendor/bootstrap-social.css'
-                    'css/vendor/bootstrap.min.css'
-                    'css/vendor/buttons.css'
-                    'css/style.css'         
+		            'css/vendor/bootstrap-social.css'
+		            'css/vendor/bootstrap.min.css'
+		            'css/vendor/buttons.css'
+		            'css/style.css'
         %}
             <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
         {% endstylesheets %}
+
+        <style type="text/css">
+        .img_pied_responive{
+            display: block;
+            width: 60px !important;
+            margin-top: 9px;
+            margin-bottom: 7px;
+            float: right !important;
+            margin-right: 40px;
+            clear: both;
+         }
+        .img_pied_responive > img{
+            border-radius: 5px;
+        }
+    </style>
 
     </head>
     <body>
@@ -189,7 +188,7 @@
                             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                                 <h3 class="title_footer"> {{'Nos informations'|trans}}</h3>
                                 <p class="contact_para">
-                                    {{'Ouverture: Lun. - Ven.'|trans}}:
+									{{'Ouverture: Lun. - Ven.'|trans}}:
                                     {{'9h - 18h'|trans}}.
                                 </p>
                                 <p class="contact_para">
@@ -223,31 +222,34 @@
                         </div>
                     </div>
                     <div class="container">
-                <div class="row">
-                    <div class="small_footer">
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <p class="copy_right pull-left">&copy; 2018 Copyright - DIKAKI SERDI {{'Cameroun'|trans}}  </p>
+                    <div class="row">
+                        <div class="small_footer">
+                            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                                <p class="copy_right pull-left" style="display: inline-block;vertical-align: top;color: #22242a !important;">&copy; 2018 Copyright - DIKAKI SERDI {{'Cameroun'|trans}}  </p>
+                                <a href="{{ path('dkk_app_cgu') }}" class="cgu" style="display: inline-block;vertical-align: top;margin-left: 40px;color: #22242a !important;">{{'Mentions légales'|trans}}</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <a href="{{ path('dkk_app_homepage') }}" class="img_pied_responive">
+                                  <img src="{{asset('img/logo_prestataire.png')}}" class="img-responsive">
+                                </a>
+                            </div>
+                             <p style="clear: both !important;margin-top: 30px !important"></p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <a href="{{ path('dkk_app_cgu') }}" style="color: #22242a !important;" class="cgu pull-right">{{'Mentions légales'|trans}}</a>
-                        </div>
-                        <p style="clear: both !important"></p>
                     </div>
                 </div>
-            </div>
                 </div>
             </footer>
         </div>
         {% javascripts filter='jsqueeze'
-                'js/vendor/jquery.min.js'
-                'js/vendor/bootstrap.min.js'
-                'js/vendor/choix.js' 
-                'js/news.js'  
+	            'js/vendor/jquery.min.js'
+	            'js/vendor/bootstrap.min.js'
+	            'js/vendor/choix.js'
+	            'js/news.js'
         %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
-        
+
         {% block scripts %}{% endblock %}
-        
+
     </body>
 </html>

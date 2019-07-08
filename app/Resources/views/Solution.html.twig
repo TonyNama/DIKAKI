@@ -9,7 +9,7 @@
       <title>{% block title %}{% endblock %}</title>
 
       <!-- debut du partage vers facebook -->
-            
+
               <meta property="og:url" content=""><!-- url complete de la page-->
               <meta property="og:title" content=""><!-- le titre complete de la page-->
               <meta property="og:description" content=""><!-- la description complete de la page-->
@@ -31,19 +31,20 @@
 
 	  {% block style %}
     <style type="text/css">
-        a:visited{
-         color:#8F8F8F !important;
-        }
 
-        .navbar.navbar-main .navbar-nav .open .dropdown-menu>li>a,.navbar .navbar-nav .open .dropdown-menu {
-            color:#8F8F8F !important;
-            outline:none;
-            z-index:5;
-        }
-        .navbar.navbar-main .navbar-nav .open .dropdown-menu>li:hover > a {
-            background-color:transparent;
-            color:#24440d !important;
-        }
+
+        .img_pied_responive{
+                    display: block;
+                    width: 60px !important;
+                    margin-top: 9px;
+                    margin-bottom: 7px;
+                    float: right !important;
+                    margin-right: 40px;
+                    clear: both;
+                }
+                .img_pied_responive > img{
+                    border-radius: 5px;
+                }
     </style>
     {% endblock %}
 	  {% stylesheets filter='cssrewrite'
@@ -57,9 +58,9 @@
         %}
             <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
 
-            
 
-          
+
+
         {% endstylesheets %}
     </head>
 
@@ -201,7 +202,7 @@
 			</header><!-- /header -->
 			<!-- End Header -->
 			{% block body %}
-			
+
 			{% endblock %}
 			<!-- debut du contenaire pour les service -->
             <section class="testimonials py-5 text-white px-1 px-md-5 margin-top-xl">
@@ -318,8 +319,10 @@
                                 </p>
                                 <form method="post" action="" id="register_form" autocomplete="off">
                                     <span class="val_email_"></span>
-                                    <input type="text" name="newsletter" id="letter" class="letter_form form-control" placeholder="{{'Votre adresse E-mail'|trans}}">
-                                    <p><button type="submit"  class="send_newsletter green button_send">{{'Envoyer'|trans}}</button></p>
+                                   <div class="newsletter_wrapper">
+                                      <input type="text" name="newsletter" class="letter_form form-control" placeholder="{{'Votre adresse E-mail'|trans}}">
+                                      <button type="submit" id="" class="send_newsletter_infos"><i class="fa fa-paper-plane "></i></button>
+                                  </div>
                                 </form>
 
                             </div>
@@ -364,7 +367,7 @@
                                     restent disponibles et réagissent rapidement à votre sollicitation.{% endtrans %}
                                 </p>
                                  <p>
-                                    <a href="{{ path('dkk_app_contact') }}" class="btn_contact green block">{{'Contactez-nous'|trans}}</a>
+                                    <a href="{{ path('dkk_app_contact') }}" class="footer_items_">{{'Contactez-nous'|trans}}</a>
                                 </p>
 
 
@@ -374,42 +377,46 @@
                                     {{'Trouver un rendez-vous'|trans}}
                                 </h3>
                                 <p>
-                                    <a href="{{ path('dkk_professionnel_choix') }}" class="event_rdv green">{{'Professionnel'|trans}}</a>
+                                    <a href="{{ path('dkk_professionnel_choix') }}" class="footer_items_">{{'Professionnel'|trans}}</a>
                                 </p>
                                 <h3 class="title_footer">
 									{{'Trouver un évènement'|trans}}
                                 </h3>
                                 <p>
-                                    <a href="{{ path('dkk_app_evenement') }}" class="event_rdv green">{{'Evènement'|trans}}</a>
+                                    <a href="{{ path('dkk_app_evenement') }}" class="footer_items_">{{'Evènement'|trans}}</a>
                                 </p>
                                 <h3 class="title_footer">
                                     {{'Communauté'|trans}}
                                 </h3>
                                 <p>
-                                    <a href="{{ path('dkk_app_partenaire') }}" class="btn_contact green block" style="text-align: center;width: 100% !important">{{'Devenir partenaire'|trans}}</a>
+                                    <a href="{{ path('dkk_app_partenaire') }}" class="footer_items_">{{'Devenir partenaire'|trans}}</a>
                                 </p>
 
                                 <p>
-                                    <a href="{{path('dkk_app_blog')}}" class="btn_contact green block" style="text-align: center;width: 100% !important">{{'Blog et Actualités'|trans}}</a>
+                                    <a href="{{path('dkk_app_blog')}}" class="footer_items_">{{'Blog et Actualités'|trans}}</a>
                                 </p>
-                                
+
                             </div>
                          </div>
                     </div>
                </div>
                 <div class="container">
-                <div class="row">
-                    <div class="small_footer">
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <p class="copy_right pull-left">&copy; 2018 Copyright - DIKAKI SERDI {{'Cameroun'|trans}}  </p>
+                    <div class="row">
+                        <div class="small_footer">
+                            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                                <p class="copy_right pull-left" style="display: inline-block;vertical-align: top;color: #22242a !important;">&copy; 2018 Copyright - DIKAKI SERDI {{'Cameroun'|trans}}  </p>
+                                <a href="{{ path('dkk_app_cgu') }}" class="cgu" style="display: inline-block;vertical-align: top;margin-left: 40px;color: #22242a !important;">{{'Mentions légales'|trans}}</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <a href="{{ path('dkk_app_homepage') }}" class="img_pied_responive">
+                                  <img src="{{asset('img/logo_prestataire.png')}}" class="img-responsive">
+                                </a>
+                            </div>
+                             <p style="clear: both !important;margin-top: 30px !important"></p>
+
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <a href="{{ path('dkk_app_cgu') }}" style="color: #22242a !important;" class="cgu pull-right">{{'Mentions légales'|trans}}</a>
-                        </div>
-                        <p style="clear: both !important"></p>
                     </div>
                 </div>
-            </div>
             </div>
         </footer>
     <!-- fin de la section footer -->
@@ -420,16 +427,16 @@
             'js/slider.js'
             'js/vendor/slick-carousel_1.8.1_slick.min.js'
             'js/vendor/testimonial-slider.js'
-             'js/news.js' 
+             'js/news.js'
             'js/app.js'
-            
+
         %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
-        
+
         {% block scripts %}
-		
-        
+
+
         {% endblock %}
     </body>
 </html>

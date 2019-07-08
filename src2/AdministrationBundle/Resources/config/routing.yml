@@ -1,6 +1,6 @@
 dkk_administration_homepage:
     path:    /parametres/{id}
-    defaults:  
+    defaults:
         _controller: DKKAdministrationBundle:Administration:index
         id:    0
     requirements:
@@ -21,11 +21,15 @@ dkk_administration_restrictions:
         id:          0
     requirements:
         id:    \d
-    
-dkk_administration_notification:
-    path:     /notifications
-    defaults: { _controller: DKKAdministrationBundle:Administration:notification }
-        
+
+#dkk_administration_notification_interne:
+    #path:     /notification_interne
+   # defaults: { _controller: DKKAdministrationBundle:Administration:notification_interne }
+
+#dkk_administration_notification_client:
+   # path:     /notification_client
+    #defaults: { _controller: DKKAdministrationBundle:Administration:notification_client }
+
 #dkk_administration_prestataire:
    # path:     /prestataire/{id}
     #defaults:
@@ -33,7 +37,7 @@ dkk_administration_notification:
         #id:          0
     #requirements:
         #id:    \d
-    
+
 #dkk_administration_prestation:
     #path:     /prestation/{id}
     #defaults:
@@ -41,10 +45,10 @@ dkk_administration_notification:
         #id:          0
    # requirements:
         #id:    \d
-    
+
 dkk_administration_payement:
     path:     /payement/{id}
-    defaults: 
+    defaults:
         _controller: DKKAdministrationBundle:Administration:client
         id:          0
     requirements:
@@ -52,7 +56,7 @@ dkk_administration_payement:
 
 dkk_administration_personnel:
     path:     /personnel
-    defaults: 
+    defaults:
         _controller: DKKAdministrationBundle:Administration:personnel
 
 dkk_administration_role:
@@ -60,13 +64,13 @@ dkk_administration_role:
     defaults:
         _controller: DKKAdministrationBundle:Administration:role
         id:          0
-    requirements:    
+    requirements:
         id:    \d
-    
+
 dkk_administration_statistique:
     path:     /statistique
     defaults: {_controller: DKKAdministrationBundle:Administration:statistique }
-    
+
 dkk_administration_deconnexion:
     path:     /deconnexion
     defaults: { _controller: DKKAdministrationBundle:Administration:deconnexion }
@@ -75,7 +79,7 @@ dkk_administration_deconnexion:
 dkk_administration_enregistrement_parametres:
     path:     /parametre/add
     defaults: { _controller: DKKAdministrationBundle:Enregistrement:addParametresBase }
-    
+
 dkk_administration_enregistrement_parametres_specifiques:
     path:    /parametre/spec/add
     defaults : { _controller: DKKAdministrationBundle:Enregistrement:addParametreSpecifique }
@@ -83,7 +87,7 @@ dkk_administration_enregistrement_parametres_specifiques:
 dkk_administration_enregistrement_restriction:
     path:    /restriction/add
     defaults: { _controller: DKKAdministrationBundle:Enregistrement:addRestriction }
-    
+
 dkk_administration_enregistrement_notification_email:
     path:     /notitfication/enregistrer/email
     defaults: { _controller: DKKAdministrationBundle:Enregistrement:notificationEmail }
@@ -91,15 +95,15 @@ dkk_administration_enregistrement_notification_email:
 dkk_administration_enregistrement_notifications_sms:
     path:     /notitfication/enregistrer/sms
     defaults: { _controller: DKKAdministrationBundle:Enregistrement:notificationSms }
-    
+
 dkk_administration_enregistrement_prestataire:
     path:     /prestataire/add
     defaults: { _controller: DKKAdministrationBundle:Enregistrement:addPrestataire }
-    
+
 dkk_administration_enregistrement_prestation:
     path:    /prestation/add
     defaults: { _controller: DKKAdministrationBundle:Enregistrement:addPrestation }
-   
+
 dkk_administration_enregistrement_client:
     path:     /paiement/add
     defaults: { _controller: DKclientKAdministrationBundle:Enregistrement:addPaiement }
@@ -107,61 +111,61 @@ dkk_administration_enregistrement_client:
 dkk_administration_enregistrement_role:
     path:     /role/add
     defaults: { _controller: DKKAdministrationBundle:Enregistrement:addRole }
-    
+
 #suppression
 dkk_administration_suppression_parametres:
     path:     /paramatres/delete/{id}
     defaults: { _controller: DKKAdministrationBundle:Suppression:deleteParametre }
-    
+
 dkk_administration_suppression_parametres_specfifique:
     path:     /paramatres/spec/delete/{id}
     defaults: { _controller: DKKAdministrationBundle:Suppression:deleteParametreSpecifique }
-    
+
 dkk_administration_suppression_restriction:
     path:     /restriction/delete/{id}
     defaults: { _controller: DKKAdministrationBundle:Suppression:deleteRestriction }
-    
+
 dkk_suppression_notifications:
     path:     /notifications/supprimer/{id}
     defaults: { _controller: DKKAdministrationBundle:Suppression:notifications }
-    
+
 dkk_administration_suppression_prestataire:
     path:     /prestataire/delete/{id}
     defaults: { _controller: DKKAdministrationBundle:Suppression:deletePrestataire }
-    
+
 dkk_administration_suppression_prestation:
     path:     /prestation/delete/{id}
     defaults: { _controller: DKKAdministrationBundle:Suppression:deletePrestation }
-    
+
 dkk_administration_suppression_paiement:
     path:     /paiement/delete/{id}
     defaults: { _controller: DKKAdministrationBundle:Suppression:deletePaiement }
-    
+
 dkk_administration_suppression_role:
     path:     /role/delete/{id}
     defaults: { _controller: DKKAdministrationBundle:Suppression:deleteRole }
 
-#modification    
+#modification
 dkk_administration_modification_parametres:
     path:     /parametre/update/{id}
     defaults: { _controller: DKKAdministrationBundle:Modification:updateParametre }
-    
+
 dkk_administration_modification_restriction:
     path:     /restriction/update/{id}
     defaults: { _controller: DKKAdministrationBundle:Modification:updateRestriction }
-    
+
 dkk_modification_notifications:
     path:     /notifications/modifier/{id}
     defaults: { _controller: DKKAdministrationBundle:Modification:notifications }
-    
+
 dkk_administration_modification_prestataire:
     path:     /prestataire/update/{id}
     defaults: { _controller: DKKAdministrationBundle:Modification:updatePrestataire }
-    
+
 dkk_administration_modification_prestation:
     path:     /prestation/update/{id}
     defaults: { _controller: DKKAdministrationBundle:Modification:updatePrestation }
-    
+
 dkk_administration_modification_paiement:
     path:     /paiement/update/{id}
     defaults: { _controller: DKKAdministrationBundle:Modification:updatePaiement }
@@ -169,14 +173,14 @@ dkk_administration_modification_paiement:
 dkk_administration_modification_role:
     path:     /role/update/{id}
     defaults: { _controller: DKKAdministrationBundle:Modification:updateRole }
-    
+
 #New Front
 dkk_administration_:
     path:     /
     defaults: { _controller: DKKAdministrationBundle:Front:updateRole }
 
 
-#mes propre route  
+#mes propre route
 dkk_administration_index:
     path:     /index
     defaults: { _controller: DKKAdministrationBundle:Front:index }
@@ -189,15 +193,15 @@ dkk_administration_corbeille:
     path:     /corbeille
     defaults: { _controller: DKKAdministrationBundle:Front:corbeille }
 
-dkk_administration_email_compose: 
+dkk_administration_email_compose:
     path:     /email_compos
-    defaults: { _controller: DKKAdministrationBundle:Front:email_compose } 
+    defaults: { _controller: DKKAdministrationBundle:Front:email_compose }
 
-dkk_administration_email_send: 
+dkk_administration_email_send:
     path:     /email_send
     defaults: { _controller: DKKAdministrationBundle:Front:email_send }
 
-dkk_administration_email_send_view:  
+dkk_administration_email_send_view:
     path:     /email_send_view
     defaults: { _controller: DKKAdministrationBundle:Front:email_send_view }
 
@@ -224,11 +228,11 @@ dkk_administration_autorisation:
 dkk_administration_restriction:
     path:     /restriction
     defaults: { _controller: DKKAdministrationBundle:Front:restriction }
- 
+
 dkk_administration_modifier_autorisation:
     path:     /modifier_autorisation
     defaults: { _controller: DKKAdministrationBundle:Front:modifier_autorisation }
- 
+
 dkk_administration_notification_interne:
     path:     /notification_interne
     defaults: { _controller: DKKAdministrationBundle:Front:notification_interne }
@@ -347,7 +351,7 @@ dkk_administration_diagramme:
 dkk_administration_compte:
     path:     /compte
     defaults: { _controller: DKKAdministrationBundle:Front:compte }
-    
+
 dkk_administration_agenda:
     path:     /agenda
     defaults: { _controller: DKKAdministrationBundle:Front:agenda }
@@ -405,6 +409,10 @@ dkk_administration_agenda_presence:
 dkk_administration_agenda_encaissement:
     path:     /agenda_encaissement
     defaults: { _controller: DKKAdministrationBundle:Front:agenda_encaissement }
+
+dkk_administration_voir_rdv:
+    path:     /voir_rdv
+    defaults: { _controller: DKKAdministrationBundle:Front:voir_rdv }
 
 
 

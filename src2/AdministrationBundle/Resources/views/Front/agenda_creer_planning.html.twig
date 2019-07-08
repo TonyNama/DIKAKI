@@ -1,155 +1,165 @@
-    {% extends '::admin_template.html.twig' %}
+{% extends '::admin_template.html.twig' %}
 
-{% block title %}Planning des agendas : Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+{% block title %}{{'Planning des agendas'|trans}} - {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
- <style>
-    
-        .sky-form{
-            box-shadow: none !important;
-        }
+<style>
 
-         table, th{
-          text-align: center;
-        }
+    .sky-form{
+        box-shadow: none !important;
+    }
 
-    </style>
+     table, th{
+      text-align: center;
+    }
+
+    .mymodalbox2{
+      font-size: 1.1em !important;
+      margin-top:4px !important;
+    }
+</style>
 {% endblock %}
 
 {%  block body %}
-     <!-- debut du contenu -->
-    <section id="main-content">
-      <section class="wrapper site-min-height">
-        <div class="row mt">
+ <!-- debut du contenu -->
+<section id="main-content">
+  <section class="wrapper site-min-height">
+    <div class="row mt">
 
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <h2 class="name_structure">Cabinet médical la Grâce</h2>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <h2 class="name_structure">Planning</h2>
-            </div>
-          <!-- /col-lg-12 -->
-          <div class="col-lg-12 mt">
-            <div class="row content-panel">
-             <!-- debut -->
-        <section class="wrapper site-min-height">
-        <div class="row">
-          <div class="col-lg-12">
-             <select class="form-control form_width">
-                <option>Dr Ndewa</option>
-                 <option>Dr Fotso</option>
-                 <option>Dr Melingui</option>
-             </select>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <h2 class="name_structure">{{'Planning'|trans}}</h2>
+        </div>
+      <!-- /col-lg-12 -->
+      <div class="col-lg-12 mt">
+        <div class="row content-panel">
+         <!-- debut -->
+    <section class="wrapper site-min-height">
+    <div class="row">
+      <div class="col-lg-12">
+         <select class="form-control form_width">
+            <option>Dr Ndewa</option>
+             <option>Dr Fotso</option>
+             <option>Dr Melingui</option>
+         </select>
 
-           <br>
-    
-              <a href="{{path('dkk_administration_agenda')}}" class="re_back_"><i class="fa fa-share"></i> Revenir à l'agenda</a>
-              <p style="clear:both !important"></p>
+       <br>
 
-              
-              <div class="content_menu">
-                 <div class="wrapper_line_one">
-                    <span class="form_search">
-                        <form method="post" action="{{path('dkk_administration_client')}}">
-                            <input type="search" name="" placeholder="Recherche client" class="serach_bx" required>
-                            <button type="submit" class="search_btn"><i class="fa fa-search"></i></button>
-                         </form>
-                    </span>
+          <a href="{{path('dkk_administration_agenda')}}" class="re_back_"><i class="fa fa-share"></i> {{"Revenir à l'agenda"|trans}}</a>
+          <p style="clear:both !important"></p>
 
-                     <a href="{{path('dkk_administration_agenda_creer_client')}}" class="btn add_agenda">Nouveau client</a>
-                     <a href="{{path('dkk_administration_agenda_creer_planning')}}" class="mymodalbox">Planning </a>
-                     <a href="{{path('dkk_administration_agenda_prendre_rdv')}}" class="btn rdv_agenda"> Prendre  RDV</a>
-                     <a href="{{path('dkk_administration_agenda_modifier_rdv')}}" class="btn modifier_agenda">  Modifier   RDV</a>
-                     <a href="{{path('dkk_administration_agenda_presence')}}" class="btn precence_agenda">  Présence</a>
-                     <a href="{{path('dkk_administration_agenda_encaissement')}}" class="btn encaissement">  Encaissement</a>
+
+          <div class="content_menu">
+
+             <div class="wrapper_line_one" style="height: 30px !important;">
+
+                 <div class="pull-left">
+                    <a href="{{path('dkk_administration_agenda_creer_client')}}" class="mymodalbox2">{{'Nouveau client'|trans}} </a>
+                   <a href="{{path('dkk_administration_agenda_creer_planning')}}" class="mymodalbox2">{{'Planning'|trans}}</a>
+                   <a href="{{path('dkk_administration_agenda_prendre_rdv')}}" class="mymodalbox2">{{'Prendre RDV'|trans}}</a>
+                    <a href="{{path('dkk_administration_agenda_modifier_rdv')}}" class="mymodalbox2">{{'Modifier RDV'|trans}}</a>
+                   <a href="{{path('dkk_administration_agenda_presence')}}" class="mymodalbox2">{{'Présence'|trans}}</a>
+                   <a href="{{path('dkk_administration_agenda_encaissement')}}" class="mymodalbox2">{{'Encaissement'|trans}}</a>
+                 </div>
+                 <div class="pull-right">
+
                  </div>
 
+             </div>
+              <!-- debut de l'affichage du calandrier au click -->
+              <div class="affichage_calandar_3">
+
               </div>
-
-              <div class="wrapper_aganda_">
-                   <h3 class="cration_client">Planning des rdv du cabinet médical la Grâce</h3>
-                   <div class="">
-
-                   <br><br>
-                    <div class="pull-left">
-                        <span class="journne_du_">Journée du 15 décembre 2018</span>
-                        <select name="" class="form-control" style="display: inline-block;vertical-align: middle !important;width: 150px !important;margin-left: 20px;">
-                            <option value="">Aujourd'hui</option>
-                            <option value="">Par date</option>
-                        </select>
-                    </div>
-                    <div class="pull-right">
-                       <a href="" class="btn btn-success btn-sm"><i class="fa fa-print"></i> Imprimer </a>
-                    </div>
-    <br><br><br>
-
-                <table class="table table-bordered table-striped table-condensed">
-                  <thead>
-                   <tr style="background-color: #26440d !important;color: #fff !important;">
-                      <th>N°</th>
-                      <th>Heure</th>
-                      <th>Nom </th>
-                      <th>Prenom </th>
-                      <th>Acte </th>
-                      <th>Ressource </th>
-                      <th>Statut </th>
-                      <th>Observation </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td> 1 </td>
-                      <td> 10h 30 </td>
-                      <td> Ebolo Ebolo </td>
-                      <td> Guy Sthephane </td>
-                      <td> Consultation générale</td>
-                      <td> Dr Essomba</td>
-                      <td> Présent</td>
-                      <td> Rien a signaler pour le moment</td>
-                    </tr>
-                     <tr>
-                      <td> 1 </td>
-                      <td> 10h 30 </td>
-                      <td> Ebolo Ebolo </td>
-                      <td> Guy Sthephane </td>
-                      <td> Consultation générale</td>
-                      <td> Dr Essomba</td>
-                      <td> Présent</td>
-                      <td> Rien a signaler pour le moment</td>
-                    </tr>
-                    <tr>
-                      <td> 1 </td>
-                      <td> 10h 30 </td>
-                      <td> Ebolo Ebolo </td>
-                      <td> Guy Sthephane </td>
-                      <td> Consultation générale</td>
-                      <td> Dr Essomba</td>
-                      <td> Présent</td>
-                      <td> Rien a signaler pour le moment</td>
-                    </tr>
-                  </tbody>
-                </table>
-                   </div>
-              </div>
-
+              <!-- debut de l'affichage du calandrier au click -->
 
           </div>
 
-          <!--  /col-lg-12 -->
-        </div>
-        <!--  /row -->
-      </section>
-             <!-- fin -->
+          <div class="wrapper_aganda_">
+               <h3 class="cration_client">{{'Planning Cabinet médical la Grâce'|trans}}</h3>
+               <div class="">
 
-            </div>
+               <br><br>
+                <div class="pull-left">
+                    <span class="journne_du_">{{'Journée du 15 décembre 2018'|trans}}</span>
+                    <select name="" class="form-control" style="display: inline-block;vertical-align: middle !important;width: 150px !important;margin-left: 20px;">
+                        <option value="">{{"Aujourd'hui"|trans}}</option>
+                        <option value="">{{'Par date'|trans}}</option>
+                    </select>
+                </div>
+                <div class="pull-right">
+                   <a href="" class="btn btn-success btn-sm"><i class="fa fa-print"></i> {{'Imprimer'|trans}} </a>
+                </div>
+<br><br><br>
 
+            <table class="table table-bordered table-striped table-condensed">
+              <thead>
+               <tr style="background-color: #26440d !important;color: #fff !important;">
+                  <th>N°</th>
+                  <th>{{'Heure'|trans}}</th>
+                  <th>{{'Nom'|trans}} </th>
+                  <th>{{'Prénom'|trans}} </th>
+                  <th>{{'Acte'|trans}} </th>
+                  <th>{{'Ressource'|trans}} </th>
+                  <th>{{'Statut'|trans}} </th>
+                  <th>{{'Observation'|trans}} </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> 1 </td>
+                  <td> 10h 30 </td>
+                  <td> Ebolo Ebolo </td>
+                  <td> Guy Sthephane </td>
+                  <td> {{'Consultation générale'|trans}}</td>
+                  <td> Dr Essomba</td>
+                  <td> {{'Présent'|trans}}</td>
+                  <td> {{'Rien a signaler pour le moment'|trans}}</td>
+                </tr>
+                 <tr>
+                  <td> 1 </td>
+                  <td> 10h 30 </td>
+                  <td> Ebolo Ebolo </td>
+                  <td> Guy Sthephane </td>
+                  <td> {{'Consultation générale'|trans}}</td>
+                  <td> Dr Essomba</td>
+                  <td> {{'Présent'|trans}}</td>
+                  <td> {{'Rien a signaler pour le moment'|trans}}</td>
+                </tr>
+                <tr>
+                  <td> 1 </td>
+                  <td> 10h 30 </td>
+                  <td> Ebolo Ebolo </td>
+                  <td> Guy Sthephane </td>
+                  <td> {{'Consultation générale'|trans}}</td>
+                  <td> Dr Essomba</td>
+                  <td> {{'Présent'|trans}}</td>
+                  <td> {{'Rien a signaler pour le moment'|trans}}</td>
+                </tr>
+              </tbody>
+            </table>
+               </div>
           </div>
-          <!-- /row -->
+
+
+      </div>
+
+      <!--  /col-lg-12 -->
+    </div>
+    <!--  /row -->
+  </section>
+         <!-- fin -->
+
         </div>
-        <!-- /container -->
-      </section>
-      <!-- /wrapper -->
-    </section>
+
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </section>
+  <!-- /wrapper -->
+</section>
 
 {% endblock %}
 
@@ -157,4 +167,3 @@
 
 
 {% endblock %}
-

@@ -1,14 +1,14 @@
-  {% extends '::last.html.twig' %}
+{% extends '::last.html.twig' %}
 
 {% block title %}{{"Mentions légales"|trans}} : Dikaki{% endblock %}
 
 {% block style %}
 
 <style type="text/css">
-	.about_content{
-	margin:20px auto !important;
-	width:80% !important;
-	padding:10px;
+.about_content{
+margin:20px auto !important;
+width:80% !important;
+padding:10px;
 }
 </style>
 
@@ -19,80 +19,79 @@
 
 
 
-      <div class="wrapper_mention">
-                <h1 class="h1_mention">{{"Mentions Légales"|trans}} </h1>
-        </div>
-        
-    	<div class="container-fluid">
-            <div class="container border_container">
-                <div class="col-xs-12 col-ms-6 col-md-6 col-lg-6 line_separation_col">
-                    <p class="editeur_website">{{'Editeur du site'|trans}}</p>
-                    
-                    <span class="detail_mention">{{"La plateforme de services en ligne"|trans}} <b>www.dikaki-rdv.com</b> </span>
-                    <span class="detail_mention">{{"Est éditée et exploitée par la société :"|trans}} <span>SERDI Sarl </span> {{'propriétaire'|trans}}.</span>
-                    <span class="detail_mention"><span>{{"Siège Social"|trans}}</span> : {{'situé à Odza Yaoundé'|trans}}</span>
-                    <span class="detail_mention">{{"Route Aéroport International  de Yaoundé Nsimalen"|trans}}</span>
-                    <span class="detail_mention"><span> {{'Boîte Postale'|trans}}</span> : 11007 Yaoundé-Cameroun</span>
-                    <span class="detail_mention"><span>{{"Téléphone"|trans}}</span> : +237 655 010 808 / +237 243 001 661</span>
-                    <span class="detail_mention"><span>{{"Immatriculée au RCCM sous le N°"|trans}} </span>: 2001.X.27</span>
-                    <span class="detail_mention"><span>{{"SARL  au capital de"|trans}} </span>: 10.000.000 frs CFA,</span>
-                    <span class="detail_mention"><span>{{"Numéro Contribuable"|trans}}</span> : M 060100012205 Z</span>
-                    <br>
-                    
-                <p class="editeur_website">{{'Propriété intellectuelle'|trans}}</p>
-                    <span class="detail_mention"><span>{{'Marque déposée (OAPI) N°'|trans}} </span>:</span>
-                    <br>
-                    <span class="detail_mention">{{"Tous les contenus présent tel que les textes, graphiques, logos, image, photographies présent sur ce site sont, sauf mention contraire, la propriété de SERDI Sarl."|trans}}</span>
-                    <span class="detail_mention"><span>DIKAKI</span> {{"est une marque déposée."|trans}}</span>
-                    <br>
-                    
-                </div>
-                <div class="col-xs-12 col-ms-6 col-md-6 col-lg-6">
-                     <p class="editeur_website">{{'Direction de Publication.'|trans}}</p>
-                     <span class="detail_mention">SERDI {{"Sarl, Gérant."|trans}}</span>
-                     <span class="detail_mention"><span>{{'Tel'|trans}}</span> :  +237 699 329 171</span>
-                     <span class="detail_mention"><span>{{'Email'|trans}}</span> :<a href="mailto:info@serdi-cm.com" title="info@serdi-cm.com"> info@serdi-cm.com</a></span>
-                     
-                     <p class="editeur_website">{{'Responsable de Projet.'|trans}}</p>
-                     <span class="detail_mention">NAMA NYAM Guy Anthony</span>
-                     <span class="detail_mention"><span>{{'Tel'|trans}}</span> : +237 670 311 614 </span>
-                     <span class="detail_mention"><span>{{'E-mail'|trans}}</span>: <a href="mailto:nama@serdi-cm.com" title="Laissez moi un message">nama@serdi-cm.com</a></span>
-                     <br>
-                      <p class="editeur_website"> {{'Hébergeur des  services.'|trans}} </p>
-                      <span class="detail_mention" id="hosting_name">Bleu Host, <span style="font-weight: normal !important;">1500 North Priest Drive, <p></p>
+    <div class="wrapper_mention">
+              <h1 class="h1_mention">{{"Mentions Légales"|trans}} </h1>
+      </div>
 
-                      2nd Floor, Tempe, AZ 85281. </span></span>
-                     
-                </div>
-            </div>
+    <div class="container-fluid">
+          <div class="container border_container">
+              <div class="col-xs-12 col-ms-6 col-md-6 col-lg-6 line_separation_col">
+                  <p class="editeur_website">{{'Editeur du site'|trans}}</p>
+
+                  <span class="detail_mention">{{"La plateforme de services en ligne"|trans}} <b>www.dikaki-rdv.com</b> </span>
+                  <span class="detail_mention">{{"Est éditée et exploitée par la société :"|trans}} <span>SERDI Sarl </span> {{'propriétaire'|trans}}.</span>
+                  <span class="detail_mention"><span>{{"Siège Social"|trans}}</span> : {{'situé à Odza Yaoundé'|trans}}</span>
+                  <span class="detail_mention">{{"Route Aéroport International  de Yaoundé Nsimalen"|trans}}</span>
+                  <span class="detail_mention"><span> {{'Boîte Postale'|trans}}</span> : 11007 Yaoundé-Cameroun</span>
+                  <span class="detail_mention"><span>{{"Téléphone"|trans}}</span> : +237 655 010 808 / +237 243 001 661</span>
+                  <span class="detail_mention"><span>{{"Immatriculée au RCCM sous le N°"|trans}} </span>: 2001.X.27</span>
+                  <span class="detail_mention"><span>{{"SARL  au capital de"|trans}} </span>: 10.000.000 frs CFA,</span>
+                  <span class="detail_mention"><span>{{"Numéro Contribuable"|trans}}</span> : M 060100012205 Z</span>
+                  <br>
+
+              <p class="editeur_website">{{'Propriété intellectuelle'|trans}}</p>
+                  <span class="detail_mention"><span>{{'Marque déposée (OAPI) N°'|trans}} </span>:</span>
+                  <br>
+                  <span class="detail_mention">{{"Tous les contenus présent tel que les textes, graphiques, logos, image, photographies présent sur ce site sont, sauf mention contraire, la propriété de SERDI Sarl."|trans}}</span>
+                  <span class="detail_mention"><span>DIKAKI</span> {{"est une marque déposée."|trans}}</span>
+                  <br>
+
+              </div>
+              <div class="col-xs-12 col-ms-6 col-md-6 col-lg-6">
+                   <p class="editeur_website">{{'Direction de Publication.'|trans}}</p>
+                   <span class="detail_mention">SERDI {{"Sarl, Gérant."|trans}}</span>
+                   <span class="detail_mention"><span>{{'Tel'|trans}}</span> :  +237 699 329 171</span>
+                   <span class="detail_mention"><span>{{'Email'|trans}}</span> :<a href="mailto:info@serdi-cm.com" title="info@serdi-cm.com"> info@serdi-cm.com</a></span>
+
+                   <p class="editeur_website">{{'Responsable de Projet.'|trans}}</p>
+                   <span class="detail_mention">NAMA NYAM Guy Anthony</span>
+                   <span class="detail_mention"><span>{{'Tel'|trans}}</span> : +237 670 311 614 </span>
+                   <span class="detail_mention"><span>{{'E-mail'|trans}}</span>: <a href="mailto:nama@serdi-cm.com" title="Laissez moi un message">nama@serdi-cm.com</a></span>
+                   <br>
+                    <p class="editeur_website"> {{'Hébergeur des  services.'|trans}} </p>
+                    <span class="detail_mention" id="hosting_name">Bleu Host, <span style="font-weight: normal !important;">1500 North Priest Drive, <p></p>
+
+                    2nd Floor, Tempe, AZ 85281. </span></span>
+
+              </div>
+          </div>
 
 
-            <div class="container">
-                <div class="about_content">
-                    <p class="txt_commencez">  << {{'Prise de rendez-vous & Agenda en ligne'|trans}}  >> </p>
-                    <span class="detail_text_commencez">{{"Avec Dikaki, donnez dès aujourd'hui la possibilité à vos patients / clients de prendre rendez-vous ou de faire une réservation et payer leurs consultations / prestations directement en ligne."|trans}}</span>
-                    <p style="clear: both !important"></p>
-                      <div class="div_btn_contact">
-                          <a href="{{ path('dkk_professionnel_inscription') }}" class="btn_contact green block small_p" style="text-align: center;width: 100% !important">{{'Je crée mon compte professionnel'|trans}}</a>
-                      </div>
-          
-                    <p style="clear: both;"></p>
-                    <p class="call_line call_boutton_down">{{'Appelez au'|trans}} +237 655 010 808</p>
-                    <p class="infos_supple">{{'Du lundi au Vendredi de 09'|trans}} <sup>H</sup> {{'à 18'|trans}}<sup>H</sup></p>
-                       <div class="div_btn_contact">
-                           <a href="{{ path('dkk_app_prendre') }}" class="btn_contact green block small_p" style="text-align: center;width: 100% !important">{{'Je prends RDV avec un conseiller Dikaki'|trans}}</a>
-                       </div>
-                </div>
-            </div>
-            
-        </div>
-    
- 
-            
-               
+          <div class="container">
+              <div class="about_content">
+                  <p class="txt_commencez">  << {{'Prise de rendez-vous & Agenda en ligne'|trans}}  >> </p>
+                  <span class="detail_text_commencez">{{"Avec Dikaki, donnez dès aujourd'hui la possibilité à vos patients / clients de prendre rendez-vous ou de faire une réservation et payer leurs consultations / prestations directement en ligne."|trans}}</span>
+                  <p style="clear: both !important"></p>
+                    <div class="div_btn_contact">
+                        <a href="{{ path('dkk_professionnel_inscription') }}" class="btn_contact green block small_p" style="text-align: center;width: 100% !important">{{'Je crée mon compte professionnel'|trans}}</a>
+                    </div>
+
+                  <p style="clear: both;"></p>
+                  <p class="call_line call_boutton_down">{{'Appelez au'|trans}} +237 655 010 808</p>
+                  <p class="infos_supple">{{'Du lundi au Vendredi de 09'|trans}} <sup>H</sup> {{'à 18'|trans}}<sup>H</sup></p>
+                     <div class="div_btn_contact">
+                         <a href="{{ path('dkk_app_prendre') }}" class="btn_contact green block small_p" style="text-align: center;width: 100% !important">{{'Je prends RDV avec un conseiller Dikaki'|trans}}</a>
+                     </div>
+              </div>
+          </div>
+
+      </div>
+
+
+
+
 {% endblock %}
 
 {% block scripts %}
- 
-{% endblock%}
 
+{% endblock%}

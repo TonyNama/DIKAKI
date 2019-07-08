@@ -1,88 +1,88 @@
-        {% extends '::client.html.twig' %}
+{% extends '::client.html.twig' %}
 
 {% block title %}{{'Clinique du docteur Ebogo voir mon rendez-vous'|trans}}  :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block body %}
 <!-- debut du code -->
 <div class="container" id="container_2">
-        <div class="margin_center">
-            <div>
-                <div class="donw_title"></div>
-                <div class="css-ezupjj">
-                    <div class="css-ej55tb">
-                        <h1 class="h2_titre2"><span>{{'Clinique du Docteur'|trans}} Ebogo </span><span></span></h1>
-                        <h2 class="h3_location3"><i class="fa fa-map-marker" aria-hidden="true"></i> Yaoundé Essos</h2>
-                    </div>
-                    <hr class="hr_reservation">
-                </div>
+<div class="margin_center">
+    <div>
+        <div class="donw_title"></div>
+        <div class="css-ezupjj">
+            <div class="css-ej55tb">
+                <h1 class="h2_titre2" style="text-align: left !important;"><span>{{'Clinique du Docteur'|trans}} Ebogo </span><span></span></h1>
+                <h2 class="h3_location3" style="text-align: left !important;"><i class="fa fa-map-marker" aria-hidden="true"></i> Yaoundé Essos</h2>
+            </div>
+            <hr class="hr_reservation">
+        </div>
 
-                <div>
-                    <div class="css-i6wjbx">
-                        <div id='sectionAimprimer'>
-                            <div class="p_down"></div>
-                            <div class="div_prestation">6. {{'Mon rendez-vous'|trans}} </div>
-                            <div class="wrapper">
-                                <div class="wrapper_color_identification ">
-                                <div class="down_wrapper ">
-                                    <div class="">
-                                        <p class="your_rdv_">{{'Votre rendez-vous'|trans}} </p>
-                                        <p class="your_rdv_">{{'Mr'|trans}} Ebolo Ebolo Guillaume </p>
-                                       <ul class="link_recap">
-                                            <li>{{'Vous avez déposé votre rendez-vous le 1 Août 2019 à 12h 40'|trans}}.</li>
-                                            <li>{{'Consultation pour des soins dentaires'|trans}}. </li>
-                                           <li>{{'Avec'|trans}} Jeanne.</li>
-                                           <li>{{'Le 10 Novembre 2019 à 10h 30'|trans}}.</li>
-                                           <li>{{'A la clinique Du Docteur'|trans}} Ebogo.</li>
-                                           <li>{{"Vous devez-vous présenter a l'accueil 30 minutes avant le début de votre rendez-vous pour les formalitées administratives"|trans}}.</li>
-                                       </ul>
-
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-                            <div class="wrapper_last_btn">
-                                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                     <button onClick="imprimer('sectionAimprimer')" style="color:#fff !important;" class="create_acount"><i class="fa fa-print"></i> &nbsp;&nbsp; {{'Imprimer'|trans}} </button>
-                                 </div>
-                                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                                    <a href="{{ path('dkk_app_choix')}}#ancre" style="color:#fff !important;" class="create_acount"><i class="fa fa-calendar"></i> &nbsp;&nbsp; {{'Prendre un nouveau RDV'|trans}} </a>
-                                </div>
-                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                  <a href="{{ path('dkk_app_homepage') }}" style="color:#fff !important;" class="annulation_my_rdv right_btn"><i class="fa fa-times"></i> &nbsp;&nbsp;  {{'Quitter'|trans}} </a>
-
-
-                               </div>
+        <div>
+            <div class="css-i6wjbx">
+                <div id='sectionAimprimer'>
+                    <div class="p_down"></div>
+                    <div class="div_prestation">6. {{'Mon rendez-vous'|trans}} </div>
+                    <div class="wrapper">
+                        <div class="wrapper_color_identification ">
+                        <div class="down_wrapper ">
+                            <div class="">
+                                <p class="your_rdv_">{{'Votre rendez-vous'|trans}} </p>
+                                <p class="your_rdv_">{{'Mr'|trans}} Ebolo Ebolo Guillaume </p>
+                               <ul class="link_recap">
+                                    <li>{{'Vous avez déposé votre rendez-vous le 1 Août 2019 à 12h 40'|trans}}.</li>
+                                    <li>{{'Consultation pour des soins dentaires'|trans}}. </li>
+                                   <li>{{'Avec'|trans}} Jeanne.</li>
+                                   <li>{{'Le 10 Novembre 2019 à 10h 30'|trans}}.</li>
+                                   <li>{{'A la clinique Du Docteur'|trans}} Ebogo.</li>
+                                   <li>{{"Vous devez-vous présenter a l'accueil 30 minutes avant le début de votre rendez-vous pour les formalitées administratives"|trans}}.</li>
+                               </ul>
 
                             </div>
-                                 <div class="p_down"></div>
-                            <p style="clear:both !important;"></p>
-                        <div class="paragraphe_information">
-                            <p>
-                                {{"Vous avez la possibilité de modifier deux fois votre rendez-vous. Un sms de rappel vous seras envoyer quelques heures avant le début de votre rendez-vous."|trans}}
-                            </p>
-                            <p>{{"Dr Mengue jeanne dentiste sera absente du 15 Aout au 15 septemmbre 2019. Elle sera remplacée par le Dr Ongla."|trans}}</p>
-                        </div>
-                            </div>
-
-                             <div class="p_down"></div>
-
 
 
                         </div>
+                    </div>
+
+                    <div class="wrapper_last_btn">
+                          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                             <button onClick="imprimer('sectionAimprimer')" style="color:#fff !important;" class="create_acount"><i class="fa fa-print"></i> &nbsp;&nbsp; {{'Imprimer'|trans}} </button>
+                         </div>
+                         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                            <a href="{{ path('dkk_app_choix')}}#ancre" style="color:#fff !important;" class="create_acount"><i class="fa fa-calendar"></i> &nbsp;&nbsp; {{'Prendre un nouveau RDV'|trans}} </a>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                          <a href="{{ path('dkk_app_homepage') }}" style="color:#fff !important;" class="annulation_my_rdv right_btn"><i class="fa fa-times"></i> &nbsp;&nbsp;  {{'Quitter'|trans}} </a>
+
+
+                       </div>
 
                     </div>
+                         <div class="p_down"></div>
+                    <p style="clear:both !important;"></p>
+                <div class="paragraphe_information">
+                    <p>
+                        {{"Vous avez la possibilité de modifier deux fois votre rendez-vous. Un sms de rappel vous seras envoyer quelques heures avant le début de votre rendez-vous."|trans}}
+                    </p>
+                    <p>{{"Dr Mengue jeanne dentiste sera absente du 15 Aout au 15 septemmbre 2019. Elle sera remplacée par le Dr Ongla."|trans}}</p>
                 </div>
+                    </div>
+
+                     <div class="p_down"></div>
+
+
+
+                </div>
+
             </div>
         </div>
     </div>
-    <!-- fin du code -->
+</div>
+</div>
+<!-- fin du code -->
 
-    <div class="container">
-        <div class="row">
+<div class="container">
+<div class="row">
 
-        </div>
-    </div>
+</div>
+</div>
 <br><br>
 {% endblock %}

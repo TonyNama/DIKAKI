@@ -1,80 +1,106 @@
- {% extends 'connect.html.twig' %}
+{% extends 'connect.html.twig' %}
 
-{% block title %}{{'Besoin  d'un devis en ligne'|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+{% block title %}{{"Besoin  d'un devis en ligne"|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
- <style>
-      .sky-form{
-        box-shadow: none !important;
-        border: 1px solid #fff !important;
-      }
+<style>
+     .sky-form{
+       box-shadow: none !important;
+       border: 1px solid #fff !important;
+     }
 
-        body{
-      background: url('{{asset("img/banner2.png")}}') no-repeat center center;
-      background-size: cover !important;
-      background-attachment: fixed !important;
-    }
-    </style>
+       body{
+     background: url('{{asset("img/banner2.png")}}') no-repeat center center;
+     background-size: cover !important;
+     background-attachment: fixed !important;
+   }
 
-    {% endblock %}
+   .div_taris_devis h5{
+   font-weight: 700;
+   font-size: 1.3em !important;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-top: 13px;
+   margin-bottom:13px;
+}
+.div_taris_devis h3{
+   font-weight: 700;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.item_infos_service{
+   font-size: 1.1em;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.btn_demande_devis{
+   display:inline-block;
+   font-weight: 700;
+   margin-left: 10px !important;
+   margin-bottom: 20px;
+}
+   </style>
 
-{% block body %}   
+   {% endblock %}
 
-              <div class="container-fluid">
-            <div class="container">
-                 <div id="wrapper">
+{% block body %}
 
-                       <div class="wrapper_prise_" style="border-radius: 0px !important;">
-                        <div class="div_taris_devis">
-                            <h2>TARIFS SUR DEVIS</h2>
-                           <div class="row" style="background:#ffff !important;">
-                            <!-- debut -->
-                               <br><br>
-                               <h5>Définition et analyse de vos besoins</h5>
+             <div class="container-fluid">
+           <div class="container">
+                <div id="wrapper">
 
-                               <p class="item_infos_service">
-                                 Notre équipe vous accompagne sur la définition et l’analyse de votre projet de digitalisation de votre activité et déploiement d’une solution agenda planning permettant la prise de rendez-vous en ligne.
-                               </p>
-                               <p class="item_infos_service">
-                                 Après avoir analysé avec vous votre projet nous construisons une démonstration de l’agenda avec des accès vous permettant de tester la prise de rendez-vous en ligne des clients ainsi que la gestion des agendas en tant qu’administrateur ou collaborateur.
-                               </p>
-                                <h5>Démonstration de l’agenda selon vos besoins</h5>
-                               <p class="item_infos_service">
-                                 Nous vous présentons cette démonstration lors d’un rendez-vous physique avec partage de notre écran d’ordinateur.
-                               </p>
-                               <p class="item_infos_service">
-                                 Sur cette base nous effectuons un devis en vous proposant une location mensuelle de notre outil sans engagements de votre part au-delà du mois en cours.
-                               </p>
-                               <h5>Un logiciel et une équipe à votre disposition</h5>
-                               <p class="item_infos_service">
-                                 Au-delà des accès à l’agenda, la location mensuelle intègre une équipe d’assistance hotline à votre service du lundi au vendredi de 9H00 à 18H00 pour effectuer des paramétrages, répondre à vos questions ou vous accompagner dans la conduite du changement auprès de vos équipes.
-                               </p>
-                               
-                               <h5>Personnalisation et synchronisation avec vos outils</h5>
-                               <p class="item_infos_service">
-                                 Nous pouvons effectuer des développements spécifiques si vous le souhaitez (pour par exemple nous connecter à votre logiciel de CRM). Dans ce cas nous analysons le besoin avec votre équipe et nous vous proposons un devis.
-                               </p>
-                               <p class="item_infos_service">
-                                 Nous mettons à disposition des API afin de connecter notre agenda à vos outils internes. Notre équipe technique vous accompagne sur la prise en main de nos API.
-                               </p>
-                               <h5>Un hébergement de vos données sécurisé et une garantie de disponibilité du service</h5>
-                               <p class="item_infos_service">
-                                 Notre service vous assure un hébergement de vos données sur un serveur dédié en fonctions de vos contraintes de sécurité
-                               </p>
-                               <p class="item_infos_service">
-                                 Notre partenaire d’hébergement BLEU HOST nous accompagne dans la disponibilité de notre service avec des équipes d'astreinte 7 jours sur 7, 24h sur 24; ainsi que dans l’évolution des normes de sécurité pour garantir l’intégrité de vos données
-                               </p>
-                               <h3>Nous vous avons convaincu ! Lancez-vous, c’est le bon moment </h3>
-                            <!-- fin -->
-                            <a href="{{path('dkk_app_demander_devis')}}" class="btn btn-success btn-sm btn_demande_devis">Demander un devis</a>
-                            <br>
-                           </div>
-                      </div>
-            </div>
+                      <div class="wrapper_prise_" style="border-radius: 10px !important;">
+                       <div class="div_taris_devis">
+                           <h2>{{'TARIFS SUR DEVIS'|trans}}</h2>
+                          <div class="row" style="background:#ffff !important;padding-right: 30px;padding-left: 30px;">
+                           <!-- debut -->
+                              <br>
+                              <h5>{{'Définition et analyse de vos besoins'|trans}}</h5>
+
+                              <p class="item_infos_service">
+                                {{"Notre équipe vous accompagne sur la définition et l’analyse de votre projet de digitalisation de votre activité et déploiement d’une solution agenda planning permettant la prise de rendez-vous en ligne"|trans}}.
+                              </p>
+                              <p class="item_infos_service">
+                {{"Après avoir analysé avec vous votre projet nous construisons une démonstration de l’agenda avec des accès vous permettant de tester la prise de rendez-vous en ligne des clients ainsi que la gestion des agendas en tant qu’administrateur ou collaborateur"|trans}}.
+                              </p>
+                               <h5>{{"Démonstration de l’agenda selon vos besoins"|trans}}</h5>
+                              <p class="item_infos_service">
+                                {{"Nous vous présentons cette démonstration lors d’un rendez-vous physique avec partage de notre écran d’ordinateur"|trans}}.
+                              </p>
+                              <p class="item_infos_service">
+                                {{'Sur cette base nous effectuons un devis en vous proposant une location mensuelle de notre outil sans engagements de votre part au-delà du mois en cours'|trans}}.
+                              </p>
+                              <h5>{{'Un logiciel et une équipe à votre disposition'|trans}}</h5>
+                              <p class="item_infos_service">
+                                {{"Au-delà des accès à l’agenda, la location mensuelle intègre une équipe d’assistance hotline à votre service du lundi au vendredi de 9H00 à 18H00 pour effectuer des paramétrages, répondre à vos questions ou vous accompagner dans la conduite du changement auprès de vos équipes"|trans}}.
+                              </p>
+
+                              <h5>{{'Personnalisation et synchronisation avec vos outils'|trans}}</h5>
+                              <p class="item_infos_service">
+                                {{'Nous pouvons effectuer des développements spécifiques si vous le souhaitez (pour par exemple nous connecter à votre logiciel de CRM). Dans ce cas nous analysons le besoin avec votre équipe et nous vous proposons un devis'|trans}}.
+                              </p>
+                              <p class="item_infos_service">
+                                {{'Nous mettons à disposition des API afin de connecter notre agenda à vos outils internes. Notre équipe technique vous accompagne sur la prise en main de nos API'|trans}}.
+                              </p>
+                              <h5>{{'Un hébergement de vos données sécurisé et une garantie de disponibilité du service'|trans}}</h5>
+                              <p class="item_infos_service">
+                                {{'Notre service vous assure un hébergement de vos données sur un serveur dédié en fonctions de vos contraintes de sécurité'|trans}}
+                              </p>
+                              <p class="item_infos_service">
+                                {{"Notre partenaire d’hébergement BLEU HOST nous accompagne dans la disponibilité de notre service avec des équipes d'astreinte 7 jours sur 7, 24h sur 24; ainsi que dans l’évolution des normes de sécurité pour garantir l’intégrité de vos données"|trans}}
+                              </p><br>
+                              <h3 align="center">{{"Nous vous avons convaincu ! Lancez-vous."|trans}}</h3>
+                              <h3 align="center">{{"C’est le bon moment"|trans}} </h3>
+                           <!-- fin -->
+                           <a href="{{path('dkk_app_demander_devis')}}" class="btn btn-success btn-sm btn_demande_devis pull-right">{{'Demander un devis'|trans}}</a>
+                           <br>
+                          </div>
+                     </div>
+           </div>
 
 
 
-    </div>
-  </div>
+   </div>
+ </div>
 </div>
 {% endblock %}

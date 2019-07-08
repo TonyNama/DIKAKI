@@ -1,212 +1,228 @@
-   <!doctype html>
+<!doctype html>
 <html xmlns:og="http://ogp.me/ns#">
-    <head>
-      <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <meta name="copyright" content="Dikaki.com">
-      <meta name="language" content="fr">
-      <link rel="icon" href="{{asset('img/favicon dikaki.png')}}">
-      <title>{% block title %}{% endblock %}</title>
+ <head>
+   <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <meta name="copyright" content="Dikaki.com">
+   <meta name="language" content="fr">
+   <link rel="icon" href="{{asset('img/favicon dikaki.png')}}">
+   <title>{% block title %}{% endblock %}</title>
 
-        <meta property="og:url" content=""><!-- url complete de la page-->
-              <meta property="og:title" content=""><!-- le titre complete de la page-->
-              <meta property="og:description" content=""><!-- la description complete de la page-->
-              <meta property="og:image" content="{{asset('img/grande_banniere.png')}}"><!-- image representant la page de la page-->
+     <meta property="og:url" content=""><!-- url complete de la page-->
+           <meta property="og:title" content=""><!-- le titre complete de la page-->
+           <meta property="og:description" content=""><!-- la description complete de la page-->
+           <meta property="og:image" content="{{asset('img/grande_banniere.png')}}"><!-- image representant la page de la page-->
 
-            <!-- fin du partage vers facebook -->
+         <!-- fin du partage vers facebook -->
 
 
-            <!-- debut du partage vers twitter -->
+         <!-- debut du partage vers twitter -->
 
-              <meta name="twitter:card" content="website">
-              <meta name="twitter:site" content="@dikaki">
-              <meta name="twitter:creator" content="@dikaki">
-              <meta property="og:url" content=""><!-- url complete de la page-->
-              <meta property="og:title" content=""><!-- le titre complete de la page-->
-              <meta property="og:description" content=""><!-- la description complete de la page-->
-              <meta property="og:image" content="{{asset('img/grande_banniere.png')}}"><!-- image representant la page de la page-->
-    
-    {% stylesheets filter='cssrewrite'
-            'css/vendor/animate.min.css'
-            'css/vendor/bootstrap-social.css'
-            'css/vendor/bootstrap.min.css'
-            'css/vendor/buttons.css'
-            'css/vendor/sky-forms.css'
-            'css/style.css'
-            'css/vendor/jquery-ui.min.css'
-            'css/vendor/bootstrap-select.css'
-        %}
-            <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
-            <!-- debut du partage vers facebook -->
-            
-            
+           <meta name="twitter:card" content="website">
+           <meta name="twitter:site" content="@dikaki">
+           <meta name="twitter:creator" content="@dikaki">
+           <meta property="og:url" content=""><!-- url complete de la page-->
+           <meta property="og:title" content=""><!-- le titre complete de la page-->
+           <meta property="og:description" content=""><!-- la description complete de la page-->
+           <meta property="og:image" content="{{asset('img/grande_banniere.png')}}"><!-- image representant la page de la page-->
 
-        {% endstylesheets %}
-        
-        {% block style %}
-        
-        {% endblock %}
-        
-        <!-- fin de la section footer -->
-  
-        
-        
-    </head>
-    <body>
+ {% stylesheets filter='cssrewrite'
+         'css/vendor/animate.min.css'
+         'css/vendor/bootstrap-social.css'
+         'css/vendor/bootstrap.min.css'
+         'css/vendor/buttons.css'
+         'css/vendor/sky-forms.css'
+         'css/style.css'
+         'css/vendor/jquery-ui.min.css'
+         'css/vendor/bootstrap-select.css'
+     %}
+         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+         <!-- debut du partage vers facebook -->
 
-        <header>
+
+
+     {% endstylesheets %}
+
+     {% block style %}
+
+     {% endblock %}
+
+     <!-- fin de la section footer -->
+
+
+     <style type="text/css">
+     .img_pied_responive{
+       display: block;
+       width: 60px !important;
+       margin-top: 9px;
+       margin-bottom: 7px;
+       float: right !important;
+       margin-right: 40px;
+       clear: both;
+     }
+     .img_pied_responive > img{
+       border-radius: 5px;
+     }
+ </style>
+ </head>
+ <body>
+
+     <header>
 <!-- Begin Navigation -->
-                <div class="navbar-wrapper">
-                    <div class="navbar navbar-main" id="fixed-navbar" >
-                        <div class="container">
-                        
-                            
-                                    
-                                        <!-- Brand -->
-                                        <a href="{{ path('dkk_app_homepage') }}" class="">
-                      <img src="{{ asset('img/dikaki_horizontal.png')}}" id="second_logo" alt="Dikaki">
-                                        </a>
-                                        
-                                    
+             <div class="navbar-wrapper">
+                 <div class="navbar navbar-main" id="fixed-navbar" >
+                     <div class="container">
 
-                                
-                                
-                            
-                        
-                    </div><!-- /navbar -->
-                </div><!-- /navbar wrapper -->
-                <!-- End Navigation -->
 
-            </header><!-- /header -->
-        
-        {% block body %}
-        
 
-        {% endblock %}
-  
-        
-         <br><br>
-    
-    <footer style="background:#fff">
-            <div class="container-fluid padding">
-               <div class="bg_footer">
-                  <div class="container">
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                      <h3 class="title_footer"> {{'Notre Adresse'|trans}}</h3>
-                      <p class="serdi_infio">
-                                    {{'SERDI INFORMATIQUE'|trans}}
-                                </p>
-                                <p class="contact_para">
-                                    {{'BP:11007, Yaoundé - Cameroun'|trans}}
-                                </p>
-                                <p class="contact_para">
-                                    {% trans %}Route aéroport international de Yaoundé
-                                    Nsimalen. PK 10 Odza.{% endtrans %}
-                                </p>
-                               
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                      <h3 class="title_footer"> {{'Nos solutions'|trans}}</h3>
-                        <ul class="ul_description">
-                                  <li class="detail_para">
-                                       <a href="{{ path('dkk_app_rendez_vous') }}" class="">{{'DIKAKI Prise de rendez-vous'|trans}}</a>
-                                    </li>
-                                    <li class="detail_para">
-                                       <a href="{{ path('dkk_app_education') }}" class="">{{'DIKAKI Secteur éducatif'|trans}}</a>
-                                    </li>
-                                    <li class="detail_para">
-                                      <a href="{{ path('dkk_app_dossier') }}" class="">{{'DIKAKI Dépôt de dossier'|trans}}</a>
-                                    </li>
+                                     <!-- Brand -->
+                                     <a href="{{ path('dkk_app_homepage') }}" class="">
+                   <img src="{{ asset('img/dikaki_horizontal.png')}}" id="second_logo" alt="Dikaki">
+                                     </a>
 
-                                        <li class="detail_para">
-                                          <a href="{{ path('dkk_app_billeterie') }}" class="">{{'DIKAKI E-Ticket'|trans}}</a>
-                                        </li>
-                                         <li class="detail_para">
-                                          <a href="{{ path('dkk_app_fonctionnalite') }}" class="">{{'Comment ça marche'|trans}} ? </a>
 
-                                        </li>
-                                </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                      <h3 class="title_footer"> {{'Nos informations'|trans}}</h3>
-                         <p class="contact_para">
-                                    {{'Ouverture: Lun. - Ven.'|trans}}:
-                                    {{'9h - 18h'|trans}}.
-                                </p>
-                                <p class="contact_para">
-                                    {{'Service clients'|trans}}: +237 655 010 808
-                                </p>
-                                <p class="contact_para">
-                                    {{'Support technique'|trans}}: +237 676 862 919
-                                </p>
-                                <p class="contact_para">
-                                    {{'Email'|trans}}: <a href="mailto:info@serdi-cm.com" title="Nous contacter" style="color: #fff !important;font-weight: 700 !important;"> info@serdi-cm.com</a>
-                                </p>
 
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                      <h3 class="title_footer"> {{'Nous suivre'|trans}}</h3>
-                      
-                       <a class="btn btn-social-icon btn-rw btn-primary btn-md">
-                            <i class="fa fa-twitter fa-4x"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-rw btn-primary btn-md">
-                            <i class="fa fa-instagram fa-4x"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-rw btn-primary btn-md">
-                            <i class="fa fa-facebook fa-4x"></i>
-                        </a>
 
-                           <p style="margin-top: 10px"></p>
-                        <a href="{{path('dkk_app_power')}}" class="dikaki_add">{{'La puissance de Dikaki'|trans}}</a>
-                        <a href="{{path('dkk_app_a_qui_s_adresse_dikaki')}}" class="dikaki_add">{{"A qui s'adresse Dikaki"|trans}} ?</a>
 
-                    </div>
 
-                  </div>
-                    <br>
+
+                 </div><!-- /navbar -->
+             </div><!-- /navbar wrapper -->
+             <!-- End Navigation -->
+
+         </header><!-- /header -->
+
+     {% block body %}
+
+
+     {% endblock %}
+
+
+      <br><br>
+
+ <footer style="background:#fff">
+         <div class="container-fluid padding">
+            <div class="bg_footer">
+               <div class="container">
+                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                   <h3 class="title_footer"> {{'Notre Adresse'|trans}}</h3>
+                   <p class="serdi_infio">
+                                 {{'SERDI INFORMATIQUE'|trans}}
+                             </p>
+                             <p class="contact_para">
+                                 {{'BP:11007, Yaoundé - Cameroun'|trans}}
+                             </p>
+                             <p class="contact_para">
+                                 {% trans %}Route aéroport international de Yaoundé
+                                 Nsimalen. PK 10 Odza.{% endtrans %}
+                             </p>
+
+                 </div>
+                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                   <h3 class="title_footer"> {{'Nos solutions'|trans}}</h3>
+                     <ul class="ul_description">
+                               <li class="detail_para">
+                                    <a href="{{ path('dkk_app_rendez_vous') }}" class="">{{'DIKAKI Prise de rendez-vous'|trans}}</a>
+                                 </li>
+                                 <li class="detail_para">
+                                    <a href="{{ path('dkk_app_education') }}" class="">{{'DIKAKI Secteur éducatif'|trans}}</a>
+                                 </li>
+                                 <li class="detail_para">
+                                   <a href="{{ path('dkk_app_dossier') }}" class="">{{'DIKAKI Dépôt de dossier'|trans}}</a>
+                                 </li>
+
+                                     <li class="detail_para">
+                                       <a href="{{ path('dkk_app_billeterie') }}" class="">{{'DIKAKI E-Ticket'|trans}}</a>
+                                     </li>
+                                      <li class="detail_para">
+                                       <a href="{{ path('dkk_app_fonctionnalite') }}" class="">{{'Comment ça marche'|trans}} ? </a>
+
+                                     </li>
+                             </ul>
+                 </div>
+                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                   <h3 class="title_footer"> {{'Nos informations'|trans}}</h3>
+                      <p class="contact_para">
+                                 {{'Ouverture: Lun. - Ven.'|trans}}:
+                                 {{'9h - 18h'|trans}}.
+                             </p>
+                             <p class="contact_para">
+                                 {{'Service clients'|trans}}: +237 655 010 808
+                             </p>
+                             <p class="contact_para">
+                                 {{'Support technique'|trans}}: +237 676 862 919
+                             </p>
+                             <p class="contact_para">
+                                 {{'Email'|trans}}: <a href="mailto:info@serdi-cm.com" title="Nous contacter" style="color: #fff !important;font-weight: 700 !important;"> info@serdi-cm.com</a>
+                             </p>
+
+                 </div>
+                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                   <h3 class="title_footer"> {{'Nous suivre'|trans}}</h3>
+
+                    <a class="btn btn-social-icon btn-rw btn-primary btn-md">
+                         <i class="fa fa-twitter fa-4x"></i>
+                     </a>
+                     <a class="btn btn-social-icon btn-rw btn-primary btn-md">
+                         <i class="fa fa-instagram fa-4x"></i>
+                     </a>
+                     <a class="btn btn-social-icon btn-rw btn-primary btn-md">
+                         <i class="fa fa-facebook fa-4x"></i>
+                     </a>
+
+                        <p style="margin-top: 10px"></p>
+                     <a href="{{path('dkk_app_power')}}" class="dikaki_add">{{'La puissance de Dikaki'|trans}}</a>
+                     <a href="{{path('dkk_app_a_qui_s_adresse_dikaki')}}" class="dikaki_add">{{"A qui s'adresse Dikaki"|trans}} ?</a>
+
+                 </div>
+
                </div>
-                <div class="container">
-                <div class="row">
-                    <div class="small_footer">
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <p class="copy_right pull-left">&copy; 2018 Copyright - DIKAKI SERDI {{'Cameroun'|trans}}  </p>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <a href="{{ path('dkk_app_cgu') }}" style="color: #22242a !important;" class="cgu pull-right">{{'Mentions légales'|trans}}</a>
-                        </div>
-                        <p style="clear: both !important"></p>
-                    </div>
-                </div>
+                 <br>
             </div>
-            </div>
-        </footer>
+             <div class="container">
+                 <div class="row">
+                     <div class="small_footer">
+                         <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                             <p class="copy_right pull-left" style="display: inline-block;vertical-align: top;color: #22242a !important;">&copy; 2018 Copyright - DIKAKI SERDI {{'Cameroun'|trans}}  </p>
+                             <a href="{{ path('dkk_app_cgu') }}" class="cgu" style="display: inline-block;vertical-align: top;margin-left: 40px;color: #22242a !important;">{{'Mentions légales'|trans}}</a>
+                         </div>
+                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                             <a href="{{ path('dkk_app_homepage') }}" class="img_pied_responive">
+                               <img src="{{asset('img/logo_prestataire.png')}}" class="img-responsive">
+                             </a>
+                         </div>
+                           <p style="clear: both !important;margin-top: 30px !important"></p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </footer>
 
 
-        
-        {% javascripts filter='jsqueeze'
-            'js/vendor/jquery.min.js'
-            'js/valider.js'
-            'js/vendor/bootstrap.min.js'
-            'js/slider.js'
-            'js/vendor/slick-carousel_1.8.1_slick.min.js'
-            'js/vendor/testimonial-slider.js'
-            'js/app.js'
-            'js/vendor/jquery-ui.min.js'
-            'js/vendor/jquery.validate.min.js'
-            'js/vendor/bootstrap-select.js'
-            'js/form-control.js'
-            'js/vendor/prendre.js'
-        %}
-            <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
-        
-        {% block scripts %}
-            <script>
 
-   
-    </script>
-        {% endblock %}
- </body>  
+     {% javascripts filter='jsqueeze'
+         'js/vendor/jquery.min.js'
+         'js/valider.js'
+         'js/vendor/bootstrap.min.js'
+         'js/slider.js'
+         'js/vendor/slick-carousel_1.8.1_slick.min.js'
+         'js/vendor/testimonial-slider.js'
+         'js/app.js'
+         'js/vendor/jquery-ui.min.js'
+         'js/vendor/jquery.validate.min.js'
+         'js/vendor/bootstrap-select.js'
+         'js/form-control.js'
+         'js/vendor/prendre.js'
+     %}
+         <script src="{{ asset_url }}"></script>
+     {% endjavascripts %}
+
+     {% block scripts %}
+         <script>
+
+
+ </script>
+     {% endblock %}
+</body>
 
 </html>

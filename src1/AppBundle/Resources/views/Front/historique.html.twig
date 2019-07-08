@@ -1,134 +1,134 @@
-  {% extends 'default.html.twig' %}
+{% extends 'default.html.twig' %}
 
 {% block title %} {{'Historique de mes rendez-vous'|trans}}  : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
-  
- <style>
-        .menu1 { 
-          border-bottom:solid 2px #669d7d ;
-          padding-top:12px ; 
-          padding-bottom:7px
+
+<style>
+      .menu1 {
+        border-bottom:solid 2px #669d7d ;
+        padding-top:12px ;
+        padding-bottom:7px
+      }
+
+      .onglet {
+          border:solid 1px #669d7d ;
+          margin:5px 5px 0px 5px ;
+          padding:7px 3px 7px 3px;
+          border-radius:5px 5px 0px 0px !important;
         }
 
-        .onglet { 
-            border:solid 1px #669d7d ; 
-            margin:5px 5px 0px 5px ; 
-            padding:7px 3px 7px 3px;
-            border-radius:5px 5px 0px 0px !important;
-          }
+        a.onglet {
+          background-color:#E7E4E4 ;
+          text-decoration:none;
+          font-weight: bold;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 1.1em;
+          background: #669d7d;
+          color: #fff !important;
+        }
 
-          a.onglet { 
-            background-color:#E7E4E4 ; 
-            text-decoration:none;
-            font-weight: bold;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.1em;
-            background: #669d7d;
-            color: #fff !important;
-          } 
+        .onglet-actif {
+           border-left:solid 2px #669d7d ;
+           border-right:solid 2px #669d7d ;
+           border-top:solid 2px #669d7d ;
+           border-bottom:none !important;
+           margin:5px 5px 0px 5px ;
+           padding:7px 3px 7px 3px ;
+           background-color:white;
+           font-weight: bold;
+           font-family: 'Montserrat', sans-serif;
+           font-size: 1.2em;
+        }
 
-          .onglet-actif { 
-             border-left:solid 2px #669d7d ; 
-             border-right:solid 2px #669d7d ; 
-             border-top:solid 2px #669d7d ; 
-             border-bottom:none !important; 
-             margin:5px 5px 0px 5px ; 
-             padding:7px 3px 7px 3px ; 
-             background-color:white;
-             font-weight: bold;
-             font-family: 'Montserrat', sans-serif;
-             font-size: 1.2em;
-          } 
-
-    </style>
+  </style>
 
 {% endblock %}
 
-   
+
 {% block body %}
- <!--debut des information pour le profie -->
-    <div class="container emp-profile">
-            <form method="post">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-img">
-                            <img src="../img/photo_medecin.jpg" alt=""/>
+<!--debut des information pour le profie -->
+  <div class="container emp-profile">
+          <form method="post">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="profile-img">
+                          <img src="../img/photo_medecin.jpg" alt=""/>
 
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="profile-head">
-                                    <h5>
-                                        Ondoua Paul
-                                    </h5>
-                                    <h6>
-                                       Ondoua@gmail.com
-                                    </h6>
+                      </div>
+                  </div>
+                  <div class="col-md-5">
+                      <div class="profile-head">
+                                  <h5>
+                                      Ondoua Paul
+                                  </h5>
+                                  <h6>
+                                     Ondoua@gmail.com
+                                  </h6>
 
 
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="modifier.html" class="btn-two green block"><i class="fa fa-pencil-square-o"></i> {{'Modifier mon profil'|trans}}</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-work">
-                            <p>{{'MES INFORMATIONS'|trans}}</p>
-                            <a href="javascript:void(0);"><i class="fa fa-user"></i> Ondoua Paul</a><br/>
-                            <a href="javascript:void(0);"><i class="fa fa-internet-explorer"></i> Ondoua@gmail.com</a><br/>
-                            <a href="javascript:void(0);"><i class="fa fa-phone"></i> +237 234 543 567</a><br/>
-                            <a href="javascript:void(0);"><i class="fa fa-male fa-fw"></i> {{'Masculin'|trans}}</a><br/>
-                            <a href="modifier.html"><i class="fa fa-cog fa-fw"></i> {{'Modifier mes informations'|trans}}</a><br/>
-                            <a href=""><i class="fa fa-sign-out "></i> {{'Me déconnecter'|trans}}</a>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <a href="modifier.html" class="btn-two green block"><i class="fa fa-pencil-square-o"></i> {{'Modifier mon profil'|trans}}</a>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="profile-work">
+                          <p>{{'MES INFORMATIONS'|trans}}</p>
+                          <a href="javascript:void(0);"><i class="fa fa-user"></i> Ondoua Paul</a><br/>
+                          <a href="javascript:void(0);"><i class="fa fa-internet-explorer"></i> Ondoua@gmail.com</a><br/>
+                          <a href="javascript:void(0);"><i class="fa fa-phone"></i> +237 234 543 567</a><br/>
+                          <a href="javascript:void(0);"><i class="fa fa-male fa-fw"></i> {{'Masculin'|trans}}</a><br/>
+                          <a href="modifier.html"><i class="fa fa-cog fa-fw"></i> {{'Modifier mes informations'|trans}}</a><br/>
+                          <a href=""><i class="fa fa-sign-out "></i> {{'Me déconnecter'|trans}}</a>
 
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <!-- debut du menu a onglet -->
-                        <div class="menu1"> <!-- début de la boite contenant les onglets -->
-                           <!-- onglet ACTIF -->
-                          <a class="onglet" href="profile.html"> &nbsp;{{'Mes rendez-vous'|trans}} &nbsp;</a> <!-- onglet inactif -->
-                          <span class="onglet-actif"> &nbsp;{{'Historique'|trans}} &nbsp;</span>
-                        </div>
+                      </div>
+                  </div>
+                  <div class="col-md-8">
+                      <!-- debut du menu a onglet -->
+                      <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                         <!-- onglet ACTIF -->
+                        <a class="onglet" href="profile.html"> &nbsp;{{'Mes rendez-vous'|trans}} &nbsp;</a> <!-- onglet inactif -->
+                        <span class="onglet-actif"> &nbsp;{{'Historique'|trans}} &nbsp;</span>
+                      </div>
 
-                        <div class="table_wrapper">
-                            <table class="table table-bordered table-striped table-condensed">
-                                <tr>
-                                  <th>{{'Date'|trans}}</th>
-                                  <th>{{'Heure'|trans}}</th>
-                                  <th>{{'Nature du rendez-vous'|trans}}</th>
-                                </tr>
-                                <tr>
-                                  <td>13/7/2018</td>
-                                  <td>16 h:00</td>
-                                  <td>{{'Moi même pour une consultation dentaire : Clinique dentaire Jean Paul - 20 min'|trans}}</td>
-                                </tr>
-                                <tr>
-                                  <td>15/7/2019</td>
-                                  <td>10 h:00</td>
-                                  <td>{{'Pour Mme Nvogo; Soin de visage : Beauty success - 60 min'|trans}}</td>
-                                </tr>
-                                <tr>
-                                  <td>17/7/2018</td>
-                                  <td>12 h:00</td>
-                                  <td>{{'Moi même pour massage corporel : Beauty success - 120 min'|trans}}</td>
-                                </tr>
-                                <tr>
-                                  <td>30/7/2018</td>
-                                  <td>11 h:00</td>
-                                  <td>{{'Pour Mr Nkoumba; Consultation générale : Cabinet médical du centre - 20 min'|trans}}</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <!-- fin du menu a onglet -->
-                    </div>
-                </div>
-            </form>
-        </div>
-    <!-- fin des infromations pour le profile -->
+                      <div class="table_wrapper">
+                          <table class="table table-bordered table-striped table-condensed">
+                              <tr>
+                                <th>{{'Date'|trans}}</th>
+                                <th>{{'Heure'|trans}}</th>
+                                <th>{{'Nature du rendez-vous'|trans}}</th>
+                              </tr>
+                              <tr>
+                                <td>13/7/2018</td>
+                                <td>16 h:00</td>
+                                <td>{{'Moi même pour une consultation dentaire : Clinique dentaire Jean Paul - 20 min'|trans}}</td>
+                              </tr>
+                              <tr>
+                                <td>15/7/2019</td>
+                                <td>10 h:00</td>
+                                <td>{{'Pour Mme Nvogo; Soin de visage : Beauty success - 60 min'|trans}}</td>
+                              </tr>
+                              <tr>
+                                <td>17/7/2018</td>
+                                <td>12 h:00</td>
+                                <td>{{'Moi même pour massage corporel : Beauty success - 120 min'|trans}}</td>
+                              </tr>
+                              <tr>
+                                <td>30/7/2018</td>
+                                <td>11 h:00</td>
+                                <td>{{'Pour Mr Nkoumba; Consultation générale : Cabinet médical du centre - 20 min'|trans}}</td>
+                              </tr>
+                          </table>
+                      </div>
+                      <!-- fin du menu a onglet -->
+                  </div>
+              </div>
+          </form>
+      </div>
+  <!-- fin des infromations pour le profile -->
 
 
 {% endblock %}

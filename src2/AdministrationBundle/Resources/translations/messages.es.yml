@@ -1,0 +1,803 @@
+Agenda: Agenda
+'Liste des clients': 'Lista de clientes'
+'Prise de rendez-vous et dépôt de dossier en ligne': 'Reserva y archivo de citas en línea'
+'Cabinet médical la Grâce': 'Práctica médica Gracia'
+Agenda(s): Agenda(s)
+Prestataires: Proveedores
+Prestations: 'Servicios prestados'
+Tâches: Tareas
+Plannings: Planillas
+'Liste clients': 'Lista de clientes'
+Actions: Acciones
+Nom: Nombre
+Prénom: 'Nombre de pila'
+Age: Edad
+Sexe: Sexo
+Téléphone: Teléfono
+Email: 'Correo electrónico'
+Observation: Observación
+'45 ans': '45 años'
+Masculin: Hombre
+'Rien à signaler pour le moment': 'Nada que informar en este momento'
+Imprimer: Imprimir
+Prestataire: Proveedor
+'Prestataire(s) / Ressource(s)': 'Proveedor(s) / Recurso(s)'
+'Liste des prestataires': 'Lista de proveedores de servicios'
+Profession: Profesión
+Voulez-vous: 'Quieres hacerlo'
+Avocat: Abogado
+Médecin: Doctor
+Prestation: 'Prestación de servicios'
+'Prestation(s) / Service(s)': ' Prestación de servicio(s) / Servicio(s)'
+'Liste des Prestations': 'Lista de servicios'
+Type: Tipo
+'Durée / Min': 'Duración / Min'
+Montant: Importe
+Couleur: Color
+Manicure: Manicura
+Jaune: Amarillo
+'Soin de pieds': 'Cuidado de los pies'
+Verte: Verde
+Administration: Administración
+'Envoyer un message': 'Enviar un mensaje'
+'Boite de réception': 'Bandeja de entrada'
+'Messages envoyés': 'Mensajes enviados'
+Corbeille: Papelera
+'Envoyer un message à Serdi cameroun': 'Enviar un mensaje a Serdi Cameroon'
+Annuler: Cancelar
+Envoyer: Enviar
+Rechercher: Buscar
+'Mon message envoyé': 'Mi mensaje enviado'
+'Besoin d''aide': 'Necesidad de ayuda'
+mars: Marzo
+'Besoin de votre aide': 'Necesito tu ayuda'
+'Lire le message': 'Leer el mensaje'
+CLIENTS: CLIENTES
+'RENDEZ-VOUS PRIS': 'NOMBRAMIENTO HECHO'
+'RENDEZ-VOUS HONORES': 'NOMBRAMIENTO DE HONOR'
+'Chirugien dentiste': 'Dentista Cirujano'
+'Coordonnées / Adresses': 'Información de contacto / Direcciones'
+'Nouvelle route bastos': 'Nueva carretera de Bastos'
+BP: 'Apartado de correos'
+'Vos clients peuvent prendre rendez-vous à l''adresse suivante': 'Sus clientes pueden hacer una cita en la siguiente dirección'
+Valider: Validar
+Notifications: Notificaciones
+'Rappel Sms': 'Recordatorio de SMS'
+'Rappel E-mail': 'Recordatorio por correo electrónico'
+'Confirmation E-mail': 'Confirmación por correo electrónico'
+'Confirmation Sms': 'Confirmación de SMS'
+'prise de rendez-vous et dépôt de dossier en ligne': 'reserva y archivo de citas en línea'
+'Message(s) réçu(s)': 'Mensaje(s) recibido(s)'
+'Création d''un collaborateur': 'Creación de un empleado'
+'Gestion des droits d''accès': 'Gestión de los derechos de acceso'
+Prenom: 'Nombre de pila'
+E-mail: 'Dirección de correo electrónico'
+Féminin: Femenino
+'Mot de passe': Contraseña
+'Répeter le mot de passe': 'Repetir contraseña'
+'Ajouter photo': 'Repetir contraseña'
+'Liste des collaborateurs': 'Listado de colaboradores'
+'Liste des collaborateurs et attribution des droits d''accès': 'Lista de colaboradores y asignación de derechos de acceso'
+Occupation: Ocupación
+'Droits d''accès': 'Derechos de acceso'
+Attribuer: Asignar
+'Affectation des droits d''accès': 'Asignación de derechos de acceso'
+'Nom du collaborateur': 'Nombre del colaborador'
+Selectionné: Seleccionado
+Niveau: Nivel
+Enregistrer: Registrarse
+Supprimer: Borrar
+'Le nom': 'El nombre'
+'caractères minimum': 'caracteres mínimos'
+'La fonction': 'La función'
+'Le niveau': 'El nivel'
+Autorisation: Autorización
+'Paramètres spécifiques': 'Parámetros específicos'
+Autorisations: Autorizaciones
+Restrictions: Limitaciones
+Paiements: 'Pagos a efectuar'
+'Options de prise de rendez-vous': 'Opciones de programación de citas'
+'Autoriser les clients de prendre les rendez-vous en ligne': 'Permitir a los clientes reservar citas en línea'
+'Autoriser la création des comptes par internet': 'Autorizar la creación de cuentas a través de Internet'
+'Connexion obligatoire avant la prise de rendez-vous': 'Inicio de sesión obligatorio antes de concertar una cita'
+'Nombre de modifications de RDV': 'Número de modificaciones de RDV'
+fois: momentos
+'Nombre de RDV par personne': 'Número de citas por persona'
+'Accepter les rendez-vous / reservations': 'Aceptar citas / reservas'
+'Refuser les rendez-vous / reservations': 'Rechazar citas / reservas'
+'Rendez-vous récurrents': 'Nombramientos recurrentes'
+Oui: Sí
+Non: 'No'
+'Nombre minimum': 'Número mínimo '
+'Nombre maximum': 'Número máximo'
+'Permettre la suppression de RDV': 'Permitir la supresión de nombramientos'
+'Limitation d''envoi des sms': 'Limitación del envío de sms'
+'Nombre de sms max par jour': 'Número máximo de sms por día'
+'Restriction de notifications': 'Restricción de las notificaciones'
+SMS: 'MENSAJE TEXTUAL'
+'Envois suspendus de': 'Suspensión de envíos de'
+Heure: 'Hora del día'
+Heures: Horas
+Enregister: Grabación
+'Modifications rdv': 'Cambios en los nombramientos'
+'Rdv par personne': 'Cita por persona'
+'Accepter reservations': 'Aceptar reservas'
+'Refuser  reservations': 'Rechazar reservas'
+'rdv récurrents': 'citas periódicas'
+'Annulation  rdv': 'Cancelación de la cita'
+'Suppression rdv': 'Borrar cita'
+'Restriction notifications': 'Restricción de las notificaciones'
+Action: Acción
+Modifier: Modificar
+'Rdv par internet': 'Cita por Internet'
+Date: Fecha
+Contenu: Contenido
+Février: febrero
+'Mon compte': 'Mi cuenta'
+Coordonnées: 'Información de contacto'
+'Médécin généraliste': 'Médico generalista'
+Cameroun: Camerún
+Tel: Tel
+Intervenants: 'Interesados directos'
+Fonction: Función
+'Niveau d''accès': 'Nivel de acceso'
+'Date de création': 'Fecha de creación'
+Journaliste: Periodista
+'Factures et abonnements': 'Facturas y suscripciones'
+'Voir les factures': 'Ver las facturas'
+'Référence facture': 'Referencia a la factura'
+Mois: Meses
+Numéro: Número
+Echéance: 'Fecha límite'
+Situation: Situación
+Septembre: Septiembre
+payé: desembolsado
+Détails: Detalles
+'Voir le détail de la facture': 'Ver el detalle de la factura'
+'Voir les  abonnements': 'Ver suscripciones'
+'Référence abonnement': 'Referencia de la suscripción'
+Formule: Fórmula
+Durée: Duración
+'Début ab.': 'Inicio de la suscripción'
+'Fin ab.': 'Fin de la suscripción'
+'Voir le détail de l''abonnement': 'Ver los detalles de la suscripción'
+'Services optionnels / ajout d''agenda': 'Servicios opcionales / adición de agenda'
+'Agendas supplémentaires': 'Agendas adicionales'
+'Acheter 1 agenda professionnel': 'Comprar 1 agenda professionnel'
+'Acheter 2 agendas professionnels': 'Comprar 2  agendas profesionales'
+'Acheter 3 agendas professionnels': 'Comprar 3  agendas profesionales'
+'Acheter 4 agendas professionnels': 'Comprar 4  agendas profesionales'
+'Acheter 5 agendas professionnels': 'Comprar 5  agendas profesionales'
+'Acheter 6 agendas professionnels': 'Comprar 6  agendas profesionales'
+'Acheter 7 agendas professionnels': 'Comprar 7  agendas profesionales'
+'Acheter 8 agendas professionnels': 'Comprar 8  agendas profesionales'
+'Acheter 9 agendas professionnels': 'Comprar 9  agendas profesionales'
+'Acheter 10 agendas professionnels': 'Comprar 10  agendas profesionales'
+'Acheter 11 agendas professionnels': 'Comprar 11  agendas profesionales'
+'Acheter 12 agendas professionnels': 'Comprar 12  agendas profesionales'
+'Acheter 13 agendas professionnels': 'Comprar 13  agendas profesionales'
+'Acheter 14 agendas professionnels': 'Comprar 14  agendas profesionales'
+'Acheter 15 agendas professionnels': 'Comprar 15 agendas profesionales'
+'Valider l''achat': 'Validar la compra'
+'Paiement en ligne': 'Pago en línea'
+'Liste des comptes': 'Lista de cuentas'
+Opérateur: Operador
+Usage: Uso
+'N° compte': 'Número de cuenta'
+Statut: Estado
+'Pour  encaissements': 'Para la entrada de pagos'
+Actif: Activo
+Désactiver: Desactivar
+'Pour rembourcements': 'Para reembolsos'
+Inactif: Inactivo
+Activer: Activar
+'Achat de sms': 'Comprar mensajes de texto'
+pack: 'hacer la maleta'
+Sms: Sms
+'Choisir un opérateur': 'Elija un operador'
+Payer: Pagar
+Professionnel: Profesional
+'Code Produit': 'Código de producto'
+Unité: Unidad
+Reste: Resto
+'Changement de formule': 'Cambio de fórmula'
+'Changer la formule': 'Cambiar la fórmula'
+Solo: Solo
+Standard: Estándar
+Pro-santé: Pro-salud
+Pro-entreprise: Pro-empresa
+Pro-équipe: Pro-equipo
+'Suspension du compte': 'Suspensión de la cuenta'
+'Suspendre mon compte': 'Suspender mi cuenta'
+'Résiliation de l''abonnement': 'Terminación de la suscripción'
+'Résilier mon abonnement': 'Cancelar mi suscripción'
+'Résilier mon compte': 'Cancelar mi cuenta'
+Historique: Historia
+'Tableau de bord': 'Tablero de mandos'
+'Chiffre d''affaire (par agenda et par heure)': 'Facturación (por agenda y por hora)'
+Total: Total
+Moyenne: Promedio
+'Tous les rendez-vous': 'Todas las citas'
+'Nombre de rendez-vous pris par internet @ et type de rendez-vous': 'Número de citas realizadas por internet @ y tipo de cita'
+Nature: Naturaleza
+Epilation: Depilación
+'Soin de visage': 'Cuidado de la cara'
+'Nombre de rendez-vous pris par internet @ et par status': 'Número de citas realizadas por internet @ y por estado'
+Venus: Venido
+'Non venus': 'No vino'
+'En attente': 'En espera'
+'Non renseigné': 'No se ha facilitado información'
+'Nombre de nouveau rendez-vous venus par internet @': 'Cantidad de nuevas citas hechas a través de Internet @'
+Dates: Fechas
+Nombre: Cantidad
+Diagrammes: Diagramas
+Graphique: Gráfico
+'Tous les graphiques': 'Todos los gráficos'
+Paiement: 'Pago del pago'
+'Options de paiements': 'Opciones de pago'
+'Paiement en caisse': 'Pago en la caja registradora'
+'Montant total': 'Importe total'
+'Paiement en  ligne': 'Pago en líneae'
+'Acompte accepté': 'Depósito aceptado'
+'Paiement par virement': 'Pago por transferencia bancaria'
+'Paiement par chèque': 'Pago por cheque'
+'Paiement par carte': 'Pago con tarjeta'
+'En caisse': 'En la caja'
+'En ligne': 'En línea'
+Acompte: 'Pago inicial'
+'Par virement': 'Por transferencia bancaria'
+'Par chèque': 'Por cheque'
+'Par carte': 'Por tarjeta'
+'Mode de paiement': 'Modalidad de pago'
+Titre: Título
+chèque: chequeo
+'Nom établissement': 'Nombre del establecimiento'
+SGBC: SGBC
+'Pour  rembourssements': 'Para tapicería'
+'Modifier vos informations  de paiement par virement': 'Cambiar sus datos de pago por transferencia bancaria'
+Ordre: Pedido
+'Nom réquis': 'Nombre obligatorio'
+'Champs réquis': 'Campos obligatorios'
+'Pas plus de 9 caractères': 'No más de 9 caracteres'
+'Numéro invalide': 'Número no válido'
+'Titre réquis': 'Título obligatorio'
+'Champ réquis': 'Campos obligatorios'
+'Coordonnées réquis': 'Datos de contacto requeridos'
+Ressource: 'Recurso Recurso'
+'Paiement par monnaie mobile': 'Pago con moneda móvil'
+'Mobile money': 'Dinero móvil'
+'Nom opérateur': 'Nombre del operador'
+'Identifiant (Numéro téléphone)': 'Nombre de usuario (Número de teléfono)'
+Identifiant: Identificador
+'Modifier vos informations  de paiement  Mobile Money': 'Cambiar su información de pago de Mobile Money'
+'MTN ou Orange': 'MTN o Naranja'
+'Titulaire du compte à crediter': 'Titular de la cuenta a abonar'
+'N° de compte (format RIB)': 'Número de cuenta (formato RIB)'
+'N° de compte (format IBAN / BIC)': 'Número de cuenta (formato IBAN / BIC)'
+'Indication sur le libellé': 'Información sobre la redacción'
+'N° RIB': 'NÚMERO DE CUERPO'
+'N° IBAN/ BIC': 'IBAN/ BIC NÚMERO'
+Intitulé: 'Título Título Título'
+'Modifier vos informations  de paiement  par virement': 'Cambiar sus datos de pago por transferencia bancaria'
+'Titulaire du compte à créditer': 'Titular de la cuenta a abonar'
+'Titulaire du compte': 'Titular de la cuenta'
+'Modifier les paramètres des notifications par Email': 'Cambiar la configuración de las notificaciones por correo electrónico'
+Client: Cliente
+'Fichier des clients': 'Ficha de cliente'
+Clients: Clientes
+'Chercher un client': 'Buscar un cliente'
+'Créer un client': 'Crear un cliente'
+'Cabinet médicale la Grâce': 'Práctica médica de La Grâce'
+'Voir plus': 'Ver más información'
+'Paramètre des notifications par Sms': 'Configuración para notificaciones SMS'
+'Confirmations et rappels clients': 'Confirmaciones y recordatorios de clientes'
+'Message de confirmation par E-mail': 'Mensaje de confirmación por correo electrónico'
+'Confirmation par courrier électronique': 'Confirmación por e-mail'
+'Envoyer un E-mail automatiquement au client à chaque validation de reservation': 'Enviar un e-mail automáticamente al cliente cada vez que confirme su reserva'
+Minutes: Minutos
+Jours: Días
+'Après la confirmation de la reservation': 'Después de la confirmación de la reserva'
+'Message de confirmation': 'Mensaje de confirmación'
+'Titre du message': 'Título del mensaje'
+'Court texte inclus dans le message de confirmation': 'Texto breve incluido en el mensaje de confirmación'
+'Message de confirmation par SMS': 'Mensaje de confirmación por SMS'
+'Confirmation par SMS': 'Confirmación por SMS'
+'Envoyer un SMS instantané au client à chaque validation de reservation': 'Envíe un SMS instantáneo al cliente cada vez que confirme su reserva.'
+SMS/Court: SMS/Corto
+'Message de remerciement par E-mail': 'Mensaje de agradecimiento por correo electrónico.'
+'E-mail de remerciement': 'Correo electrónico de agradecimiento'
+'Définir l''heure après laquelle l''E-mail sera envoyer aprè la visite': 'Definir el tiempo después del cual se enviará el correo electrónico después de la visita'
+'Après le rendez-vous': 'Después de la cita'
+'Ne pas envoyer l''E-mail de remerciement': 'No envíe el correo electrónico de agradecimiento'
+'Envoyer un E-mail de remerciement seulement après la': 'Envíe un correo electrónico de agradecimiento sólo después de la'
+ere: primera
+visite: visita
+'Envoyer un E-mail de remerciement après chaque visite': 'Envíe un correo electrónico de agradecimiento después de cada visita'
+Rappels: Recordatorios
+'Message de rappel par E-mail': 'Mensaje recordatorio por correo electrónico'
+'Rappel par E-mail': 'Recordatorio por correo electrónico'
+'Rappel par courrier électronique': 'Recordatorio por correo electrónico'
+'Envoyer un rappel par courriel E-mail au client': 'Enviar un recordatorio por correo electrónico al cliente'
+Semaines: Semanas
+'Avant l''heure du rendez-vous': 'Antes de la hora de la cita'
+'Message de rappel par SMS': 'Mensaje recordatorio por SMS'
+'Rappel par SMS': 'Recordatorio por SMS'
+'Envoyer un rappel par SMS au client': 'Enviar un recordatorio por SMS al cliente'
+'Notification interne': 'Notificación interna'
+'Notifications internes': 'Notificaciones internas'
+'Notifications par E-mail': 'Notificaciones por correo electrónico'
+'Notification par courrier électronique': 'Notificación por correo electrónico'
+'Recevez un E-mail lorsqu''un client ou un autre utlisateur effectue, modifie, ou annule une reservation': 'Recibir un correo electrónico cuando un cliente u otro usuario hace, modifica o cancela una reservación'
+'Votre adresse électronique': 'Su dirección de correo electrónico'
+'Me notifier en cas de reservation': 'Notifiqueme en caso de reservación'
+'Me notifier si la réservation conserne l''une des prestations suivantes': 'Notificarme si la reserva es para uno de los siguientes servicios'
+'Liste des prestations': 'Listado de servicios'
+'Soins de visage': 'Cuidado facial'
+'Consultation nourisson': 'Consulta de bebés'
+'Nouveau patient': 'Paciente nuevo'
+'Notifications par sms': 'Notificaciones por SMS'
+'Notification par SMS': 'Notificación por SMS'
+'Numéro de téléphone portable': 'Número de teléfono móvil'
+Delais: Retrasos
+'Choix du delais de reception du SMS': 'Elección de la hora de recepción de SMS'
+'Si la reservation est effectuée peu de temps en avance': 'Si la reserva se realiza con poca antelación'
+'Quand envoyer': 'Cuándo enviar'
+'Si la période de reservation commence dans 45 min': 'Si el periodo de reserva comienza en 45 minutos'
+'Si la période de reservation commence dans 1 heure': 'Si el período de reserva comienza en 1 hora'
+Services: Servicios
+Service: Servicio
+'Créer un service': 'Crear un servicio'
+'Informations service': 'Información de servicio'
+Référence: Referencia
+'Nom commercial': 'Nombre comercial'
+'Ajouter la description': 'Añadir descripción'
+'Description du service': 'Descripción del servicio'
+'Image / Photo': 'Imagen / Foto'
+'Ce choix est toujours disponible': 'Esta opción está siempre disponible'
+'Ce choix est disponible seulement durant ces heures': 'Esta opción sólo está disponible durante estas horas'
+De: De
+A: A
+'Et de': 'Y a'
+'Quantité usuelle': 'Cantidad habitual'
+'Unité de temps': 'Unidad de tiempo'
+Jour: Día
+'Catégorie service': 'Categoría de servicio'
+'Informations Tarifaire': 'Información de precios'
+'Prix du service': 'Precio del servicio'
+HT.: 'Sin incluir impuestos'
+'Taux TVA': 'tipos de IVA'
+'Tarif HT': 'Tipo sin IVA'
+'Prix TTC': 'Precio con IVA incluido'
+'Paiement / Réglement': 'Pago / Liquidación'
+Gratuit: Gratuito
+Taux: Tarifas
+'Informations periodicité': 'Información sobre la periodicidad'
+Période: 'Período de tiempo'
+Janvier: eneromarzo
+Mars: marzo
+Mai: mayo
+Juin: junio
+Juillet: julio
+Août: agosto
+Octobre: octubre
+Novembre: noviembre
+Décembre: Diciembre
+Année: Año
+'Toute la journée': 'Todo el día'
+Répéter: Repetir
+'Ne pas répéter': 'No repetir'
+'Répéter tous les jours': 'Repetir todos los días'
+'Répéter toutes les semaines': 'Repetir semanalmente'
+'Répéter tous les mois': 'Repetir cada mes'
+'Répéter jusqu''au': 'Repita hasta que'
+'Gestion des tâches': 'Gestión de tareas'
+Affectations: Asignaciones
+'Nom du prestataire': 'Nombre del proveedor de servicios'
+Sélection: Selección
+Coiffeur: Peluquero
+Rouge: Rojo
+'Modifier Presataires': 'Modificar proveedores de servicios'
+'Affectation des prestations': 'Asignación de las prestaciones'
+'Type de prestation(s)': 'Tipo de servicio(s)'
+Pédicure: Pedicura
+Onglerie: Clavado
+'Massage de dos': 'Masaje de espalda'
+'Epilation 1/2 jambe homme': 'Depilación 1/2 pierna hombre'
+'Modifier les affectations des prestations à un prestataire': 'Modificar la asignación de beneficios a un proveedor de servicios'
+'Paramètre dates et heures': 'Parámetro de fechas y horas'
+Calendrier: Calendario
+'Paramètres jours,dates et heures': 'Configurar días, fechas y horas'
+'Jours & Heures': 'Días y Horarios'
+Périodes: Períodos
+semaine-jour: 'semana - día'
+'Semaine de 7 jours': '7 días a la semana'
+'Semaine de 5 jours': '5 días a la semana'
+'Heure de fin': 'Hora de finalización'
+Interruption: Interrupción
+Lundi: Lunes
+Début: Inicio
+fin: meta
+debut: inicio
+'Sans interruption': 'Sin interrupciones'
+Mardi: Martes
+Mercredi: Miércoles
+Jeudi: Jueves
+Vendredi: Viernes
+Samedi: Sábado
+Dimanche: Domingo
+'Fréquence rendez-vous - temps / place(s) / mois': 'Frecuencia de las citas - hora / lugar(s) / mes'
+'Temps de résolution': 'Tiempo de resolución'
+'Intervalles fixe': 'Intervalos fijos'
+Intervalle: Intervalo
+'Ne pas laissez d''intervalle entre les RDV': 'No deje ningún hueco entre las citas'
+'Laissez un intervalle de 15 min entre les RDV': 'Deje un intervalo de 15 minutos entre citas'
+'Laissez un intervalle de 30 min entre les RDV': 'Deje un intervalo de 30 minutos entre citas'
+'Limite de reservation / Prise de rendez-vous': 'Límite de reservas / Reserva de citas'
+'Reservation à l''avance (minimum): Les clients doivent réserver au moins': 'Reserva previa (mínimo): Los clientes deben reservar al menos'
+Autre: Otros
+'à l''avance': 'de antemano'
+'Reservation à l''avance (maximum):  Les clients ne peuvent réserver plus de': 'Reserva previa (máximo):  Los clientes no pueden reservar más de'
+Minute: Minuto
+'Disponibilté des services': 'Disponibilidad de servicios'
+'Les services ne sont pas disponibles pendant la période suivante': 'Los servicios no están disponibles durante el siguiente período'
+'Période allant du': 'Período desde'
+Avril: abril
+Au: 'En el'
+'Ajouter période': 'Añadir período'
+'Les services  sont  disponibles pendant la période suivante': 'Los servicios están disponibles durante el siguiente período'
+'Toutes les semaines. Jusqu''au': 'Cada semana. Hasta el'
+'Reservation / Prise de rendez-vous': 'Reservas / Cita previa'
+'Date de début de reservation / Prise de rendez-vous': 'Fecha de inicio de la reserva / Reserva de citas'
+'Première date disponible (Calendrier) début': 'Primera fecha disponible (Calendario) de inicio'
+'Arrêt crénau horaire': 'Parada de la franja horaria'
+'Durée de RDV': 'Duración del nombramiento'
+'Nombre de place(s) / plage horaire': 'Cantidad de lugar(s) / franja horaria'
+'Fréquence / mois': 'Frecuencia / mes'
+'Temps limite avant le rdv': 'Plazo antes de la cita'
+heure: momento
+heures: horario
+Temps: Tiempo
+'Nbre de personnes par plage horaire': 'Cantidad de personas por franja horaria'
+'Toutes les': 'Todos los'
+'Statut des rendez-vous / Reservations': 'Estado de los nombramientos / Reservas'
+Activé: Activado
+Vert: Verde
+Bleu: Azul
+'Visite terminée': 'Visita realizada'
+'Pas venue': 'No venir'
+Réinitialisé: Reiniciar
+'Heure début': 'Hora de inicio'
+'Heure fin': 'Hora de finalización'
+'Durée RDV': 'Duración del nombramiento'
+'Nbre de places': 'Cantidad de plazas'
+'Et du': 'Y desde el'
+'Créer un nouveau client': 'Crear un nuevo cliente'
+'Revenir au fichier': 'Volver al archivo'
+'Création d''un nouveau client': 'Creación de un nuevo cliente'
+'Le jour': 'El día'
+'Le mois': 'El mes'
+'L''année': 'El año'
+'Me notifier par e-mail': 'Notificarme por e-mail'
+'Me notifier par sms': 'Notificarme por sms'
+'Entrer un signalement': 'Introducir un informe'
+'Prénom réquis': 'Nombre obligatorio'
+'champ réquis': 'campo obligatorio'
+'L''image doit être un jpg, Png ou un gif': 'La imagen debe ser un jpg, Png o gif'''
+'Email invalide': 'Dirección de correo electrónico no válida'
+'Liste des prestataires et ressource': 'Lista de proveedores y recursos'
+Disponibilité: Disponibilidad
+'Feuille de disponibilité': 'Hoja de disponibilidad'
+Identification: Identificación
+'Disponibilité / temps de travail': 'Disponibilidad / tiempo de trabajo'
+'Heure de travail': 'Hora de trabajo'
+'Heure creuse': 'Hora de menor consumo'
+'Liste des ressources': 'Lista de recursos'
+Ville: Ciudad
+Quartier: Vecindario
+'La couleur': 'El color'
+'Listing des prestations': 'Listado de servicios'
+Photo: Foto
+Prix: Precios
+'A la caisse': 'En la caja registradora'
+'Liste des prestations associées': 'Lista de servicios asociados'
+Image: Imagen
+'Liste des services': 'Listado de servicios'
+Planning: Planificación
+'Planning des activités': 'Planificación de actividades'
+Semaine: Semana
+'Type de prestation': 'Tipo de servicio'
+'Durée / temps': 'Duración / tiempo'
+Lieux: Lugares
+'Consultation générale': 'Consulta general'
+Cabine: Cabaña
+Salle: Habitación
+'Prénom du prestataire': 'Nombre del proveedor de servicios'
+'Profession / Métier': 'Profesión / Comercio'
+'Médecin, Plombier': 'Médico, Plomero'
+'Couleur du prestataire': 'Color del proveedor de servicios'
+'Choisir la couleur': 'Elija el color'
+Rose: Rosa
+Marron: Marrón
+Noire: Negro
+Violette: Violeta
+'Avec compte': 'Con cuenta'
+'Sans compte': 'Sin cuenta'
+'Sms informatif': 'Sms informativos'
+'E-mail informatif': 'Correo electrónico informativo'
+'Horaires disponibles': 'Horarios disponibles'
+'Utiliser les heures d''ouverture de la société': 'Utilice el horario comercial de la empresa'
+'Disponible aux dates et heures suivantes': 'Disponible en las siguientes fechas y horarios'
+'Heure de début': 'Hora de inicio'
+'Selon le calendrier suivant': 'De acuerdo con el siguiente calendario'
+'Toutes les semaines': 'Cada semana'
+'A partir du': 'Desde el'
+'Jusqu''au': 'Hasta el'
+'Période du': 'Período desde'
+'Créer une prestation': 'Crear un servicio'
+'Titre de prestation': 'Título del servicio'
+'Titre de la prestation': 'Título del servicio'
+'Type de  prestation': 'Tipo de servicio'
+'Ajouter une description': 'Añadir una descripción'
+'Description de la prestation': 'Descripción del servicio'
+'Classes de personne': 'Clases individuales'
+Adulte: Adulto
+Enfant: Niño
+Homme: Hombre
+Femme: Mujer
+Fille: Chica
+Garçon: Chico
+'Classes d''âge': 'Grupos de edad'
+Nourrisons: 'Vamos a alimentarnos'
+ans: años
+'Plus de': 'Más de'
+'Photo / Image': 'Foto / Imagen'
+'Prix de la prestation': 'Precio del servicio'
+TTC: IVA Incluido
+'Couleur de la prestation': 'Color del servicio'
+'Durée de la prestation': 'Duración del servicio'
+'La durée': 'La duración'
+'Le titre': 'El título'
+'Le type': 'El tipo'
+'Le prix': 'El precio'
+'Prix invalide': 'Precio no válido'
+'Durée invalide': 'Duración no válida'
+'Prestations de groupe': 'Servicios para grupos'
+'Prestations associées': 'Servicios asociados'
+'Créer une prestation associée': 'Crear un servicio asociado'
+'Nom de la prestation': 'Nombre del servicio'
+'Type de la prestation': 'Tipo de servicio'
+'Type la prestation': 'Tipo de servicio'
+Ajouter: Añadir
+'Description des  prestations associées': 'Descripción de los servicios asociados'
+'Modifier les paramètres des notifications par Sms': 'Modificar los ajustes de notificación por SMS'
+Ressources: Recursos
+'Nom de la Ressource': 'Nombre del recurso'
+'Type de Ressource': 'Tipo de recurso'
+Description: 'DescripciónOpciones de restricción'
+'Options des restrictions': 'Opciones de restricción'
+'Temps avant la prestation': 'Tiempo antes del servicio'
+'RDV groupe': 'Nombramiento de grupos'
+'Heure limite d''annulation de rdv': 'Fecha límite para cancelar una cita'
+'Heure limite de suppression de RDV': 'Fecha límite para borrar ocupaciones de muellesFecha límite para la modificación de la cita'
+'Heure limite modification de rdv': 'Fecha límite para la modificación de la cita'
+'Liste d''attente': 'Lista de espera'
+Blacklist: 'Lista negra'
+'Compte obligatoire': 'Cuenta obligatoria'
+'Personne à charge': 'Personas a cargo'
+Sortir: Salir
+'Modifier les paramètres spécifiques': 'Modificar los parámetros específicos'
+'Tps av. Presta.': 'Tiempo antes del servicio.'
+'Rdv groupe': 'Nombramiento de grupos'
+'H. Limite annu. RDV': 'fecha límite para cancelar las citas'
+'H. Limite supp. RDV': 'Fecha límite para borrar citas'
+'H. Limite modif. RDV': 'Cambio de hora límite de cita'
+'Liste attente': 'Lista de espera'
+'Cpte Oblig.': 'Cuenta Obligatoria.'
+Histo.: Historia.
+'Prs à chges': 'personnes  Dependientes'
+Sujet: Tema
+'caractères maximum': 'caracteres máximos'
+'Détails client': 'Datos del cliente'
+'Date de naissance': 'Fecha de nacimiento'
+Pays: País
+'Dernière reservation': 'Última reserva'
+Note: Nota
+'information sur ses alergies ou autres choses': 'información sobre alergias u otras cosas'
+'Client depuis le': 'Cliente desde'
+'Total des reservations': 'Total de reservas'
+Annulation: Cancelación
+'Non présentation': 'Ninguna presentación'
+'Dernière reservation le': 'Última reserva en'
+'Mon historique': 'Mi historia'
+'Dates  RDV': 'Fechas de las citas'
+'Heure RDV': 'Hora de la cita'
+'Type de RDV': 'Tipo de cita'
+'Avec qui': 'Con quién'
+'Recherche client': 'Búsqueda de clientes'
+'Nouveau client': 'Nuevo cliente'
+'Prendre RDV': 'Haga una cita'
+'Modifier RDV': 'Modificar la cita'
+Présence: Presencia
+Encaissement: 'Recaudación de fondos'
+'Aujourd''hui': Hoy
+Précédent: Anterior
+'Semaine du 19 au 27 Décembre 2019': 'Semana del 19 al 27 de diciembre de 2019'
+Suivant: Siguiente
+jour: día
+jours: días
+'Créer client': 'Crear cliente'
+'Revenir à l''agenda': 'Volver a la agenda'
+'Création d''un Nouveau client': 'Creación de un nuevo cliente'
+'champs réquis': 'campos obligatorios'
+'Planning des agendas': 'Planificación de la agenda'
+'Planning Cabinet médical la Grâce': 'Planificación de la práctica médica La Grâce'
+'Journée du 15 décembre 2018': 'Día 15 de diciembre de 2018'
+'Par date': 'Por fecha'
+Acte: Actúa
+Présent: Presente
+'Rien a signaler pour le moment': 'No hay nada que informar en este momento'
+'Fiche d''encaissement': 'Formulario de recogida'
+'Feuille d''encaissement': 'Hoja de recogida'
+'Reste à payer': 'Resto a pagar'
+'Prendre un rendez-vous': 'Concierte una cita'
+'Prendre un RDV': 'Concierte una cita'
+'Prendre rendez-vous': 'Concierte una cita'
+'Informations personnelles': 'Datos personales'
+'Rechercher un client ici': 'Buscar un cliente aquí'
+'Voir ses rendez-vous': 'Ver sus citas'
+'Pas de client / patient trouvé': 'No se ha encontrado ningún cliente/paciente'
+'Cliquez ici pour créer un client / patient': 'Haga clic aquí para crear un cliente/paciente'
+'Né(e) le': 'Nacido el'
+'02 Décembre 1970': '02 diciembre 1970'
+Remarque: Nota
+'je suis allergique à la péniciline': 'Soy alérgico a la penicilina'
+'Venu à': 'Ven a'
+'Dernier RDV': 'Última cita'
+'2 décembre 2018': '2 de diciembre de 2018'
+Rendez-vous: Cita
+'Imprimer le rendez-vous': 'Imprimir la cita'
+'Choix de la prestation': 'Elección del servicio'
+'Soins de visage pour homme': 'Cuidado facial para hombres'
+'Soins de visage pour femme': 'Cuidado facial para mujeres'
+'Massage corporel': 'Masaje corporal'
+'Choix du prestataire': 'Elección del proveedor de servicios'
+'Laisser un commentaire': 'Laisser un commentaire'
+'Rappel SMS': 'Recordatorio por SMS'
+'Marquer le RDV comme': 'Marque la cita como'
+Venue: Venir
+'Choisir prestation': 'Elija el servicio'
+'Choisir prestataire': 'Elegir un proveedor de servicios'
+'Choisir date': 'Elegir fecha'
+'Fiche de présence': 'Hoja de asistencia'
+'Fiche de présence du 19 février 2018': 'Formulario de asistencia del 19 de febrero de 2018'
+Venu: Venir
+'Pas venu': 'No venir'
+'Modifier le rendez-vous': 'Modificar cita'
+'Voir mes rendez-vous': 'Ver mis citas'
+'Votre rendez-vous du mardi 15 janvier 2019  à 12h 30 pour consultation générale': 'Su cita el martes 15 de enero de 2019 a las 12:30 p.m. para consulta general'
+'Modifier mon rendez-vous du Mardi 15 Janvier 2019 à 11h 00': 'Modificar mi cita el martes 15 de enero de 2019 a las 11:00 a.m'
+'Choix nouvelle date & heure': 'Elegir una nueva fecha y hora'
+Périodicité: Frecuencia
+Périodicités: Periodicidad
+'Disponibilité hebdomadaire': 'Disponibilidad semanal'
+'Tous les': 'Todos los'
+'jours de la semaine': 'Días de la semana'
+'semaines les': 'semanas seguidas'
+'Modifier la disponibilité hebdomadaire': 'Cambiar la disponibilidad semanal'
+'Touts les': 'Todos ellos'
+'Disponibilité mensuelle': 'Disponibilidad mensual'
+Le: El
+'de tous les': 'de todos los'
+Premier: Primero
+Deuxième: Segundo
+Troisième: Tercero
+Quatrième: Cuarto
+mois: mes
+'Modifier la disponibilité mensuelle': 'Cambiar disponibilidad mensual'
+'Disponibilité annuelle': 'Disponibilidad anual'
+'Fin après': 'Fin después'
+'Fin le': 'Termina en'
+'Modification de la disponibilité annuelle': 'Cambio en la disponibilidad anual'
+Quitter: Salir
+'Modifier les notifications d''Email': 'Editar notificaciones de correo electrónico'
+'Nom de la notification': 'Nombre de la notificación'
+'Temps avant': 'Tiempo antes'
+'Temps après': 'Tiempo después'
+'E-mail rappel RDV': 'Cita para recordatorio de correo electrónico'
+'Rappel RDV': 'Cita recordatoria'
+'N''oublier votre rendez-vous de cette après midi': 'No olvides tu cita de esta tarde'
+'E-mail de remercièment': 'Correo electrónico de agradecimiento'
+'E-mail d''absence': 'electrónico de ausencia'
+'L''alerte': 'La alerta'
+'E-mail de campagne': 'Email de la campaña'
+Lancement: Lanzamiento
+'E-mail de promotion': 'E-mail promocional'
+Promotion: Promoción
+'E-mail de souhait': 'Correo electrónico de bienvenida'
+Evénement: Evento
+Confirmation: Confirmación
+Modification: Modificación
+'E-mail de retrait': 'Correo electrónico de retirada'
+Retrait: Retirada
+'E-mail de RDV non honoré': 'No se aceptó el correo electrónico de la cita'
+'Modifier les notifications Sms': 'Modificar notificaciones SMS'
+'Sms de remercièment': 'Gracias sms'
+'Sms d''absence': 'Mensajes de texto de ausencia'
+'Sms de campagne': 'Campaña sms'
+'Sms de promotion': 'Sms promocionales'
+'Sms de souhait': 'Deseo sms'
+'Sms de confirmation': 'Mensajes de texto de confirmación'
+'Sms de modification': 'Sms de modificación'
+'Sms de retrait': 'Mensajes de texto de retirada'
+'Sms de RDV non honoré': 'No se respetan los mensajes de texto de los nombramientos '
+'Utiliser un programme spécifique': 'Utilizar un programa específico'
+'Création d''un agenda': 'Creación de una agenda'
+'Création agenda': 'Creación de la agenda'
+'Nom de l''agenda': 'Nombre de la agenda'
+'Métier / Activité': 'Negocio / Actividad'
+'Ouvrir sur internet': 'Abrir en Internet'
+'Oui, avec le même nom': 'Sí, con el mismo nombre'
+'Non, ne pas ouvrir sur internet': 'No, no abrir en Internet'
+'Oui, avec le nom': 'Sí, con el nombre'
+'Choisir une couleur': 'Elija un color'
+'Horaires d''ouverture / Reception': 'Horario de apertura / Recepción'
+'Je précise les horaires d''ouverture et de fin de journée': 'Especifico el horario de apertura y cierre'
+'Je prefère mettre mais horaires de façon détaillée': 'Prefiero poner pero programa en detalle'
+de: de
+'à': 'à'
+'et de': 'y a'
+'Indisponibilité journalière': 'indisponibilidad diaria'
+'J''ai une indisponibilité dans la journée': 'Tengo una indisponibilidad durante el día'
+Disponibilités: Disponibilidades
+'Créer l''agenda': 'Crear la agenda'
+'Le métier': 'La profesión'
+'Paramètre des services additionnels': 'Parámetros de los servicios adicionales'
+'Prestations groupées': 'Servicios agrupados'
+E-Service: E-Servicio
+'Boite de reception': 'Bandeja de entrada de recepción'
+'Listing de tous les agendas': 'Listado de todas las agendas'
+'Liste des agendas': 'Lista de agendas'
+'Agenda patient': 'Agenda del paciente'
+'Oui avec le même nom': 'Sí, con el mismo nombre'
+'Modification des paramètre du prestataire': 'Cambiar la configuración del proveedor'
+'Modification des informations du prestataire': 'Modificación de la información del proveedor'
+verte: pista
+'Modifier les droits d''accés': 'Modificar los derechos de acceso'
+'Modifier les droits d''accès': 'Cambiar los derechos de acceso'
+Titulaire: Portavelas
+'Nom du titulaire': 'Nombre del titular'
+Gérant: Gerente
+Secrétaire: Secretario
+Intervenant: Altavoz
+'modifier les restriction': 'modificar las restricciones'
+'Modifier les restriction': 'Modificar restricciones'
+'Permettre l''annulation de RDV': 'Permitir la cancelación de citas'
+'Modifier l''heure de rendez-vous': 'Cambiar la hora de la cita'
+'Modifier les paramètres de dates et heures': 'Modificar los ajustes de fecha y hora'
+'Semaine de travail': 'Semana laboral'
+'Reservation à l''avance (maximum):  Les clients doivent réserver au moins': 'Reserva previa (máximo):  Los clientes deben reservar al menos'
+'Première date disponible (calendrier)': 'Primera fecha disponible (calendario)'
+'Fermeture crénau horaire': 'Cierre de la franja horaria'
+'Nombre de personne par plage horaire': 'Número de personas por franja horaria'
+'Statut des rendez-vous / Reservation': 'Estado de la cita / Reservas'
+'Client arrivé': 'Clientes llegados'
+'Client pas arrivé': 'El cliente no ha llegado'
+'Modifier les paramètre des prestations de groupe': 'Cambio de la configuración del servicio de grupo'
+'Modification des paramètre de prestation de groupe': 'Cambio de la configuración del servicio de grupo'
+'Modifier les paramètres des prestations de services': 'Modificar los parámetros de los servicios prestados'
+'Modifier les services': 'Modificar servicios'
+description: descripción
+'Modifier les  prestations uniques': 'Modificar servicios únicos'
+Répondre: Respuesta
+Voir: Ver
+'fiche d''encaissement': 'formulario de cobranza'
+'Votre rendez-vous': 'Tu cita'
+'Le 10 mai 2020 à 12h30min': '10 de mayo de 2020 a las 12:30pm'
+Pour: Para
+'Consultation dentaire': 'Consulta dental'
+Avec: Con
+'Dernier rendez-vous': 'Última cita'
+décembre: diciembre
+'Tarif TTC': 'Tarifa con IVA incluido'
+'Modifier les paramètres des prestations uniques': 'Modificar los parámetros de los servicios únicos'
+'Créer un Nouveau client': 'Crear un Nuevo cliente'

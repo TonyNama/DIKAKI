@@ -3,14 +3,14 @@
 <html xmlns:og="http://ogp.me/ns#">
     <head>
       <meta charset="utf-8">
-      <title>Fonctionnalité :: Prise de rendez-vous et dépôt de dossier en ligne </title>
+      <title>{{'Fonctionnalité'|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta name="copyright" content="Dikaki.com Copyright ">
       <meta name="language" content="fr">
        <link rel="icon" href="{{asset('img/favicon dikaki.png')}}">
-        
+
          <!-- debut du partage vers facebook -->
-            
+
               <meta property="og:url" content=""><!-- url complete de la page-->
               <meta property="og:title" content=""><!-- le titre complete de la page-->
               <meta property="og:description" content=""><!-- la description complete de la page-->
@@ -28,7 +28,8 @@
               <meta property="og:title" content=""><!-- le titre complete de la page-->
               <meta property="og:description" content=""><!-- la description complete de la page-->
               <meta property="og:image" content=""><!-- image representant la page de la page-->
-        
+
+
 	  {% stylesheets filter='cssrewrite'
             'css/vendor/animate.min.css'
             'css/vendor/bootstrap-social.css'
@@ -41,51 +42,51 @@
             'css/vendor/slick_1.5.0.css'
         %}
             <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
-           
+
         {% endstylesheets %}
-        
+
         {% block style %}
-		
+
 		{% endblock %}
         </head>
     <body>
 
         <!-- take rdv avec Dikaki -->
-       <!-- <a href="{{ path('dkk_app_prendre') }}" class="bounce">
+       <a href="{{ path('dkk_app_prendre') }}" class="bounce">
           <i class="fa fa2 fa-envelope"></i>
-        </a>-->
+        </a>
     <!-- fin take rdv avec Dikaki -->
 
     <!-- site en version d'evaluation -->
   <div class="wrapper_version_evaluation" id="wrapper_version_evaluation">
     <p>
-      <span>Vous êtes sur un nouveau site Dikaki-rdv, site en évaluation pour la prise de rendez-vous et le paiement en ligne.</span>
-      <span>Nous attendons vos observations et suggestions afin de mieux répondre à vos attentes.</span>
+      <span>{{"Vous êtes sur un nouveau site Dikaki-rdv, site en évaluation pour la prise de rendez-vous et le paiement en ligne"|trans}}.</span>
+      <span>{{"Nous attendons vos observations et suggestions afin de mieux répondre à vos attentes"|trans}}.</span>
     </p>
     <a href="" id="link_clise_times"><i class="fa fa-times"></i></a>
   </div>
 
 		{% block body %}
-       
 
-        {% endblock %}  
-                
+
+        {% endblock %}
+
 		{% javascripts filter='jsqueeze'
                 'js/vendor/jquery.min.js'
                 'js/vendor/bootstrap.min.js'
                 'js/vendor/slick_1.5.0.min.js'
                 'js/valider.js'
                 'js/vendor/faq.js'
-                'js/news.js'  
-                
+                'js/news.js'
+
             %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
-                
+
         {% block scripts %}
-		
+
         {% endblock %}
-                
+
      </body>
      <!-- fin de la section footer -->
 </html>

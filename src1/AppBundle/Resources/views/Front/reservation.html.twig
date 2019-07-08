@@ -12,8 +12,8 @@
             <div>
                 <div class="css-ezupjj">
                     <div class="css-ej55tb">
-                        <h1 class="h2_titre2"><span>{{'Clinique du Docteur'|trans}} Ebogo </span><span></span></h1>
-                        <h2 class="h3_location3"><i class="fa fa-map-marker" aria-hidden="true"></i> Yaoundé Essos</h2>
+                        <h1 class="h2_titre2" style="text-align: left !important;"><span>{{'Clinique du Docteur'|trans}} Ebogo </span><span></span></h1>
+                        <h2 class="h3_location3" style="text-align: left !important;"><i class="fa fa-map-marker" aria-hidden="true"></i> Yaoundé Essos</h2>
                     </div>
                     <hr class="hr_reservation">
                 </div>
@@ -21,7 +21,7 @@
                 <div>
                     <div class="css-i6wjbx">
                         <div>
-                            <div class="div_prestation">1. {{'Prestation sélectionnée'|trans}}}}</div>
+                            <div class="div_prestation">1. {{'Prestation sélectionnée'|trans}}</div>
 
                             <div class="wrapper">
                                 <div class="css-1tt30tv " id="responsive_wrapper">
@@ -49,7 +49,13 @@
                                 </div>
                             </div>
                             </div>
-                            <div class="new_div_prestation" style="display:none">{{'Prestation à ajouter'|trans}}</div>
+                            <div class="new_div_prestation" style="display:none"></div>
+
+                             <div class="new_div_prestation" style="display:none">
+                                <p style="float: left;">{{'Prestation à ajouter'|trans}}</p>
+                                &nbsp;&nbsp;&nbsp;<button id="refresh" class="btn btn-danger btn-sm" style="float: right;margin-right:15px"><i class="fa fa-times"></i> &nbsp;&nbsp; <b>Annuler</b></button>
+                            </div>
+                            <p style="clear: both;"></p>
 
 
                             <!-- début de l'affichage quand on clique sur le lien prendre rendez-vous -->
@@ -210,9 +216,9 @@
                                 <div class="calandar_generate">
                                     <!-- debut -->
                                     <div class="calNav">
-                                        
+
                                         <!-- le code qui permet de générer les prestation se trouve a la fin de cette page " -->
-                                    
+
                                         <p style="margin-top: -11px !important"></p>
 
 
@@ -384,62 +390,38 @@
     {% block scripts2 %}
     <script>
         $(document).ready(function(){
-           
-          
+            var button = $(".btn_generate");
+            var count = 0;
+            $(button).on("click",function(e){
+            e.preventDefault();
+            $(".new_div_prestation").show();
+            $(".wrapper_generation_new_").show();
+            $(button).hide();
+          });
 
-      
-                var button = $(".btn_generate");
-                                            var count = 0;
-                                            $(button).on("click",function(e){
+          $('#refresh').click(function() {
+            location.reload();
+          });
+          var max_fields = 2;
+          var wrapper    = $(".wrapper");
+          var add_button = $(".css-pq12he");
+          var x = 1;
 
-                                            e.preventDefault();
-
-
-                                              $(".new_div_prestation").show();
-                                                $(".wrapper_generation_new_").show();
-                                                $(button).hide();
-
-
-                                          });
-
-                                          var max_fields = 2;
-                                          var wrapper    = $(".wrapper");
-                                          var add_button = $(".css-pq12he");
-                                          var x = 1;
-
-                                        $(add_button).click(function(e){
-                                              e.preventDefault();
-
-
-
-                                                  $(wrapper).append('<div class="wrapper_down_" id="wrapper_down_"><div class="wrapper"><div class="css-1tt30tv "><div class="down_wrapper"><div class="col-xs-12 col-sm-12 col-md-10 col-lg-10"><div class="consultation_texte pull-left">Consultation pour des soins dentaires &nbsp;&nbsp; 30min &nbsp;&nbsp; 10.000 Fcfa</div></div><div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"><div class="choise_prestation pull-right"><div class="select-style"><select><option value="">Sans préférence</option><option value="">Jeanne</option><option value="">Pauline</option><option value="">Pierre</option><option value="">Alice</option></select></div></div></div></div></div></div> <a href="javascript:void(0);" class="remove_field"><i class="fa fa-times"></i></a></div>');
-                                                    $(".btn_generate").show();
-                                                    $(".wrapper_generation_new_").hide();
-                                                      $(".new_div_prestation").hide();
-
-
-
-
-                                          });
-
-
-                                          $(wrapper).on("click",".remove_field", function(e){
-                                              e.preventDefault();
-                                          $(this).parent('div').remove();
-                                          x--;
-                                          })
-                                          
-                
+          $(add_button).click(function(e){
+          e.preventDefault();
+            $(wrapper).append('<div class="wrapper_down_" id="wrapper_down_"><div class="wrapper"><div class="css-1tt30tv "><div class="down_wrapper"><div class="col-xs-12 col-sm-12 col-md-10 col-lg-10"><div class="consultation_texte pull-left">Consultation pour des soins dentaires &nbsp;&nbsp; 30min &nbsp;&nbsp; 10.000 Fcfa</div></div><div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"><div class="choise_prestation pull-right"><div class="select-style"><select><option value="">Sans préférence</option><option value="">Jeanne</option><option value="">Pauline</option><option value="">Pierre</option><option value="">Alice</option></select></div></div></div></div></div></div> <a href="javascript:void(0);" class="remove_field"><i class="fa fa-times"></i></a></div>');
+            $(".btn_generate").show();
+            $(".wrapper_generation_new_").hide();
+            $(".new_div_prestation").hide();
+          });
+          $(wrapper).on("click",".remove_field", function(e){
+            e.preventDefault();
+            $(this).parent('div').remove();
+            x--;
+          })
         });
-   
+
     </script>
         {% endblock %}
 
 {% endblock %}
-
-
-
- 
-
-
-

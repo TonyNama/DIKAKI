@@ -29,18 +29,18 @@
 
     {% block style %}
     <style type="text/css">
-        a:visited{
-         color:#8F8F8F !important;
-        }
 
-        .navbar.navbar-main .navbar-nav .open .dropdown-menu>li>a,.navbar .navbar-nav .open .dropdown-menu {
-            color:#8F8F8F !important;
-            outline:none;
-            z-index:5;
+        .img_pied_responive{
+            display: block;
+            width: 60px !important;
+            margin-top: 9px;
+            margin-bottom: 7px;
+            float: right !important;
+            margin-right: 40px;
+            clear: both;
         }
-        .navbar.navbar-main .navbar-nav .open .dropdown-menu>li:hover > a {
-            background-color:transparent;
-            color:#24440d !important;
+        .img_pied_responive > img{
+            border-radius: 5px;
         }
     </style>
     {% endblock %}
@@ -174,7 +174,7 @@
                                                 <li><a href="{{ path('dkk_utilisateur_authentification') }}">{{'Mes rendez-vous'|trans}}</a></li>
                                                 <li><a href="{{ path('dkk_utilisateur_deconnexion') }}">{{'Se déconnecter'|trans}}</a></li>
                                             </ul>
-                                        </li>  
+                                        </li>
                                     {% endif %}
                                    <li class="dropdown dropdown-main">
                             <a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Français'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
@@ -254,7 +254,7 @@
                             <a href="" class="read_more">{{'Lire la suite'|trans}}.</a>
                             </p>
                             <p>
-                                <a href="{{path('dkk_app_a_qui_s_adresse_dikaki')}}" class="btn_contact green block">{{"A qui s'adresse Dikaki"|trans}} ?</a>
+                                <a href="{{path('dkk_app_a_qui_s_adresse_dikaki')}}" class="footer_items_">{{"A qui s'adresse Dikaki"|trans}} ?</a>
                             </p>
 
                         </div>
@@ -286,7 +286,7 @@
                                 {{'Email'|trans}}:  <a href="mailto:contact@dikaki-rdv.com" title="Nous contacter" style="color: #fff !important;font-weight: 700 !important;">contact@dikaki-rdv.com</a>
                             </p>
                             <p>
-                                <a href="{{ path('dkk_app_contact') }}" class="btn_contact green block">{{'Contactez-nous'|trans}}</a>
+                                <a href="{{ path('dkk_app_contact') }}" class="footer_items_">{{'Contactez-nous'|trans}}</a>
                             </p>
 
                         </div>
@@ -303,9 +303,14 @@
                             <p class="p_letter">
                                 <label for="letter">{{'Newsletter'|trans}}</label>
                             </p>
+                            <form method="post" action="" id="register_form" autocomplete="off">
                             <span class="val_email_"></span>
-                            <input type="text" name="newsletter" id="newsletter" class="letter_form form-control" placeholder="{{'Votre adresse E-mail'|trans}}">
-                            <p><button id="submitEmail" class="send_newsletter green button_send">{{'Envoyer'|trans}}</button></p>
+                            <div class="newsletter_wrapper">
+                                <input type="text" name="newsletter" class="letter_form form-control" placeholder="{{'Votre adresse E-mail'|trans}}">
+                                <button type="submit" id="" class="send_newsletter_infos"><i class="fa fa-paper-plane "></i></button>
+                            </div>
+
+                            </form>
 
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
@@ -313,44 +318,51 @@
                                 {{'Trouver un rendez-vous'|trans}}
                             </h3>
                             <p>
-                                <a href="{{ path('dkk_professionnel_choix') }}" class="event_rdv green">{{'Professionnel'|trans}}</a>
+                                <a href="{{ path('dkk_professionnel_choix') }}" class="footer_items_">{{'Professionnel'|trans}}</a>
                             </p>
                             <h3 class="title_footer">
                                 {{'Trouver un évènement'|trans}}
                             </h3>
                             <p>
-                                <a href="{{ path('dkk_app_evenement') }}" class="event_rdv green">{{'Evènement'|trans}}</a>
+                                <a href="{{ path('dkk_app_evenement') }}" class="footer_items_">{{'Evènement'|trans}}</a>
                             </p>
                             <h3 class="title_footer">
                                 {{'Communauté'|trans}}
                             </h3>
                             <p>
-                                <a href="{{ path('dkk_app_partenaire') }}" class="btn_contact green block" style="text-align: center;width: 100% !important">{{'Devenir partenaire'|trans}}</a>
+                                <a href="{{ path('dkk_app_partenaire') }}" class="footer_items_">{{'Devenir partenaire'|trans}}</a>
                             </p>
 
                             <p>
-                                    <a href="{{path('dkk_app_blog')}}" class="btn_contact green block" style="text-align: center;width: 100% !important">{{'Blog et Actualités'|trans}}</a>
+                                    <a href="{{path('dkk_app_blog')}}" class="footer_items_">{{'Blog et Actualités'|trans}}</a>
                                 </p>
                         </div>
                     </div>
+                    <p style="clear: both;margin-bottom: 8px"></p>
                 </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="small_footer">
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <p class="copy_right pull-left">&copy; 2018 Copyright - DIKAKI SERDI {{'Cameroun'|trans}}  </p>
+
+             <div class="container">
+                    <div class="row">
+                        <div class="small_footer">
+                            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                                <p class="copy_right pull-left" style="display: inline-block;vertical-align: top;color: #22242a !important;">&copy; 2018 Copyright - DIKAKI SERDI {{'Cameroun'|trans}}  </p>
+                                <a href="{{ path('dkk_app_cgu') }}" class="cgu" style="display: inline-block;vertical-align: top;margin-left: 40px;color: #22242a !important;">{{'Mentions légales'|trans}}</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <a href="{{ path('dkk_app_homepage') }}" class="img_pied_responive">
+                                  <img src="{{asset('img/logo_prestataire.png')}}" class="img-responsive">
+                                </a>
+                            </div>
+                              <p style="clear: both !important;margin-top: 30px !important"></p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <a href="{{ path('dkk_app_cgu') }}" style="color: #22242a !important;" class="cgu pull-right">{{'Mentions légales'|trans}}</a>
-                        </div>
-                        <p style="clear: both !important"></p>
                     </div>
                 </div>
-            </div>
+
+
         </div>
     </footer>
-    <!-- fin de la section footer -->
+    <!-- fin de la section footer  'js/lire.js'-->
     {% javascripts filter='jsqueeze'
             'js/vendor/jquery.min.js'
             'js/valider.js'
@@ -360,14 +372,15 @@
             'js/vendor/testimonial-slider.js'
             'js/vendor/slideshow.js'
             'js/form-control.js'
-            'js/lire.js'
             'js/vendor/jquery.validate.min.js'
-            'js/news.js'  
+            'js/news.js'
+            'js/affiche.js'
     %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
     {% block scripts %}
+
 
     {% endblock %}
 

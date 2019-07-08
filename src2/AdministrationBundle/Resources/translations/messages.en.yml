@@ -1,0 +1,803 @@
+Agenda: Agenda
+'Liste des clients': 'Customers list'
+'Prise de rendez-vous et dépôt de dossier en ligne': 'Online appointment booking and file filing'
+'Cabinet médical la Grâce': 'Grace Medical Clinic'
+Agenda(s): Agenda(s)
+Prestataires: Providers
+Prestations: 'Services provided'
+Tâches: Tasks
+Plannings: Plannings
+'Liste clients': 'Customers list'
+Actions: Actions
+Nom: Name
+Prénom: 'First name'
+Age: Age
+Sexe: Gender
+Téléphone: Telephone
+Email: Email
+Observation: Observation
+'45 ans': '45 years old'
+Masculin: Male
+'Rien à signaler pour le moment': 'Nothing to report at this time'
+Imprimer: Print
+Prestataire: Provider
+'Prestataire(s) / Ressource(s)': 'Provider(s) / Resource(s)'
+'Liste des prestataires': 'List of service providers'
+Profession: Profession
+Voulez-vous: 'Do you want to'
+Avocat: Lawyer
+Médecin: Doctor
+Prestation: 'Provision of services'
+'Prestation(s) / Service(s)': 'Provision(s) of service / Service(s)'
+'Liste des Prestations': 'List of Services'
+Type: Type
+'Durée / Min': 'Duration / Min'
+Montant: Amount
+Couleur: Color
+Manicure: Manicure
+Jaune: Yellow
+'Soin de pieds': 'Foot care'
+Verte: Green
+Administration: Administration
+'Envoyer un message': 'Send a message'
+'Boite de réception': Inbox
+'Messages envoyés': 'Sent messages'
+Corbeille: Trash
+'Envoyer un message à Serdi cameroun': 'Send a message to Serdi Cameroon'
+Annuler: Cancel
+Envoyer: Send
+Rechercher: Search
+'Mon message envoyé': 'My sent message'
+'Besoin d''aide': 'Need for help'
+mars: March
+'Besoin de votre aide': 'Need your help'
+'Lire le message': 'Read the message'
+CLIENTS: CUSTOMERS
+'RENDEZ-VOUS PRIS': 'APPOINTMENT MADE'
+'RENDEZ-VOUS HONORES': 'HONORED APPOINTMENT'
+'Chirugien dentiste': 'Dentist Surgeon'
+'Coordonnées / Adresses': 'Contact Information / Addresses'
+'Nouvelle route bastos': 'New bastos road'
+BP: 'P.O. Box'
+'Vos clients peuvent prendre rendez-vous à l''adresse suivante': 'Your customers can make an appointment at the following address'
+Valider: Validate
+Notifications: Notifications
+'Rappel Sms': 'Sms reminder'
+'Rappel E-mail': 'Email reminder'
+'Confirmation E-mail': 'Email Confirmation'
+'Confirmation Sms': 'Sms Confirmation'
+'prise de rendez-vous et dépôt de dossier en ligne': 'online appointment booking and file submission'
+'Message(s) réçu(s)': 'Message(s) received'
+'Création d''un collaborateur': 'Creating an employee'
+'Gestion des droits d''accès': 'Management of access rights'
+Prenom: 'First name'
+E-mail: 'E-mail address'
+Féminin: Female
+'Mot de passe': Password
+'Répeter le mot de passe': 'Repeat password'
+'Ajouter photo': 'Add photo'
+'Liste des collaborateurs': 'List of collaborators'
+'Liste des collaborateurs et attribution des droits d''accès': 'List of collaborators and allocation of access rights'
+Occupation: Occupation
+'Droits d''accès': 'Access rights'
+Attribuer: Allocate
+'Affectation des droits d''accès': 'Assignment of access rights'
+'Nom du collaborateur': 'Name of the collaborator'
+Selectionné: Selected
+Niveau: Level
+Enregistrer: Registering
+Supprimer: Delete
+'Le nom': 'The name'
+'caractères minimum': 'minimum characters'
+'La fonction': 'The function'
+'Le niveau': 'The level'
+Autorisation: Authorization
+'Paramètres spécifiques': 'Specific parameters'
+Autorisations: Authorizations
+Restrictions: Limitations
+Paiements: 'Payments to be made'
+'Options de prise de rendez-vous': 'Appointment scheduling options'
+'Autoriser les clients de prendre les rendez-vous en ligne': 'Allow customers to book appointments online'
+'Autoriser la création des comptes par internet': 'Authorize the creation of accounts via the Internet'
+'Connexion obligatoire avant la prise de rendez-vous': 'Mandatory login before making an appointment'
+'Nombre de modifications de RDV': 'Number of RDV modifications'
+fois: times
+'Nombre de RDV par personne': 'Number of appointments per person'
+'Accepter les rendez-vous / reservations': 'Accept appointments / reservations'
+'Refuser les rendez-vous / reservations': 'Refuse appointments / reservations'
+'Rendez-vous récurrents': 'Recurring appointments'
+Oui: 'Yes'
+Non: 'No'
+'Nombre minimum': 'Minimum number'
+'Nombre maximum': 'Maximum number'
+'Permettre la suppression de RDV': 'Allow the deletion of appointments'
+'Limitation d''envoi des sms': 'Limitation of sending sms'
+'Nombre de sms max par jour': 'Max. number of sms per day'
+'Restriction de notifications': 'Restriction of notifications'
+SMS: SMS
+'Envois suspendus de': 'Suspended shipments of'
+Heure: 'Time of day'
+Heures: Hours
+Enregister: Recording
+'Modifications rdv': 'Modifications rdv'
+'Rdv par personne': 'Appointment per person'
+'Accepter reservations': 'Accept reservations'
+'Refuser  reservations': 'Refuse reservations'
+'rdv récurrents': 'recurring appointments'
+'Annulation  rdv': 'Cancellation of appointment'
+'Suppression rdv': 'Delete appointment'
+'Restriction notifications': 'Restriction of notifications'
+Action: Action
+Modifier: Modify
+'Rdv par internet': 'Internet appointment'
+Date: Date
+Contenu: Content
+Février: February
+'Mon compte': 'My account'
+Coordonnées: 'Contact information'
+'Médécin généraliste': 'General practitioner'
+Cameroun: Cameroon
+Tel: Tel
+Intervenants: Stakeholders
+Fonction: Function
+'Niveau d''accès': 'Access level'
+'Date de création': 'Date of creation'
+Journaliste: Journalist
+'Factures et abonnements': 'Invoices and subscriptions'
+'Voir les factures': 'See the invoices'
+'Référence facture': 'Invoice reference'
+Mois: Months
+Numéro: Number
+Echéance: Deadline
+Situation: Situation
+Septembre: September
+payé: 'paid out'
+Détails: Details
+'Voir le détail de la facture': 'See the details of the invoice'
+'Voir les  abonnements': 'See subscriptions'
+'Référence abonnement': 'Subscription reference'
+Formule: Formula
+Durée: Duration
+'Début ab.': 'Start of subscription'
+'Fin ab.': 'End of subscription'
+'Voir le détail de l''abonnement': 'See the details of the subscription'
+'Services optionnels / ajout d''agenda': 'Optional services / addition of agenda'
+'Agendas supplémentaires': 'Additional agendas'
+'Acheter 1 agenda professionnel': 'Buy 1 professional agenda'
+'Acheter 2 agendas professionnels': 'Buy 2 professional diaries'
+'Acheter 3 agendas professionnels': 'Buy 3 professional diaries'
+'Acheter 4 agendas professionnels': 'Buy 4 professional diaries'
+'Acheter 5 agendas professionnels': 'Buy 5 professional diaries'
+'Acheter 6 agendas professionnels': 'Buy 6 professional diaries'
+'Acheter 7 agendas professionnels': 'Buy 7 professional diaries'
+'Acheter 8 agendas professionnels': 'Buy 8 professional diaries'
+'Acheter 9 agendas professionnels': 'Buy 9 professional diaries'
+'Acheter 10 agendas professionnels': 'Buy 10 professional diaries'
+'Acheter 11 agendas professionnels': 'Buy 11 professional diaries'
+'Acheter 12 agendas professionnels': 'Buy 12 professional diaries'
+'Acheter 13 agendas professionnels': 'Buy 13 professional diaries'
+'Acheter 14 agendas professionnels': 'Buy 14 professional diaries'
+'Acheter 15 agendas professionnels': 'Buy 15 professional diaries'
+'Valider l''achat': 'Validate the purchase'
+'Paiement en ligne': 'Online payment'
+'Liste des comptes': 'List of accounts'
+Opérateur: Operator
+Usage: Use
+'N° compte': 'Account number'
+Statut: Status
+'Pour  encaissements': 'For incoming payments'
+Actif: Active
+Désactiver: Disable
+'Pour rembourcements': 'For refunds'
+Inactif: Inactive
+Activer: Enable
+'Achat de sms': 'Buying text messages'
+pack: pack
+Sms: Sms
+'Choisir un opérateur': 'Choose an operator'
+Payer: Paying
+Professionnel: Professional
+'Code Produit': 'Product Code'
+Unité: Unit
+Reste: Remainder
+'Changement de formule': 'Change of formula'
+'Changer la formule': 'Change the formula'
+Solo: Solo
+Standard: Standard
+Pro-santé: Pro-health
+Pro-entreprise: Pro-company
+Pro-équipe: Pro-team
+'Suspension du compte': 'Suspension of the account'
+'Suspendre mon compte': 'Suspend my account'
+'Résiliation de l''abonnement': 'Termination of the subscription'
+'Résilier mon abonnement': 'Cancel my subscription'
+'Résilier mon compte': 'Cancel my account'
+Historique: History
+'Tableau de bord': Dashboard
+'Chiffre d''affaire (par agenda et par heure)': 'Turnover (per agenda and per hour)'
+Total: Total
+Moyenne: Average
+'Tous les rendez-vous': 'All appointments'
+'Nombre de rendez-vous pris par internet @ et type de rendez-vous': 'Number of appointments made by internet @ and type of appointment'
+Nature: Nature
+Epilation: 'Hair removal'
+'Soin de visage': 'Face care'
+'Nombre de rendez-vous pris par internet @ et par status': 'Number of appointments made by internet @ and by status'
+Venus: Came
+'Non venus': 'Not come'
+'En attente': 'On hold'
+'Non renseigné': 'No information provided'
+'Nombre de nouveau rendez-vous venus par internet @': 'Quantity of new appointments that came over the internet @'
+Dates: Dates
+Nombre: Quantity
+Diagrammes: Diagrams
+Graphique: Graphic
+'Tous les graphiques': 'All graphs'
+Paiement: Payment
+'Options de paiements': 'Payment options'
+'Paiement en caisse': 'Payment at the cash register'
+'Montant total': 'Total amount'
+'Paiement en  ligne': 'Online payment'
+'Acompte accepté': 'Accepted deposit'
+'Paiement par virement': 'Payment by bank transfer'
+'Paiement par chèque': 'Payment by cheque'
+'Paiement par carte': 'Payment by card'
+'En caisse': 'In the cash register'
+'En ligne': Online
+Acompte: Deposit
+'Par virement': 'By bank transfer'
+'Par chèque': 'By cheque'
+'Par carte': 'Per card'
+'Mode de paiement': 'Method of payment'
+Titre: Title
+chèque: cheque
+'Nom établissement': 'Name of establishment'
+SGBC: SGBC
+'Pour  rembourssements': 'For refunds'
+'Modifier vos informations  de paiement par virement': 'Change your payment information by bank transfer'
+Ordre: Order
+'Nom réquis': 'Required name'
+'Champs réquis': 'Required fields'
+'Pas plus de 9 caractères': 'No more than 9 characters'
+'Numéro invalide': 'Invalid number'
+'Titre réquis': 'Title required'
+'Champ réquis': 'Required field'
+'Coordonnées réquis': 'Required contact information'
+Ressource: Resource
+'Paiement par monnaie mobile': 'Payment by mobile currency'
+'Mobile money': 'Mobile money'
+'Nom opérateur': 'Operator name'
+'Identifiant (Numéro téléphone)': 'Identifier (Telephone number)'
+Identifiant: Identifier
+'Modifier vos informations  de paiement  Mobile Money': 'Change your Mobile Money payment information'
+'MTN ou Orange': 'MTN or Orange'
+'Titulaire du compte à crediter': 'Account holder to be credited'
+'N° de compte (format RIB)': 'Account number (RIB format)'
+'N° de compte (format IBAN / BIC)': 'Account number (IBAN / BIC format)'
+'Indication sur le libellé': 'Indication on the label'
+'N° RIB': 'RIB NO.'
+'N° IBAN/ BIC': 'IBAN/ BIC NO.'
+Intitulé: Title
+'Modifier vos informations  de paiement  par virement': 'Change your payment information by bank transfer'
+'Titulaire du compte à créditer': 'Account holder to be credited'
+'Titulaire du compte': 'Account holder'
+'Modifier les paramètres des notifications par Email': 'Change the settings for email notifications'
+Client: Client
+'Fichier des clients': 'Clients file'
+Clients: Clients
+'Chercher un client': 'Find a client'
+'Créer un client': 'Create a client'
+'Cabinet médicale la Grâce': 'Medical practice la Grâce'
+'Voir plus': 'See more'
+'Paramètre des notifications par Sms': 'SMS notification parameter'
+'Confirmations et rappels clients': 'Customer confirmations and reminders'
+'Message de confirmation par E-mail': 'Confirmation message by E-mail'
+'Confirmation par courrier électronique': 'Confirmation by e-mail'
+'Envoyer un E-mail automatiquement au client à chaque validation de reservation': 'Send an e-mail automatically to the customer each time you confirm your reservation'
+Minutes: Minutes
+Jours: Days
+'Après la confirmation de la reservation': 'After confirmation of the reservation'
+'Message de confirmation': 'Confirmation message'
+'Titre du message': 'Message title'
+'Court texte inclus dans le message de confirmation': 'Short text included in the confirmation message'
+'Message de confirmation par SMS': 'Confirmation message by SMS'
+'Confirmation par SMS': 'Confirmation by SMS'
+'Envoyer un SMS instantané au client à chaque validation de reservation': 'Send an instant SMS to the customer each time you confirm your reservation'
+SMS/Court: SMS/Short
+'Message de remerciement par E-mail': 'Thank you message by E-mail'
+'E-mail de remerciement': 'E-mail of thanks'
+'Définir l''heure après laquelle l''E-mail sera envoyer aprè la visite': 'Define the time after which the e-mail will be sent after the visit'
+'Après le rendez-vous': 'After the appointment'
+'Ne pas envoyer l''E-mail de remerciement': 'Do not send the thank-you email'
+'Envoyer un E-mail de remerciement seulement après la': 'Send a thank-you email only after the'
+ere: st
+visite: visit
+'Envoyer un E-mail de remerciement après chaque visite': 'Send an e-mail of thanks after each visit'
+Rappels: Reminders
+'Message de rappel par E-mail': 'Reminder message by E-mail'
+'Rappel par E-mail': 'Reminder by E-mail'
+'Rappel par courrier électronique': 'Reminder by e-mail'
+'Envoyer un rappel par courriel E-mail au client': 'Send a reminder by e-mail to the customer'
+Semaines: Weeks
+'Avant l''heure du rendez-vous': 'Before the appointment time'
+'Message de rappel par SMS': 'Message of reminder by SMS'
+'Rappel par SMS': 'Recall by SMS'
+'Envoyer un rappel par SMS au client': 'Send a reminder by SMS to the customer'
+'Notification interne': 'Internal notification'
+'Notifications internes': 'Internal notifications'
+'Notifications par E-mail': 'Notifications by E-mail'
+'Notification par courrier électronique': 'Notification by e-mail'
+'Recevez un E-mail lorsqu''un client ou un autre utlisateur effectue, modifie, ou annule une reservation': 'Receive an e-mail when a customer or other user makes, modifies, or cancels a reservation'
+'Votre adresse électronique': 'Your email address'
+'Me notifier en cas de reservation': 'Notify me in case of reservation'
+'Me notifier si la réservation conserne l''une des prestations suivantes': 'Notify me if the reservation is one of the following services'
+'Liste des prestations': 'List of services provided'
+'Soins de visage': 'Face care'
+'Consultation nourisson': 'Infant consultation'
+'Nouveau patient': 'New patient'
+'Notifications par sms': 'SMS notifications'
+'Notification par SMS': 'Notification by SMS'
+'Numéro de téléphone portable': 'Mobile phone number'
+Delais: Delay
+'Choix du delais de reception du SMS': 'Choice of SMS reception time'
+'Si la reservation est effectuée peu de temps en avance': 'If the reservation is made a short time in advance'
+'Quand envoyer': 'When to send'
+'Si la période de reservation commence dans 45 min': 'If the reservation period starts in 45 minutes'
+'Si la période de reservation commence dans 1 heure': 'If the reservation period starts in 1 hour'
+Services: Services
+Service: Service
+'Créer un service': 'Create a service'
+'Informations service': 'Service information'
+Référence: Reference
+'Nom commercial': 'Trade name'
+'Ajouter la description': 'Add description'
+'Description du service': 'Service description'
+'Image / Photo': 'Image / Photo'
+'Ce choix est toujours disponible': 'This choice is always available'
+'Ce choix est disponible seulement durant ces heures': 'This choice is only available during these hours'
+De: From
+A: A
+'Et de': 'And to'
+'Quantité usuelle': 'Usual quantity'
+'Unité de temps': 'Time unit'
+Jour: Day
+'Catégorie service': 'Service category'
+'Informations Tarifaire': 'Price Information'
+'Prix du service': 'Service price'
+HT.: 'Excluding taxes'
+'Taux TVA': 'VAT rates'
+'Tarif HT': 'Rate excluding VAT'
+'Prix TTC': 'Price including VAT'
+'Paiement / Réglement': 'Payment / Settlement'
+Gratuit: 'Free of charge'
+Taux: Rates
+'Informations periodicité': 'Periodicity information'
+Période: 'Period of time'
+Janvier: January
+Mars: March
+Mai: May
+Juin: June
+Juillet: July
+Août: August
+Octobre: October
+Novembre: November
+Décembre: December
+Année: Year
+'Toute la journée': 'All day long'
+Répéter: Repeat
+'Ne pas répéter': 'Do not repeat'
+'Répéter tous les jours': 'Repeat every day'
+'Répéter toutes les semaines': 'Repeat weekly'
+'Répéter tous les mois': 'Repeat every month'
+'Répéter jusqu''au': 'Repeat until'
+'Gestion des tâches': 'Task management'
+Affectations: Assignments
+'Nom du prestataire': 'Name of the service provider'
+Sélection: Selection
+Coiffeur: Hairdresser
+Rouge: Red
+'Modifier Presataires': 'Modify Service Providers'
+'Affectation des prestations': 'Allocation of benefits'
+'Type de prestation(s)': 'Type of service(s)'
+Pédicure: Pedicure
+Onglerie: Nailing
+'Massage de dos': 'Back massage'
+'Epilation 1/2 jambe homme': 'Depilation 1/2 leg man'
+'Modifier les affectations des prestations à un prestataire': 'Modify the allocation of benefits to a service provider'
+'Paramètre dates et heures': 'Dates and times parameter'
+Calendrier: Calendar
+'Paramètres jours,dates et heures': 'Settings days, dates and times'
+'Jours & Heures': 'Days & Hours'
+Périodes: Periods
+semaine-jour: week-day
+'Semaine de 7 jours': '7 day week'
+'Semaine de 5 jours': '5 day week'
+'Heure de fin': 'End time'
+Interruption: Interruption
+Lundi: Monday
+Début: Start
+fin: end
+debut: start
+'Sans interruption': 'No interruption'
+Mardi: Tuesday
+Mercredi: Wednesday
+Jeudi: Thursday
+Vendredi: Friday
+Samedi: Saturday
+Dimanche: Sunday
+'Fréquence rendez-vous - temps / place(s) / mois': 'Frequency of appointment - time / place(s) / month'
+'Temps de résolution': 'Resolution time'
+'Intervalles fixe': 'Fixed intervals'
+Intervalle: Interval
+'Ne pas laissez d''intervalle entre les RDV': 'Do not leave an interval between appointments'
+'Laissez un intervalle de 15 min entre les RDV': 'Leave a 15 min interval between appointments'
+'Laissez un intervalle de 30 min entre les RDV': 'Leave a 30-minute interval between appointments'
+'Limite de reservation / Prise de rendez-vous': 'Booking / Appointment booking limit'
+'Reservation à l''avance (minimum): Les clients doivent réserver au moins': 'Booking in advance (minimum): Clients must book at least'
+Autre: Other
+'à l''avance': 'in advance'
+'Reservation à l''avance (maximum):  Les clients ne peuvent réserver plus de': 'Booking in advance (maximum): Clients may not book more than'
+Minute: Minute
+'Disponibilté des services': 'Availability of services'
+'Les services ne sont pas disponibles pendant la période suivante': 'Services are not available in the next period'
+'Période allant du': 'Period from'
+Avril: April
+Au: To
+'Ajouter période': 'Add period'
+'Les services  sont  disponibles pendant la période suivante': 'Services are available during the next period'
+'Toutes les semaines. Jusqu''au': 'Every week. Until to'
+'Reservation / Prise de rendez-vous': 'Booking / Appointment booking'
+'Date de début de reservation / Prise de rendez-vous': 'Booking / Appointment booking start date'
+'Première date disponible (Calendrier) début': 'First available date (Calendar) start'
+'Arrêt crénau horaire': 'Time slot stop'
+'Durée de RDV': 'Duration of appointment'
+'Nombre de place(s) / plage horaire': 'Number of place(s) / time slot'
+'Fréquence / mois': 'Frequency / month'
+'Temps limite avant le rdv': 'Time limit before appointment'
+heure: hour
+heures: hours
+Temps: Time
+'Nbre de personnes par plage horaire': 'Number of people per time slot'
+'Toutes les': All
+'Statut des rendez-vous / Reservations': 'Appointment / Reservations status'
+Activé: Enabled
+Vert: Green
+Bleu: Blue
+'Visite terminée': 'Visit completed'
+'Pas venue': 'Not come'
+Réinitialisé: Reset
+'Heure début': 'Start time'
+'Heure fin': 'End time'
+'Durée RDV': 'Duration of appointment'
+'Nbre de places': 'Number of places'
+'Et du': 'And from'
+'Créer un nouveau client': 'Create a new client'
+'Revenir au fichier': 'Return to file'
+'Création d''un nouveau client': 'Creating a new client'
+'Le jour': 'The day'
+'Le mois': 'The month'
+'L''année': 'The year'
+'Me notifier par e-mail': 'Notify me by e-mail'
+'Me notifier par sms': 'Notify me by sms'
+'Entrer un signalement': 'Enter a record'
+'Prénom réquis': 'Required first name'
+'champ réquis': 'Required field'
+'L''image doit être un jpg, Png ou un gif': 'The image must be a jpg, Png or gif'
+'Email invalide': 'Invalid email'
+'Liste des prestataires et ressource': 'List of providers and resources'
+Disponibilité: Availability
+'Feuille de disponibilité': 'Availability sheet'
+Identification: Identification
+'Disponibilité / temps de travail': 'Availability / working time'
+'Heure de travail': 'Hour of work'
+'Heure creuse': 'Off-peak time'
+'Liste des ressources': 'List of resources'
+Ville: City
+Quartier: Neighbourhood
+'La couleur': 'The color'
+'Listing des prestations': 'Listing of services'
+Photo: Photo
+Prix: Price
+'A la caisse': 'At the till'
+'Liste des prestations associées': 'List of associated services'
+Image: Image
+'Liste des services': 'List of services'
+Planning: Planning
+'Planning des activités': 'Activities planning'
+Semaine: Week
+'Type de prestation': 'Type of service'
+'Durée / temps': 'Duration / time'
+Lieux: Places
+'Consultation générale': 'General consultation'
+Cabine: Cabin
+Salle: Room
+'Prénom du prestataire': 'First name of the service provider'
+'Profession / Métier': 'Profession / Trade'
+'Médecin, Plombier': 'Doctor, Plumber'
+'Couleur du prestataire': 'Provider color'
+'Choisir la couleur': 'Choose color'
+Rose: Pink
+Marron: Brown
+Noire: Black
+Violette: Purple
+'Avec compte': 'With account'
+'Sans compte': 'Without account'
+'Sms informatif': 'Informative sms'
+'E-mail informatif': 'Informative e-mail'
+'Horaires disponibles': 'Available times'
+'Utiliser les heures d''ouverture de la société': 'Use company opening hours'
+'Disponible aux dates et heures suivantes': 'Available on the following dates and times'
+'Heure de début': 'Start time'
+'Selon le calendrier suivant': 'According to the following schedule'
+'Toutes les semaines': 'Every week'
+'A partir du': From
+'Jusqu''au': 'Up to'
+'Période du': 'Period of'
+'Créer une prestation': 'Create a service'
+'Titre de prestation': 'Service title'
+'Titre de la prestation': 'Title of the service'
+'Type de  prestation': 'Type of service'
+'Ajouter une description': 'Description of the service'
+'Description de la prestation': 'Description of the service'
+'Classes de personne': 'Person classes'
+Adulte: Adult
+Enfant: Child
+Homme: Man
+Femme: Woman
+Fille: Girl
+Garçon: Boy
+'Classes d''âge': 'Age classes'
+Nourrisons: Infants
+ans: 'years old'
+'Plus de': 'More than'
+'Photo / Image': 'Photo / Image'
+'Prix de la prestation': 'Price of the service'
+TTC: 'All taxes included'
+'Couleur de la prestation': 'Color of the service'
+'Durée de la prestation': 'Duration of the service'
+'La durée': 'The duration'
+'Le titre': 'The title'
+'Le type': 'The type'
+'Le prix': 'The price'
+'Prix invalide': 'Invalid price'
+'Durée invalide': 'Invalid duration'
+'Prestations de groupe': 'Group Services'
+'Prestations associées': 'Associated services'
+'Créer une prestation associée': 'Create an associated service'
+'Nom de la prestation': 'Name of the service'
+'Type de la prestation': 'Type of service'
+'Type la prestation': 'Type of service'
+Ajouter: Add
+'Description des  prestations associées': 'Description of the associated services'
+'Modifier les paramètres des notifications par Sms': 'Modify Sms notification settings'
+Ressources: Resources
+'Nom de la Ressource': 'Resource Name'
+'Type de Ressource': 'Resource Type'
+Description: Description
+'Options des restrictions': 'Restriction options'
+'Temps avant la prestation': 'Time before the service'
+'RDV groupe': 'Group meeting'
+'Heure limite d''annulation de rdv': 'Deadline for cancellation of appointment'
+'Heure limite de suppression de RDV': 'Deadline for deletion of appointment'
+'Heure limite modification de rdv': 'Deadline for appointment modification'
+'Liste d''attente': 'Waiting list'
+Blacklist: Blacklist
+'Compte obligatoire': 'Mandatory account'
+'Personne à charge': 'dependent person'
+Sortir: Exit
+'Modifier les paramètres spécifiques': 'Modify specific parameters'
+'Tps av. Presta.': 'Time before Service'
+'Rdv groupe': 'Group meeting'
+'H. Limite annu. RDV': 'Deadline for cancellation of appointment'
+'H. Limite supp. RDV': 'Deadline for deletion of appointment'
+'H. Limite modif. RDV': 'Deadline for appointment modification'
+'Liste attente': 'Waiting list'
+'Cpte Oblig.': 'Mandatory Account'
+Histo.: Histo.
+'Prs à chges': 'dependent persons'
+Sujet: Subject
+'caractères maximum': 'characters maximum'
+'Détails client': 'Client details'
+'Date de naissance': 'Date of birth'
+Pays: Country
+'Dernière reservation': 'Last reservation'
+Note: Note
+'information sur ses alergies ou autres choses': 'information about his allergies or other things'
+'Client depuis le': 'Client since'
+'Total des reservations': 'Total reservations'
+Annulation: Cancellation
+'Non présentation': 'No presentation'
+'Dernière reservation le': 'Last reservation on'
+'Mon historique': 'My history'
+'Dates  RDV': 'Appointment dates'
+'Heure RDV': 'Appointment time'
+'Type de RDV': 'Appointment type'
+'Avec qui': 'With whom'
+'Recherche client': 'Customer research'
+'Nouveau client': 'New customer'
+'Prendre RDV': 'Take an appointment'
+'Modifier RDV': 'Modify appointment'
+Présence: Presence
+Encaissement: 'Collection of funds'
+'Aujourd''hui': Today
+Précédent: Previous
+'Semaine du 19 au 27 Décembre 2019': 'Week of 19 to 27 December 2019'
+Suivant: Next
+jour: Day
+jours: days
+'Créer client': 'Create customer'
+'Revenir à l''agenda': 'Back to the agenda'
+'Création d''un Nouveau client': 'Creating a New Customer'
+'champs réquis': 'required fields'
+'Planning des agendas': 'Agenda planning'
+'Planning Cabinet médical la Grâce': 'Planning Medical practice la Grâce'
+'Journée du 15 décembre 2018': 'Day of December 15, 2018'
+'Par date': 'By date'
+Acte: Act
+Présent: Present
+'Rien a signaler pour le moment': 'Nothing to report at this time'
+'Fiche d''encaissement': 'Collection form'
+'Feuille d''encaissement': 'Collection sheet'
+'Reste à payer': 'Remainder to be paid'
+'Prendre un rendez-vous': 'Make an appointment'
+'Prendre un RDV': 'Make an appointment'
+'Prendre rendez-vous': 'Make an appointment'
+'Informations personnelles': 'Personal information'
+'Rechercher un client ici': 'Search for a customer here'
+'Voir ses rendez-vous': 'See his appointments'
+'Pas de client / patient trouvé': 'No client / patient found'
+'Cliquez ici pour créer un client / patient': 'Click here to create a client/patient'
+'Né(e) le': 'Born on'
+'02 Décembre 1970': '02 December 1970'
+Remarque: Note
+'je suis allergique à la péniciline': 'I am allergic to penicillin'
+'Venu à': 'Come to'
+'Dernier RDV': 'Last appointment'
+'2 décembre 2018': 'December 2, 2018'
+Rendez-vous: Appointment
+'Imprimer le rendez-vous': 'Print the appointment'
+'Choix de la prestation': 'Choice of service'
+'Soins de visage pour homme': 'Facial care for men'
+'Soins de visage pour femme': 'Facial care for women'
+'Massage corporel': 'Body massage'
+'Choix du prestataire': 'Choice of service provider'
+'Laisser un commentaire': 'Leave a comment'
+'Rappel SMS': 'SMS reminder'
+'Marquer le RDV comme': 'Mark the appointment as'
+Venue: Coming
+'Choisir prestation': 'Choose service'
+'Choisir prestataire': 'Choose a service provider'
+'Choisir date': 'Choose date'
+'Fiche de présence': 'Attendance sheet'
+'Fiche de présence du 19 février 2018': 'Attendance form of February 19, 2018'
+Venu: Coming
+'Pas venu': 'Not come'
+'Modifier le rendez-vous': 'Modify appointment'
+'Voir mes rendez-vous': 'See my appointments'
+'Votre rendez-vous du mardi 15 janvier 2019  à 12h 30 pour consultation générale': 'Your appointment on Tuesday, January 15, 2019 at 12:30 p.m. for general consultation'
+'Modifier mon rendez-vous du Mardi 15 Janvier 2019 à 11h 00': 'Modify my appointment on Tuesday, January 15, 2019 at 11:00 am'
+'Choix nouvelle date & heure': 'Choosing a new date & time'
+Périodicité: Frequency
+Périodicités: Periodicity
+'Disponibilité hebdomadaire': 'Weekly availability'
+'Tous les': 'All the'
+'jours de la semaine': 'days of the week'
+'semaines les': 'weeks the'
+'Modifier la disponibilité hebdomadaire': 'Change weekly availability'
+'Touts les': 'All the '
+'Disponibilité mensuelle': 'Monthly availability'
+Le: The
+'de tous les': 'All of them'
+Premier: First
+Deuxième: Second
+Troisième: Third
+Quatrième: Fourth
+mois: month
+'Modifier la disponibilité mensuelle': 'Change monthly availability'
+'Disponibilité annuelle': 'Annual availability'
+'Fin après': 'End after'
+'Fin le': 'End on'
+'Modification de la disponibilité annuelle': 'Change in annual availability'
+Quitter: Exit
+'Modifier les notifications d''Email': 'Edit Emailnotifications'
+'Nom de la notification': 'Name of the notification'
+'Temps avant': 'Time before'
+'Temps après': 'Time after'
+'E-mail rappel RDV': 'E-mail reminder appointment'
+'Rappel RDV': 'Appointment reminder'
+'N''oublier votre rendez-vous de cette après midi': 'Forget your appointment this afternoon'
+'E-mail de remercièment': 'Thank you email'
+'E-mail d''absence': 'Absence e-mail'
+'L''alerte': 'The alert'
+'E-mail de campagne': 'Campaign email'
+Lancement: Launch
+'E-mail de promotion': 'Promotion e-mail'
+Promotion: Promotion
+'E-mail de souhait': 'Wish e-mail'
+Evénement: Event
+Confirmation: Confirmation
+Modification: Modification
+'E-mail de retrait': 'Withdrawal e-mail'
+Retrait: Withdrawal
+'E-mail de RDV non honoré': 'Appointment e-mail not honored'
+'Modifier les notifications Sms': 'Edit Sms notifications'
+'Sms de remercièment': 'Thank you sms'
+'Sms d''absence': 'Absence  sms:'
+'Sms de campagne': 'Campaign sms'
+'Sms de promotion': 'Promotion sms'
+'Sms de souhait': 'Wish sms'
+'Sms de confirmation': 'Confirmation text messages'
+'Sms de modification': 'Sms of modification'
+'Sms de retrait': 'Withdrawal sms'
+'Sms de RDV non honoré': 'Sms of appointment not honored'
+'Utiliser un programme spécifique': 'Use a specific program'
+'Création d''un agenda': 'Creating an agenda'
+'Création agenda': 'Agenda creation'
+'Nom de l''agenda': 'Name of the agenda'
+'Métier / Activité': 'Business / Activity'
+'Ouvrir sur internet': 'Open on the Internet'
+'Oui, avec le même nom': 'Yes, with the same name'
+'Non, ne pas ouvrir sur internet': 'No, don''t open on the Internet'
+'Oui, avec le nom': 'Yes, with the name'
+'Choisir une couleur': 'Choose a color'
+'Horaires d''ouverture / Reception': 'Opening / Reception Schedules'
+'Je précise les horaires d''ouverture et de fin de journée': 'I specify the opening and end of day hour'
+'Je prefère mettre mais horaires de façon détaillée': 'I prefer to put but schedules in detail'
+de: of
+'à': to
+'et de': 'and of'
+'Indisponibilité journalière': 'Daily unavailability'
+'J''ai une indisponibilité dans la journée': 'I have an unavailability during the day'
+Disponibilités: Availability
+'Créer l''agenda': 'Create the agenda'
+'Le métier': 'The job'
+'Paramètre des services additionnels': 'Additional services parameter'
+'Prestations groupées': 'Grouped services'
+E-Service: E-Service
+'Boite de reception': Inbox
+'Listing de tous les agendas': 'Listing of all agendas'
+'Liste des agendas': 'List of agendas'
+'Agenda patient': 'Patient Agenda'
+'Oui avec le même nom': 'Yes with the same name'
+'Modification des paramètre du prestataire': 'Changing provider settings'
+'Modification des informations du prestataire': 'Modification of the provider''s information'
+verte: green
+'Modifier les droits d''accés': 'Changing access rights'
+'Modifier les droits d''accès': 'Changing access rights'
+Titulaire: Holder
+'Nom du titulaire': 'Name of the holder'
+Gérant: Manager
+Secrétaire: Secretary
+Intervenant: Intervener
+'modifier les restriction': 'modify restrictions'
+'Modifier les restriction': 'Modify restrictions'
+'Permettre l''annulation de RDV': 'Allow appointment cancellation'
+'Modifier l''heure de rendez-vous': 'Changing the appointment time'
+'Modifier les paramètres de dates et heures': 'Modify date and time settings'
+'Semaine de travail': 'Work week'
+'Reservation à l''avance (maximum):  Les clients doivent réserver au moins': 'Booking in advance (maximum):  Clients must book at least'
+'Première date disponible (calendrier)': 'First available date (calendar)'
+'Fermeture crénau horaire': 'Closing time slot'
+'Nombre de personne par plage horaire': 'Number of people per time slot'
+'Statut des rendez-vous / Reservation': 'Appointment / Booking  status'
+'Client arrivé': 'Arrived Client'
+'Client pas arrivé': 'Client not arrived'
+'Modifier les paramètre des prestations de groupe': 'Modify group service'
+'Modification des paramètre de prestation de groupe': 'Changing group service parameters'
+'Modifier les paramètres des prestations de services': 'Modify the parameters of the provision of services'
+'Modifier les services': 'Modify services'
+description: description
+'Modifier les  prestations uniques': 'Modify unique services'
+Répondre: Reply
+Voir: See
+'fiche d''encaissement': 'collection form'
+'Votre rendez-vous': 'Your appointment'
+'Le 10 mai 2020 à 12h30min': 'May 10, 2020 at 12:30pm'
+Pour: For
+'Consultation dentaire': 'Dental consultation'
+Avec: With
+'Dernier rendez-vous': 'Last appointment'
+décembre: december
+'Tarif TTC': 'Rate including all taxes'
+'Modifier les paramètres des prestations uniques': 'Modify the parameters of the unique services'
+'Créer un Nouveau client': 'Create a New client'

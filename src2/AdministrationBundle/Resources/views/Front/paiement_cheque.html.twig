@@ -1,320 +1,313 @@
-  {% extends '::admin_template.html.twig' %}
+{% extends '::admin_template.html.twig' %}
 
-<<<<<<< .mine
-{% block title %}Paiement par chèque : Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
-||||||| .r697
-{% block title %}Paiement par chèque :: Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
-=======
-{% block title %}{{'Paiement par chèque'|trans}} :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
->>>>>>> .r727
+{% block title %}{{'Paiement par chèque'|trans}} - {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
 <style type="text/css">
-      th,td{
-        text-align: center !important;
-      }
-      </style>
+    th,td{
+      text-align: center !important;
+    }
+    </style>
 {% endblock %}
 
 {% block body %}
 
 <!-- debut du contenu -->
-    <section id="main-content">
+  <section id="main-content">
+    <section class="wrapper site-min-height">
+      <div class="row mt">
+           <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+        <!-- /col-lg-12 -->
+        <div class="col-lg-12 mt">
+
+
+          <div class="row content-panel">
+           <!-- debut -->
       <section class="wrapper site-min-height">
-        <div class="row mt">
-             <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
-          <!-- /col-lg-12 -->
-          <div class="col-lg-12 mt">
-
-
-            <div class="row content-panel">
-             <!-- debut -->
-        <section class="wrapper site-min-height">
-        <div class="row">
-          <div class="col-lg-12">
+      <div class="row">
+        <div class="col-lg-12">
 
 
 
-              <h4 class="small_tittle up_">{{'Mode de paiement'|trans}} </h4>
-                   <p class="journne_du_" style="text-align:center !important;"> </p>
+            <h4 class="small_tittle up_">{{'Mode de paiement'|trans}} </h4>
+                 <p class="journne_du_" style="text-align:center !important;"> </p>
 
 
 
-            <div class="">
+          <div class="">
 
-                <section id="unseen">
-                  <div class="cadre_operateur">
-                    <p class="text_paiement">{{'Paiement par chèque'|trans}}</p>
-                    <form method="post" action="" id="signupForm">
-                     <table style="margin-left:20px !important;margin-right:20px !important;">
-                          <tr>
-                            <th><span class="title_mode">{{'Titre'|trans}}  </span></th>
-                              <td>
-                                <span class="name_operat"><input type="text" name="titre" placeholder="{{'chèque'|trans}}" class="form-control"></span>
+              <section id="unseen">
+                <div class="cadre_operateur">
+                  <p class="text_paiement">{{'Paiement par chèque'|trans}}</p>
+                  <form method="post" action="" id="signupForm">
+                   <table style="margin-left:20px !important;margin-right:20px !important;">
+                        <tr>
+                          <th><span class="title_mode">{{'Titre'|trans}}  </span></th>
+                            <td>
+                              <span class="name_operat"><input type="text" name="titre" placeholder="{{'chèque'|trans}}" class="form-control"></span>
 
-                              </td>
-                          </tr>
+                            </td>
+                        </tr>
 
-                          <tr>
-                            <th><span class="title_mode">{{'Nom établissement'|trans}}  </span></th>
-                              <td>
-                                <span class="name_operat"><input type="text" name="etablissement" placeholder="Ex: {{'SGBC'|trans}}" class="form-control"></span>
-                              </td>
-                          </tr>
-
-
-                          <tr>
-                            <th><span class="title_mode">{{'Usage'|trans}} </span> </th>
-                              <td>
-                                <select name="" class="usage_">
-                                    <option value="">{{'Pour  encaissements'|trans}}</option>  
-                                    <option value="">{{'Pour  rembourssements'|trans}}</option>  
-                                </select>
-
-                              </td>
-                          </tr>
-
-                           <tr>
-                            <th></th>
-                              <td style="text-align: left !important;">
-                                <span class="name_operat"><input type="checkbox" name="" class=""> {{'Activer'|trans}}</span>
-                              </td>
-                          </tr>
-
-                          <tr>
-                            <th><span class="title_mode">{{'Coordonnées'|trans}} </span> </th>
-                              <td>
-                                <span class="name_operat"><textarea placeholder="{{'Coordonnées'|trans}}" name="coordonnee" class="form-control"></textarea> </span>
-                              </td>
-                          </tr>
-                          <tr>
-                            <th><span class="title_mode">Ordre </span></th>
-                              <td>
-                                <span class="name_operat"><input type="text" name="ordre" placeholder=" " class="form-control"></span>
-                              </td>
-                          </tr>
-
-                          <tr>
-                            <th></th>
-                              <td style="padding-left: 20px;">
-                                <br>
-                                <button type="submit" class="btn btn-success btn_valid" id="button_send"><i class="fa fa-floppy-o"></i> {{'Enregistrer'|trans}}</button>
-                                <button class="btn btn-danger btn_valid"><i class="fa fa-times"></i> {{'Annuler'|trans}} </button>
-                              </td>
-                          </tr>
-
-                      </table>
-                    </form>
-
-                      <div style="margin-left:10px !important;margin-right:10px !important;">
-                        <br>
-                        <table class="table table-bordered table-striped table-condensed">
-                    <thead>
-                                <tr style="background-color: #26440d !important;color: #fff !important;">
-                                 <th> N°</th>
-                                  <th>{{'Titre'|trans}}</th>
-
-                                  <th>{{'Nom établissement'|trans}}</th>
-                                  <th>{{'Activer'|trans}}</th>
-                                  <th>{{'Action'|trans}}</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-
-                                    <td>.......</td>
-                                    <td>.......</td>
-                                    <td>.......</td>
-                                    <td>.......</td>
-                                    <td>
-                                      <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</button>
-
-                                      <!-- debut de la fenetre modal -->
-
-                                        <div class="modal fade" id="myModal_rdv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                        <div class="modal-dialog second_modal-dialog" role="document" >
-                                          <div class="modal-content" >
-                                            <div class="modal-header">
-                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                              <h4 class="modal-title" id="myModalLabel">{{'Modifier vos informations  de paiement par virement'|trans}}</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                              <!-- debut -->
-                                                <form method="post" action="">
-                                                  <table style="margin-left:20px !important;margin-right:20px !important;">
-                                                       <tr>
-                                                         <th><span class="title_mode">{{'Titre'|trans}}  </span></th>
-                                                           <td>
-                                                             <span class="name_operat"><input type="text" name="titre_modif" placeholder="{{'chèque'|trans}}" class="form-control"></span>
-
-                                                           </td>
-                                                       </tr>
-
-                                                       <tr>
-                                                         <th><span class="title_mode">{{'Nom établissement'|trans}}  </span></th>
-                                                           <td>
-                                                             <span class="name_operat"><input type="text" name="etablissement_modif" placeholder="Ex: {{'SGBC'|trans}}" class="form-control"></span>
-                                                           </td>
-                                                       </tr>
+                        <tr>
+                          <th><span class="title_mode">{{'Nom établissement'|trans}}  </span></th>
+                            <td>
+                              <span class="name_operat"><input type="text" name="etablissement" placeholder="Ex: {{'SGBC'|trans}}" class="form-control"></span>
+                            </td>
+                        </tr>
 
 
-                                                       <tr>
-                                                        <th><span class="title_mode">{{'Usage'|trans}} </span> </th>
-                                                          <td>
-                                                            <select name="" class="usage_">
-                                                                <option value="">{{'Pour  encaissements'|trans}}</option>  
-                                                                <option value="">{{'Pour  rembourssements'|trans}}</option>  
-                                                            </select>
+                        <tr>
+                          <th><span class="title_mode">{{'Usage'|trans}} </span> </th>
+                            <td>
+                              <select name="" class="usage_">
+                                  <option value="">{{'Pour  encaissements'|trans}}</option>
+                                  <option value="">{{'Pour  rembourssements'|trans}}</option>
+                              </select>
 
-                                                          </td>
-                                                      </tr>
+                            </td>
+                        </tr>
 
-                                                        <tr>
-                                                         <th></th>
-                                                           <td style="text-align: left !important;">
-                                                             <span class="name_operat"><input type="checkbox" name="" class=""> {{'Activer'|trans}}</span>
-                                                           </td>
-                                                       </tr>
+                         <tr>
+                          <th></th>
+                            <td style="text-align: left !important;">
+                              <span class="name_operat"><input type="checkbox" name="" class=""> {{'Activer'|trans}}</span>
+                            </td>
+                        </tr>
 
-                                                       <tr>
-                                                         <th><span class="title_mode">{{'Coordonnées'|trans}} </span> </th>
-                                                           <td>
-                                                             <span class="name_operat"><textarea placeholder="{{'Coordonnées'|trans}}" name="coordonnee_modif" class="form-control"></textarea> </span>
-                                                           </td>
-                                                       </tr>
-                                                       <tr>
-                                                         <th><span class="title_mode">{{'Ordre'|trans}} </span></th>
-                                                           <td>
-                                                             <span class="name_operat"><input type="text" name="ordre_modif" placeholder=" " class="form-control"></span>
-                                                           </td>
-                                                       </tr>
+                        <tr>
+                          <th><span class="title_mode">{{'Coordonnées'|trans}} </span> </th>
+                            <td>
+                              <span class="name_operat"><textarea placeholder="{{'Coordonnées'|trans}}" name="coordonnee" class="form-control"></textarea> </span>
+                            </td>
+                        </tr>
+                        <tr>
+                          <th><span class="title_mode">{{'Ordre'|trans}} </span></th>
+                            <td>
+                              <span class="name_operat"><input type="text" name="ordre" placeholder=" " class="form-control"></span>
+                            </td>
+                        </tr>
 
-                                                       <tr>
-                                                         <th></th>
-                                                           <td style="padding-left: 20px;">
-                                                             <br>
-                                                             <button type="submit" class="btn btn-success btn_valid" id="button_send"><i class="fa fa-floppy-o"></i> {{'Enregistrer'|trans}}</button>
-                                                             <button class="btn btn-danger btn_valid"><i class="fa fa-times"></i> {{'Annuler'|trans}} </button>
-                                                           </td>
-                                                       </tr>
+                        <tr>
+                          <th></th>
+                            <td style="padding-left: 20px;">
+                              <br>
+                              <button type="submit" class="btn btn-success btn_valid" id="button_send"><i class="fa fa-floppy-o"></i> {{'Enregistrer'|trans}}</button>
+                              <button class="btn btn-danger btn_valid"><i class="fa fa-times"></i> {{'Annuler'|trans}} </button>
+                            </td>
+                        </tr>
 
-                                                   </table>
-                                                  </form>
+                    </table>
+                  </form>
 
-                                              <br><br>
+                    <div style="margin-left:10px !important;margin-right:10px !important;">
+                      <br>
+                      <table class="table table-bordered table-striped table-condensed">
+                  <thead>
+                              <tr style="background-color: #26440d !important;color: #fff !important;">
+                               <th> N°</th>
+                                <th>{{'Titre'|trans}}</th>
 
-                                              <!-- fin  -->
-                                            </div>
+                                <th>{{'Nom établissement'|trans}}</th>
+                                <th>{{'Activer'|trans}}</th>
+                                <th>{{'Action'|trans}}</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+
+                                  <td>.......</td>
+                                  <td>.......</td>
+                                  <td>.......</td>
+                                  <td>.......</td>
+                                  <td>
+                                    <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</button>
+
+                                    <!-- debut de la fenetre modal -->
+
+                                      <div class="modal fade" id="myModal_rdv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                      <div class="modal-dialog second_modal-dialog" role="document" >
+                                        <div class="modal-content" >
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">{{'Modifier vos informations  de paiement par virement'|trans}}</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            <!-- debut -->
+                                              <form method="post" action="">
+                                                <table style="margin-left:20px !important;margin-right:20px !important;">
+                                                     <tr>
+                                                       <th><span class="title_mode">{{'Titre'|trans}}  </span></th>
+                                                         <td>
+                                                           <span class="name_operat"><input type="text" name="titre_modif" placeholder="{{'chèque'|trans}}" class="form-control"></span>
+
+                                                         </td>
+                                                     </tr>
+
+                                                     <tr>
+                                                       <th><span class="title_mode">{{'Nom établissement'|trans}}  </span></th>
+                                                         <td>
+                                                           <span class="name_operat"><input type="text" name="etablissement_modif" placeholder="Ex: {{'SGBC'|trans}}" class="form-control"></span>
+                                                         </td>
+                                                     </tr>
+
+
+                                                     <tr>
+                                                      <th><span class="title_mode">{{'Usage'|trans}} </span> </th>
+                                                        <td>
+                                                          <select name="" class="usage_">
+                                                              <option value="">{{'Pour  encaissements'|trans}}</option>
+                                                              <option value="">{{'Pour  rembourssements'|trans}}</option>
+                                                          </select>
+
+                                                        </td>
+                                                    </tr>
+
+                                                      <tr>
+                                                       <th></th>
+                                                         <td style="text-align: left !important;">
+                                                           <span class="name_operat"><input type="checkbox" name="" class=""> {{'Activer'|trans}}</span>
+                                                         </td>
+                                                     </tr>
+
+                                                     <tr>
+                                                       <th><span class="title_mode">{{'Coordonnées'|trans}} </span> </th>
+                                                         <td>
+                                                           <span class="name_operat"><textarea placeholder="{{'Coordonnées'|trans}}" name="coordonnee_modif" class="form-control"></textarea> </span>
+                                                         </td>
+                                                     </tr>
+                                                     <tr>
+                                                       <th><span class="title_mode">{{'Ordre'|trans}} </span></th>
+                                                         <td>
+                                                           <span class="name_operat"><input type="text" name="ordre_modif" placeholder=" " class="form-control"></span>
+                                                         </td>
+                                                     </tr>
+
+                                                     <tr>
+                                                       <th></th>
+                                                         <td style="padding-left: 20px;">
+                                                           <br>
+                                                           <button type="submit" class="btn btn-success btn_valid" id="button_send"><i class="fa fa-floppy-o"></i> {{'Enregistrer'|trans}}</button>
+                                                           <button class="btn btn-danger btn_valid"><i class="fa fa-times"></i> {{'Annuler'|trans}} </button>
+                                                         </td>
+                                                     </tr>
+
+                                                 </table>
+                                                </form>
+
+                                            <br><br>
+
+                                            <!-- fin  -->
                                           </div>
                                         </div>
-                                        </div>
+                                      </div>
+                                      </div>
 
-                                      <!-- fin de la fenetre modal -->
-                                        <a href="" class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vraiment supprimer ?')"><i class="fa fa-window-close" aria-hidden="true"></i> Supprimer</a>
-                                    </td>
-                                </tr>
-                              </tbody>
-               </table>
+                                    <!-- fin de la fenetre modal -->
+                                      <a href="" class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vraiment supprimer ?')"><i class="fa fa-window-close" aria-hidden="true"></i> {{'Supprimer'|trans}}</a>
+                                  </td>
+                              </tr>
+                            </tbody>
+             </table>
 
-             </div>
+           </div>
+                </div>
+
+            </div>
                   </div>
-
-              </div>
-                    </div>
-                          </div>
                         </div>
-                <!-- fin de la popup pour la modification des parametres qpécifique -->
+                      </div>
+              <!-- fin de la popup pour la modification des parametres qpécifique -->
 
 
 
-                </section>
-            </div>
-
-
-
-
-            <!-- end col-4 -->
+              </section>
           </div>
-          <!--  /col-lg-12 -->
-        </div>
-        <!--  /row -->
-      </section>
-             <!-- fin -->
 
-            </div>
 
-          </div>
-          <!-- /row -->
+
+
+          <!-- end col-4 -->
         </div>
-        <!-- /container -->
-      </section>
-      <!-- /wrapper -->
+        <!--  /col-lg-12 -->
+      </div>
+      <!--  /row -->
     </section>
+           <!-- fin -->
+
+          </div>
+
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </section>
+    <!-- /wrapper -->
+  </section>
 
 {% endblock %}
 
 {% block scripts %}
 
 <script>
-        $(document).ready(function() {
-          $("#signupForm").validate({
-            rules: {
-              titre: {
-                required: true,
-                minlength: 2
-              },
-              etablissement: {
-                required: true,
-                minlength: 2
-              },
-              ordre: {
-                required: true,
-                minlength: 2
-              },
-              comment:{
-                required:false,
-                minlength: 20
-              },
-              coordonnee: {
-             required: true,
-             minlength: 2
-           },
+      $(document).ready(function() {
+        $("#signupForm").validate({
+          rules: {
+            titre: {
+              required: true,
+              minlength: 2
             },
-            messages: {
-              etablissement: {
-                required: "<span style='color:#dd4f43'>{{'Nom réquis'|trans}}</span>",
-                minlength: "<span style='color:#dd4f43'> 2 {{'caractères minimum'|trans}}</span>"
-              },
-              phone: {
-             required: "<span style='color:#dd4f43'>{{'Champs réquis'|trans}}</span>",
-             minlength: "<span style='color:#dd4f43'>9 {{'caractères minimum'|trans}}</span>",
-             maxlength: "<span style='color:#dd4f43'>{{'Pas plus de 9 caractères'|trans}}</span>",
-             number:"<span style='color:#dd4f43'>{{'Numéro invalide'|trans}}</span>"
-           },
-              titre: {
-                required: "<span style='color:#dd4f43'>{{'Titre réquis'|trans}}</span>",
-                minlength: "<span style='color:#dd4f43'> 2 {{'caractères minimum'|trans}}</span>"
-              },
-              ordre: {
-                required: "<span style='color:#dd4f43'>{{'Champ réquis'|trans}}</span>",
-                minlength: "<span style='color:#dd4f43'> 2 {{'caractères minimum'|trans}}</span>"
-              },
-              coordonnee: {
-                required: "<span style='color:#dd4f43'>{{'Coordonnées réquis'|trans}}</span>",
-                minlength: "<span style='color:#dd4f43'> 2 {{'caractères minimum'|trans}}</span>"
-              },
-              comment: {
-                required: "<span style='color:#dd4f43'></span>",
-                minlength: "<span style='color:#dd4f43'>20 {{'caractères minimum'|trans}}</span>",
-              },
-              ressource: "<span style='color:#dd4f43'>{{'Ressource'|trans}}</span>",
-            }
-          });
-
-
+            etablissement: {
+              required: true,
+              minlength: 2
+            },
+            ordre: {
+              required: true,
+              minlength: 2
+            },
+            comment:{
+              required:false,
+              minlength: 20
+            },
+            coordonnee: {
+           required: true,
+           minlength: 2
+         },
+          },
+          messages: {
+            etablissement: {
+              required: "<span style='color:#dd4f43'>{{'Nom réquis'|trans}}</span>",
+              minlength: "<span style='color:#dd4f43'> 2 {{'caractères minimum'|trans}}</span>"
+            },
+            phone: {
+           required: "<span style='color:#dd4f43'>{{'Champs réquis'|trans}}</span>",
+           minlength: "<span style='color:#dd4f43'>9 {{'caractères minimum'|trans}}</span>",
+           maxlength: "<span style='color:#dd4f43'>{{'Pas plus de 9 caractères'|trans}}</span>",
+           number:"<span style='color:#dd4f43'>{{'Numéro invalide'|trans}}</span>"
+         },
+            titre: {
+              required: "<span style='color:#dd4f43'>{{'Titre réquis'|trans}}</span>",
+              minlength: "<span style='color:#dd4f43'> 2 {{'caractères minimum'|trans}}</span>"
+            },
+            ordre: {
+              required: "<span style='color:#dd4f43'>{{'Champ réquis'|trans}}</span>",
+              minlength: "<span style='color:#dd4f43'> 2 {{'caractères minimum'|trans}}</span>"
+            },
+            coordonnee: {
+              required: "<span style='color:#dd4f43'>{{'Coordonnées réquis'|trans}}</span>",
+              minlength: "<span style='color:#dd4f43'> 2 {{'caractères minimum'|trans}}</span>"
+            },
+            comment: {
+              required: "<span style='color:#dd4f43'></span>",
+              minlength: "<span style='color:#dd4f43'>20 {{'caractères minimum'|trans}}</span>",
+            },
+            ressource: "<span style='color:#dd4f43'>{{'Ressource'|trans}}</span>",
+          }
         });
 
-    </script>
-    
-{% endblock %}
 
+      });
+
+  </script>
+
+{% endblock %}

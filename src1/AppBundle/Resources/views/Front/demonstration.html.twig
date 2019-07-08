@@ -1,71 +1,95 @@
- {% extends 'connect.html.twig' %}
+{% extends 'connect.html.twig' %}
 
-{% block title %}{{'Besoin d'une demonstration'|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+{% block title %}{{"Besoin d'une demonstration"|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
-  <style>
-        .sky-form{
-            box-shadow: none !important;
-            border:1px solid #fff !important;
-        }
-             #wrapper > button{
-          display: block;
-          margin-left: 170px !important;
-        }
+ <style>
+       .sky-form{
+           box-shadow: none !important;
+           border:1px solid #fff !important;
+       }
+            #wrapper > button{
+         display: block;
+         margin-left: 170px !important;
+       }
 
-            body{
-      background: url('{{asset("img/t8.png")}}') no-repeat center center;
-      background-size: cover !important;
-      background-attachment: fixed !important;
-    }
-    </style>
+           body{
+     background: url('{{asset("img/t8.png")}}') no-repeat center center;
+     background-size: cover !important;
+     background-attachment: fixed !important;
+   }
+     .div_taris_devis h5{
+     font-weight: 700;
+     font-size: 1.3em !important;
+     margin-left: 10px;
+     margin-right: 10px;
+     margin-top: 13px;
+     margin-bottom:13px;
+     }
+     .div_taris_devis h3{
+         font-weight: 700;
+         margin-left: 10px;
+         margin-right: 10px;
+     }
+     .item_infos_service{
+         font-size: 1.1em;
+         margin-left: 10px;
+         margin-right: 10px;
+     }
+     .btn_demande_devis{
+         display:inline-block;
+         font-weight: 700;
+         margin-left: 10px !important;
+         margin-bottom: 20px;
+     }
+   </style>
 
 
 {% endblock %}
 
 {% block body %}
-        <div class="container-fluid">
-          <div class="down_containt"></div>
-            <div class="container">
-                 <div id="wrapper">
+       <div class="container-fluid">
+         <div class="down_containt"></div>
+           <div class="container">
+                <div id="wrapper">
 
-                  <div class="wrapper_prise_" style="border-radius: 0px !important;">
-                    <div class="">
-                          
+                 <div class="wrapper_prise_" style="border-radius: 10px !important;">
+                   <div class="">
 
-                        
 
                        <div class="wrapper_prise_" style="border-radius: 0px !important;">
-                        <div class="div_taris_devis">
-                            <h2>Dikaki offre un accord de Solutions</h2>
-                           <div class="row" style="background:#ffff !important;">
-                            <!-- debut -->
-                               <br>
-                              
+                   <h2>Dikaki {{'offre un accord de Solutions'|trans}}</h2>
+                   <div class="">
+                      <!-- debut -->
 
-                               <p class="item_infos_service">
-                 Testez la solution Dikaki pendant 60 jours gratuitement et sans engagement. Si vous souhaitez continuer à utiliser Dikaki à l’issue de la phase d’essai, nous vous proposerons la solution adaptée à votre situation. Il vous suffit de sélectionner la version avec le pack de fonctionnalités qui correspondent le mieux à vos besoins.
-                 </p>
-                             
-                <br>
-                <h4 class="text-center"> DIKAKI-rdv; Un système social de prise de rendez-vous  </h4>
-              <!-- fin -->
-              <br>
-                            <a href="{{path('dkk_app_demander_demo')}}" class="btn btn-success btn-sm">Je demande une démo</a>
-                            <br>
-                           </div>
-                      </div>
-            </div>
-                          
-                    </div>
-                    
-                  </div>
+                <p class="item_infos_service">
+                {{"Testez la solution Dikaki pendant 60 jours gratuitement et sans engagement. Si vous souhaitez continuer à utiliser Dikaki à l’issue de la phase d’essai, nous vous proposerons la solution adaptée à votre situation. Il vous suffit de sélectionner la version avec le pack de fonctionnalités qui correspondent le mieux à vos besoins."|trans}}
+                </p>
 
-    </div>
-  </div>
+               <p style="margin-top: 25px;"></p>
+               <h4 class="text-center"> {{'DIKAKI-rdv; un système social de prise de rendez-vous'|trans}}  </h4>
+             <!-- fin -->
+
+
+
+                   </div>
+                   <br>
+                   <a href="{{path('dkk_app_demander_demo')}}" class="btn btn-success btn-sm pull-right">{{'Je demande une démo'|trans}}</a>
+                   <p style="clear: both !important;"></p>
+                 </div>
+
+
+                   </div>
+
+                 </div>
+
+   </div>
+ </div>
+</div>
+
 {% endblock %}
 
 {% block scripts %}
-   
-   
+
+
 {% endblock %}

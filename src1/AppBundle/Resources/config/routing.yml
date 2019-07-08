@@ -1,19 +1,19 @@
 dkk_app_homepage:
     path:     /
     defaults: { _controller: DKKAppBundle:Default:index }
-   
+
 dkk_app_rendez_vous:
     path:     /rendez-vous
     defaults: { _controller: DKKAppBundle:Default:rdv }
-    
+
 dkk_app_education:
     path:     /education
     defaults: { _controller: DKKAppBundle:Default:education }
-    
+
 dkk_app_dossier:
     path:     /depot_dossier
     defaults: { _controller: DKKAppBundle:Default:depot_dossier }
-    
+
 dkk_app_billeterie:
     path:     /billeterie
     defaults: { _controller: DKKAppBundle:Default:billeterie }
@@ -29,15 +29,15 @@ dkk_app_contacter:
 dkk_app_partenaires:
     path:    /partenaires
     defaults: { _controller: DKKAppBundle:Default:partenaires }
-    
+
 dkk_app_test_formulaire:
     path:     /test/formulaire
     defaults: { _controller: DKKAppBundle:Default:formulaire }
-    
+
 dkk_app_test_affiche:
     path:     /test/affiche
     defaults: { _controller: DKKAppBundle:Default:affiche }
-    
+
 dkk_app_evenement:
     path:     /evenements
     defaults: { _controller: DKKAppBundle:Default:evenements }
@@ -45,7 +45,7 @@ dkk_app_evenement:
 dkk_app_contact:
     path:     /contact
     defaults: { _controller: DKKAppBundle:Default:contact }
-    
+
 dkk_app_partenaire:
     path:     /partenaire
     defaults: { _controller: DKKAppBundle:Default:partenaire }
@@ -53,27 +53,27 @@ dkk_app_partenaire:
 dkk_app_procedure:
     path:     /procedure/{id}
     defaults: { _controller: DKKAppBundle:Default:procedure }
-    
+
 dkk_app_procedure2:
     path:     /procedureStep2/{id}/{titre}
     defaults: { _controller: DKKAppBundle:Default:procedure2 }
-    
+
 dkk_app_procedure_rdv:
     path:     /procedure/rdv/{id}/{idType}
     defaults: { _controller: DKKAppBundle:Default:procedureRdv }
-    
+
 dkk_app_procedure_connexion:
     path:     /procedure/connexion/{jour}/{heure}/{sem}/{an}
     defaults: { _controller: DKKAppBundle:Default:procedureConnexion }
-    
+
 dkk_app_procedure_coordonnees:
     path:     /procedure/coordonnees
     defaults: { _controller: DKKAppBundle:Default:procedureCoordonnees }
-    
+
 dkk_app_procedure_paiement:
     path:     /procedure/paiement/{id}/{compte}
     defaults: { _controller: DKKAppBundle:Default:procedurePaiement }
-    
+
 dkk_app_procedure_confirmation:
     path:     /procedure/confirmation/{id}
     defaults: { _controller: DKKAppBundle:Default:procedureConfirmation }
@@ -81,11 +81,11 @@ dkk_app_procedure_confirmation:
 dkk_app_procedure_recap:
     path:     /procedure/recap/{id}
     defaults: { _controller: DKKAppBundle:Default:procedureRecap }
-    
+
 dkk_list_service:
     path:    /list/dispoPrest
     defaults: { _controller: DKKAppBundle:App:listDisponibilites }
-    
+
 dkk_list_service2:
     path:    /list/dispoParametre
     defaults: { _controller: DKKAppBundle:App:listDisponibilitesParam }
@@ -93,15 +93,15 @@ dkk_list_service2:
 dkk_professionnel_verif_email:
     path:    /auth/email
     defaults: { _controller: DKKAppBundle:App:emailDisponible }
-    
+
 dkk_app_procedure_load_prestataire:
     path:     /procedure/prv/load/
     defaults: { _controller: DKKAppBundle:Default:procedureLoadPrestataires }
-    
+
 dkk_app_procedure_load_prestataire2:
     path:     /procedure/prv2/load/
     defaults: { _controller: DKKAppBundle:Default:procedureLoadPrestataires2 }
-    
+
 dkk_app_procedure_load_prestation2:
     path:     /procedure/presv/loadPrest/
     defaults: { _controller: DKKAppBundle:Default:procedureLoadPrestation }
@@ -109,20 +109,20 @@ dkk_app_procedure_load_prestation2:
 dkk_app_procedure_load_calendrier:
     path:    /procedure/load/calendrier
     defaults: { _controller: DKKAppBundle:Default:procedureLoadCalendrierNow }
-    
+
 dkk_app_procedure_load_calendrier2:
     path:    /procedure/load/calendrier2
     defaults: { _controller: DKKAppBundle:Default:procedureLoadCalendrier2Now }
-    
+
 #New Front
 dkk_app_erreur:
     path:    /erreur
     defaults: { _controller: DKKAppBundle:Front:erreur }
-    
+
 dkk_app_fonctionnalite:
     path:    /fonctionnalite
     defaults: { _controller: DKKAppBundle:Front:fonctionnalite }
-    
+
 dkk_app_devis:
     path:    /devis
     defaults: { _controller: DKKAppBundle:Front:devis }
@@ -130,50 +130,50 @@ dkk_app_devis:
 dkk_app_demonstration:
     path:    /demonstration
     defaults: { _controller: DKKAppBundle:Front:demonstration }
-    
+
 dkk_app_choix:
     path:    /choix-rdv
     defaults: { _controller: DKKAppBundle:Front:choix }
-    
+
 dkk_app_reservation:
     path:    /reservation
     defaults: { _controller: DKKAppBundle:Front:reservation }
-    
+
 dkk_app_coordonne:
     path:    /coordonne
     defaults: { _controller: DKKAppBundle:Front:coordonne }
-    
+
 dkk_app_confirmation:
     path:    /confirmation
     defaults: { _controller: DKKAppBundle:Front:confirmation }
-    
+
 dkk_app_paiement:
     path:    /paiement
     defaults: { _controller: DKKAppBundle:Front:paiement }
-    
+
 dkk_app_voir:
     path:    /voir
     defaults: { _controller: DKKAppBundle:Front:voir }
-    
+
 dkk_app_validation:
     path:    /validation
     defaults: { _controller: DKKAppBundle:Front:validation }
-      
-      
-    
+
+
+
 dkk_app_search:
     path:    /search
     defaults: { _controller: DKKAppBundle:Front:search }
-    
+
 
 dkk_app_prendre:
     path:    /prendre
-    defaults: { _controller: DKKAppBundle:Front:prendre } 
-    
+    defaults: { _controller: DKKAppBundle:Front:prendre }
+
 dkk_app_tab_coordonnee:
     path:    /tab_coordonnee
     defaults: { _controller: DKKAppBundle:Front:tab_coordonnee }
-    
+
 dkk_app_cgu:
     path:    /cgu
     defaults: { _controller: DKKAppBundle:Front:cgu }
@@ -201,21 +201,19 @@ dkk_app_apropos:
 dkk_app_nouvelles:
     path:    /nouvelles
     defaults: { _controller: DKKAppBundle:Front:nouvelles }
-  
+
 dkk_app_aide:
     path:    /aide
-    defaults: { _controller: DKKAppBundle:Front:aide }  
+    defaults: { _controller: DKKAppBundle:Front:aide }
 
 dkk_app_rejoindre:
     path:    /rejoindre
-    defaults: { _controller: DKKAppBundle:Front:rejoindre } 
+    defaults: { _controller: DKKAppBundle:Front:rejoindre }
 
 dkk_app_demander_demo:
     path:    /demander_demo
-    defaults: { _controller: DKKAppBundle:Front:demander_demo } 
+    defaults: { _controller: DKKAppBundle:Front:demander_demo }
 
 dkk_app_demander_devis:
     path:    /demander_devis
-    defaults: { _controller: DKKAppBundle:Front:demander_devis } 
-
-
+    defaults: { _controller: DKKAppBundle:Front:demander_devis }

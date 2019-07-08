@@ -1,661 +1,660 @@
- {% extends '::admin_template.html.twig' %}
+{% extends '::admin_template.html.twig' %}
 
-{% block title %}{{'Mon compte'|trans}} : {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+{% block title %}{{'Mon compte'|trans}} - {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
 <style>
 
-        th, td{
-          text-align: center !important;
-        }
+       th, td{
+         text-align: center !important;
+       }
 
-    </style>
+   </style>
 {% endblock %}
 
 {% block body %}
 
 
- <!-- debut du contenu -->
-   <section id="main-content">
-      <section class="wrapper site-min-height">
-        <div class="row mt">
+<!-- debut du contenu -->
+  <section id="main-content">
+     <section class="wrapper site-min-height">
+       <div class="row mt">
 
-            <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
-          <!-- /col-lg-12 -->
-          <div class="col-lg-12 mt">
-            <div class="row content-panel">
-             <!-- debut -->
-        <section class="wrapper site-min-height">
-        <div class="row">
-          <div class="col-lg-12">
+           <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+         <!-- /col-lg-12 -->
+         <div class="col-lg-12 mt">
+           <div class="row content-panel">
+            <!-- debut -->
+       <section class="wrapper site-min-height">
+       <div class="row">
+         <div class="col-lg-12">
 
-              <div class="">
-                   <h4 class="small_tittle up_">{{'Mon compte'|trans}} </h4>
-                   <p class="journne_du_" style="text-align:center !important;">{{'Coordonnées'|trans}}</p>
-                   <div class="">
-                         <!-- debut -->
-                    <section id="unseen">
-                        <div class="margin_wrapper">
-                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                                <img src="{{ asset('img/photo_medecin.jpg')}}" class="img-responsive img_profile_pro">
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                                <p class="down_info"></p>
-                                <p class="nom_professionnel">Essomba Paul</p>
-                                <p class="nom_professionnel">{{'Médécin généraliste'|trans}}</p>
-                                <p class="nom_professionnel">{{'BP'|trans}}:5200 Yaoundé / {{'Cameroun'|trans}}.</p>
-                                <p class="nom_professionnel">{{'Tel'|trans}}: +237 432 543 785.</p>
-                                <p class="nom_professionnel">{{'Email'|trans}}: Essombapaul@gmail.com</p>
-                            </div>
+             <div class="">
+                  <h4 class="small_tittle up_">{{'Mon compte'|trans}} </h4>
+                  <p class="journne_du_" style="text-align:center !important;">{{'Coordonnées'|trans}}</p>
+                  <div class="">
+                        <!-- debut -->
+                   <section id="unseen">
+                       <div class="margin_wrapper">
+                           <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                               <img src="{{ asset('img/photo_medecin.jpg')}}" class="img-responsive img_profile_pro">
+                           </div>
+                           <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                               <p class="down_info"></p>
+                               <p class="nom_professionnel">Essomba Paul</p>
+                               <p class="nom_professionnel">{{'Médécin généraliste'|trans}}</p>
+                               <p class="nom_professionnel">{{'BP'|trans}}:5200 Yaoundé / {{'Cameroun'|trans}}.</p>
+                               <p class="nom_professionnel">{{'Tel'|trans}}: +237 432 543 785.</p>
+                               <p class="nom_professionnel">{{'Email'|trans}}: Essombapaul@gmail.com</p>
+                           </div>
+
+                           <div class="row"></div>
+                           <p class="journne_du_" style="text-align:left !important;">{{"Droits d'accès"|trans}}</p>
+                            <input type="checkbox" id="access"> &nbsp;&nbsp; <label class="access" for="access">{{'Intervenants'|trans}}</label>
+                           <br>
+                           <table class="table table-bordered table-striped table-condensed table_access" style="display:none !important;">
+                                <thead>
+                <tr style="background-color: #26440d !important;color: #fff !important;">
+                  <th>{{'Nom'|trans}}</th>
+                   <th>{{'Prénom'|trans}} </th>
+                   <th>{{'Fonction'|trans}} </th>
+                      <th>{{'Téléphone'|trans}}</th>
+                      <th>{{"Niveau d'accès"|trans}}</th>
+                      <th>{{'Date de création'|trans}}</th>
+                      <th>{{'Action'|trans}}</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <tr>
+                   <td>Atangana</td>
+                   <td>Pierre </td>
+                   <td>{{'Journaliste'|trans}}</td>
+                   <td>+237 256 256 265</td>
+                   <td>2</td>
+                   <td>02/03/2017</td>
+                   <td><a href="modifier-acces.html" class="btn btn-primary  btn_valid"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</a>  <a href="" class="btn btn-danger  btn_valid" onclick="return confirm('Voulez-vous vraiment Supprimer ?')"><i class="fa fa-times"></i> {{'Supprimer'|trans}}</a></td>
+                 </tr>
+
+                  <tr>
+                   <td>Atangana</td>
+                   <td>Pierre </td>
+                   <td>{{'Journaliste'|trans}}</td>
+                   <td>+237 256 256 265</td>
+                   <td>2</td>
+                   <td>02/03/2017</td>
+                   <td><a href="modifier-acces.html" class="btn btn-primary  btn_valid"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</a>  <a href="" class="btn btn-danger  btn_valid" onclick="return confirm('Voulez-vous vraiment Supprimer ?')"><i class="fa fa-times"></i> {{'Supprimer'|trans}}</a></td>
+                 </tr>
+
+                  <tr>
+                   <td>Atangana</td>
+                   <td>Pierre </td>
+                   <td>{{'Journaliste'|trans}}</td>
+                   <td>+237 256 256 265</td>
+                   <td>2</td>
+                   <td>02/03/2017</td>
+                   <td><a href="modifier-acces.html" class="btn btn-primary btn_valid"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</a>  <a href="" class="btn btn-danger  btn_valid" onclick="return confirm('Voulez-vous vraiment Supprimer ?')"><i class="fa fa-times"></i> {{'Supprimer'|trans}}</a></td>
+                 </tr>
+               </tbody>
+             </table>
+
 
                             <div class="row"></div>
-                            <p class="journne_du_" style="text-align:left !important;">{{"Droits d'accès"|trans}}</p>
-                             <input type="checkbox" id="access"> &nbsp;&nbsp; <label class="access" for="access">{{'Intervenants'|trans}}</label>
-                            <br>
-                            <table class="table table-bordered table-striped table-condensed table_access" style="display:none !important;">
-                                 <thead>
-                 <tr style="background-color: #26440d !important;color: #fff !important;">
-                   <th>{{'Nom'|trans}}</th>
-                    <th>{{'Prénom'|trans}} </th>
-                    <th>{{'Fonction'|trans}} </th>
-                       <th>{{'Téléphone'|trans}}</th>
-                       <th>{{"Niveau d'accès"|trans}}</th>
-                       <th>{{'Date de création'|trans}}</th>
-                       <th>{{'Action'|trans}}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Atangana</td>
-                    <td>Pierre </td>
-                    <td>{{'Journaliste'|trans}}</td>
-                    <td>+237 256 256 265</td>
-                    <td>2</td>
-                    <td>02/03/2017</td>
-                    <td><a href="modifier-acces.html" class="btn btn-primary  btn_valid"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</a>  <a href="" class="btn btn-danger  btn_valid" onclick="return confirm('Voulez-vous vraiment Supprimer ?')"><i class="fa fa-times"></i> Supprimer</a></td>
-                  </tr>
-
-                   <tr>
-                    <td>Atangana</td>
-                    <td>Pierre </td>
-                    <td>{{'Journaliste'|trans}}</td>
-                    <td>+237 256 256 265</td>
-                    <td>2</td>
-                    <td>02/03/2017</td>
-                    <td><a href="modifier-acces.html" class="btn btn-primary  btn_valid"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</a>  <a href="" class="btn btn-danger  btn_valid" onclick="return confirm('Voulez-vous vraiment Supprimer ?')"><i class="fa fa-times"></i> Supprimer</a></td>
-                  </tr>
-
-                   <tr>
-                    <td>Atangana</td>
-                    <td>Pierre </td>
-                    <td>{{'Journaliste'|trans}}</td>
-                    <td>+237 256 256 265</td>
-                    <td>2</td>
-                    <td>02/03/2017</td>
-                    <td><a href="modifier-acces.html" class="btn btn-primary btn_valid"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</a>  <a href="" class="btn btn-danger  btn_valid" onclick="return confirm('Voulez-vous vraiment Supprimer ?')"><i class="fa fa-times"></i> Supprimer</a></td>
-                  </tr>
-                </tbody>
-              </table>
-
-
-                             <div class="row"></div>
-                            <p class="journne_du_" style="text-align:left !important;">{{'Factures et abonnements'|trans}}</p>
-                            <input type="checkbox" id="factures"> &nbsp;&nbsp;<label for="factures" class="factures">{{'Voir les factures'|trans}}</label>
-                            <br>
-                            <table class="table table-bordered table-striped table-condensed table_factures" style="display:none !important;">
-                                 <tr style="background-color: #26440d !important;color: #fff !important;">
-                                     <th>{{'Référence facture'|trans}}</th>
-                                     <th>{{'Mois'|trans}}</th>
-                                     <th>{{'Numéro'|trans}}</th>
-                                     <th>{{'Date'|trans}}</th>
-                                     <th>{{'Montant'|trans}}</th>
-                                     <th>{{'Echéance'|trans}}</th>
-                                     <th>{{'Situation'|trans}}</th>
-                                     <th>{{'Actions'|trans}}</th>
-                                 </tr>
-                                 <tr>
-                                     <td>......</td>
-                                     <td>{{'Septembre'|trans}}</td>
-                                     <td>4258614</td>
-                                     <td>02.05.2018</td>
-                                     <td>30 000F</td>
-                                     <td>...........</td>
-                                     <td>{{'payé'|trans}}</td>
-                                     <td>
-                                         <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-eye"></i> {{'Détails'|trans}}</button>
-
-                                         <!-- debut de la fenetre modal -->
-
-                                           <div class="modal fade" id="myModal_rdv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                           <div class="modal-dialog second_modal-dialog" role="document" >
-                                             <div class="modal-content" >
-                                               <div class="modal-header">
-                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                 <h4 class="modal-title" id="myModalLabel">{{'Voir le détail de la facture'|trans}} </h4>
-                                               </div>
-                                               <div class="modal-body">
-                                                 <!-- debut -->
-
-
-                                                 <br><br>
-                                                 <button class="btn btn-primary  btn_valid"><i class="fa fa-print"></i> {{'Imprimer'|trans}} </button>
-                                                 <!-- fin  -->
-                                               </div>
-                                             </div>
-                                           </div>
-                                           </div>
-
-                                         <!-- fin de la fenetre modal -->
-                                    </td>
+                           <p class="journne_du_" style="text-align:left !important;">{{'Factures et abonnements'|trans}}</p>
+                           <input type="checkbox" id="factures"> &nbsp;&nbsp;<label for="factures" class="factures">{{'Voir les factures'|trans}}</label>
+                           <br>
+                           <table class="table table-bordered table-striped table-condensed table_factures" style="display:none !important;">
+                                <tr style="background-color: #26440d !important;color: #fff !important;">
+                                    <th>{{'Référence facture'|trans}}</th>
+                                    <th>{{'Mois'|trans}}</th>
+                                    <th>{{'Numéro'|trans}}</th>
+                                    <th>{{'Date'|trans}}</th>
+                                    <th>{{'Montant'|trans}}</th>
+                                    <th>{{'Echéance'|trans}}</th>
+                                    <th>{{'Situation'|trans}}</th>
+                                    <th>{{'Actions'|trans}}</th>
                                 </tr>
+                                <tr>
+                                    <td>......</td>
+                                    <td>{{'Septembre'|trans}}</td>
+                                    <td>4258614</td>
+                                    <td>02.05.2018</td>
+                                    <td>30 000F</td>
+                                    <td>...........</td>
+                                    <td>{{'payé'|trans}}</td>
+                                    <td>
+                                        <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-eye"></i> {{'Détails'|trans}}</button>
 
-                                 <tr>
-                                     <td>......</td>
-                                     <td>{{'Septembre'|trans}}</td>
-                                     <td>4258614</td>
-                                     <td>02.05.2018</td>
-                                     <td>30 000F</td>
-                                     <td>...........</td>
-                                     <td>{{'payé'|trans}}</td>
-                                     <td>
-                                         <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv2"><i class="fa fa-eye"></i> {{'Détails'|trans}}</button>
+                                        <!-- debut de la fenetre modal -->
 
-                                         <!-- debut de la fenetre modal -->
-
-                                           <div class="modal fade" id="myModal_rdv2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                           <div class="modal-dialog second_modal-dialog" role="document" >
-                                             <div class="modal-content" >
-                                               <div class="modal-header">
-                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                 <h4 class="modal-title" id="myModalLabel">{{'Voir le détail de la facture'|trans}}.</h4>
-                                               </div>
-                                               <div class="modal-body">
-                                                 <!-- debut -->
-
-
-                                                 <br><br>
-                                                 <button class="btn btn-primary  btn_valid"><i class="fa fa-print"></i> {{'Imprimer'|trans}} </button>
-                                                 <!-- fin  -->
-                                               </div>
-                                             </div>
-                                           </div>
-                                           </div>
-
-                                         <!-- fin de la fenetre modal -->
-                                    </td>
-                                </tr>
-                            </table>
-
-
-                             <div class="row"></div>
-                             <input type="checkbox" id="abonnements"> &nbsp;&nbsp;<label for="abonnements" class="abonnements">{{'Voir les  abonnements'|trans}}</label>
-                            <br>
-                            <table class="table table-bordered table-striped table-condensed table_abonnements" style="display:none !important;">
-                               <tr style="background-color: #26440d !important;color: #fff !important;">
-                                        <th>{{'Référence abonnement'|trans}}</th>
-
-                                        <th>{{'Formule'|trans}}</th>
-                                        <th>{{'Durée'|trans}}</th>
-                                        <th>{{'Début ab.'|trans}}</th>
-                                        <th>{{'Fin ab.'|trans}}</th>
-                                        <th>{{'Montant'|trans}}</th>
-                                        <th>{{'Actions'|trans}}</th>
-                                      </tr>
-                                      <tr>
-                                        <td>......</td>
-
-                                        <td>Dikaki Pro 1</td>
-                                        <td>12 {{'Mois'|trans}}</td>
-                                        <td>02.05.2018</td>
-                                        <td>02.05.2019</td>
-                                        <td>50 000F cfa</td>
-                                        <td>
-                                                <button class="btn btn-primary  btn_valid" data-toggle="modal" data-target="#myModal_abonnrment1"><i class="fa fa-eye"></i> {{'Détails'|trans}}</button>
-                                                <!-- debut de la fenetre modal -->
-
-                                                  <div class="modal fade" id="myModal_abonnrment1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                                  <div class="modal-dialog second_modal-dialog" role="document" >
-                                                    <div class="modal-content" >
-                                                      <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                        <h4 class="modal-title" id="myModalLabel">{{"Voir le détail de l'abonnement"|trans}}</h4>
-                                                      </div>
-                                                      <div class="modal-body">
-                                                        <!-- debut -->
-
-                                                        <br><br>
-                                                        <button class="btn btn-primary  btn_valid"><i class="fa fa-print"></i> {{'Imprimer'|trans}} </button>
-                                                        <!-- fin  -->
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  </div>
-
-                                                <!-- fin de la fenetre modal -->
-                                                
-                                        </td>
-                                      </tr>
-                            </table>
-
-                             <div class="row"></div>
-                            <input type="checkbox" id="Services"> &nbsp;&nbsp;<label for="Services" class="Services">{{"Services optionnels / ajout d'agenda"|trans}}</label>
-                             <div class="table_Services" style="display:none !important;">
-                                 <br>
-                                <form method="post" action="">
-                                    <select name="" class="form-control" style="width:38% !important;">
-                                        <option value="">{{'Agendas supplémentaires'|trans}}</option>
-                                        <option value="">{{'Acheter 1 agenda professionnel'|trans}}</option>
-                                        <option value="">{{'Acheter 2 agendas professionnels'|trans}}</option>
-                                        <option value="">{{'Acheter 3 agendas professionnels'|trans}}</option>
-                                        <option value="">{{'Acheter 4 agendas professionnels'|trans}}</option>
-                                        <option value="">{{'Acheter 5 agendas professionnels'|trans}}</option>
-                                        <option value="">{{'Acheter 6 agendas professionnels'|trans}}</option>
-                                        <option value="">{{'Acheter 7 agendas professionnels'|trans}}</option>
-                                        <option value="">{{'Acheter 8 agendas professionnels'|trans}}</option>
-                                        <option value="">{{'Acheter 9 agendas professionnels'|trans}}</option>
-                                        <option value="">{{'Acheter 10 agendas professionnels'|trans}}</option>
-                                        <option value="">{{'Acheter 11 agendas professionnels'|trans}}</option>
-                                        <option value="">{{'Acheter 12 agendas professionnels'|trans}}</option>
-                                        <option value="">{{'Acheter 13 agendas professionnels'|trans}}</option>
-                                        <option value="">{{'Acheter 14 agendas professionnels'|trans}}</option>
-                                        <option value="">{{'Acheter 15 agendas professionnels'|trans}}</option>
-                                    </select>
-                                    <br>
-                                      <button type="submit" class="btn btn-success btn_valid" id="valider_achat"><i class="fa fa-check-square-o"></i> {{"Valider l'achat"|trans}}</button>
-
-                                    </form>
-
-                            </div>
-
-                            
-                            <!-- debut -->
-                            
-                            
-                             <div class="row"></div>
-                         
-                            <p class="journne_du_" style="text-align:left !important;">{{'Paiement en ligne'|trans}} </p>
-                            <input type="checkbox" id="paiement_en_ligne"> &nbsp;&nbsp;<label for="paiement_en_ligne" class="factures">{{'Liste des comptes'|trans}}</label>
-                            
-                            <div class="table_paiement_en_ligne" style="display:none !important;">
-                                <form method="post" action="">
-                                       <table class="table table-bordered table-striped table-condensed">
-                                      <tr style="background-color: #26440d !important;color: #fff !important;">
-                                        <th>N°</th>
-                                        <th>{{'Opérateur'|trans}}</th>
-                                            <th>{{'Usage'|trans}}</th>
-                                            <th>{{'N° compte'|trans}}</th>
-                                            <th>{{'Statut'|trans}}</th>
-                                            <th>{{'Action'|trans}}</th>
-                                      </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Mtn</td>
-                                            <td>{{'Pour  encaissements'|trans}}</td>
-                                            <td>12358247</td>
-                                            <td>{{'Actif'|trans}}</td>
-                                            <td><a href=""class="btn btn-success btn_valid">{{'Désactiver'|trans}}</a></td>
-                                        </tr>
-                                             
-                                              <tr>
-                                            <td>1</td>
-                                            <td>Orange</td>
-                                            <td>{{'Pour rembourcements'|trans}}</td>
-                                            <td>12358247</td>
-                                            <td>{{'Inactif'|trans}}</td>
-                                            <td><a href=""class="btn btn-success btn_valid">{{'Activer'|trans}}</a></td>
-                                      
-                                    </table>
-
-                                    </form>
-
-                            </div>
-                            
-                            
-                            <!-- fin -->
-                            <!-- une autre ligne -->
-
-                                <p class="journne_du_" style="text-align:left !important;">{{'SMS'|trans}} </p>
-                                <input type="checkbox" id="Achats"> &nbsp;&nbsp;<label for="Achats" class="Achats">{{'Achat de sms'|trans}}</label>
-                             <div class="table_Achats" style="display:none !important;">
-                                <form method="post" action="">
-
-                                        <div class="col-xs-12 col-ms-12 col-md-6 col-lg-6">
-
-                                          <select class="form-control" name="" id="select_operation">
-                                              <option value="pack-200-5000f">{{'pack'|trans}} - 200 {{'Sms'|trans}} à 5000</option>
-                                              <option value="pack-200-7000f">{{'pack'|trans}} - 300 {{'Sms'|trans}} à 7000</option>
-                                              <option value="pack-200-10000f">{{'pack'|trans}} - 500 {{'Sms'|trans}} à 10000</option>
-                                          </select>
-                                        
-                                    </div>
-                                    <p style="clear: both !important;"></p>
-                                    <!-- generation du formulaire de paiement -->
-                                      <div id="show_operator" class="wrapper_generate_modal" style="display: none;">
-                                          <p class="">{{'Choisir un opérateur'|trans}} </p>
-                                           <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                                   <div class="cc-selector-2" id="hide_mtn">
-                                                        <input  id="mtn" type="checkbox" name="mtn_paiement" value="Mtn Mobile Money" />
-                                                  <label class="drinkcard-cc mtn" for="mtn"></label>
-                                                  </div>
-
-                                                  <button type="submit" class="paiement_btn" id="by_mtn" style="display:none !important;"><i class="fa fa-money"></i> &nbsp;&nbsp;{{'Payer'|trans}} </button>
+                                          <div class="modal fade" id="myModal_rdv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                          <div class="modal-dialog second_modal-dialog" role="document" >
+                                            <div class="modal-content" >
+                                              <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">{{'Voir le détail de la facture'|trans}} </h4>
                                               </div>
-                                              <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                                   <div class="cc-selector-2" id="hide_orange">
-                                                        <input id="orange" type="checkbox" name="orange_paiement" value="Orange Mobile Money" />
-                                                  <label class="drinkcard-cc orange"for="orange"></label>
-                                                    </div>
+                                              <div class="modal-body">
+                                                <!-- debut -->
 
-                                                  <button type="submit" class="paiement_btn" id="by_orange" style="display:none !important;"><i class="fa fa-money"></i> &nbsp;&nbsp;{{'Payer'|trans}} </button>
+
+                                                <br><br>
+                                                <button class="btn btn-primary  btn_valid"><i class="fa fa-print"></i> {{'Imprimer'|trans}} </button>
+                                                <!-- fin  -->
                                               </div>
-                                              <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                                   <div class="cc-selector-2" id="hide_ue">
-                                                        <input id="ue" type="checkbox" name="ue_paiement" value="Eu Mobile Money" />
-                                                  <label class="drinkcard-cc ue" for="ue"></label>
-                                                    </div>
+                                            </div>
+                                          </div>
+                                          </div>
 
-                                                  <button type="submit" class="paiement_btn" id="by_ue" style="display:none !important;"><i class="fa fa-money"></i> &nbsp;&nbsp;{{'Payer'|trans}}</button>
+                                        <!-- fin de la fenetre modal -->
+                                   </td>
+                               </tr>
+
+                                <tr>
+                                    <td>......</td>
+                                    <td>{{'Septembre'|trans}}</td>
+                                    <td>4258614</td>
+                                    <td>02.05.2018</td>
+                                    <td>30 000F</td>
+                                    <td>...........</td>
+                                    <td>{{'payé'|trans}}</td>
+                                    <td>
+                                        <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv2"><i class="fa fa-eye"></i> {{'Détails'|trans}}</button>
+
+                                        <!-- debut de la fenetre modal -->
+
+                                          <div class="modal fade" id="myModal_rdv2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                          <div class="modal-dialog second_modal-dialog" role="document" >
+                                            <div class="modal-content" >
+                                              <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">{{'Voir le détail de la facture'|trans}}.</h4>
                                               </div>
-                                              <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                                   <div class="cc-selector-2" id="hide_yup">
-                                                        <input id="yup" type="checkbox" name="yup_paiement" value="Yup Mobile Money" />
-                                                  <label class="drinkcard-cc yup" for="yup"></label>
-                                                    </div>
+                                              <div class="modal-body">
+                                                <!-- debut -->
 
-                                                  <button type="submit" class="paiement_btn" id="by_yup" style="display:none !important;"><i class="fa fa-money"></i> &nbsp;&nbsp;{{'Payer'|trans}}</button>
+
+                                                <br><br>
+                                                <button class="btn btn-primary  btn_valid"><i class="fa fa-print"></i> {{'Imprimer'|trans}} </button>
+                                                <!-- fin  -->
                                               </div>
-                <!-- fin du code des paiement -->
-                                      </div>
-                                    <!-- fin -->
+                                            </div>
+                                          </div>
+                                          </div>
 
-                                    <!--
+                                        <!-- fin de la fenetre modal -->
+                                   </td>
+                               </tr>
+                           </table>
+
+
+                            <div class="row"></div>
+                            <input type="checkbox" id="abonnements"> &nbsp;&nbsp;<label for="abonnements" class="abonnements">{{'Voir les  abonnements'|trans}}</label>
+                           <br>
+                           <table class="table table-bordered table-striped table-condensed table_abonnements" style="display:none !important;">
+                              <tr style="background-color: #26440d !important;color: #fff !important;">
+                                       <th>{{'Référence abonnement'|trans}}</th>
+
+                                       <th>{{'Formule'|trans}}</th>
+                                       <th>{{'Durée'|trans}}</th>
+                                       <th>{{'Début ab.'|trans}}</th>
+                                       <th>{{'Fin ab.'|trans}}</th>
+                                       <th>{{'Montant'|trans}}</th>
+                                       <th>{{'Actions'|trans}}</th>
+                                     </tr>
+                                     <tr>
+                                       <td>......</td>
+
+                                       <td>Dikaki Pro 1</td>
+                                       <td>12 {{'Mois'|trans}}</td>
+                                       <td>02.05.2018</td>
+                                       <td>02.05.2019</td>
+                                       <td>50 000F cfa</td>
+                                       <td>
+                                               <button class="btn btn-primary  btn_valid" data-toggle="modal" data-target="#myModal_abonnrment1"><i class="fa fa-eye"></i> {{'Détails'|trans}}</button>
+                                               <!-- debut de la fenetre modal -->
+
+                                                 <div class="modal fade" id="myModal_abonnrment1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                 <div class="modal-dialog second_modal-dialog" role="document" >
+                                                   <div class="modal-content" >
+                                                     <div class="modal-header">
+                                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                       <h4 class="modal-title" id="myModalLabel">{{"Voir le détail de l'abonnement"|trans}}</h4>
+                                                     </div>
+                                                     <div class="modal-body">
+                                                       <!-- debut -->
+
+                                                       <br><br>
+                                                       <button class="btn btn-primary  btn_valid"><i class="fa fa-print"></i> {{'Imprimer'|trans}} </button>
+                                                       <!-- fin  -->
+                                                     </div>
+                                                   </div>
+                                                 </div>
+                                                 </div>
+
+                                               <!-- fin de la fenetre modal -->
+
+                                       </td>
+                                     </tr>
+                           </table>
+
+                            <div class="row"></div>
+                           <input type="checkbox" id="Services"> &nbsp;&nbsp;<label for="Services" class="Services">{{"Services optionnels / ajout d'agenda"|trans}}</label>
+                            <div class="table_Services" style="display:none !important;">
+                                <br>
+                               <form method="post" action="">
+                                   <select name="" class="form-control" style="width:38% !important;">
+                                       <option value="">{{'Agendas supplémentaires'|trans}}</option>
+                                       <option value="">{{'Acheter 1 agenda professionnel'|trans}}</option>
+                                       <option value="">{{'Acheter 2 agendas professionnels'|trans}}</option>
+                                       <option value="">{{'Acheter 3 agendas professionnels'|trans}}</option>
+                                       <option value="">{{'Acheter 4 agendas professionnels'|trans}}</option>
+                                       <option value="">{{'Acheter 5 agendas professionnels'|trans}}</option>
+                                       <option value="">{{'Acheter 6 agendas professionnels'|trans}}</option>
+                                       <option value="">{{'Acheter 7 agendas professionnels'|trans}}</option>
+                                       <option value="">{{'Acheter 8 agendas professionnels'|trans}}</option>
+                                       <option value="">{{'Acheter 9 agendas professionnels'|trans}}</option>
+                                       <option value="">{{'Acheter 10 agendas professionnels'|trans}}</option>
+                                       <option value="">{{'Acheter 11 agendas professionnels'|trans}}</option>
+                                       <option value="">{{'Acheter 12 agendas professionnels'|trans}}</option>
+                                       <option value="">{{'Acheter 13 agendas professionnels'|trans}}</option>
+                                       <option value="">{{'Acheter 14 agendas professionnels'|trans}}</option>
+                                       <option value="">{{'Acheter 15 agendas professionnels'|trans}}</option>
+                                   </select>
+                                   <br>
+                                     <button type="submit" class="btn btn-success btn_valid" id="valider_achat"><i class="fa fa-check-square-o"></i> {{"Valider l'achat"|trans}}</button>
+
+                                   </form>
+
+                           </div>
+
+
+                           <!-- debut -->
+
+
+                            <div class="row"></div>
+
+                           <p class="journne_du_" style="text-align:left !important;">{{'Paiement en ligne'|trans}} </p>
+                           <input type="checkbox" id="paiement_en_ligne"> &nbsp;&nbsp;<label for="paiement_en_ligne" class="factures">{{'Liste des comptes'|trans}}</label>
+
+                           <div class="table_paiement_en_ligne" style="display:none !important;">
+                               <form method="post" action="">
+                                      <table class="table table-bordered table-striped table-condensed">
+                                     <tr style="background-color: #26440d !important;color: #fff !important;">
+                                       <th>N°</th>
+                                       <th>{{'Opérateur'|trans}}</th>
+                                           <th>{{'Usage'|trans}}</th>
+                                           <th>{{'N° compte'|trans}}</th>
+                                           <th>{{'Statut'|trans}}</th>
+                                           <th>{{'Action'|trans}}</th>
+                                     </tr>
+                                       <tr>
+                                           <td>1</td>
+                                           <td>Mtn</td>
+                                           <td>{{'Pour  encaissements'|trans}}</td>
+                                           <td>12358247</td>
+                                           <td>{{'Actif'|trans}}</td>
+                                           <td><a href=""class="btn btn-success btn_valid">{{'Désactiver'|trans}}</a></td>
+                                       </tr>
+
+                                             <tr>
+                                           <td>1</td>
+                                           <td>Orange</td>
+                                           <td>{{'Pour rembourcements'|trans}}</td>
+                                           <td>12358247</td>
+                                           <td>{{'Inactif'|trans}}</td>
+                                           <td><a href=""class="btn btn-success btn_valid">{{'Activer'|trans}}</a></td>
+
+                                   </table>
+
+                                   </form>
+
+                           </div>
+
+
+                           <!-- fin -->
+                           <!-- une autre ligne -->
+
+                               <p class="journne_du_" style="text-align:left !important;">{{'SMS'|trans}} </p>
+                               <input type="checkbox" id="Achats"> &nbsp;&nbsp;<label for="Achats" class="Achats">{{'Achat de sms'|trans}}</label>
+                            <div class="table_Achats" style="display:none !important;">
+                               <form method="post" action="">
+
                                        <div class="col-xs-12 col-ms-12 col-md-6 col-lg-6">
-                                        <div class="container_paye" style="display:none !important;">
-                                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        <div class="payement_modal">
-                          <img src="../img/mobile-money.png" class="img-responsive img_buy_operation">
-                          <input type="radio" name="payement" id="momo" class="my_pack_sms">
 
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                           <div class="payement_modal">
-                          <img src="../img/orange-money-New.png" class="img-responsive img_buy_operation">
-                          <input type="radio" name="payement" id="om" class="my_pack_sms">
+                                         <select class="form-control" name="" id="select_operation">
+                                             <option value="pack-200-5000f">{{'pack'|trans}} - 200 {{'Sms'|trans}} à 5000</option>
+                                             <option value="pack-200-7000f">{{'pack'|trans}} - 300 {{'Sms'|trans}} à 7000</option>
+                                             <option value="pack-200-10000f">{{'pack'|trans}} - 500 {{'Sms'|trans}} à 10000</option>
+                                         </select>
 
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                   </div>
+                                   <p style="clear: both !important;"></p>
+                                   <!-- generation du formulaire de paiement -->
+                                     <div id="show_operator" class="wrapper_generate_modal" style="display: none;">
+                                         <p class="">{{'Choisir un opérateur'|trans}} </p>
+                                          <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                                  <div class="cc-selector-2" id="hide_mtn">
+                                                       <input  id="mtn" type="checkbox" name="mtn_paiement" value="Mtn Mobile Money" />
+                                                 <label class="drinkcard-cc mtn" for="mtn"></label>
+                                                 </div>
+
+                                                 <button type="submit" class="paiement_btn" id="by_mtn" style="display:none !important;"><i class="fa fa-money"></i> &nbsp;&nbsp;{{'Payer'|trans}} </button>
+                                             </div>
+                                             <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                                  <div class="cc-selector-2" id="hide_orange">
+                                                       <input id="orange" type="checkbox" name="orange_paiement" value="Orange Mobile Money" />
+                                                 <label class="drinkcard-cc orange"for="orange"></label>
+                                                   </div>
+
+                                                 <button type="submit" class="paiement_btn" id="by_orange" style="display:none !important;"><i class="fa fa-money"></i> &nbsp;&nbsp;{{'Payer'|trans}} </button>
+                                             </div>
+                                             <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                                  <div class="cc-selector-2" id="hide_ue">
+                                                       <input id="ue" type="checkbox" name="ue_paiement" value="Eu Mobile Money" />
+                                                 <label class="drinkcard-cc ue" for="ue"></label>
+                                                   </div>
+
+                                                 <button type="submit" class="paiement_btn" id="by_ue" style="display:none !important;"><i class="fa fa-money"></i> &nbsp;&nbsp;{{'Payer'|trans}}</button>
+                                             </div>
+                                             <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                                  <div class="cc-selector-2" id="hide_yup">
+                                                       <input id="yup" type="checkbox" name="yup_paiement" value="Yup Mobile Money" />
+                                                 <label class="drinkcard-cc yup" for="yup"></label>
+                                                   </div>
+
+                                                 <button type="submit" class="paiement_btn" id="by_yup" style="display:none !important;"><i class="fa fa-money"></i> &nbsp;&nbsp;{{'Payer'|trans}}</button>
+                                             </div>
+               <!-- fin du code des paiement -->
+                                     </div>
+                                   <!-- fin -->
+
+                                   <!--
+                                      <div class="col-xs-12 col-ms-12 col-md-6 col-lg-6">
+                                       <div class="container_paye" style="display:none !important;">
+                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                       <div class="payement_modal">
+                         <img src="../img/mobile-money.png" class="img-responsive img_buy_operation">
+                         <input type="radio" name="payement" id="momo" class="my_pack_sms">
+
+                       </div>
+                     </div>
+                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                           <div class="payement_modal">
-                          <img src="../img/EU-Mobile-Logo.png" class="img-responsive img_buy_operation">
-                          <input type="radio" name="payement" id="ue" class="my_pack_sms">
+                         <img src="../img/orange-money-New.png" class="img-responsive img_buy_operation">
+                         <input type="radio" name="payement" id="om" class="my_pack_sms">
 
-                        </div>
-                      </div>
-                      <div class="row dimuni">
-                        <button class="btn btn-success pull-right class_validation btn_valid"> <i class="fa fa-check"></i> Valider l'achat </button>
-                      </div>
-                                        </div>
+                       </div>
+                     </div>
+                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                         <div class="payement_modal">
+                         <img src="../img/EU-Mobile-Logo.png" class="img-responsive img_buy_operation">
+                         <input type="radio" name="payement" id="ue" class="my_pack_sms">
 
-                                    </div>-->
+                       </div>
+                     </div>
+                     <div class="row dimuni">
+                       <button class="btn btn-success pull-right class_validation btn_valid"> <i class="fa fa-check"></i> Valider l'achat </button>
+                     </div>
+                                       </div>
 
-
-
-
-                                </form>
-
-                                 <!-- inserer -->
-
-                                 <div class="">
-                                    <table class="table table-bordered table-striped table-condensed">
-                                       <tr style="background-color: #26440d !important;color: #fff !important;">
-                                          <th>{{'Date'|trans}}</th>
-                                          <th>{{'Professionnel'|trans}}</th>
-                                          <th>{{'Code Produit'|trans}} </th>
-                                          <th>{{'Montant'|trans}}</th>
-                                          <th>{{'Unité'|trans}}</th>
-                                          <th>{{'Reste'|trans}} </th>
-                                        </tr>
-                                        <tr>
-                                          <td>02.5.2018</td>
-                                          <td>M. Bekolo Jean Pierre</td>
-                                          <td>cd452dde5</td>
-                                          <td>10000</td>
-                                          <td>300</td>
-                                          <td>50</td>
-                                        </tr>
-                                        <tr>
-                                          <td>02.5.2018</td>
-                                          <td>M. Bekolo Jean Pierre</td>
-                                          <td>cd452dde5</td>
-                                          <td>10000</td>
-                                          <td>300</td>
-                                          <td>50</td>
-                                        </tr>
-                                    </table>
-                                </div>
-
-                                </div>
-                            <p style="clear:both"></p>
-                            
-                             <p class="journne_du_" style="text-align:left !important;"><span >{{'Changement de formule'|trans}}</span></p>
-                            <input type="checkbox" id="chance_formule"><label for="chance_formule"><span class="change_formule">{{'Changer la formule'|trans}} </span></label>
-                            <div id="show_formule" style="display:none">
-                                <form method="post" action="">
-                                &nbsp;&nbsp;&nbsp; <input type="radio" name="formule" id="solo"><label for="solo"><span class="change_formule">{{'Solo'|trans}} </span></label>
-                                
-                                &nbsp;&nbsp;&nbsp;<input type="radio" name="formule" id="standard"><label for="standard"><span class="change_formule"> {{'Standard'|trans}}</span></label>
-                                &nbsp;&nbsp;&nbsp;<input type="radio" name="formule" id="pro_sante"><label for="pro_sante"><span class="change_formule"> {{'Pro-santé'|trans}}</span></label>
-                               &nbsp;&nbsp;&nbsp; <input type="radio" name="formule" id="pro_entreprise"><label for="pro_entreprise"><span class="change_formule">  {{'Pro-entreprise'|trans}}</span></label>
-                                
-                                &nbsp;&nbsp;&nbsp; <input type="radio" name="formule" id="pro_equipe"><label for="pro_equipe"><span class="change_formule">  {{'Pro-équipe'|trans}}</span></label>
-                                <button type="submit" class="btn btn-success  btn_valid" style="text-transform: none;font-size: 1em;font-weight: 400;display:block;"><i class="fa fa-check-square-o"></i> {{'Valider'|trans}} </button>
-                                
-                            </form>
-                            </div>
-                            
-                            <p style="clear:both !important"></p>
-                            
-                           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                <p class="journne_du_" style="text-align:left !important;">{{'Suspension du compte'|trans}}</p>
-                            <form method="post" action="">
-                            <input type="checkbox" id="suspendre"> &nbsp;&nbsp;<label for="suspendre" class="resilier">{{'Suspendre mon compte'|trans}} Dikaki pro</label>
-                           <p style="display: none !important;" id="suspendre_compte"><br>
-            <button type="submit" class="btn btn-success  btn_valid" style="text-transform: none;font-size: 1em;font-weight: 400"><i class="fa fa-check-square-o"></i> {{'Suspendre mon compte'|trans}}</button>
-          </p>
+                                   </div>-->
 
 
-                       
-
-                        <!-- une autre partie -->
-
-                    </form>
-                            </div>
-                           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                <p class="journne_du_" style="text-align:left !important;">{{"Résiliation de l'abonnement"|trans}} </p>
-                    <form method="post" action="">
-                        <input type="checkbox" id="resilier"> &nbsp;&nbsp;<label for="resilier" class="resilier">{{'Résilier mon abonnement'|trans}} Dikaki pro</label>
-                           <p style="display: none !important;" id="annulation"><br>
-            <button type="submit" class="btn btn-success  btn_valid" style="text-transform: none;font-size: 1em;font-weight: 400"><i class="fa fa-check-square-o"></i> {{'Résilier mon compte'|trans}}</button>
-          </p>
 
 
-                      
+                               </form>
 
-                        <!-- une autre partie -->
+                                <!-- inserer -->
 
-                    </form>
-                            </div>
-                              <p style="margin-top:150px !important"></p>
-                            
-                  </section>
-                      
+                                <div class="">
+                                   <table class="table table-bordered table-striped table-condensed">
+                                      <tr style="background-color: #26440d !important;color: #fff !important;">
+                                         <th>{{'Date'|trans}}</th>
+                                         <th>{{'Professionnel'|trans}}</th>
+                                         <th>{{'Code Produit'|trans}} </th>
+                                         <th>{{'Montant'|trans}}</th>
+                                         <th>{{'Unité'|trans}}</th>
+                                         <th>{{'Reste'|trans}} </th>
+                                       </tr>
+                                       <tr>
+                                         <td>02.5.2018</td>
+                                         <td>M. Bekolo Jean Pierre</td>
+                                         <td>cd452dde5</td>
+                                         <td>10000</td>
+                                         <td>300</td>
+                                         <td>50</td>
+                                       </tr>
+                                       <tr>
+                                         <td>02.5.2018</td>
+                                         <td>M. Bekolo Jean Pierre</td>
+                                         <td>cd452dde5</td>
+                                         <td>10000</td>
+                                         <td>300</td>
+                                         <td>50</td>
+                                       </tr>
+                                   </table>
+                               </div>
 
-                <!-- fin -->
+                               </div>
+                           <p style="clear:both"></p>
 
-                   </div>
-              </div>
+                            <p class="journne_du_" style="text-align:left !important;"><span >{{'Changement de formule'|trans}}</span></p>
+                           <input type="checkbox" id="chance_formule"><label for="chance_formule"><span class="change_formule">{{'Changer la formule'|trans}} </span></label>
+                           <div id="show_formule" style="display:none">
+                               <form method="post" action="">
+                               &nbsp;&nbsp;&nbsp; <input type="radio" name="formule" id="solo"><label for="solo"><span class="change_formule">{{'Solo'|trans}} </span></label>
+
+                               &nbsp;&nbsp;&nbsp;<input type="radio" name="formule" id="standard"><label for="standard"><span class="change_formule"> {{'Standard'|trans}}</span></label>
+                               &nbsp;&nbsp;&nbsp;<input type="radio" name="formule" id="pro_sante"><label for="pro_sante"><span class="change_formule"> {{'Pro-santé'|trans}}</span></label>
+                              &nbsp;&nbsp;&nbsp; <input type="radio" name="formule" id="pro_entreprise"><label for="pro_entreprise"><span class="change_formule">  {{'Pro-entreprise'|trans}}</span></label>
+
+                               &nbsp;&nbsp;&nbsp; <input type="radio" name="formule" id="pro_equipe"><label for="pro_equipe"><span class="change_formule">  {{'Pro-équipe'|trans}}</span></label>
+                               <button type="submit" class="btn btn-success  btn_valid" style="text-transform: none;font-size: 1em;font-weight: 400;display:block;"><i class="fa fa-check-square-o"></i> {{'Valider'|trans}} </button>
+
+                           </form>
+                           </div>
+
+                           <p style="clear:both !important"></p>
+
+                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                               <p class="journne_du_" style="text-align:left !important;">{{'Suspension du compte'|trans}}</p>
+                           <form method="post" action="">
+                           <input type="checkbox" id="suspendre"> &nbsp;&nbsp;<label for="suspendre" class="resilier">{{'Suspendre mon compte'|trans}} Dikaki pro</label>
+                          <p style="display: none !important;" id="suspendre_compte"><br>
+           <button type="submit" class="btn btn-success  btn_valid" style="text-transform: none;font-size: 1em;font-weight: 400"><i class="fa fa-check-square-o"></i> {{'Suspendre mon compte'|trans}}</button>
+         </p>
 
 
-          </div>
 
-          <!--  /col-lg-12 -->
-        </div>
-        <!--  /row -->
-      </section>
-             <!-- fin -->
 
-            </div>
+                       <!-- une autre partie -->
 
-          </div>
-          <!-- /row -->
-        </div>
-        <!-- /container -->
-      </section>
-      <!-- /wrapper -->
-    </section>
+                   </form>
+                           </div>
+                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                               <p class="journne_du_" style="text-align:left !important;">{{"Résiliation de l'abonnement"|trans}} </p>
+                   <form method="post" action="">
+                       <input type="checkbox" id="resilier"> &nbsp;&nbsp;<label for="resilier" class="resilier">{{'Résilier mon abonnement'|trans}} Dikaki pro</label>
+                          <p style="display: none !important;" id="annulation"><br>
+           <button type="submit" class="btn btn-success  btn_valid" style="text-transform: none;font-size: 1em;font-weight: 400"><i class="fa fa-check-square-o"></i> {{'Résilier mon compte'|trans}}</button>
+         </p>
+
+
+
+
+                       <!-- une autre partie -->
+
+                   </form>
+                           </div>
+                             <p style="margin-top:150px !important"></p>
+
+                 </section>
+
+
+               <!-- fin -->
+
+                  </div>
+             </div>
+
+
+         </div>
+
+         <!--  /col-lg-12 -->
+       </div>
+       <!--  /row -->
+     </section>
+            <!-- fin -->
+
+           </div>
+
+         </div>
+         <!-- /row -->
+       </div>
+       <!-- /container -->
+     </section>
+     <!-- /wrapper -->
+   </section>
 
 {% endblock %}
 
 {% block scripts %}
 
- <script>
-                $(document).ready(function(){
-                    $("#access").on("click",function(){
-                        $(".table_access").toggle();
-                    });
-                     $("#factures").on("click",function(){
-                        $(".table_factures").toggle();
-                    });
-                    
-                    $("#paiement_en_ligne").on("click",function(){
-                        $(".table_paiement_en_ligne").toggle();
-                    });
+<script>
+               $(document).ready(function(){
+                   $("#access").on("click",function(){
+                       $(".table_access").toggle();
+                   });
+                    $("#factures").on("click",function(){
+                       $(".table_factures").toggle();
+                   });
+
+                   $("#paiement_en_ligne").on("click",function(){
+                       $(".table_paiement_en_ligne").toggle();
+                   });
 
 
 
-                    $("#abonnements").on("click",function(){
-                        $(".table_abonnements").toggle();
-                    });
+                   $("#abonnements").on("click",function(){
+                       $(".table_abonnements").toggle();
+                   });
 
-                    $("#Services").on("click",function(){
-                        $(".table_Services").toggle();
-                    });
+                   $("#Services").on("click",function(){
+                       $(".table_Services").toggle();
+                   });
 
-                    $("#Achats").on("click",function(){
-                        $(".table_Achats").toggle();
-                    });
+                   $("#Achats").on("click",function(){
+                       $(".table_Achats").toggle();
+                   });
 
-                    $(".mon_pack_sms").on("click",function(){
-                        $(".container_paye").show();
-                    });
-
-
-                    $("#resilier").on("click",function(){
-                        $("#annulation").toggle();
-                    });
-                    
-                     $("#suspendre").on("click",function(){
-                        $("#suspendre_compte").toggle();
-                    });
-                    
-                    //changement de formule
-                    
-                    $('#chance_formule').on('click',function(){
-                        $('#show_formule').toggle();
-                    });
-                    // nouveau mode de paiement
-
-                    $('#select_operation').change(function(){
-                        $('#show_operator').show();
-                    });
-
-                    $("#mtn").on('click',function(){
-
-              // pour Mtn
-           if($('input[name=mtn_paiement]').prop('checked'))
-           {
-               $("#by_mtn").show();
-               $("#hide_orange").hide();
-               $("#hide_ue").hide();
-               $("#hide_yup").hide();
-           }
-           else
-           {
-               $("#by_mtn").hide();
-               $("#hide_orange").show();
-               $("#hide_ue").show();
-               $("#hide_yup").show();
-           }
-          });
+                   $(".mon_pack_sms").on("click",function(){
+                       $(".container_paye").show();
+                   });
 
 
+                   $("#resilier").on("click",function(){
+                       $("#annulation").toggle();
+                   });
 
-           $("#orange").on('click',function(){
-                // pour Orange
-               if($('input[name=orange_paiement]').prop('checked'))
-               {
-                   $("#hide_mtn").hide();
-                   $("#by_orange").show();
-                   $("#hide_ue").hide();
-                   $("#hide_orange").show();
-                   $("#hide_yup").hide();
-               }
-               else
-               {
-                   $("#hide_mtn").show();
-                   $("#by_orange").hide();
-                   $("#hide_ue").show();
-                   $("#hide_yup").show();
-                   $("#hide_orange").show();
-               }
+                    $("#suspendre").on("click",function(){
+                       $("#suspendre_compte").toggle();
+                   });
+
+                   //changement de formule
+
+                   $('#chance_formule').on('click',function(){
+                       $('#show_formule').toggle();
+                   });
+                   // nouveau mode de paiement
+
+                   $('#select_operation').change(function(){
+                       $('#show_operator').show();
+                   });
+
+                   $("#mtn").on('click',function(){
+
+             // pour Mtn
+          if($('input[name=mtn_paiement]').prop('checked'))
+          {
+              $("#by_mtn").show();
+              $("#hide_orange").hide();
+              $("#hide_ue").hide();
+              $("#hide_yup").hide();
+          }
+          else
+          {
+              $("#by_mtn").hide();
+              $("#hide_orange").show();
+              $("#hide_ue").show();
+              $("#hide_yup").show();
+          }
+         });
 
 
-          });
 
-
-           $("#ue").on('click',function(){
-           // pour Ue
-               if($('input[name=ue_paiement]').prop('checked'))
-               {
-                   $("#hide_mtn").hide();
-                   $("#hide_orange").hide();
-                   $("#by_ue").show();
-                   $("#hide_ue").show();
-                   $("#hide_yup").hide();
-               }
-               else
-               {
-                   $("#hide_mtn").show();
-                   $("#hide_orange").show();
-                   $("#by_ue").hide();
-                   $("#hide_ue").show();
-                   $("#hide_yup").show();
-               }
-          });
-
-          $("#yup").on('click',function(){
-          // pour yup
-              if($('input[name=yup_paiement]').prop('checked'))
+          $("#orange").on('click',function(){
+               // pour Orange
+              if($('input[name=orange_paiement]').prop('checked'))
               {
                   $("#hide_mtn").hide();
+                  $("#by_orange").show();
                   $("#hide_ue").hide();
-                  $("#by_yup").show();
-                  $("#hide_orange").hide();
+                  $("#hide_orange").show();
+                  $("#hide_yup").hide();
+              }
+              else
+              {
+                  $("#hide_mtn").show();
+                  $("#by_orange").hide();
+                  $("#hide_ue").show();
                   $("#hide_yup").show();
+                  $("#hide_orange").show();
+              }
+
+
+         });
+
+
+          $("#ue").on('click',function(){
+          // pour Ue
+              if($('input[name=ue_paiement]').prop('checked'))
+              {
+                  $("#hide_mtn").hide();
+                  $("#hide_orange").hide();
+                  $("#by_ue").show();
+                  $("#hide_ue").show();
+                  $("#hide_yup").hide();
               }
               else
               {
                   $("#hide_mtn").show();
                   $("#hide_orange").show();
+                  $("#by_ue").hide();
                   $("#hide_ue").show();
                   $("#hide_yup").show();
-                  $("#by_yup").hide();
               }
          });
-                });
-             </script>
+
+         $("#yup").on('click',function(){
+         // pour yup
+             if($('input[name=yup_paiement]').prop('checked'))
+             {
+                 $("#hide_mtn").hide();
+                 $("#hide_ue").hide();
+                 $("#by_yup").show();
+                 $("#hide_orange").hide();
+                 $("#hide_yup").show();
+             }
+             else
+             {
+                 $("#hide_mtn").show();
+                 $("#hide_orange").show();
+                 $("#hide_ue").show();
+                 $("#hide_yup").show();
+                 $("#by_yup").hide();
+             }
+        });
+               });
+            </script>
 
 
 {% endblock %}
-

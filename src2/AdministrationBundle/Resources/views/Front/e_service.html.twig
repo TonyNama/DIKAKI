@@ -1,73 +1,73 @@
-  {% extends '::admin_template.html.twig' %}
+{% extends '::admin_template.html.twig' %}
 
-{% block title %}Paramètre des services additionnels  : Prise de rendez-vous et dépôt de dossier en ligne {% endblock %}
+{% block title %}{{'Paramètre des services additionnels'|trans}}  - {{"prise de rendez-vous et dépôt de dossier en ligne "|trans}}{% endblock %}
 
 {% block style %}
 
 <style>
-        .menu1 {  
-          border-bottom:solid 2px #666666 ;  
-          padding-top:12px ; 
-          padding-bottom:7px
-        }  
+      .menu1 {
+        border-bottom:solid 2px #666666 ;
+        padding-top:12px ;
+        padding-bottom:7px
+      }
 
-        .onglet { 
-            border:solid 1px #666666 ;  
-            margin:5px 5px 0px 5px ;  
-            padding:7px 3px 7px 3px;
-            font-weight: bold;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.1em;
-            background: #666666;
-            color: #fff !important;
+      .onglet {
+          border:solid 1px #666666 ;
+          margin:5px 5px 0px 5px ;
+          padding:7px 3px 7px 3px;
+          font-weight: bold;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 1.1em;
+          background: #666666;
+          color: #fff !important;
 
-            border-radius:5px 5px 0px 0px !important;
-          }  
-
-          a.onglet {  
-            background-color:#666666 ;  
-            text-decoration:none;
-            font-weight: bold;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.1em;
-            background: #666666;
-            color: #fff !important;
-          }  
-
-          .onglet-actif { 
-             border-left:solid 2px #666666 ;  
-             border-right:solid 2px #666666 ;  
-             border-top:solid 2px #666666 ;  
-             border-bottom:none !important;  
-             margin:5px 5px 0px 5px ; 
-             padding:7px 3px 7px 3px ; 
-             background-color:white;
-             font-weight: bold;
-             font-family: 'Montserrat', sans-serif;
-             font-size: 1.2em;
-             color: #333;
-          }  
-        .sky-form{
-            box-shadow: none !important;
+          border-radius:5px 5px 0px 0px !important;
         }
 
-        a.previous { margin-top: 20px !important; display: none;cursor: pointer;}
-        .span {
-          display: none;
-          color: Red;
+        a.onglet {
+          background-color:#666666 ;
+          text-decoration:none;
+          font-weight: bold;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 1.1em;
+          background: #666666;
+          color: #fff !important;
         }
+
+        .onglet-actif {
+           border-left:solid 2px #666666 ;
+           border-right:solid 2px #666666 ;
+           border-top:solid 2px #666666 ;
+           border-bottom:none !important;
+           margin:5px 5px 0px 5px ;
+           padding:7px 3px 7px 3px ;
+           background-color:white;
+           font-weight: bold;
+           font-family: 'Montserrat', sans-serif;
+           font-size: 1.2em;
+           color: #333;
+        }
+      .sky-form{
+          box-shadow: none !important;
+      }
+
+      a.previous { margin-top: 20px !important; display: none;cursor: pointer;}
+      .span {
+        display: none;
+        color: Red;
+      }
 
 table tr { display: none; }
 
 table tr:nth-child(-n+8) { display: table-row; }
 .form-control{
-          display: inline-block !important;
-          vertical-align: middle !important;
-          width: 60% !important;
-        }
+        display: inline-block !important;
+        vertical-align: middle !important;
+        width: 60% !important;
+      }
 
 
-    </style>
+  </style>
 
 
 {% endblock %}
@@ -76,51 +76,51 @@ table tr:nth-child(-n+8) { display: table-row; }
 {% block body %}
 
 
- <!-- debut du contenu -->
-    <section id="main-content">
+<!-- debut du contenu -->
+  <section id="main-content">
+    <section class="wrapper site-min-height">
+      <div class="row mt">
+
+          <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+        <!-- /col-lg-12 -->
+        <div class="col-lg-12 mt">
+          <div class="row content-panel">
+           <!-- debut -->
       <section class="wrapper site-min-height">
-        <div class="row mt">
+      <div class="row">
+        <div class="col-lg-12">
 
-            <h2 class="name_structure">Cabinet médical la Grâce</h2>
-          <!-- /col-lg-12 -->
-          <div class="col-lg-12 mt">
-            <div class="row content-panel">
-             <!-- debut -->
-        <section class="wrapper site-min-height">
-        <div class="row">
-          <div class="col-lg-12">
+           <h4 class="small_tittle">{{'Prestations'|trans}}</h4>
 
-             <h4 class="small_tittle">Presations</h4>
-
-               <div class="menu1"> <!-- début de la boite contenant les onglets -->
-                  <a href="{{path('dkk_administration_prestation')}}" class="onglet-actif"> Prestation </a> <!-- onglet ACTIF -->
-                  <a href="{{path('dkk_administration_prestation_groupe')}}" class="onglet-actif"> Prestations   groupées </a> <!-- onglet ACTIF -->
-                    <a href="{{path('dkk_administration_service')}}" class="onglet-actif"> Services </a> <!-- onglet ACTIF -->
-                   <span class="onglet"> E-Service  </span> <!-- onglet inactif -->
-              </div>
+             <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                <a href="{{path('dkk_administration_prestation')}}" class="onglet-actif"> {{'Prestations'|trans}} </a> <!-- onglet ACTIF -->
+                <a href="{{path('dkk_administration_prestation_groupe')}}" class="onglet-actif"> {{'Prestations groupées'|trans}} </a> <!-- onglet ACTIF -->
+                  <a href="{{path('dkk_administration_service')}}" class="onglet-actif"> {{'Services'|trans}} </a> <!-- onglet ACTIF -->
+                 <span class="onglet"> {{'E-Service'|trans}}  </span> <!-- onglet inactif -->
+            </div>
 
 
 
-              <div class="margin_wrapper">
+            <div class="margin_wrapper">
 
 
-                    <!-- -->
-
-              </div>
-
-        <!--  /row -->
-      </section>
-             <!-- fin -->
+                  <!-- -->
 
             </div>
 
-          </div>
-          <!-- /row -->
-        </div>
-        <!-- /container -->
-      </section>
-      <!-- /wrapper -->
+      <!--  /row -->
     </section>
+           <!-- fin -->
+
+          </div>
+
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </section>
+    <!-- /wrapper -->
+  </section>
 
 
 {% endblock %}

@@ -1,150 +1,159 @@
-     {% extends '::admin_template.html.twig' %}
+{% extends '::admin_template.html.twig' %}
 
-{% block title %}Fiche de présence : Dikaki prise de rendez-vous et dépôt de dossier en ligne{% endblock %}
+{% block title %}{{'Fiche de présence'|trans}} - Dikaki {{'prise de rendez-vous et dépôt de dossier en ligne'|trans}}{% endblock %}
 
 {% block style %}
 
- <style>
-        .sky-form{
-            box-shadow: none !important;
-        }
-         table, th{
-          text-align: center;
-        }
+<style>
+   .sky-form{
+       box-shadow: none !important;
+   }
+    table, th{
+     text-align: center;
+   }
 
-    </style>
+   .mymodalbox2{
+     font-size: 1.1em !important;
+     margin-top:4px !important;
+   }
+</style>
 
 {% endblock %}
 
 {%  block body %}
 
 <!-- debut du contenu -->
-    <section id="main-content">
-      <section class="wrapper site-min-height">
-        <div class="row mt">
+<section id="main-content">
+ <section class="wrapper site-min-height">
+   <div class="row mt">
 
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <h2 class="name_structure">Cabinet médical la Grâce</h2>
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+           <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+       </div>
+       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+           <h2 class="name_structure">{{'Fiche de présence'|trans}}</h2>
+       </div>
+     <!-- /col-lg-12 -->
+     <div class="col-lg-12 mt">
+       <div class="row content-panel">
+        <!-- debut -->
+   <section class="wrapper site-min-height">
+   <div class="row">
+     <div class="col-lg-12">
+        <select class="form-control form_width">
+           <option>Dr Ndewa</option>
+            <option>Dr Fotso</option>
+            <option>Dr Melingui</option>
+        </select>
+
+      <br>
+
+         <a href="{{path('dkk_administration_agenda')}}" class="re_back_"><i class="fa fa-share"></i> {{"Revenir à l'agenda"|trans}}</a>
+         <p style="clear:both !important"></p>
+
+
+         <div class="content_menu">
+
+            <div class="wrapper_line_one" style="height: 30px !important;">
+
+                <div class="pull-left">
+                   <a href="{{path('dkk_administration_agenda_creer_client')}}" class="mymodalbox2">{{'Nouveau client'|trans}} </a>
+                  <a href="{{path('dkk_administration_agenda_creer_planning')}}" class="mymodalbox2">{{'Planning'|trans}}</a>
+                  <a href="{{path('dkk_administration_agenda_prendre_rdv')}}" class="mymodalbox2">{{'Prendre RDV'|trans}}</a>
+                   <a href="{{path('dkk_administration_agenda_modifier_rdv')}}" class="mymodalbox2">{{'Modifier RDV'|trans}}</a>
+                  <a href="{{path('dkk_administration_agenda_presence')}}" class="mymodalbox2">{{'Présence'|trans}}</a>
+                  <a href="{{path('dkk_administration_agenda_encaissement')}}" class="mymodalbox2">{{'Encaissement'|trans}}</a>
+                </div>
+                <div class="pull-right">
+
+                </div>
+
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <h2 class="name_structure">Fiche de présence</h2>
-            </div>
-          <!-- /col-lg-12 -->
-          <div class="col-lg-12 mt">
-            <div class="row content-panel">
-             <!-- debut -->
-        <section class="wrapper site-min-height">
-        <div class="row">
-          <div class="col-lg-12">
-             <select class="form-control form_width">
-                <option>Dr Ndewa</option>
-                 <option>Dr Fotso</option>
-                 <option>Dr Melingui</option>
-             </select>
+             <!-- debut de l'affichage du calandrier au click -->
+             <div class="affichage_calandar_3">
 
-           <br>
-    
-              <a href="{{path('dkk_administration_agenda')}}" class="re_back_"><i class="fa fa-share"></i> Revenir à l'agenda</a>
-              <p style="clear:both !important"></p>
+             </div>
+             <!-- debut de l'affichage du calandrier au click -->
 
-               
-              <div class="content_menu">
-                 <div class="wrapper_line_one">
-                    <span class="form_search">
-                        <form method="post" action="{{path('dkk_administration_client')}}">
-                            <input type="search" name="" placeholder="Recherche client" class="serach_bx" required>
-                            <button type="submit" class="search_btn"><i class="fa fa-search"></i></button>
-                         </form>
-                    </span>
+         </div>
 
-                      <a href="{{path('dkk_administration_agenda_creer_client')}}" class="btn add_agenda">Nouveau client</a>
-                     <a href="{{path('dkk_administration_agenda_creer_planning')}}" class="mymodalbox">Planning </a>
-                     <a href="{{path('dkk_administration_agenda_prendre_rdv')}}" class="btn rdv_agenda"> Prendre  RDV</a>
-                     <a href="{{path('dkk_administration_agenda_modifier_rdv')}}" class="btn modifier_agenda">  Modifier   RDV</a>
-                     <a href="{{path('dkk_administration_agenda_presence')}}" class="btn precence_agenda">  Présence</a>
-                     <a href="{{path('dkk_administration_agenda_encaissement')}}" class="btn encaissement">  Encaissement</a>
-                 </div>
+         <div class="wrapper_aganda_">
+              <h3 class="cration_client"> {{'Fiche de présence'|trans}} </h3>
+              <div class="container_">
+                   <p class="name_presence_fiche"> {{'Fiche de présence du 19 février 2018'|trans}} : Mme Tchama </p>
+                   <select name="" class="form-control" style="display: inline-block;vertical-align: middle !important;width: 150px !important;margin-left: 20px;margin-top: 15px;">
+                       <option value="">{{"Aujourd'hui"|trans}}</option>
+                       <option value="">{{'Par date'|trans}}</option>
+                   </select>
 
+
+                  <p style="clear:both !important"></p>
+                  <table class="table table-bordered table-striped">
+                      <tr style="background-color: #26440d !important;color: #fff !important;">
+                           <th>N°</th>
+                           <th>{{'Nom'|trans}}</th>
+                           <th>{{'Prénom'|trans}}</th>
+                           <th>{{'Téléphone'|trans}}</th>
+                           <th>{{'Heure'|trans}}</th>
+                           <th>{{'Situation'|trans}}</th>
+                           <th>{{'Statut'|trans}}</th>
+                           <th>{{'Observation'|trans}}</th>
+                       </tr>
+                      <tr>
+                           <td>1</td>
+                           <td>Nvogo nvogo</td>
+                           <td>Pierre claver</td>
+                           <td>+237 987 765 453</td>
+                           <td>13h 30 Min</td>
+
+                           <td>{{'En attente'|trans}}</td>
+                           <td>
+                               <span class="statut_nom">
+                                   <input type="radio" name="statu" id="statut_indication"> {{'Venu'|trans}} &nbsp;&nbsp;
+                               </span>
+                               <span class="statut_nom">
+                                   <input type="radio" name="statu" id="statut_indication2"> {{'Pas venu'|trans}}
+                               </span>
+                          </td>
+                           <td>{{'Rien à signaler pour le moment'|trans}}</td>
+                      </tr>
+
+
+
+
+
+
+
+                  </table>
+                  <div class="pull-right">
+                       <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-floppy-o"></i> {{'Valider'|trans}}</button>
+                       <button type="reset" class="btn btn-primary btn-sm"><i class="fa fa-print"></i> {{'Imprimer'|trans}}</button>
+                  </div>
               </div>
-
-              <div class="wrapper_aganda_">
-                   <h3 class="cration_client"> Fiche de présence </h3>
-                   <div class="container_">
-                        <p class="name_presence_fiche"> Fiche de présence du 19 février 2018 : Mme Tchama </p>
-                        <select name="" class="form-control" style="display: inline-block;vertical-align: middle !important;width: 150px !important;margin-left: 20px;margin-top: 15px;">
-                            <option value="">Aujourd'hui</option>
-                            <option value="">Par date</option>
-                        </select>
+         </div>
 
 
-                       <p style="clear:both !important"></p>
-                       <table class="table table-bordered table-striped">
-                           <tr style="background-color: #26440d !important;color: #fff !important;">
-                                <th>N°</th>
-                                <th>Nom</th>
-                                <th>Prenom</th>
-                                <th>Téléphone</th>
-                                <th>Heure</th>
-                                <th>Situation</th>
-                                <th>Statut</th>
-                                <th>Observation</th>
-                            </tr>
-                           <tr>
-                                <td>1</td>
-                                <td>Nvogo nvogo</td>
-                                <td>Pierre claver</td>
-                                <td>+237 987 765 453</td>
-                                <td>13h 30 Min</td>
-                                
-                                <td>En attente</td>
-                                <td>
-                                    <span class="statut_nom">
-                                        <input type="radio" name="statu" id="statut_indication"> Venu &nbsp;&nbsp;
-                                    </span>
-                                    <span class="statut_nom">
-                                        <input type="radio" name="statu" id="statut_indication2"> Pas venu
-                                    </span>
-                               </td>
-                                <td>Rien à signaler pour le moment</td>
-                           </tr>
+     </div>
 
+     <!--  /col-lg-12 -->
+   </div>
+   <!--  /row -->
+ </section>
+        <!-- fin -->
 
+       </div>
 
-
-
-
-
-                       </table>
-                       <div class="pull-right">
-                            <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-floppy-o"></i> Valider</button>
-                            <button type="reset" class="btn btn-primary btn-sm"><i class="fa fa-print"></i> Imprimer</button>
-                       </div>
-                   </div>
-              </div>
-
-
-          </div>
-
-          <!--  /col-lg-12 -->
-        </div>
-        <!--  /row -->
-      </section>
-             <!-- fin -->
-
-            </div>
-
-          </div>
-          <!-- /row -->
-        </div>
-        <!-- /container -->
-      </section>
-      <!-- /wrapper -->
-    </section>
+     </div>
+     <!-- /row -->
+   </div>
+   <!-- /container -->
+ </section>
+ <!-- /wrapper -->
+</section>
 {% endblock %}
 
 {% block scripts %}
 
- 
+
 
 {% endblock %}
-

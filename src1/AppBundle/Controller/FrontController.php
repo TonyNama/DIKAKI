@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * Description of AppController
  *
- * @author Anthony NAMA
+ * @author Anthony NAMA 
  */
 class FrontController extends Controller {
 
