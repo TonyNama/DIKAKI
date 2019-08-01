@@ -1,42 +1,42 @@
-{% extends '::admin_template.html.twig' %}
+    {% extends '::admin_template.html.twig' %}
 
 {% block title %}{{'Agenda'|trans}} - {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
 <style>
-     #previous{
-        border:1px solid red !important;
-        top: 20px !important;
-    }
+         #previous{
+            border:1px solid red !important;
+            top: 20px !important;
+        }
+       
+        .sky-form{
+            box-shadow: none !important;
+        }
 
-    .sky-form{
-        box-shadow: none !important;
-    }
+        a.previous {
+           top: 10px !important; 
+            display: none;
+            cursor: pointer;
+            border-radius: 4px !important;
+            position: relative !important;
+        }
+        .span {
+          display: none;
 
-    a.previous {
-       top: 10px !important; 
-        display: none;
-        cursor: pointer;
-        border-radius: 4px !important;
-        position: relative !important;
-    }
-    .span {
-      display: none;
-
-    }
-    .mymodalbox2{
-      font-size: 1.1em !important;
-    }
-    .affichage_calandar_3{
-        width: 250px;
-        height: 250px;
-        background: #fff;
-        position: absolute !important;
-        z-index: 9999 !important;
-        left:120px;
-        top: -100px;
-        display: none;
-    }
+        }
+        .mymodalbox2{
+          font-size: 1.1em !important;
+        }
+        .affichage_calandar_3{
+            width: 250px;
+            height: 250px;
+            background: #fff;
+            position: absolute !important;
+            z-index: 9999 !important;
+            left:120px;
+            top: -100px;
+            display: none;
+        }
 
 table tr { display: none; }
 
@@ -44,398 +44,399 @@ table tr:nth-child(-n+8) { display: table-row; }
 
 
 
-    </style>
+		    </style>
 {% endblock %}
 
 {% block body %}
 
-<!-- debut du contenu -->
-    <section id="main-content">
-  <section class="wrapper site-min-height">
-    <div class="row mt">
+ <!-- debut du contenu -->
+        <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
 
-        <div class="col-xs-12 col-ms-6 col-md-6">
-    <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
-  </div>
+            <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+      </div>
+      
+      <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">{{'Agenda'|trans}}</h2>
+      </div>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <select class="form-control form_width" style="margin-left:48px;margin-top:-60px !important;">
+                <option>Dr Ndewa</option>
+                 <option>Dr Fotso</option>
+                 <option>Dr Melingui</option>
+             </select>
 
-  <div class="col-xs-12 col-ms-6 col-md-6">
-    <h2 class="name_structure">{{'Agenda'|trans}}</h2>
-  </div>
-      <!-- /col-lg-12 -->
-      <div class="col-lg-12 mt">
-        <div class="row content-panel">
-         <!-- debut -->
-    <section class="wrapper site-min-height">
-    <div class="row">
-      <div class="col-lg-12">
-         <select class="form-control form_width" style="margin-left:48px;margin-top:-60px !important;">
-            <option>Dr Ndewa</option>
-             <option>Dr Fotso</option>
-             <option>Dr Melingui</option>
-         </select>
-
-        <br>
+            <br>
 
 
-
-          <!-- debut des modification -->
-            <div class="wrapper_administration" style="border: none;box-shadow: none;padding-bottom: 30px;">
-
-      <div class="content_menu">
-          <div class="wrapper_line_one" style="height:40px">
-
-                 <div class="pull-left">
-                    <span class="form_search" style="height:40px">
-                    <form method="post" action="{{path('dkk_administration_client')}}">
-                        <input type="text" name="" placeholder="{{'Recherche client'|trans}}" class="serach_bx" required>
-                        <button type="submit" class="search_btn"><i class="fa fa-search"></i></button>
-                     </form>
+              
+              <!-- debut des modification -->
+                <div class="wrapper_administration" style="border: none;box-shadow: none;padding-bottom: 30px;">
+          
+          <div class="content_menu">
+              <div class="wrapper_line_one" style="height:40px">
+                    
+                     <div class="pull-left">
+                        <span class="form_search" style="height:40px">
+                        <form method="post" action="{{path('dkk_administration_client')}}">
+                            <input type="text" name="" placeholder="{{'Recherche client'|trans}}" class="serach_bx" required>
+                            <button type="submit" class="search_btn"><i class="fa fa-search"></i></button>
+                         </form>
+                     </div>
+                     <div class="pull-right">
+                      <span class="" style="color: #fff !important">
+                        <input type="radio" name="chois" id="one_days"> <label for="one_days">1 {{'jour'|trans}} &nbsp;</label>
+                        <input type="radio" name="chois" id="tree_days"> <label for="tree_days">3 {{'jours'|trans}} &nbsp;</label>
+                        <input type="radio" checked="" name="chois" id="one_week"> <label for="one_week"> {{'Semaine'|trans}}</label>
+                      </span>
+                     </div>
+                     
                  </div>
-                 <div class="pull-right">
-                  <span class="" style="color: #fff !important">
-                    <input type="radio" name="chois" id="one_days"> <label for="one_days">1 {{'jour'|trans}} &nbsp;</label>
-                    <input type="radio" name="chois" id="tree_days"> <label for="tree_days">3 {{'jours'|trans}} &nbsp;</label>
-                    <input type="radio" checked="" name="chois" id="one_week"> <label for="one_week"> {{'Semaine'|trans}}</label>
-                  </span>
+                 <div class="wrapper_line_one" style="height: 30px !important;">
+                    
+                     <div class="pull-left">
+                        <a href="{{path('dkk_administration_agenda_creer_client')}}" class="mymodalbox2">{{'Nouveau client'|trans}} </a>
+                       <a href="{{path('dkk_administration_agenda_creer_planning')}}" class="mymodalbox2">{{'Planning'|trans}}</a>
+                       <a href="{{path('dkk_administration_agenda_prendre_rdv')}}" class="mymodalbox2">{{'Prendre RDV'|trans}}</a>
+                        <a href="{{path('dkk_administration_agenda_modifier_rdv')}}" class="mymodalbox2">{{'Modifier RDV'|trans}}</a>
+                       <a href="{{path('dkk_administration_agenda_presence')}}" class="mymodalbox2">{{'Présence'|trans}}</a>
+                       <a href="{{path('dkk_administration_agenda_encaissement')}}" class="mymodalbox2">{{'Encaissement'|trans}}</a>
+                     </div>
+                     <div class="pull-right">
+                     
+                     </div>
+                     
                  </div>
+                  <!-- debut de l'affichage du calandrier au click -->
+                  <div class="affichage_calandar_3">
 
-             </div>
-             <div class="wrapper_line_one" style="height: 30px !important;">
-
-                 <div class="pull-left">
-                    <a href="{{path('dkk_administration_agenda_creer_client')}}" class="mymodalbox2">{{'Nouveau client'|trans}} </a>
-                   <a href="{{path('dkk_administration_agenda_creer_planning')}}" class="mymodalbox2">{{'Planning'|trans}}</a>
-                   <a href="{{path('dkk_administration_agenda_prendre_rdv')}}" class="mymodalbox2">{{'Prendre RDV'|trans}}</a>
-                    <a href="{{path('dkk_administration_agenda_modifier_rdv')}}" class="mymodalbox2">{{'Modifier RDV'|trans}}</a>
-                   <a href="{{path('dkk_administration_agenda_presence')}}" class="mymodalbox2">{{'Présence'|trans}}</a>
-                   <a href="{{path('dkk_administration_agenda_encaissement')}}" class="mymodalbox2">{{'Encaissement'|trans}}</a>
-                 </div>
-                 <div class="pull-right">
-
-                 </div>
-
-             </div>
-              <!-- debut de l'affichage du calandrier au click -->
-              <div class="affichage_calandar_3">
-
+                  </div>
+                  <!-- debut de l'affichage du calandrier au click -->
+                  
               </div>
-              <!-- debut de l'affichage du calandrier au click -->
+
+              <div class=" " id="calandrier" style="margin-left: 25px;margin-right: 25px;">
+
+
+
+                      <!-- debut du nouveau calendrier -->
+                      <div class="full_calandar">
+
+                          <div class="calNav">
+                            <p style="margin-top: -11px !important"></p>
+                            
+                              <br>
+            <div class="navButtons">
+
+                <button class="prevDays " alt="Précédents" role="button">
+                  
+                    <span class="text">{{"Précédent"|trans}}</span>
+                </button>
+                   <div style="width: 600px !important;margin: 0px auto !important;">
+                       <button id="calandar_admin" class="calandar_admin pull-left"><i class="fa fa-calendar"></i></button>
+                    <a href="javascript:void(0)" class="aujourdhui_ pull-left">{{"Aujourd'hui"|trans}}</a>
+                    <span class="text_semaine" disabled=""> {{"Semaine du 19 au 26 Décembre 2019"|trans}} </span>
+                   </div>
+               <input type="hidden" id="hdnActivePage" value="1" />
+                <button class="nextDays " alt="Suivants">
+                    <span class="text" role="presentation">{{"Suivant"|trans}}</span>
+                  
+                </button>
+               
+            </div>
+           
+           <!-- debut -->
+              <br>
+            
+                          
+            <table class="table table-bordered table-striped table-condensed" class="week_table">
+              <tbody>
+                <tr style="background-color: #26440d !important;color: #fff !important;">
+                <th class="bold_ligne">{{"Heure"|trans}}</th>
+                <th class="bold_ligne">{{"Lundi"|trans}} 17 {{"Août"|trans}} 2018</th>
+                <th class="bold_ligne">{{"Mardi"|trans}} 18 {{"Août"|trans}} 2018</th>
+                <th class="bold_ligne">{{"Mercredi"|trans}} 19 {{"Août"|trans}} 2018</th>
+                <th class="bold_ligne">{{"Jeudi"|trans}} 20 {{"Août"|trans}} 2018</th>
+                <th class="bold_ligne">{{"Vendredi"|trans}} 21 {{"Août"|trans}} 2018</th>
+              </tr>
+                                            
+              <tr>
+                <td>9h 00</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+
+              <tr>
+                <td>9h 30</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+              <tr>
+                <td>10h 00</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+              <tr>
+                <td>10h 30</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+              <tr>
+                <td>11h 00</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+              <tr>
+                <td>11h 30</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+              <tr>
+                <td>12h 00</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+
+              <tr>
+                <td>12h 30</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+              <tr>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+              <tr>
+                <td>13h 30</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+              <tr>
+                <td>14h 00</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+
+              <tr>
+                <td>14h 30</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+
+              <tr>
+                <td>15h 00</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+              <tr>
+                <td>15h 30</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+              <tr>
+                <td>16h 00</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+              <tr>
+                <td>16h 30</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+              <tr>
+                <td>17h 00</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                <td>........</td>
+                                                
+              </tr>
+                                            
+                                            
+            </tbody>
+      </table>
+           <!-- fin -->
+
+
+        </div>
+        <div class="wrapper_rdv_table">
+          
+        </div>
+
+                      <!-- fin du nouveau calandrier-->
 
           </div>
 
-          <div class=" " id="calandrier" style="margin-left: 25px;margin-right: 25px;">
-
-
-
-                  <!-- debut du nouveau calendrier -->
-                  <div class="full_calandar">
-
-                      <div class="calNav">
-                        <p style="margin-top: -11px !important"></p>
-
-                          <br>
-        <div class="navButtons">
-
-            <button class="prevDays " alt="Précédents" role="button">
-                <span class="fa fa-arrow-left"></span>
-                <span class="text">{{"Précédent"|trans}}</span>
-            </button>
-               <div style="width: 600px !important;margin: 0px auto !important;">
-                   <button id="calandar_admin" class="calandar_admin pull-left"><i class="fa fa-calendar"></i></button>
-                <a href="javascript:void(0)" class="aujourdhui_ pull-left">{{"Aujourd'hui"|trans}}</a>
-                <span class="text_semaine" disabled=""> Semaine du 19 au 26 Décembre 2019 </span>
-               </div>
-           <input type="hidden" id="hdnActivePage" value="1" />
-            <button class="nextDays " alt="Suivants">
-                <span class="text" role="presentation">{{"Suivant"|trans}}</span>
-                <span class="fa fa-arrow-right" role="presentation"></span>
-            </button>
-
         </div>
 
-       <!-- debut -->
-          <br>
-
-
-        <table class="table table-bordered table-striped table-condensed" class="week_table">
-          <tbody>
-            <tr style="background-color: #26440d !important;color: #fff !important;">
-            <th class="bold_ligne">Heure</th>
-            <th class="bold_ligne">Lundi 17 Août 2018</th>
-            <th class="bold_ligne">Mardi 18 Août 2018</th>
-            <th class="bold_ligne">Mercredi 19 Août 2018</th>
-            <th class="bold_ligne">Jeudi 20 Août 2018</th>
-            <th class="bold_ligne">Vendredi 21 Août 2018</th>
-          </tr>
-
-          <tr>
-            <td>9h 00</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-
-          <tr>
-            <td>9h 30</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-          <tr>
-            <td>10h 00</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-          <tr>
-            <td>10h 30</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-          <tr>
-            <td>11h 00</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-          <tr>
-            <td>11h 30</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-          <tr>
-            <td>12h 00</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-
-          <tr>
-            <td>12h 30</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-          <tr>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-          <tr>
-            <td>13h 30</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-          <tr>
-            <td>14h 00</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-
-          <tr>
-            <td>14h 30</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-
-          <tr>
-            <td>15h 00</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-          <tr>
-            <td>15h 30</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-          <tr>
-            <td>16h 00</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-          <tr>
-            <td>16h 30</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-          <tr>
-            <td>17h 00</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-            <td>........</td>
-
-          </tr>
-
-
-        </tbody>
-  </table>
-       <!-- fin -->
-
-
-    </div>
-    <div class="wrapper_rdv_table">
-
-    </div>
-
-                  <!-- fin du nouveau calandrier-->
-
       </div>
+        
+             <!-- fin des modification -->
+            
 
-    </div>
-
-  </div>
-
-         <!-- fin des modification -->
-
+ 
 
 
-
-
-      </div>
-
-
-    </div>
-
-  </section>
+          </div>
 
 
         </div>
 
-      </div>
+      </section>
 
-    </div>
 
-  </section>
+            </div>
 
-</section>
+          </div>
+
+        </div>
+
+      </section>
+
+    </section>
 
 {% endblock %}
 
 {% block scripts %}
 
 
-<script type='text/javascript'>//<![CDATA[
+    <script type='text/javascript'>//<![CDATA[
 
-$(document).ready(function () {
+  $(document).ready(function () {
 
-// affichage du calandrier
+    // affichage du calandrier
 
-
-$("#calandar_admin").on("click",function(){
-   $(".affichage_calandar_3").toggle();
-});
-    // nombre de page 8 par default
-    var pageSize = 8;
-    // initialisation du nombre de page au chargement de la page
-    $("#hdnActivePage").val(1);
-    // calcule du nombre de page
-    var numberOfPages = $('table tr').length / pageSize;
-    numberOfPages = numberOfPages.toFixed();
-    // si on click sur le lien "next"
-    $("a.next").on('click', function () {
-
-        $("table tr:nth-child(-n+" + (($("#hdnActivePage").val() * pageSize) + pageSize) + ")").show();
-        $("table tr:nth-child(-n+" + $("#hdnActivePage").val() * pageSize + ")").hide();
-        var currentPage = Number($("#hdnActivePage").val());
-
-        $("#hdnActivePage").val(Number($("#hdnActivePage").val()) + 1);
-
-        if ($("#hdnActivePage").val() != "1") {
-            $("a.previous").show();
-
-        }
-
-        if ($("#hdnActivePage").val() == numberOfPages) {
-            $("a.next").hide();
-
-        }
+    
+    $("#calandar_admin").on("click",function(){
+       $(".affichage_calandar_3").toggle();
     });
-    // si on click sur le lien "precedent"
-    $("a.previous").on('click', function () {
-        var currentPage = Number($("#hdnActivePage").val());
-        $("#hdnActivePage").val(currentPage - 1);
+        // nombre de page 8 par default
+        var pageSize = 8;
+        // initialisation du nombre de page au chargement de la page
+        $("#hdnActivePage").val(1);
+        // calcule du nombre de page
+        var numberOfPages = $('table tr').length / pageSize;
+        numberOfPages = numberOfPages.toFixed();
+        // si on click sur le lien "next"
+        $("a.next").on('click', function () {
 
-        $("table tr").hide();
+            $("table tr:nth-child(-n+" + (($("#hdnActivePage").val() * pageSize) + pageSize) + ")").show();
+            $("table tr:nth-child(-n+" + $("#hdnActivePage").val() * pageSize + ")").hide();
+            var currentPage = Number($("#hdnActivePage").val());
 
-        $("table tr:nth-child(-n+" + ($("#hdnActivePage").val() * pageSize) + ")").show();
-        $("table tr:nth-child(-n+" + (($("#hdnActivePage").val() * pageSize) - pageSize) + ")").hide();
+            $("#hdnActivePage").val(Number($("#hdnActivePage").val()) + 1);
 
-        if ($("#hdnActivePage").val() == "1") {
-            $("a.previous").hide();
+            if ($("#hdnActivePage").val() != "1") {
+                $("a.previous").show();
 
-        }
+            }
 
-        if ($("#hdnActivePage").val() < numberOfPages) {
-            $("a.next").show();
+            if ($("#hdnActivePage").val() == numberOfPages) {
+                $("a.next").hide();
 
-        }
-        if ($("#hdnActivePage").val() == 1) {
+            }
+        });
+        // si on click sur le lien "precedent"
+        $("a.previous").on('click', function () {
+            var currentPage = Number($("#hdnActivePage").val());
+            $("#hdnActivePage").val(currentPage - 1);
 
-        }
+            $("table tr").hide();
+
+            $("table tr:nth-child(-n+" + ($("#hdnActivePage").val() * pageSize) + ")").show();
+            $("table tr:nth-child(-n+" + (($("#hdnActivePage").val() * pageSize) - pageSize) + ")").hide();
+
+            if ($("#hdnActivePage").val() == "1") {
+                $("a.previous").hide();
+
+            }
+
+            if ($("#hdnActivePage").val() < numberOfPages) {
+                $("a.next").show();
+
+            }
+            if ($("#hdnActivePage").val() == 1) {
+
+            }
+        });
+
+
     });
-
-
-});
 //]]>
 
 </script>
 {% endblock %}
+

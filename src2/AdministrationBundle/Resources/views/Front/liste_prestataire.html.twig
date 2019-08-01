@@ -1,214 +1,217 @@
-{% extends '::admin_template.html.twig' %}
+     {% extends '::admin_template.html.twig' %}
 
 {% block title %}{{'Liste des prestataires et ressource'|trans}} - Dikaki {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}}  {% endblock %}
 
 {% block style %}
 
 <style>
-th,td{
- text-align:center !important;
-}
-</style>
+    th,td{
+      text-align:center !important;
+    }
+    </style>
 
 {% endblock %}
 
 {% block body %}
 
 <section id="main-content">
- <section class="wrapper site-min-height">
-   <div class="row mt">
- <div class="col-xs-12 col-ms-6 col-md-6">
-   <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
- </div>
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+      <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+      </div>
+      
+      <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">{{'Prestataire'|trans}}</h2>
+      </div>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+            
 
- <div class="col-xs-12 col-ms-6 col-md-6">
-   <h2 class="name_structure">{{'Prestataire'|trans}}</h2>
- </div>
-     <!-- /col-lg-12 -->
-     <div class="col-lg-12 mt">
-       <div class="row content-panel">
-        <!-- debut -->
-   <section class="wrapper site-min-height">
-   <div class="row">
-     <div class="col-lg-12">
+            <p style="margin-top:-70px !important;"></p>
+
+              <div class="margin_wrapper">
+                    <!-- debut  de la liste des prestataires -->
+          <p style="margin-top:40px !important;"></p>
+           <h5 class="small_tittle" style="text-align:center;">{{'Liste des prestataires'|trans}}</h5>
+                    <!-- -->
+                    <table class="table table-bordered table-striped table-condensed">
+                              <thead>
+                                <tr style="background-color: #26440d !important;color: #fff !important;">
+                                <th  style="text-align: center !important;">{{'Nom'|trans}}</th>
+                                 <th  style="text-align: center !important;">{{'Prénom'|trans}}</th>
+                                  <th  style="text-align: center !important;">{{'Téléphone'|trans}}</th>
+                                   <th  style="text-align: center !important;">{{'E-mail'|trans}}</th>
+                                  <th  style="text-align: center !important;">{{'Disponibilité'|trans}} </th>
+                                     <th  style="text-align: center !important;">{{'Profession'|trans}}</th>
+                                     <th  style="text-align: center !important;">{{'Couleur'|trans}}</th>
+                                      <th  style="text-align: center !important;">{{'Action'|trans}}</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>Toto</td>
+                                    <td>Tata</td>
+                                    <td>6259814</td>
+                                    <td>gmail@gmail.com</td>
+                                    <td>
+
+                                       <button type="button" class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal" title="">
+                                      <i class="fa fa-eye"></i> {{'Voir'|trans}}
+                                    </button>
+
+                                      <!-- debut de la fenetre modal -->
+                                        <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h5 class="modal-title" id="myModalLabel">{{'Feuille de disponibilité'|trans}}</h5>
+                          </div>
+                          <div class="modal-body2 body_moal_prestation">
 
 
+                           <p class="identification">{{'Identification'|trans}}</p>
+                           <div id="modal_table">
+                                <table  class="table table-bordered table-striped table-condensed my_table_modal">
+                                              <thead >
+                                                <tr >
+                                                <th>{{'Nom'|trans}} : </th>
+                                                 <td>Toto</td>
+                                                </tr>
+                                                <tr>
+                                                  <th>{{'Prénom'|trans}} : </th>
+                                                  <td>Toto</td>
+                                                </tr>
+
+                                                <tr>
+                                                  <th>{{'Profession'|trans}} : </th>
+                                                  <td>Médecin </td>
+                                                </tr>
+
+                                                <tr>
+                                                  <th>{{'Téléphone'|trans}} : </th>
+                                                  <td>+237 656 656 6569 623</td>
+                                                </tr>
+
+                                                <tr>
+                                                  <th>{{'E-mail'|trans}} : </th>
+                                                  <td>gamil@gmail.com</td>
+                                                </tr>
+                                              </thead>
+
+                                        </table>
+                           </div>
 
 
-         <div class="margin_wrapper">
-               <!-- debut  de la liste des prestataires -->
-     <p style="margin-top:100px !important;"></p>
-      <h5 class="small_tittle" style="text-align:center;">{{'Liste des prestataires'|trans}}</h5>
-               <!-- -->
-               <table class="table table-bordered table-striped table-condensed">
-                         <thead>
-                           <tr style="background-color: #26440d !important;color: #fff !important;">
-                           <th  style="text-align: center !important;">{{'Nom'|trans}}</th>
-                            <th  style="text-align: center !important;">{{'Prénom'|trans}}</th>
-                             <th  style="text-align: center !important;">{{'Téléphone'|trans}}</th>
-                              <th  style="text-align: center !important;">{{'E-mail'|trans}}</th>
-                             <th  style="text-align: center !important;">{{'Disponibilité'|trans}} </th>
-                                <th  style="text-align: center !important;">{{'Profession'|trans}}</th>
-                                <th  style="text-align: center !important;">{{'Couleur'|trans}}</th>
-                                 <th  style="text-align: center !important;">{{'Action'|trans}}</th>
-                           </tr>
-                         </thead>
-                         <tbody>
-                           <tr>
-                               <td>Toto</td>
-                               <td>Tata</td>
-                               <td>6259814</td>
-                               <td>gmail@gmail.com</td>
-                               <td>
+                                        <hr class="ligne_">
+                                      <script type="text/javascript">
+                            $(function () {
+                              $("#chkPassport").click(function () {
+                                if ($(this).is(":checked")) {
+                                  $(".dvPassport").show();
+                                } else {
+                                  $(".dvPassport").hide();
+                                }
+                              });
+                              });
+                          </script>
 
-                                  <button type="button" class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal" title="">
-                                 <i class="fa fa-eye"></i> {{'Voir'|trans}}
-                               </button>
+                                        <p class="identification"> {{'Disponibilité / temps de travail'|trans}} </p>
 
-                                 <!-- debut de la fenetre modal -->
-                                   <!-- Modal -->
-               <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                 <div class="modal-dialog" role="document">
-                   <div class="modal-content">
-                     <div class="modal-header">
-                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                       <h5 class="modal-title" id="myModalLabel">{{'Feuille de disponibilité'|trans}}</h5>
-                     </div>
-                     <div class="modal-body2 body_moal_prestation">
+                                            <div id="modal_table2">
+                                              <table  class="table table-bordered table-striped table-condensed">
+                                                <thead>
+                                                  <tr style="background-color: #26440d !important;color: #fff !important;">
+                                                  <th>{{"Jour"|trans}}</th>
+                                                   <th>{{'Heure de travail'|trans}}</th>
+                                                    <th>{{'Heure creuse'|trans}}</th>
+                                                     <th class="dvPassport" style="display: none">{{'Action'|trans}}</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td><input type="checkbox" name="" id="chkPassport"> {{'Lundi'|trans}}</td>
+                                                      <td>{{'De'|trans}} 9 h à 18h</td>
+                                                      <td>12h à 14h</td>
+                                                      <td style="display: none !important;" class="dvPassport"> <a href="{{path('dkk_administration_modification_du_prestataire')}}" class="btn btn-primary btn_valid"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</a>  <a href="supprimer-prestataire.html" class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vriment supprimer ?')"> <i class="fa fa-times"></i> {{'Supprimer'|trans}}</a></td>
 
+                                                  </tr>
+                                              </tbody>
+                                          </table>
 
-                      <p class="identification">{{'Identification'|trans}}</p>
-                      <div id="modal_table">
-                           <table  class="table table-bordered table-striped table-condensed my_table_modal">
-                                         <thead >
-                                           <tr >
-                                           <th>{{'Nom'|trans}} : </th>
-                                            <td>Toto</td>
-                                           </tr>
-                                           <tr>
-                                             <th>{{'Prénom'|trans}} : </th>
-                                             <td>Toto</td>
-                                           </tr>
+                                            </div>
 
-                                           <tr>
-                                             <th>{{'Profession'|trans}} : </th>
-                                             <td>Médecin </td>
-                                           </tr>
+                          </div>
 
-                                           <tr>
-                                             <th>{{'Téléphone'|trans}} : </th>
-                                             <td>+237 656 656 6569 623</td>
-                                           </tr>
-
-                                           <tr>
-                                             <th>{{'E-mail'|trans}} : </th>
-                                             <td>gamil@gmail.com</td>
-                                           </tr>
-                                         </thead>
-
-                                   </table>
+                        </div>
                       </div>
+                    </div>
+                                      <!-- fin de la fenetre modal -->
+                                    </td>
+                                    <td>.......</td>
+                                    <td>.......</td>
+                                    <td><a href="{{path('dkk_administration_modification_du_prestataire')}}" class="btn btn-primary btn_valid"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</a>  <a href="supprimer-prestataire.html" class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vriment supprimer ?')"><i class="fa fa-times"></i> {{'Supprimer'|trans}}</a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+              
+              <!-- fin de la liste des prestataires -->
+              
+               <!-- debut  de la liste des ressources -->
+          <p style="margin-top:100px !important;"></p>
+           <h5 class="small_tittle" style="text-align:center;">{{'Liste des ressources'|trans}}</h5>
+           
+           <!-- fin de la liste des ressources -->
 
+           <table class="table table-bordered table-striped table-condensed">
+              <thead>
+                <tr style="background-color: #26440d !important;color: #fff !important;">
+                  <th>N°</th>
+                  <th>Nom ressource</th>
+                  <th>Type de ressource</th>
+                  <th>Localisation</th>
+                  <th>Utilisation</th>
+                  <td>{{'Action'|trans}}</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> 1</td>
+                  <td>Complexe sportif</td>
+                  <td>Stade Omnisport</td>
+                  <td>Yaoundé</td>
+                  <td>Match</td>
+                  <td>
+                      <a href="" class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vraiment supprimer ?')"><i class="fa fa-trash"></i> {{'Supprimer'|trans}}</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          
+              </div>
 
-                                   <hr class="ligne_">
-                                 <script type="text/javascript">
-                       $(function () {
-                         $("#chkPassport").click(function () {
-                           if ($(this).is(":checked")) {
-                             $(".dvPassport").show();
-                           } else {
-                             $(".dvPassport").hide();
-                           }
-                         });
-                         });
-                     </script>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
 
-                                   <p class="identification"> {{'Disponibilité / temps de travail'|trans}} </p>
+            </div>
 
-                                       <div id="modal_table2">
-                                         <table  class="table table-bordered table-striped table-condensed">
-                                           <thead>
-                                             <tr style="background-color: #26440d !important;color: #fff !important;">
-                                             <th>{{"Jour"|trans}}</th>
-                                              <th>{{'Heure de travail'|trans}}</th>
-                                               <th>{{'Heure creuse'|trans}}</th>
-                                                <th class="dvPassport" style="display: none">{{'Action'|trans}}</th>
-                                             </tr>
-                                           </thead>
-                                           <tbody>
-                                             <tr>
-                                               <td><input type="checkbox" name="" id="chkPassport"> {{'Lundi'|trans}}</td>
-                                                 <td>{{'De'|trans}} 9 h à 18h</td>
-                                                 <td>12h à 14h</td>
-                                                 <td style="display: none !important;" class="dvPassport"> <a href="{{path('dkk_administration_modification_du_prestataire')}}" class="btn btn-primary btn_valid"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</a>  <a href="supprimer-prestataire.html" class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vriment supprimer ?')"> <i class="fa fa-times"></i> {{'Supprimer'|trans}}</a></td>
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
 
-                                             </tr>
-                                         </tbody>
-                                     </table>
-
-                                       </div>
-
-                     </div>
-
-                   </div>
-                 </div>
-               </div>
-                                 <!-- fin de la fenetre modal -->
-                               </td>
-                               <td>.......</td>
-                               <td>.......</td>
-                               <td><a href="{{path('dkk_administration_modification_du_prestataire')}}" class="btn btn-primary btn_valid"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</a>  <a href="supprimer-prestataire.html" class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vriment supprimer ?')"><i class="fa fa-times"></i> {{'Supprimer'|trans}}</a></td>
-                           </tr>
-                         </tbody>
-                       </table>
-
-         <!-- fin de la liste des prestataires -->
-
-          <!-- debut  de la liste des ressources -->
-     <p style="margin-top:100px !important;"></p>
-      <h5 class="small_tittle" style="text-align:center;">{{'Liste des ressources'|trans}}</h5>
-
-      <!-- fin de la liste des ressources -->
-      <table class="table table-bordered table-striped table-condensed">
-         <thead>
-           <tr style="background-color: #26440d !important;color: #fff !important;">
-             <th>N°</th>
-             <th>{{'Ville'|trans}}</th>
-             <th>{{'Quartier'|trans}}</th>
-
-           </tr>
-         </thead>
-         <tbody>
-           <tr>
-             <td> 1</td>
-             <td>Yaoundé</td>
-             <td>Nlonkak</td>
-           </tr>
-           <tr>
-             <td> 2</td>
-             <td>Yaoundé</td>
-             <td>Byem assi</td>
-           </tr>
-         </tbody>
-       </table>
-
-         </div>
-
-   <!--  /row -->
- </section>
-        <!-- fin -->
-
-       </div>
-
-     </div>
-     <!-- /row -->
-   </div>
-   <!-- /container -->
- </section>
- <!-- /wrapper -->
-</section>
-
-
+       
 
 
 {% endblock %}
@@ -216,96 +219,97 @@ th,td{
 {% block scripts %}
 
 <script type="text/javascript">
+     
+              $(document).ready(function(){
+            $(".datepicker"+"affiche").datepicker();
+                $("#only").on('click',function(){
+                  $(".container_news_date").show();
+                });
 
-         $(document).ready(function(){
-       $(".datepicker"+"affiche").datepicker();
-           $("#only").on('click',function(){
-             $(".container_news_date").show();
-           });
+                $("#first_only").on('click',function(){
+                  $(".container_news_date").hide();
+                });
 
-           $("#first_only").on('click',function(){
-             $(".container_news_date").hide();
-           });
-
-           // une autre ligne
-           $("#signupForm").validate({
-             rules: {
-               couleur: "required",
-               firstname: {
-                 required: true,
-                 minlength: 2
-               },
-               profession: {
-                 required: true,
-                 minlength: 4
-               },
-               lastname: {
-                 required: true,
-                 minlength: 2
-               },
-               phone: {
-                 required: true,
-                 number: true,
-                 minlength: 9
-               },
-
-
-               email: {
-                 required: true,
-                 email: true
-               }
-
-             },
-             messages: {
-               firstname: {
-                 required: "<span style='color:#dd4f43'>{{'Nom réquis'|trans}}</span>",
-                 minlength: "<span style='color:#dd4f43'> 2 {{'caractères minimum'|trans}}</span>"
-               },
-               lastname: {
-                 required: "<span style='color:#dd4f43'>{{'Prénom réquis'|trans}}</span>",
-                 minlength: "<span style='color:#dd4f43'>2 {{'caractères minimum'|trans}}</span>"
-               },
-
-               phone: {
-                 required: "<span style='color:#dd4f43'>{{'Champs réquis'|trans}}",
-                 minlength: "<span style='color:#dd4f43'>9 {{'caractères minimum'|trans}}</span>",
-                 number:"<span style='color:#dd4f43'>{{'Numéro invalide'|trans}}</span>"
-               },
-
-               profession: {
-                 required: "<span style='color:#dd4f43'>{{'Champs réquis'|trans}}</span>",
-                 minlength: "<span style='color:#dd4f43'>5 {{'caractères minimum'|trans}}</span>",
-               },
-               email:{
-                 required: "<span style='color:#dd4f43'>{{'Champ réquis'|trans}}</span>",
-                 email: "<span style='color:#dd4f43'>{{'Email invalide'|trans}}</span>",
-               },
-               couleur: "<span style='color:#dd4f43'>{{'La couleur'|trans}}</span>",
-             }
-           });
+                // une autre ligne
+                $("#signupForm").validate({
+                  rules: {
+                    couleur: "required",
+                    firstname: {
+                      required: true,
+                      minlength: 2
+                    },
+                    profession: {
+                      required: true,
+                      minlength: 4
+                    },
+                    lastname: {
+                      required: true,
+                      minlength: 2
+                    },
+                    phone: {
+                      required: true,
+                      number: true,
+                      minlength: 9
+                    },
 
 
-   $('#hide_2').on('click',function(){
-     $("#all_week_div").toggle();
-   });
+                    email: {
+                      required: true,
+                      email: true
+                    }
 
+                  },
+                  messages: {
+                    firstname: {
+                      required: "<span style='color:#dd4f43'>{{'Nom réquis'|trans}}</span>",
+                      minlength: "<span style='color:#dd4f43'> 2 {{'caractères minimum'|trans}}</span>"
+                    },
+                    lastname: {
+                      required: "<span style='color:#dd4f43'>{{'Prénom réquis'|trans}}</span>",
+                      minlength: "<span style='color:#dd4f43'>2 {{'caractères minimum'|trans}}</span>"
+                    },
 
-           $("#hide_2").on("click",function(){
+                    phone: {
+                      required: "<span style='color:#dd4f43'>{{'Champs réquis'|trans}}",
+                      minlength: "<span style='color:#dd4f43'>9 {{'caractères minimum'|trans}}</span>",
+                      number:"<span style='color:#dd4f43'>{{'Numéro invalide'|trans}}</span>"
+                    },
 
-             if($('input[name=add_items]').prop('checked'))
-             {
-               $(".show_2").show();
+                    profession: {
+                      required: "<span style='color:#dd4f43'>{{'Champs réquis'|trans}}</span>",
+                      minlength: "<span style='color:#dd4f43'>5 {{'caractères minimum'|trans}}</span>",
+                    },
+                    email:{
+                      required: "<span style='color:#dd4f43'>{{'Champ réquis'|trans}}</span>",
+                      email: "<span style='color:#dd4f43'>{{'Email invalide'|trans}}</span>",
+                    },
+                    couleur: "<span style='color:#dd4f43'>{{'La couleur'|trans}}</span>",
+                  }
+                });
+        
+        
+        $('#hide_2').on('click',function(){
+          $("#all_week_div").toggle();
+        });
+       
 
-             }
-             else {
-               $(".show_2").hide();
-               $(".wrapper_down_").hide();
-             }
-           });
+                $("#hide_2").on("click",function(){
 
+                  if($('input[name=add_items]').prop('checked'))
+                  {
+                    $(".show_2").show();
 
-         });
-       </script>
+                  }
+                  else {
+                    $(".show_2").hide();
+                    $(".wrapper_down_").hide();
+                  }
+                });
+        
+
+              });
+            </script>
 
 
 {% endblock %}
+

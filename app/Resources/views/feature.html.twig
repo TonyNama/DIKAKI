@@ -8,9 +8,9 @@
       <meta name="copyright" content="Dikaki.com Copyright ">
       <meta name="language" content="fr">
        <link rel="icon" href="{{asset('img/favicon dikaki.png')}}">
-
+        
          <!-- debut du partage vers facebook -->
-
+            
               <meta property="og:url" content=""><!-- url complete de la page-->
               <meta property="og:title" content=""><!-- le titre complete de la page-->
               <meta property="og:description" content=""><!-- la description complete de la page-->
@@ -28,8 +28,8 @@
               <meta property="og:title" content=""><!-- le titre complete de la page-->
               <meta property="og:description" content=""><!-- la description complete de la page-->
               <meta property="og:image" content=""><!-- image representant la page de la page-->
-
-
+             
+        
 	  {% stylesheets filter='cssrewrite'
             'css/vendor/animate.min.css'
             'css/vendor/bootstrap-social.css'
@@ -42,11 +42,11 @@
             'css/vendor/slick_1.5.0.css'
         %}
             <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
-
+           
         {% endstylesheets %}
-
+        
         {% block style %}
-
+		
 		{% endblock %}
         </head>
     <body>
@@ -67,26 +67,26 @@
   </div>
 
 		{% block body %}
+       
 
-
-        {% endblock %}
-
+        {% endblock %}  
+                
 		{% javascripts filter='jsqueeze'
                 'js/vendor/jquery.min.js'
                 'js/vendor/bootstrap.min.js'
                 'js/vendor/slick_1.5.0.min.js'
                 'js/valider.js'
                 'js/vendor/faq.js'
-                'js/news.js'
-
+                'js/news.js'  
+                
             %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
-
+                
         {% block scripts %}
-
+		
         {% endblock %}
-
+                
      </body>
      <!-- fin de la section footer -->
 </html>

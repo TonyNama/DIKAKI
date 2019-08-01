@@ -163,7 +163,7 @@ Durée: Duración
 'Voir le détail de l''abonnement': 'Ver los detalles de la suscripción'
 'Services optionnels / ajout d''agenda': 'Servicios opcionales / adición de agenda'
 'Agendas supplémentaires': 'Agendas adicionales'
-'Acheter 1 agenda professionnel': 'Comprar 1 agenda professionnel'
+'Acheter 1 agenda professionnel': 'Comprar 1 agenda profesional'
 'Acheter 2 agendas professionnels': 'Comprar 2  agendas profesionales'
 'Acheter 3 agendas professionnels': 'Comprar 3  agendas profesionales'
 'Acheter 4 agendas professionnels': 'Comprar 4  agendas profesionales'
@@ -552,7 +552,7 @@ ans: años
 'Plus de': 'Más de'
 'Photo / Image': 'Foto / Imagen'
 'Prix de la prestation': 'Precio del servicio'
-TTC: IVA Incluido
+TTC: 'IVA Incluido'
 'Couleur de la prestation': 'Color del servicio'
 'Durée de la prestation': 'Duración del servicio'
 'La durée': 'La duración'
@@ -621,10 +621,11 @@ Présence: Presencia
 Encaissement: 'Recaudación de fondos'
 'Aujourd''hui': Hoy
 Précédent: Anterior
-'Semaine du 19 au 27 Décembre 2019': 'Semana del 19 al 27 de diciembre de 2019'
+'Semaine du 19 au 26 Décembre 2019': 'Semana del 19 al 26 de diciembre de 2019'
 Suivant: Siguiente
 jour: día
 jours: días
+Journée: Día
 'Créer client': 'Crear cliente'
 'Revenir à l''agenda': 'Volver a la agenda'
 'Création d''un Nouveau client': 'Creación de un nuevo cliente'
@@ -801,3 +802,13 @@ décembre: diciembre
 'Tarif TTC': 'Tarifa con IVA incluido'
 'Modifier les paramètres des prestations uniques': 'Modificar los parámetros de los servicios únicos'
 'Créer un Nouveau client': 'Crear un Nuevo cliente'
+Choisir: Elija
+Arrivé: Llegó
+'Nombre de RDV': 'Número de nombramientos'
+'Rendez-vous de groupe': 'Nombramiento de grupos'
+'Nombre de personne par RDV': 'Número de personas por cita'
+'Envois suspendus des SMS de': 'Envío suspendido de mensajes SMS desde'
+'Mes rendez-vous': 'I miei appuntamenti'
+prénom: nombre de pila
+janvier: enero
+'Virement bancaire': 'Transferencia bancaria'

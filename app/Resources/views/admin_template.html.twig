@@ -1,313 +1,314 @@
-<!doctype html>
+   <!doctype html>
 <html xmlns:og="http://ogp.me/ns#">
- <head>
-   <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <meta name="copyright" content="Dikaki.com">
-   <meta name="language" content="fr">
-     <link rel="icon" href="{{asset('img/favicon dikaki.png')}}">
-   <title>{% block title %}{% endblock %}</title>
+    <head>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="copyright" content="Dikaki.com">
+      <meta name="language" content="fr">
+        <link rel="icon" href="{{asset('img/favicon dikaki.png')}}">
+      <title>{% block title %}{% endblock %}</title>
 
-   {% javascripts filter='jsqueeze'
-         'js/vendor/ckeditor.js'
-         'js/vendor/fr.js'
-     %}
-   <script src="{{ asset_url }}"></script>
-     {% endjavascripts %}
+      {% javascripts filter='jsqueeze'
+            'js/vendor/ckeditor.js'
+            'js/vendor/fr.js'
+        %}
+      <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    
+    {% stylesheets filter='cssrewrite'
+            'css/vendor/bootstrap.min.css'
+            'css/vendor/sky-forms.css'
+            'css/style.css'
+            'css/vendor/style.css'
+            'css/vendor/responsive.css'
+            'css/vendor/bootstrap-theme.css'
+            'css/vendor/jquery-ui-1.10.4.custom.css'
+        %}
+            <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+        {% endstylesheets %}
+        
+        {% block style %}{% endblock %}
+        
+        <!-- fin de la section footer -->
+  
+        
+        
+    </head>
+    <body>
+        
+    <section id="container">
+    <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
 
- {% stylesheets filter='cssrewrite'
-         'css/vendor/bootstrap.min.css'
-         'css/vendor/sky-forms.css'
-         'css/style.css'
-         'css/vendor/style.css'
-         'css/vendor/responsive.css'
-         'css/vendor/bootstrap-theme.css'
-         'css/vendor/jquery-ui-1.10.4.custom.css'
-     %}
-         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
-     {% endstylesheets %}
+    <header class="header black-bg">
+      <div class="sidebar-toggle-box">
+        <div class="fa fa-bars tooltips" data-placement="right"></div>
+      </div>
 
-     {% block style %}{% endblock %}
+      <a href="{{ path('dkk_professionnel_authentification')}}" class="logo"><b>DIKA<span>KI</span></b> {{'Espace professionnel'|trans}}</a>
 
-     <!-- fin de la section footer -->
+      <div class="nav notify-row" id="top_menu">
+        <!--  notification  -->
+        <ul class="nav top-menu">
+
+          <!-- Boite de reception-->
+          <li id="header_inbox_bar" class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="{{ path('dkk_administration_reception')}}#">
+              <i class="fa fa-envelope-o"></i>
+              <span class="badge bg-theme">5</span>
+              </a>
+            <ul class="dropdown-menu extended inbox">
+              <div class="notify-arrow notify-arrow-green"></div>
+              <li>
+                <p class="green">{{'Vous avez 5 nouveaux messages'|trans}}</p>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="photo"><img alt="avatar" src="{{ asset('img/photo_medecin.jpg')}} "></span>
+                  <span class="subject">
+                  <span class="from">Eloundou Paul</span>
+                  </span>
+                  <span class="message">
+                  {{'Le message que je vous ai envoyé'|trans}}
+                  </span>
+                  </a>
+              </li>
+              <li>
+                <a href="">
+                  <span class="photo"><img alt="avatar" src="{{ asset('img/photo_medecin.jpg')}}"></span>
+                  <span class="subject">
+                  <span class="from">Eloundou Paul</span>
+                  </span>
+                  <span class="message">
+                  {{'Le message que je vous ai envoyé'|trans}}
+                  </span>
+                  </a>
+              </li>
+             <li>
+                <a href="#">
+                  <span class="photo"><img alt="avatar" src="{{ asset('img/photo_medecin.jpg')}}"></span>
+                  <span class="subject">
+                  <span class="from">Eloundou Paul</span>
+                  </span>
+                  <span class="message">
+                  {{'Le message que je vous ai envoyé'|trans}}
+                  </span>
+                  </a>
+              </li>
+
+              <li>
+                <a href="">{{'Voir tous mes messages'|trans}}</a>
+              </li>
+            </ul>
+          </li>
 
 
+        </ul>
+        <!-- fin des  notification -->
+      </div>
+      <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+          <li><a class="logout" href="{{ path('dkk_professionnel_deconnexion')}}">{{'Déconnexion'|trans}}</a></li>
+        </ul>
+      </div>
+    </header>
+    <!--Fin de l'entete-->
+    <!-- **********************************************************************************************************************************************************
+        DEBUT DU MENU DE LA SIDEBAR
+        *********************************************************************************************************************************************************** -->
+    <!--Debut de la sidebar-->
+   <!--Debut de la sidebar-->
+          <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <ul class="sidebar-menu" id="nav-accordion">
+          <p class="centered"><a href="{{path('dkk_administration_index')}}"><img src="{{ asset('img/photo_medecin.jpg')}}" class="" width="80"></a></p>
+          <h5 class="centered">Essomba paul</h5>
+          <li class="mt">
+            <a  href="{{path('dkk_administration_index')}}" class="active">
+              <i class="fa fa-dashboard"></i>
+              <span>{{'Accueil'|trans}}</span>
+              </a>
+          </li>
+         <li>
+            <a href="{{path('dkk_administration_reception')}}">
+              <i class="fa fa-envelope"></i>
+              <span>{{'Messages'|trans}} </span>
+              <span class="label label-theme pull-right mail-info">2</span>
+              </a>
+          </li>
 
- </head>
- <body>
+           <li class="sub-menu">
+              <a href="javascript:;">
+                <i class="fa fa-desktop"></i>
+                <span>{{'Réglages'|trans}}</span>
+              </a>
+              <ul class="sub">
+                <li><a href="{{path('dkk_administration_calandrier')}}">{{'Calendrier'|trans}}</a></li>
+                 <li><a href="{{path('dkk_administration_autorisation')}}">{{'Paramètres spécifiques'|trans}}</a></li>
+               <li><a href="{{path('dkk_administration_acces')}}">{{"Droit d'accès"|trans}}</a></li>
+              </ul>
+            </li>
 
- <section id="container">
- <!-- **********************************************************************************************************************************************************
-     TOP BAR CONTENT & NOTIFICATIONS
-     *********************************************************************************************************************************************************** -->
+            <li class="sub-menu">
+              <a href="javascript:;">
+                <i class="fa  fa-pencil"></i>
+                <span>{{'Prestations'|trans}}</span>
+              </a>
+              <ul class="sub">
+        <li><a href="{{path('dkk_administration_prestation')}}">{{'Créer prestation'|trans}} </a></li>
+        <li><a href="{{path('dkk_administration_prestation_groupe')}}">{{'Prestations groupées'|trans}} </a></li>
+        <li><a href="{{path('dkk_administration_service')}}">{{'Services'|trans}} </a></li>
+        <li><a href="{{path('dkk_administration_liste_prestation')}}">{{'Liste des prestations'|trans}}</a></li>
+              </ul>
+            </li>
 
- <header class="header black-bg">
-   <div class="sidebar-toggle-box">
-     <div class="fa fa-bars tooltips" data-placement="right"></div>
-   </div>
+            <li class="sub-menu">
+              <a href="javascript:;">
+                <i class="fa  fa-pencil"></i>
+                <span>{{'Prestataires'|trans}}</span>
+              </a>
+              <ul class="sub">
+        <li><a href="{{path('dkk_administration_prestataire')}}">{{'Créer prestataire'|trans}} </a></li>
+        <li><a href="{{path('dkk_administration_ressource')}}">{{'Créer ressource'|trans}} </a></li>
+        <li><a href="{{path('dkk_administration_liste_prestataire')}}">{{'Liste des prestataires'|trans}}</a></li>
+              </ul>
+            </li>
 
-   <a href="{{ path('dkk_professionnel_authentification')}}" class="logo"><b>DIKA<span>KI</span></b> {{'Espace professionnel'|trans}}</a>
+      
+      <li class="sub-menu">
+              <a href="javascript:;">
+                <i class="fa  fa-calendar"></i>
+                <span>{{'Agenda'|trans}}</span>
+              </a>
+              <ul class="sub">
+        <li><a href="{{path('dkk_administration_agenda')}}">{{'Agendas'|trans}}</a></li>
+               <li><a href="{{path('dkk_administration_create_agenda')}}">{{'Création'|trans}}</a></li>
+         <li><a href="{{path('dkk_administration_liste_agenda')}}">{{'Liste agenda'|trans}}</a></li>
+        
+              </ul>
+            </li>
+      
+      <li class="sub-menu">
+              <a href="javascript:;">
+                <i class="fa  fa-pencil"></i>
+                <span>{{'Tâches'|trans}}</span>
+              </a>
+              <ul class="sub">
+        <li><a href="{{path('dkk_administration_tache')}}">{{'Affectations'|trans}}</a></li>
+        <li><a href="{{path('dkk_administration_planning')}}">{{'Plannings'|trans}}</a></li>
+              </ul>
+            </li>
+      
+      <li class="sub-menu">
+              <a href="javascript:;">
+                <i class="fa fa-envelope-o"></i>
+                <span>{{'Alertes'|trans}}</span>
+              </a>
+              <ul class="sub">
+        <li><a href="{{path('dkk_administration_notification_interne')}}">{{'Notifications internes'|trans}}</a></li>
+        <li><a href="{{path('dkk_administration_notification_client')}}">{{'Notifications clients'|trans}}</a></li>
+         <li><a href="{{path('dkk_administration_notification_liste')}}">Liste des notifications</a></li>
+              </ul>
+            </li>
+      
+       <li class="sub-menu">
+              <a href="javascript:;">
+                <i class="fa fa-users"></i>
+                <span>{{'Clients'|trans}}</span>
+              </a>
+              <ul class="sub">
+              <li><a href="{{path('dkk_administration_client')}}">{{'Fichier'|trans}}</a></li>
+              <li><a href="{{path('dkk_administration_liste_client')}}">{{'Liste'|trans}}</a></li>
+              </ul>
+            </li>
+      
+         
 
-   <div class="nav notify-row" id="top_menu">
-     <!--  notification  -->
-     <ul class="nav top-menu">
+           <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-money"></i>
+              <span>{{'Paiements en ligne'|trans}}</span>
+            </a>
+            <ul class="sub">
+              <li><a href="{{path('dkk_administration_paiement_en_ligne')}}">{{'Paiment mobile money'|trans}}</a></li>
+              <li><a href="{{path('dkk_administration_paiement_virement')}}">{{'Paiement par virement'|trans}} </a></li>
+              <li><a href="{{path('dkk_administration_paiement_cheque')}}">{{'Paiement par chèque'|trans}}</a></li>
+            </ul>
+          </li>
 
-       <!-- Boite de reception-->
-       <li id="header_inbox_bar" class="dropdown">
-         <a data-toggle="dropdown" class="dropdown-toggle" href="{{ path('dkk_administration_reception')}}#">
-           <i class="fa fa-envelope-o"></i>
-           <span class="badge bg-theme">5</span>
-           </a>
-         <ul class="dropdown-menu extended inbox">
-           <div class="notify-arrow notify-arrow-green"></div>
-           <li>
-             <p class="green">{{'Vous avez 5 nouveaux messages'|trans}}</p>
-           </li>
-           <li>
-             <a href="#">
-               <span class="photo"><img alt="avatar" src="{{ asset('img/photo_medecin.jpg')}} "></span>
-               <span class="subject">
-               <span class="from">Eloundou Paul</span>
-               </span>
-               <span class="message">
-               {{'Le message que je vous ai envoyé'|trans}}
-               </span>
-               </a>
-           </li>
-           <li>
-             <a href="">
-               <span class="photo"><img alt="avatar" src="{{ asset('img/photo_medecin.jpg')}}"></span>
-               <span class="subject">
-               <span class="from">Eloundou Paul</span>
-               </span>
-               <span class="message">
-               {{'Le message que je vous ai envoyé'|trans}}
-               </span>
-               </a>
-           </li>
+             <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-bar-chart-o"></i>
+              <span>{{'Statistiques'|trans}} </span>
+            </a>
+            <ul class="sub">
+              <li><a href="{{path('dkk_administration_historique')}}">{{'Historique'|trans}}</a></li>
+              <li><a href="{{path('dkk_administration_diagramme')}}">{{'Diagramme'|trans}}</a></li>
+
+            </ul>
+          </li>
+
           <li>
-             <a href="#">
-               <span class="photo"><img alt="avatar" src="{{ asset('img/photo_medecin.jpg')}}"></span>
-               <span class="subject">
-               <span class="from">Eloundou Paul</span>
-               </span>
-               <span class="message">
-               {{'Le message que je vous ai envoyé'|trans}}
-               </span>
-               </a>
-           </li>
+            <a href="{{path('dkk_administration_compte')}}">
+              <i class="fa fa-user"></i>
+              <span>{{'Compte'|trans}} </span>
+              </a>
+          </li>
 
-           <li>
-             <a href="">{{'Voir tous mes messages'|trans}}</a>
-           </li>
-         </ul>
-       </li>
+          <li>
+            <a href="{{ path('dkk_professionnel_deconnexion')}}">
+              <i class="fa fa-sign-out"></i>
+              <span>{{'Déconnexion'|trans}} </span>
+              </a>
+          </li>
 
 
-     </ul>
-     <!-- fin des  notification -->
-   </div>
-   <div class="top-menu">
-     <ul class="nav pull-right top-menu">
-       <li><a class="logout" href="{{ path('dkk_professionnel_deconnexion')}}">{{'Déconnexion'|trans}}</a></li>
-     </ul>
-   </div>
- </header>
- <!--Fin de l'entete-->
- <!-- **********************************************************************************************************************************************************
-     DEBUT DU MENU DE LA SIDEBAR
-     *********************************************************************************************************************************************************** -->
- <!--Debut de la sidebar-->
-<!--Debut de la sidebar-->
-       <aside>
-   <div id="sidebar" class="nav-collapse ">
-     <ul class="sidebar-menu" id="nav-accordion">
-       <p class="centered"><a href="{{path('dkk_administration_index')}}"><img src="{{ asset('img/photo_medecin.jpg')}}" class="" width="80"></a></p>
-       <h5 class="centered">Essomba paul</h5>
-       <li class="mt">
-         <a  href="{{path('dkk_administration_index')}}" class="active">
-           <i class="fa fa-dashboard"></i>
-           <span>{{'Accueil'|trans}}</span>
-           </a>
-       </li>
-      <li>
-         <a href="{{path('dkk_administration_reception')}}">
-           <i class="fa fa-envelope"></i>
-           <span>{{'Messages'|trans}} </span>
-           <span class="label label-theme pull-right mail-info">2</span>
-           </a>
-       </li>
+         
 
-        <li class="sub-menu">
-           <a href="javascript:;">
-             <i class="fa fa-desktop"></i>
-             <span>{{'Réglages'|trans}}</span>
-           </a>
-           <ul class="sub">
-             <li><a href="{{path('dkk_administration_calandrier')}}">{{'Calendrier'|trans}}</a></li>
-              <li><a href="{{path('dkk_administration_autorisation')}}">{{'Paramètres spécifiques'|trans}}</a></li>
-            <li><a href="{{path('dkk_administration_acces')}}">{{"Droit d'accès"|trans}}</a></li>
-           </ul>
-         </li>
+         
 
-         <li class="sub-menu">
-           <a href="javascript:;">
-             <i class="fa  fa-pencil"></i>
-             <span>{{'Prestations'|trans}}</span>
-           </a>
-           <ul class="sub">
-     <li><a href="{{path('dkk_administration_prestation')}}">{{'Créer prestation'|trans}} </a></li>
-     <li><a href="{{path('dkk_administration_prestation_groupe')}}">{{'Prestations groupées'|trans}} </a></li>
-     <li><a href="{{path('dkk_administration_service')}}">{{'Services'|trans}} </a></li>
-     <li><a href="{{path('dkk_administration_liste_prestation')}}">{{'Liste des prestations'|trans}}</a></li>
-           </ul>
-         </li>
+        </ul>
 
-         <li class="sub-menu">
-           <a href="javascript:;">
-             <i class="fa  fa-pencil"></i>
-             <span>{{'Prestataires'|trans}}</span>
-           </a>
-           <ul class="sub">
-     <li><a href="{{path('dkk_administration_prestataire')}}">{{'Créer prestataire'|trans}} </a></li>
-     <li><a href="{{path('dkk_administration_ressource')}}">{{'Créer ressource'|trans}} </a></li>
-     <li><a href="{{path('dkk_administration_liste_prestataire')}}">{{'Liste des prestataires'|trans}}</a></li>
-           </ul>
-         </li>
+      </div>
+    </aside>
+    <!--fin de la sidebar-->
+    <!-- **********************************************************************************************************************************************************
+        CONTENU PRINCIPAL
+        *********************************************************************************************************************************************************** -->
 
 
-   <li class="sub-menu">
-           <a href="javascript:;">
-             <i class="fa  fa-calendar"></i>
-             <span>{{'Agenda'|trans}}</span>
-           </a>
-           <ul class="sub">
-     <li><a href="{{path('dkk_administration_agenda')}}">{{'Agendas'|trans}}</a></li>
-            <li><a href="{{path('dkk_administration_create_agenda')}}">{{'Création'|trans}}</a></li>
-      <li><a href="{{path('dkk_administration_liste_agenda')}}">{{'Liste agenda'|trans}}</a></li>
+      {% block body %}
+      
+      {% endblock %}
 
-           </ul>
-         </li>
-
-   <li class="sub-menu">
-           <a href="javascript:;">
-             <i class="fa  fa-pencil"></i>
-             <span>{{'Tâches'|trans}}</span>
-           </a>
-           <ul class="sub">
-     <li><a href="{{path('dkk_administration_tache')}}">{{'Affectations'|trans}}</a></li>
-     <li><a href="{{path('dkk_administration_planning')}}">{{'Plannings'|trans}}</a></li>
-           </ul>
-         </li>
-
-   <li class="sub-menu">
-           <a href="javascript:;">
-             <i class="fa fa-envelope-o"></i>
-             <span>{{'Alertes'|trans}}</span>
-           </a>
-           <ul class="sub">
-     <li><a href="{{path('dkk_administration_notification_interne')}}">{{'Notifications internes'|trans}}</a></li>
-     <li><a href="{{path('dkk_administration_notification_client')}}">{{'Notifications clients'|trans}}</a></li>
-           </ul>
-         </li>
-
-    <li class="sub-menu">
-           <a href="javascript:;">
-             <i class="fa fa-users"></i>
-             <span>{{'Clients'|trans}}</span>
-           </a>
-           <ul class="sub">
-           <li><a href="{{path('dkk_administration_client')}}">{{'Fichier'|trans}}</a></li>
-           <li><a href="{{path('dkk_administration_liste_client')}}">{{'Liste'|trans}}</a></li>
-           </ul>
-         </li>
+    <footer class="site-footer">
+      <div class="text-center">
+        <p>
+          &copy; Copyrights <strong>Dikaki</strong>. All Rights Reserved
+        </p>
 
 
-
-        <li class="sub-menu">
-         <a href="javascript:;">
-           <i class="fa fa-money"></i>
-           <span>{{'Paiements en ligne'|trans}}</span>
-         </a>
-         <ul class="sub">
-           <li><a href="{{path('dkk_administration_paiement_en_ligne')}}">{{'Paiment mobile money'|trans}}</a></li>
-           <li><a href="{{path('dkk_administration_paiement_virement')}}">{{'Paiement par virement'|trans}} </a></li>
-           <li><a href="{{path('dkk_administration_paiement_cheque')}}">{{'Paiement par chèque'|trans}}</a></li>
-         </ul>
-       </li>
-
-          <li class="sub-menu">
-         <a href="javascript:;">
-           <i class="fa fa-bar-chart-o"></i>
-           <span>{{'Statistiques'|trans}} </span>
-         </a>
-         <ul class="sub">
-           <li><a href="{{path('dkk_administration_historique')}}">{{'Historique'|trans}}</a></li>
-           <li><a href="{{path('dkk_administration_diagramme')}}">{{'Diagramme'|trans}}</a></li>
-
-         </ul>
-       </li>
-
-       <li>
-         <a href="{{path('dkk_administration_compte')}}">
-           <i class="fa fa-user"></i>
-           <span>{{'Compte'|trans}} </span>
-           </a>
-       </li>
-
-       <li>
-         <a href="{{ path('dkk_professionnel_deconnexion')}}">
-           <i class="fa fa-sign-out"></i>
-           <span>{{'Déconnexion'|trans}} </span>
-           </a>
-       </li>
-
-
-
-
-
-
-     </ul>
-
-   </div>
- </aside>
- <!--fin de la sidebar-->
- <!-- **********************************************************************************************************************************************************
-     CONTENU PRINCIPAL
-     *********************************************************************************************************************************************************** -->
-
-
-   {% block body %}
-
-   {% endblock %}
-
- <footer class="site-footer">
-   <div class="text-center">
-     <p>
-       &copy; Copyrights <strong>Dikaki</strong>. All Rights Reserved
-     </p>
-
-
-   </div>
- </footer>
- </section>
-
-     {% javascripts filter='jsqueeze'
-         'js/vendor/jquery.min.js'
-         'js/vendor/bootstrap.min.js'
-         'js/vendor/accordion.js'
-         'js/vendor/jquery.scrollTo.min.js'
-         'js/vendor/nicescroll.js'
-         'js/vendor/common.js'
-         'js/vendor/jquery.validate.min.js'
-         'js/vendor/jquery-ui-i18n.min.js'
-     %}
-         <script src="{{ asset_url }}"></script>
-     {% endjavascripts %}
-
-     {% block scripts %}
-
-     {% endblock %}
-
- </body>
+      </div>
+    </footer>
+    </section>
+    
+        {% javascripts filter='jsqueeze'
+            'js/vendor/jquery.min.js'
+            'js/vendor/bootstrap.min.js'
+            'js/vendor/accordion.js'
+            'js/vendor/jquery.scrollTo.min.js'
+            'js/vendor/nicescroll.js'
+            'js/vendor/common.js' 
+            'js/vendor/jquery.validate.min.js'
+            'js/vendor/jquery-ui-i18n.min.js'
+        %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        
+        {% block scripts %}
+    
+        {% endblock %}
+                
+    </body>     
 </html>

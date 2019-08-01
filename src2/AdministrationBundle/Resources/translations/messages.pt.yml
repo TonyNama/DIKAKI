@@ -163,7 +163,7 @@ Durée: Duração
 'Voir le détail de l''abonnement': 'Veja os detalhes da assinatura'
 'Services optionnels / ajout d''agenda': 'Serviços opcionais / adição de agenda'
 'Agendas supplémentaires': 'Agendas adicionais'
-'Acheter 1 agenda professionnel': 'Compre 1 agenda professionnel'
+'Acheter 1 agenda professionnel': 'Compre 1 agenda profisional'
 'Acheter 2 agendas professionnels': 'Compre 2 diários profissionais'
 'Acheter 3 agendas professionnels': 'Compre 3 diários profissionais'
 'Acheter 4 agendas professionnels': 'Compre 4 diários profissionais'
@@ -552,7 +552,7 @@ ans: anos
 'Plus de': 'Mais de'
 'Photo / Image': 'Foto / Imagem'
 'Prix de la prestation': 'Preço do serviço'
-TTC: Incluindo IVA
+TTC: 'Incluindo IVA'
 'Couleur de la prestation': 'Cor do serviço'
 'Durée de la prestation': 'Duração do serviço'
 'La durée': 'A duração'
@@ -621,10 +621,11 @@ Présence: Presença
 Encaissement: 'Recolha de fundos'
 'Aujourd''hui': Hoje
 Précédent: Anterior
-'Semaine du 19 au 27 Décembre 2019': 'Semana de 19 a 27 de dezembro de 2019'
+'Semaine du 19 au 26 Décembre 2019': 'Semana de 19 a 26 de dezembro de 2019'
 Suivant: Próxima
 jour: dia
 jours: dias
+Journée: Dia
 'Créer client': 'Criar cliente'
 'Revenir à l''agenda': 'Voltar à agenda'
 'Création d''un Nouveau client': 'Criação de um novo cliente'
@@ -744,7 +745,7 @@ Retrait: Retirada
 'Je précise les horaires d''ouverture et de fin de journée': 'Especifiquei o horário de abertura e fecho'
 'Je prefère mettre mais horaires de façon détaillée': 'Eu prefiro colocar apenas horários em detalhe'
 de: de
-'à': 'a'
+'à': a
 'et de': 'e de'
 'Indisponibilité journalière': 'Indisponibilidade diária'
 'J''ai une indisponibilité dans la journée': 'Tenho uma indisponibilidade durante o dia'
@@ -801,3 +802,13 @@ décembre: dezembro
 'Tarif TTC': 'Tarifa Incluindo IVA'
 'Modifier les paramètres des prestations uniques': 'Modificar os parâmetros dos serviços exclusivos'
 'Créer un Nouveau client': 'Criar um Novo cliente'
+Choisir: Escolha
+Arrivé: Chegou
+'Nombre de RDV': 'Número de nomeações'
+'Rendez-vous de groupe': 'Nomeação em grupo'
+'Nombre de personne par RDV': 'Número de pessoas por consulta'
+'Envois suspendus des SMS de': 'Suspenso o envio de mensagens SMS de'
+'Mes rendez-vous': 'Os meus compromissos'
+prénom: primeiro nome
+janvier: janeiro
+'Virement bancaire': 'Transferência bancária'

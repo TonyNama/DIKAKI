@@ -2,9 +2,9 @@
 <html xmlns:og="http://ogp.me/ns#">
     <head>
         <meta charset="utf-8">
-
+        
         <title>{% block title %}{% endblock %} </title>
-
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="copyright" content="Dikaki.com Copyright ">
         <meta name="language" content="fr">
@@ -26,12 +26,12 @@
         <meta name="twitter:creator" content="@dikaki">
 
         {% block style %} {% endblock %}
-
+        
         {% stylesheets filter='cssrewrite'
 		            'css/vendor/bootstrap-social.css'
 		            'css/vendor/bootstrap.min.css'
 		            'css/vendor/buttons.css'
-		            'css/style.css'
+		            'css/style.css'	        
         %}
             <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
         {% endstylesheets %}
@@ -243,13 +243,13 @@
         {% javascripts filter='jsqueeze'
 	            'js/vendor/jquery.min.js'
 	            'js/vendor/bootstrap.min.js'
-	            'js/vendor/choix.js'
-	            'js/news.js'
+	            'js/vendor/choix.js' 
+	            'js/news.js'  
         %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
-
+        
         {% block scripts %}{% endblock %}
-
+        
     </body>
 </html>

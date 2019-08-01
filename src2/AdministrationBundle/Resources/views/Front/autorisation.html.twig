@@ -1,380 +1,391 @@
-{% extends '::admin_template.html.twig' %}
+ {% extends '::admin_template.html.twig' %}
 
 {% block title %}{{'Autorisation'|trans}} - Dikaki {{'prise de rendez-vous et dépôt de dossier en ligne'|trans}} :: {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
 
-<style>
-      th{
-         font-size: 0.9em !important;
-         text-align: center !important;
-       }
-       .menu1 {
-         border-bottom:solid 2px #666666 ;
-         padding-top:12px ;
-         padding-bottom:7px
-       }
+ <style>
+       th{
+          font-size: 0.9em !important;
+          text-align: center !important;
+        }
+        .menu1 {  
+          border-bottom:solid 2px #666666 ;  
+          padding-top:12px ; 
+          padding-bottom:7px
+        }  
 
-       .onglet {
-           border:solid 1px #666666 ;
-           margin:5px 5px 0px 5px ;
-           padding:7px 3px 7px 3px;
-           font-weight: bold;
-           font-family: 'Montserrat', sans-serif;
-           font-size: 1.1em;
-           background: #666666;
-           color: #fff !important;
-
-           border-radius:5px 5px 0px 0px !important;
-         }
-
-         a.onglet {
-           background-color:#666666 ;
-           text-decoration:none;
-           font-weight: bold;
-           font-family: 'Montserrat', sans-serif;
-           font-size: 1.1em;
-           background: #666666;
-           color: #fff !important;
-         }
-
-         .onglet-actif {
-            border-left:solid 2px #666666 ;
-            border-right:solid 2px #666666 ;
-            border-top:solid 2px #666666 ;
-            border-bottom:none !important;
-            margin:5px 5px 0px 5px ;
-            padding:7px 3px 7px 3px ;
-            background-color:white;
+        .onglet {  
+            border:solid 1px #666666 ;  
+            margin:5px 5px 0px 5px ;  
+            padding:7px 3px 7px 3px;
             font-weight: bold;
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.2em;
-            color: #333;
-         }
-         </style>
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+
+            border-radius:5px 5px 0px 0px !important;
+          }  
+
+          a.onglet {  
+            background-color:#666666 ;  
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+          }  
+
+          .onglet-actif { 
+             border-left:solid 2px #666666 ;  
+             border-right:solid 2px #666666 ; 
+             border-top:solid 2px #666666 ;  
+             border-bottom:none !important;  
+             margin:5px 5px 0px 5px ;  
+             padding:7px 3px 7px 3px ;  
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+             color: #333;
+          }
+          </style>
 
 {% endblock %}
 
 {% block body %}
 
 
- <!-- debut du contenu -->
-   <section id="main-content">
-     <section class="wrapper site-min-height">
-       <div class="row mt">
+  <!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+             <div class="col-xs-12 col-ms-6 col-md-6">
+              <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+            </div>
             <div class="col-xs-12 col-ms-6 col-md-6">
-             <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
-           </div>
-           <div class="col-xs-12 col-ms-6 col-md-6">
-             <h2 class="name_structure">{{'Paramètres spécifiques'|trans}}</h2>
-           </div>
-         <!-- /col-lg-12 -->
-         <div class="col-lg-12 mt">
+              <h2 class="name_structure">{{'Paramètres spécifiques'|trans}}</h2>
+            </div>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
 
 
-           <div class="row content-panel">
-            <!-- debut -->
-       <section class="wrapper site-min-height">
-       <div class="row">
-         <div class="col-lg-12">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
 
 
 
-             <h4 class="small_tittle up_">{{'Autorisations'|trans}} </h4>
-                  <p class="journne_du_" style="text-align:center !important;"> </p>
+              <h4 class="small_tittle up_">{{'Autorisations'|trans}} </h4>
+                   <p class="journne_du_" style="text-align:center !important;"> </p>
 
-                  <div class="menu1"> <!-- début de la boite contenant les onglets -->
-                    <span class="onglet">  {{'Autorisations'|trans}} </span> <!-- onglet inactif -->
-                    <a href="{{path('dkk_administration_restriction')}}" class="onglet-actif">  {{'Restrictions'|trans}}</a> <!-- onglet ACTIF -->
-           <a href="{{path('dkk_administration_paiement')}}" class="onglet-actif">  {{'Paiements'|trans}}</a> <!-- onglet ACTIF -->
-                  </div>
+                   <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                     <span class="onglet">  {{'Autorisations'|trans}} </span> <!-- onglet inactif -->
+                     <a href="{{path('dkk_administration_restriction')}}" class="onglet-actif">  {{'Restrictions'|trans}}</a> <!-- onglet ACTIF -->
+            <a href="{{path('dkk_administration_paiement')}}" class="onglet-actif">  {{'Paiements'|trans}}</a> <!-- onglet ACTIF -->
+                   </div>
 
-           <div class="margin_wrapper">
+            <div class="margin_wrapper">
 
-               <section id="unseen">
+                <section id="unseen">
 
-                       <form method="post" action="">
-         <div class="form-group">
-           <div class="resize2">
-             <br><br>
-               <h6 class="option_take">{{'Options de prise de rendez-vous'|trans}} </h6>
-                       <br>
+                        <form method="post" action="">
+          <div class="form-group">
+            <div class="resize2">
+              <br><br>
+                <h6 class="option_take">{{'Options de prise de rendez-vous'|trans}} </h6>
+                        <br><br>
 
-               <div class="dimuni">
-                                   <input type="checkbox" name="" id="internet" class="checkbox_"> <label for="internet" class="my_label_for">
-                                        {{'Autoriser les clients de prendre les rendez-vous en ligne'|trans}}.
-                                   </label>
-                                   <br>
+                <div class="dimuni">
+                  <input type="checkbox" name="" id="internet"> <label for="internet" class="my_label_for">
+                    {{'Autoriser les clients de prendre les rendez-vous en ligne'|trans}}.
+                 </label>
+                 <br>
 
-                                   <input type="checkbox" name="" id="compte" class="checkbox_"> <label for="compte" class="my_label_for">
-                                        {{'Autoriser la création des comptes par internet'|trans}}.
-                                   </label>
+                  <input type="checkbox" name="" id="compte" class="checkbox_"> <label for="compte" class="my_label_for">
+                    {{'Autoriser la création des comptes par internet'|trans}}.
+                  </label>
 
-                                   <br>
+                                    <br>
 
-                                   <input type="checkbox" name="" id="connexion" class="checkbox_"> <label for="connexion" class="my_label_for">
-                                        {{'Connexion obligatoire avant la prise de rendez-vous'|trans}}.
-                                   </label>
+                  <input type="checkbox" name="" id="connexion" class="checkbox_"> <label for="connexion" class="my_label_for">
+                      {{'Connexion obligatoire avant la prise de rendez-vous'|trans}}.
+                   </label>
 
-                               </div>
+                </div>
 
-                           <br>
-             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-               <label>{{'Nombre de modifications de RDV'|trans}}</label>
-               <br>
-               <select class=" option_">
-                                   <option>1 {{"fois"|trans}}</option><option>2 {{"fois"|trans}}</option><option>3 {{"fois"|trans}}</option><option>4 {{"fois"|trans}}</option>
-                                   <option>5 {{"fois"|trans}}</option><option>6 {{"fois"|trans}}</option><option>7 {{"fois"|trans}}</option><option>8 {{"fois"|trans}}</option>
-                                   <option>9 {{"fois"|trans}}</option><option>10 {{"fois"|trans}}</option><option>11 {{"fois"|trans}}</option><option>12 {{"fois"|trans}}</option>
-                                   <option>13 {{"fois"|trans}}</option><option>14 {{"fois"|trans}}</option><option>15 {{"fois"|trans}}</option><option>16 {{"fois"|trans}}</option>
-                                   <option>17 {{"fois"|trans}}</option><option>18 {{"fois"|trans}}</option><option>19 {{"fois"|trans}}</option><option>20 {{"fois"|trans}}</option>
-                               </select>
-
-
-               </div>
-
-             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-               <br><br>
-               <label>{{'Nombre de RDV par personne'|trans}}</label>
-
-               <select class=" option_">
+                            <br>
+              <div class="resize2">
+                 <input type="checkbox" name="" id="modification_rdv" class="checkbox_">  <label class="my_label_for" for="modification_rdv">{{'Nombre de modifications de RDV'|trans}}</label>
+                <br>
+                <select class=" option_">
                                     <option>1 {{"fois"|trans}}</option><option>2 {{"fois"|trans}}</option><option>3 {{"fois"|trans}}</option><option>4 {{"fois"|trans}}</option>
-                                   <option>5 {{"fois"|trans}}</option><option>6 {{"fois"|trans}}</option><option>7 {{"fois"|trans}}</option><option>8 {{"fois"|trans}}</option>
-                                   <option>9 {{"fois"|trans}}</option><option>10 {{"fois"|trans}}</option><option>11 {{"fois"|trans}}</option><option>12 {{"fois"|trans}}</option>
-                                   <option>13 {{"fois"|trans}}</option><option>14 {{"fois"|trans}}</option><option>15 {{"fois"|trans}}</option><option>16 {{"fois"|trans}}</option>
-                                   <option>17 {{"fois"|trans}}</option><option>18 {{"fois"|trans}}</option><option>19 {{"fois"|trans}}</option><option>20 {{"fois"|trans}}</option>
-                               </select>
-
-               </div>
-
-           </div>
-                       <div class="resize2">
-                           <br><br>
-             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-               <input type="checkbox" id="chkPassport10" value="" class="" style="">  <span>{{'Accepter les rendez-vous / reservations'|trans}}</span>
-               </div>
-
-                           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-               <input type="checkbox" id="chkPassport10" value="" class="">  <span>{{'Refuser les rendez-vous / reservations'|trans}}</span>
-               </div>
-
-           </div>
-
-                            <script type="text/javascript">
-                               function yesnoCheck() {
-                                   if (document.getElementById('yesCheck').checked) {
-                                       document.getElementById('ifYes').style.visibility = 'visible';
-                                   }
-                                   else document.getElementById('ifYes').style.visibility = 'hidden';
-
-                               }
-                               </script>
-                       <div class="resize2">
-
-                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                      <br><br>
-                           <span > &nbsp;&nbsp;{{'Rendez-vous récurrents'|trans}} </span> &nbsp;&nbsp; <input type="radio"  onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"> &nbsp;&nbsp;<lable for="yesCheck">{{'Oui'|trans}}</lable> &nbsp;&nbsp;<input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"> &nbsp;&nbsp;<label for="noCheck">{{'Non'|trans}}</label>
-
-                           <br><br>
-                           <div id="ifYes" style="visibility:hidden">
-
-                           <div class="">
-               <label>{{'Nombre de RDV par personne'|trans}}</label>
-
-               <select class=" option_">
-                                    <option>1 {{"fois"|trans}}</option><option>2 {{"fois"|trans}}</option><option>3 {{"fois"|trans}}</option><option>4 {{"fois"|trans}}</option>
-                                   <option>5 {{"fois"|trans}}</option><option>6 {{"fois"|trans}}</option><option>7 {{"fois"|trans}}</option><option>8 {{"fois"|trans}}</option>
-                                   <option>9 {{"fois"|trans}}</option><option>10 {{"fois"|trans}}</option><option>11 {{"fois"|trans}}</option><option>12 {{"fois"|trans}}</option>
-                                   <option>13 {{"fois"|trans}}</option><option>14 {{"fois"|trans}}</option><option>15 {{"fois"|trans}}</option><option>16 {{"fois"|trans}}</option>
-                                   <option>17 {{"fois"|trans}}</option><option>18 {{"fois"|trans}}</option><option>19 {{"fois"|trans}}</option><option>20 {{"fois"|trans}}</option>
-                               </select>
-
-               </div>
+                                    <option>5 {{"fois"|trans}}</option><option>6 {{"fois"|trans}}</option><option>7 {{"fois"|trans}}</option><option>8 {{"fois"|trans}}</option>
+                                    <option>9 {{"fois"|trans}}</option><option>10 {{"fois"|trans}}</option><option>11 {{"fois"|trans}}</option><option>12 {{"fois"|trans}}</option>
+                                    <option>13 {{"fois"|trans}}</option><option>14 {{"fois"|trans}}</option><option>15 {{"fois"|trans}}</option><option>16 {{"fois"|trans}}</option>
+                                    <option>17 {{"fois"|trans}}</option><option>18 {{"fois"|trans}}</option><option>19 {{"fois"|trans}}</option><option>20 {{"fois"|trans}}</option>
+                                </select>
 
 
-                           </div>
+                </div>
 
-                           </div>
+           
+            </div>
+                        <div class="resize2">
+                            <br><br> <br><br>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <input type="checkbox" id="chkPassport10" value="" class="" style="">  <span>{{'Accepter les rendez-vous / réservations'|trans}}</span>
+                </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <input type="checkbox" id="chkPassport10" value="" class="">  <span>{{'Refuser les rendez-vous / réservations'|trans}}</span>
+                </div>
+
+            </div>
+
+                             <script type="text/javascript">
+                                function yesnoCheck() {
+                                    if (document.getElementById('yesCheck').checked) {
+                                        document.getElementById('ifYes').style.visibility = 'visible';
+                                    }
+                                    else document.getElementById('ifYes').style.visibility = 'hidden';
+
+                                }
+                                </script>
+                        <div class="resize2">
+
+                          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                       <br><br>
+                            <span > &nbsp;&nbsp;{{'Rendez-vous récurrents'|trans}} </span> &nbsp;&nbsp; <input type="radio"  onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"> &nbsp;&nbsp;<lable for="yesCheck">{{'Oui'|trans}}</lable> &nbsp;&nbsp;<input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"> &nbsp;&nbsp;<label for="noCheck">{{'Non'|trans}}</label>
+
+                            <br><br>
+                            <div id="ifYes" style="visibility:hidden">
+                                      
+                            <div class="">
+                <label>{{'Nombre de RDV'|trans}}</label>
+
+                <select class=" option_">
+                                    <option>2 {{"fois"|trans}}</option><option>3 {{"fois"|trans}}</option><option>4 {{"fois"|trans}}</option>
+                                    <option>5 {{"fois"|trans}}</option><option>6 {{"fois"|trans}}</option><option>7 {{"fois"|trans}}</option><option>8 {{"fois"|trans}}</option>
+                                    <option>9 {{"fois"|trans}}</option><option>10 {{"fois"|trans}}</option><option>11 {{"fois"|trans}}</option><option>12 {{"fois"|trans}}</option>
+                                    <option>13 {{"fois"|trans}}</option><option>14 {{"fois"|trans}}</option><option>15 {{"fois"|trans}}</option><option>16 {{"fois"|trans}}</option>
+                                    <option>17 {{"fois"|trans}}</option><option>18 {{"fois"|trans}}</option><option>19 {{"fois"|trans}}</option><option>20 {{"fois"|trans}}</option>
+                                </select>
+
+                </div>
 
 
-                          <!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                      <br><br>
-                           <span > &nbsp;&nbsp;{{'Rendez-vous récurrents'|trans}} </span> &nbsp;&nbsp; <input type="radio"  onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"> &nbsp;&nbsp;{{'Oui'|trans}} &nbsp;&nbsp;<input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"> &nbsp;&nbsp;{{'Non'|trans}}
+                            </div>
 
-                           <br><br>
-                           <div id="ifYes" style="visibility:hidden">
-                                      <div class="select_">
-                                          <label>{{'Nombre minimum'|trans}}</label>
-                       <br>
-                       <select class=" ">
-                                            <option>1</option><option>2 </option><option>3 </option><option>4 </option>
-
-                                       </select>
-                                      </div>
-                           <div class="select_">
-                             <label>{{'Nombre maximum'|trans}}</label>
-               <br>
-               <select class=" " style="">
-                                    <option>1</option><option>2 </option><option>3 </option><option>4 </option>
-
-                               </select>
-                           </div>
+                            </div>
 
 
-                           </div>
+                           <!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                       <br><br>
+                            <span > &nbsp;&nbsp;{{'Rendez-vous récurrents'|trans}} </span> &nbsp;&nbsp; <input type="radio"  onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"> &nbsp;&nbsp;{{'Oui'|trans}} &nbsp;&nbsp;<input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"> &nbsp;&nbsp;{{'Non'|trans}}
 
-                           </div>-->
+                            <br><br>
+                            <div id="ifYes" style="visibility:hidden">
+                                       <div class="select_">
+                                           <label>{{'Nombre minimum'|trans}}</label>
+                        <br>
+                        <select class=" ">
+                                             <option>1</option><option>2 </option><option>3 </option><option>4 </option>
+
+                                        </select>
+                                       </div>
+                            <div class="select_">
+                              <label>{{'Nombre maximum'|trans}}</label>
+                <br>
+                <select class=" " style="">
+                                     <option>1</option><option>2 </option><option>3 </option><option>4 </option>
+
+                                </select>
+                            </div>
 
 
+                            </div>
 
-                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                 <br><br>
-                                 <input type="checkbox" id="chkPassport10" value="" class="" style="display:inline-block !important;vertical-align:middle !important;">  <span style="display:inline-block;vertical-align:middle;font-weight:500 !important;">{{"Permettre l'annulation de RDV"|trans}}</span>
-                                 <br><br>
-                                 <input type="checkbox" id="chkPassport10" value="" class="">  <span>{{'Permettre la suppression de RDV'|trans}}</span>
-                                 <script>
-                                   $(document).ready(function(){
-                                     $("#oui").on('click',function(){
-                                       $(".limitation").show()
-                                     });
-
-                                     $("#non").on('click',function(){
-                                       $(".limitation").hide()
-                                     });
-
-                                   });
-                                 </script>
-                                 <br><br>
-                                    <span> {{"Limitation d'envoi des sms"|trans}} ? </span>  <input type="radio" name="limitation" id="non" checked=""> {{'Non'|trans}} &nbsp;<input type="radio" name="limitation" id="oui"> {{'Oui'|trans}}
-                                   <div class="limitation" style="display: none !important">
-                                      <span style="display:inline-block;vertical-align:middle;font-weight:500 !important;">{{'Nombre de sms max par jour'|trans}}</span>
-                                    <input type="text" name="" maxlength="4" placeholder="EX: 1000 " class="" style="width: 40%;height: 35px;">
-                                   </div>
-
-                             </div>
+                            </div>-->
 
 
 
-                       </div>
+                              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                   <br><br>
+                                  
+                                    <span > &nbsp;&nbsp;{{'Rendez-vous de groupe'|trans}} </span>
+                                  &nbsp;&nbsp; 
+                                  <input type="radio"  name="oui_non" id="groupe_oui"> &nbsp;&nbsp;{{'Oui'|trans}}                                       &nbsp;&nbsp;<input type="radio"  name="oui_non" id="groupe_non"> &nbsp;&nbsp;{{'Non'|trans}}
+                                  
+                                    <div class="rdv_group" style="display:none">
+                                        <br>
+                                        <label>{{'Nombre de personne par RDV'|trans}} &nbsp; </label>
 
-                       <div class=" resize2">
+                                        <select class=" option_">
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
 
-                         <div class="pull-left" style="padding-left: 20px !important">
-                             <br>
-                             <p class="restriction">{{'Restriction de notifications'|trans}}</p>
+                                        </select>
+
+                                    </div>
+                                  <br><br>
+                                  <input type="checkbox" id="chkPassport10" value="" class="" style="display:inline-block !important;vertical-align:middle !important;">  <span style="display:inline-block;vertical-align:middle;font-weight:700 !important;">{{"Permettre l'annulation de RDV"|trans}}</span>
+                                  <br><br>
+                                  <input type="checkbox" id="chkPassport10" value="" class="">  <span>{{'Permettre la suppression de RDV'|trans}}</span>
+                                 
 
 
-                         <input type="checkbox" name="" id="sms"> <label for="sms"> &nbsp;{{'SMS'|trans}} <span class="separation"></span></label>
-                         <input type="checkbox" name="" id="Email"> <label for="Email"> &nbsp;{{'Email'|trans}}</label>
+                                  <br><br>
+                                     <span> {{"Limitation d'envoi des sms"|trans}} ? </span>  <input type="radio" name="limitation" id="non" checked=""> {{'Non'|trans}} &nbsp;<input type="radio" name="limitation" id="oui"> {{'Oui'|trans}}
+                                    <div class="limitation" style="display: none !important">
+                                       <span style="display:inline-block;vertical-align:middle;font-weight:500 !important;">{{'Nombre de sms max par jour'|trans}}</span>
+                                     <input type="text" name="" maxlength="4" placeholder="EX: 1000 " class="" style="width: 40%;height: 35px;">
+                                    </div>
 
-                         </div>
-                         <p style="clear: both !important"></p>
-                         <br><br>
-                         <span class="send__">{{'Envois suspendus de'|trans}} :</span>
-                         <select name="" class="" style="width: 16%;display: inline-block;vertical-align: middle;">
-                           <option value="1 heure">1 {{'Heure'|trans}}</option><option value="2 heures">2 {{"Heures"|trans}}</option>
-                           <option value="3 heures">3 {{"Heures"|trans}}</option><option value="4 heures">4 {{"Heures"|trans}}</option>
-                           <option value="5 heures">5 {{"Heures"|trans}}</option><option value="6 heures">6 {{"Heures"|trans}}</option>
-                           <option value="7 heures">7 {{"Heures"|trans}}</option><option value="8 heures">8 {{"Heures"|trans}}</option>
-                           <option value="9 heures">9 {{"Heures"|trans}}</option><option value="10 heures">10 {{"Heures"|trans}}</option>
-                           <option value="11 heures">11 {{"Heures"|trans}}</option><option value="12 heures">12 {{"Heures"|trans}}</option>
-                           <option value="13 heures">13 {{"Heures"|trans}}</option><option value="14 heures">14 {{"Heures"|trans}}</option>
-                           <option value="15 heures">15 {{"Heures"|trans}}</option><option value="16 heures">16 {{"Heures"|trans}}</option>
-                           <option value="17 heures">17 {{"Heures"|trans}}</option><option value="18 heures">18 {{"Heures"|trans}}</option>
-                           <option value="19 heures">19 {{"Heures"|trans}}</option><option value="20 heures">20 {{"Heures"|trans}}</option>
-                           <option value="21 heures">21 {{"Heures"|trans}}</option><option value="22 heures">22 {{"Heures"|trans}}</option>
-                           <option value="23 heures">23 {{"Heures"|trans}}</option><option value="24 heures">24 {{"Heures"|trans}}</option>
-                         </select>
-                         à
-
-                         <select name="" class="" style="width: 16%;display: inline-block;vertical-align: middle;">
-                           <option value="1 heure">1 {{'Heure'|trans}}</option><option value="2 heures">2 {{"Heures"|trans}}</option>
-                           <option value="3 heures">3 {{"Heures"|trans}}</option><option value="4 heures">4 {{"Heures"|trans}}</option>
-                           <option value="5 heures">5 {{"Heures"|trans}}</option><option value="6 heures">6 {{"Heures"|trans}}</option>
-                           <option value="7 heures">7 {{"Heures"|trans}}</option><option value="8 heures">8 {{"Heures"|trans}}</option>
-                           <option value="9 heures">9 {{"Heures"|trans}}</option><option value="10 heures">10 {{"Heures"|trans}}</option>
-                           <option value="11 heures">11 {{"Heures"|trans}}</option><option value="12 heures">12 {{"Heures"|trans}}</option>
-                           <option value="13 heures">13 {{"Heures"|trans}}</option><option value="14 heures">14 {{"Heures"|trans}}</option>
-                           <option value="15 heures">15 {{"Heures"|trans}}</option><option value="16 heures">16 {{"Heures"|trans}}</option>
-                           <option value="17 heures">17 {{"Heures"|trans}}</option><option value="18 heures">18 {{"Heures"|trans}}</option>
-                           <option value="19 heures">19 {{"Heures"|trans}}</option><option value="20 heures">20 {{"Heures"|trans}}</option>
-                           <option value="21 heures">21 {{"Heures"|trans}}</option><option value="22 heures">22 {{"Heures"|trans}}</option>
-                           <option value="23 heures">23 {{"Heures"|trans}}</option><option value="24 heures">24 {{"Heures"|trans}}</option>
-                         </select>
-
-                         <p style="clear: both !important;"></p>
-                             <button type="submit" class="btn btn-success pull-right btn_valid" style="margin-top: 0px !important;"> <i class="fa fa-floppy-o" aria-hidden="true"></i> {{'Enregister'|trans}}</button>
-                             <br>
-                       </div>
-
-           </div>
+                              </div>
 
 
 
-   </form>
+                        </div>
 
-               <!-- debut du tableau -->
-                   <table class="table table-bordered table-striped table-condensed">
-                        <thead>
-                         <tr style="background-color: #26440d !important;color: #fff !important;">
-                          <th> {{'Modifications rdv'|trans}}</th>
-                           <th> {{'Rdv par personne'|trans}}</th>
-                           <th> {{'Accepter reservations'|trans}} </th>
-                           <th> {{'Refuser  reservations'|trans}} </th>
-                           <th> {{'rdv récurrents'|trans}} </th>
-                           <th> {{'Annulation  rdv'|trans}} </th>
-                           <th> {{'Suppression rdv'|trans}}</th>
-                           <th> {{'Restriction notifications'|trans}}</th>
-                           <th> {{'Action'|trans}}</th>
-                         </tr>
-                       </thead>
-                       <tbody>
-                         <tr>
-                           <td>...... </td>
-                           <td>...... </td>
-                           <td>...... </td>
-                           <td>...... </td>
-                           <td>...... </td>
-                           <td>...... </td>
-                           <td>...... </td>
-                           <td>...... </td>
-                           <td>
+                        <div class=" resize2">
 
-                                <a href="modifier-restriction.html" class="btn btn-primary btn_valid"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</a>  <p></p>
-                                       <a href="sup-restriction.html" class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vraiment supprimer ?')"><i class="fa fa-window-close" aria-hidden="true"></i> {{'Supprimer'|trans}}</a>
-                           </td>
-                         </tr>
-                     </tbody>
-                   </table>
-               </section>
-           </div>
+                          <div class="pull-left" style="padding-left: 20px !important">
+                              <br>
+                              <p class="restriction">{{'Restriction de notifications'|trans}}</p>
 
 
+                          <input type="checkbox" name="" id="sms"> <label for="sms"> &nbsp;{{'SMS'|trans}} <span class="separation"></span></label>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <input type="checkbox" name="" id="Email"> <label for="Email"> &nbsp;{{'Email'|trans}}</label>
+
+                          </div>
+                          <p style="clear: both !important"></p>
+                          <br><br>
+                          <span class="send__">{{'Envois suspendus des SMS de'|trans}} :</span>
+                          <select name="" class="" style="width: 16%;display: inline-block;vertical-align: middle;">
+                           <option value="6 heures">6 {{"Heures"|trans}}</option>
+                            <option value="7 heures">7 {{"Heures"|trans}}</option><option value="8 heures">8 {{"Heures"|trans}}</option>
+                            <option value="9 heures">9 {{"Heures"|trans}}</option><option value="10 heures">10 {{"Heures"|trans}}</option>
+                            <option value="11 heures">11 {{"Heures"|trans}}</option><option value="12 heures">12 {{"Heures"|trans}}</option>
+                            <option value="13 heures">13 {{"Heures"|trans}}</option><option value="14 heures">14 {{"Heures"|trans}}</option>
+                            <option value="15 heures">15 {{"Heures"|trans}}</option><option value="16 heures">16 {{"Heures"|trans}}</option>
+                            <option value="17 heures">17 {{"Heures"|trans}}</option><option value="18 heures">18 {{"Heures"|trans}}</option>
+                            <option value="19 heures">19 {{"Heures"|trans}}</option><option value="20 heures">20 {{"Heures"|trans}}</option>
+                            
+                          </select>
+                          {{'à'|trans}}
+
+                          <select name="" class="" style="width: 16%;display: inline-block;vertical-align: middle;">
+                            <option value="6 heures">6 {{"Heures"|trans}}</option>
+                            <option value="7 heures">7 {{"Heures"|trans}}</option><option value="8 heures">8 {{"Heures"|trans}}</option>
+                            <option value="9 heures">9 {{"Heures"|trans}}</option><option value="10 heures">10 {{"Heures"|trans}}</option>
+                            <option value="11 heures">11 {{"Heures"|trans}}</option><option value="12 heures">12 {{"Heures"|trans}}</option>
+                            <option value="13 heures">13 {{"Heures"|trans}}</option><option value="14 heures">14 {{"Heures"|trans}}</option>
+                            <option value="15 heures">15 {{"Heures"|trans}}</option><option value="16 heures">16 {{"Heures"|trans}}</option>
+                            <option value="17 heures">17 {{"Heures"|trans}}</option><option value="18 heures">18 {{"Heures"|trans}}</option>
+                            <option value="19 heures">19 {{"Heures"|trans}}</option><option value="20 heures">20 {{"Heures"|trans}}</option>
+                            
+                          </select>
+
+                          <p style="clear: both !important;"></p>
+                              <button type="submit" class="btn btn-success pull-right btn_valid" style="margin-top: 0px !important;"> <i class="fa fa-floppy-o" aria-hidden="true"></i> {{'Enregister'|trans}}</button>
+                              <br>
+                        </div>
+
+            </div>
 
 
-           <!-- end col-4 -->
-         </div>
-         <!--  /col-lg-12 -->
-       </div>
-       <!--  /row -->
-     </section>
-            <!-- fin -->
 
-           </div>
+    </form>
 
-         </div>
-         <!-- /row -->
-       </div>
-       <!-- /container -->
-     </section>
-     <!-- /wrapper -->
-   </section>
+                <!-- debut du tableau -->
+                    <table class="table table-bordered table-striped table-condensed">
+                         <thead>
+                          <tr style="background-color: #26440d !important;color: #fff !important;">
+                           <th> {{'Modifications rdv'|trans}}</th>
+                            <th> {{'Rdv par personne'|trans}}</th>
+                            <th> {{'Accepter réservations'|trans}} </th>
+                            <th> {{'Refuser  réservations'|trans}} </th>
+                            <th> {{'rdv récurrents'|trans}} </th>
+                            <th> {{'Annulation  rdv'|trans}} </th>
+                            <th> {{'Suppression rdv'|trans}}</th>
+                            <th> {{'Restriction notifications'|trans}}</th>
+                            <th> {{'Action'|trans}}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>...... </td>
+                            <td>
+
+                                 <a href="{{path('dkk_administration_modifier_autorisation')}}" class="btn btn-primary btn_valid"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</a>  <p></p>
+                                        <a href=" " class="btn btn-danger btn_valid" onclick="return confirm('Voulez-vous vraiment supprimer ?')"><i class="fa fa-window-close" aria-hidden="true"></i> {{'Supprimer'|trans}}</a>
+                            </td>
+                          </tr>
+                      </tbody>
+                    </table>
+                </section>
+            </div>
+
+
+
+
+            <!-- end col-4 -->
+          </div>
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
 
 
 
 {% endblock %}
 
 {% block scripts %}
+ <script>
+      $(document).ready(function(){
+       $("#oui").on('click',function(){
+        $(".limitation").show()
+       });
 
+       $("#non").on('click',function(){
+        $(".limitation").hide()
+       });
+           $('#groupe_oui').on('click',function(){
+               $('.rdv_group').show();
+           });
+           $('#groupe_non').on('click',function(){
+               $('.rdv_group').hide().val('');
+           });
+                                       
+
+      });
+    </script>
 
 {% endblock %}
+
+

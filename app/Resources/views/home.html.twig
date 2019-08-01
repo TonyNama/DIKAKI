@@ -29,7 +29,7 @@
 
     {% block style %}
     <style type="text/css">
-
+        
         .img_pied_responive{
             display: block;
             width: 60px !important;
@@ -174,7 +174,7 @@
                                                 <li><a href="{{ path('dkk_utilisateur_authentification') }}">{{'Mes rendez-vous'|trans}}</a></li>
                                                 <li><a href="{{ path('dkk_utilisateur_deconnexion') }}">{{'Se déconnecter'|trans}}</a></li>
                                             </ul>
-                                        </li>
+                                        </li>  
                                     {% endif %}
                                    <li class="dropdown dropdown-main">
                             <a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">{{'Français'|trans}}<span class="fa fa-angle-down dropdown-arrow"></span></a>
@@ -313,7 +313,33 @@
                             </form>
 
                         </div>
+
                         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <h3 class="title_footer">
+                                {{'Trouver un rendez-vous'|trans}}
+                            </h3>
+                            <p>
+                                <a href="javascript:void(0);" class="footer_items_">{{'Professionnel'|trans}}</a>
+                            </p>
+                            <h3 class="title_footer">
+                                {{'Trouver un évènement'|trans}}
+                            </h3>
+                            <p>
+                                <a href="javascript:void(0);" class="footer_items_">{{'Evènement'|trans}}</a>
+                            </p>
+                            <h3 class="title_footer">
+                                {{'Communauté'|trans}}
+                            </h3>
+                            <p>
+                                <a href="{{ path('dkk_app_partenaire') }}" class="footer_items_">{{'Devenir partenaire'|trans}}</a>
+                            </p>
+
+                            <p>
+                                    <a href="{{path('dkk_app_blog')}}" class="footer_items_">{{'Blog et Actualités'|trans}}</a>
+                                </p>
+                        </div>
+
+                        <!--<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <h3 class="title_footer">
                                 {{'Trouver un rendez-vous'|trans}}
                             </h3>
@@ -336,7 +362,7 @@
                             <p>
                                     <a href="{{path('dkk_app_blog')}}" class="footer_items_">{{'Blog et Actualités'|trans}}</a>
                                 </p>
-                        </div>
+                        </div>-->
                     </div>
                     <p style="clear: both;margin-bottom: 8px"></p>
                 </div>
@@ -359,7 +385,7 @@
                     </div>
                 </div>
 
-
+                
         </div>
     </footer>
     <!-- fin de la section footer  'js/lire.js'-->
@@ -373,7 +399,7 @@
             'js/vendor/slideshow.js'
             'js/form-control.js'
             'js/vendor/jquery.validate.min.js'
-            'js/news.js'
+            'js/news.js'  
             'js/affiche.js'
     %}
     <script src="{{ asset_url }}"></script>
@@ -381,7 +407,7 @@
 
     {% block scripts %}
 
-
+ 
     {% endblock %}
 
 

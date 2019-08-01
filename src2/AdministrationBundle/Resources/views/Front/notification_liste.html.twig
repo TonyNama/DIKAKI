@@ -1,0 +1,820 @@
+  {% extends '::admin_template.html.twig' %}
+
+{% block title %}{{'Notification interne'|trans}} - Dikaki {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+
+{% block style %}
+ <style>
+      th{
+      text-align: center !important;
+    }
+
+.btn_valid{
+  display: inline-block;
+  width: 100px !important;
+  float: right !important;
+}
+ .modif_alert{
+            font-size: 1.2em !important;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+          .items_centers{
+           text-align: center !important;   
+          }
+            .ck-editor__editable{
+      min-height:150px !important;
+    }
+    </style>
+ 
+
+{% endblock %}
+
+{% block body %}
+
+<section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+          <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+      </div>
+      
+      <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">Notifications</h2>
+      </div>
+            
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+            
+
+
+
+              <div class="margin_wrapper" style="margin-top:-50px !important;">
+                    <!-- debut  de la liste des notification pour client -->
+          <p style="margin-top:50px !important;"></p>
+           <h2 class="small_tittle">liste des notifications clients</h2>
+                        <p class="modif_alert">Notifications clients par email</p>
+                      <table class="table table-bordered table-striped table-condensed">
+                        <thead>
+                          <tr style="background-color: #26440d !important;color: #fff !important;">
+                            <th class="items_centers">Email automatique</th>
+                            <th class="items_centers">Titre message</th>
+                            <th class="items_centers">Contenu</th>
+                            <th class="items_centers">Action</th>
+                          </tr>
+                            </thead>
+                          <tr>
+                              <td class="items_centers">2h</td>
+                              <td class="items_centers">Merci 'avoir pris rendez-vous dans mon cabinet médical</td>
+                              <td class="items_centers">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.....
+                              </td>
+                              <td>
+                                <button type="button" class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal3" style="margin:0px auto;display:block;">
+                                    <i class="fa fa-pencil"></i> Modifier
+                                </button>
+                                  
+                                   <!-- debut de la fenetre modal -->
+                                        <!-- Modal -->
+                    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document" style="width:650px !important;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h5 class="modal-title" id="myModalLabel">Confirmation par courier électronique</h5>
+                          </div>
+                          <div class="modal-body2 body_moal_prestation" >
+                          
+
+                                     <p class="notification_sms_email_">Modifier la confirmation par E-mail</p>
+                   <div class="wrapper_notification_sms_email_">
+                       <form method="post" action="">
+                        <input type="checkbox" id="confirmation"><label for="confirmation"><span class="span_confirmation"> Envoyer un E-mail automatiquement au client à chaque validation de réservation </span></label>
+                           <p id="p_confirmation" style="margin-top:15px;margin-left:22px;display:none">
+                                <select name="" id="select_confirmation" class="select_right">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                </select>
+                               
+                               <select name="" id="select_confirmation">
+                                    <option value="minutes">Minutes</option>
+                                    <option value="heures">Heures</option>
+                                    <option value="jours">Jours</option>
+                               </select>
+                           </p>
+                           <p class="after_confirmation">
+                            Après la confirmation de la réservation 
+                           </p>
+                           <p class="after_confirmation">
+                               <span>Message de confirmation</span>
+                               <p></p>
+                               <label for="titre_message" class="label_title"><span>Titre du message </span></label>
+                          
+                                <input type="text" name="" id="titre_message">
+                            <br><br>
+                               <span>Court texte inclus dans le message de confirmation</span>
+                           <br>
+                                <textarea name="content" class="editor"></textarea>
+                           <br>
+                           <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> Valider</button>
+                           </form>
+                           <br>
+                           </p>
+                       
+                         
+                               
+                        
+                           
+                       
+                   </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                                  
+                              </td>
+                          </tr>
+                          </table>
+                            
+                    <!-- -->
+            
+                 <p class="modif_alert">Notifications clients par SMS</p>
+                      <table class="table table-bordered table-striped table-condensed">
+                        <thead>
+                          <tr style="background-color: #26440d !important;color: #fff !important;">
+                            <th class="items_centers">Envoie instantané</th>
+                            <th class="items_centers">Contenu</th>
+                            <th class="items_centers">Action</th>
+                          </tr>
+                            </thead>
+                          <tr>
+                              <td class="items_centers">Activé</td>
+                              <td class="items_centers">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.....
+                              </td>
+                              <td class="items_centers">
+                                <button type="button" class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal5" style="margin:0px auto;display:block;">
+                                    <i class="fa fa-pencil"></i> Modifier
+                                </button>
+                                  
+                                   <!-- debut de la fenetre modal -->
+                                        <!-- Modal -->
+                    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document" style="width:650px !important;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h5 class="modal-title" id="myModalLabel">Confirmation par SMS</h5>
+                          </div>
+                          <div class="modal-body2 body_moal_prestation" >
+                          <p class="notification_sms_email_">Modifier la confirmation par SMS</p>
+                          
+
+                                   
+                   <div class="wrapper_notification_sms_email_">
+                      <form method="post" action="">
+                        <input type="checkbox" id="confirmation_sms"><label for="confirmation_sms"><span class="span_confirmation"> Envoyer un SMS instantané au client à chaque validation de réservation  </span></label>
+            
+                           <br><br>
+                           <h6 style="font-weight:700 !important;">SMS/Court</h6>
+                                <textarea name="content" class="editor2"></textarea>
+                           <br>
+                           <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> Valider</button>
+                           </form>
+                               
+                        <br>
+                           
+                       
+                   </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                                  
+                              </td>
+                          </tr>
+                          </table>
+                            
+                    <!-- -->
+            
+            <p class="modif_alert">Message de remerciement par E-mail</p>
+                      <table class="table table-bordered table-striped table-condensed">
+                        <thead>
+                          <tr style="background-color: #26440d !important;color: #fff !important;">
+                            <th class="items_centers">E-mail  remerciement </th>
+                            <th class="items_centers">Heure</th>
+                              <th class="items_centers">Option</th>
+                              <th class="items_centers">Contenu</th>
+                            <th class="items_centers">Action</th>
+                          </tr>
+                            </thead>
+                          <tr>
+                              <td class="items_centers"> </td>
+                              <td class="items_centers">2 heure après le RDV</td>
+                              <td class="items_centers">Envoyer email de remercièment après chaque visite</td>
+                              <td class="items_centers">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,labore et dolore magna aliqua.....
+                              </td>
+                              <td>
+                                <button type="button" class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal6" style="margin:0px auto;display:block;">
+                                    <i class="fa fa-pencil"></i> Modifier
+                                </button>
+                                  
+                                   <!-- debut de la fenetre modal -->
+                                        <!-- Modal -->
+                    <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document" style="width:650px !important;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h5 class="modal-title" id="myModalLabel">Message de remercièment par E-mail</h5>
+                          </div>
+                          <div class="modal-body2 body_moal_prestation" >
+                          <p class="notification_sms_email_">Modifier l'email de remercièment</p>
+                          
+
+                                   
+                   <div class="wrapper_notification_sms_email_">
+                      <form method="post" action="">
+                       <span class="email_remerciement">E-mail de remerciement: </span>
+                           <select name="" class="remerciement_select">
+                               <option value=""></option>
+                               <option value=""></option>
+                               <option value=""></option>
+                           </select>
+                           <br>
+                           <p class="p_hours"><span>Heure: </span>Définir l'heure après laquelle l'E-mail sera envoyer aprè la visite</p>
+                           <p>
+                             <select name="" id="select_confirmation" class="select_right">
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                </select>
+                               
+                               <select name="" id="select_confirmation">
+                                    <option value="minutes">Minutes</option>
+                                    <option value="heures">Heures</option>
+                                    <option value="jours">Jours</option>
+                               </select>
+                               <span class="envoyer_email_thank"><b> Après le rendez-vous</b></span>
+                           </p>
+                           <p>
+                            
+                           </p>
+                           <p>
+                            <input type="radio" id="ne_pas" name="select_name"><label for="ne_pas"><span class="envoyer_email_thank"> Ne pas envoyer l'E-mail de remerciement</span></label>
+                           </p>
+                            <p>
+                            <input type="radio" id="envoyer_email_remer" name="select_name"><label for="envoyer_email_remer"><span class="envoyer_email_thank"> Envoyer un E-mail de remerciement seulement après la 1<sup>ere</sup> visite </span></label>
+                            </p>
+                           <p>
+                            <input type="radio" id="envoyer_apres" name="select_name"><label for="envoyer_apres"><span class="envoyer_email_thank"> Envoyer un E-mail de remerciement après chaque visite </span></label>
+                           </p>
+                           
+                           <br>
+                               <textarea name="content" class="editor3"></textarea>
+                           <br>
+                           <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> Valider</button>
+                           </form>
+                               
+                        <br>
+                           
+                       
+                   </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                                  
+                              </td>
+                          </tr>
+                          </table>
+                            
+                    <!-- -->
+            
+                                <!-- -->
+            
+            <p class="modif_alert">Message de rappel par E-mail</p>
+                      <table class="table table-bordered table-striped table-condensed">
+                        <thead>
+                          <tr style="background-color: #26440d !important;color: #fff !important;">
+                            <th class="items_centers">Envoyer un rappel par email </th>
+                            <th class="items_centers">Action</th>
+                          </tr>
+                            </thead>
+                          <tr>
+                              <td class="items_centers">2 heure après avant le RDV</td>
+                              
+                              <td class="items_centers">
+                                <button type="button" class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal7" style="margin:0px auto;display:block;">
+                                    <i class="fa fa-pencil"></i> Modifier
+                                </button>
+                                  
+                                   <!-- debut de la fenetre modal -->
+                                        <!-- Modal -->
+                    <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document" style="width:650px !important;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h5 class="modal-title" id="myModalLabel">Message de rappel par E-mail</h5>
+                          </div>
+                          <div class="modal-body2 body_moal_prestation" >
+                          <p class="notification_sms_email_">Modifier le rappel par email</p>
+                          
+
+                                   
+                   <div class="wrapper_notification_sms_email_">
+                      <form method="post" action="">
+                       <span class="email_remerciement"><i class="fa fa-times"></i> Rappel par courrier électronique </span><br><br>
+                           <span class="email_remerciement"> Envoyer un rappel par courriel E-mail au client  </span>
+                           <br>
+                           <p>
+                             <select name="" id="select_confirmation" class="select_right">
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                </select>
+                               
+                               <select name="" id="select_confirmation">
+                                    <option value="minutes">Heures</option>
+                                    <option value="heures">Jours</option>
+                                    <option value="jours">Semaines</option>
+                               </select>
+                           </p>
+                           <p>
+                           
+                           <span class="envoyer_email_thank">Avant l'heure du rendez-vous. </span>
+                           </p>
+                           
+                          
+                           <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> Valider</button>
+                           </form>
+                               
+                        <br>
+                           
+                       
+                   </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                                  
+                              </td>
+                          </tr>
+                          </table>
+                            
+                    <!-- -->
+            
+               <!-- -->
+            
+            <p class="modif_alert">Message de rappel par SMS</p>
+                      <table class="table table-bordered table-striped table-condensed">
+                        <thead>
+                          <tr style="background-color: #26440d !important;color: #fff !important;">
+                            <th class="items_centers">Envoyer un rappel par email </th>
+                            <th class="items_centers">Action</th>
+                          </tr>
+                            </thead>
+                          <tr>
+                              <td class="items_centers">2 heure après avant le RDV</td>
+                              
+                              <td class="items_centers">
+                                <button type="button" class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal7" style="margin:0px auto;display:block;">
+                                    <i class="fa fa-pencil"></i> Modifier
+                                </button>
+                                  
+                                   <!-- debut de la fenetre modal -->
+                                        <!-- Modal -->
+                    <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document" style="width:650px !important;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h5 class="modal-title" id="myModalLabel">Message de rappel par SMS</h5>
+                          </div>
+                          <div class="modal-body2 body_moal_prestation" >
+                          <p class="notification_sms_email_">Modifier le rappel par SMS</p>
+                          
+
+                                   
+                   <div class="wrapper_notification_sms_email_">
+                      <form method="post" action="">
+                       <span class="email_remerciement"><i class="fa fa-times"></i> Rappel par SMS </span><br><br>
+                           <span class="email_remerciement"> Envoyer un rappel par sms au client  </span>
+                           <br>
+                           <p>
+                             <select name="" id="select_confirmation" class="select_right">
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                </select>
+                               
+                               <select name="" id="select_confirmation">
+                                    <option value="minutes">Heures</option>
+                                    <option value="heures">Jours</option>
+                                    <option value="jours">Semaines</option>
+                               </select>
+                           </p>
+                           <p>
+                           
+                           <span class="envoyer_email_thank">Avant l'heure du rendez-vous. </span>
+                           </p>
+                           
+                          
+                           <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> Valider</button>
+                           </form>
+                               
+                        <br>
+                           
+                       
+                   </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                                  
+                              </td>
+                          </tr>
+                          </table>
+                            
+                    <!-- -->
+            
+                  
+                  <!-- debut  de la liste des notification pour client -->
+          <p style="margin-top:100px !important;"></p>
+           <h2 class="small_tittle">liste des notifications internes</h2>
+                  
+                    <p class="modif_alert">Notifications interne par email</p>
+                      <table class="table table-bordered table-striped table-condensed">
+                        <thead>
+                          <tr style="background-color: #26440d !important;color: #fff !important;">
+                            <th class="items_centers">statut</th>
+                            <th class="items_centers">email</th>
+                            <th class="items_centers">Notifiction</th>
+                            <th class="items_centers">Action</th>
+                          </tr>
+                          <tr>
+                            <td class="items_centers">Activer</td>
+                            <td class="items_centers">toimoi@gmail.com</td>
+                            <td class="items_centers">Soins de visage</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal" style="margin:0px auto;display:block;">
+                                    <i class="fa fa-pencil"></i> Modifier
+                                </button>
+                                
+                                <!-- debut de la fenetre modal -->
+                                        <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document" style="width:650px !important;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h5 class="modal-title" id="myModalLabel">Notifications interne par email</h5>
+                          </div>
+                          <div class="modal-body2 body_moal_prestation" >
+                          <p class="notification_sms_email_">Notification par courier électronique</p>
+                
+
+                                      <div class="wrapper_notification_sms_email_">
+                       <form method="post">  
+                        <p class="send_confir"><i class="fa fa-times fa-1x"></i> &nbsp;&nbsp; Recevez un E-mail lorsqu'un client ou un autre utlisateur éffectue, modifie, ou annule une réservation.</p>
+                     <input type="checkbox" id="activer7"> &nbsp; <label for="activer7"><span id="activer">Activer</span></label>
+                    
+                        
+                         <span id="active_Email7" style="display: none;">
+                            <span class="notification_span">Votre adresse électronique</span> <input type="email" name=""> 
+                        
+                         </span>
+                         <br>
+                         <br>
+                     
+                     <input type="radio" class="nofitication_choix_77" id="nofitication_choix_7" name="notifier"> <label for="nofitication_choix_7"><span id="activer"> Me notifier en cas de réservation</span></label>
+                     <p></p>
+                     <input type="radio" class="nofitication_choix_7" id="nofitication_choix_7" name="notifier"> <label for="nofitication_choix_2"><span id="activer"> Me notifier si la réservation conserne l'une des prestations suivantes </span></label>
+                     
+                     <br>
+                     <div class="wrapper_content_email7" style="display:none !important">
+                         <p class="listes_des_prestations">Liste des prestations</p>
+                     
+                     <div class="wrapper_list_prestation">
+                     
+                            <p>
+                                <input type="checkbox" id="choix_1"> <label for="choix_1"><span class="form_list_items">Soins de visage</span></label>
+                            </p>
+                         <p>
+                            <input type="checkbox" id="choix_2"> <label for="choix_2"><span class="form_list_items">Consulation dentaire</span></label>
+                        </p>
+                            
+                         <p>
+                            <input type="checkbox" id="choix_3"> <label for="choix_3"><span class="form_list_items">Consultation nourisson</span></label>
+                            </p>
+                        <p>
+                            <input type="checkbox" id="choix_4"> <label for="choix_4"><span class="form_list_items">Nouveau patient</span></label>
+                        </p> 
+                           
+                       
+                         <br><br>
+                     </div>
+                     </div>
+                     <br>
+                      <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> Modifier</button>
+                      </form>
+                     <br>
+                    </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                            </td>
+                          </tr>
+                        </thead>
+                      </table>
+                    <!-- -->
+                  
+                  
+                   <!-- debut  de la liste des notification pour client -->
+                  
+                    <p class="modif_alert">Notifications interne par sms</p>
+                      <table class="table table-bordered table-striped table-condensed">
+                        <thead>
+                          <tr style="background-color: #26440d !important;color: #fff !important;">
+                            <th class="items_centers">statut</th>
+                            <th class="items_centers">Indicatif</th>
+                             <th class="items_centers">Téléphone</th>
+                             <th class="items_centers">Delais</th>
+                             <th class="items_centers">Notification</th>
+                              <th class="items_centers">Action</th>
+                            </tr>
+                        </thead>
+                          <tr>
+                            <td class="items_centers">Activer</td>
+                              <td class="items_centers">+237</td>
+                              <td class="items_centers">12365874</td>
+                              <td class="items_centers">Si la période de réservation commence dans 45 min</td>
+                              <td class="items_centers">Consultation dentaire</td>
+                              <td>
+                                <button type="button" class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal2" style="margin:0px auto;display:block;">
+                                    <i class="fa fa-pencil"></i> Modifier
+                                </button>
+                                  
+                                     <!-- debut de la fenetre modal -->
+                                        <!-- Modal -->
+                    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document" style="width:650px !important;">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h5 class="modal-title" id="myModalLabel">Notifications interne par sms</h5>
+                          </div>
+                          <div class="modal-body2 body_moal_prestation" >
+                          <p class="notification_sms_email_">Notification par courier électronique</p>
+                          <div class="wrapper_notification_sms_email_">
+                      <form method="post">
+                     <input type="checkbox" id="activer2"> &nbsp; <label for="activer2"><span id="activer2">Activer</span></label>
+                     <div>
+                        
+                            <p id="active_SMS" style="display:none !important">
+                                <span class="notification_span">Numéro de téléphone portable </span>
+                            <select name="">
+                              <option>+237</option>
+                                <option></option>
+                            </select>
+                             <span class="notification_span"> Numéro </span> 
+                            <input type="text" name="">
+                            </p>
+                            
+                            <p class="les_delais">Delais</p>
+                            <p class="le_choix_p">
+                                Choix du delais de reception du SMS. <br>Si la réservation est effectuée peu de temps en avance.
+                            </p>
+                           
+                                <span class="quand_">Quand envoyer</span> 
+                                <select name="">
+                                    <option name="">Si la période de réservation commence dans 45 min </option>
+                                    <option name="">Si la période de réservation commence dans 1 heure </option>
+                                </select>
+                                 <p></p>
+                                <input type="radio" id="nofitication_choix_sms_1" name="notifier"> <label for="nofitication_choix_sms_1"><span id="activer"> Me notifier en cas de réservation</span></label>
+                     <p></p>
+                     <input type="radio" id="nofitication_choix_sms_2" name="notifier"> <label for="nofitication_choix_sms_2"><span id="activer"> Me notifier si la réservation conserne l'une des prestations suivantes </span></label>
+                     
+                     <br>
+                     <div id="wrapper_content_SMS" style="display:none">
+                         <p class="listes_des_prestations">Liste des prestations</p>
+                     
+                     <div class="wrapper_list_prestation">
+                      
+                            <p>
+                                <input type="checkbox" id="choix1"> <label for="choix1"><span class="form_list_items">Soins de visage</span></label>
+                            </p>
+                         <p>
+                            <input type="checkbox" id="choix2"> <label for="choix2"><span class="form_list_items">Consulation dentaire</span></label>
+                        </p>
+                            
+                         <p>
+                            <input type="checkbox" id="choix3"> <label for="choix3"><span class="form_list_items">Consultation nourisson</span></label>
+                            </p>
+                        <p>
+                            <input type="checkbox" id="choix4"> <label for="choix4"><span class="form_list_items">Nouveau patient</span></label>
+                        </p> 
+                            
+                       
+                         <br><br>
+                     </div>
+                    </div>
+                           
+                          <button type="submit" class="btn btn-success btn_valid "><i class="fa fa-save"></i> Valider</button>  
+                        
+                     </div></form>
+                     
+                     <br>
+                     
+                     
+                     
+                     <br>
+                     
+                     
+                 </div>
+
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                                  <!-- -->
+                              </td>
+                          </tr>
+                        </table>
+                   
+              </div>
+          
+              </div>
+
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+   
+{% endblock %}
+
+{% block scripts %}
+ 
+ <script>
+ $(document).ready(function(){
+      $('#activer').on('click',function(){
+                $('#active_Email').toggle()
+      });
+            
+       $('#activer2').on('click',function(){
+          $('#active_SMS').toggle()
+      });
+            
+   //email
+            
+       $('#nofitication_choix_2').on('click',function(){
+           $('#wrapper_content_email').show();
+       });
+
+        $('#nofitication_choix_1').on('click',function(){
+            $('#wrapper_content_email').hide();
+        });
+            
+        //sms
+            
+        $('#nofitication_choix_sms_2').on('click',function(){
+            $('#wrapper_content_SMS').show();
+        });
+            
+        $('#nofitication_choix_sms_1').on('click',function(){
+            $('#wrapper_content_SMS').hide();
+        }); 
+     
+         $('#activer7').on('click',function(){
+              $('#active_Email7').toggle()
+          }); 
+     
+        $('.nofitication_choix_7').on('click',function(){
+            $('.wrapper_content_email7').show();
+        });
+     $('.nofitication_choix_77').on('click',function(){
+            $('.wrapper_content_email7').hide().val('');
+        });
+     
+ })           
+    </script>
+{% endblock %}
+
+

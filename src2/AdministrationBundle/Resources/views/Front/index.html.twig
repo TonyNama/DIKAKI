@@ -1,148 +1,149 @@
-{% extends '::admin_template.html.twig' %}
+ {% extends '::admin_template.html.twig' %}
 
 {% block title %}{{'Administration'|trans}} - {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
 
 <style>
- #top_btn{
-       display:block;
-       margin:-150px auto !important;
-     }
+  #top_btn{
+        display:block;
+        margin:-150px auto !important;
+      }
 </style>
 
 {% endblock %}
 
 {% block body %}
 
- <!-- debut du contenu -->
-   <section id="main-content">
-     <section class="wrapper site-min-height">
-       <div class="row mt">
-         <div class="col-lg-12">
-           <div class="row content-panel">
-             <div class="col-md-4 profile-text mt mb centered">
-               <div class="right-divider hidden-sm hidden-xs">
-                 <h4>192</h4>
-                 <h6>{{'CLIENTS'|trans}}</h6>
-                 <h4>290</h4>
-                 <h6>{{'RENDEZ-VOUS PRIS'|trans}}</h6>
-                 <h4>290</h4>
-                 <h6>{{'RENDEZ-VOUS HONORES'|trans}}</h6>
+	<!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+          <div class="col-lg-12">
+            <div class="row content-panel">
+              <div class="col-md-4 profile-text mt mb centered">
+                <div class="right-divider hidden-sm hidden-xs">
+                  <h4>192</h4>
+                  <h6>{{'CLIENTS'|trans}}</h6>
+                  <h4>290</h4>
+                  <h6>{{'RENDEZ-VOUS PRIS'|trans}}</h6>
+                  <h4>290</h4>
+                  <h6>{{'RENDEZ-VOUS HONORES'|trans}}</h6>
 
-               </div>
-             </div>
+                </div>
+              </div>
 
-             <div class="col-md-4 profile-text">
-               <h3>Essomba Pierre</h3>
-               <h6>{{'Chirugien dentiste'|trans}}</h6>
+              <div class="col-md-4 profile-text">
+                <h3>Essomba Pierre</h3>
+                <h6>{{'Chirugien dentiste'|trans}}</h6>
 
-               <br>
-               <p></p>
-             </div>
+                <br>
+                <p></p>
+              </div>
 
-             <div class="col-md-4 centered">
-               <div class="profile-pic">
-                 <p><img src="{{asset('img/photo_medecin.jpg')}}" class="img-circle"></p>
-               </div>
-             </div>
+              <div class="col-md-4 centered">
+                <div class="profile-pic">
+                  <p><img src="{{asset('img/photo_medecin.jpg')}}" class="img-circle"></p>
+                </div>
+              </div>
 
-           </div>
+            </div>
 
-         </div>
+          </div>
 
-         <div class="col-lg-12 mt">
-           <div class="row content-panel">
-            <!-- debut -->
-       <section class="wrapper site-min-height">
-       <div class="row">
-         <div class="col-lg-12">
-             <form method="post" action="">
-                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-             <div class="custom-box second-constum">
-               <div class="servicetitle">
-                 <h4>{{'Coordonnées / Adresses'|trans}} </h4>
-                 <hr>
-               </div>
-               <ul class="pricing">
-                 <li>{{'Nouvelle route bastos'|trans}} </li>
-                 <li><b>{{'BP'|trans}}:</b> 5822 Yaoundé </li>
-                 <li><a href="www.cabinetmedicalessomba.cm">www.cabinetmedicalessomba.cm</a></li>
-               </ul>
-             </div>
-           </div>
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+              <form method="post" action="">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="custom-box second-constum">
+                <div class="servicetitle">
+                  <h4>{{'Coordonnées / Adresses'|trans}} </h4>
+                  <hr>
+                </div>
+                <ul class="pricing" style="margin-top:-15px">
+                  <li>{{'Nouvelle route bastos'|trans}} </li>
+                  <li><b>{{'BP'|trans}}:</b> 5822 Yaoundé </li>
+                  <li><a href="www.cabinetmedicalessomba.cm">www.cabinetmedicalessomba.cm</a></li>
+                </ul>
+              </div>
+            </div>
 
-           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-             <div class="custom-box second-constum">
-               <div class="servicetitle">
-                 <h4>{{'Rdv par internet'|trans}} &nbsp; <input type="checkbox" name=""></h4>
-                 <hr>
-               </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="custom-box second-constum">
+                <div class="servicetitle">
+                  <h4>{{'Rdv par internet'|trans}} &nbsp; <input type="checkbox" name=""></h4>
+                  <hr>
+                </div>
 
-               <p class="nos_rdv"> {{"Vos clients peuvent prendre rendez-vous à l'adresse suivante"|trans}} : </p>
+                <p class="nos_rdv"> {{"Vos clients peuvent prendre rendez-vous à l'adresse suivante"|trans}} : </p>
 
-                  <span class="span_checbox"><a href="www.dikaki.com/moncabinetmedical">Dikaki.com/moncabinetmedical</a></span><br><br>
+                   <span class="span_checbox"><a href="www.dikaki.com/moncabinetmedical">Dikaki.com/moncabinetmedical</a></span><br><br>
 
+             
+              </div>
 
-             </div>
+            </div>
 
-           </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="custom-box second-constum">
+                <div class="servicetitle">
+                  <h4>{{'Notifications'|trans}} </h4>
+                  <hr>
+                </div>
 
-           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-             <div class="custom-box second-constum">
-               <div class="servicetitle">
-                 <h4>{{'Notifications'|trans}} </h4>
-                 <hr>
-               </div>
-
-               <table>
-                 <tr>
-                   <td><input type="checkbox" name=""></td>
-                   <th><span class="span_checbox">{{'Rappel Sms'|trans}}</span></th>
-                 </tr>
-                 <tr>
-                   <td><input type="checkbox" name=""> </td>
-                   <th><span class="span_checbox">{{'Rappel E-mail'|trans}}</span></th>
-                 </tr>
-                 <tr>
-                   <td><input type="checkbox" name=""></td>
-                   <th><span class="span_checbox">{{'Confirmation E-mail'|trans}}</span></th>
-                 </tr>
-                 <tr>
-                   <td><input type="checkbox" name=""></td>
-                   <th><span class="span_checbox">{{'Confirmation Sms'|trans}}</span></th>
-                 </tr>
-
-                           <br>
-                 </table>
-
-
+                <table style="margin-left:60px;margin-top:-20px;">
+                  <tr>
+                    <td><input type="checkbox" name=""></td>
+                    <th><span class="span_checbox"> &nbsp; {{'Rappel Sms'|trans}}</span></th>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name=""></td>
+                    <th><span class="span_checbox"> &nbsp; {{'Rappel E-mail'|trans}}</span></th>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name=""></td>
+                    <th><span class="span_checbox"> &nbsp; {{'Confirmation E-mail'|trans}}</span></th>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name=""></td>
+                    <th><span class="span_checbox"> &nbsp; {{'Confirmation Sms'|trans}}</span></th>
+                  </tr>
+                    
+                            <br>
+                  </table>
 
 
-             </div>
+                 
+                
+              </div>
 
-           </div>
+            </div>
 
-            <button type="submit" class="btn btn-md btn-success btn-font" id="top_btn"><i class="fa fa-floppy-o"></i> {{'Valider'|trans}} </button>
-
-
-         </div>
-             </form>
-
-       </div>
-
-     </section>
+             <button type="submit" class="btn btn-md btn-success btn-font" id="top_btn"><i class="fa fa-floppy-o"></i> {{'Valider'|trans}} </button>
 
 
-           </div>
+          </div>
+              </form>
 
-         </div>
+        </div>
 
-       </div>
+      </section>
 
-     </section>
 
-   </section>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </section>
 
 
 {% endblock %}
+

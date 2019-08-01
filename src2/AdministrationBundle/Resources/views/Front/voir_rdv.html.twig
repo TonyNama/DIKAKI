@@ -1,0 +1,214 @@
+    {% extends '::admin_template.html.twig' %}
+
+{% block title %}{{'Voir mes rendez-vous'|trans}} - Dikaki {{'prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
+
+{% block style %}
+
+ <style>
+           
+        .sky-form{
+            box-shadow: none !important;
+        }
+        th,td{
+          text-align: center !important;
+        }
+
+
+    </style>
+{% endblock %}
+
+{% block body %}
+
+
+<!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+
+             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <h2 class="name_structure">{{'Créer client'|trans}}</h2>
+            </div>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <select class="form-control form_width">
+                <option>Dr Ndewa</option>
+                 <option>Dr Fotso</option>
+                 <option>Dr Melingui</option>
+             </select>
+
+            <br>
+
+              <a href="{{path('dkk_administration_agenda')}}" class="re_back_"><i class="fa fa-share"></i> {{"Revenir à l'agenda"|trans}}</a>
+              <p style="clear:both !important"></p>
+
+              
+              <div class="content_menu">
+          
+                 <div class="wrapper_line_one" style="height: 30px !important;">
+                    
+                     <div class="pull-left">
+                        <a href="{{path('dkk_administration_agenda_creer_client')}}" class="mymodalbox2">{{'Nouveau client'|trans}} </a>
+                       <a href="{{path('dkk_administration_agenda_creer_planning')}}" class="mymodalbox2">{{'Planning'|trans}}</a>
+                       <a href="{{path('dkk_administration_agenda_prendre_rdv')}}" class="mymodalbox2">{{'Prendre RDV'|trans}}</a>
+                        <a href="{{path('dkk_administration_agenda_modifier_rdv')}}" class="mymodalbox2">{{'Modifier RDV'|trans}}</a>
+                       <a href="{{path('dkk_administration_agenda_presence')}}" class="mymodalbox2">{{'Présence'|trans}}</a>
+                       <a href="{{path('dkk_administration_agenda_encaissement')}}" class="mymodalbox2">{{'Encaissement'|trans}}</a>
+                     </div>
+                     <div class="pull-right">
+                     
+                     </div>
+                     
+                 </div>
+                  <!-- debut de l'affichage du calandrier au click -->
+                  <div class="affichage_calandar_3">
+
+                  </div>
+                  <!-- debut de l'affichage du calandrier au click -->
+                  
+              </div>
+              <div class="">
+                   <h3 class="cration_client">{{'Mes rendez-vous'|trans}}</h3>
+                   <div class="margin_wrapper" style="padding-right: 10px;padding-left: 10px !important;">
+                           <table class="table table-bordered table-striped table-condensed">
+                        <tr style="background-color: #26440d !important;color: #fff !important;">
+                          <th>{{'Nom'|trans}} & {{'prénom'|trans}}</th>
+                          <th>{{'Journée'|trans}}</th>
+                          <th>{{'Heure'|trans}}</th>
+                          <th>{{'Service'|trans}}</th>
+                          <th>{{'Ressource'|trans}}</th>
+                          <th>{{'Montant'|trans}}</th>
+                          <th>{{'Action'|trans}}</th>
+                        </tr>
+                        <tr>
+                          <td>Ebolo ebolo guillaume</td>
+                          <td>12.09.2019</td>
+                          <td>12h30</td>
+                          <td>{{'Consultation dentaire'|trans}}</td>
+                          <td>Dr Essomba</td>
+                          <td>1.0000f cfa</td>
+                          <td>
+                            <button class="btn btn-primary btn_valid" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}</button>
+                             <!-- debut de la fenetre modal -->
+                             <div class="modal fade" id="myModal_rdv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog second_modal-dialog" role="document" >
+                                  <div class="modal-content" >
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">{{'Modifier le rendez-vous'|trans}}</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <!-- debut -->
+                                      <form method="post" action="">
+                                        <table class="table table-bordered table-striped table-condensed">
+                                          <tr style="background-color: #26440d !important;color: #fff !important;"> 
+                                            <th>{{'Choisir'|trans}}</th>
+                                            <th>{{'Disponibilité'|trans}}</th>
+                                            <th>{{'Avec'|trans}}</th>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <input type="radio" id="choix1" name="choix">
+                                            </td>
+                                            <td>
+                                              <label for="choix1">21 {{'janvier'|trans}} 2020 {{"à"|trans}} 13h30</label>
+                                            </td>
+                                            <td>
+                                              Dr Essomba
+                                            </td>
+                                          </tr> 
+                                          <tr>
+                                            <td>
+                                              <input type="radio" id="choix2" name="choix">
+                                            </td>
+                                            <td>
+                                              <label for="choix2">21 {{'janvier'|trans}} 2020 {{"à"|trans}} 13h30</label>
+                                            </td>
+                                            <td>
+                                              Dr Essomba
+                                            </td>
+                                          </tr> 
+                                          <tr>
+                                            <td>
+                                              <input type="radio" id="choix3" name="choix">
+                                            </td>
+                                            <td>
+                                              <label for="choix3">21 {{'janvier'|trans}} 2020 {{"à"|trans}} 13h30</label>
+                                            </td>
+                                            <td>
+                                              Dr Essomba
+                                            </td>
+                                          </tr> 
+                                          <tr>
+                                            <td>
+                                              <input type="radio" id="choix4" name="choix">
+                                            </td>
+                                            <td>
+                                              <label for="choix4">21 {{'janvier'|trans}} 2020 {{"à"|trans}} 13h30</label>
+                                            </td>
+                                            <td>
+                                              Dr Essomba
+                                            </td>
+                                          </tr> 
+                                          <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                              <br>
+                                              <button class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> {{'Modifier'|trans}}</button>
+                                            </td>
+                                          </tr>
+                                        </table>      
+                                      </form>
+                                      <br><br>
+                                      <!-- fin  -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- fin de la fenetre modal -->
+                              <a href="" class="btn btn-danger btn_valid"><i class="fa fa-window-close" aria-hidden="true"></i> {{'Supprimer'|trans}}</a>
+                          </td>
+                        </tr>
+                      </table>
+   
+                   </div>
+              </div>
+
+
+          </div>
+
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+ <script>
+
+   
+</script>
+{% endblock %}
+

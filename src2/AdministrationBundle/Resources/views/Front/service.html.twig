@@ -1,4 +1,4 @@
-{% extends '::admin_template.html.twig' %}
+   {% extends '::admin_template.html.twig' %}
 
 {% block title %}{{'Services'|trans}}  - Dikaki {{'prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
@@ -6,22 +6,22 @@
 {% block style %}
 
 <style>
-   sky-form{
-         box-shadow: none !important;
-     }
+      sky-form{
+            box-shadow: none !important;
+        }
 
+     
+    .form-control{
+          display: inline-block !important;
+          vertical-align: middle !important;
+          width: 60% !important;
+        }
 
- .form-control{
-       display: inline-block !important;
-       vertical-align: middle !important;
-       width: 60% !important;
-     }
+        th{
+          text-align: center;
+        }
 
-     th{
-       text-align: center;
-     }
-
- </style>
+    </style>
 
 {% endblock %}
 
@@ -30,385 +30,385 @@
 
 
 <!-- debut du contenu -->
-<section id="main-content">
-   <section class="wrapper site-min-height">
-     <div class="row mt">
+   <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
 
-        <div class="col-xs-12 col-ms-6 col-md-6">
-     <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
-   </div>
+           <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+      </div>
+      
+      <div class="col-xs-12 col-ms-6 col-md-6">
+        <h2 class="name_structure">{{'Service'|trans}}</h2>
+      </div>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
+             <h4 class="small_tittle">{{'Créer un service'|trans}}</h4>
 
-   <div class="col-xs-12 col-ms-6 col-md-6">
-     <h2 class="name_structure">{{'Service'|trans}}</h2>
-   </div>
-       <!-- /col-lg-12 -->
-       <div class="col-lg-12 mt">
-         <div class="row content-panel">
-          <!-- debut -->
-     <section class="wrapper site-min-height">
-     <div class="row">
-       <div class="col-lg-12">
-          <h4 class="small_tittle">{{'Créer un service'|trans}}</h4>
+             
 
 
+              <div class="margin_wrapper">
 
+                  <!-- debut de tout-->
+      <form method="post" action="" id="signupForm">
+      <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+        <p class="text_sevice">{{'Informations service'|trans}}</p>
 
-           <div class="margin_wrapper">
-
-               <!-- debut de tout-->
-   <form method="post" action="" id="signupForm">
-   <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-     <p class="text_sevice">{{'Informations service'|trans}}</p>
-
-       <div class="ref">
-         <p>
-           <span>{{'Référence'|trans}}</span>
-         <br>
-         <input placeholder="Ex: {{'Référence'|trans}}" name="reference" type="text" class="form-control">
-         </p>
-       </div>
-       <div class="ref">
-         <p>
-           <span>{{'Nom commercial'|trans}}</span>
-         <br>
-         <input placeholder="Ex: {{'Nom commercial'|trans}}" name="nom" type="text" class="form-control">
-         </p>
-       </div>
-       <div class="ref">
-         <p>
-            <input name="choix_cat" class="my_checkbox" id="add_description" type="checkbox" class="form-control">
-          <span>{{'Ajouter la description'|trans}}</span>
-          <br>
-          <div id="afficher_desc" style="display:none !important;">
-           <textarea style="resize: none;" id="" name="description" class="ajouter_desc form-control"></textarea>
+          <div class="ref">
+            <p>
+              <span>{{'Référence'|trans}}</span>
+            <br>
+            <input placeholder="Ex: {{'Référence'|trans}}" name="reference" type="text" class="form-control">
+            </p>
           </div>
-         </p>
-       </div>
-       <div class="ref">
-         <p>
-           <span>{{'Description du service'|trans}}</span>
-         <br>
-         <textarea style="width: 60% !important;resize: none;" name="description_service" class="form-control"></textarea>
-         </p>
-       </div>
-
-       <div class="ref">
-         <p>
-           <span>{{'Image / Photo'|trans}}</span>
-         <br>
-          <input name="" type="file" class="form-control">
-         </p>
-       </div>
-
-       <div class="ref">
-         <p>
-            <input name="choix_cat" class="my_checkbox" id="first_only" type="radio">
-          <span>{{'Ce choix est toujours disponible'|trans}}.</span>
-          <br>
-           <input name="choix_cat" class="my_checkbox" id="only" type="radio">
-          <span>{{'Ce choix est disponible seulement durant ces heures'|trans}}.</span>
-
-          <div class="et_de" style="display: none;">
-           <span>{{'De'|trans}}</span>
-           <select class="form-control" style="width: 20% !important">
-             <option value="8h 00">8h 00</option><option value="9h 00">9h 00</option>
-             <option value="10h 00">10h 00</option><option value="11h 00">11h 00</option>
-             <option value="12h 00">12h 00</option><option value="13h 00">13h 00</option>
-             <option value="14h 00">14h 00</option><option value="15h 00">15h 00</option>
-             <option value="16h 00">16h 00</option><option value="17h 00">17h 00</option>
-             <option value="18h 00">18h 00</option><option value="19h 00">19h 00</option>
-             <option value="20h 00">20h 00</option><option value="21h 00">21h 00</option>
-             <option value="22h 00">22h 00</option><option value="23h 00">23h 00</option>
-           </select>
-           <span>{{'A'|trans}}</span>
-           <select class="form-control" style="width: 20% !important">
-             <option value="8h 00">8h 00</option><option value="9h 00">9h 00</option>
-             <option value="10h 00">10h 00</option><option value="11h 00">11h 00</option>
-             <option value="12h 00">12h 00</option><option value="13h 00">13h 00</option>
-             <option value="14h 00">14h 00</option><option value="15h 00">15h 00</option>
-             <option value="16h 00">16h 00</option><option value="17h 00">17h 00</option>
-             <option value="18h 00">18h 00</option><option value="19h 00">19h 00</option>
-             <option value="20h 00">20h 00</option><option value="21h 00">21h 00</option>
-             <option value="22h 00">22h 00</option><option value="23h 00">23h 00</option>
-           </select>
-           <!-- et de a -->
-           <br><br>
-           <span>{{'Et de'|trans}}</span>
-           <select class="form-control" style="width: 20% !important">
-             <option value="8h 00">8h 00</option><option value="9h 00">9h 00</option>
-             <option value="10h 00">10h 00</option><option value="11h 00">11h 00</option>
-             <option value="12h 00">12h 00</option><option value="13h 00">13h 00</option>
-             <option value="14h 00">14h 00</option><option value="15h 00">15h 00</option>
-             <option value="16h 00">16h 00</option><option value="17h 00">17h 00</option>
-             <option value="18h 00">18h 00</option><option value="19h 00">19h 00</option>
-             <option value="20h 00">20h 00</option><option value="21h 00">21h 00</option>
-             <option value="22h 00">22h 00</option><option value="23h 00">23h 00</option>
-           </select>
-           <span>{{'A'|trans}}</span>
-           <select class="form-control" style="width: 20% !important">
-             <option value="8h 00">8h 00</option><option value="9h 00">9h 00</option>
-             <option value="10h 00">10h 00</option><option value="11h 00">11h 00</option>
-             <option value="12h 00">12h 00</option><option value="13h 00">13h 00</option>
-             <option value="14h 00">14h 00</option><option value="15h 00">15h 00</option>
-             <option value="16h 00">16h 00</option><option value="17h 00">17h 00</option>
-             <option value="18h 00">18h 00</option><option value="19h 00">19h 00</option>
-             <option value="20h 00">20h 00</option><option value="21h 00">21h 00</option>
-             <option value="22h 00">22h 00</option><option value="23h 00">23h 00</option>
-           </select>
-           <!-- fin et de a -->
+          <div class="ref">
+            <p>
+              <span>{{'Nom commercial'|trans}}</span>
+            <br>
+            <input placeholder="Ex: {{'Nom commercial'|trans}}" name="nom" type="text" class="form-control">
+            </p>
           </div>
-         </p>
-       </div>
-
-       <div class="ref">
-         <p>
-           <span>{{'Quantité usuelle'|trans}}</span>
-         <br>
-         <select class="form-control" name="" style="width: 23% !important">
-           <option value="1">1</option><option value="2">2</option><option value="3">3</option>
-           <option value="4">4</option><option value="5">5</option><option value="6">6</option>
-           <option value="8">8</option><option value="9">9</option><option value="10">10</option>
-         </select>
-         </p>
-       </div>
-
-       <div class="ref">
-         <p>
-           <span>{{'Unité de temps'|trans}}</span>
-         <br>
-         <select class="form-control" name="" style="width: 23% !important">>
-           <option value="Heure">{{'Heure'|trans}}</option><option value="Jour">{{'Jour'|trans}}</option><option value="Mois">{{'Mois'|trans}}</option>
-
-         </select>
-         </p>
-       </div>
-
-       <div class="ref">
-         <p>
-           <span>{{'Catégorie service'|trans}}</span>
-         <br>
-         <select class="form-control" name="" style="width: 23% !important">>
-           <option value=" "> </option>
-           <option value=" "> </option>
-           <option value=" "> </option>
-         </select>
-         </p>
-       </div>
-
-
-
-
-   </div>
-   <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-     <p class="text_sevice">{{'Informations Tarifaire'|trans}}</p>
-
-     <div class="ref">
-         <p>
-           <span>{{'Prix du service'|trans}}</span>
-         <br>
-         <input placeholder="Ex: Prix du service" name="prix" type="text" class="form-control">&nbsp;&nbsp;
-          <input name="choix_cat" class="" id="ht_description" type="checkbox">
-          <span> {{'HT.'|trans}}</span>
-         </p>
-       </div>
-
-       <div class="ref" id="tva">
-         <p>
-           <span>{{'Taux TVA'|trans}}</span>
-         <br>
-         <select name="" class="form-control" style="width: 30% !important;">
-           <option value="19,25 % "> 19,25 % </option>
-         </select>
-         </p>
-       </div>
-
-       <div class="ref" id="ht" style="display: none !important;">
-         <p class="form-control">
-           <span>{{'Tarif HT'|trans}} 25000F cfa</span>
-         <br>
-
-         </p>
-       </div>
-       <div class="ref" id="TTC">
-
-         <p>
-           <span>{{'Prix TTC'|trans}} </span>
-         <br>
-         <input type="text" disabled="" class="form-control" placeholder="3000">
-
-       </div>
-
-       <div class="ref">
-         <br>
-           <p class="text_sevice">{{'Paiement / Réglement'|trans}}</p>
-       </div>
-
-       <!-- -->
-         <div class="row resize2">
-             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
-               <input type="checkbox" name="" class="my_checkbox">
-                 <span style="display:inline-block;vertical-align:middle;margin-top:4px !important;font-weight:700 !important;font-size: 0.9em !important;margin-top: -5px !important;"> &nbsp; {{'Paiement en caisse'|trans}}</span>
-
+          <div class="ref">
+            <p>
+               <input name="choix_cat" class="my_checkbox" id="add_description" type="checkbox" class="form-control">
+             <span>{{'Ajouter la description'|trans}}</span>
+             <br>
+             <div id="afficher_desc" style="display:none !important;">
+              <textarea style="resize: none;" id="" name="description" class="ajouter_desc form-control"></textarea>
              </div>
+            </p>
+          </div>
+          <div class="ref">
+            <p>
+              <span>{{'Description du service'|trans}}</span>
+            <br>
+            <textarea style="width: 60% !important;resize: none;" name="description_service" class="form-control"></textarea>
+            </p>
+          </div>
 
-             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
-               <input type="checkbox" name="" class="my_checkbox">
-                 <span style="display:inline-block;vertical-align:middle;margin-top:4px !important;font-weight:700 !important;font-size: 0.9em !important;margin-top: -5px !important;"> &nbsp; {{'Paiement en ligne'|trans}}</span>
+          <div class="ref">
+            <p>
+              <span>{{'Image / Photo'|trans}}</span>
+            <br>
+             <input name="" type="file" class="form-control">
+            </p>
+          </div>
 
+          <div class="ref">
+            <p>
+               <input name="choix_cat" class="my_checkbox" id="first_only" type="radio">
+             <span>{{'Ce choix est toujours disponible'|trans}}.</span>
+             <br>
+              <input name="choix_cat" class="my_checkbox" id="only" type="radio">
+             <span>{{'Ce choix est disponible seulement durant ces heures'|trans}}.</span>
+
+             <div class="et_de" style="display: none;">
+              <span>{{'De'|trans}}</span>
+              <select class="form-control" style="width: 20% !important">
+                <option value="8h 00">8h 00</option><option value="9h 00">9h 00</option>
+                <option value="10h 00">10h 00</option><option value="11h 00">11h 00</option>
+                <option value="12h 00">12h 00</option><option value="13h 00">13h 00</option>
+                <option value="14h 00">14h 00</option><option value="15h 00">15h 00</option>
+                <option value="16h 00">16h 00</option><option value="17h 00">17h 00</option>
+                <option value="18h 00">18h 00</option><option value="19h 00">19h 00</option>
+                <option value="20h 00">20h 00</option><option value="21h 00">21h 00</option>
+                <option value="22h 00">22h 00</option><option value="23h 00">23h 00</option>
+              </select>
+              <span>{{'A'|trans}}</span>
+              <select class="form-control" style="width: 20% !important">
+                <option value="8h 00">8h 00</option><option value="9h 00">9h 00</option>
+                <option value="10h 00">10h 00</option><option value="11h 00">11h 00</option>
+                <option value="12h 00">12h 00</option><option value="13h 00">13h 00</option>
+                <option value="14h 00">14h 00</option><option value="15h 00">15h 00</option>
+                <option value="16h 00">16h 00</option><option value="17h 00">17h 00</option>
+                <option value="18h 00">18h 00</option><option value="19h 00">19h 00</option>
+                <option value="20h 00">20h 00</option><option value="21h 00">21h 00</option>
+                <option value="22h 00">22h 00</option><option value="23h 00">23h 00</option>
+              </select>
+              <!-- et de a -->
+              <br><br>
+              <span>{{'Et de'|trans}}</span>
+              <select class="form-control" style="width: 20% !important">
+                <option value="8h 00">8h 00</option><option value="9h 00">9h 00</option>
+                <option value="10h 00">10h 00</option><option value="11h 00">11h 00</option>
+                <option value="12h 00">12h 00</option><option value="13h 00">13h 00</option>
+                <option value="14h 00">14h 00</option><option value="15h 00">15h 00</option>
+                <option value="16h 00">16h 00</option><option value="17h 00">17h 00</option>
+                <option value="18h 00">18h 00</option><option value="19h 00">19h 00</option>
+                <option value="20h 00">20h 00</option><option value="21h 00">21h 00</option>
+                <option value="22h 00">22h 00</option><option value="23h 00">23h 00</option>
+              </select>
+              <span>{{'A'|trans}}</span>
+              <select class="form-control" style="width: 20% !important">
+                <option value="8h 00">8h 00</option><option value="9h 00">9h 00</option>
+                <option value="10h 00">10h 00</option><option value="11h 00">11h 00</option>
+                <option value="12h 00">12h 00</option><option value="13h 00">13h 00</option>
+                <option value="14h 00">14h 00</option><option value="15h 00">15h 00</option>
+                <option value="16h 00">16h 00</option><option value="17h 00">17h 00</option>
+                <option value="18h 00">18h 00</option><option value="19h 00">19h 00</option>
+                <option value="20h 00">20h 00</option><option value="21h 00">21h 00</option>
+                <option value="22h 00">22h 00</option><option value="23h 00">23h 00</option>
+              </select>
+              <!-- fin et de a -->
              </div>
+            </p>
+          </div>
 
-         </div>
+          <div class="ref">
+            <p>
+              <span>{{'Quantité usuelle'|trans}}</span>
+            <br>
+            <select class="form-control" name="" style="width: 23% !important">
+              <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+              <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+              <option value="8">8</option><option value="9">9</option><option value="10">10</option>
+            </select>
+            </p>
+          </div>
 
-         <div class="row resize2">
+          <div class="ref">
+            <p>
+              <span>{{'Unité de temps'|trans}}</span>
+            <br>
+            <select class="form-control" name="" style="width: 23% !important">>
+              <option value="Heure">{{'Heure'|trans}}</option><option value="Jour">{{'Jour'|trans}}</option><option value="Mois">{{'Mois'|trans}}</option>
 
-           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+            </select>
+            </p>
+          </div>
 
-               <input type="checkbox" name="" class="my_checkbox" id="free">
-                                   <span style="display:inline-block;vertical-align:middle;margin-top:4px !important;font-weight:700 !important;font-size: 0.9em !important;margin-top: -5px !important;"> &nbsp; {{'Gratuit'|trans}}</sapn>
-             </div>
+          <div class="ref">
+            <p>
+              <span>{{'Catégorie service'|trans}}</span>
+            <br>
+            <select class="form-control" name="" style="width: 23% !important">>
+              <option value=" "> </option>
+              <option value=" "> </option>
+              <option value=" "> </option>
+            </select>
+            </p>
+          </div>
 
-             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
 
-               <input type="checkbox" name=""  id="chkPassport" class="my_checkbox"><span style="display:inline-block;vertical-align:middle;margin-top:4px !important;font-weight:700 !important;font-size: 0.9em !important;margin-top: -5px !important;"> &nbsp; {{'Acompte'|trans}}</span>
 
-               <div  id="dvPassport" style="display: none">
-                   <span style="display:inline-block;vertical-align:middle;margin-top:4px !important;font-weight:700 !important;font-size: 0.9em !important;margin-top: 10px !important;">{{'Taux'|trans}}:</span>
-                     <select class="form-control " style="display:inline-block;vertical-align:top;width: 50%">
-                     <option>5 %</option><option>10 %</option><option>15 %</option><option>20 %</option>
-                     <option>25 %</option><option>30 %</option><option>35 %</option><option>40 %</option>
-                     <option>45 %</option><option>50 %</option>
-                    </select>
-               </div>
 
-             </div>
-         </div>
-       <!-- -->
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+        <p class="text_sevice">{{'Informations Tarifaire'|trans}}</p>
+
+        <div class="ref">
+            <p>
+              <span>{{'Prix du service'|trans}}</span>
+            <br>
+            <input placeholder="Ex: Prix du service" name="prix" type="text" class="form-control">&nbsp;&nbsp;
+             <input name="choix_cat" class="" id="ht_description" type="checkbox">
+             <span> {{'HT.'|trans}}</span>
+            </p>
+          </div>
+
+          <div class="ref" id="tva">
+            <p>
+              <span>{{'Taux TVA'|trans}}</span>
+            <br>
+            <select name="" class="form-control" style="width: 30% !important;">
+              <option value="19,25 % "> 19,25 % </option>
+            </select>
+            </p>
+          </div>
+
+          <div class="ref" id="ht" style="display: none !important;">
+            <p class="form-control">
+              <span>{{'Tarif HT'|trans}} 25000F cfa</span>
+            <br>
+
+            </p>
+          </div>
+          <div class="ref" id="TTC">
+
+            <p>
+              <span>{{'Prix TTC'|trans}} </span>
+            <br>
+            <input type="text" disabled="" class="form-control" placeholder="3000">
+          
+          </div>
+
+          <div class="ref">
+            <br>
+              <p class="text_sevice">{{'Paiement / Réglement'|trans}}</p>
+          </div>
+
+          <!-- -->
+            <div class="row resize2">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+                  <input type="checkbox" name="" class="my_checkbox">
+                    <span style="display:inline-block;vertical-align:middle;margin-top:4px !important;font-weight:700 !important;font-size: 0.9em !important;margin-top: -5px !important;"> &nbsp; {{'Paiement en caisse'|trans}}</span>
+
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+                  <input type="checkbox" name="" class="my_checkbox">
+                    <span style="display:inline-block;vertical-align:middle;margin-top:4px !important;font-weight:700 !important;font-size: 0.9em !important;margin-top: -5px !important;"> &nbsp; {{'Paiement en ligne'|trans}}</span>
+
+                </div>
+
+            </div>
+
+            <div class="row resize2">
+
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+
+                  <input type="checkbox" name="" class="my_checkbox" id="free">
+                                      <span style="display:inline-block;vertical-align:middle;margin-top:4px !important;font-weight:700 !important;font-size: 0.9em !important;margin-top: -5px !important;"> &nbsp; {{'Gratuit'|trans}}</sapn>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+
+                  <input type="checkbox" name=""  id="chkPassport" class="my_checkbox"><span style="display:inline-block;vertical-align:middle;margin-top:4px !important;font-weight:700 !important;font-size: 0.9em !important;margin-top: -5px !important;"> &nbsp; {{'Acompte'|trans}}</span>
+
+                  <div  id="dvPassport" style="display: none">
+                      <span style="display:inline-block;vertical-align:middle;margin-top:4px !important;font-weight:700 !important;font-size: 0.9em !important;margin-top: 10px !important;">{{'Taux'|trans}}:</span>
+                        <select class="form-control " style="display:inline-block;vertical-align:top;width: 50%">
+                        <option>5 %</option><option>10 %</option><option>15 %</option><option>20 %</option>
+                        <option>25 %</option><option>30 %</option><option>35 %</option><option>40 %</option>
+                        <option>45 %</option><option>50 %</option>
+                       </select>
+                  </div>
+
+                </div>
+            </div>
+          <!-- -->
+
+          <div class="ref">
+            <br>
+              <p class="text_sevice">{{'Informations periodicité'|trans}}</p>
+          </div>
+       </div>
+
+       <div>
+        <br>
+        <span class="span_second">{{'Période'|trans}}</span>
+        <br><br>
+        <p>
+          <span>{{'De'|trans}} :</span>
+          <select class="form-control" style="width: 10% !important;">
+            <option>{{'Jour'|trans}}</option>
+            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="13">13</option>
+            <option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>
+            <option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option>
+            <option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>
+            <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>
+            <option value="30">30</option><option value="31">31</option>
+          </select>
+
+          <select class="form-control" style="width: 10% !important;">
+            <option >{{'Mois'|trans}}</option>
+            <option value="Janvier">{{'Janvier'|trans}}</option><option value="Février">{{'Février'|trans}}</option><option value="Mars">{{'Mars'|trans}}</option>
+            <option value="Mai">{{'Mai'|trans}}</option><option value="Juin">{{'Juin'|trans}}</option><option value="Juillet">{{'Juillet'|trans}}</option>
+            <option value="Août">{{'Août'|trans}}</option><option value="Septembre">{{'Septembre'|trans}}</option><option value="Octobre">{{'Octobre'|trans}}</option>
+            <option value="Novembre">{{'Novembre'|trans}}</option><option value="Decembre">{{'Décembre'|trans}}</option>
+          </select>
+
+
+          <select class="form-control" style="width: 10% !important;">
+            <option>{{'Année'|trans}}</option>
+            <option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option>
+          </select>
+
+        </p>
+         <input name="choix_cat" class="my_checkbox" id="add_description"  type="checkbox">
+             <span class="span_second">{{'Toute la journée'|trans}}</span><br><br>
+        <p>
+          <span>{{'A'|trans}} :</span>
+          <select class="form-control" style="width: 10% !important;">
+            <option>{{'Jour'|trans}}</option>
+            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="13">13</option>
+            <option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>
+            <option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option>
+            <option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>
+            <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>
+            <option value="30">30</option><option value="31">31</option>
+          </select>
+
+          <select class="form-control" style="width: 10% !important;">
+            <option >{{'Mois'|trans}}</option>
+            <option value="Janvier">{{'Janvier'|trans}}</option><option value="Février">{{'Février'|trans}}</option><option value="Mars">{{'Mars'|trans}}</option>
+            <option value="Mai">{{'Mai'|trans}}</option><option value="Juin">{{'Juin'|trans}}</option><option value="Juillet">{{'Juillet'|trans}}</option>
+            <option value="Août">{{'Août'|trans}}</option><option value="Septembre">{{'Septembre'|trans}}</option><option value="Octobre">{{'Octobre'|trans}}</option>
+            <option value="Novembre">{{'Novembre'|trans}}</option><option value="Decembre">{{'Décembre'|trans}}</option>
+          </select>
+
+
+          <select class="form-control" style="width: 10% !important;">
+            <option>{{'Année'|trans}}</option>
+            <option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option>
+          </select>
+
+        </p>
+
+       </div>
 
        <div class="ref">
-         <br>
-           <p class="text_sevice">{{'Informations periodicité'|trans}}</p>
+        <p>
+          <span >{{'Répéter'|trans}}</span>
+        <br>
+        <select name="" class="form-control" style="width: 31% !important;">
+          <option value="Ne pas répéter">{{'Ne pas répéter'|trans}}</option>
+          <option value="Répéter tous les jours">{{'Répéter tous les jours'|trans}}</option>
+          <option value="Répéter toutes les semaines">{{'Répéter toutes les semaines'|trans}}</option>
+          <option value="Répéter tous les mois">{{'Répéter tous les mois'|trans}}</option>
+        </select>
+        </p>
        </div>
-    </div>
+       <div class="ref">
+        <p>
+          <span>{{"Répéter jusqu'au"|trans}}</span>
+           <input type="text" id="datepicker" name="date" class="" style="margin-top:15px !important">
+        </p>
+       </div>
 
-    <div>
-     <br>
-     <span class="span_second">{{'Période'|trans}}</span>
-     <br><br>
-     <p>
-       <span>{{'De'|trans}} :</span>
-       <select class="form-control" style="width: 10% !important;">
-         <option>{{'Jour'|trans}}</option>
-         <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
-         <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
-         <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="13">13</option>
-         <option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>
-         <option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option>
-         <option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>
-         <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>
-         <option value="30">30</option><option value="31">31</option>
-       </select>
+       <p style="clear: both !important;"></p>
+       <div class="pull-right resize" style="padding-right: 70px">
 
-       <select class="form-control" style="width: 10% !important;">
-         <option >{{'Mois'|trans}}</option>
-         <option value="Janvier">{{'Janvier'|trans}}</option><option value="Février">{{'Février'|trans}}</option><option value="Mars">{{'Mars'|trans}}</option>
-         <option value="Mai">{{'Mai'|trans}}</option><option value="Juin">{{'Juin'|trans}}</option><option value="Juillet">{{'Juillet'|trans}}</option>
-         <option value="Août">{{'Août'|trans}}</option><option value="Septembre">{{'Septembre'|trans}}</option><option value="Octobre">{{'Octobre'|trans}}</option>
-         <option value="Novembre">{{'Novembre'|trans}}</option><option value="Decembre">{{'Décembre'|trans}}</option>
-       </select>
-
-
-       <select class="form-control" style="width: 10% !important;">
-         <option>{{'Année'|trans}}</option>
-         <option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option>
-       </select>
-
-     </p>
-      <input name="choix_cat" class="my_checkbox" id="add_description"  type="checkbox">
-          <span class="span_second">{{'Toute la journée'|trans}}</span><br><br>
-     <p>
-       <span>{{'A'|trans}} :</span>
-       <select class="form-control" style="width: 10% !important;">
-         <option>{{'Jour'|trans}}</option>
-         <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
-         <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
-         <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="13">13</option>
-         <option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>
-         <option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option>
-         <option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>
-         <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>
-         <option value="30">30</option><option value="31">31</option>
-       </select>
-
-       <select class="form-control" style="width: 10% !important;">
-         <option >{{'Mois'|trans}}</option>
-         <option value="Janvier">{{'Janvier'|trans}}</option><option value="Février">{{'Février'|trans}}</option><option value="Mars">{{'Mars'|trans}}</option>
-         <option value="Mai">{{'Mai'|trans}}</option><option value="Juin">{{'Juin'|trans}}</option><option value="Juillet">{{'Juillet'|trans}}</option>
-         <option value="Août">{{'Août'|trans}}</option><option value="Septembre">{{'Septembre'|trans}}</option><option value="Octobre">{{'Octobre'|trans}}</option>
-         <option value="Novembre">{{'Novembre'|trans}}</option><option value="Decembre">{{'Décembre'|trans}}</option>
-       </select>
-
-
-       <select class="form-control" style="width: 10% !important;">
-         <option>{{'Année'|trans}}</option>
-         <option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option>
-       </select>
-
-     </p>
-
-    </div>
-
-    <div class="ref">
-     <p>
-       <span >{{'Répéter'|trans}}</span>
-     <br>
-     <select name="" class="form-control" style="width: 31% !important;">
-       <option value="Ne pas répéter">{{'Ne pas répéter'|trans}}</option>
-       <option value="Répéter tous les jours">{{'Répéter tous les jours'|trans}}</option>
-       <option value="Répéter toutes les semaines">{{'Répéter toutes les semaines'|trans}}</option>
-       <option value="Répéter tous les mois">{{'Répéter tous les mois'|trans}}</option>
-     </select>
-     </p>
-    </div>
-    <div class="ref">
-     <p>
-       <span>{{"Répéter jusqu'au"|trans}}</span>
-        <input type="text" id="datepicker" name="date" class="" style="margin-top:15px !important">
-     </p>
-    </div>
-
-    <p style="clear: both !important;"></p>
-    <div class="pull-right resize" style="padding-right: 70px">
-
-          <button type="submit" class="btn  btn-success btn_valid"><i class="fa fa-floppy-o" aria-hidden="true"></i>
+             <button type="submit" class="btn  btn-success btn_valid"><i class="fa fa-floppy-o" aria-hidden="true"></i>
 {{'Enregistrer'|trans}}</button>
 
-   <button type="reset" class="btn btn-danger btn_valid " ><i class="fa fa-times"></i> {{'Annuler'|trans}}</button>
+      <button type="reset" class="btn btn-danger btn_valid " ><i class="fa fa-times"></i> {{'Annuler'|trans}}</button>
 
+       
 
+            </div>
+       </form>
+       <!-- fin de tout-->
+ <br><br><br><br>
+      
 
-         </div>
-    </form>
-    <!-- fin de tout-->
-<br><br><br><br>
+                    <!-- -->
 
+              </div>
 
-                 <!-- -->
+        <!--  /row -->
+      </section>
+             <!-- fin -->
 
-           </div>
+            </div>
 
-     <!--  /row -->
-   </section>
-          <!-- fin -->
-
-         </div>
-
-       </div>
-       <!-- /row -->
-     </div>
-     <!-- /container -->
-   </section>
-   <!-- /wrapper -->
- </section>
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
 
 
 {% endblock %}
@@ -416,114 +416,114 @@
 {% block scripts %}
 
 <script type="text/javascript">
-     $(document).ready(function(){
-       $('#add_description').click(function(){
-         $(".ajouter_desc").toggle();
-       });
+   			$(document).ready(function(){
+   				$('#add_description').click(function(){
+            $(".ajouter_desc").toggle();
+          });
 
-       $("#ht_description").click(function () {
-               if ($(this).is(":checked")) {
-                 $("#tva").hide();
-                 $("#TTC").hide();
-                 $("#ht").show();
-               } else {
-                 $("#tva").show();
-                 $("#TTC").show();
-                 $("#ht").hide();
-               }
-             });
-             $("#only").on('click',function(){
-               if($(this).is(":checked")){
-                 $(".et_de").show();
-               }
-             });
-             $("#first_only").on('click',function(){
-               if($(this).is(":checked")){
-                 $(".et_de").hide();
-               }
-             });
+          $("#ht_description").click(function () {
+                  if ($(this).is(":checked")) {
+                    $("#tva").hide();
+                    $("#TTC").hide();
+                    $("#ht").show();
+                  } else {
+                    $("#tva").show();
+                    $("#TTC").show();
+                    $("#ht").hide();
+                  }
+                });
+                $("#only").on('click',function(){
+                  if($(this).is(":checked")){
+                    $(".et_de").show();
+                  }
+                });
+                $("#first_only").on('click',function(){
+                  if($(this).is(":checked")){
+                    $(".et_de").hide();
+                  }
+                });
 
-             $("#chkPassport").on("click",function(){
-               $("#dvPassport").toggle();
+                $("#chkPassport").on("click",function(){
+                  $("#dvPassport").toggle();
 
-             });
+                });
 
-             // une autre ligne
-             $("#signupForm").validate({
-               rules: {
-                 couleur: "required",
-                 reference: {
-                   required:true,
-                   minlength: 4
-                 },
-                 nom: {
-                   required:true,
-                   minlength: 4
-                 },
-                 type: {
-                   required: true,
-                   minlength: 4
-                 },
-                 description: {
-                   required:false,
-                   minlength:20,
-                   maxlength:150
-                 },
-                 description_service: {
-                   required:true,
-                   minlength:20,
-                   maxlength:150
-                 },
-                 prix: {
-                   required: true,
-                   number: true,
-                   minlength: 4
-                 },
-                 duree: {
-                   required: true
-                 }
-               },
-               messages: {
-                 reference: {
-                   required: "<span style='color:#dd4f43'>{{'Le type'|trans}}</span>",
-                   minlength: "<span style='color:#dd4f43'>4 {{'caractères minimum'|trans}}</span>"
-                 },
+                // une autre ligne
+                $("#signupForm").validate({
+                  rules: {
+                    couleur: "required",
+                    reference: {
+                      required:true,
+                      minlength: 4
+                    },
+                    nom: {
+                      required:true,
+                      minlength: 4
+                    },
+                    type: {
+                      required: true,
+                      minlength: 4
+                    },
+                    description: {
+                      required:false,
+                      minlength:20,
+                      maxlength:150
+                    },
+                    description_service: {
+                      required:true,
+                      minlength:20,
+                      maxlength:150
+                    },
+                    prix: {
+                      required: true,
+                      number: true,
+                      minlength: 4
+                    },
+                    duree: {
+                      required: true
+                    }
+                  },
+                  messages: {
+                    reference: {
+                      required: "<span style='color:#dd4f43'>{{'Le type'|trans}}</span>",
+                      minlength: "<span style='color:#dd4f43'>4 {{'caractères minimum'|trans}}</span>"
+                    },
 
-                 nom: {
-                   required: "<span style='color:#dd4f43'>{{'Le nom'|trans}}</span>",
-                   minlength: "<span style='color:#dd4f43'>4 {{'caractères minimum'|trans}}</span>"
-                 },
-                 description: {
-                   required: "<span style='color:#dd4f43'>{{'Le nom'|trans}}</span>",
-                   minlength: "<span style='color:#dd4f43'>20 {{'caractères minimum'|trans}}</span>",
-                   maxlength: "<span style='color:#dd4f43'>150 {{'caractères maximum'|trans}}</span>"
-                 },
-                 description_service: {
-                   required: "<span style='color:#dd4f43'>{{'Description'|trans}}</span>",
-                   minlength: "<span style='color:#dd4f43'>20 {{'caractères minimum'|trans}}</span>",
-                   maxlength: "<span style='color:#dd4f43'>150 {{'caractères maximum'|trans}}</span>"
-                 },
+                    nom: {
+                      required: "<span style='color:#dd4f43'>{{'Le nom'|trans}}</span>",
+                      minlength: "<span style='color:#dd4f43'>4 {{'caractères minimum'|trans}}</span>"
+                    },
+                    description: {
+                      required: "<span style='color:#dd4f43'>{{'Le nom'|trans}}</span>",
+                      minlength: "<span style='color:#dd4f43'>20 {{'caractères minimum'|trans}}</span>",
+                      maxlength: "<span style='color:#dd4f43'>150 {{'caractères maximum'|trans}}</span>"
+                    },
+                    description_service: {
+                      required: "<span style='color:#dd4f43'>{{'Description'|trans}}</span>",
+                      minlength: "<span style='color:#dd4f43'>20 {{'caractères minimum'|trans}}</span>",
+                      maxlength: "<span style='color:#dd4f43'>150 {{'caractères maximum'|trans}}</span>"
+                    },
 
-                 prix: {
-                   required: "<span style='color:#dd4f43'>{{'Le prix'|trans}}</span>",
-                   minlength: "<span style='color:#dd4f43'>4 {{'caractères minimum'|trans}}</span>",
-                   number:"<span style='color:#dd4f43'>{{'Prix invalide'|trans}}</span>"
-                 },
-                 duree: {
-                   required: "<span style='color:#dd4f43'>{{'La durée'|trans}}</span>",
-                 },
-                 nature2: "<span style='color:#dd4f43'>4 {{'caractères minimum'|trans}}</span>",
-                 couleur: "<span style='color:#dd4f43'>{{'La couleur'|trans}}</span>"
-               }
-             });
+                    prix: {
+                      required: "<span style='color:#dd4f43'>{{'Le prix'|trans}}</span>",
+                      minlength: "<span style='color:#dd4f43'>4 {{'caractères minimum'|trans}}</span>",
+                      number:"<span style='color:#dd4f43'>{{'Prix invalide'|trans}}</span>"
+                    },
+                    duree: {
+                      required: "<span style='color:#dd4f43'>{{'La durée'|trans}}</span>",
+                    },
+                    nature2: "<span style='color:#dd4f43'>4 {{'caractères minimum'|trans}}</span>",
+                    couleur: "<span style='color:#dd4f43'>{{'La couleur'|trans}}</span>"
+                  }
+                });
 
-             $("#add_description").on("click",function(){
-               $("#afficher_desc").toggle();
-             });
+                $("#add_description").on("click",function(){
+                  $("#afficher_desc").toggle();
+                });
 
-              $("#datepicker").datepicker();
-     });
-   </script>
+                 $("#datepicker").datepicker();
+   			});
+   		</script>
 
 
 

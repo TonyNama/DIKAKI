@@ -1,595 +1,596 @@
-{% extends '::admin_template.html.twig' %}
+ {% extends '::admin_template.html.twig' %}
 
 {% block title %}{{'Administration'|trans}} - {{'Périodicité'|trans}} - {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} - {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
 
-<style>
-       .menu1 {
-         border-bottom:solid 2px #666666 ;
-         padding-top:12px ;
-         padding-bottom:7px
-       }
+ <style>
+        .menu1 {
+          border-bottom:solid 2px #666666 ; 
+          padding-top:12px ; 
+          padding-bottom:7px
+        } 
 
-       .onglet {
-           border:solid 1px #666666 ;
-           margin:5px 5px 0px 5px ;
-           padding:7px 3px 7px 3px;
-           font-weight: bold;
-           font-family: 'Montserrat', sans-serif;
-           font-size: 1.1em;
-           background: #666666;
-           color: #fff !important;
-
-           border-radius:5px 5px 0px 0px !important;
-         }
-
-         a.onglet {
-           background-color:#666666 ;
-           text-decoration:none;
-           font-weight: bold;
-           font-family: 'Montserrat', sans-serif;
-           font-size: 1.1em;
-           background: #666666;
-           color: #fff !important;
-         }
-
-         .onglet-actif {
-            border-left:solid 2px #666666 ;
-            border-right:solid 2px #666666 ;
-            border-top:solid 2px #666666 ;
-            border-bottom:none !important;
-            margin:5px 5px 0px 5px ;
-            padding:7px 3px 7px 3px ;
-            background-color:white;
+        .onglet { 
+            border:solid 1px #666666 ;
+            margin:5px 5px 0px 5px ; 
+            padding:7px 3px 7px 3px;
             font-weight: bold;
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.2em;
-            color: #333;
-         }
-         .th_resize{
-           font-size: 0.9em !important
-         }
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
 
-         th{
-           text-align: center;
-         }
-         </style>
+            border-radius:5px 5px 0px 0px !important;
+          } 
+
+          a.onglet { 
+            background-color:#666666 ; 
+            text-decoration:none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            background: #666666;
+            color: #fff !important;
+          } 
+
+          .onglet-actif { 
+             border-left:solid 2px #666666 ; 
+             border-right:solid 2px #666666 ; 
+             border-top:solid 2px #666666 ; 
+             border-bottom:none !important; 
+             margin:5px 5px 0px 5px ; 
+             padding:7px 3px 7px 3px ; 
+             background-color:white;
+             font-weight: bold;
+             font-family: 'Montserrat', sans-serif;
+             font-size: 1.2em;
+             color: #333;
+          } 
+          .th_resize{
+            font-size: 0.9em !important
+          }
+
+          th{
+            text-align: center;
+          }
+          </style>
 
 {% endblock %}
 
 {% block body %}
 
-<!-- debut du contenu -->
-   <section id="main-content">
-     <section class="wrapper site-min-height">
-       <div class="row mt">
-              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-               <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
-           </div>
-           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-               <h2 class="name_structure">{{'Périodicité'|trans}}</h2>
-           </div>
-         <!-- /col-lg-12 -->
-         <div class="col-lg-12 mt">
+ <!-- debut du contenu -->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class="row mt">
+               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <h2 class="name_structure">{{'Périodicité'|trans}}</h2>
+            </div>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
 
 
-           <div class="row content-panel">
-            <!-- debut -->
-       <section class="wrapper site-min-height">
-       <div class="row">
-         <div class="col-lg-12">
+            <div class="row content-panel">
+             <!-- debut -->
+        <section class="wrapper site-min-height">
+        <div class="row">
+          <div class="col-lg-12">
 
 
 
-             <h4 class="small_tittle up_">{{'Périodicité'|trans}} </h4>
-                  <p class="journne_du_" style="text-align:center !important;"> </p>
+              <h4 class="small_tittle up_">{{'Périodicité'|trans}} </h4>
+                   <p class="journne_du_" style="text-align:center !important;"> </p>
 
-             <div class="menu1"> <!-- début de la boite contenant les onglets -->
-               <a href="{{path('dkk_administration_calandrier')}}" class="onglet-actif"> {{'Jours'|trans}} & {{'Heures'|trans}}</a> <!-- onglet ACTIF -->
-                  <span class="onglet"> {{'Périodicités'|trans}} </span> <!-- onglet inactif -->
-             </div>
+              <div class="menu1"> <!-- début de la boite contenant les onglets -->
+                <a href="{{path('dkk_administration_calandrier')}}" class="onglet-actif"> {{'Jours'|trans}} & {{'Heures'|trans}}</a> <!-- onglet ACTIF -->
+                   <span class="onglet"> {{'Périodicités'|trans}} </span> <!-- onglet inactif -->
+              </div>
 
-           <div class="">
+            <div class="">
 
-               <section id="unseen">
+                <section id="unseen">
 
-                                  <div class="margin_wrapper">
-                   <h3 class="times_ to_up">{{'Disponibilité hebdomadaire'|trans}}</h3>
-                   <div class="hebdo">
+                                   <div class="margin_wrapper">
+                    <h3 class="times_ to_up">{{'Disponibilité hebdomadaire'|trans}}</h3>
+                    <div class="hebdo">
 
-                       <form method="post">
-                           <div class="form-group">
-                                 <input type="checkbox"> <span class="number__">
-                               <span class="number__">{{'Tous les'|trans}}
-                               <select name="">
-                                   <option>2</option>
-                                   <option>3</option>
-                                   <option>4</option>
-                               </select>
-                               {{'jours de la semaine'|trans}} : <br><br>
-                               <input type="checkbox"> <span class="number__">
-                              {{'Toutes les'|trans}}
-                               <select name="">
-                                   <option>2</option>
-                                   <option>3</option>
-                                   <option>4</option>
-                                   <option>5</option>
-                                   <option>6</option>
-                               </select>
-                               {{'semaines les'|trans}} : <br><br>
+                        <form method="post">
+                            <div class="form-group">
+                                  <input type="checkbox"> <span class="number__">
+                                <span class="number__">{{'Tous les'|trans}}
+                                <select name="">
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                                {{'jours de la semaine'|trans}} : <br><br>
+                                <input type="checkbox"> <span class="number__">
+                               {{'Toutes les'|trans}}
+                                <select name="">
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                                {{'semaines les'|trans}} : <br><br>
 
-                               <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                   <input type="checkbox" class="check_box">
-                                   <span  class="check_box_span">{{'Lundi'|trans}}</span>
-                               </div>
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <input type="checkbox" class="check_box">
+                                    <span  class="check_box_span" style="font-size:1em !important;">{{'Lundi'|trans}}</span>
+                                </div>
 
-                               <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                   <input type="checkbox" class="check_box">
-                                   <span class="check_box_span">{{'Mardi'|trans}}</span>
-                               </div>
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <input type="checkbox" class="check_box">
+                                    <span class="check_box_span" style="font-size:1em !important;">{{'Mardi'|trans}}</span>
+                                </div>
 
-                               <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                   <input type="checkbox" class="check_box">
-                                   <span class="check_box_span">{{'Mercredi'|trans}}</span>
-                               </div>
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <input type="checkbox" class="check_box">
+                                    <span class="check_box_span" style="font-size:1em !important;">{{'Mercredi'|trans}}</span>
+                                </div>
 
-                               <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                   <input type="checkbox" class="check_box">
-                                   <span class="check_box_span">{{'Jeudi'|trans}}</span>
-                               </div>
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <input type="checkbox" class="check_box">
+                                    <span class="check_box_span" style="font-size:1em !important;">{{'Jeudi'|trans}}</span>
+                                </div>
 
-                               <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                   <input type="checkbox" class="check_box">
-                                   <span class="check_box_span">{{'Vendredi'|trans}}</span>
-                               </div>
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <input type="checkbox" class="check_box">
+                                    <span class="check_box_span" style="font-size:1em !important;">{{'Vendredi'|trans}}</span>
+                                </div>
 
-                               <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                   <input type="checkbox" class="check_box">
-                                   <span class="check_box_span">{{'Samedi'|trans}}</span>
-                               </div>
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <input type="checkbox" class="check_box">
+                                    <span class="check_box_span" style="font-size:1em !important;">{{'Samedi'|trans}}</span>
+                                </div>
 
-                               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                   <input type="checkbox" class="check_box">
-                                   <span class="check_box_span">{{'Dimanche'|trans}}</span>
-                               </div>
-                               <br><br>
-                               </span>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <input type="checkbox" class="check_box">
+                                    <span class="check_box_span" style="font-size:1em !important;">{{'Dimanche'|trans}}</span>
+                                </div>
+                                <br><br>
+                                </span>
 
 
-                                 <div class="">
-                            <button type="submit" name="" class="btn btn-success btn_valid btn-md"><i class="fa fa-floppy-o" aria-hidden="true"></i>  {{'Enregistrer'|trans}} </button>
-                                     <button type="button" class="btn btn-primary btn_valid btn-md" data-toggle="modal" data-target="#myModal" title="Périodicité hebdomadaire"> <i class="fa fa-pencil-square-o"></i>
-                                         {{'Modifier'|trans}}
+                                  <div class="">
+                                    <br>
+                             <button type="submit" name="" class="btn btn-success btn_valid btn-md" style="font-size:0.7em !important;"><i class="fa fa-floppy-o" aria-hidden="true"></i>  {{'Enregistrer'|trans}} </button>
+                                      <button type="button" class="btn btn-primary btn_valid btn-md" data-toggle="modal" data-target="#myModal" title="Périodicité hebdomadaire" style="font-size:0.7em !important;"> <i class="fa fa-pencil-square-o"></i>
+                                          {{'Modifier'|trans}}
 </button>
 
-                                   <button type="submit" name="" class="btn btn-danger  btn_valid btn-md"> <i class="fa fa-times" aria-hidden="true"> </i> {{'Sortir'|trans}} </button>
-                       </div>
+                                    <button type="submit" name="" class="btn btn-danger  btn_valid btn-md"> <i class="fa fa-times" aria-hidden="true" style="font-size:0.6em !important;"></i> {{'Sortir'|trans}} </button>
+                        </div>
 
 
-                           </div>
-                       </form>
-                   </div>
+                            </div>
+                        </form>
+                    </div>
 
-                   <!-- debut de la pop up pour modifier la périodicité hebdomadaire -->
+                    <!-- debut de la pop up pour modifier la périodicité hebdomadaire -->
 
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
- <div class="modal-dialog" role="document">
-   <div class="modal-content">
-     <div class="modal-header">
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-       <h5 class="modal-title" id="myModalLabel">{{'Modifier la disponibilité hebdomadaire'|trans}}</h5>
-     </div>
-     <div class="modal-body2 second_modal_body">
-         <form method="post" action="">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h5 class="modal-title" id="myModalLabel">{{'Modifier la disponibilité hebdomadaire'|trans}}</h5>
+      </div>
+      <div class="modal-body2 second_modal_body">
+          <form method="post" action="">
 
-                           <div class="form-group">
-                               <input type="checkbox">
-                               <span class="number__">{{'Touts les'|trans}}
-                               <select name="">
-                                   <option>2</option>
-                                   <option>3</option>
-                                   <option>4</option>
-                               </select>
-                               {{'jours de la semaine'|trans}} : <br><br>
-                               <input type="checkbox">
-                              {{'Toutes les'|trans}}
-                               <select name="">
-                                   <option>2</option>
-                                   <option>3</option>
-                                   <option>4</option>
-                                   <option>5</option>
-                                   <option>6</option>
-                               </select>
-                               {{'semaines les'|trans}} : <br><br>
+                            <div class="form-group">
+                                <input type="checkbox"> 
+                                <span class="number__">{{'Touts les'|trans}}
+                                <select name="">
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                                {{'jours de la semaine'|trans}} : <br><br>
+                                <input type="checkbox">
+                               {{'Toutes les'|trans}}
+                                <select name="">
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                                {{'semaines les'|trans}} : <br><br>
 
-                               <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                   <input type="checkbox" class="check_box">
-                                   <span  class="check_box_span">{{'Lundi'|trans}}</span>
-                               </div>
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <input type="checkbox" class="check_box">
+                                    <span  class="check_box_span">{{'Lundi'|trans}}</span>
+                                </div>
 
-                               <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                   <input type="checkbox" class="check_box">
-                                   <span class="check_box_span">{{'Mardi'|trans}}</span>
-                               </div>
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <input type="checkbox" class="check_box">
+                                    <span class="check_box_span">{{'Mardi'|trans}}</span>
+                                </div>
 
-                               <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                   <input type="checkbox" class="check_box">
-                                   <span class="check_box_span">{{'Mercredi'|trans}}</span>
-                               </div>
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <input type="checkbox" class="check_box">
+                                    <span class="check_box_span">{{'Mercredi'|trans}}</span>
+                                </div>
 
-                               <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                   <input type="checkbox" class="check_box">
-                                   <span class="check_box_span">{{'Jeudi'|trans}}</span>
-                               </div>
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <input type="checkbox" class="check_box">
+                                    <span class="check_box_span">{{'Jeudi'|trans}}</span>
+                                </div>
 
-                               <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                   <input type="checkbox" class="check_box">
-                                   <span class="check_box_span">{{'Vendredi'|trans}}</span>
-                               </div>
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <input type="checkbox" class="check_box">
+                                    <span class="check_box_span">{{'Vendredi'|trans}}</span>
+                                </div>
 
-                               <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                   <input type="checkbox" class="check_box">
-                                   <span class="check_box_span">{{'Samedi'|trans}}</span>
-                               </div>
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <input type="checkbox" class="check_box">
+                                    <span class="check_box_span">{{'Samedi'|trans}}</span>
+                                </div>
 
-                               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                   <input type="checkbox" class="check_box">
-                                   <span class="check_box_span">{{'Dimanche'|trans}}</span>
-                               </div>
-                               <br><br>
-                               </span>
-
-
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <input type="checkbox" class="check_box">
+                                    <span class="check_box_span">{{'Dimanche'|trans}}</span>
+                                </div>
+                                <br><br>
+                                </span>
 
 
 
-                           </div>
 
-           <div>
-             <button type="submit" class="btn btn-success btn_valid btn-md"><i class="fa fa-floppy-o"></i> {{'Enregistrer'|trans}} </button>
-           </div>
-         </form>
 
-     </div>
+                            </div>
 
-   </div>
- </div>
+            <div>
+              <button type="submit" class="btn btn-success btn_valid btn-md"><i class="fa fa-floppy-o"></i> {{'Enregistrer'|trans}} </button>
+            </div>
+          </form>
+
+      </div>
+
+    </div>
+  </div>
 </div>
-                   <!-- fin de la pop up pour modifier la périodicité hebdomadaire -->
+                    <!-- fin de la pop up pour modifier la périodicité hebdomadaire -->
 
 
-               <!-- -->
+                <!-- -->
 
 
-                             <div class="  ">
-                   <h3 class="times_ ">{{'Disponibilité mensuelle'|trans}}</h3>
-               <div class="hebdo">
+                              <div class="  ">
+                    <h3 class="times_ ">{{'Disponibilité mensuelle'|trans}}</h3>
+                <div class="hebdo">
 
-                   <form method="">
-                       <div class="form-group">
-                          <input type="checkbox"> <span class="number__"> &nbsp;&nbsp; {{'Le'|trans}}
-                           <select name="" class="">
-                               <option>1</option><option>2</option><option>3</option><option>4</option>
-                                           <option>5</option><option>6</option><option>7</option><option>8</option>
-                                           <option>9</option><option>10</option><option>12</option><option>12</option>
-                                           <option>13</option><option>14</option><option>15</option><option>16</option>
-                                           <option>17</option><option>18</option><option>19</option><option>20</option>
-                                           <option>21</option><option>22</option><option>23</option><option>24</option>
-                                           <option>25</option><option>26</option><option>27</option><option>28</option>
-                                           <option>29</option><option>30</option><option>31</option>
-                           </select>
-                           &nbsp; {{'de tous les'|trans}}  &nbsp;
+                    <form method="">
+                        <div class="form-group">
+                           <input type="checkbox"> <span class="number__"> &nbsp;&nbsp; {{'Le'|trans}}
+                            <select name="" class="">
+                                <option>1</option><option>2</option><option>3</option><option>4</option>
+                                            <option>5</option><option>6</option><option>7</option><option>8</option>
+                                            <option>9</option><option>10</option><option>12</option><option>12</option>
+                                            <option>13</option><option>14</option><option>15</option><option>16</option>
+                                            <option>17</option><option>18</option><option>19</option><option>20</option>
+                                            <option>21</option><option>22</option><option>23</option><option>24</option>
+                                            <option>25</option><option>26</option><option>27</option><option>28</option>
+                                            <option>29</option><option>30</option><option>31</option>
+                            </select>
+                            &nbsp; {{'de tous les'|trans}}  &nbsp;
 
-                           <select name="" class="">
-                               <option>1</option><option>2</option><option>3</option><option>4</option>
-                           </select>
+                            <select name="" class="">
+                                <option>1</option><option>2</option><option>3</option><option>4</option>
+                            </select>
 
-                           &nbsp; {{'Mois'|trans}} &nbsp;
+                            &nbsp; {{'Mois'|trans}} &nbsp;
 
-                           <br><br>
+                            <br><br>
 
-                           <input type="checkbox"> <span> &nbsp;&nbsp; {{'Le'|trans}}   </span>
+                            <input type="checkbox"> <span> &nbsp;&nbsp; {{'Le'|trans}}   </span>
 
-                           <select name="" class="">
-                               <option>{{'Premier'|trans}}</option>
-                               <option>{{'Deuxième'|trans}}</option>
-                               <option>{{'Troisième'|trans}}</option>
-                               <option>{{'Quatrième'|trans}}</option>
-                           </select>
+                            <select name="" class="">
+                                <option>{{'Premier'|trans}}</option>
+                                <option>{{'Deuxième'|trans}}</option>
+                                <option>{{'Troisième'|trans}}</option>
+                                <option>{{'Quatrième'|trans}}</option>
+                            </select>
 
-                           <select name="" class="">
-                               <option>{{'Lundi'|trans}}</option>
-                               <option>{{'Mardi'|trans}}</option>
-                               <option>{{'Mercredi'|trans}}</option>
-                               <option>{{'Jeudi'|trans}}</option>
-                               <option>{{'Vendredi'|trans}}</option>
-                               <option>{{'Samedi'|trans}}</option>
-                               <option>{{'Dimanche'|trans}}</option>
-                           </select>
+                            <select name="" class="">
+                                <option>{{'Lundi'|trans}}</option>
+                                <option>{{'Mardi'|trans}}</option>
+                                <option>{{'Mercredi'|trans}}</option>
+                                <option>{{'Jeudi'|trans}}</option>
+                                <option>{{'Vendredi'|trans}}</option>
+                                <option>{{'Samedi'|trans}}</option>
+                                <option>{{'Dimanche'|trans}}</option>
+                            </select>
 
-                           &nbsp; {{'de tous les'|trans}} &nbsp;
+                            &nbsp; {{'de tous les'|trans}} &nbsp;
 
-                           <select name="" class="">
-                                 <option>1</option>
-                               <option>2</option>
-                               <option>3</option>
-                               <option>4</option>
-                               <option>5</option>
-                               <option>6</option>
-                               <option>7</option>
-                               <option>8</option>
-                               <option>9</option>
-                               <option>10</option>
-                               <option>12</option>
-                           </select>
+                            <select name="" class="">
+                                  <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>12</option>
+                            </select>
 
-                           &nbsp; {{'mois'|trans}} &nbsp;
+                            &nbsp; {{'mois'|trans}} &nbsp;
 
-                           </span>
+                            </span>
 
-                           <br><br>
-                            <div class="">
-                            <button type="submit" name="" class="btn btn-success btn_valid btn-md"><i class="fa fa-floppy-o" aria-hidden="true"></i>  {{'Enregistrer'|trans}} </button>
-                                <button type="button" class="btn btn-primary btn_valid btn-md" data-toggle="modal" data-target="#myModal1" title="Modifier la périodicité mensuelle"> <i class="fa fa-pencil-square-o"></i>
-                                    {{'Modifier'|trans}}
+                            <br><br>
+                             <div class="">
+                             <button type="submit" name="" class="btn btn-success btn_valid btn-md"><i class="fa fa-floppy-o" aria-hidden="true"></i>  {{'Enregistrer'|trans}} </button>
+                                 <button type="button" class="btn btn-primary btn_valid btn-md" data-toggle="modal" data-target="#myModal1" title="Modifier la périodicité mensuelle"> <i class="fa fa-pencil-square-o"></i>
+                                     {{'Modifier'|trans}}
 </button>
 
-                                   <button type="reset" name="" class="btn btn-danger btn_valid btn-md"><i class="fa fa-times"> </i> {{'Sortir'|trans}} </button>
-                       </div>
+                                    <button type="reset" name="" class="btn btn-danger btn_valid btn-md"><i class="fa fa-times"> </i> {{'Sortir'|trans}} </button>
+                        </div>
 
-                       </div>
-                   </form>
+                        </div>
+                    </form>
+                </div>
                </div>
-              </div>
 
-               <!-- debut de la pop up pour modifier la périodicité mensuelle -->
-                         <!-- Modal -->
-                       <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                         <div class="modal-dialog" role="document">
-                           <div class="modal-content">
-                             <div class="modal-header">
-                               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                               <h5 class="modal-title" id="myModalLabel">{{'Modifier la disponibilité mensuelle'|trans}}</h5>
-                             </div>
-                             <div class="modal-body2 second_modal_body">
-                                 <form method="post" action="">
+                <!-- debut de la pop up pour modifier la périodicité mensuelle -->
+                          <!-- Modal -->
+                        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h5 class="modal-title" id="myModalLabel">{{'Modifier la disponibilité mensuelle'|trans}}</h5>
+                              </div>
+                              <div class="modal-body2 second_modal_body">
+                                  <form method="post" action="">
 
-                                   <div class="form-group">
-                          <input type="checkbox" name=""> <span class="number__"> &nbsp;&nbsp; {{'Le'|trans}}
-                           <select name="" class="">
-                               <option>1</option><option>2</option><option>3</option><option>4</option>
-                                           <option>5</option><option>6</option><option>7</option><option>8</option>
-                                           <option>9</option><option>10</option><option>12</option><option>12</option>
-                                           <option>13</option><option>14</option><option>15</option><option>16</option>
-                                           <option>17</option><option>18</option><option>19</option><option>20</option>
-                                           <option>21</option><option>22</option><option>23</option><option>24</option>
-                                           <option>25</option><option>26</option><option>27</option><option>28</option>
-                                           <option>29</option><option>30</option><option>31</option>
-                           </select>
-                           &nbsp; {{'de tous les'|trans}}  &nbsp;
+                                    <div class="form-group">
+                           <input type="checkbox" name=""> <span class="number__"> &nbsp;&nbsp; {{'Le'|trans}}
+                            <select name="" class="">
+                                <option>1</option><option>2</option><option>3</option><option>4</option>
+                                            <option>5</option><option>6</option><option>7</option><option>8</option>
+                                            <option>9</option><option>10</option><option>12</option><option>12</option>
+                                            <option>13</option><option>14</option><option>15</option><option>16</option>
+                                            <option>17</option><option>18</option><option>19</option><option>20</option>
+                                            <option>21</option><option>22</option><option>23</option><option>24</option>
+                                            <option>25</option><option>26</option><option>27</option><option>28</option>
+                                            <option>29</option><option>30</option><option>31</option>
+                            </select>
+                            &nbsp; {{'de tous les'|trans}}  &nbsp;
 
-                           <select name="" class="">
-                               <option>1</option><option>2</option><option>3</option><option>4</option>
-                           </select>
+                            <select name="" class="">
+                                <option>1</option><option>2</option><option>3</option><option>4</option>
+                            </select>
 
-                           &nbsp; {{'Mois'|trans}} &nbsp;
+                            &nbsp; {{'Mois'|trans}} &nbsp;
 
-                           <br><br>
+                            <br><br>
 
-                           <input type="checkbox"> <span> &nbsp;&nbsp; {{'Le'|trans}}   </span>
+                            <input type="checkbox"> <span> &nbsp;&nbsp; {{'Le'|trans}}   </span>
 
-                           <select name="" class="">
-                               <option>{{'Premier'|trans}}</option>
-                               <option>{{'Deuxième'|trans}}</option>
-                               <option>{{'Troisième'|trans}}</option>
-                               <option>{{'Quatrième'|trans}}</option>
-                           </select>
+                            <select name="" class="">
+                                <option>{{'Premier'|trans}}</option>
+                                <option>{{'Deuxième'|trans}}</option>
+                                <option>{{'Troisième'|trans}}</option>
+                                <option>{{'Quatrième'|trans}}</option>
+                            </select>
 
-                           <select name="" class="">
-                               <option>{{'Lundi'|trans}}</option>
-                               <option>{{'Mardi'|trans}}</option>
-                               <option>{{'Mercredi'|trans}}</option>
-                               <option>{{'Jeudi'|trans}}</option>
-                               <option>{{'Vendredi'|trans}}</option>
-                               <option>{{'Samedi'|trans}}</option>
-                               <option>{{'Dimanche'|trans}}</option>
-                           </select>
+                            <select name="" class="">
+                                <option>{{'Lundi'|trans}}</option>
+                                <option>{{'Mardi'|trans}}</option>
+                                <option>{{'Mercredi'|trans}}</option>
+                                <option>{{'Jeudi'|trans}}</option>
+                                <option>{{'Vendredi'|trans}}</option>
+                                <option>{{'Samedi'|trans}}</option>
+                                <option>{{'Dimanche'|trans}}</option>
+                            </select>
 
-                           &nbsp; {{'de tous les'|trans}} &nbsp;
+                            &nbsp; {{'de tous les'|trans}} &nbsp;
 
-                           <select name="" class="">
-                                 <option>1</option>
-                               <option>2</option>
-                               <option>3</option>
-                               <option>4</option>
-                               <option>5</option>
-                               <option>6</option>
-                               <option>7</option>
-                               <option>8</option>
-                               <option>9</option>
-                               <option>10</option>
-                               <option>12</option>
-                           </select>
+                            <select name="" class="">
+                                  <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>12</option>
+                            </select>
 
-                           &nbsp; {{'mois'|trans}} &nbsp;
+                            &nbsp; {{'mois'|trans}} &nbsp;
 
-                           </span>
+                            </span>
 
-                                   <div class=" ">
-                                     <br>
-                                     <button type="submit" name="" class="btn btn-success btn_valid btn-md"><i class="fa fa-floppy-o" aria-hidden="true"></i>  {{'Enregistrer'|trans}} </button>
-                                   </div>
-                                 </form>
+                                    <div class=" ">
+                                      <br>
+                                      <button type="submit" name="" class="btn btn-success btn_valid btn-md"><i class="fa fa-floppy-o" aria-hidden="true"></i>  {{'Enregistrer'|trans}} </button>
+                                    </div>
+                                  </form>
 
-                             </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                <!-- fin  de la pop up pour modifier la périodicité mensuel -->
+
+
+
+               </div>
+
+                <!-- -->
+
+
+                <div class="affiche_periodicite">
+                    <h3 class="times_">{{'Disponibilité annuelle'|trans}}</h3>
+                <div class="hebdo">
+                    <form method="post" action="">
+                        <div class="form-group">
+                           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                 <span>{{'Début'|trans}} :</span>
+
+                                    <input type="text" id="datepicker" name="date" class="" style="margin-top:15px !important">
+                                         
+
+
 
                            </div>
-                         </div>
-                       </div>
-               <!-- fin  de la pop up pour modifier la périodicité mensuel -->
+                           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                             <span class="number__">{{'Fin après'|trans}}: &nbsp; &nbsp;
 
+                               <select name="" class="">
+                                  <option>1</option><option>2</option><option>3</option><option>4</option>
+                                            <option>5</option><option>6</option><option>7</option><option>8</option>
+                                            <option>9</option><option>10</option><option>12</option>
+                            </select>
+                               {{'mois'|trans}} &nbsp; </span>
+                               <br><br>
 
+                                <div style="display: inline-block;vertical-align: top;">
+                                {{'Fin le'|trans}} :</div>
 
-              </div>
-
-               <!-- -->
-
-
-               <div class="affiche_periodicite">
-                   <h3 class="times_">{{'Disponibilité annuelle'|trans}}</h3>
-               <div class="hebdo">
-                   <form method="post" action="">
-                       <div class="form-group">
-                          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <span>{{'Début'|trans}} :</span>
-
-                                   <input type="text" id="datepicker" name="date" class="" style="margin-top:15px !important">
-
-
-
+                                  <input type="text" id="datepicker2" name="date" class="">
 
                           </div>
-                          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <span class="number__">{{'Fin après'|trans}}: &nbsp; &nbsp;
-
-                              <select name="" class="">
-                                 <option>1</option><option>2</option><option>3</option><option>4</option>
-                                           <option>5</option><option>6</option><option>7</option><option>8</option>
-                                           <option>9</option><option>10</option><option>12</option>
-                           </select>
-                              {{'mois'|trans}} &nbsp; </span>
-                              <br><br>
-
-                               <div style="display: inline-block;vertical-align: top;">
-                               {{'Fin le'|trans}} :</div>
-
-                                 <input type="text" id="datepicker2" name="date" class="">
-
-                         </div>
 
 
 
-                           <br>
+                            <br>
 
-                       </div>
+                        </div>
 
-                       <div class="">
-                            <button type="submit" name="" class="btn btn-success btn_valid btn-md"><i class="fa fa-floppy-o" aria-hidden="true"></i>  {{'Enregistrer'|trans}} </button>
-                           <button type="button" class="btn btn-primary btn_valid btn-md show_modif"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}
-                         </button>
+                        <div class="">
+                             <button type="submit" name="" class="btn btn-success btn_valid btn-md"><i class="fa fa-floppy-o" aria-hidden="true"></i>  {{'Enregistrer'|trans}} </button>
+                            <button type="button" class="btn btn-primary btn_valid btn-md show_modif"><i class="fa fa-pencil-square-o"></i> {{'Modifier'|trans}}
+                          </button>
 
 
 
-                                   <button type="submit" name="" class="btn btn-danger btn_valid btn-md"> <i class="fa fa-window-close" aria-hidden="true"> </i> {{'Sortir'|trans}} </button>
-                       </div>
-                   </form>
+                                    <button type="submit" name="" class="btn btn-danger btn_valid btn-md"> <i class="fa fa-window-close" aria-hidden="true"> </i> {{'Sortir'|trans}} </button>
+                        </div>
+                    </form>
+                </div>
                </div>
-              </div>
 
-               <!-- debut de la popup pour la modification de la périodicité annuelle -->
-
-
- <!-- debut code qui s'affiche quand on clique sur le bouton pour modifier la périodicité annuel -->
+                <!-- debut de la popup pour la modification de la périodicité annuelle -->
 
 
-               <br>
-               <div style="display: none !important;" id="show">
+  <!-- debut code qui s'affiche quand on clique sur le bouton pour modifier la périodicité annuel -->
 
-               <div class="hebdo">
-                 <h3 class="times_">{{'Modification de la disponibilité annuelle'|trans}}</h3>
-                   <form method="post" action="">
-                       <div class="form-group">
-                          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <span>{{'Début'|trans}} :</span>
 
-                                   <input type="text" id="datepicker3" name="date" class="" style="margin-top:15px !important">
+                <br>
+                <div style="display: none !important;" id="show">
 
+                <div class="hebdo">
+                  <h3 class="times_">{{'Modification de la disponibilité annuelle'|trans}}</h3>
+                    <form method="post" action="">
+                        <div class="form-group">
+                           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                 <span>{{'Début'|trans}} :</span>
+
+                                    <input type="text" id="datepicker3" name="date" class="" style="margin-top:15px !important">
 
 
 
+
+
+                           </div>
+                           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                             <span class="number__">{{'Fin après'|trans}}: &nbsp; &nbsp;
+
+                               <select name="" class="">
+                                  <option>1</option><option>2</option><option>3</option><option>4</option>
+                                            <option>5</option><option>6</option><option>7</option><option>8</option>
+                                            <option>9</option><option>10</option><option>12</option>
+                            </select>
+                               {{'mois'|trans}} &nbsp; </span>
+                               <br><br>
+
+                                <div style="display: inline-block;vertical-align: top;">
+                                {{'Fin le'|trans}} :</div>
+
+                                  <input type="text" id="datepicker4" name="date" class="" style="margin-top:15px !important">
 
                           </div>
-                          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <span class="number__">{{'Fin après'|trans}}: &nbsp; &nbsp;
-
-                              <select name="" class="">
-                                 <option>1</option><option>2</option><option>3</option><option>4</option>
-                                           <option>5</option><option>6</option><option>7</option><option>8</option>
-                                           <option>9</option><option>10</option><option>12</option>
-                           </select>
-                              {{'mois'|trans}} &nbsp; </span>
-                              <br><br>
-
-                               <div style="display: inline-block;vertical-align: top;">
-                               {{'Fin le'|trans}} :</div>
-
-                                 <input type="text" id="datepicker4" name="date" class="" style="margin-top:15px !important">
-
-                         </div>
 
 
 
-                           <br>
+                            <br>
 
-                       </div>
+                        </div>
 
-                       <div class="">
-                            <button type="submit" name="" class="btn btn-success btn_valid btn-md"><i class="fa fa-floppy-o" aria-hidden="true"></i>  {{'Enregistrer'|trans}} </button>
+                        <div class="">
+                             <button type="submit" name="" class="btn btn-success btn_valid btn-md"><i class="fa fa-floppy-o" aria-hidden="true"></i>  {{'Enregistrer'|trans}} </button>
 
 
 
 
-                                   <button type="submit" name="" class="btn btn-danger btn_valid btn-md"> <i class="fa fa-window-close" aria-hidden="true"> </i> {{'Annuler'|trans}} </button>
-                       </div>
-                   </form>
+                                    <button type="submit" name="" class="btn btn-danger btn_valid btn-md"> <i class="fa fa-window-close" aria-hidden="true"> </i> {{'Annuler'|trans}} </button>
+                        </div>
+                    </form>
+                </div>
                </div>
-              </div>
 
-               <!-- debut de la popup pour la modification de la périodicité annuelle -->
+                <!-- debut de la popup pour la modification de la périodicité annuelle -->
 
- <!-- fin code qui s'affiche quand on clique sur le bouton pour modifier la périodicité annuel -->
+  <!-- fin code qui s'affiche quand on clique sur le bouton pour modifier la périodicité annuel -->
 
 
-           <!-- -->
-
+            <!-- -->
 
 
 
 
 
-                                    <br><br>
 
-               </section>
-           </div>
-
-
-
-
-           <!-- end col-4 -->
-         </div>
+                                     <br><br>
+               
+                </section>
+            </div>
 
 
 
-           <!-- end col-4 -->
-         </div>
-         <!--  /col-lg-12 -->
-       </div>
-       <!--  /row -->
-     </section>
-            <!-- fin -->
 
-           </div>
+            <!-- end col-4 -->
+          </div>
 
-         </div>
-         <!-- /row -->
-       </div>
-       <!-- /container -->
-     </section>
-     <!-- /wrapper -->
-   </section>
+
+
+            <!-- end col-4 -->
+          </div>
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
 
 
 
@@ -598,17 +599,17 @@
 {% block scripts %}
 
 <script type="text/javascript">
- $(document).ready(function(){
-   $(".show_modif").on('click',function(){
-   $("#show").toggle();
-   $(".affiche_periodicite").hide();
-   });
+  $(document).ready(function(){
+    $(".show_modif").on('click',function(){
+    $("#show").toggle();
+    $(".affiche_periodicite").hide();
+    });
 
-   $( "#datepicker" ).datepicker();
-     $( "#datepicker2" ).datepicker();
-     $( "#datepicker3" ).datepicker();
-     $( "#datepicker4" ).datepicker();
- });
+    $( "#datepicker" ).datepicker();
+      $( "#datepicker2" ).datepicker();
+      $( "#datepicker3" ).datepicker();
+      $( "#datepicker4" ).datepicker();
+  });
 
 </script>
 {% endblock %}

@@ -621,10 +621,11 @@ Présence: Presence
 Encaissement: 'Collection of funds'
 'Aujourd''hui': Today
 Précédent: Previous
-'Semaine du 19 au 27 Décembre 2019': 'Week of 19 to 27 December 2019'
+'Semaine du 19 au 26 Décembre 2019': 'Week of 19 to 26 December 2019'
 Suivant: Next
 jour: Day
 jours: days
+Journée: Day
 'Créer client': 'Create customer'
 'Revenir à l''agenda': 'Back to the agenda'
 'Création d''un Nouveau client': 'Creating a New Customer'
@@ -801,3 +802,13 @@ décembre: december
 'Tarif TTC': 'Rate including all taxes'
 'Modifier les paramètres des prestations uniques': 'Modify the parameters of the unique services'
 'Créer un Nouveau client': 'Create a New client'
+Choisir: Choose
+Arrivé: Arrived
+'Nombre de RDV': 'Number of appointments'
+'Rendez-vous de groupe': 'Group appointment'
+'Nombre de personne par RDV': 'Number of people per appointment'
+'Envois suspendus des SMS de': 'Suspended sending of SMS messages from'
+'Mes rendez-vous': 'My appointments'
+prénom: first name
+janvier: january
+'Virement bancaire': 'Bank transfer'

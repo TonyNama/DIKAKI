@@ -26,7 +26,7 @@
         <meta property="og:description" content=""><!-- la description complete de la page-->
         <meta property="og:image" content="{{asset('img/grande_banniere.png')}}"><!-- image representant la page de la page-->
        {% block style %}
-
+        
         {% endblock %}
 
         {% stylesheets filter='cssrewrite'
@@ -340,11 +340,11 @@
                         </div>
                     </div>
                 </div>
+               
 
+               
 
-
-
-
+               
     </footer>
 
     <!-- block pour les fichier javascript  -->
@@ -362,14 +362,14 @@
                 'js/form-control.js'
                 'js/default.js'
                 'js/vendor/slick_1.5.0.min.js'
-                'js/news.js'
+                'js/news.js'  
     %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
     <script>
         $(document).ready(function () {
-            // seconde ligne
+            // seconde ligne 
 
             $(".center").slick({
                 dots: false,

@@ -9,7 +9,7 @@
       <title>{% block title %}{% endblock %}</title>
 
       <!-- debut du partage vers facebook -->
-
+            
               <meta property="og:url" content=""><!-- url complete de la page-->
               <meta property="og:title" content=""><!-- le titre complete de la page-->
               <meta property="og:description" content=""><!-- la description complete de la page-->
@@ -31,8 +31,8 @@
 
 	  {% block style %}
     <style type="text/css">
-
-
+        
+        
         .img_pied_responive{
                     display: block;
                     width: 60px !important;
@@ -58,9 +58,9 @@
         %}
             <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
 
+            
 
-
-
+          
         {% endstylesheets %}
     </head>
 
@@ -202,7 +202,7 @@
 			</header><!-- /header -->
 			<!-- End Header -->
 			{% block body %}
-
+			
 			{% endblock %}
 			<!-- debut du contenaire pour les service -->
             <section class="testimonials py-5 text-white px-1 px-md-5 margin-top-xl">
@@ -395,7 +395,7 @@
                                 <p>
                                     <a href="{{path('dkk_app_blog')}}" class="footer_items_">{{'Blog et Actualités'|trans}}</a>
                                 </p>
-
+                                
                             </div>
                          </div>
                     </div>
@@ -427,16 +427,16 @@
             'js/slider.js'
             'js/vendor/slick-carousel_1.8.1_slick.min.js'
             'js/vendor/testimonial-slider.js'
-             'js/news.js'
+             'js/news.js' 
             'js/app.js'
-
+            
         %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
-
+        
         {% block scripts %}
-
-
+		
+        
         {% endblock %}
     </body>
 </html>

@@ -1,217 +1,217 @@
-{% extends '::admin_template.html.twig' %}
+   {% extends '::admin_template.html.twig' %}
 
 {% block title %} Ebolo Ebolo Guillaume Stephane - {{'Prise de rendez-vous et dépôt de dossier en ligne'|trans}} {% endblock %}
 
 {% block style %}
 <style>
-     th,td{
-       text-align: center !important;
-     }
-   </style>
+        th,td{
+          text-align: center !important;
+        }
+      </style>
 {% endblock %}
 
 {% block body %}
 
-<section id="main-content">
-   <section class="wrapper site-min-height">
-     <div class=" mt">
-          <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
-       <!-- /col-lg-12 -->
-       <div class="col-lg-12 mt">
+ <section id="main-content">
+      <section class="wrapper site-min-height">
+        <div class=" mt">
+             <h2 class="name_structure">{{'Cabinet médical la Grâce'|trans}}</h2>
+          <!-- /col-lg-12 -->
+          <div class="col-lg-12 mt">
 
 
-         <div class=" content-panel">
-          <!-- debut -->
-     <section class="wrapper site-min-height">
-     <div class="">
-       <div class="col-lg-12">
-
-
-
-         <div class="container_fluid_color">
- <div class="">
-   <div class="">
-     <p class="detail_">{{'Détails client'|trans}}</p>
-
-   </div>
-
-   <div class=" margin_row">
-     <div class="col-xs-12 col-xs-12 col-lg-3 col-md-3">
-       <img src="{{asset('img/photo_medecin.jpg')}}" class="img-responsive img_view">
-     </div>
-     <div class="col-xs-12 col-xs-12 col-lg-9 col-md-9">
-
-         <div class="">
-           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-             <span class="your_name">{{'Nom'|trans}}:</span>
-             <span class="name_detail"> Ebolo Ebolo</span>
-           </div>
-           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-             <span class="your_name">{{'Prénom'|trans}}:</span>
-             <span class="name_detail"> Guillaume stephane</span>
-           </div>
-         </div>
-
-         <div class="">
-           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-             <p class="birth">{{'Date de naissance'|trans}}: </p>
-             <div class="wrapperbirth">
-               <span class="the_day_"> 02</span>
-               <span class="the_day_"> {{'Mai'|trans}}</span>
-               <span class="the_day_"> 1995</span>
-             </div>
-           </div>
-
-           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-             <p class="birth">{{'Sexe'|trans}}: </p>
-             <div class="wrapperbirth">
-               <span class="the_day_"> {{'Masculin'|trans}}</span>
-             </div>
-           </div>
-         </div>
-
-         <div class="">
-           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-             <span class="your_name">{{'Pays'|trans}}: </span>
-             <span class="name_detail"> {{'Cameroun'|trans}}</span>
-           </div>
-           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-             <span class="your_name">{{'Ville'|trans}}:</span>
-             <span class="name_detail"> Yaoundé</span>
-           </div>
-         </div>
-         <div class="">
-           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-           <p class="your_name">{{'Téléphone'|trans}} :<p>
-           <p class="name_detail second_param"> +237 598 256 254 </p>
-         </div>
-         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-           <p class="your_name">{{'Email'|trans}}:<p>
-           <p class="name_detail second_param second_email"> monnometprenon@gmail.com</p>
-         </div>
-         </div>
-
-         <div class="">
-           <div class="dernier_reservation">
-             <p class="deatil_days">{{'Dernière reservation'|trans}}  :</p>
-             <span class="the_day_">10</span>
-              <span class="the_day_">{{'Décembre'|trans}}</span>
-              <span class="the_day_"> 2016 </span>
-           </div>
-         </div>
-
-         <div class="">
-           <p class="note">{{'Note'|trans}}</p>
-           <form method="post" action="">
-             <textarea placeholder="Ex: {{'information sur ses alergies ou autres choses'|trans}}" class="form-control saissi_information" style="resize:none !important;"></textarea>
-             <button class="btn btn-success btn-sm add_bouton"><i class="fa fa-floppy-o"></i> {{'Valider'|trans}}</button>
-
-           </form>
-         </div>
-
-         <div class="class_table">
-           <table>
-             <tr>
-               <th>{{'Client depuis le'|trans}} : </th>
-               <td><span class="td_data">  20 {{'Mai'|trans}} 1999 </span></td>
-
-             </tr>
-             <tr>
-               <th>{{'Total des reservations'|trans}} : </th>
-               <td><span class="td_data">  2045 </span></td>
-
-             </tr>
-             <tr>
-               <th>{{'Annulation'|trans}} : </th>
-               <td><span class="td_data"> 254 </span></td>
-
-             </tr>
-             <tr>
-               <th>{{'Non présentation'|trans}} : </th>
-               <td><span class="td_data"> 475 </span></td>
-
-             </tr>
-             <tr>
-               <th>{{'Dernière reservation le'|trans}}: </th>
-               <td><span class="td_data">  20 {{'Mai'|trans}} 2016 </span></td>
-
-             </tr>
-           </table>
-         </div>
-
-         <div class="pull-right">
-           <br>
-           <a href=""  class="btn-xs btn btn-primary"><i class="fa fa-user"></i> {{'Blacklist'|trans}}</a>
-           <a href="" class="btn-xs btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i> {{'Supprimer'|trans}}</a>
-           <a href="" class="btn-xs btn btn-success "><i class="fa fa-print"> </i> {{'Imprimer'|trans}} </a>
-           <button class="btn-xs btn btn-warning  historique"data-toggle="modal" data-target="#myModal_rdv" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-desktop"> {{'Historique'|trans}}</i> </button>
-         </div>
-
-     </div>
-
-     <p style="clear: both !important"></p>
-     <br>
-     <a href="{{path('dkk_administration_client')}}" class="re_back_ text-center" style="text-align:center !important;"><i class="fa fa-share"></i> {{'Revenir au fichier'|trans}}</a>
-
-
-     <!-- debut de la fenetre modal -->
-
-       <div class="modal fade" id="myModal_rdv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-       <div class="modal-dialog second_modal-dialog" role="document" style="width:80% !important">
-         <div class="modal-content" >
-           <div class="modal-header">
-             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-             <h4 class="modal-title" id="myModalLabel">{{'Mon historique'|trans}}</h4>
-           </div>
-           <div class="modal-body">
+            <div class=" content-panel">
              <!-- debut -->
-             <table class="table table-bordered table-striped table-condensed">
-                 <tr style="background-color: #26440d !important;color: #fff !important;">
-                     <th> {{'Dates  RDV'|trans}}</th>
-                     <th> {{'Heure RDV'|trans}}</th>
-                     <th> {{'Type de RDV'|trans}}</th>
-                     <th> {{'Avec qui'|trans}} ?</th>
-                 </tr>
-                 <tr>
-                     <td> ............</td>
-                     <td> ............</td>
-                     <td> ............</td>
-                     <td> ............</td>
-                 </tr>
-             </table>
+        <section class="wrapper site-min-height">
+        <div class="">
+          <div class="col-lg-12">
 
-             <br><br>
 
-             <!-- fin  -->
-           </div>
-         </div>
-       </div>
-       </div>
 
-     <!-- fin de la fenetre modal -->
+            <div class="container_fluid_color">
+		<div class="">
+			<div class="">
+				<p class="detail_">{{'Détails client'|trans}}</p>
 
-   </div>
+			</div>
 
- </div>
+			<div class=" margin_row">
+				<div class="col-xs-12 col-xs-12 col-lg-3 col-md-3">
+					<img src="{{asset('img/photo_medecin.jpg')}}" class="img-responsive img_view">
+				</div>
+				<div class="col-xs-12 col-xs-12 col-lg-9 col-md-9">
 
-</div>
-         <!-- end col-4 -->
-       </div>
-       <!--  /col-lg-12 -->
-     </div>
-     <!--  /row -->
-   </section>
-          <!-- fin -->
+						<div class="">
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<span class="your_name">{{'Nom'|trans}}:</span>
+								<span class="name_detail"> Ebolo Ebolo</span>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<span class="your_name">{{'Prénom'|trans}}:</span>
+								<span class="name_detail"> Guillaume stephane</span>
+							</div>
+						</div>
 
-         </div>
+						<div class="">
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<p class="birth">{{'Date de naissance'|trans}}: </p>
+								<div class="wrapperbirth">
+									<span class="the_day_"> 02</span>
+									<span class="the_day_"> {{'Mai'|trans}}</span>
+									<span class="the_day_"> 1995</span>
+								</div>
+							</div>
 
-       </div>
-       <!-- /row -->
-     </div>
-     <!-- /container -->
-   </section>
-   <!-- /wrapper -->
- </section>
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<p class="birth">{{'Sexe'|trans}}: </p>
+								<div class="wrapperbirth">
+									<span class="the_day_"> {{'Masculin'|trans}}</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="">
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<span class="your_name">{{'Pays'|trans}}: </span>
+								<span class="name_detail"> {{'Cameroun'|trans}}</span>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<span class="your_name">{{'Ville'|trans}}:</span>
+								<span class="name_detail"> Yaoundé</span>
+							</div>
+						</div>
+						<div class="">
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<p class="your_name">{{'Téléphone'|trans}} :<p>
+							<p class="name_detail second_param"> +237 598 256 254 </p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<p class="your_name">{{'Email'|trans}}:<p>
+							<p class="name_detail second_param second_email"> monnometprenon@gmail.com</p>
+						</div>
+						</div>
+
+						<div class="">
+							<div class="dernier_reservation">
+                <p class="deatil_days">{{'Dernière reservation'|trans}}  :</p>
+								<span class="the_day_">10</span>
+								 <span class="the_day_">{{'Décembre'|trans}}</span>
+								 <span class="the_day_"> 2016 </span>
+              </div>
+						</div>
+
+						<div class="">
+							<p class="note">{{'Note'|trans}}</p>
+							<form method="post" action="">
+								<textarea placeholder="Ex: {{'information sur ses alergies ou autres choses'|trans}}" class="form-control saissi_information" style="resize:none !important;"></textarea>
+								<button class="btn btn-success btn-sm add_bouton"><i class="fa fa-floppy-o"></i> {{'Valider'|trans}}</button>
+
+							</form>
+						</div>
+
+						<div class="class_table">
+							<table>
+								<tr>
+									<th>{{'Client depuis le'|trans}} : </th>
+									<td><span class="td_data">  20 {{'Mai'|trans}} 1999 </span></td>
+
+								</tr>
+								<tr>
+									<th>{{'Total des réservations'|trans}} : </th>
+									<td><span class="td_data">  2045 </span></td>
+
+								</tr>
+								<tr>
+									<th>{{'Annulation'|trans}} : </th>
+									<td><span class="td_data"> 254 </span></td>
+
+								</tr>
+								<tr>
+									<th>{{'Non présentation'|trans}} : </th>
+									<td><span class="td_data"> 475 </span></td>
+
+								</tr>
+								<tr>
+									<th>{{'Dernière reservation le'|trans}}: </th>
+									<td><span class="td_data">  20 {{'Mai'|trans}} 2016 </span></td>
+
+								</tr>
+							</table>
+						</div>
+
+						<div class="pull-right">
+              <br>
+							<a href=""  class="btn-xs btn btn-primary"><i class="fa fa-user"></i> {{'Blacklist'|trans}}</a>
+							<a href="" class="btn-xs btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i> {{'Supprimer'|trans}}</a>
+							<a href="" class="btn-xs btn btn-success "><i class="fa fa-print"> </i> {{'Imprimer'|trans}} </a>
+              <button class="btn-xs btn btn-warning  historique"data-toggle="modal" data-target="#myModal_rdv" data-toggle="modal" data-target="#myModal_rdv"><i class="fa fa-desktop"> {{'Historique'|trans}}</i> </button>
+						</div>
+
+				</div>
+
+				<p style="clear: both !important"></p>
+				<br>
+				<a href="{{path('dkk_administration_client')}}" class="re_back_ text-center" style="text-align:center !important;"><i class="fa fa-share"></i> {{'Revenir au fichier'|trans}}</a>
+
+
+        <!-- debut de la fenetre modal -->
+
+          <div class="modal fade" id="myModal_rdv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog second_modal-dialog" role="document" style="width:80% !important">
+            <div class="modal-content" >
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">{{'Mon historique'|trans}}</h4>
+              </div>
+              <div class="modal-body">
+                <!-- debut -->
+                <table class="table table-bordered table-striped table-condensed">
+                    <tr style="background-color: #26440d !important;color: #fff !important;">
+                        <th> {{'Dates  RDV'|trans}}</th>
+                        <th> {{'Heure RDV'|trans}}</th>
+                        <th> {{'Type de RDV'|trans}}</th>
+                        <th> {{'Avec qui'|trans}} ?</th>
+                    </tr>
+                    <tr>
+                        <td> ............</td>
+                        <td> ............</td>
+                        <td> ............</td>
+                        <td> ............</td>
+                    </tr>
+                </table>
+
+                <br><br>
+
+                <!-- fin  -->
+              </div>
+            </div>
+          </div>
+          </div>
+
+        <!-- fin de la fenetre modal -->
+
+			</div>
+
+		</div>
+
+	</div>
+            <!-- end col-4 -->
+          </div>
+          <!--  /col-lg-12 -->
+        </div>
+        <!--  /row -->
+      </section>
+             <!-- fin -->
+
+            </div>
+
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </section>
+      <!-- /wrapper -->
+    </section>
 
 
 
@@ -222,3 +222,4 @@
 
 
 {% endblock %}
+
